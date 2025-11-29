@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
 :root {
+  /* Light Mode */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #333333;
+  /* Dark Grey for text */
+
+  --primary: #8F801B;
+  /* Gold */
+  --primary-foreground: #ffffff;
+
+  --secondary: #777777;
+  /* Grey */
+  --secondary-foreground: #ffffff;
+
+  --accent: #f3f4f6;
+  /* Light Grey for backgrounds */
+  --accent-foreground: #333333;
+
+  --muted: #f3f4f6;
+  --muted-foreground: #777777;
+  /* Grey for muted text */
+
+  --card: #ffffff;
+  --card-foreground: #333333;
+
+  --border: #e5e7eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1a1a;
+    /* Dark Grey/Black */
+    --foreground: #f3f4f6;
+
+    --primary: #8F801B;
+    /* Gold */
+    --primary-foreground: #ffffff;
+
+    --secondary: #777777;
+    /* Grey */
+    --secondary-foreground: #ffffff;
+
+    --accent: #333333;
+    --accent-foreground: #f3f4f6;
+
+    --muted: #333333;
+    --muted-foreground: #9ca3af;
+
+    --card: #262626;
+    --card-foreground: #f3f4f6;
+
+    --border: #404040;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-border: var(--border);
+
+  --font-sans: var(--font-montserrat);
+  --font-heading: var(--font-jost);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
 }

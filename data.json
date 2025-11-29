@@ -1,0 +1,108 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Johor-Singapore Special Economic Zone (JS-SEZ)",
+      "date": "23 December, 2025",
+      "time": "02:00 PM - 05:00 PM",
+      "location": "FT Synergist Singapore Office ",
+      "type": "In-Person",
+      "description": "Network with fellow business leaders from Economic Group Services (ESG) based at Johor and discover how your company can benefit from enhanced cross-border efficiency, and strengthen regional market presence."
+    },
+    {
+      "id": 2,
+      "title": "Scaling Your Business with AI ",
+      "date": "13 January, 2026",
+      "time": "02:00 PM - 05:00 PM",
+      "location": "FT Synergist Singapore Office ",
+      "type": "In-Person",
+      "description": "A deep dive into practical AI applications for SMEs looking to scale operations efficiently."
+    },
+    {
+      "id": 3,
+      "title": "Networking Night: Beyond Borders Singapore",
+      "date": "11 February, 2026",
+      "time": "06:00 PM - 09:00 PM",
+      "location": "FT Synergist Singapore Office ",
+      "type": "In-Person",
+      "description": "Connect with fellow business leaders and consultants in our exclusive networking event; and gain complimentary access to our AI CRM."
+    },
+    {
+      "id": 1764384730585,
+      "title": "Franchise Discovery Session by FT Synergist ",
+      "date": "5 March 2026",
+      "time": "06:00 PM - 09:00 PM",
+      "location": "FT Synergist Singapore Office ",
+      "type": "In-Person",
+      "description": "A strategic evening designed for discerning investors within our professional network who are poised for significant portfolio expansion. This session offers a unique gateway to understanding our meticulous selection process and the compelling franchise brands we champion."
+    },
+    {
+      "id": 1764384968622,
+      "title": "Sustainability Advantage Workshop - 3rd Run",
+      "date": "22 April 2026",
+      "time": "02:00 PM - 05:00 PM",
+      "location": "FT Synergist Singapore Office ",
+      "type": "In-Person",
+      "description": "This intensive workshop equips SME leaders to win bigger deals, boost valuation, and attract A-player talent by making ESG work for your bottom line, not against it. Featuring our exclusive ESG Revenue Engine Playbook™, get actionable strategies to future-proof your business and unlock new growth.\n"
+    },
+    {
+      "id": 1764384975926,
+      "title": "Networking Night: Beyond Borders Singapore",
+      "date": "14 May 2026",
+      "time": "06:00 PM - 09:00 PM",
+      "location": "FT Synergist Singapore Office ",
+      "type": "In-Person",
+      "description": "Connect with fellow business leaders and consultants in our exclusive networking event; and gain complimentary access to our AI CRM."
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "title": "State of AI in Southeast Asia 2025Test Report",
+      "description": "A comprehensive analysis of AI adoption trends across Singapore, Indonesia, and Vietnam.",
+      "date": "Dec 2025",
+      "category": "Technology",
+      "driveLink": "https://drive.google.com/file/d/1XF54qVGZBFF_BIAGG_dQ7Y0lqzj9dAaT/view?usp=drive_link"
+    },
+    {
+      "id": 2,
+      "title": "Sustainable Supply Chains: A Guide for SMEs",
+      "description": "Practical steps for small and medium enterprises to implement ESG practices in their supply chain.",
+      "date": "Oct 2025",
+      "category": "Sustainability",
+      "driveLink": "https://drive.google.com"
+    },
+    {
+      "id": 3,
+      "title": "Scaling Beyond Borders: The Vietnam Opportunity",
+      "description": "Market entry strategies for Singaporean firms looking to expand into the vibrant Vietnamese market.",
+      "date": "Sep 2025",
+      "category": "Business Scaling",
+      "driveLink": "https://drive.google.com"
+    },
+    {
+      "id": 4,
+      "title": "The Future of Work: Hybrid Models in 2026",
+      "description": "Insights into how remote and hybrid work models are evolving and affecting productivity.",
+      "date": "Aug 2025",
+      "category": "Human Capital",
+      "driveLink": "https://drive.google.com"
+    },
+    {
+      "id": 1764384784711,
+      "title": "New Report",
+      "description": "Description",
+      "date": "MMM YYYY",
+      "category": "Category",
+      "driveLink": ""
+    },
+    {
+      "id": 1764385013060,
+      "title": "New Report",
+      "description": "Description",
+      "date": "MMM YYYY",
+      "category": "Category",
+      "driveLink": ""
+    }
+  ]
+}
