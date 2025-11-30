@@ -13,22 +13,14 @@ export async function sendEmail(data: any) {
         return { success: true, message: "Mock email sent (configure RESEND_API_KEY for real emails)" };
     }
 
-    console.log("Attempting to send email with data:", { subject, to: "fredtan@ftsynergist.com" });
     try {
-        const data = await resend.emails.send({
+        await resend.emails.send({
             from: "FT Synergist Website <fredtan@mail.ftsynergist.com>",
             to: "fredtan@ftsynergist.com",
             subject: subject,
             text: text,
             html: html,
         });
-        console.log("Resend API response:", data);
-
-        if (data.error) {
-            console.error("Resend returned error:", data.error);
-            throw new Error(data.error.message);
-        }
-
         return { success: true, message: "Email sent successfully" };
     } catch (error) {
         console.error("Error sending email:", error);
