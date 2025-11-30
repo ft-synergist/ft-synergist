@@ -6,6 +6,15 @@ import { sendEmail } from "@/app/actions";
 
 export default function ContactPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [subject, setSubject] = useState("General Enquiry");
+
+    const handleBookDiscovery = () => {
+        setSubject("Business Scaling");
+        const formElement = document.getElementById("contact-form");
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -37,7 +46,7 @@ Message: ${formData.get("message")}
             alert("Message sent successfully!");
             (e.target as HTMLFormElement).reset();
         } else {
-            alert("Failed to send message. Please try again.");
+            alert(result.message);
         }
     };
 
@@ -96,7 +105,10 @@ Message: ${formData.get("message")}
                             <p className="mb-6 opacity-90">
                                 Book a Business Sprint session to rapidly identify opportunities and create an actionable roadmap.
                             </p>
-                            <button className="rounded-md bg-background px-6 py-2 text-sm font-medium text-primary shadow hover:bg-secondary transition-colors">
+                            <button
+                                onClick={handleBookDiscovery}
+                                className="rounded-md bg-background px-6 py-2 text-sm font-medium text-primary shadow hover:bg-secondary transition-colors"
+                            >
                                 Book Now
                             </button>
                         </div>
@@ -105,7 +117,7 @@ Message: ${formData.get("message")}
                     {/* Contact Form */}
                     <div className="rounded-xl border bg-card p-8 shadow-sm">
                         <h3 className="text-xl font-bold mb-6">Send us a Message</h3>
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid gap-6 md:grid-cols-2">
                                 <div className="space-y-2">
                                     <label htmlFor="firstName" className="text-sm font-medium">First Name</label>
@@ -146,12 +158,14 @@ Message: ${formData.get("message")}
                                 <select
                                     id="subject"
                                     name="subject"
+                                    value={subject}
+                                    onChange={(e) => setSubject(e.target.value)}
                                     className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                 >
-                                    <option>General Enquiry</option>
-                                    <option>Business Scaling</option>
-                                    <option>AI Integration</option>
-                                    <option>Partnership</option>
+                                    <option value="General Enquiry">General Enquiry</option>
+                                    <option value="Business Scaling">Business Scaling</option>
+                                    <option value="AI Integration">AI Integration</option>
+                                    <option value="Partnership">Partnership</option>
                                 </select>
                             </div>
 

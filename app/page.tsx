@@ -103,10 +103,14 @@ export default function Home() {
                 Read the Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
-            <div className="md:w-1/2 relative h-64 w-full rounded-xl overflow-hidden bg-slate-200 group">
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-white/20 transition-transform duration-700 group-hover:scale-105">
-                <BarChart3 className="h-24 w-24 text-primary/50" />
-              </div>
+            <div className="md:w-1/2 relative h-64 w-full rounded-xl overflow-hidden group shadow-lg">
+              <Image
+                src="/state-of-ai-2025.png"
+                alt="State of AI in Southeast Asia 2025 Report Cover"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
             </div>
           </motion.div>
         </div>

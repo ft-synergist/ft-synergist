@@ -1,30 +1,21 @@
 "use server";
 
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { Event, Report, saveEvents, saveReports } from "@/lib/data";
 
-// Email Configuration
-const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.gmail.com",
-    port: parseInt(process.env.SMTP_PORT || "587"),
-    secure: false, // true for 465, false for other ports
-    auth: {
-        user: process.env.SMTP_EMAIL,
-        pass: process.env.SMTP_PASSWORD,
-    },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(data: any) {
     const { subject, text, html } = data;
 
-    if (!process.env.SMTP_EMAIL || !process.env.SMTP_PASSWORD) {
-        console.log("Mock Email Sent:", data);
-        return { success: true, message: "Mock email sent (configure SMTP for real emails)" };
+    if (!process.env.RESEND_API_KEY) {
+        console.log("Mock Email Sent (Missing RESEND_API_KEY):", data);
+        return { success: true, message: "Mock email sent (configure RESEND_API_KEY for real emails)" };
     }
 
     try {
-        await transporter.sendMail({
-            from: `"FT Synergist Website" <${process.env.SMTP_EMAIL}>`,
+        await resend.emails.send({
+            from: "FT Synergist Website <fredtan@mail.ftsynergist.com>",
             to: "fredtan@ftsynergist.com",
             subject: subject,
             text: text,
@@ -33,7 +24,7 @@ export async function sendEmail(data: any) {
         return { success: true, message: "Email sent successfully" };
     } catch (error) {
         console.error("Error sending email:", error);
-        return { success: false, message: "Failed to send email" };
+        return { success: false, message: `Failed to send email: ${error instanceof Error ? error.message : String(error)}` };
     }
 }
 
