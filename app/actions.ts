@@ -6,7 +6,7 @@ import { Event, Report, saveEvents, saveReports } from "@/lib/data";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(data: any) {
-    const { subject, text, html } = data;
+    const { subject, text, html, email } = data;
 
     if (!process.env.RESEND_API_KEY) {
         console.log("Mock Email Sent (Missing RESEND_API_KEY):", data);
@@ -14,13 +14,21 @@ export async function sendEmail(data: any) {
     }
 
     try {
-        await resend.emails.send({
-            from: "FT Synergist Website <fredtan@mail.ftsynergist.com>",
+        const { data: resendData, error } = await resend.emails.send({
+            from: "FT Synergist Website <noreply@mail.ftsynergist.com>",
             to: "fredtan@ftsynergist.com",
+            replyTo: email,
             subject: subject,
             text: text,
             html: html,
         });
+
+        if (error) {
+            console.error("Resend API Error:", error);
+            return { success: false, message: `Failed to send email: ${error.message}` };
+        }
+
+        console.log("Email sent successfully. Resend ID:", resendData?.id);
         return { success: true, message: "Email sent successfully" };
     } catch (error) {
         console.error("Error sending email:", error);

@@ -35,14 +35,17 @@ export function EventsList({ initialEvents }: EventsListProps) {
                 <div className="space-y-6 max-w-4xl mx-auto">
                     {initialEvents.map((event) => (
                         <div key={event.id} className="group relative overflow-hidden rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/50 flex flex-col md:flex-row gap-6">
-                            <div className="flex-shrink-0 flex flex-col items-center justify-center rounded-lg bg-secondary p-4 w-full md:w-32 text-center">
-                                <span className="text-sm font-medium text-muted-foreground uppercase">
+                            <div
+                                className="flex-shrink-0 flex flex-col items-center justify-center rounded-lg p-4 w-full md:w-32 text-center"
+                                style={{ backgroundColor: 'var(--primary)', color: 'var(--primary-foreground)' }}
+                            >
+                                <span className="text-sm font-medium uppercase opacity-90">
                                     {new Date(event.date).toLocaleString('default', { month: 'short' })}
                                 </span>
-                                <span className="text-3xl font-bold text-foreground">
+                                <span className="text-3xl font-bold">
                                     {new Date(event.date).getDate()}
                                 </span>
-                                <span className="text-xs text-muted-foreground">
+                                <span className="text-xs opacity-90">
                                     {new Date(event.date).getFullYear()}
                                 </span>
                             </div>

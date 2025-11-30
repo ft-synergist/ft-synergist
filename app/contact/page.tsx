@@ -36,7 +36,8 @@ Message: ${formData.get("message")}
 <p><strong>Subject:</strong> ${formData.get("subject")}</p>
 <p><strong>Message:</strong></p>
 <p>${formData.get("message")}</p>
-            `
+            `,
+            email: formData.get("email") as string
         };
 
         const result = await sendEmail(data);
