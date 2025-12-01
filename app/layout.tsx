@@ -4,6 +4,10 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatWidget } from "@/components/ChatWidget";
+import { ConsentProvider } from "@/components/providers/ConsentProvider";
+import { ConsentBanner } from "@/components/cmp/ConsentBanner";
+import { PreferenceCenter } from "@/components/cmp/PreferenceCenter";
+import { FloatingConsentButton } from "@/components/cmp/FloatingConsentButton";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -31,12 +35,17 @@ export default function RootLayout({
         className={`${jost.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}
         suppressHydrationWarning
       >
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-        <ChatWidget />
+        <ConsentProvider>
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+          <ChatWidget />
+          <ConsentBanner />
+          <PreferenceCenter />
+          <FloatingConsentButton />
+        </ConsentProvider>
       </body>
     </html>
   );
