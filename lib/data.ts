@@ -128,15 +128,14 @@ export async function getEvents() {
 export async function getReports() {
     if (IS_PRODUCTION) {
         try {
-            const { rows } = await sql`SELECT * FROM reports ORDER BY id ASC`;
+            const { rows } = await sql`SELECT * FROM reports ORDER BY date DESC`;
             return rows as Report[];
         } catch (error) {
             console.error("Database Error:", error);
             return [];
         }
-    } else {
         const data = await readDataFile();
-        return data.reports;
+        return data.reports.sort((a: Report, b: Report) => new Date(b.date).getTime() - new Date(a.date).getTime());
     }
 }
 

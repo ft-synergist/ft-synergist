@@ -9,6 +9,7 @@ import { ConsentBanner } from "@/components/cmp/ConsentBanner";
 import { PreferenceCenter } from "@/components/cmp/PreferenceCenter";
 import { FloatingConsentButton } from "@/components/cmp/FloatingConsentButton";
 import { GlobalGrantButton } from "@/components/GlobalGrantButton";
+import { NewsletterBanner } from "@/components/NewsletterBanner";
 
 
 const jost = Jost({
@@ -62,6 +63,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ConsentProvider>
+          <NewsletterBanner />
           <Navbar />
           <main className="flex-grow">
             {children}

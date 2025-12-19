@@ -58,3 +58,42 @@ export async function updateReportsAction(reports: Report[]) {
     revalidatePath("/admin");
     return { success: true };
 }
+
+export async function subscribeToNewsletter(userEmail: string) {
+    if (!process.env.RESEND_API_KEY) {
+        console.log("Mock Newsletter Sub:", userEmail);
+        return { success: true, message: "Mock subscription successful" };
+    }
+
+    try {
+        // Send a notification to the admin
+        await resend.emails.send({
+            from: "FT Synergist Website <noreply@mail.ftsynergist.com>",
+            to: "fredtan@ftsynergist.com",
+            subject: "New Newsletter Subscriber",
+            text: `New subscriber: ${userEmail}`,
+        });
+
+        // Send a welcome email to the user (optional, but good practice)
+        await resend.emails.send({
+            from: "FT Synergist <insights@mail.ftsynergist.com>",
+            to: userEmail,
+            subject: "Welcome to FT Synergist Insights",
+            text: "Thank you for subscribing! You will now receive our latest market intelligence and growth frameworks directly to your inbox.",
+            html: `
+                <h1>Welcome to our community!</h1>
+                <p>Thank you for subscribing to FT Synergist Insights.</p>
+                <p>You will now receive our latest market intelligence and growth frameworks directly to your inbox.</p>
+                <br/>
+                <p>Best regards,</p>
+                <p>Frederick Tan</p>
+                <p><strong>FT Synergist</strong></p>
+            `,
+        });
+
+        return { success: true };
+    } catch (error) {
+        console.error("Newsletter Subscription Error:", error);
+        return { success: false, message: "Failed to subscribe. Please try again." };
+    }
+}
