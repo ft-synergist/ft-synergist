@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 const logos = [
     "/logos/01_changi_airport_group_logo.png",

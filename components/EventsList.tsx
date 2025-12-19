@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Calendar, MapPin, Clock, Users } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 import { EventRegistrationModal } from "@/components/EventRegistrationModal";
 import { Event } from "@/lib/data";
 

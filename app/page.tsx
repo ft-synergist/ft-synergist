@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BarChart3, Cpu, Globe, Rocket, ChevronRight, Lightbulb, TrendingUp, Users, Target, Briefcase } from "lucide-react";
+import { ArrowRight, Cpu, Globe, ChevronRight, Lightbulb, TrendingUp, Users, Target, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 import GrantEligibilityModal from "@/components/GrantEligibilityModal";
 import { LogoCarousel } from "@/components/LogoCarousel";
@@ -135,7 +135,7 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="mt-4 text-lg text-muted-foreground"
             >
-              Aligned with Enterprise Singapore's growth frameworks to support your expansion.
+              Aligned with Enterprise Singapore&apos;s growth frameworks to support your expansion.
             </motion.p>
           </div>
 
@@ -235,9 +235,7 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="text-2xl md:text-4xl font-bold max-w-6xl mx-auto drop-shadow-2xl leading-tight"
             >
-              <span className="text-yellow-400 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
-                "To inspire 100 entrepreneurs to improve the quality of lives of 100M people in Asia by&nbsp;2026."
-              </span>
+              &quot;To inspire 100 entrepreneurs to improve the quality of lives of 100M people in Asia by&nbsp;2026.&quot;
             </motion.p>
           </div>
 
@@ -308,21 +306,3 @@ export default function Home() {
   );
 }
 
-function UserIconPlaceholder() {
-  return (
-    <svg
-      className="h-24 w-24 text-slate-400"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1}
-        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-      />
-    </svg>
-  );
-}

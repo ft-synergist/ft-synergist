@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
+import { Mail, MapPin, Send, Clock } from "lucide-react";
 import { useState } from "react";
 import { sendEmail } from "@/app/actions";
 

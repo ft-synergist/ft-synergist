@@ -212,9 +212,9 @@ Result: Eligible
                                         <div className="w-16 h-16 bg-yellow-500/20 text-yellow-500 rounded-full flex items-center justify-center mx-auto">
                                             <AlertCircle className="w-8 h-8" />
                                         </div>
-                                        <h3 className="text-2xl font-bold text-white">Don't Miss Out</h3>
+                                        <h3 className="text-2xl font-bold text-white">Don&apos;t Miss Out</h3>
                                         <p className="text-gray-300 max-w-md mx-auto">
-                                            While you might not meet the strict EDG criteria yet, there are other strategies to fund your growth. Let's discuss your options.
+                                            While you might not meet the strict EDG criteria yet, there are other strategies to fund your growth. Let&apos;s discuss your options.
                                         </p>
                                         <div className="flex flex-col gap-3 max-w-xs mx-auto">
                                             <a

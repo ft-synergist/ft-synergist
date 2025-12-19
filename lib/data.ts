@@ -98,7 +98,8 @@ async function readDataFile() {
     try {
         const data = await fs.readFile(DATA_FILE_PATH, "utf-8");
         return JSON.parse(data);
-    } catch (error) {
+    } catch {
+        console.log("Using initial data (data.json missing or invalid)");
         return { events: initialEvents, reports: initialReports };
     }
 }

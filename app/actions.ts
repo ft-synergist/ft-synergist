@@ -5,7 +5,14 @@ import { Event, Report, saveEvents, saveReports } from "@/lib/data";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function sendEmail(data: any) {
+interface EmailData {
+    subject: string;
+    text: string;
+    html: string;
+    email: string;
+}
+
+export async function sendEmail(data: EmailData) {
     const { subject, text, html, email } = data;
 
     if (!process.env.RESEND_API_KEY) {

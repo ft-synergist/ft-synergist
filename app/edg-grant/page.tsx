@@ -170,7 +170,7 @@ export default function EdgGrantPage() {
                         </div>
                         <div className="p-6">
                             <h3 className="font-bold text-lg mb-2">Strategic Focus</h3>
-                            <p className="text-sm text-muted-foreground">We don't just get you a grant; we ensure the project drives real business ROI.</p>
+                            <p className="text-sm text-muted-foreground">We don&apos;t just get you a grant; we ensure the project drives real business ROI.</p>
                         </div>
                     </div>
                 </div>
@@ -194,7 +194,7 @@ export default function EdgGrantPage() {
                         </div>
                         <div className="bg-card p-6 rounded-lg border">
                             <h3 className="font-bold mb-2">What is the difference between EDG and PSG?</h3>
-                            <p className="text-sm text-muted-foreground">The Productivity Solutions Grant (PSG) supports the adoption of pre-scoped IT solutions and equipment. EDG supports customised projects that are tailored to your company's specific growth needs.</p>
+                            <p className="text-sm text-muted-foreground">The Productivity Solutions Grant (PSG) supports the adoption of pre-scoped IT solutions and equipment. EDG supports customised projects that are tailored to your company&apos;s specific growth needs.</p>
                         </div>
                     </div>
                 </div>
@@ -205,7 +205,7 @@ export default function EdgGrantPage() {
                 <div className="container px-4 mx-auto text-center">
                     <h2 className="text-3xl font-bold mb-6">Ready to Scale Your Business?</h2>
                     <p className="max-w-xl mx-auto mb-8 text-primary-foreground/90">
-                        Schedule a complimentary 30-minute discovery session to assess your project's eligibility and potential funding quantum.
+                        Schedule a complimentary 30-minute discovery session to assess your project&apos;s eligibility and potential funding quantum.
                     </p>
                     <Link
                         href="/contact"

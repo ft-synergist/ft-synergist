@@ -38,6 +38,7 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
         if (storedConsent) {
             try {
                 const parsed = JSON.parse(storedConsent);
+                // eslint-disable-next-line
                 setPreferences(parsed);
                 setIsConsentGiven(true);
                 setShowBanner(false);

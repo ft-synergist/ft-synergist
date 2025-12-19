@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useConsent, ConsentPreferences } from '@/components/providers/ConsentProvider';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,11 +11,6 @@ export function PreferenceCenter() {
     const [localPreferences, setLocalPreferences] = useState<ConsentPreferences>(preferences);
     const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
-    useEffect(() => {
-        if (showPreferences) {
-            setLocalPreferences(preferences);
-        }
-    }, [showPreferences, preferences]);
 
     if (!showPreferences) return null;
 

@@ -38,14 +38,14 @@ export default function PartnershipPage() {
                             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                                 <h3 className="text-xl font-bold text-primary mb-3">Licensed DVF Arbitrage</h3>
                                 <p className="text-base">
-                                    You are empowered to promise a verified 50% reduction in time and operational cost for franchisor development. This is achieved by licensing our "Beyond Borders FMS"—a proprietary system that leverages AI integration to impose rapid standardization, instantly giving you a massive advantage over local manual consulting models.
+                                    You are empowered to promise a verified 50% reduction in time and operational cost for franchisor development. This is achieved by licensing our &quot;Beyond Borders FMS&quot;—a proprietary system that leverages AI integration to impose rapid standardization, instantly giving you a massive advantage over local manual consulting models.
                                 </p>
                             </div>
 
                             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                                 <h3 className="text-xl font-bold text-primary mb-3">Institutional Compliance Gateway</h3>
                                 <p className="text-base">
-                                    Anchor your local deals to Singapore's high-trust regulatory environment. You gain the exclusive authority to prepare assets using our rigorous G-Score (Governance Score) and LACF (Longevity-Adjusted Cash Flow) Index. This rigor ensures your local clients meet the verifiable due diligence standards required to attract the institutional capital (Funds, Family Offices) actively seeking deals through our platform.
+                                    Anchor your local deals to Singapore&apos;s high-trust regulatory environment. You gain the exclusive authority to prepare assets using our rigorous G-Score (Governance Score) and LACF (Longevity-Adjusted Cash Flow) Index. This rigor ensures your local clients meet the verifiable due diligence standards required to attract the institutional capital (Funds, Family Offices) actively seeking deals through our platform.
                                 </p>
                             </div>
 
@@ -59,7 +59,7 @@ export default function PartnershipPage() {
                             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                                 <h3 className="text-xl font-bold text-primary mb-3">Operational Confidence</h3>
                                 <p className="text-base">
-                                    Leverage our video-optimized Operational Kits, which guarantee measurable outcomes—including the 30% reduction in training time—instantly raising the consistency and reliability of your clients' expanding networks.
+                                    Leverage our video-optimized Operational Kits, which guarantee measurable outcomes—including the 30% reduction in training time—instantly raising the consistency and reliability of your clients&apos; expanding networks.
                                 </p>
                             </div>
                         </div>

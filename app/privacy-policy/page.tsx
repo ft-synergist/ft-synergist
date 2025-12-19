@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
 
             <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="mb-6">
-                    FT Synergist and its affiliates ("FT Synergist," "we," or "us") are committed to protecting your privacy and personal data in strict compliance with the Singapore Personal Data Protection Act 2012 (PDPA). This Privacy Policy describes how we collect, use, disclose, and manage your personal data when you interact with our websites, digital platforms (collectively, our "Sites"), and through our external business activities, and how we uphold the principles of data protection and accountability.
+                    FT Synergist and its affiliates (&quot;FT Synergist,&quot; &quot;we,&quot; or &quot;us&quot;) are committed to protecting your privacy and personal data in strict compliance with the Singapore Personal Data Protection Act 2012 (PDPA). This Privacy Policy describes how we collect, use, disclose, and manage your personal data when you interact with our websites, digital platforms (collectively, our &quot;Sites&quot;), and through our external business activities, and how we uphold the principles of data protection and accountability.
                 </p>
                 <p className="mb-6">
                     By interacting with our Sites or providing your personal data, you acknowledge and consent to the practices described in this Privacy Policy.
@@ -37,11 +37,11 @@ export default function PrivacyPolicy() {
                 <h2 className="text-2xl font-bold mt-8 mb-4">1. Definitions and Scope</h2>
                 <h3 className="text-xl font-semibold mt-6 mb-3">A. Personal Data Defined</h3>
                 <p className="mb-4">
-                    "Personal data" means data, whether true or not, about an individual who can be identified: (a) from that data; or (b) from that data and other information to which we have or are likely to have access. Examples we may collect include name, contact information, employment information, and digital identifiers (IP address, device ID).
+                    &quot;Personal data&quot; means data, whether true or not, about an individual who can be identified: (a) from that data; or (b) from that data and other information to which we have or are likely to have access. Examples we may collect include name, contact information, employment information, and digital identifiers (IP address, device ID).
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">B. Business Contact Information (BCI) Exemption</h3>
                 <p className="mb-4">
-                    Under the PDPA, Business Contact Information (BCI) (e.g., an individual's full name, job title, business contact number, business address, business email address) is generally not considered personal data when collected, used, or disclosed solely for business-to-business (B2B) transactions.
+                    Under the PDPA, Business Contact Information (BCI) (e.g., an individual&apos;s full name, job title, business contact number, business address, business email address) is generally not considered personal data when collected, used, or disclosed solely for business-to-business (B2B) transactions.
                 </p>
                 <h3 className="text-xl font-semibold mt-6 mb-3">C. Data Controller and DPO</h3>
                 <p className="mb-4">

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useConsent, defaultPreferences } from '@/components/providers/ConsentProvider';
+import { useConsent } from '@/components/providers/ConsentProvider';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function ConsentBanner() {

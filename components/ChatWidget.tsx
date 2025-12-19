@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { MessageSquare, X, Send, User, Bot, ChevronDown } from "lucide-react";
+import { MessageSquare, X, Send, Bot, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -38,7 +38,7 @@ export function ChatWidget() {
         if (!text.trim()) return;
 
         const newMessage: Message = {
-            id: Date.now().toString(),
+            id: crypto.randomUUID(),
             text,
             sender: "user",
         };
