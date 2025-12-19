@@ -8,6 +8,8 @@ import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { ConsentBanner } from "@/components/cmp/ConsentBanner";
 import { PreferenceCenter } from "@/components/cmp/PreferenceCenter";
 import { FloatingConsentButton } from "@/components/cmp/FloatingConsentButton";
+import { GlobalGrantButton } from "@/components/GlobalGrantButton";
+
 
 const jost = Jost({
   subsets: ["latin"],
@@ -19,9 +21,33 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
+import JsonLd from "@/components/JsonLd";
+
 export const metadata: Metadata = {
-  title: "FT Synergist | Accelerating Growth for 100 Million Lives in Asia",
-  description: "Scaling businesses with strategic consulting, AI integration, and sustainable growth. Based in Singapore, serving Southeast Asia.",
+  metadataBase: new URL('https://www.ftsynergist.com'),
+  title: {
+    default: "FT Synergist | SME Consultant & EDG Grant Advisor Singapore",
+    template: "%s | FT Synergist"
+  },
+  description: "Scale your business with FT Synergist, Singapore's premier SME management consultant. Expert guidance on Enterprise Strategy, EDG Grants, and Artificial Intelligence for sustainable growth.",
+  keywords: ["SME Consultant Singapore", "EDG Grant", "Enterprise Singapore", "Business Scaling", "Management Consulting", "Frederick Tan", "Franchise Development"],
+  openGraph: {
+    title: "FT Synergist | SME Consultant & EDG Grant Advisor Singapore",
+    description: "Empowering Singapore SMEs to scale globally with strategic innovation, AI integration, and government-supported growth frameworks.",
+    url: 'https://www.ftsynergist.com',
+    siteName: 'FT Synergist',
+    locale: 'en_SG',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "FT Synergist | SME Consultant & EDG Grant Advisor Singapore",
+    description: "Scale your business with expert EDG grant guidance and strategic consulting.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({
@@ -45,6 +71,8 @@ export default function RootLayout({
           <ConsentBanner />
           <PreferenceCenter />
           <FloatingConsentButton />
+          <JsonLd />
+          <GlobalGrantButton />
         </ConsentProvider>
       </body>
     </html>

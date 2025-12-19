@@ -268,7 +268,7 @@ export function AdminDashboard({ initialEvents, initialReports }: AdminDashboard
                                                         setReports(newReports);
                                                     }}
                                                     className="border p-2 rounded"
-                                                    placeholder="Google Drive Link"
+                                                    placeholder="Google Drive Link (Required for direct download)"
                                                 />
                                                 <textarea
                                                     value={report.description}

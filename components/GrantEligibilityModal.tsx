@@ -30,7 +30,8 @@ export default function GrantEligibilityModal({ isOpen, onClose }: GrantEligibil
     const [selectedItems, setSelectedItems] = useState<number[]>([]);
     const [step, setStep] = useState<"assessment" | "result">("assessment");
     const [isEligible, setIsEligible] = useState(false);
-    const [contactForm, setContactForm] = useState({ name: "", phone: "" });
+    const [contactForm, setContactForm] = useState({ name: "", email: "", phone: "", company: "" });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const toggleItem = (id: number) => {
         setSelectedItems((prev) =>
@@ -54,7 +55,7 @@ export default function GrantEligibilityModal({ isOpen, onClose }: GrantEligibil
         setSelectedItems([]);
         setStep("assessment");
         setIsEligible(false);
-        setContactForm({ name: "", phone: "" });
+        setContactForm({ name: "", email: "", phone: "", company: "" });
     };
 
     if (!isOpen) return null;
@@ -137,22 +138,47 @@ export default function GrantEligibilityModal({ isOpen, onClose }: GrantEligibil
                                                 />
                                             </div>
                                             <div>
+                                                <label className="block text-sm font-medium text-gray-400 mb-1">Company Name</label>
+                                                <input
+                                                    type="text"
+                                                    value={contactForm.company}
+                                                    onChange={(e) => setContactForm({ ...contactForm, company: e.target.value })}
+                                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#8F801B]"
+                                                    placeholder="Company Pte Ltd"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-sm font-medium text-gray-400 mb-1">Work Email</label>
+                                                <input
+                                                    type="email"
+                                                    value={contactForm.email}
+                                                    onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#8F801B]"
+                                                    placeholder="name@company.com"
+                                                />
+                                            </div>
+                                            <div>
                                                 <label className="block text-sm font-medium text-gray-400 mb-1">Contact Number</label>
                                                 <input
                                                     type="tel"
                                                     value={contactForm.phone}
                                                     onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
                                                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#8F801B]"
-                                                    placeholder="Your Phone Number"
+                                                    placeholder="+65 9123 4567"
                                                 />
                                             </div>
                                             <button
-                                                className="w-full py-3 bg-[#8F801B] hover:bg-[#7a6d17] text-white font-bold rounded-lg transition-colors"
+                                                className="w-full py-3 bg-[#8F801B] hover:bg-[#7a6d17] text-white font-bold rounded-lg transition-colors disabled:opacity-50"
+                                                disabled={isSubmitting}
                                                 onClick={async () => {
+                                                    setIsSubmitting(true);
                                                     const data = {
                                                         subject: "New Grant Eligibility Check (Eligible)",
+                                                        email: contactForm.email,
                                                         text: `
 Name: ${contactForm.name}
+Company: ${contactForm.company}
+Email: ${contactForm.email}
 Phone: ${contactForm.phone}
 Result: Eligible
                                                         `,
@@ -160,11 +186,15 @@ Result: Eligible
 <h3>New Grant Eligibility Check</h3>
 <p><strong>Result:</strong> <span style="color: green;">Eligible</span></p>
 <p><strong>Name:</strong> ${contactForm.name}</p>
+<p><strong>Company:</strong> ${contactForm.company}</p>
+<p><strong>Email:</strong> ${contactForm.email}</p>
 <p><strong>Phone:</strong> ${contactForm.phone}</p>
                                                         `
                                                     };
 
                                                     const result = await sendEmail(data);
+                                                    setIsSubmitting(false);
+
                                                     if (result.success) {
                                                         alert("Thank you! We will be in touch.");
                                                         onClose();
@@ -173,25 +203,33 @@ Result: Eligible
                                                     }
                                                 }}
                                             >
-                                                Submit
+                                                {isSubmitting ? "Submitting..." : "Submit Application"}
                                             </button>
                                         </div>
                                     </>
                                 ) : (
                                     <>
-                                        <div className="w-16 h-16 bg-red-500/20 text-red-500 rounded-full flex items-center justify-center mx-auto">
+                                        <div className="w-16 h-16 bg-yellow-500/20 text-yellow-500 rounded-full flex items-center justify-center mx-auto">
                                             <AlertCircle className="w-8 h-8" />
                                         </div>
-                                        <h3 className="text-2xl font-bold text-white">Not Applicable</h3>
-                                        <p className="text-gray-300">
-                                            Based on your selection, this grant is not applicable to you at this time.
+                                        <h3 className="text-2xl font-bold text-white">Don't Miss Out</h3>
+                                        <p className="text-gray-300 max-w-md mx-auto">
+                                            While you might not meet the strict EDG criteria yet, there are other strategies to fund your growth. Let's discuss your options.
                                         </p>
-                                        <button
-                                            onClick={reset}
-                                            className="px-6 py-2 border border-white/20 hover:bg-white/10 text-white rounded-lg transition-colors"
-                                        >
-                                            Try Again
-                                        </button>
+                                        <div className="flex flex-col gap-3 max-w-xs mx-auto">
+                                            <a
+                                                href="/contact"
+                                                className="w-full py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors"
+                                            >
+                                                Book Free Strategy Session
+                                            </a>
+                                            <button
+                                                onClick={reset}
+                                                className="w-full py-3 border border-white/20 hover:bg-white/10 text-white rounded-lg transition-colors"
+                                            >
+                                                Retake Assessment
+                                            </button>
+                                        </div>
                                     </>
                                 )}
                             </div>

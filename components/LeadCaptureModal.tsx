@@ -27,7 +27,7 @@ export function LeadCaptureModal({ isOpen, onClose, reportTitle, driveLink, onSu
         setIsLoading(true);
 
         const data = {
-            subject: `New Report Download: ${reportTitle}`,
+            subject: `${driveLink ? 'New Report Download' : 'Report Request'}: ${reportTitle}`,
             text: `
 Report: ${reportTitle}
 Name: ${formData.name}
@@ -36,7 +36,7 @@ Phone: ${formData.phone}
 Company: ${formData.company}
             `,
             html: `
-<h3>New Report Download</h3>
+<h3>${driveLink ? 'New Report Download' : 'Report Request'}</h3>
 <p><strong>Report:</strong> ${reportTitle}</p>
 <p><strong>Name:</strong> ${formData.name}</p>
 <p><strong>Email:</strong> ${formData.email}</p>
@@ -55,7 +55,7 @@ Company: ${formData.company}
             if (driveLink) {
                 window.open(driveLink, "_blank");
             } else {
-                alert("Download link not available.");
+                alert("Request received! We will email you the copy.");
             }
         } else {
             alert("Failed to process request. Please try again.");
@@ -80,14 +80,14 @@ Company: ${formData.company}
                         className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border bg-background p-6 shadow-lg"
                     >
                         <div className="flex items-center justify-between mb-4">
-                            <h3 className="text-lg font-semibold">Download Report</h3>
+                            <h3 className="text-lg font-semibold">{driveLink ? 'Download Report' : 'Request Report'}</h3>
                             <button onClick={onClose} className="rounded-full p-1 hover:bg-secondary">
                                 <X className="h-4 w-4" />
                             </button>
                         </div>
 
                         <p className="mb-6 text-sm text-muted-foreground">
-                            Please provide your details to download <strong>{reportTitle}</strong>.
+                            Please provide your details to {driveLink ? 'download' : 'request'} <strong>{reportTitle}</strong>.
                         </p>
 
                         <form onSubmit={handleSubmit} className="space-y-4">
@@ -156,7 +156,7 @@ Company: ${formData.company}
                                 ) : (
                                     <>
                                         <Download className="mr-2 h-4 w-4" />
-                                        Download Now
+                                        {driveLink ? 'Download Now' : 'Request Copy'}
                                     </>
                                 )}
                             </button>
