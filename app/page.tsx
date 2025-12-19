@@ -81,38 +81,90 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Featured Insight Section */}
+      {/* Strategic Intelligence Section */}
       <section className="py-16 bg-secondary/5">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row items-center gap-12 rounded-2xl bg-card p-8 shadow-sm border border-border/50"
-          >
-            <div className="md:w-1/2 space-y-6">
-              <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
-                Featured Insight
+          <div className="text-center mb-12">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
+            >
+              Strategic Intelligence
+            </motion.h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Market-defining research and case studies to guide your expansion.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            {/* Report 1: State of AI */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col rounded-2xl bg-card overflow-hidden shadow-sm border border-border/50 group hover:shadow-lg transition-shadow"
+            >
+              <div className="relative h-64 w-full overflow-hidden">
+                <Image
+                  src="/state-of-ai-2026.png"
+                  alt="State of AI in Southeast Asia 2026 Report Cover - Strategic Analysis for Scaling Enterprises"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                <div className="absolute bottom-4 left-4">
+                  <div className="inline-flex items-center rounded-full bg-primary/90 px-3 py-1 text-xs font-bold text-white mb-2">
+                    New Release
+                  </div>
+                </div>
               </div>
-              <h2 className="text-3xl font-bold tracking-tight">State of AI in Southeast Asia 2025</h2>
-              <p className="text-muted-foreground text-lg">
-                A comprehensive analysis of AI adoption trends across Singapore, Indonesia, and Vietnam. Discover how leading firms are leveraging generative AI to redefine productivity.
-              </p>
-              <Link href="/insights" className="inline-flex items-center text-primary font-semibold hover:underline group">
-                Read the Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-            <div className="md:w-1/2 relative h-64 w-full rounded-xl overflow-hidden group shadow-lg">
-              <Image
-                src="/state-of-ai-2025-v2.png"
-                alt="State of AI in Southeast Asia 2025 Report Cover"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-            </div>
-          </motion.div>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold tracking-tight mb-3">State of AI in Southeast Asia 2026</h3>
+                <p className="text-muted-foreground mb-6 flex-grow">
+                  A comprehensive analysis of AI adoption trends across Singapore, Indonesia, and Vietnam. Discover how leading firms are leveraging generative AI to redefine productivity from pilot to utility.
+                </p>
+                <Link href="/insights" className="inline-flex items-center text-primary font-bold hover:underline group-hover:text-primary/80 transition-colors">
+                  Read the Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Report 2: Wang Lao Ji */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col rounded-2xl bg-card overflow-hidden shadow-sm border border-border/50 group hover:shadow-lg transition-shadow"
+            >
+              <div className="relative h-64 w-full overflow-hidden">
+                <Image
+                  src="/wang-lao-ji-scaling.png"
+                  alt="Global Expansion Roadmap: 5 Scaling Lessons from Wang Lao Ji for SMEs Case Study Cover"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                <div className="absolute bottom-4 left-4">
+                  <div className="inline-flex items-center rounded-full bg-white/20 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/30">
+                    Case Study
+                  </div>
+                </div>
+              </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold tracking-tight mb-3">Global Expansion Roadmap: Wang Lao Ji</h3>
+                <p className="text-muted-foreground mb-6 flex-grow">
+                  5 Scaling Lessons from Wang Lao Ji for SMEs. Learn how a 197-year legacy brand transformed into a global lifestyle icon, offering a blueprint for brand resilience and market adaptation.
+                </p>
+                <Link href="/insights" className="inline-flex items-center text-primary font-bold hover:underline group-hover:text-primary/80 transition-colors">
+                  Read the Case Study <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

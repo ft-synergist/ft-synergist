@@ -58,11 +58,19 @@
   "reports": [
     {
       "id": 1,
-      "title": "State of AI in Southeast Asia 2025",
+      "title": "State of AI in Southeast Asia 2026",
       "description": "A comprehensive analysis of AI adoption trends across Singapore, Indonesia, and Vietnam.",
       "date": "Dec 2025",
       "category": "Technology",
       "driveLink": "https://drive.google.com/file/d/1XF54qVGZBFF_BIAGG_dQ7Y0lqzj9dAaT/view?usp=drive_link"
+    },
+    {
+      "id": 1764385013061,
+      "title": "Global Expansion Roadmap: Wang Lao Ji for SMEs",
+      "description": "Transforming a 197-Year Legacy into a Global Lifestyle Brand (5 Scaling Lessons).",
+      "date": "Nov 2025",
+      "category": "Business Scaling",
+      "driveLink": "https://drive.google.com"
     },
     {
       "id": 2,
