@@ -105,7 +105,7 @@ export default function Home() {
             </div>
             <div className="md:w-1/2 relative h-64 w-full rounded-xl overflow-hidden group shadow-lg">
               <Image
-                src="/state-of-ai-2025.png"
+                src="/state-of-ai-2025-v2.png"
                 alt="State of AI in Southeast Asia 2025 Report Cover"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
