@@ -27,14 +27,14 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ftsynergist.com'),
   title: {
-    default: "FT Synergist | SME Consultant & EDG Grant Advisor Singapore",
+    default: "FT Synergist | Strategic Scale-Up & IP Consultancy Singapore",
     template: "%s | FT Synergist"
   },
-  description: "Scale your business with FT Synergist, Singapore's premier SME management consultant. Expert guidance on Enterprise Strategy, EDG Grants, and Artificial Intelligence for sustainable growth.",
-  keywords: ["SME Consultant Singapore", "EDG Grant", "Enterprise Singapore", "Business Scaling", "Management Consulting", "Frederick Tan", "Franchise Development"],
+  description: "Specializing in Business Strategy, IP Monetization, and Market Expansion for scaling enterprises. We help profitable SMEs build competitive moats and valuation.",
+  keywords: ["SME Consultant Singapore", "EDG Grant", "Enterprise Strategy", "IP Monetization", "Market Expansion", "Frederick Tan", "Franchise Development"],
   openGraph: {
-    title: "FT Synergist | SME Consultant & EDG Grant Advisor Singapore",
-    description: "Empowering Singapore SMEs to scale globally with strategic innovation, AI integration, and government-supported growth frameworks.",
+    title: "FT Synergist | Strategic Scale-Up & IP Consultancy Singapore",
+    description: "Specializing in Business Strategy, IP Monetization, and Market Expansion for scaling enterprises. We help profitable SMEs build competitive moats and valuation.",
     url: 'https://www.ftsynergist.com',
     siteName: 'FT Synergist',
     locale: 'en_SG',
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "FT Synergist | SME Consultant & EDG Grant Advisor Singapore",
-    description: "Scale your business with expert EDG grant guidance and strategic consulting.",
+    title: "FT Synergist | Strategic Scale-Up & IP Consultancy Singapore",
+    description: "Specializing in Business Strategy, IP Monetization, and Market Expansion for scaling enterprises.",
   },
   robots: {
     index: true,
