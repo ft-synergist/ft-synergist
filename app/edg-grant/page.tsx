@@ -5,13 +5,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
 import GrantEligibilityModal from "@/components/GrantEligibilityModal";
 
-export const metadata: Metadata = {
-    title: "EDG Grant Advisory & Eligibility | FT Synergist",
-    description: "Check your eligibility for the Enterprise Development Grant (EDG). FT Synergist helps Singapore SMEs secure up to 50% funding for strategic growth and expansion projects.",
-};
+
 
 export default function EDGGrantPage() {
     const [isGrantModalOpen, setIsGrantModalOpen] = useState(false);
