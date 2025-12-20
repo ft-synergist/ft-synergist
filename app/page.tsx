@@ -42,17 +42,6 @@ export default function Home() {
         { title: "Strategic Roadmap", content: "Delivering a clear go-to-market implementation plan for business frameworks, Sustainability Governance, and policy development." },
         { title: "R&D & IP Optimization", content: "Structuring your intellectual property assets and R&D operations for maximum valuation and efficiency." }
       ],
-      action: (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            setIsGrantModalOpen(true);
-          }}
-          className="mt-4 text-sm font-bold text-[#8F801B] hover:text-[#8F801B]/80 hover:underline flex items-center transition-colors"
-        >
-          Check Grant Eligibility <ChevronRight className="w-4 h-4 ml-1" />
-        </button>
-      )
     },
     {
       title: "Strategic Brand & Marketing",
@@ -340,7 +329,6 @@ export default function Home() {
                         {expandedCardIndex === index ? 'Show Less' : 'Read More'}
                         <ChevronRight className={`ml-1 h-4 w-4 transition-transform duration-300 ${expandedCardIndex === index ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
                       </button>
-                      {service.action}
                     </div>
                   </div>
                 </motion.div>
