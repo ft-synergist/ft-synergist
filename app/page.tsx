@@ -7,6 +7,7 @@ import { ArrowRight, ChevronRight, TrendingUp, Users, Globe, CheckCircle2 } from
 import { motion, AnimatePresence } from "framer-motion";
 import GrantEligibilityModal from "@/components/GrantEligibilityModal";
 import { LogoCarousel } from "@/components/LogoCarousel";
+import { NewsletterBanner } from "@/components/NewsletterBanner";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -172,6 +173,10 @@ export default function Home() {
             </p>
           </div>
 
+          <div className="mb-12">
+            <NewsletterBanner />
+          </div>
+
           <div className="grid gap-8 md:grid-cols-2">
             {/* Report 1: State of AI */}
             <motion.div
@@ -219,8 +224,10 @@ export default function Home() {
                   src="/wang-lao-ji-scaling.png"
                   alt="Global Expansion Roadmap: 5 Scaling Lessons from Wang Lao Ji for SMEs Case Study Cover"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-contain transition-transform duration-700 group-hover:scale-105"
                 />
+                {/* Background to fill the gaps from object-contain */}
+                <div className="absolute inset-0 bg-stone-100 -z-10"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
                   <div className="inline-flex items-center rounded-full bg-white/20 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/30">
