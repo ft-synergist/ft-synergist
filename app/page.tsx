@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Cpu, Globe, ChevronRight, Lightbulb, TrendingUp, Users, Target, Briefcase } from "lucide-react";
+import { ArrowRight, ChevronRight, TrendingUp, Users, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 import GrantEligibilityModal from "@/components/GrantEligibilityModal";
 import { LogoCarousel } from "@/components/LogoCarousel";
@@ -204,12 +204,12 @@ export default function Home() {
               {[
                 {
                   title: "Business Strategy Development",
-                  description: "Crafting actionable roadmaps backed by defensible IP Strategy. We move beyond standard planning to build IP Strategy Consulting directly into your business model. We help you audit your intangible assets, structure your portfolio for valuation, and design \"competitive moats\" that protect your long-term growth. Our roadmaps don't just navigate market complexities; they secure your legal right to dominate them.",
-                  icon: Target,
+                  description: "Crafting actionable roadmaps backed by defensible IP Strategy to secure your legal right to dominate markets.",
+                  image: "/service-strategy.png",
                   action: (
                     <button
                       onClick={() => setIsGrantModalOpen(true)}
-                      className="mt-6 text-sm font-bold text-[#8F801B] hover:text-[#8F801B]/80 hover:underline flex items-center transition-colors"
+                      className="mt-4 text-sm font-bold text-[#8F801B] hover:text-[#8F801B]/80 hover:underline flex items-center transition-colors"
                     >
                       Check Grant Eligibility <ChevronRight className="w-4 h-4 ml-1" />
                     </button>
@@ -217,32 +217,41 @@ export default function Home() {
                 },
                 {
                   title: "Strategic Brand & Marketing",
-                  description: "Building resilient, legally protected brands that command market share. A brand is only an asset if you own it. Our Branding Strategy merges creative positioning with rigorous Trademark Strategy and protection protocols. We ensure your brand architecture is distinct, registrable, and safe from dilution, turning your marketing spend into permanent, tradeable brand equity.",
-                  icon: Lightbulb,
+                  description: "Building resilient, legally protected brands that command market share and turn marketing spend into tradeable equity.",
+                  image: "/service-brand.png",
                 },
                 {
                   title: "Innovation & Productivity",
-                  description: "Driving efficiency and harvesting value through Innovation Consultancy. We don't just implement technology; we capture the value it creates. Through specialized Innovation Consultancy, we guide your R&D teams to identify, document, and protect novel processes and inventions. We turn operational improvements into proprietary assets (Trade Secrets & Patents) that increase your company’s valuation.",
-                  icon: Cpu,
+                  description: "Driving efficiency and harvesting value by turning operational improvements into proprietary Trade Secrets & Patents.",
+                  image: "/service-innovation.png",
                 },
               ].map((service, index) => (
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all duration-300 hover:shadow-2xl hover:border-[#8F801B]/50 hover:-translate-y-2"
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card shadow-sm transition-all duration-300 hover:shadow-2xl hover:border-[#8F801B]/50 hover:-translate-y-2 h-full"
                 >
-                  <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    <service.icon className="h-8 w-8" />
+                  <div className="relative w-full h-48 overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
                   </div>
-                  <h3 className="mb-4 text-3xl font-bold tracking-tight text-foreground">{service.title}</h3>
-                  <div className="w-12 h-1.5 bg-[#8F801B] mb-6 rounded-full group-hover:w-24 transition-all duration-500 ease-out"></div>
-                  <p className="text-muted-foreground leading-relaxed flex-grow text-lg">{service.description}</p>
 
-                  <div className="mt-8 pt-6 border-t border-border/40 flex items-center justify-between">
-                    <span className="text-base font-bold text-primary group-hover:underline flex items-center">
-                      Explore Service <ChevronRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </span>
-                    {service.action}
+                  <div className="p-8 flex flex-col flex-grow">
+                    <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">{service.title}</h3>
+                    <div className="w-12 h-1 bg-[#8F801B] mb-4 rounded-full group-hover:w-20 transition-all duration-500 ease-out"></div>
+                    <p className="text-muted-foreground leading-relaxed flex-grow text-base mb-6">{service.description}</p>
+
+                    <div className="pt-4 border-t border-border/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                      <span className="text-sm font-bold text-primary group-hover:underline flex items-center cursor-pointer">
+                        Read More <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </span>
+                      {service.action}
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -259,31 +268,40 @@ export default function Home() {
               {[
                 {
                   title: "Market Readiness Assistance",
-                  description: "De-risking global expansion with local expertise and IP Intelligence. Successful market entry requires knowing the landscape before you land. We provide IP Intelligence and Search services—including Freedom-to-Operate (FTO) analysis and competitor patent landscaping—to ensure your move into markets like Indonesia and Vietnam is legally safe and commercially viable.",
-                  icon: Globe,
+                  description: "De-risking global expansion with local expertise and IP Intelligence to ensure safe and commercially viable market entry.",
+                  image: "/service-market.png",
                 },
                 {
                   title: "Franchise & Licensing",
-                  description: "Scaling exponentially through IP Brokerage and Licensing. We transform your business into a globally replicable asset class. Specializing in IP Brokerage and Licensing, we structure robust franchise agreements and royalty models that monetize your intellectual property. We handle the commercial transaction of your assets, ensuring maximum deal value and cross-border enforceability.",
-                  icon: Briefcase,
+                  description: "Scaling exponentially through robust IP Brokerage and Licensing models that transform your business into a globally replicable asset.",
+                  image: "/service-franchise.png",
                 },
               ].map((service, index) => (
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all duration-300 hover:shadow-2xl hover:border-[#8F801B]/50 hover:-translate-y-2"
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card shadow-sm transition-all duration-300 hover:shadow-2xl hover:border-[#8F801B]/50 hover:-translate-y-2 h-full"
                 >
-                  <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    <service.icon className="h-8 w-8" />
+                  <div className="relative w-full h-48 overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
                   </div>
-                  <h3 className="mb-4 text-3xl font-bold tracking-tight text-foreground">{service.title}</h3>
-                  <div className="w-12 h-1.5 bg-[#8F801B] mb-6 rounded-full group-hover:w-24 transition-all duration-500 ease-out"></div>
-                  <p className="text-muted-foreground leading-relaxed flex-grow text-lg">{service.description}</p>
 
-                  <div className="mt-8 pt-6 border-t border-border/40">
-                    <span className="text-base font-bold text-primary group-hover:underline flex items-center">
-                      Explore Service <ChevronRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </span>
+                  <div className="p-8 flex flex-col flex-grow">
+                    <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">{service.title}</h3>
+                    <div className="w-12 h-1 bg-[#8F801B] mb-4 rounded-full group-hover:w-20 transition-all duration-500 ease-out"></div>
+                    <p className="text-muted-foreground leading-relaxed flex-grow text-base mb-6">{service.description}</p>
+
+                    <div className="pt-4 border-t border-border/40">
+                      <span className="text-sm font-bold text-primary group-hover:underline flex items-center cursor-pointer">
+                        Read More <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </span>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -399,4 +417,3 @@ export default function Home() {
     </div>
   );
 }
-
