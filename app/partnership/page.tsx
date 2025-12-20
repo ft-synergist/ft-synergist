@@ -1,5 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Partnership Opportunities | Scale Your Consulting Practice",
+    description: "Partner with FT Synergist to transform your consulting practice. Access proprietary frameworks, institutional compliance tools, and high-value deal flow.",
+    keywords: ["Consulting Partnership", "Franchise Development", "Business Scaling Partnership", "Consulting License"],
+};
 
 export default function PartnershipPage() {
     return (

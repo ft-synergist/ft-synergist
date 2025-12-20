@@ -201,7 +201,7 @@ export default function Home() {
             {[
               {
                 title: "Business Strategy Development",
-                description: "Crafting actionable roadmaps to navigate market complexities and achieve sustainable long-term growth.",
+                description: "Crafting actionable roadmaps backed by defensible IP Strategy. We move beyond standard planning to build IP Strategy Consulting directly into your business model. We help you audit your intangible assets, structure your portfolio for valuation, and design \"competitive moats\" that protect your long-term growth. Our roadmaps don't just navigate market complexities; they secure your legal right to dominate them.",
                 icon: Target,
                 action: (
                   <button
@@ -214,22 +214,22 @@ export default function Home() {
               },
               {
                 title: "Strategic Brand & Marketing",
-                description: "Building resilient brands and data-driven marketing strategies to capture and retain market share.",
+                description: "Building resilient, legally protected brands that command market share. A brand is only an asset if you own it. Our Branding Strategy merges creative positioning with rigorous Trademark Strategy and protection protocols. We ensure your brand architecture is distinct, registrable, and safe from dilution, turning your marketing spend into permanent, tradeable brand equity.",
                 icon: Lightbulb,
               },
               {
                 title: "Innovation & Productivity",
-                description: "Implementing technology and process improvements to enhance operational efficiency and drive innovation.",
+                description: "Driving efficiency and harvesting value through Innovation Consultancy. We don't just implement technology; we capture the value it creates. Through specialized Innovation Consultancy, we guide your R&D teams to identify, document, and protect novel processes and inventions. We turn operational improvements into proprietary assets (Trade Secrets & Patents) that increase your company’s valuation.",
                 icon: Cpu,
               },
               {
                 title: "Market Readiness Assistance",
-                description: "Guiding your expansion into new markets like Indonesia and Vietnam with local expertise and networks.",
+                description: "De-risking global expansion with local expertise and IP Intelligence. Successful market entry requires knowing the landscape before you land. We provide IP Intelligence and Search services—including Freedom-to-Operate (FTO) analysis and competitor patent landscaping—to ensure your move into markets like Indonesia and Vietnam is legally safe and commercially viable.",
                 icon: Globe,
               },
               {
                 title: "Franchise & Licensing",
-                description: "Scale exponentially via robust franchising and licensing models, turning your local success into a globally replicable asset.",
+                description: "Scaling exponentially through IP Brokerage and Licensing. We transform your business into a globally replicable asset class. Specializing in IP Brokerage and Licensing, we structure robust franchise agreements and royalty models that monetize your intellectual property. We handle the commercial transaction of your assets, ensuring maximum deal value and cross-border enforceability.",
                 icon: Briefcase,
               },
             ].map((service, index) => (
