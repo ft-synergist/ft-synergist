@@ -186,10 +186,10 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="flex flex-col rounded-2xl bg-card overflow-hidden shadow-sm border border-border/50 group hover:shadow-lg transition-shadow"
             >
-              <div className="relative h-64 w-full overflow-hidden">
+              <div className="relative aspect-video w-full overflow-hidden">
                 <Image
-                  src="/state-of-ai-2026.png"
-                  alt="State of AI in Southeast Asia 2026 Report Cover - Strategic Analysis for Scaling Enterprises"
+                  src="/report-ai-cover.png"
+                  alt="State of AI in Southeast Asia 2026 Report Cover"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -219,15 +219,14 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="flex flex-col rounded-2xl bg-card overflow-hidden shadow-sm border border-border/50 group hover:shadow-lg transition-shadow"
             >
-              <div className="relative h-64 w-full overflow-hidden">
+              <div className="relative aspect-video w-full overflow-hidden">
                 <Image
-                  src="/wang-lao-ji-scaling.png"
-                  alt="Global Expansion Roadmap: 5 Scaling Lessons from Wang Lao Ji for SMEs Case Study Cover"
+                  src="/report-wlj-cover.png"
+                  alt="Global Expansion Roadmap: Wang Lao Ji to Global Brand"
                   fill
-                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                {/* Background to fill the gaps from object-contain */}
-                <div className="absolute inset-0 bg-stone-100 -z-10"></div>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
                   <div className="inline-flex items-center rounded-full bg-white/20 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/30">
