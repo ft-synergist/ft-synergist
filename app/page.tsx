@@ -229,17 +229,18 @@ export default function Home() {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="group relative flex flex-col overflow-hidden rounded-xl border bg-card p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#8F801B]/50 hover:-translate-y-1"
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all duration-300 hover:shadow-2xl hover:border-[#8F801B]/50 hover:-translate-y-2"
                 >
-                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    <service.icon className="h-7 w-7" />
+                  <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                    <service.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="mb-4 text-2xl font-bold tracking-tight text-foreground">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed flex-grow text-[15px]">{service.description}</p>
+                  <h3 className="mb-4 text-3xl font-bold tracking-tight text-foreground">{service.title}</h3>
+                  <div className="w-12 h-1.5 bg-[#8F801B] mb-6 rounded-full group-hover:w-24 transition-all duration-500 ease-out"></div>
+                  <p className="text-muted-foreground leading-relaxed flex-grow text-lg">{service.description}</p>
 
-                  <div className="mt-8 pt-4 border-t border-border/40 flex items-center justify-between">
-                    <span className="text-sm font-semibold text-primary group-hover:underline flex items-center">
-                      Explore Service <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <div className="mt-8 pt-6 border-t border-border/40 flex items-center justify-between">
+                    <span className="text-base font-bold text-primary group-hover:underline flex items-center">
+                      Explore Service <ChevronRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </span>
                     {service.action}
                   </div>
@@ -270,17 +271,18 @@ export default function Home() {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="group relative flex flex-col overflow-hidden rounded-xl border bg-card p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#8F801B]/50 hover:-translate-y-1"
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all duration-300 hover:shadow-2xl hover:border-[#8F801B]/50 hover:-translate-y-2"
                 >
-                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    <service.icon className="h-7 w-7" />
+                  <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                    <service.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="mb-4 text-2xl font-bold tracking-tight text-foreground">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed flex-grow text-[15px]">{service.description}</p>
+                  <h3 className="mb-4 text-3xl font-bold tracking-tight text-foreground">{service.title}</h3>
+                  <div className="w-12 h-1.5 bg-[#8F801B] mb-6 rounded-full group-hover:w-24 transition-all duration-500 ease-out"></div>
+                  <p className="text-muted-foreground leading-relaxed flex-grow text-lg">{service.description}</p>
 
-                  <div className="mt-8 pt-4 border-t border-border/40">
-                    <span className="text-sm font-semibold text-primary group-hover:underline flex items-center">
-                      Explore Service <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <div className="mt-8 pt-6 border-t border-border/40">
+                    <span className="text-base font-bold text-primary group-hover:underline flex items-center">
+                      Explore Service <ChevronRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
                 </motion.div>
