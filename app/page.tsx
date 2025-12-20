@@ -34,7 +34,7 @@ export default function Home() {
     {
       title: "Business Strategy Development",
       description: "Crafting actionable roadmaps backed by defensible IP Strategy to secure your legal right to dominate markets.",
-      expandedIntro: "Crafting actionable roadmaps backed by defensible IP Strategy. We move beyond standard planning to provide IP strategy consulting and build competitive moats.",
+      expandedIntro: "We move beyond standard planning to provide IP strategy consulting and build competitive moats.",
       image: "/service-strategy.png",
       details: [
         { title: "Diagnosis & Market Intelligence (SWOT)", content: "We assess internal strengths and external competition using SWOT Analysis to identify growth bottlenecks." },
@@ -56,7 +56,7 @@ export default function Home() {
     {
       title: "Strategic Brand & Marketing",
       description: "Building resilient, legally protected brand strategies that command market share and turn marketing spend into tradeable equity.",
-      expandedIntro: "Building resilient, legally protected brand strategies that command market share. A brand is only an asset if it is distinct and differentiable. We differentiate your offering through:",
+      expandedIntro: "A brand is only an asset if it is distinct and differentiable. We differentiate your offering through:",
       image: "/service-brand.png",
       details: [
         { title: "Market Research", content: "Conducting primary and secondary research to validate customer segments." },
@@ -67,7 +67,7 @@ export default function Home() {
     {
       title: "Innovation & Productivity",
       description: "Providing AI-powered Innovation Consultancy to drive efficiency and harvest value by turning operational improvements into proprietary Trade Secrets & Patents.",
-      expandedIntro: "Driving efficiency through AI-powered Process Redesign and Innovation Consulting. We turn operational improvements into proprietary assets.",
+      expandedIntro: "We turn operational improvements into proprietary assets through AI-powered Process Redesign, ensuring you capture the value of your technology.",
       image: "/service-innovation.png",
       details: [
         { title: "Process Redesign", content: "Reviewing and streamlining your R&D and operational workflows to remove redundancies." },
@@ -78,7 +78,7 @@ export default function Home() {
     {
       title: "Market Readiness Assistance",
       description: "De-risking global expansion with local expertise and IP Intelligence and Search to ensure safe and commercially viable market entry.",
-      expandedIntro: "De-risking global expansion with local expertise and IP Intelligence and Search. We help you navigate new markets like Indonesia and Vietnam. Our services cover the three core pillars of the MRA Grant:",
+      expandedIntro: "We help you navigate new markets like Indonesia and Vietnam. Our services cover the three core pillars of the MRA Grant:",
       image: "/service-market.png",
       details: [
         { title: "Market Entry (Advisory)", content: "In-depth advisory on market feasibility, Freedom-to-Operate (FTO), and import/export licensing." },
@@ -89,7 +89,7 @@ export default function Home() {
     {
       title: "Franchise & Licensing",
       description: "Scaling exponentially through robust IP Brokerage and Licensing models that transform your business into a globally replicable asset.",
-      expandedIntro: "Scaling exponentially through IP Brokerage and Licensing. We transform your business into a globally replicable asset class.",
+      expandedIntro: "We transform your business into a globally replicable asset class.",
       image: "/service-franchise.png",
       details: [
         { title: "IP Brokerage", content: "Handling the commercial transaction of your assets to ensure maximum deal value." },
