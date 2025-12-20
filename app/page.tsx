@@ -191,62 +191,102 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
-          >
-            {[
-              {
-                title: "Business Strategy Development",
-                description: "Crafting actionable roadmaps backed by defensible IP Strategy. We move beyond standard planning to build IP Strategy Consulting directly into your business model. We help you audit your intangible assets, structure your portfolio for valuation, and design \"competitive moats\" that protect your long-term growth. Our roadmaps don't just navigate market complexities; they secure your legal right to dominate them.",
-                icon: Target,
-                action: (
-                  <button
-                    onClick={() => setIsGrantModalOpen(true)}
-                    className="mt-4 text-sm font-semibold text-[#8F801B] hover:underline flex items-center"
-                  >
-                    Check Grant Eligibility <ChevronRight className="w-4 h-4 ml-1" />
-                  </button>
-                )
-              },
-              {
-                title: "Strategic Brand & Marketing",
-                description: "Building resilient, legally protected brands that command market share. A brand is only an asset if you own it. Our Branding Strategy merges creative positioning with rigorous Trademark Strategy and protection protocols. We ensure your brand architecture is distinct, registrable, and safe from dilution, turning your marketing spend into permanent, tradeable brand equity.",
-                icon: Lightbulb,
-              },
-              {
-                title: "Innovation & Productivity",
-                description: "Driving efficiency and harvesting value through Innovation Consultancy. We don't just implement technology; we capture the value it creates. Through specialized Innovation Consultancy, we guide your R&D teams to identify, document, and protect novel processes and inventions. We turn operational improvements into proprietary assets (Trade Secrets & Patents) that increase your company’s valuation.",
-                icon: Cpu,
-              },
-              {
-                title: "Market Readiness Assistance",
-                description: "De-risking global expansion with local expertise and IP Intelligence. Successful market entry requires knowing the landscape before you land. We provide IP Intelligence and Search services—including Freedom-to-Operate (FTO) analysis and competitor patent landscaping—to ensure your move into markets like Indonesia and Vietnam is legally safe and commercially viable.",
-                icon: Globe,
-              },
-              {
-                title: "Franchise & Licensing",
-                description: "Scaling exponentially through IP Brokerage and Licensing. We transform your business into a globally replicable asset class. Specializing in IP Brokerage and Licensing, we structure robust franchise agreements and royalty models that monetize your intellectual property. We handle the commercial transaction of your assets, ensuring maximum deal value and cross-border enforceability.",
-                icon: Briefcase,
-              },
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="group relative overflow-hidden rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 flex flex-col"
-              >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <service.icon className="h-6 w-6" />
-                </div>
-                <h3 className="mb-2 text-xl font-bold">{service.title}</h3>
-                <p className="text-muted-foreground flex-grow">{service.description}</p>
-                {service.action}
-              </motion.div>
-            ))}
-          </motion.div>
+          {/* Strategic Grid Layout: 3 Top, 2 Bottom */}
+          <div className="flex flex-col gap-8">
+            {/* Top Row: 3 Core Pillars */}
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+            >
+              {[
+                {
+                  title: "Business Strategy Development",
+                  description: "Crafting actionable roadmaps backed by defensible IP Strategy. We move beyond standard planning to build IP Strategy Consulting directly into your business model. We help you audit your intangible assets, structure your portfolio for valuation, and design \"competitive moats\" that protect your long-term growth. Our roadmaps don't just navigate market complexities; they secure your legal right to dominate them.",
+                  icon: Target,
+                  action: (
+                    <button
+                      onClick={() => setIsGrantModalOpen(true)}
+                      className="mt-6 text-sm font-bold text-[#8F801B] hover:text-[#8F801B]/80 hover:underline flex items-center transition-colors"
+                    >
+                      Check Grant Eligibility <ChevronRight className="w-4 h-4 ml-1" />
+                    </button>
+                  )
+                },
+                {
+                  title: "Strategic Brand & Marketing",
+                  description: "Building resilient, legally protected brands that command market share. A brand is only an asset if you own it. Our Branding Strategy merges creative positioning with rigorous Trademark Strategy and protection protocols. We ensure your brand architecture is distinct, registrable, and safe from dilution, turning your marketing spend into permanent, tradeable brand equity.",
+                  icon: Lightbulb,
+                },
+                {
+                  title: "Innovation & Productivity",
+                  description: "Driving efficiency and harvesting value through Innovation Consultancy. We don't just implement technology; we capture the value it creates. Through specialized Innovation Consultancy, we guide your R&D teams to identify, document, and protect novel processes and inventions. We turn operational improvements into proprietary assets (Trade Secrets & Patents) that increase your company’s valuation.",
+                  icon: Cpu,
+                },
+              ].map((service, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  className="group relative flex flex-col overflow-hidden rounded-xl border bg-card p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#8F801B]/50 hover:-translate-y-1"
+                >
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                    <service.icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="mb-4 text-2xl font-bold tracking-tight text-foreground">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed flex-grow text-[15px]">{service.description}</p>
+
+                  <div className="mt-8 pt-4 border-t border-border/40 flex items-center justify-between">
+                    <span className="text-sm font-semibold text-primary group-hover:underline flex items-center">
+                      Explore Service <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                    {service.action}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Bottom Row: 2 Expansion Pillars (Centered) */}
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="grid gap-8 md:grid-cols-2 lg:w-4/5 lg:mx-auto"
+            >
+              {[
+                {
+                  title: "Market Readiness Assistance",
+                  description: "De-risking global expansion with local expertise and IP Intelligence. Successful market entry requires knowing the landscape before you land. We provide IP Intelligence and Search services—including Freedom-to-Operate (FTO) analysis and competitor patent landscaping—to ensure your move into markets like Indonesia and Vietnam is legally safe and commercially viable.",
+                  icon: Globe,
+                },
+                {
+                  title: "Franchise & Licensing",
+                  description: "Scaling exponentially through IP Brokerage and Licensing. We transform your business into a globally replicable asset class. Specializing in IP Brokerage and Licensing, we structure robust franchise agreements and royalty models that monetize your intellectual property. We handle the commercial transaction of your assets, ensuring maximum deal value and cross-border enforceability.",
+                  icon: Briefcase,
+                },
+              ].map((service, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  className="group relative flex flex-col overflow-hidden rounded-xl border bg-card p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#8F801B]/50 hover:-translate-y-1"
+                >
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                    <service.icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="mb-4 text-2xl font-bold tracking-tight text-foreground">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed flex-grow text-[15px]">{service.description}</p>
+
+                  <div className="mt-8 pt-4 border-t border-border/40">
+                    <span className="text-sm font-semibold text-primary group-hover:underline flex items-center">
+                      Explore Service <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </section>
 
