@@ -75,13 +75,7 @@ Message: ${formData.get("message")}
                                         </div>
                                     </div>
 
-                                    <div className="flex items-start space-x-4">
-                                        <Mail className="h-6 w-6 text-primary mt-1" />
-                                        <div>
-                                            <h3 className="font-semibold">Email Us</h3>
-                                            <p className="text-muted-foreground">fredtan@ftsynergist.com</p>
-                                        </div>
-                                    </div>
+
 
                                     <div className="flex items-start space-x-4">
                                         <Clock className="h-6 w-6 text-primary mt-1" />
@@ -98,9 +92,9 @@ Message: ${formData.get("message")}
                         </div>
 
                         <div className="rounded-xl bg-gradient-to-br from-primary to-accent p-8 text-primary-foreground shadow-lg">
-                            <h3 className="text-xl font-bold mb-4">Ready for a Sprint?</h3>
+                            <h3 className="text-xl font-bold mb-4">Book a Complimentary 60 Minutes Sprint</h3>
                             <p className="mb-6 opacity-90">
-                                Book a Business Sprint session to rapidly identify opportunities and create an actionable roadmap.
+                                Schedule a complimentary 60-minute Business Sprint session to rapidly identify opportunities and create an actionable roadmap.
                             </p>
                             <button
                                 onClick={handleBookDiscovery}

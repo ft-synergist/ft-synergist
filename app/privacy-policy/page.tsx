@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
                     </p>
                     <ul className="list-none space-y-2">
                         <li><strong>Designated DPO:</strong> Frederick Tan</li>
-                        <li><strong>DPO Email:</strong> <a href="mailto:fredtan@ftsynergist.com" className="text-primary hover:underline">fredtan@ftsynergist.com</a></li>
+
                         <li><strong>DPO Phone:</strong> +65 98628906</li>
                         <li><strong>Mailing Address:</strong> 6 Eu Tong Sen St, #10-20 The Central, Singapore 059817</li>
                     </ul>

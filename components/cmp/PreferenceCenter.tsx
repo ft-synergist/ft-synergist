@@ -150,7 +150,7 @@ export function PreferenceCenter() {
                     {/* Footer */}
                     <div className="p-6 border-t border-gray-100 bg-gray-50 flex flex-col sm:flex-row justify-between items-center gap-4">
                         <div className="text-xs text-gray-500">
-                            <p>DPO Contact: <a href="mailto:DPO@ftsynergist.com" className="text-primary hover:underline">DPO@ftsynergist.com</a></p>
+
                             <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link>
                         </div>
                         <div className="flex gap-3 w-full sm:w-auto">
