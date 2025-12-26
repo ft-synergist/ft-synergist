@@ -29,9 +29,10 @@ export function Footer() {
                         <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white">Company</h3>
                         <ul className="space-y-3">
                             <li><Link href="/about" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">About Us</Link></li>
+                            <li><Link href="/#services" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Our Expertise</Link></li>
+                            <li><Link href="/#success-stories" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Success Stories</Link></li>
                             <li><Link href="/sustainability" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Our Sustainability Impact</Link></li>
                             <li><Link href="/partnership" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Partnership Opportunity</Link></li>
-                            <li><Link href="/privacy-policy" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Privacy Policy</Link></li>
                         </ul>
                     </div>
 
@@ -39,11 +40,11 @@ export function Footer() {
                     <div>
                         <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white">Resources</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/#services" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Our Expertise</Link></li>
-                            <li><Link href="/edg-grant" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Enterprise Development Grant</Link></li>
                             <li><Link href="/edg-grant#faq" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">FAQ</Link></li>
-                            <li><Link href="/insights" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Insights</Link></li>
                             <li><Link href="/events" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Events</Link></li>
+                            <li><Link href="/insights" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Insights</Link></li>
+                            <li><Link href="/privacy-policy" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/edg-grant" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Enterprise Development Grant</Link></li>
                         </ul>
                     </div>
 
