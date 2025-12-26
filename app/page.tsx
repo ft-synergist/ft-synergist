@@ -127,7 +127,7 @@ export default function Home() {
             <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">Sustainable Growth</span>
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-200 sm:text-xl drop-shadow-md">
-            Empowering Singapore SMEs to scale globally with strategic innovation, AI integration, and government-supported growth frameworks.
+            Empowering Singapore and International Enterprises to dominate Asian markets through proprietary innovation strategies, AI integration, sustainability, and defensible IP creation.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <button
