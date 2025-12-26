@@ -132,17 +132,11 @@ export default function Home() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <button
               onClick={() => setIsPersonaModalOpen(true)}
-              className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-white shadow-lg transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-primary/25"
+              className="btn-start-journey inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-white shadow-lg transition-all"
             >
               Start Your Journey
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>
-            <Link
-              href="/insights"
-              className="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-white/20"
-            >
-              View Insights
-            </Link>
           </div>
         </motion.div>
       </section>

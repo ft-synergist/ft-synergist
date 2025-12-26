@@ -96,3 +96,36 @@ h5,
 h6 {
   font-family: var(--font-heading), sans-serif;
 }
+
+/* 1. Define the Animation Keyframes */
+@keyframes breathing-gold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 160, 23, 0.4); /* Match your Gold Hex Code */
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px 0 rgba(197, 160, 23, 0.2); /* Soft expansion */
+    transform: scale(1.02); /* Micro-growth for organic feel */
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(197, 160, 23, 0);
+    transform: scale(1);
+  }
+}
+
+/* 2. Apply to the Button Class */
+.btn-start-journey {
+  /* Keep your existing button styling (padding, color, etc.) */
+  /* Add this animation line: */
+  animation: breathing-gold 3s infinite ease-in-out;
+  
+  /* Ensure it stays sharp */
+  will-change: transform, box-shadow;
+}
+
+/* 3. Interaction State (Pause on Hover) */
+.btn-start-journey:hover {
+  animation: none; /* Stops pulsing when user decides to click */
+  transform: scale(1.05); /* Standard hover lift */
+  box-shadow: 0 5px 15px rgba(197, 160, 23, 0.4);
+}
