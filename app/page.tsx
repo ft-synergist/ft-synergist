@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowRight, ChevronRight, TrendingUp, Users, Globe, CheckCircle2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import GrantEligibilityModal from "@/components/GrantEligibilityModal";
+import PersonaQuizModal from "@/components/PersonaQuizModal";
 import { LogoCarousel } from "@/components/LogoCarousel";
 import { NewsletterBanner } from "@/components/NewsletterBanner";
 
@@ -25,6 +26,7 @@ const staggerContainer = {
 
 export default function Home() {
   const [isGrantModalOpen, setIsGrantModalOpen] = useState(false);
+  const [isPersonaModalOpen, setIsPersonaModalOpen] = useState(false);
   const [expandedCardIndex, setExpandedCardIndex] = useState<number | null>(null);
 
   const toggleCard = (index: number) => {
@@ -128,13 +130,13 @@ export default function Home() {
             Empowering Singapore SMEs to scale globally with strategic innovation, AI integration, and government-supported growth frameworks.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/contact"
+            <button
+              onClick={() => setIsPersonaModalOpen(true)}
               className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-white shadow-lg transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-primary/25"
             >
               Start Your Journey
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </button>
             <Link
               href="/insights"
               className="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-white/20"
@@ -144,6 +146,8 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      <PersonaQuizModal isOpen={isPersonaModalOpen} onClose={() => setIsPersonaModalOpen(false)} />
 
       {/* Strategic Intelligence Section */}
       <section className="py-16 bg-secondary/5">
