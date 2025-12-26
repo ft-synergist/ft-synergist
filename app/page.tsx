@@ -28,7 +28,7 @@ const staggerContainer = {
 
 export default function Home() {
   const [isGrantModalOpen, setIsGrantModalOpen] = useState(false);
-  const [isPersonaModalOpen, setIsPersonaModalOpen] = useState(false);
+  const { openModal } = usePersonaModal();
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
   const [expandedCardIndex, setExpandedCardIndex] = useState<number | null>(null);
 
