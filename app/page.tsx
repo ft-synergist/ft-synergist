@@ -458,7 +458,7 @@ export default function Home() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { label: "Entrepreneurs Supported", value: 218, icon: Users, suffix: "" },
-              { label: "Quality of Lives Improved", value: 138, icon: Globe2, suffix: " M" },
+              { label: "Quality of Lives Improved", value: 138, icon: Globe, suffix: " M" },
               { label: "Strategic Roadmaps Delivered", value: 513, icon: TrendingUp, suffix: "" },
             ].map((stat, index) => (
               <motion.div
