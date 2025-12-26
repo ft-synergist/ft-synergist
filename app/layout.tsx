@@ -8,7 +8,7 @@ import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { ConsentBanner } from "@/components/cmp/ConsentBanner";
 import { PreferenceCenter } from "@/components/cmp/PreferenceCenter";
 import { FloatingConsentButton } from "@/components/cmp/FloatingConsentButton";
-import { GlobalGrantButton } from "@/components/GlobalGrantButton";
+
 
 
 
@@ -74,7 +74,7 @@ export default function RootLayout({
           <PreferenceCenter />
           <FloatingConsentButton />
           <JsonLd />
-          <GlobalGrantButton />
+
         </ConsentProvider>
       </body>
     </html>
