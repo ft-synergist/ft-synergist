@@ -9,6 +9,7 @@ import GrantEligibilityModal from "@/components/GrantEligibilityModal";
 import PersonaQuizModal from "@/components/PersonaQuizModal";
 import { LogoCarousel } from "@/components/LogoCarousel";
 import { NewsletterBanner } from "@/components/NewsletterBanner";
+import { NewsletterModal } from "@/components/NewsletterModal";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -27,6 +28,7 @@ const staggerContainer = {
 export default function Home() {
   const [isGrantModalOpen, setIsGrantModalOpen] = useState(false);
   const [isPersonaModalOpen, setIsPersonaModalOpen] = useState(false);
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
   const [expandedCardIndex, setExpandedCardIndex] = useState<number | null>(null);
 
   const toggleCard = (index: number) => {
@@ -142,6 +144,7 @@ export default function Home() {
       </section>
 
       <PersonaQuizModal isOpen={isPersonaModalOpen} onClose={() => setIsPersonaModalOpen(false)} />
+      <NewsletterModal isOpen={isNewsletterOpen} onClose={() => setIsNewsletterOpen(false)} />
 
       {/* Strategic Intelligence Section */}
       <section className="py-16 bg-secondary/5">
@@ -155,13 +158,19 @@ export default function Home() {
             >
               Strategic Intelligence
             </motion.h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Market-defining research and case studies to guide your expansion.
+            <p className="mt-4 text-lg text-muted-foreground mb-6">
+              Market-defining research and case studies to guide your expansion. Stay ahead of the curve with priority alerts.
             </p>
-          </div>
-
-          <div className="mb-12">
-            <NewsletterBanner />
+            <motion.button
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              onClick={() => setIsNewsletterOpen(true)}
+              className="btn-subscribe-ghost"
+            >
+              Subscribe to Insights
+            </motion.button>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
@@ -173,7 +182,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="flex flex-col rounded-2xl bg-card overflow-hidden shadow-sm border border-border/50 group hover:shadow-lg transition-shadow"
             >
-              <div className="relative aspect-video w-full overflow-hidden">
+              <div className="card-image-container relative">
                 <Image
                   src="/report-ai-cover.png"
                   alt="State of AI in Southeast Asia 2026 Report Cover"
@@ -206,7 +215,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="flex flex-col rounded-2xl bg-card overflow-hidden shadow-sm border border-border/50 group hover:shadow-lg transition-shadow"
             >
-              <div className="relative aspect-video w-full overflow-hidden">
+              <div className="card-image-container relative">
                 <Image
                   src="/report-wlj-cover.png"
                   alt="Global Expansion Roadmap: Wang Lao Ji to Global Brand"
