@@ -2,8 +2,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "EDG Grant Advisory & Eligibility | FT Synergist",
-    description: "Check your eligibility for the Enterprise Development Grant (EDG). FT Synergist helps Singapore SMEs secure up to 50% funding for strategic growth and expansion projects.",
+    title: "Enterprise Development Grant (EDG) Singapore: Strategic Guide 2026 | FT Synergist",
+    description: "Scale. Innovate. Dominate. Leveraging the EDG for defensible IP and global expansion. Check eligibility with Singapore's premier strategic consultancy.",
 };
 
 import EdgJsonLd from "@/components/EdgJsonLd";
