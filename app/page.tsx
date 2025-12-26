@@ -133,7 +133,7 @@ export default function Home() {
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <button
-              onClick={() => setIsPersonaModalOpen(true)}
+              onClick={openModal}
               className="btn-start-journey inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-white shadow-lg transition-all"
             >
               Start Your Journey
@@ -143,7 +143,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <PersonaQuizModal isOpen={isPersonaModalOpen} onClose={() => setIsPersonaModalOpen(false)} />
       <NewsletterModal isOpen={isNewsletterOpen} onClose={() => setIsNewsletterOpen(false)} />
 
       {/* Strategic Intelligence Section */}

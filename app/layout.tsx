@@ -8,6 +8,7 @@ import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { ConsentBanner } from "@/components/cmp/ConsentBanner";
 import { PreferenceCenter } from "@/components/cmp/PreferenceCenter";
 import { FloatingConsentButton } from "@/components/cmp/FloatingConsentButton";
+import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
 
 
 
