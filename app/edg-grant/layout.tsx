@@ -6,10 +6,17 @@ export const metadata: Metadata = {
     description: "Check your eligibility for the Enterprise Development Grant (EDG). FT Synergist helps Singapore SMEs secure up to 50% funding for strategic growth and expansion projects.",
 };
 
+import EdgJsonLd from "@/components/EdgJsonLd";
+
 export default function EDGGrantLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
-    return <>{children}</>;
+    return (
+        <>
+            <EdgJsonLd />
+            {children}
+        </>
+    );
 }
