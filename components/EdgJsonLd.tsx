@@ -60,6 +60,30 @@ export default function EdgJsonLd() {
                             "@type": "Answer",
                             "text": "Enterprise Singapore requires strategic projects be led by certified consultants. FT Synergist is fully certified to navigate the application and claims process."
                         }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How long does the EDG application approval take?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Enterprise Singapore typically processes applications within 12 to 16 weeks. However, strategic proposals with clear value-creation roadmaps often experience smoother review processes due to clarity of intent."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is the grant provided upfront?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No, the EDG operates on a reimbursement basis. You must claim the funds after the project deliverables are met. We guide you through the claims process to ensure your reimbursement is secured without administrative friction."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why are most EDG applications rejected?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Rejections usually happen because the project lacks \"Strategic Novelty\"—meaning it looks like \"business as usual\" rather than a transformation. Our role is to frame your project as a capability upgrade that aligns with Singapore’s national economic goals."
+                        }
                     }
                 ]
             }
@@ -89,6 +113,30 @@ export default function EdgJsonLd() {
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Enterprise Singapore requires strategic projects be led by certified consultants. FT Synergist is fully certified to navigate the application and claims process."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long does the EDG application approval take?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Enterprise Singapore typically processes applications within 12 to 16 weeks. However, strategic proposals with clear value-creation roadmaps often experience smoother review processes due to clarity of intent."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is the grant provided upfront?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No, the EDG operates on a reimbursement basis. You must claim the funds after the project deliverables are met. We guide you through the claims process to ensure your reimbursement is secured without administrative friction."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why are most EDG applications rejected?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Rejections usually happen because the project lacks \"Strategic Novelty\"—meaning it looks like \"business as usual\" rather than a transformation. Our role is to frame your project as a capability upgrade that aligns with Singapore’s national economic goals."
                     }
                 }
             ]

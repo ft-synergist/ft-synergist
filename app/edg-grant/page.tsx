@@ -91,6 +91,18 @@ export default function EDGGrantPage() {
         {
             question: "Why do I need a Certified Management Consultant (CMC)?",
             answer: "Enterprise Singapore requires strategic projects be led by certified consultants. FT Synergist is fully certified to navigate the application and claims process."
+        },
+        {
+            question: "How long does the EDG application approval take?",
+            answer: "Enterprise Singapore typically processes applications within 12 to 16 weeks. However, strategic proposals with clear value-creation roadmaps often experience smoother review processes due to clarity of intent."
+        },
+        {
+            question: "Is the grant provided upfront?",
+            answer: "No, the EDG operates on a reimbursement basis. You must claim the funds after the project deliverables are met. We guide you through the claims process to ensure your reimbursement is secured without administrative friction."
+        },
+        {
+            question: "Why are most EDG applications rejected?",
+            answer: "Rejections usually happen because the project lacks \"Strategic Novelty\"—meaning it looks like \"business as usual\" rather than a transformation. Our role is to frame your project as a capability upgrade that aligns with Singapore’s national economic goals."
         }
     ];
 
@@ -166,7 +178,7 @@ export default function EDGGrantPage() {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">Success Stories</h2>
-                        <p className="mt-4 text-lg text-gray-400">Proven track record of transforming businesses.</p>
+                        <p className="mt-4 text-lg text-gray-400">Proven Impact across Every Pillar.</p>
                     </div>
 
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -194,7 +206,7 @@ export default function EDGGrantPage() {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-24 bg-background">
+            <section id="faq" className="py-24 bg-background">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Frequently Asked Questions</h2>
