@@ -32,8 +32,8 @@ export function Footer() {
                         <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white">Quick Links</h3>
                         <ul className="space-y-3">
                             <li><Link href="/about" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">About Us</Link></li>
-                            <li><Link href="/edg-grant" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">EDG Grant (50% Support)</Link></li>
-                            <li><Link href="/#services" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Services</Link></li>
+                            <li><Link href="/edg-grant" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Enterprise Development Grant</Link></li>
+                            <li><Link href="/#services" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Our Expertise</Link></li>
                             <li><Link href="/insights" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Insights</Link></li>
                             <li><Link href="/events" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Events</Link></li>
                             <li><Link href="/contact" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Contact</Link></li>

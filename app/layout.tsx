@@ -64,18 +64,18 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ConsentProvider>
-
-          <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-          <ChatWidget />
-          <ConsentBanner />
-          <PreferenceCenter />
-          <FloatingConsentButton />
-          <JsonLd />
-
+          <PersonaModalProvider>
+            <Navbar />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+            <ChatWidget />
+            <ConsentBanner />
+            <PreferenceCenter />
+            <FloatingConsentButton />
+            <JsonLd />
+          </PersonaModalProvider>
         </ConsentProvider>
       </body>
     </html>

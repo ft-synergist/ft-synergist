@@ -6,10 +6,11 @@ import Image from "next/image";
 import { ArrowRight, ChevronRight, TrendingUp, Users, Globe, CheckCircle2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import GrantEligibilityModal from "@/components/GrantEligibilityModal";
-import PersonaQuizModal from "@/components/PersonaQuizModal";
 import { LogoCarousel } from "@/components/LogoCarousel";
 import { NewsletterBanner } from "@/components/NewsletterBanner";
 import { NewsletterModal } from "@/components/NewsletterModal";
+import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
+import { CountUp } from "@/components/CountUp";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -262,7 +263,7 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="mt-4 text-lg text-muted-foreground"
             >
-              Aligned with Enterprise Singapore&apos;s growth frameworks to support your expansion.
+              Market-defining capabilities designed to turn operational gaps into competitive moats.
             </motion.p>
           </div>
 
@@ -447,40 +448,34 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-8 drop-shadow-xl"
+              className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
             >
-              Our 2026 BHAG
+              Inspiring a Better World: <br className="hidden sm:inline" />
+              Accelerating <span className="text-primary">100 Entrepreneurs</span> to Impact <span className="text-white">100 Million Lives</span> in Asia.
             </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-2xl md:text-4xl font-bold max-w-6xl mx-auto drop-shadow-2xl leading-tight"
-            >
-              &quot;To inspire 100 entrepreneurs to improve the quality of lives of 100M people in Asia by&nbsp;2026.&quot;
-            </motion.p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3 text-center">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { label: "Entrepreneurs Supported", value: "218", icon: Users, highlight: true },
-              { label: "Quality of Lives Improved", value: "138 M", icon: Globe, highlight: true },
-              { label: "Consulting Hours", value: "107,910", icon: TrendingUp, highlight: false },
+              { label: "Entrepreneurs Supported", value: 218, icon: Users, suffix: "" },
+              { label: "Quality of Lives Improved", value: 138, icon: Globe2, suffix: " M" },
+              { label: "Strategic Roadmaps Delivered", value: 513, icon: TrendingUp, suffix: "" },
             ].map((stat, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.5 }}
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2, type: "spring", stiffness: 100 }}
-                className="p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:bg-black/50 transition-colors"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex flex-col items-center justify-center rounded-2xl bg-white/10 p-8 text-center backdrop-blur-sm border border-white/10"
               >
-                <div className={`inline-flex h-16 w-16 items-center justify-center rounded-full mb-4 ${stat.highlight ? 'bg-yellow-400/20 text-yellow-400' : 'bg-white/20 text-white'}`}>
-                  <stat.icon className="h-8 w-8" />
+                <div className="mb-4 rounded-full bg-primary/20 p-4 ring-1 ring-primary/50">
+                  <stat.icon className="h-8 w-8 text-primary" />
                 </div>
-                <div className={`text-4xl md:text-5xl font-bold mb-2 ${stat.highlight ? 'text-yellow-400 drop-shadow-lg' : 'text-white'}`}>{stat.value}</div>
-                <div className={`font-bold uppercase tracking-wider text-sm ${stat.highlight ? 'text-yellow-400' : 'text-gray-300'}`}>{stat.label}</div>
+                <div className="text-4xl font-bold text-white mb-2">
+                  <CountUp value={stat.value} suffix={stat.suffix} />
+                </div>
+                <div className="text-sm font-medium text-gray-300 uppercase tracking-wider">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -502,28 +497,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/hero-bg.png')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="container mx-auto px-4 text-center relative z-10"
-        >
+      <section className="bg-primary py-20 text-white">
+        <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-            Ready to Scale Your Business?
+            Ready to Architect Your Growth?
           </h2>
-          <p className="mb-10 text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-            Leverage our expertise and Enterprise Singapore support to take your business to the next level.
+          <p className="max-w-2xl mx-auto text-lg text-primary-foreground/90 mb-10">
+            Join over 200 market leaders who have transformed their operations and secured defensible IP assets with FT Synergist. Your roadmap to dominance begins here.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-medium text-primary shadow-lg hover:bg-gray-100 hover:scale-105 transition-all"
+          <button
+            onClick={openModal}
+            className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-bold text-black shadow-lg transition-transform hover:scale-105"
           >
-            Book Discovery Session
-          </Link>
-        </motion.div>
+            Start Your Journey
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </button>
+        </div>
       </section>
     </div>
   );
