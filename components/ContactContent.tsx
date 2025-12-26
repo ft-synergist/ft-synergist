@@ -54,7 +54,7 @@ Message: ${formData.get("message")}
         <div className="min-h-screen bg-background py-20">
             <div className="container mx-auto px-4">
                 <div className="mb-12 text-center">
-                    <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">Get in Touch</h1>
+                    <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">Partner with Us</h1>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Ready to scale your business? Contact us for a discovery session or to learn more about our services.
                     </p>
