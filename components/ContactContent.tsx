@@ -3,13 +3,15 @@
 import { Mail, MapPin, Send, Clock } from "lucide-react";
 import { useState } from "react";
 import { sendEmail } from "@/app/actions";
+import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
 
 export function ContactContent() {
+    const { openModal } = usePersonaModal();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [subject, setSubject] = useState("General Enquiry");
+    const [subject, setSubject] = useState("");
 
     const handleBookDiscovery = () => {
-        window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB", "_blank");
+        openModal();
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -42,6 +44,7 @@ Message: ${formData.get("message")}
         if (result.success) {
             alert("Message sent successfully!");
             (e.target as HTMLFormElement).reset();
+            setSubject("");
         } else {
             alert(result.message);
         }
@@ -151,12 +154,19 @@ Message: ${formData.get("message")}
                                     name="subject"
                                     value={subject}
                                     onChange={(e) => setSubject(e.target.value)}
+                                    required
                                     className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                 >
-                                    <option value="General Enquiry">General Enquiry</option>
-                                    <option value="Business Scaling">Business Scaling</option>
-                                    <option value="AI Integration">AI Integration</option>
+                                    <option value="" disabled>Please select a topic...</option>
+                                    <option value="Franchise & Licensing">Franchise & Licensing</option>
+                                    <option value="Innovation Consultancy">Innovation Consultancy</option>
+                                    <option value="IP Strategy">IP Strategy</option>
+                                    <option value="M&A">M&A</option>
+                                    <option value="Market Entry">Market Entry</option>
+                                    <option value="Media Enquiry">Media Enquiry</option>
                                     <option value="Partnership">Partnership</option>
+                                    <option value="Strategic Advisory & Roadmap">Strategic Advisory & Roadmap</option>
+                                    <option value="Other Corporate Enquiries">Other Corporate Enquiries</option>
                                 </select>
                             </div>
 
