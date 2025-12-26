@@ -7,6 +7,20 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/services/:path*',
+        destination: '/#services',
+        permanent: true,
+      },
+      {
+        source: '/about-us',
+        destination: '/about',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
