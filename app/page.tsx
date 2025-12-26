@@ -448,10 +448,13 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
             >
-              Inspiring a Better World: <br className="hidden sm:inline" />
-              Accelerating <span className="text-primary">100 Entrepreneurs</span> to Impact <span className="text-white">100 Million Lives</span> in Asia.
+              <span className="text-white drop-shadow-lg">Inspiring a Better World:</span>
+              <br className="hidden sm:inline" />
+              <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
+                Accelerating 100 Entrepreneurs to Impact 100 Million Lives in Asia.
+              </span>
             </motion.h2>
           </div>
 
@@ -475,7 +478,7 @@ export default function Home() {
                 <div className="text-4xl font-bold text-white mb-2">
                   <CountUp value={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-sm font-medium text-gray-300 uppercase tracking-wider">{stat.label}</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">{stat.label}</div>
               </motion.div>
             ))}
           </div>
