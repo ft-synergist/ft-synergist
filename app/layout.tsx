@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+
 import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
@@ -60,23 +60,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8ZGSYLYWJ"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-R8ZGSYLYWJ');
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${jost.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}
         suppressHydrationWarning
       >
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-R8ZGSYLYWJ"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-R8ZGSYLYWJ');
-          `}
-        </Script>
         <ConsentProvider>
           <PersonaModalProvider>
             <Navbar />
