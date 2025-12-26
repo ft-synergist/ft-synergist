@@ -174,7 +174,7 @@ export default function EDGGrantPage() {
             </section>
 
             {/* Success Stories - Dark Mode */}
-            <section className="py-24 bg-[#0F0F0F] text-white">
+            <section id="success-stories" className="py-24 bg-[#0F0F0F] text-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">Success Stories</h2>
