@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Sustainability Consulting Singapore | ESG Strategy & Grant Support",
+    description: "Drive sustainable growth with ESG strategies aligned with Singapore's Green Plan 2030. Leverage the EDG Sustainability Grant for up to 70% support.",
+};
+
 export default function SustainabilityPage() {
     return (
         <div className="flex min-h-screen flex-col items-center justify-center bg-background px-4 py-32 text-center text-foreground">
