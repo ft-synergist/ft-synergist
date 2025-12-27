@@ -10,6 +10,11 @@ export type Event = {
     location: string;
     type: string;
     description: string;
+    image?: string;
+    organizer?: string;
+    performer?: string;
+    price?: string;
+    currency?: string;
 };
 
 export type Report = {
@@ -36,6 +41,10 @@ const initialEvents: Event[] = [
         location: "Marina Bay Sands, Singapore",
         type: "In-Person",
         description: "Join industry leaders to discuss the evolving landscape of management consulting in the AI era.",
+        image: "https://www.ftsynergist.com/ft_synergist_logo_wo_background.png",
+        performer: "FT Synergist Team",
+        price: "250",
+        currency: "SGD"
     },
     {
         id: 2,
@@ -45,6 +54,10 @@ const initialEvents: Event[] = [
         location: "Online (Zoom)",
         type: "Online",
         description: "A deep dive into practical AI applications for SMEs looking to scale operations efficiently.",
+        image: "https://www.ftsynergist.com/ft_synergist_logo_wo_background.png",
+        performer: "Frederick Tan",
+        price: "0",
+        currency: "SGD"
     },
     {
         id: 3,
@@ -54,6 +67,10 @@ const initialEvents: Event[] = [
         location: "The Ritz-Carlton, Jakarta",
         type: "In-Person",
         description: "Connect with fellow business leaders and consultants in our exclusive networking event.",
+        image: "https://www.ftsynergist.com/ft_synergist_logo_wo_background.png",
+        performer: "FT Synergist Community",
+        price: "50",
+        currency: "USD"
     },
 ];
 

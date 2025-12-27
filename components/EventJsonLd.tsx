@@ -14,7 +14,8 @@ export function EventJsonLd({ events }: EventJsonLdProps) {
             "item": {
                 "@type": "Event",
                 "name": event.title,
-                "startDate": new Date(event.date), // Requires simple date format, improving robustness below
+                "startDate": new Date(event.date).toISOString(),
+                "endDate": event.date ? new Date(new Date(event.date).setHours(17)).toISOString() : undefined, // Estimated end time (5 PM) if not parsed
                 "eventStatus": "https://schema.org/EventScheduled",
                 "eventAttendanceMode": event.type === 'Online'
                     ? "https://schema.org/OnlineEventAttendanceMode"
@@ -33,7 +34,20 @@ export function EventJsonLd({ events }: EventJsonLdProps) {
                             "addressCountry": "SG"
                         }
                     },
+                "image": event.image || "https://www.ftsynergist.com/ft_synergist_logo_wo_background.png",
                 "description": event.description,
+                "offers": {
+                    "@type": "Offer",
+                    "url": "https://www.ftsynergist.com/contact",
+                    "price": event.price || "0",
+                    "priceCurrency": event.currency || "SGD",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": new Date().toISOString()
+                },
+                "performer": {
+                    "@type": "Organization",
+                    "name": event.performer || "FT Synergist"
+                },
                 "organizer": {
                     "@type": "Organization",
                     "name": "FT Synergist",
