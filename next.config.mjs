@@ -9,7 +9,6 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Legacy Service Page Redirects
       {
         source: '/services/strategic-brand-and-market-development',
         destination: '/#services',
@@ -21,7 +20,17 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/services/business-strategy-development',
+        destination: '/#services',
+        permanent: true,
+      },
+      {
         source: '/expertise/services/franchise-and-licensing',
+        destination: '/#services',
+        permanent: true,
+      },
+      {
+        source: '/services/franchise-and-licensing',
         destination: '/#services',
         permanent: true,
       },

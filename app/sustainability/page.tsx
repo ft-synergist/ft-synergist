@@ -146,7 +146,7 @@ export default function SustainabilityPage() {
                         className="text-center mb-20"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Methodology: The <span className="text-primary">"Double Materiality"</span> Approach</h2>
-                        <p className="text-gray-400">Identifying where your profit goals meet global needs.</p>
+                        <p className="text-gray-300 font-medium">Identifying where your profit goals meet global needs.</p>
                     </motion.div>
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -167,18 +167,18 @@ export default function SustainabilityPage() {
                             <div className="space-y-8">
                                 <div className="p-8 rounded-xl bg-zinc-900/50 border border-white/5 hover:border-white/10 transition-colors">
                                     <h3 className="text-2xl font-bold text-white mb-2">1. Financial Materiality (Outside-In)</h3>
-                                    <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Protecting Value</p>
-                                    <p className="text-gray-400 mb-3"><strong className="text-white">The Risk:</strong> How do climate change, resource scarcity, and tightening regulations impact your bottom line?</p>
-                                    <p className="text-gray-400 mb-4"><strong className="text-white">Our Solution:</strong> We future-proof your operations against supply chain disruptions and rising carbon taxes.</p>
-                                    <p className="text-sm text-primary/80 italic border-l-2 border-primary/30 pl-3">Example: For Sundat, we diversified supply chains to mitigate regional climate risks, ensuring business continuity.</p>
+                                    <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Protecting Value</p>
+                                    <p className="text-gray-300 mb-3"><strong className="text-white">The Risk:</strong> How do climate change, resource scarcity, and tightening regulations impact your bottom line?</p>
+                                    <p className="text-gray-300 mb-4"><strong className="text-white">Our Solution:</strong> We future-proof your operations against supply chain disruptions and rising carbon taxes.</p>
+                                    <p className="text-sm text-primary/90 italic border-l-2 border-primary/30 pl-3">Example: For Sundat, we diversified supply chains to mitigate regional climate risks, ensuring business continuity.</p>
                                 </div>
 
                                 <div className="p-8 rounded-xl bg-zinc-900/50 border border-white/5 hover:border-primary/20 transition-colors">
                                     <h3 className="text-2xl font-bold text-primary mb-2">2. Impact Materiality (Inside-Out)</h3>
-                                    <p className="text-xs font-bold text-primary/60 uppercase tracking-widest mb-4">Creating Value</p>
-                                    <p className="text-gray-400 mb-3"><strong className="text-white">The Opportunity:</strong> How does your business impact society and the environment?</p>
-                                    <p className="text-gray-400 mb-4"><strong className="text-white">Our Solution:</strong> We turn your operational footprint into a competitive asset that attracts customers and talent.</p>
-                                    <p className="text-sm text-primary/80 italic border-l-2 border-primary/30 pl-3">Example: For Pawa Bakery, we aligned product formulation with public health goals, capturing a premium market segment.</p>
+                                    <p className="text-xs font-bold text-primary/80 uppercase tracking-widest mb-4">Creating Value</p>
+                                    <p className="text-gray-300 mb-3"><strong className="text-white">The Opportunity:</strong> How does your business impact society and the environment?</p>
+                                    <p className="text-gray-300 mb-4"><strong className="text-white">Our Solution:</strong> We turn your operational footprint into a competitive asset that attracts customers and talent.</p>
+                                    <p className="text-sm text-primary/90 italic border-l-2 border-primary/30 pl-3">Example: For Pawa Bakery, we aligned product formulation with public health goals, capturing a premium market segment.</p>
                                 </div>
                             </div>
                         </div>
