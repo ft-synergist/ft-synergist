@@ -12,8 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/insights',
         '/partnership',
         '/edg-grant',
-        '/privacy-policy',
-    ].map((route) => ({
+    '/sustainability',
+    '/privacy-policy',
+  ]    ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
