@@ -477,8 +477,9 @@ export default function Home() {
                   <stat.icon className="h-8 w-8 text-primary" />
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">
-                  <CountUp value={stat.value} suffix={stat.suffix} />
-                </div>
+                  <span className="tabular-nums tracking-tight">
+  {stat.value}{stat.suffix}
+</span>                </div>
                 <div className="text-sm font-bold uppercase tracking-wider text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">{stat.label}</div>
               </motion.div>
             ))}
