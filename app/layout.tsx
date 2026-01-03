@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";import { Jost, Montserrat } from "next/font/google";
+import Script from "next/script";
+import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -27,9 +28,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ftsynergist.com'),
-  alternates: {
-    canonical: '/',
-  },  title: {
+   title: {
     default: "FT Synergist | Strategic Scale-Up & IP Consultancy Singapore",
     template: "%s | FT Synergist"
   },
