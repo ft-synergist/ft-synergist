@@ -26,9 +26,11 @@ export function GlobalGrantButton() {
                         className="fixed bottom-6 left-6 z-40 hidden sm:block"
                     >
                         <button
-                            onClick={() => setIsModalOpen(true)}
-                            className="group flex items-center gap-3 rounded-full bg-[#8F801B] p-2 pr-6 text-white shadow-xl transition-all hover:bg-[#7a6d17] hover:scale-105 hover:shadow-2xl hover:shadow-[#8F801B]/25"
-                        >
+<button
+            aria-label="Check Grant Eligibility"
+            onClick={() => setIsModalOpen(true)}
+            className="group flex items-center gap-3 rounded-full bg-[#8F801B] p-2 pr-6 text-white shadow-xl transition-all hover:bg-[#7a6d17] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#8F801B] focus:ring-offset-2"
+          >>
                             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 group-hover:bg-white/30 transition-colors">
                                 <CheckCircle2 className="h-6 w-6" />
                             </div>
