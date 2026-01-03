@@ -54,12 +54,11 @@ export function Navbar() {
                 </div>
 
                 {/* Mobile Menu Button */}
-                <button
-                    className="flex items-center space-x-2 md:hidden"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                    <span className="sr-only">Toggle menu</span>
+      <button
+        aria-label="Toggle Main Menu"
+        className="flex items-center space-x-2 md:hidden"
+        onClick={() => setIsOpen(!isOpen)}
+      >                    <span className="sr-only">Toggle menu</span>
                 </button>
             </div>
 
