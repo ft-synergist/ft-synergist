@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-
-import { Jost, Montserrat } from "next/font/google";
+import Script from "next/script";import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -28,7 +27,9 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ftsynergist.com'),
-  title: {
+  alternates: {
+    canonical: '/',
+  },  title: {
     default: "FT Synergist | Strategic Scale-Up & IP Consultancy Singapore",
     template: "%s | FT Synergist"
   },
@@ -61,20 +62,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8ZGSYLYWJ"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-R8ZGSYLYWJ');
-            `,
-          }}
-        />
-      </head>
-      <body
+             </head>
+    <body
         className={`${jost.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}
         suppressHydrationWarning
       >
@@ -92,7 +81,22 @@ export default function RootLayout({
             <JsonLd />
           </PersonaModalProvider>
         </ConsentProvider>
-      </body>
+<Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-R8ZGSYLYWJ"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R8ZGSYLYWJ');
+          `}
+        </Script>
+    </body>
     </html>
   );
 }
