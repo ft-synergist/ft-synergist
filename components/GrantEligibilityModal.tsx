@@ -72,14 +72,14 @@ export default function GrantEligibilityModal({ isOpen, onClose }: GrantEligibil
                     {/* Header */}
                     <div className="flex items-center justify-between p-6 border-b border-white/10 bg-white/5">
                         <h2 className="text-xl font-bold text-white">Grant Eligibility Assessment</h2>
-                        <button
-                            onClick={onClose}
-                            className="text-gray-400 hover:text-white transition-colors"
-                        >
-                            <X className="w-6 h-6" />
-                        </button>
+                       <button
+                aria-label="Close Modal"   
+                onClick={onClose}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>                   
                     </div>
-
                     {/* Content */}
                     <div className="p-6 overflow-y-auto flex-grow">
                         {step === "assessment" ? (
