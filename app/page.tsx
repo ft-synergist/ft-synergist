@@ -103,11 +103,10 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 -z-20">
           <Image
-            src="/hero-bg.png"
+            src="/hero-bg.jpg"           
             alt="Singapore Skyline"
             fill
-            className="object-cover"
-            priority
+            className="object-cover opacity-60"            priority
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
         </div>
