@@ -1,35 +1,13 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
-import dynamic from "next/dynamic";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
 import JsonLd from "@/components/JsonLd";
-
-// 2. LAZY LOAD THE HEAVY WIDGETS
-// Fixed: Explicitly returning the named export for each component
-const ChatWidget = dynamic(
-  () => import("@/components/ChatWidget").then((mod) => mod.ChatWidget),
-  { ssr: false }
-);
-
-const ConsentBanner = dynamic(
-  () => import("@/components/cmp/ConsentBanner").then((mod) => mod.ConsentBanner),
-  { ssr: false }
-);
-
-const PreferenceCenter = dynamic(
-  () => import("@/components/cmp/PreferenceCenter").then((mod) => mod.PreferenceCenter),
-  { ssr: false }
-);
-
-const FloatingConsentButton = dynamic(
-  () => import("@/components/cmp/FloatingConsentButton").then((mod) => mod.FloatingConsentButton),
-  { ssr: false }
-);
+import { LazyWidgets } from "@/components/LazyWidgets"; // <--- Import the new wrapper
 
 const jost = Jost({
   subsets: ["latin"],
@@ -88,11 +66,8 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
-            {/* These are now Lazy Loaded Client Components */}
-            <ChatWidget />
-            <ConsentBanner />
-            <PreferenceCenter />
-            <FloatingConsentButton />
+            {/* The Client Wrapper handles the Lazy Loading now */}
+            <LazyWidgets />
             <JsonLd />
           </PersonaModalProvider>
         </ConsentProvider>
