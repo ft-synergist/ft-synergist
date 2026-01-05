@@ -7,12 +7,7 @@ import { Footer } from "@/components/Footer";
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
 import JsonLd from "@/components/JsonLd";
-
-// Restore Standard Imports (Safe & Reliable)
-import { ChatWidget } from "@/components/ChatWidget";
-import { ConsentBanner } from "@/components/cmp/ConsentBanner";
-import { PreferenceCenter } from "@/components/cmp/PreferenceCenter";
-import { FloatingConsentButton } from "@/components/cmp/FloatingConsentButton";
+import { LazyWidgets } from "@/components/LazyWidgets"; // <--- This now points to the CORRECT file you just made
 
 const jost = Jost({
   subsets: ["latin"],
@@ -71,11 +66,10 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
-            {/* Standard Components */}
-            <ChatWidget />
-            <ConsentBanner />
-            <PreferenceCenter />
-            <FloatingConsentButton />
+            
+            {/* The Speed Booster is now active */}
+            <LazyWidgets />
+            
             <JsonLd />
           </PersonaModalProvider>
         </ConsentProvider>
