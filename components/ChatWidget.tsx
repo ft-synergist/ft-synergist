@@ -149,7 +149,7 @@ export function ChatWidget() {
                                     <p className="text-xs text-primary-foreground/80">Online</p>
                                 </div>
                             </div>
-                            <button onClick={() => setIsOpen(false)} className="text-primary-foreground/80 hover:text-white">
+                            <button aria-label="Close Chat" onClick={() => setIsOpen(false)} className="text-primary-foreground/80 hover:text-white">
                                 <X className="h-5 w-5" />
                             </button>
                         </div>
