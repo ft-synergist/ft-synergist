@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
-import dynamic from "next/dynamic"; // <--- 1. Import Dynamic
+import dynamic from "next/dynamic";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -10,7 +10,7 @@ import { PersonaModalProvider } from "@/components/providers/PersonaModalProvide
 import JsonLd from "@/components/JsonLd";
 
 // 2. LAZY LOAD THE HEAVY WIDGETS
-// These will now load *after* the page is interactive, saving the Main Thread.
+// Fixed: Explicitly returning the named export for each component
 const ChatWidget = dynamic(
   () => import("@/components/ChatWidget").then((mod) => mod.ChatWidget),
   { ssr: false }
