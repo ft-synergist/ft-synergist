@@ -7,7 +7,12 @@ import { Footer } from "@/components/Footer";
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
 import JsonLd from "@/components/JsonLd";
-import { LazyWidgets } from "@/components/LazyWidgets"; // <--- Import the new wrapper
+
+// Restore Standard Imports (Safe & Reliable)
+import { ChatWidget } from "@/components/ChatWidget";
+import { ConsentBanner } from "@/components/cmp/ConsentBanner";
+import { PreferenceCenter } from "@/components/cmp/PreferenceCenter";
+import { FloatingConsentButton } from "@/components/cmp/FloatingConsentButton";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -66,8 +71,11 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
-            {/* The Client Wrapper handles the Lazy Loading now */}
-            <LazyWidgets />
+            {/* Standard Components */}
+            <ChatWidget />
+            <ConsentBanner />
+            <PreferenceCenter />
+            <FloatingConsentButton />
             <JsonLd />
           </PersonaModalProvider>
         </ConsentProvider>
