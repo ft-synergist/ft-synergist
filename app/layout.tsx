@@ -1,18 +1,35 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
+import dynamic from "next/dynamic"; // <--- 1. Import Dynamic
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ChatWidget } from "@/components/ChatWidget";
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
-import { ConsentBanner } from "@/components/cmp/ConsentBanner";
-import { PreferenceCenter } from "@/components/cmp/PreferenceCenter";
-import { FloatingConsentButton } from "@/components/cmp/FloatingConsentButton";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
+import JsonLd from "@/components/JsonLd";
 
+// 2. LAZY LOAD THE HEAVY WIDGETS
+// These will now load *after* the page is interactive, saving the Main Thread.
+const ChatWidget = dynamic(
+  () => import("@/components/ChatWidget").then((mod) => mod.ChatWidget),
+  { ssr: false }
+);
 
+const ConsentBanner = dynamic(
+  () => import("@/components/cmp/ConsentBanner").then((mod) => mod.ConsentBanner),
+  { ssr: false }
+);
 
+const PreferenceCenter = dynamic(
+  () => import("@/components/cmp/PreferenceCenter").then((mod) => mod.PreferenceCenter),
+  { ssr: false }
+);
+
+const FloatingConsentButton = dynamic(
+  () => import("@/components/cmp/FloatingConsentButton").then((mod) => mod.FloatingConsentButton),
+  { ssr: false }
+);
 
 const jost = Jost({
   subsets: ["latin"],
@@ -24,11 +41,9 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-import JsonLd from "@/components/JsonLd";
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ftsynergist.com'),
-   title: {
+  title: {
     default: "FT Synergist | Strategic Scale-Up & IP Consultancy Singapore",
     template: "%s | FT Synergist"
   },
@@ -61,8 +76,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-             </head>
-    <body
+      </head>
+      <body
         className={`${jost.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}
         suppressHydrationWarning
       >
@@ -73,6 +88,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            {/* These are now Lazy Loaded Client Components */}
             <ChatWidget />
             <ConsentBanner />
             <PreferenceCenter />
@@ -80,7 +96,7 @@ export default function RootLayout({
             <JsonLd />
           </PersonaModalProvider>
         </ConsentProvider>
-<Script
+        <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-R8ZGSYLYWJ"
         />
@@ -95,7 +111,7 @@ export default function RootLayout({
             gtag('config', 'G-R8ZGSYLYWJ');
           `}
         </Script>
-    </body>
+      </body>
     </html>
   );
 }
