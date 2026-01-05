@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
 import JsonLd from "@/components/JsonLd";
-import { LazyWidgets } from "@/components/LazyWidgets"; // <--- This now points to the CORRECT file you just made
+import { SiteWidgets } from "@/components/SiteWidgets"; // <--- NOW 100% CORRECT
 
 const jost = Jost({
   subsets: ["latin"],
@@ -67,8 +67,7 @@ export default function RootLayout({
             </main>
             <Footer />
             
-            {/* The Speed Booster is now active */}
-            <LazyWidgets />
+            <SiteWidgets />
             
             <JsonLd />
           </PersonaModalProvider>
