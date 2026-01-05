@@ -149,7 +149,11 @@ export function ChatWidget() {
                                     <p className="text-xs text-primary-foreground/80">Online</p>
                                 </div>
                             </div>
-                            <button aria-label="Close Chat" onClick={() => setIsOpen(false)} className="text-primary-foreground/80 hover:text-white">
+                            <button
+                                aria-label="Close Chat"
+                                onClick={() => setIsOpen(false)}
+                                className="text-primary-foreground/80 hover:text-white"
+                            >
                                 <X className="h-5 w-5" />
                             </button>
                         </div>
@@ -195,7 +199,12 @@ export function ChatWidget() {
                             <div className="px-4 pb-2">
                                 <div className="flex flex-wrap gap-2">
                                     {messages[messages.length - 1].options?.map((option) => (
-                                       
+                                        <button
+                                            key={option}
+                                            onClick={() => handleSendMessage(option)}
+                                            className="rounded-full border bg-background px-3 py-1 text-xs font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                                        >
+                                            {option}
                                         </button>
                                     ))}
                                 </div>
@@ -230,6 +239,7 @@ export function ChatWidget() {
                     </motion.div>
                 )}
             </AnimatePresence>
+
             <motion.button
                 aria-label={isOpen ? "Close Chat Assistant" : "Open Chat Assistant"}
                 whileHover={{ scale: 1.05 }}
@@ -238,7 +248,7 @@ export function ChatWidget() {
                 className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 transition-colors hover:bg-primary/90"
             >
                 {isOpen ? <ChevronDown className="h-6 w-6" /> : <MessageSquare className="h-6 w-6" />}
-            </motion.button> 
-            </div>
+            </motion.button>
+        </div>
     );
 }
