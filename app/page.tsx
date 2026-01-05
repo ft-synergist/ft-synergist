@@ -103,10 +103,12 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 -z-20">
           <Image
-            src="/hero-bg.jpg"           
+            src="/hero-bg.jpg"
             alt="Singapore Skyline"
             fill
-            className="object-cover opacity-60"            priority
+            className="object-cover opacity-60"
+            priority
+            quality={60} // <--- OPTIMIZATION: Lowers file size significantly
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
         </div>
@@ -427,10 +429,12 @@ export default function Home() {
         {/* Background Image with Overlay - Matching Hero */}
         <div className="absolute inset-0 -z-20">
           <Image
-            src="/hero-bg.png"
+            src="/hero-bg.jpg" // <--- OPTIMIZATION: CHANGED FROM .PNG TO .JPG TO REUSE CACHE
             alt="Background"
             fill
             className="object-cover"
+            quality={60} // <--- OPTIMIZATION: Lowers file size
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
         </div>
         <div className="absolute inset-0 -z-10 bg-black/80"></div>
@@ -477,8 +481,9 @@ export default function Home() {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">
                   <span className="tabular-nums tracking-tight">
-  {stat.value}{stat.suffix}
-</span>                </div>
+                    <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} />
+                  </span>
+                </div>
                 <div className="text-sm font-bold uppercase tracking-wider text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">{stat.label}</div>
               </motion.div>
             ))}
