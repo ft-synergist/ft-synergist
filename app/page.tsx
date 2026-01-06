@@ -108,7 +108,7 @@ export default function Home() {
             fill
             className="object-cover opacity-60"
             priority
-            quality={60} // <--- OPTIMIZATION: Lowers file size significantly
+            quality={50} // <--- OPTIMIZATION: Lowered to 50 for max mobile speed
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
         </div>
@@ -429,11 +429,11 @@ export default function Home() {
         {/* Background Image with Overlay - Matching Hero */}
         <div className="absolute inset-0 -z-20">
           <Image
-            src="/hero-bg.jpg" // <--- OPTIMIZATION: CHANGED FROM .PNG TO .JPG TO REUSE CACHE
+            src="/hero-bg.jpg" // <--- OPTIMIZATION: REUSING CACHED JPG
             alt="Background"
             fill
             className="object-cover"
-            quality={60} // <--- OPTIMIZATION: Lowers file size
+            quality={50} // <--- OPTIMIZATION: Lowered to 50
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
         </div>
@@ -481,6 +481,7 @@ export default function Home() {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">
                   <span className="tabular-nums tracking-tight">
+                    {/* Using 'end' prop to match updated CountUp component */}
                     <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} />
                   </span>
                 </div>
