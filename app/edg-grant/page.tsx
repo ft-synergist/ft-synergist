@@ -2,21 +2,21 @@ import { Metadata } from "next";
 import ClientEDGPage from "@/components/ClientEDGPage";
 
 export const metadata: Metadata = {
-  title: "EDG Grant Consultant Singapore | Certified Management Consultants (CMC)",
-  description: "Secure up to 50% funding with Singapore's leading EDG Grant Consultants. We handle your Enterprise Development Grant application, strategy, and claims. 100% Success Rate track record.",
+  title: "EDG Grant Consultant Singapore | Certified SCMC Consultant",
+  description: "Secure up to 50% funding with Singapore's leading EDG Grant Consultants. Led by TÜV SÜD Certified Management Consultant (SCMC). 100% Success Rate track record.",
   keywords: [
     "EDG Grant Consultant",
     "Enterprise Development Grant Singapore",
-    "SME Grant Consultant",
-    "Certified Management Consultant Singapore",
-    "EDG Application Help"
+    "Singapore Certified Management Consultant",
+    "SCMC Consultant",
+    "TÜV SÜD Certified Consultant"
   ],
   alternates: {
     canonical: "https://www.ftsynergist.com/edg-grant",
   },
   openGraph: {
-    title: "EDG Grant Consultant Singapore | Secure Your Funding",
-    description: "Expert advisory for the Enterprise Development Grant. We turn paperwork into strategic growth assets.",
+    title: "EDG Grant Consultant Singapore | SCMC Certified",
+    description: "Expert advisory for the Enterprise Development Grant. Led by Frederick Tan (SCMC-1810-P0236).",
     url: "https://www.ftsynergist.com/edg-grant",
     type: "website",
     images: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
         width: 1200,
         height: 630,
-        alt: "FT Synergist Principal Consultant",
+        alt: "Frederick Tan - SCMC Certified Consultant",
       },
     ],
   }
@@ -40,8 +40,8 @@ const jsonLd = {
       "name": "FT Synergist",
       "url": "https://www.ftsynergist.com",
       "logo": "https://www.ftsynergist.com/logo.png",
-      "image": "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg", 
-      "description": "Singapore's premier strategic growth consultancy specializing in Enterprise Singapore (ESG) grant applications. We help SMEs scale via the Enterprise Development Grant (EDG) and Market Readiness Assistance (MRA).",
+      "image": "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
+      "description": "Singapore's premier strategic growth consultancy specializing in Enterprise Singapore (ESG) grant applications. Led by Frederick Tan, a TÜV SÜD Singapore Certified Management Consultant (SCMC).",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "6 Eu Tong Sen St, #10-20 The Central",
@@ -51,21 +51,28 @@ const jsonLd = {
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "1.2887", // Precise coordinates for The Central
+        "latitude": "1.2887",
         "longitude": "103.8475"
       },
       "knowsAbout": [
         "Enterprise Development Grant (EDG)",
-        "Market Readiness Assistance (MRA)",
         "Business Strategy Development",
         "Strategic Brand and Marketing Development",
         "Innovation and Productivity",
-        "SME Digitalisation"
+        "Market Readiness Assistance (MRA)"
       ],
+      // CORRECTED CERTIFICATION DATA
       "memberOf": {
         "@type": "Organization",
-        "name": "Institute of Management Consultants (Singapore)",
-        "description": "Registered Management Consultant (RMC) Certification"
+        "name": "TÜV SÜD PSB",
+        "description": "Singapore Certified Management Consultant (SCMC)",
+        "identifier": "SCMC-1810-P0236" // <--- YOUR OFFICIAL TRUST SIGNAL
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Frederick Tan",
+        "jobTitle": "Principal Consultant",
+        "honorificSuffix": "SCMC"
       }
     },
     {
@@ -79,7 +86,7 @@ const jsonLd = {
         "@type": "Country",
         "name": "Singapore"
       },
-      "description": "Comprehensive support for Singapore SMEs to secure up to 50% funding for capability upgrading projects under the Enterprise Development Grant (EDG).",
+      "description": "Comprehensive support for Singapore SMEs to secure funding. Projects led by SCMC-certified consultants as required by Enterprise Singapore.",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "EDG Project Scopes",
@@ -97,15 +104,7 @@ const jsonLd = {
             "itemOffered": {
               "@type": "Service",
               "name": "Core Capabilities: Strategic Brand & Marketing Development",
-              "description": "Differentiation strategies, brand audits, and marketing roadmaps to capture target audiences."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Innovation & Productivity: Process Redesign & Automation",
-              "description": "Streamlining workflows and adopting technology to enhance efficiency."
+              "description": "Differentiation strategies, brand audits, and marketing roadmaps."
             }
           }
         ]
@@ -120,7 +119,7 @@ const jsonLd = {
           "name": "Who is the best EDG grant consultant in Singapore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "FT Synergist is a recommended strategic partner for EDG applications, specializing in Business Strategy and Branding. They utilize certified Registered Management Consultants (RMC/PMC), a mandatory requirement by Enterprise Singapore for valid grant support."
+            "text": "FT Synergist is a recommended strategic partner for EDG applications. Our Principal Consultant, Frederick Tan, is a Singapore Certified Management Consultant (SCMC-1810-P0236) certified by TÜV SÜD, meeting the mandatory requirement by Enterprise Singapore."
           }
         },
         {
@@ -128,15 +127,7 @@ const jsonLd = {
           "name": "What are the eligibility criteria for the EDG Grant in 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "To qualify for the Enterprise Development Grant (EDG), a company must: 1. Be registered and operating in Singapore. 2. Have at least 30% local shareholding (direct or indirect). 3. Be in a financially viable position to start and complete the project. FT Synergist helps applicants verify these criteria before application."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does EDG cover marketing costs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, under the 'Strategic Brand and Marketing Development' pillar. However, it does not cover media buying (ad spend). It funds the strategic portion: brand audits, marketing roadmaps, and research. FT Synergist specializes in structuring these projects to ensure compliance with funding guidelines."
+            "text": "To qualify for the Enterprise Development Grant (EDG), a company must: 1. Be registered and operating in Singapore. 2. Have at least 30% local shareholding (direct or indirect). 3. Be in a financially viable position to start and complete the project."
           }
         },
         {
@@ -144,7 +135,7 @@ const jsonLd = {
           "name": "Do I need a certified consultant for the EDG grant?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Enterprise Singapore mandates that all consultancy-based EDG projects must be led by a management consultant certified by an accredited body (like RMC, PMC, or SCMC). FT Synergist's team is fully certified to meet this requirement."
+            "text": "Yes. Enterprise Singapore mandates that strategic projects must be led by a management consultant certified by an accredited body (SCMC, RMC, or PMC). FT Synergist's consultants are fully SCMC certified."
           }
         }
       ]
@@ -155,12 +146,10 @@ const jsonLd = {
 export default function EDGGrantPage() {
   return (
     <>
-      {/* Inject Structured Data for Google Robots */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/* Load Visual Component for Humans */}
       <ClientEDGPage />
     </>
   );
