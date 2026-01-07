@@ -2,7 +2,7 @@
 
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Globe, ChevronDown, Plus, Minus, Check } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Globe, Plus, Minus, Check } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -38,44 +38,47 @@ export default function ClientEDGPage() {
             icon: Globe,
         },
     ];
+
     const successStories = [
         {
             impact: "IMPACT: $5M NEW REVENUE | $170K OPEX SAVED",
-            title: "EDG for Wholesale Trade & Distribution", // <--- KEYWORD: Industry
+            title: "EDG for Wholesale Trade & Distribution",
             quote: "Through FT Synergist, we optimised our workflow to remove redundant processes leveraging the Innovation & Productivity pillar. This digital transformation created a $5 million new sales channel while simultaneously saving $170,000 in OPEX.",
             client: "PPE Distribution (S) Pte Ltd"
         },
         {
             impact: "IMPACT: $55 MILLION NEW SALES CHANNEL",
-            title: "EDG for Security & Technology", // <--- KEYWORD: Tech/Security
-            quote: "FT Synergist helped us design business continuity plans and attain the Singapore Quality Class (SQC) certification. This strategic foundation helped us architect a $55 million new sales channel through our T-Guard system.",
+            title: "EDG for Security & Technology",
+            quote: "FT Synergist helped us secure funding for business strategy development to design business continuity plans and attain the Singapore Quality Class (SQC) certification. This strategic foundation helped us architect a $55 million new sales channel through our T-Guard system.",
             client: "TNT Surveillance"
         },
         {
             impact: "IMPACT: $3 MILLION REVENUE SCALE & EXIT STRATEGY",
-            title: "EDG for F&B & Retail Strategy", // <--- KEYWORD: F&B
-            quote: "We developed a bold strategic roadmap to scale to $3 million in revenue with a clear exit strategy. The grant supported our re-branding to emphasize premiumization, helping us stand out as a leader in the tea industry.",
+            title: "EDG for F&B & Retail Strategy",
+            quote: "We developed a bold strategic roadmap to scale to $3 million in revenue with a clear exit strategy. The business strategy development grant supported our re-branding to emphasize premiumization, helping us stand out against the big boys in the tea industry.",
             client: "Petale Tea"
         },
         {
             impact: "IMPACT: GLOBAL M&A & SUSTAINABILITY ROADMAP",
-            title: "EDG for Manufacturing & Global Expansion", // <--- KEYWORD: Manufacturing/Global
+            title: "EDG for Manufacturing & Global Expansion",
             quote: "We moved from an opportunistic approach to a clear global roadmap aligned with the UN SDGs. The MRA and EDG grants are now co-funding our M&A targets in Australia and strategic hubs in Vietnam.",
             client: "Sundat (S) Pte. Ltd."
         },
         {
             impact: "IMPACT: MULTI-MARKET EXPANSION & HALAL CERTIFICATION",
-            title: "EDG for Food Manufacturing (Halal)", // <--- KEYWORD: Niche High Value
-            quote: "This engagement transformed us into a data-driven organization. We utilized the grant to develop a roadmap for expansion into Vietnam and Malaysia, successfully navigating complex Halal certification requirements.",
+            title: "EDG for Food Manufacturing (Halal)",
+            quote: "This business strategy development project transformed us into a data-driven organization. We utilized the grant to develop a roadmap for expansion into Malaysia, Philippines and Dubai, successfully navigating complex Halal certification requirements.",
             client: "Mei Le Pte. Ltd."
         },
         {
             impact: "IMPACT: MULTINATIONAL FRANCHISE EXPANSION",
-            title: "EDG for Education & Franchising", // <--- KEYWORD: Education
+            title: "EDG for Education & Franchising",
             quote: "FT Synergist's roadmap enabled us to scale from a single unit into a multimillion-dollar brand with franchised units across Singapore, Jakarta, Surabaya, and Ho Chi Minh.",
             client: "Adam Khoo Education"
         }
-    ];    const faqs = [
+    ];
+
+    const faqs = [
         {
             question: "What is the maximum funding support for the EDG in 2026?",
             answer: "The EDG typically supports up to 50% of qualifying project costs for local SMEs, covering consultancy, software, and equipment."
@@ -104,7 +107,7 @@ export default function ClientEDGPage() {
 
     return (
         <div className="flex flex-col min-h-screen">
-            {/* Hero Section - OPTIMIZED H1 */}
+            {/* Hero Section */}
             <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden">
                 <div className="absolute inset-0 -z-20">
                     <Image
@@ -123,7 +126,6 @@ export default function ClientEDGPage() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="relative z-10 max-w-5xl mx-auto"
                 >
-                    {/* SEO CHANGE: KEYWORD RICH H1 */}
                     <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-2xl mb-8">
                         Certified EDG Grant <br className="hidden sm:inline" />
                         <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
@@ -145,7 +147,7 @@ export default function ClientEDGPage() {
                 </motion.div>
             </section>
 
-            {/* NEW SECTION: ELIGIBILITY CHECKLIST (SEO BAIT) */}
+            {/* Eligibility Checklist */}
             <section className="py-16 bg-secondary/5 border-b border-white/5">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-2xl font-bold mb-8">Who Qualifies for the Enterprise Development Grant?</h2>
@@ -159,107 +161,123 @@ export default function ClientEDGPage() {
                     </div>
                 </div>
             </section>
-{/* NEW SECTION: What Does EDG Cover? (Keyword Density Engine) */}
-            <section className="py-24 bg-white text-black">
+
+            {/* DESIGN UPGRADE: What Does EDG Cover? (Polished) */}
+            <section className="py-24 bg-zinc-50 text-black">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4">
+                        <div className="inline-block px-4 py-1.5 mb-4 border border-[#8F801B]/30 rounded-full bg-[#8F801B]/10">
+                            <span className="text-sm font-bold text-[#8F801B] uppercase tracking-wider">Project Scope Matrix</span>
+                        </div>
+                        <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl mb-6 text-slate-900">
                             What Does the EDG Cover?
                         </h2>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
                             The grant supports "Qualifying Project Costs" across three strategic pillars. We help you architect a roadmap that maximizes coverage for:
                         </p>
                     </div>
 
                     <div className="grid gap-8 md:grid-cols-3">
-                        {/* Pillar 1: Core Capabilities */}
-                        <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 hover:shadow-lg transition-shadow">
-                            <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-blue-100 p-3 text-blue-700">
-                                <ShieldCheck className="h-6 w-6" />
+                        {/* Pillar 1 */}
+                        <div className="relative group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="mb-6 inline-flex items-center justify-center rounded-xl bg-blue-50 p-4 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                                <ShieldCheck className="h-8 w-8" />
                             </div>
-                            <h3 className="text-xl font-bold mb-4">Core Capabilities</h3>
-                            <ul className="space-y-3 text-gray-600">
+                            <h3 className="text-xl font-bold mb-6 text-slate-900">Core Capabilities</h3>
+                            <ul className="space-y-4 text-slate-600">
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Business Strategy Development</strong> & Transformation</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Strategic Brand</strong> & Marketing Development</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Human Capital</strong> & Talent Frameworks</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" />
                                     <span>Financial Management & <strong>Service Excellence</strong></span>
                                 </li>
                             </ul>
                         </div>
 
-                        {/* Pillar 2: Innovation & Productivity */}
-                        <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 hover:shadow-lg transition-shadow">
-                            <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-purple-100 p-3 text-purple-700">
-                                <TrendingUp className="h-6 w-6" />
+                        {/* Pillar 2 */}
+                        <div className="relative group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="mb-6 inline-flex items-center justify-center rounded-xl bg-purple-50 p-4 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                                <TrendingUp className="h-8 w-8" />
                             </div>
-                            <h3 className="text-xl font-bold mb-4">Innovation & Productivity</h3>
-                            <ul className="space-y-3 text-gray-600">
+                            <h3 className="text-xl font-bold mb-6 text-slate-900">Innovation & Productivity</h3>
+                            <ul className="space-y-4 text-slate-600">
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-purple-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Process Redesign</strong> & Workflow Digitization</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-purple-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Automation</strong> & Technology Adoption</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-purple-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Product Development</strong> & R&D</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-purple-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Smart Systems</strong> (ERP, CRM, Inventory)</span>
                                 </li>
                             </ul>
                         </div>
 
-                        {/* Pillar 3: Market Access */}
-                        <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 hover:shadow-lg transition-shadow">
-                            <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-orange-100 p-3 text-orange-700">
-                                <Globe className="h-6 w-6" />
+                        {/* Pillar 3 */}
+                        <div className="relative group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="mb-6 inline-flex items-center justify-center rounded-xl bg-orange-50 p-4 text-orange-700 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                                <Globe className="h-8 w-8" />
                             </div>
-                            <h3 className="text-xl font-bold mb-4">Market Access</h3>
-                            <ul className="space-y-3 text-gray-600">
+                            <h3 className="text-xl font-bold mb-6 text-slate-900">Market Access</h3>
+                            <ul className="space-y-4 text-slate-600">
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-orange-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Overseas Market Presence</strong> & Entry Strategy</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-orange-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Mergers and Acquisitions (M&A)</strong></span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-orange-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>Standards Adoption</strong> (ISO Certification)</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-orange-600 mr-3 shrink-0 mt-0.5" />
                                     <span><strong>IP Strategy</strong> & Franchising</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
-                    <div className="mt-12 text-center">
-                         <p className="text-sm text-muted-foreground bg-gray-100 inline-block px-4 py-2 rounded-full">
-                            *Note: Strategic projects must be led by a <strong>Certified Management Consultant (CMC)</strong> to qualify.
-                        </p>
+
+                    <div className="mt-16 text-center">
+                        <div className="inline-flex items-center bg-white px-6 py-4 rounded-xl border border-slate-200 shadow-sm">
+                            <CheckCircle2 className="w-5 h-5 text-[#8F801B] mr-3" />
+                            <p className="text-sm font-medium text-slate-600">
+                                Note: Strategic projects must be led by a <strong className="text-slate-900">Certified Management Consultant (CMC)</strong> to qualify.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </section>            {/* Strategic Pillars */}
+            </section>
+
+            {/* Strategic Pillars */}
             <section className="py-24 bg-background">
                 <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Strategic Framework</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">Beyond the grant application.</p>
+                    </div>
                     <div className="grid gap-8 lg:grid-cols-3">
                         {pillars.map((pillar, index) => (
                             <motion.div
@@ -314,7 +332,7 @@ export default function ClientEDGPage() {
             </section>
 
             {/* FAQ Section */}
-            <section id="faq" className="py-24 bg-background">
+            <section id="faq" className="py-24 bg-background border-t border-border/40">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Frequently Asked Questions</h2>
