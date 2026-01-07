@@ -38,47 +38,44 @@ export default function ClientEDGPage() {
             icon: Globe,
         },
     ];
-
     const successStories = [
         {
             impact: "IMPACT: $5M NEW REVENUE | $170K OPEX SAVED",
-            title: "The Efficiency Win",
-            quote: "We streamlined our workflow to remove redundant processes and embraced a technology leap. This efficiency drive created a $5 million new sales channel while simultaneously saving $170,000 in OPEX.",
+            title: "EDG for Wholesale Trade & Distribution", // <--- KEYWORD: Industry
+            quote: "Through FT Synergist, we optimised our workflow to remove redundant processes leveraging the Innovation & Productivity pillar. This digital transformation created a $5 million new sales channel while simultaneously saving $170,000 in OPEX.",
             client: "PPE Distribution (S) Pte Ltd"
         },
         {
             impact: "IMPACT: $55 MILLION NEW SALES CHANNEL",
-            title: "The Excellence Win",
-            quote: "FT Synergist was decisive in helping us design business continuity plans and attain the Singapore Quality Class certification. Their guidance helped us architect a $55 million new sales channel through our T-Guard system.",
+            title: "EDG for Security & Technology", // <--- KEYWORD: Tech/Security
+            quote: "FT Synergist helped us design business continuity plans and attain the Singapore Quality Class (SQC) certification. This strategic foundation helped us architect a $55 million new sales channel through our T-Guard system.",
             client: "TNT Surveillance"
         },
         {
             impact: "IMPACT: $3 MILLION REVENUE SCALE & EXIT STRATEGY",
-            title: "The Valuation & Exit Win",
-            quote: "We developed a bold strategic plan to scale to $3 million in revenue with a clear exit strategy. The new brand concept emphasizes premiumization, helping us stand out as a leader in the tea industry.",
+            title: "EDG for F&B & Retail Strategy", // <--- KEYWORD: F&B
+            quote: "We developed a bold strategic roadmap to scale to $3 million in revenue with a clear exit strategy. The grant supported our re-branding to emphasize premiumization, helping us stand out as a leader in the tea industry.",
             client: "Petale Tea"
         },
         {
             impact: "IMPACT: GLOBAL M&A & SUSTAINABILITY ROADMAP",
-            title: "The Global Expansion Win",
-            quote: "We moved from an opportunistic approach to a clear global roadmap aligned with the UN Sustainable Development Goals (SDGs). We are now identifying M&A targets in Australia and leveraging strategic hubs in Vietnam and Taiwan.",
+            title: "EDG for Manufacturing & Global Expansion", // <--- KEYWORD: Manufacturing/Global
+            quote: "We moved from an opportunistic approach to a clear global roadmap aligned with the UN SDGs. The MRA and EDG grants are now co-funding our M&A targets in Australia and strategic hubs in Vietnam.",
             client: "Sundat (S) Pte. Ltd."
         },
         {
             impact: "IMPACT: MULTI-MARKET EXPANSION & HALAL CERTIFICATION",
-            title: "The Market Entry Win",
-            quote: "This engagement transformed us into a data-driven organization. We developed a roadmap for multi-market expansion into Vietnam, Malaysia, and Australia, successfully navigating complex Halal certification requirements.",
+            title: "EDG for Food Manufacturing (Halal)", // <--- KEYWORD: Niche High Value
+            quote: "This engagement transformed us into a data-driven organization. We utilized the grant to develop a roadmap for expansion into Vietnam and Malaysia, successfully navigating complex Halal certification requirements.",
             client: "Mei Le Pte. Ltd."
         },
         {
             impact: "IMPACT: MULTINATIONAL FRANCHISE EXPANSION",
-            title: "The Scaling Win",
+            title: "EDG for Education & Franchising", // <--- KEYWORD: Education
             quote: "FT Synergist's roadmap enabled us to scale from a single unit into a multimillion-dollar brand with franchised units across Singapore, Jakarta, Surabaya, and Ho Chi Minh.",
             client: "Adam Khoo Education"
         }
-    ];
-
-    const faqs = [
+    ];    const faqs = [
         {
             question: "What is the maximum funding support for the EDG in 2026?",
             answer: "The EDG typically supports up to 50% of qualifying project costs for local SMEs, covering consultancy, software, and equipment."
