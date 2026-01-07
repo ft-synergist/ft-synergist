@@ -6,6 +6,17 @@ import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Globe, Plus, Minus }
 import Image from "next/image";
 import { useState } from "react";
 
+// Helper function to send data to GA4
+const trackLead = () => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "generate_lead", {
+            event_category: "engagement",
+            event_label: "edg_eligibility_check",
+            value: 1
+        });
+    }
+};
+
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -19,6 +30,11 @@ export default function ClientEDGPage() {
 
     const toggleFaq = (index: number) => {
         setOpenFaqIndex(openFaqIndex === index ? null : index);
+    };
+
+    const handleButtonClick = () => {
+        openModal(); // Open the form
+        trackLead(); // Tell Google it's a lead
     };
 
     const pillars = [
@@ -137,7 +153,7 @@ export default function ClientEDGPage() {
                     </p>
                     <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                         <button
-                            onClick={openModal}
+                            onClick={handleButtonClick}
                             className="bg-[#8F801B] animate-breathing-gold inline-flex items-center justify-center rounded-md px-8 py-4 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#A08d1e]"
                         >
                             Check Eligibility
@@ -147,14 +163,13 @@ export default function ClientEDGPage() {
                 </motion.div>
             </section>
 
-            {/* DESIGN UPGRADE: Eligibility Checklist (Dark Mode) */}
+            {/* Eligibility Checklist */}
             <section className="py-16 border-b border-white/10 bg-[#0a0a0a]">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-2xl font-bold mb-8 text-white">Who Qualifies for the Enterprise Development Grant?</h2>
                     <div className="flex flex-wrap justify-center gap-6">
                         {["Registered in Singapore", "Min. 30% Local Shareholding", "Financially Viable"].map((item, i) => (
                             <div key={i} className="flex items-center bg-white/5 px-8 py-4 rounded-full border border-[#C5A017]/30 shadow-[0_0_15px_rgba(197,160,23,0.1)]">
-                                {/* FIXED: Replaced Green Arrow with Gold Check */}
                                 <CheckCircle2 className="w-5 h-5 text-[#C5A017] mr-3" />
                                 <span className="font-bold text-gray-200 tracking-wide">{item}</span>
                             </div>
@@ -163,9 +178,8 @@ export default function ClientEDGPage() {
                 </div>
             </section>
 
-            {/* DESIGN UPGRADE: What Does EDG Cover? (Premium Dark) */}
+            {/* What Does EDG Cover? */}
             <section className="py-24 bg-black relative">
-                {/* Subtle Background Glow for depth */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C5A017]/5 rounded-full blur-[120px] pointer-events-none"></div>
                 
                 <div className="container mx-auto px-4 relative z-10">
@@ -272,7 +286,7 @@ export default function ClientEDGPage() {
                 </div>
             </section>
 
-            {/* Strategic Pillars (Consistent Dark) */}
+            {/* Strategic Pillars */}
             <section className="py-24 bg-[#0a0a0a]">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
@@ -300,7 +314,7 @@ export default function ClientEDGPage() {
                 </div>
             </section>
 
-            {/* Success Stories - Dark Mode */}
+            {/* Success Stories */}
             <section id="success-stories" className="py-24 bg-black border-t border-white/10">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
@@ -332,7 +346,7 @@ export default function ClientEDGPage() {
                 </div>
             </section>
 
-            {/* FAQ Section (Dark Mode) */}
+            {/* FAQ Section */}
             <section id="faq" className="py-24 bg-[#0a0a0a] border-t border-white/10">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="text-center mb-16">
@@ -384,7 +398,7 @@ export default function ClientEDGPage() {
                         95% of rejected grant applications fail due to poor strategic positioning.
                     </p>
                     <button
-                        onClick={openModal}
+                        onClick={handleButtonClick}
                         className="inline-flex items-center justify-center rounded-md bg-white px-10 py-4 text-lg font-bold text-black shadow-xl transition-transform hover:scale-105"
                     >
                         Check Eligibility
