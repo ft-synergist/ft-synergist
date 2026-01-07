@@ -159,8 +159,105 @@ export default function ClientEDGPage() {
                     </div>
                 </div>
             </section>
+{/* NEW SECTION: What Does EDG Cover? (Keyword Density Engine) */}
+            <section className="py-24 bg-white text-black">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4">
+                            What Does the EDG Cover?
+                        </h2>
+                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                            The grant supports "Qualifying Project Costs" across three strategic pillars. We help you architect a roadmap that maximizes coverage for:
+                        </p>
+                    </div>
 
-            {/* Strategic Pillars */}
+                    <div className="grid gap-8 md:grid-cols-3">
+                        {/* Pillar 1: Core Capabilities */}
+                        <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 hover:shadow-lg transition-shadow">
+                            <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-blue-100 p-3 text-blue-700">
+                                <ShieldCheck className="h-6 w-6" />
+                            </div>
+                            <h3 className="text-xl font-bold mb-4">Core Capabilities</h3>
+                            <ul className="space-y-3 text-gray-600">
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Business Strategy Development</strong> & Transformation</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Strategic Brand</strong> & Marketing Development</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Human Capital</strong> & Talent Frameworks</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span>Financial Management & <strong>Service Excellence</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Pillar 2: Innovation & Productivity */}
+                        <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 hover:shadow-lg transition-shadow">
+                            <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-purple-100 p-3 text-purple-700">
+                                <TrendingUp className="h-6 w-6" />
+                            </div>
+                            <h3 className="text-xl font-bold mb-4">Innovation & Productivity</h3>
+                            <ul className="space-y-3 text-gray-600">
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Process Redesign</strong> & Workflow Digitization</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Automation</strong> & Technology Adoption</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Product Development</strong> & R&D</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Smart Systems</strong> (ERP, CRM, Inventory)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Pillar 3: Market Access */}
+                        <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 hover:shadow-lg transition-shadow">
+                            <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-orange-100 p-3 text-orange-700">
+                                <Globe className="h-6 w-6" />
+                            </div>
+                            <h3 className="text-xl font-bold mb-4">Market Access</h3>
+                            <ul className="space-y-3 text-gray-600">
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Overseas Market Presence</strong> & Entry Strategy</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Mergers and Acquisitions (M&A)</strong></span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>Standards Adoption</strong> (ISO Certification)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                                    <span><strong>IP Strategy</strong> & Franchising</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div className="mt-12 text-center">
+                         <p className="text-sm text-muted-foreground bg-gray-100 inline-block px-4 py-2 rounded-full">
+                            *Note: Strategic projects must be led by a <strong>Certified Management Consultant (CMC)</strong> to qualify.
+                        </p>
+                    </div>
+                </div>
+            </section>            {/* Strategic Pillars */}
             <section className="py-24 bg-background">
                 <div className="container mx-auto px-4">
                     <div className="grid gap-8 lg:grid-cols-3">
