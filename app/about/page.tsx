@@ -5,10 +5,10 @@ import { CheckCircle2, MapPin, Award, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About FT Synergist | Strategic SME Consultants Singapore",
-  description: "Founded by Frederick Tan (SCMC). We go beyond grant applications to build the strategic roadmaps that scaled brands like Adam Khoo Learning Centre across Asia.",
+  description: "Founded by Frederick Tan (SCMC). We are entrepreneurs first and consultants second. We build the strategic roadmaps that scaled brands like Adam Khoo Learning Centre.",
   openGraph: {
     title: "About FT Synergist | Strategic SME Consultants Singapore",
-    description: "We don't just fill forms. We build the roadmap I wish I had 20 years ago.",
+    description: "Accelerating 100 Entrepreneurs to Impact 100 Million Lives in Asia.",
     url: "https://www.ftsynergist.com/about",
     siteName: "FT Synergist",
     images: [
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <span className="text-[#C5A017]">Singapore</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            We are not just grant writers. We are entrepreneurs who have navigated the chaos of scaling up.
+            We are <span className="text-white font-bold">entrepreneurs first</span> and <span className="text-white font-bold">consultants second</span> who have navigated the chaos of scaling up.
           </p>
         </div>
       </section>
@@ -122,17 +122,19 @@ export default function AboutPage() {
                 </span>
               </div>
               
+              {/* CHANGED: FROM "Strategy First" TO "Inspiring a Better World" */}
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
-                Strategy First, Grants Second.
+                Inspiring a Better World:
               </h2>
 
-              {/* --- NEW DESIGN: LIGHT CARD WITH DEEP BLUE BORDER --- */}
+              {/* --- FOUNDER NOTE CARD --- */}
               <div 
                 id="founder-story" 
                 className="bg-[#f8f9fa] text-[#333] p-8 md:p-10 rounded border-l-[5px] border-[#0f3460] shadow-lg"
               >
-                <h3 className="text-[#0f3460] font-bold text-2xl mb-6 font-sans">
-                  The Founder's Note: Why "Grants" Are Not Enough
+                {/* CHANGED: UPDATED TITLE */}
+                <h3 className="text-[#0f3460] font-bold text-xl md:text-2xl mb-6 font-sans leading-tight">
+                  The Founder's Note: Accelerating 100 Entrepreneurs to Impact 100 Million Lives in Asia.
                 </h3>
                 
                 <p className="text-base md:text-lg leading-relaxed mb-6">
@@ -147,13 +149,16 @@ export default function AboutPage() {
                   Money without strategy just accelerates chaos. That is why when business owners come to me asking for 'the max <Link href="/edg-grant" className="text-[#0f3460] font-bold underline decoration-2 hover:text-[#C5A017] transition-colors">EDG grant</Link>,' I often tell them to pause. If you cannot explain your 3-year plan on a napkin, the grant won't save you—it will drown you.
                 </p>
 
+                {/* CHANGED: "Entrepreneurs First" text inserted here */}
                 <p className="text-base md:text-lg leading-relaxed mb-8">
-                  At FT Synergist, we don't just fill forms. We build the strategic roadmap I wish I had 20 years ago."
+                  At FT Synergist, we are <strong>entrepreneurs first and consultants second</strong>. We build the strategic roadmap I wish I had 20 years ago."
                 </p>
 
+                {/* CHANGED: NEW SIGNATURE BLOCK */}
                 <div className="border-t border-gray-300 pt-6">
-                    <p className="font-bold text-[#0f3460] text-lg margin-0">— Frederick Tan</p>
-                    <p className="text-sm text-gray-600 margin-0">Principal Consultant (SCMC Certified)</p>
+                    <p className="font-bold text-[#0f3460] text-lg mb-1">— Frederick Tan (SCMC)</p>
+                    <p className="text-sm text-gray-800 font-medium">Founder and Principal Consultant</p>
+                    <p className="text-sm text-gray-600">FT Synergist</p>
                 </div>
               </div>
               {/* ---------------------------------------------------- */}
