@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: "Founded by Frederick Tan (SCMC). We go beyond grant applications to build the strategic roadmaps that scaled brands like Adam Khoo Learning Centre across Asia.",
   openGraph: {
     title: "About FT Synergist | Strategic SME Consultants Singapore",
-    description: "We don't just fill forms. We build the roadmap I wish I had 10 years ago.",
+    description: "We don't just fill forms. We build the roadmap I wish I had 20 years ago.",
     url: "https://www.ftsynergist.com/about",
     siteName: "FT Synergist",
     images: [
       {
-        url: "/frederick-tan-scmc-certified-edg-consultant.jpg", // Using your existing image
+        url: "/frederick-tan-scmc-certified-edg-consultant.jpg",
         width: 1200,
         height: 630,
         alt: "Frederick Tan - Principal Consultant",
@@ -28,7 +28,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       
-      {/* --- JSON-LD SCHEMA (The Invisible SEO Boost) --- */}
+      {/* --- JSON-LD SCHEMA --- */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -77,15 +77,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* --- THE FOUNDER'S PHILOSOPHY (Your New Content) --- */}
+      {/* --- THE FOUNDER'S PHILOSOPHY --- */}
       <section className="py-20 bg-[#0a0a0a]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
+          <div className="flex flex-col md:flex-row gap-12 items-start">
             
             {/* Image Column */}
-            <div className="w-full md:w-1/3">
+            <div className="w-full md:w-1/3 sticky top-24">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-[#C5A017]/30 shadow-2xl">
-                {/* Ensure this image path matches your public folder */}
                 <Image
                   src="/frederick-tan-scmc-certified-edg-consultant.jpg"
                   alt="Frederick Tan Principal Consultant"
@@ -99,9 +98,23 @@ export default function AboutPage() {
                   <p className="text-[#C5A017] text-sm">Principal Consultant (SCMC)</p>
                 </div>
               </div>
+              
+              {/* LinkedIn Link Below Image */}
+              <div className="flex items-center gap-3 mt-6 justify-center md:justify-start">
+                  <Image 
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                    alt="LinkedIn"
+                    width={24}
+                    height={24}
+                    className="opacity-70"
+                  />
+                  <a href="https://www.linkedin.com/in/tanfrederick/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-[#C5A017] hover:underline transition-colors">
+                    Connect on LinkedIn
+                  </a>
+              </div>
             </div>
 
-            {/* Text Column (The Manifesto) */}
+            {/* Text Column (The Founder's Note) */}
             <div className="w-full md:w-2/3">
               <div className="inline-block px-4 py-1.5 mb-6 border border-[#C5A017]/30 rounded-full bg-[#C5A017]/10">
                 <span className="text-sm font-bold text-[#C5A017] uppercase tracking-wider">
@@ -110,38 +123,41 @@ export default function AboutPage() {
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
-                Why "Grants" Are Not Enough
+                Strategy First, Grants Second.
               </h2>
 
-              <div className="prose prose-lg prose-invert text-gray-300">
-                <p className="mb-6">
-                  "I used to think 'Grants' were just free money. Then I tried to scale <strong>Adam Khoo Learning Centre</strong> into Vietnam.
-                </p>
-                <p className="mb-6 font-medium text-white">
-                  We didn't need cash. We needed a roadmap.
-                </p>
-                <p className="mb-6">
-                  Money without strategy just accelerates chaos. That is why when business owners come to me asking for 'the max 
-                  <Link href="/edg-grant" className="text-[#C5A017] hover:underline font-bold mx-1">
-                     grant
-                  </Link>,' 
-                  I often tell them to pause. If you cannot explain your 3-year plan on a napkin, the grant won't save you—it will drown you.
-                </p>
-                <p className="mb-8 border-l-4 border-[#C5A017] pl-6 italic text-gray-400">
-                  "At FT Synergist, we don't just fill forms. We build the roadmap I wish I had 10 years ago."
-                </p>
+              {/* --- NEW DESIGN: LIGHT CARD WITH DEEP BLUE BORDER --- */}
+              <div 
+                id="founder-story" 
+                className="bg-[#f8f9fa] text-[#333] p-8 md:p-10 rounded border-l-[5px] border-[#0f3460] shadow-lg"
+              >
+                <h3 className="text-[#0f3460] font-bold text-2xl mb-6 font-sans">
+                  The Founder's Note: Why "Grants" Are Not Enough
+                </h3>
                 
-                <div className="flex items-center gap-4 mt-8">
-                  <Image 
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                    alt="LinkedIn"
-                    width={24}
-                    height={24}
-                    className="opacity-70"
-                  />
-                  <span className="text-sm text-gray-500">Connect with Frederick on LinkedIn</span>
+                <p className="text-base md:text-lg leading-relaxed mb-6">
+                  "I left the derivatives industry to start an education brand in China because I believed it was the most direct way to give back to society. Later, I took on the challenge of scaling <strong>Adam Khoo Learning Centre</strong> into Indonesia, and subsequently Vietnam and Cambodia.
+                </p>
+
+                <p className="text-lg md:text-xl leading-relaxed font-bold text-black mb-6">
+                  We didn't need cash. We needed a market entry roadmap.
+                </p>
+
+                <p className="text-base md:text-lg leading-relaxed mb-6">
+                  Money without strategy just accelerates chaos. That is why when business owners come to me asking for 'the max <Link href="/edg-grant" className="text-[#0f3460] font-bold underline decoration-2 hover:text-[#C5A017] transition-colors">EDG grant</Link>,' I often tell them to pause. If you cannot explain your 3-year plan on a napkin, the grant won't save you—it will drown you.
+                </p>
+
+                <p className="text-base md:text-lg leading-relaxed mb-8">
+                  At FT Synergist, we don't just fill forms. We build the strategic roadmap I wish I had 20 years ago."
+                </p>
+
+                <div className="border-t border-gray-300 pt-6">
+                    <p className="font-bold text-[#0f3460] text-lg margin-0">— Frederick Tan</p>
+                    <p className="text-sm text-gray-600 margin-0">Principal Consultant (SCMC Certified)</p>
                 </div>
               </div>
+              {/* ---------------------------------------------------- */}
+
             </div>
 
           </div>
