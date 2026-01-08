@@ -21,8 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        // UPDATED FILENAME FOR OPEN GRAPH (Social Media)
-        url: "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
+        url: "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
         width: 1200,
         height: 630,
         alt: "Frederick Tan - SCMC Certified Consultant",
@@ -31,19 +30,20 @@ export const metadata: Metadata = {
   }
 };
 
-// THE SECRET WEAPON: Structured Data (JSON-LD)
+// THE "ALL OUT" SCHEMA (JSON-LD)
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Consultant",
-      "@id": "https://www.ftsynergist.com/#organization",
+      "@id": "https://www.ftsynergist.com/edg-grant/#consultant",
       "name": "FT Synergist",
       "url": "https://www.ftsynergist.com",
       "logo": "https://www.ftsynergist.com/logo.png",
-      // UPDATED FILENAME FOR GOOGLE KNOWLEDGE GRAPH
-      "image": "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
+      "image": "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
       "description": "Singapore's premier strategic growth consultancy specializing in Enterprise Singapore (ESG) grant applications. Led by Frederick Tan, a TÜV SÜD Singapore Certified Management Consultant (SCMC).",
+      "priceRange": "$$$",
+      "telephone": "+65 9862 8906", 
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "6 Eu Tong Sen St, #10-20 The Central",
@@ -55,6 +55,18 @@ const jsonLd = {
         "@type": "GeoCoordinates",
         "latitude": "1.2887",
         "longitude": "103.8475"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
       },
       "sameAs": [
         "https://www.linkedin.com/company/ft-synergist",
@@ -70,11 +82,11 @@ const jsonLd = {
       ],
       "employee": {
         "@type": "Person",
+        "@id": "https://www.ftsynergist.com/edg-grant/#frederick-tan",
         "name": "Frederick Tan",
         "jobTitle": "Principal Consultant",
         "honorificSuffix": "SCMC",
-        // UPDATED FILENAME FOR PERSON SCHEMA
-        "image": "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
+        "image": "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
         "sameAs": [
           "https://www.linkedin.com/in/tanfrederick/"
         ],
@@ -88,14 +100,19 @@ const jsonLd = {
             },
             "identifier": "SCMC-1810-P0236"
         }
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "TÜV SÜD PSB",
+        "description": "Singapore Certified Management Consultant (SCMC) Registry"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://www.ftsynergist.com/#edg-consulting",
+      "@id": "https://www.ftsynergist.com/edg-grant/#service",
       "serviceType": "EDG Grant Consultancy",
       "provider": {
-        "@id": "https://www.ftsynergist.com/#organization"
+        "@id": "https://www.ftsynergist.com/edg-grant/#consultant"
       },
       "areaServed": {
         "@type": "Country",
@@ -135,7 +152,7 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.ftsynergist.com/#faq",
+      "@id": "https://www.ftsynergist.com/edg-grant/#faq-page",
       "mainEntity": [
         {
           "@type": "Question",
@@ -160,7 +177,15 @@ const jsonLd = {
             "@type": "Answer",
             "text": "Yes. Enterprise Singapore mandates that strategic projects must be led by a management consultant certified by an accredited body (SCMC, RMC, or PMC). FT Synergist's consultants are fully SCMC certified."
           }
-        }
+        },
+        {
+            "@type": "Question",
+            "name": "Does EDG cover marketing costs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, under the 'Strategic Brand and Marketing Development' pillar. However, it does not cover media buying (ad spend). It funds the strategic portion: brand audits, marketing roadmaps, and research."
+            }
+          }
       ]
     }
   ]
