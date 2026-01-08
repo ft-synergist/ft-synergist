@@ -120,7 +120,7 @@ export default function ClientEDGPage() {
             answer: "No, the EDG operates on a reimbursement basis. You must claim the funds after the project deliverables are met. We guide you through the claims process to ensure your reimbursement is secured without administrative friction."
         },
         {
-            question: "Why are most EDG applications rejected?",
+            question: "Why are EDG applications rejected?",
             answer: "Rejections usually happen because the project lacks \"Strategic Novelty\"—meaning it looks like \"business as usual\" rather than a transformation. Our role is to frame your project as a capability upgrade that aligns with Singapore’s national economic goals."
         }
     ];
@@ -286,10 +286,10 @@ export default function ClientEDGPage() {
                 <div className="container mx-auto px-4">
                     <div className="mx-auto max-w-4xl rounded-2xl border border-[#C5A017]/40 bg-white/5 p-8 md:p-12 shadow-[0_0_30px_rgba(197,160,23,0.1)]">
                         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
-                            {/* Profile Image - Now using the official file name */}
+                            {/* Profile Image - UPDATED FILENAME */}
                             <div className="relative h-48 w-48 shrink-0 overflow-hidden rounded-full border-4 border-[#C5A017] shadow-xl">
                                 <Image
-                                    src="/Fred_Corp_Pic_Official.jpeg" 
+                                    src="/frederick-tan-scmc-certified-edg-consultant.jpg" 
                                     alt="Frederick Tan - Principal Consultant"
                                     fill
                                     className="object-cover"
