@@ -3,15 +3,15 @@ import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// --- FIX 1: REMOVED CURLY BRACES (Default Imports) ---
-import Navbar from "@/components/Navbar"; 
-import Footer from "@/components/Footer"; 
-import SiteWidgets from "@/components/SiteWidgets";
-// ----------------------------------------------------
+// --- THE FIX: Curly Braces + Correct Paths ---
+import { Navbar } from "@/components/Navbar"; 
+import { Footer } from "@/components/Footer"; 
+import { SiteWidgets } from "@/components/SiteWidgets";
+// ---------------------------------------------
 
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
-import { Toaster } from "@/components/ui/toaster"; // Added back in case you use Toast notifications
+import { Toaster } from "@/components/ui/toaster"; 
 
 const jost = Jost({
   subsets: ["latin"],
@@ -42,9 +42,8 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  // ⚠️ CHECK: Ensure this code is your REAL verification string
   verification: {
-    google: "yHh-0w...", 
+    google: "yHh-0...", // Keep your actual verification code here
   },
 };
 
@@ -72,7 +71,7 @@ export default function RootLayout({
             <SiteWidgets />
             <Toaster />
 
-            {/* DELETED: <JsonLd /> is gone. The Ghost is dead. */}
+            {/* DELETED: <JsonLd />  <-- The Ghost is gone. */}
 
           </PersonaModalProvider>
         </ConsentProvider>
