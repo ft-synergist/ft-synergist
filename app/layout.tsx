@@ -2,11 +2,16 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar"; // Corrected Path
-import { Footer } from "@/components/Footer"; // Corrected Path
+
+// --- FIX 1: REMOVED CURLY BRACES (Default Imports) ---
+import Navbar from "@/components/Navbar"; 
+import Footer from "@/components/Footer"; 
+import SiteWidgets from "@/components/SiteWidgets";
+// ----------------------------------------------------
+
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
-import { SiteWidgets } from "@/components/SiteWidgets";
+import { Toaster } from "@/components/ui/toaster"; // Added back in case you use Toast notifications
 
 const jost = Jost({
   subsets: ["latin"],
@@ -37,8 +42,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  // ⚠️ CHECK: Ensure this code is your REAL verification string
   verification: {
-    google: "yHh-0...", // Keep your existing verification code here
+    google: "yHh-0w...", 
   },
 };
 
@@ -54,6 +60,7 @@ export default function RootLayout({
       >
         <ConsentProvider>
           <PersonaModalProvider>
+            
             <Navbar />
             
             <main className="flex-grow">
@@ -63,7 +70,9 @@ export default function RootLayout({
             <Footer />
             
             <SiteWidgets />
-            {/* DELETED: <JsonLd />  <-- The Ghost is gone */}
+            <Toaster />
+
+            {/* DELETED: <JsonLd /> is gone. The Ghost is dead. */}
 
           </PersonaModalProvider>
         </ConsentProvider>
