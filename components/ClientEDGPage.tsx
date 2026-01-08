@@ -251,35 +251,3 @@ export default function ClientEDGPage() {
                                 </li>
                             </ul>
                         </div>
-
-                        {/* Pillar 3 */}
-                        <div className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-500 hover:border-[#C5A017]/50 hover:bg-white/10">
-                            <div className="mb-6 inline-flex items-center justify-center rounded-xl bg-white/10 p-4 text-[#C5A017] group-hover:scale-110 transition-transform duration-500">
-                                <Globe className="h-8 w-8" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-6 text-white group-hover:text-[#C5A017] transition-colors">Market Access</h3>
-                            <ul className="space-y-4 text-gray-300">
-                                <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-[#C5A017] mr-3 shrink-0 mt-0.5 opacity-80" />
-                                    <span><strong className="text-white">Overseas Market Presence</strong> & Entry Strategy</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-[#C5A017] mr-3 shrink-0 mt-0.5 opacity-80" />
-                                    <span><strong className="text-white">Mergers and Acquisitions (M&A)</strong></span>
-                                </li>
-                                <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-[#C5A017] mr-3 shrink-0 mt-0.5 opacity-80" />
-                                    <span><strong className="text-white">Standards Adoption</strong> (ISO Certification)</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <CheckCircle2 className="h-5 w-5 text-[#C5A017] mr-3 shrink-0 mt-0.5 opacity-80" />
-                                    <span><strong className="text-white">IP Strategy</strong> & Franchising</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* NEW SECTION: Meet the Principal Consultant (The Trust Anchor) */}
-            <section className="py-16 bg-[#0a0a
