@@ -54,25 +54,37 @@ const jsonLd = {
         "latitude": "1.2887",
         "longitude": "103.8475"
       },
+      "sameAs": [
+        "https://www.linkedin.com/company/ft-synergist",
+        "https://www.facebook.com/ftsynergist" 
+      ],
       "knowsAbout": [
         "Enterprise Development Grant (EDG)",
         "Business Strategy Development",
         "Strategic Brand and Marketing Development",
         "Innovation and Productivity",
-        "Market Readiness Assistance (MRA)"
+        "Market Readiness Assistance (MRA)",
+        "Overseas Market Promotion"
       ],
-      // CORRECTED CERTIFICATION DATA
-      "memberOf": {
-        "@type": "Organization",
-        "name": "TÜV SÜD PSB",
-        "description": "Singapore Certified Management Consultant (SCMC)",
-        "identifier": "SCMC-1810-P0236" // <--- YOUR OFFICIAL TRUST SIGNAL
-      },
       "employee": {
         "@type": "Person",
         "name": "Frederick Tan",
         "jobTitle": "Principal Consultant",
-        "honorificSuffix": "SCMC"
+        "honorificSuffix": "SCMC",
+        "image": "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
+        "sameAs": [
+          "https://www.linkedin.com/in/tanfrederick/" // <--- UPDATED: YOUR REAL LINKEDIN
+        ],
+        "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Singapore Certified Management Consultant (SCMC)",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "TÜV SÜD PSB"
+            },
+            "identifier": "SCMC-1810-P0236"
+        }
       }
     },
     {
@@ -89,13 +101,13 @@ const jsonLd = {
       "description": "Comprehensive support for Singapore SMEs to secure funding. Projects led by SCMC-certified consultants as required by Enterprise Singapore.",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "EDG Project Scopes",
+        "name": "Government Grant Consulting Services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Core Capabilities: Business Strategy Development",
+              "name": "EDG: Business Strategy Development",
               "description": "Strategic roadmap planning to improve operational efficiency and business models."
             }
           },
@@ -103,8 +115,16 @@ const jsonLd = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Core Capabilities: Strategic Brand & Marketing Development",
+              "name": "EDG: Strategic Brand & Marketing Development",
               "description": "Differentiation strategies, brand audits, and marketing roadmaps."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "MRA: Market Readiness Assistance",
+              "description": "Funding for overseas market setup, business matching, and market promotion."
             }
           }
         ]
