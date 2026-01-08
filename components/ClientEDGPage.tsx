@@ -2,7 +2,7 @@
 
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Globe, Plus, Minus, Linkedin } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Globe, Plus, Minus, Linkedin, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -286,7 +286,7 @@ export default function ClientEDGPage() {
                 <div className="container mx-auto px-4">
                     <div className="mx-auto max-w-4xl rounded-2xl border border-[#C5A017]/40 bg-white/5 p-8 md:p-12 shadow-[0_0_30px_rgba(197,160,23,0.1)]">
                         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
-                            {/* Profile Image - UPDATED FILENAME */}
+                            {/* Profile Image */}
                             <div className="relative h-48 w-48 shrink-0 overflow-hidden rounded-full border-4 border-[#C5A017] shadow-xl">
                                 <Image
                                     src="/frederick-tan-scmc-certified-edg-consultant.jpg" 
@@ -312,7 +312,18 @@ export default function ClientEDGPage() {
                                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center md:justify-start">
                                     <div className="flex items-center gap-2 text-sm text-gray-400">
                                         <ShieldCheck className="h-5 w-5 text-[#C5A017]" />
-                                        <span>License: <strong className="text-white">SCMC-1810-P0236</strong></span>
+                                        <span className="flex items-center gap-1">
+                                            License: 
+                                            <a 
+                                                href="https://www.tuvsud.com/en-sg/services/training/certification-of-persons/list-of-certified-consultants#:~:text=SCMC%2D1810%2DP0236,TAN%20THIAM%20CHYE%20FREDERICK"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-white font-bold hover:text-[#C5A017] hover:underline transition-colors inline-flex items-center gap-1"
+                                            >
+                                                SCMC-1810-P0236
+                                                <ExternalLink className="h-3 w-3 opacity-70" />
+                                            </a>
+                                        </span>
                                     </div>
                                     <div className="hidden h-4 w-px bg-white/20 sm:block"></div>
                                     <a 
