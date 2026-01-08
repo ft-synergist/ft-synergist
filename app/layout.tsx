@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google"; // Keep your fonts
+import Script from "next/script";
+import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
-import Providers from "@/components/providers/Providers";
-import Header from "@/components/layout/Header"; // Assuming these paths are correct based on your file structure
-import Footer from "@/components/layout/Footer";
-import Script from "next/script"; // Required for GA and WhatsApp
-import Image from "next/image";
+import { Navbar } from "@/components/Navbar"; // Corrected Path
+import { Footer } from "@/components/Footer"; // Corrected Path
+import { ConsentProvider } from "@/components/providers/ConsentProvider";
+import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
+import { SiteWidgets } from "@/components/SiteWidgets";
 
-// Font Setup
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
+const jost = Jost({
+  subsets: ["latin"],
+  variable: "--font-jost",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ftsynergist.com'),
@@ -32,7 +38,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   verification: {
-    google: "yHh-0...", // Keep your verification code if you have one, or remove this line
+    google: "yHh-0...", // Keep your existing verification code here
   },
 };
 
@@ -43,52 +49,41 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}>
-        <Providers>
-          <Header />
-          
-          <main className="flex-grow">
-            {children}
-          </main>
-          
-          <Toaster />
-          {/* DELETED: <JsonLd />  <-- The Ghost is gone forever */}
-          
-          <Footer />
+      <body
+        className={`${jost.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}
+      >
+        <ConsentProvider>
+          <PersonaModalProvider>
+            <Navbar />
+            
+            <main className="flex-grow">
+              {children}
+            </main>
+            
+            <Footer />
+            
+            <SiteWidgets />
+            {/* DELETED: <JsonLd />  <-- The Ghost is gone */}
 
-          {/* WhatsApp Widget */}
-          <a
-            href="https://wa.me/6598628906"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform hover:scale-110 hover:shadow-xl"
-            aria-label="Chat on WhatsApp"
-          >
-            <Image
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-              alt="WhatsApp"
-              width={35}
-              height={35}
-            />
-          </a>
+          </PersonaModalProvider>
+        </ConsentProvider>
 
-          {/* Google Analytics (Manual Script - Verified ID: G-R8ZGSYLYWJ) */}
-          <Script
-            strategy="afterInteractive"
-            src="https://www.googletagmanager.com/gtag/js?id=G-R8ZGSYLYWJ"
-          />
-          <Script
-            id="google-analytics"
-            strategy="afterInteractive"
-          >
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-R8ZGSYLYWJ');
-            `}
-          </Script>
-        </Providers>
+        {/* Google Analytics (Verified ID: G-R8ZGSYLYWJ) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-R8ZGSYLYWJ"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R8ZGSYLYWJ');
+          `}
+        </Script>
       </body>
     </html>
   );
