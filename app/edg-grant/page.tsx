@@ -21,7 +21,8 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
+        // UPDATED FILENAME FOR OPEN GRAPH (Social Media)
+        url: "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
         width: 1200,
         height: 630,
         alt: "Frederick Tan - SCMC Certified Consultant",
@@ -40,7 +41,8 @@ const jsonLd = {
       "name": "FT Synergist",
       "url": "https://www.ftsynergist.com",
       "logo": "https://www.ftsynergist.com/logo.png",
-      "image": "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
+      // UPDATED FILENAME FOR GOOGLE KNOWLEDGE GRAPH
+      "image": "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
       "description": "Singapore's premier strategic growth consultancy specializing in Enterprise Singapore (ESG) grant applications. Led by Frederick Tan, a TÜV SÜD Singapore Certified Management Consultant (SCMC).",
       "address": {
         "@type": "PostalAddress",
@@ -71,9 +73,10 @@ const jsonLd = {
         "name": "Frederick Tan",
         "jobTitle": "Principal Consultant",
         "honorificSuffix": "SCMC",
-        "image": "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
+        // UPDATED FILENAME FOR PERSON SCHEMA
+        "image": "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
         "sameAs": [
-          "https://www.linkedin.com/in/tanfrederick/" // <--- UPDATED: YOUR REAL LINKEDIN
+          "https://www.linkedin.com/in/tanfrederick/"
         ],
         "hasCredential": {
             "@type": "EducationalOccupationalCredential",
