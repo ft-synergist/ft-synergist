@@ -3,15 +3,16 @@ import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// --- THE FIX: Curly Braces + Correct Paths ---
+// 1. Correct Imports for your Project Structure
 import { Navbar } from "@/components/Navbar"; 
 import { Footer } from "@/components/Footer"; 
 import { SiteWidgets } from "@/components/SiteWidgets";
-// ---------------------------------------------
 
+// 2. Providers
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
-import { Toaster } from "@/components/ui/toaster"; 
+
+// 3. REMOVED: Toaster import (This was causing the crash)
 
 const jost = Jost({
   subsets: ["latin"],
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   verification: {
-    google: "yHh-0...", // Keep your actual verification code here
+    google: "yHh-0...", // Keep your existing verification code here
   },
 };
 
@@ -69,9 +70,8 @@ export default function RootLayout({
             <Footer />
             
             <SiteWidgets />
-            <Toaster />
-
-            {/* DELETED: <JsonLd />  <-- The Ghost is gone. */}
+            {/* REMOVED: <Toaster /> to prevent build error */}
+            {/* REMOVED: <JsonLd /> to fix Schema Duplicate */}
 
           </PersonaModalProvider>
         </ConsentProvider>
