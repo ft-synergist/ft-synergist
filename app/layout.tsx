@@ -3,16 +3,17 @@ import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// 1. Correct Imports for your Project Structure
+// 1. SAFE IMPORTS (Curly Braces + Correct Paths)
 import { Navbar } from "@/components/Navbar"; 
 import { Footer } from "@/components/Footer"; 
 import { SiteWidgets } from "@/components/SiteWidgets";
 
-// 2. Providers
+// 2. PROVIDERS
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
 
-// 3. REMOVED: Toaster import (This was causing the crash)
+// 3. REMOVED: Toaster (Deleted to prevent build failure)
+// 4. REMOVED: JsonLd (Deleted to kill the Duplicate Schema)
 
 const jost = Jost({
   subsets: ["latin"],
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   verification: {
-    google: "yHh-0...", // Keep your existing verification code here
+    google: "yHh-0...", // ⚠️ Ensure you restore your verification string here if you have one
   },
 };
 
@@ -70,11 +71,28 @@ export default function RootLayout({
             <Footer />
             
             <SiteWidgets />
-            {/* REMOVED: <Toaster /> to prevent build error */}
-            {/* REMOVED: <JsonLd /> to fix Schema Duplicate */}
+            
+            {/* CLEAN: No <JsonLd /> here. No <Toaster /> here. */}
 
           </PersonaModalProvider>
         </ConsentProvider>
+
+        {/* WhatsApp Widget */}
+        <a
+            href="https://wa.me/6598628906"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform hover:scale-110 hover:shadow-xl"
+            aria-label="Chat on WhatsApp"
+            style={{ zIndex: 9999 }} 
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp"
+              width="35"
+              height="35"
+            />
+        </a>
 
         {/* Google Analytics (Verified ID: G-R8ZGSYLYWJ) */}
         <Script
