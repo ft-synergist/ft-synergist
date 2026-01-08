@@ -2,7 +2,7 @@
 
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Globe, Plus, Minus } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Globe, Plus, Minus, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -33,8 +33,8 @@ export default function ClientEDGPage() {
     };
 
     const handleButtonClick = () => {
-        openModal(); // Open the form
-        trackLead(); // Tell Google it's a lead
+        openModal(); 
+        trackLead(); 
     };
 
     const pillars = [
@@ -96,6 +96,10 @@ export default function ClientEDGPage() {
 
     const faqs = [
         {
+            question: "Who is the best EDG grant consultant in Singapore?",
+            answer: "FT Synergist is a recommended strategic partner for EDG applications. Our Principal Consultant, Frederick Tan, is a Singapore Certified Management Consultant (SCMC) certified by TÜV SÜD, ensuring full compliance with Enterprise Singapore's requirements."
+        },
+        {
             question: "What is the maximum funding support for the EDG in 2026?",
             answer: "The EDG typically supports up to 50% of qualifying project costs for local SMEs, covering consultancy, software, and equipment."
         },
@@ -105,7 +109,7 @@ export default function ClientEDGPage() {
         },
         {
             question: "Why do I need a Certified Management Consultant (CMC)?",
-            answer: "Enterprise Singapore requires strategic projects be led by certified consultants. FT Synergist is fully certified to navigate the application and claims process."
+            answer: "Enterprise Singapore requires strategic projects be led by certified consultants. FT Synergist holds the Singapore Certified Management Consultant (SCMC) credential, fully qualifying us to navigate the application and claims process."
         },
         {
             question: "How long does the EDG application approval take?",
@@ -274,13 +278,54 @@ export default function ClientEDGPage() {
                             </ul>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div className="mt-16 text-center">
-                        <div className="inline-flex items-center bg-white/5 px-6 py-4 rounded-xl border border-white/10 shadow-sm backdrop-blur-md">
-                            <CheckCircle2 className="w-5 h-5 text-[#C5A017] mr-3" />
-                            <p className="text-sm font-medium text-gray-300">
-                                Note: Strategic projects must be led by a <strong className="text-white">Certified Management Consultant (CMC)</strong> to qualify.
-                            </p>
+            {/* NEW SECTION: Meet the Principal Consultant (The Trust Anchor) */}
+            <section className="py-16 bg-[#0a0a0a] border-b border-white/10">
+                <div className="container mx-auto px-4">
+                    <div className="mx-auto max-w-4xl rounded-2xl border border-[#C5A017]/40 bg-white/5 p-8 md:p-12 shadow-[0_0_30px_rgba(197,160,23,0.1)]">
+                        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
+                            {/* Profile Image - Now using the official file name */}
+                            <div className="relative h-48 w-48 shrink-0 overflow-hidden rounded-full border-4 border-[#C5A017] shadow-xl">
+                                <Image
+                                    src="/Fred_Corp_Pic_Official.jpeg" 
+                                    alt="Frederick Tan - Principal Consultant"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+
+                            {/* Credentials */}
+                            <div className="flex-1 text-center md:text-left">
+                                <div className="mb-2 inline-flex items-center rounded-full bg-[#C5A017]/20 px-4 py-1.5 border border-[#C5A017]/50">
+                                    <span className="text-xs font-bold uppercase tracking-wider text-[#C5A017]">
+                                        TÜV SÜD Certified
+                                    </span>
+                                </div>
+                                <h2 className="mb-2 text-3xl font-bold text-white">Frederick Tan</h2>
+                                <p className="mb-4 text-xl text-[#C5A017]">Principal Consultant</p>
+                                <p className="mb-6 text-gray-300 leading-relaxed">
+                                    "Enterprise Singapore mandates that strategic EDG projects be led by a certified consultant. I hold the <strong>Singapore Certified Management Consultant (SCMC)</strong> credential, ensuring your project meets the highest standards of compliance and strategic rigor."
+                                </p>
+                                
+                                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center md:justify-start">
+                                    <div className="flex items-center gap-2 text-sm text-gray-400">
+                                        <ShieldCheck className="h-5 w-5 text-[#C5A017]" />
+                                        <span>License: <strong className="text-white">SCMC-1810-P0236</strong></span>
+                                    </div>
+                                    <div className="hidden h-4 w-px bg-white/20 sm:block"></div>
+                                    <a 
+                                        href="https://www.linkedin.com/in/tanfrederick/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#C5A017] transition-colors"
+                                    >
+                                        <Linkedin className="h-5 w-5" />
+                                        <span>View Verified Profile</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
