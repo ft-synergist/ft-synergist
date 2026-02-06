@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Download, Globe, CheckCircle2, TrendingUp, Factory } from "lucide-react";
 import { Metadata } from "next";
 
@@ -19,8 +18,8 @@ export default function WangLaoJiCaseStudy() {
   return (
     <div className="bg-white min-h-screen text-slate-900 font-sans selection:bg-[#8F801B]/20">
       
-      {/* 1. CINEMATIC HERO SECTION (Dark Mode for Premium Feel) */}
-      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-[#003366] text-white overflow-hidden">
+      {/* 1. HERO SECTION - NOW BRAND CONSISTENT (Rich Black instead of Navy) */}
+      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white overflow-hidden">
         {/* Background Texture */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
         
@@ -53,32 +52,22 @@ export default function WangLaoJiCaseStudy() {
           </div>
 
           {/* Visual Side: The "Hero Shot" */}
-          <div className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-2xl border border-white/10 group">
-             {/* Step 1: Upload your image as 'walovi-hero.jpg' to the 'public' folder.
-                Step 2: Uncomment the <Image> tag below.
-             */}
-             
-             {/* FALLBACK GRADIENT (Visible until you upload the image) */}
-             <div className="absolute inset-0 bg-gradient-to-br from-red-900 to-blue-900 flex items-center justify-center">
+          <div className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-2xl border border-white/10 group bg-gray-800">
+             {/* PLACEHOLDER: Ensure you have uploaded 'walovi-hero.jpg' */}
+             <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
                 <div className="text-center p-8 bg-black/30 backdrop-blur-md rounded-xl border border-white/10">
                     <p className="text-white/50 text-xs font-mono mb-2 uppercase tracking-widest">Image Placeholder</p>
                     <p className="text-white font-serif text-2xl">Red Can vs. Blue Can</p>
                     <p className="text-white/70 text-sm mt-2">(Upload 'walovi-hero.jpg' to public folder)</p>
                 </div>
              </div>
-
-             {/* UNCOMMENT THIS WHEN IMAGE IS READY */}
-             {/* <Image 
-                src="/walovi-hero.jpg" 
-                alt="Wang Lao Ji Product Matrix" 
-                fill 
-                className="object-cover group-hover:scale-105 transition-transform duration-700" 
-             /> */}
+             {/* UNCOMMENT AFTER UPLOAD */}
+             {/* <Image src="/walovi-hero.jpg" alt="Wang Lao Ji Product Matrix" fill className="object-cover" /> */}
           </div>
         </div>
       </section>
 
-      {/* 2. EXECUTIVE SUMMARY (Serif Typography for Authority) */}
+      {/* 2. EXECUTIVE SUMMARY */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
         <p className="text-2xl md:text-3xl font-serif text-slate-800 leading-relaxed">
           "Most Singaporean brands fail overseas because they try to export their product exactly as it is. They refuse to adapt."
@@ -89,11 +78,11 @@ export default function WangLaoJiCaseStudy() {
         </p>
       </section>
 
-      {/* 3. LESSONS CONTENT (High Contrast Cards) */}
+      {/* 3. LESSONS CONTENT */}
       <section className="py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
-          {/* Lesson 1 */}
+          {/* Lesson 1 - Gold Sidebar */}
           <div className="grid md:grid-cols-12 gap-0 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
             <div className="md:col-span-1 bg-[#8F801B] flex items-center justify-center p-4">
                 <span className="text-white font-bold text-xl writing-vertical-lr rotate-180 md:rotate-0">LESSON 01</span>
@@ -108,20 +97,20 @@ export default function WangLaoJiCaseStudy() {
                     The Pivot: Instead of educating the West on "internal heat," they rebranded to "WALOVI" and positioned the drink as a "Natural Plant-Based Functional Beverage."
                   </p>
                 </div>
-                <div className="mt-8 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
-                    <h4 className="font-bold text-blue-900 text-sm uppercase tracking-wide flex items-center gap-2">
+                <div className="mt-8 bg-[#8F801B]/5 p-6 rounded-lg border-l-4 border-[#8F801B]">
+                    <h4 className="font-bold text-[#8F801B] text-sm uppercase tracking-wide flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4" /> The SME Takeaway
                     </h4>
-                    <p className="text-blue-800 mt-2 text-base">
+                    <p className="text-slate-700 mt-2 text-base">
                       Don't force your Singaporean context on a foreign market. If your "Unique Selling Point" requires a 10-minute explanation, it will fail.
                     </p>
                 </div>
             </div>
           </div>
 
-          {/* Lesson 2 */}
+          {/* Lesson 2 - Black Sidebar (Brand Consistent) */}
           <div className="grid md:grid-cols-12 gap-0 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-            <div className="md:col-span-1 bg-slate-800 flex items-center justify-center p-4">
+            <div className="md:col-span-1 bg-gray-900 flex items-center justify-center p-4">
                 <span className="text-white font-bold text-xl writing-vertical-lr rotate-180 md:rotate-0">LESSON 02</span>
             </div>
             <div className="md:col-span-11 p-10 md:p-12">
@@ -146,12 +135,12 @@ export default function WangLaoJiCaseStudy() {
                     By sourcing ingredients locally (the "PCBC Model"), they reduced logistics costs by 30% and bypassed protective tariffs.
                   </p>
                 </div>
-                <div className="mt-8 bg-amber-50 p-6 rounded-lg border-l-4 border-[#8F801B]">
-                    <h4 className="font-bold text-amber-900 text-sm uppercase tracking-wide flex items-center gap-2">
+                <div className="mt-8 bg-gray-50 p-6 rounded-lg border-l-4 border-gray-900">
+                    <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wide flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4" /> The SME Takeaway
                     </h4>
-                    <p className="text-amber-800 mt-2 text-base">
-                      You cannot scale physical products globally by shipping from Tuas forever. You need a Decentralized <Link href="/services" className="underline font-bold hover:text-amber-600">Strategic Roadmap</Link>.
+                    <p className="text-slate-700 mt-2 text-base">
+                      You cannot scale physical products globally by shipping from Tuas forever. You need a Decentralized <Link href="/services" className="underline font-bold hover:text-[#8F801B]">Strategic Roadmap</Link>.
                     </p>
                 </div>
             </div>
@@ -160,8 +149,8 @@ export default function WangLaoJiCaseStudy() {
         </div>
       </section>
 
-      {/* 4. THE LEAD MAGNET (Deep Dive - Dark Theme) */}
-      <section id="strategic-deep-dive" className="py-24 bg-[#003366] text-white">
+      {/* 4. THE LEAD MAGNET (Deep Dive - Brand Consistent Black) */}
+      <section id="strategic-deep-dive" className="py-24 bg-gray-900 text-white">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
@@ -187,7 +176,7 @@ export default function WangLaoJiCaseStudy() {
                 <a 
                   href="/Global Expansion Roadmap_ 5 Lessons from Wang Lao Ji.pdf" 
                   download
-                  className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white text-[#003366] font-bold rounded-sm hover:bg-slate-100 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                  className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white text-gray-900 font-bold rounded-sm hover:bg-slate-100 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
                 >
                   <Download className="mr-2 h-5 w-5" />
                   Download Full Report
