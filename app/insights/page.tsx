@@ -1,24 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, TrendingUp, ShieldCheck, Cpu, Globe, FileText, ChevronRight } from "lucide-react";
+import { ArrowRight, TrendingUp, ShieldCheck, Cpu, Globe } from "lucide-react";
 import { Metadata } from "next";
 
-// 1. LINKEDIN / SEO TAGS (The "LinkedIn Invisible" Fix)
 export const metadata: Metadata = {
   title: "Strategic Insights for Singapore SMEs | FT Synergist",
   description: "Data-driven case studies, market reports, and grant guides to help Singapore enterprises scale up, innovate, and expand globally.",
-  openGraph: {
-    title: "Strategic Insights for Singapore SMEs",
-    description: "Read our latest case study: How Wang Lao Ji grew profits 15.87% via localization. Download the 2026 AI Report.",
-    url: "https://www.ftsynergist.com/insights/",
-    type: "website",
-    // Note: Ensure you actually have an image at this path, or remove this line
-    images: [{ url: "https://www.ftsynergist.com/assets/images/walovi-hero.jpg" }],
-  },
 };
 
 export default function InsightsPage() {
-  // 2. SCHEMA MARKUP (The "Rich Snippet" Fix)
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -55,104 +45,114 @@ export default function InsightsPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background text-gray-900 font-sans">
-      {/* Inject Schema for Google */}
+    <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* HERO SECTION */}
-      <section className="bg-gradient-to-br from-[#003366] to-[#001f3f] text-white pt-32 pb-20 px-4 text-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      {/* 1. HERO SECTION - MATCHING HOME PAGE BLACK */}
+      <section className="bg-gray-900 text-white pt-32 pb-24 px-4 text-center relative overflow-hidden">
+        {/* Subtle Gold Gradient for Premium Feel */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#8F801B]/20 via-gray-900 to-gray-900 opacity-60"></div>
         
         <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6">
             Strategic Intelligence
           </h1>
-          <p className="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed opacity-90">
-            Stop guessing. Start scaling. <br/>
-            Data-backed roadmaps for Singapore's market leaders.
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Market-defining research and actionable roadmaps for Singaporean leaders.
           </p>
         </div>
       </section>
 
-      {/* FEATURED CASE STUDY (WANG LAO JI) */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto -mt-10 relative z-20">
-        <div className="bg-white rounded-xl shadow-[0_15px_35px_rgba(0,0,0,0.15)] border-t-4 border-[#d9534f] p-8 md:p-12 relative">
+      {/* 2. FEATURED CASE STUDY - THE "CARD" */}
+      <section className="px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto -mt-16 relative z-20">
+        <div className="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col md:flex-row transition-transform hover:-translate-y-1 duration-500">
           
-          <span className="inline-block bg-[#d9534f] text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-            New Case Study
-          </span>
-          
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            The "Wang Lao Ji" Pivot: A Blueprint for Global Expansion
-          </h2>
-          
-          <div className="text-lg text-gray-600 mb-8 leading-relaxed space-y-2">
-            <p><strong className="text-gray-900">The Problem:</strong> A 197-year-old brand trapped in a local niche.</p>
-            <p><strong className="text-gray-900">The Fix:</strong> A radical "Localization" strategy that grew profits by 15.87%.</p>
-            <p><strong className="text-gray-900">The Lesson:</strong> Why Singaporean SMEs fail overseas when they don't adapt.</p>
+          <div className="p-8 md:p-12 md:w-2/3 flex flex-col justify-center">
+            <div className="flex items-center space-x-2 text-[#8F801B] font-bold text-xs uppercase tracking-widest mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#8F801B]"></span>
+              <span>Latest Release</span>
+            </div>
+            
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+              The "Wang Lao Ji" Pivot: A Blueprint for Global Expansion
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              How a 197-year-old brand grew profits by 15.87% by reinventing itself for the West. A masterclass in localization for Singapore SMEs.
+            </p>
+            
+            <div>
+              <Link 
+                href="/insights/wang-lao-ji-global-expansion-strategy"
+                className="inline-flex items-center group text-[#8F801B] font-bold hover:text-[#7a6d17] transition-colors"
+              >
+                Read the Case Study
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </div>
-          
-          {/* 3. HOVER STATE BUTTON (The "Ghost Button" Fix) */}
-          <div>
-            <Link 
-              href="/insights/wang-lao-ji-global-expansion-strategy"
-              className="inline-flex items-center justify-center px-6 py-3 bg-[#003366] text-white text-base font-bold rounded-md hover:bg-[#002244] transition-colors shadow-sm"
-            >
-              Read the Full Case Study
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+
+          {/* Visual Side: Abstract Pattern instead of Icons */}
+          <div className="bg-gray-50 md:w-1/3 min-h-[250px] relative flex items-center justify-center border-l border-gray-100">
+             <Globe className="w-24 h-24 text-gray-200 stroke-1" />
           </div>
         </div>
       </section>
 
-      {/* TOPIC CLUSTER GRID */}
-      <section className="py-20 bg-gray-50">
+      {/* 3. TOPIC CLUSTER - MINIMALIST ICONS */}
+      <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 md:grid-cols-3">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Intelligence by Category</h2>
+          </div>
+
+          <div className="grid gap-12 md:grid-cols-3">
             
-            {/* Cluster 1: Global Expansion */}
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 h-full">
-              <h3 className="text-xl font-bold text-[#003366] mb-6 border-b-2 border-gray-100 pb-2">🌏 Global Expansion</h3>
-              <ul className="space-y-6">
+            {/* Cluster 1 */}
+            <div className="group">
+              <div className="flex items-center gap-3 mb-6">
+                <Globe className="w-6 h-6 text-[#8F801B]" />
+                <h3 className="text-xl font-bold text-gray-900">Global Expansion</h3>
+              </div>
+              <ul className="space-y-6 border-l-2 border-gray-100 pl-6">
                 <li>
-                  <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="group block">
-                    <span className="font-bold text-gray-900 group-hover:text-[#d9534f] transition-colors text-lg block mb-1">
-                      5 Scaling Lessons from Wang Lao Ji
-                    </span>
+                  <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="group/link block">
+                    <span className="font-bold text-gray-900 group-hover/link:text-[#8F801B] transition-colors block mb-1">5 Lessons from Wang Lao Ji</span>
                     <span className="text-sm text-gray-500">Case Study • 6 min read</span>
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Cluster 2: Grants & Funding */}
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 h-full">
-              <h3 className="text-xl font-bold text-[#003366] mb-6 border-b-2 border-gray-100 pb-2">💰 Grants & Funding</h3>
-              <ul className="space-y-6">
+            {/* Cluster 2 */}
+            <div className="group">
+              <div className="flex items-center gap-3 mb-6">
+                <ShieldCheck className="w-6 h-6 text-[#8F801B]" />
+                <h3 className="text-xl font-bold text-gray-900">Grants & Funding</h3>
+              </div>
+              <ul className="space-y-6 border-l-2 border-gray-100 pl-6">
                 <li>
-                  <Link href="/edg-grant" className="group block">
-                    <span className="font-bold text-gray-900 group-hover:text-[#d9534f] transition-colors text-lg block mb-1">
-                      EDG Grant Eligibility Checklist (2026)
-                    </span>
+                  <Link href="/edg-grant" className="group/link block">
+                    <span className="font-bold text-gray-900 group-hover/link:text-[#8F801B] transition-colors block mb-1">EDG Grant Eligibility Guide</span>
                     <span className="text-sm text-gray-500">Funding Guide • 3 min read</span>
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Cluster 3: Innovation & AI */}
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 h-full">
-              <h3 className="text-xl font-bold text-[#003366] mb-6 border-b-2 border-gray-100 pb-2">🤖 Innovation & AI</h3>
-              <ul className="space-y-6">
+            {/* Cluster 3 */}
+            <div className="group">
+              <div className="flex items-center gap-3 mb-6">
+                <Cpu className="w-6 h-6 text-[#8F801B]" />
+                <h3 className="text-xl font-bold text-gray-900">Innovation & AI</h3>
+              </div>
+              <ul className="space-y-6 border-l-2 border-gray-100 pl-6">
                 <li>
-                  <Link href="/insights/state-of-ai-2026" className="group block">
-                    <span className="font-bold text-gray-900 group-hover:text-[#d9534f] transition-colors text-lg block mb-1">
-                      State of AI in SE Asia 2026
-                    </span>
-                    <span className="text-sm text-gray-500">Market Report • PDF Download</span>
+                  <Link href="/insights/state-of-ai-2026" className="group/link block">
+                    <span className="font-bold text-gray-900 group-hover/link:text-[#8F801B] transition-colors block mb-1">State of AI in SE Asia 2026</span>
+                    <span className="text-sm text-gray-500">Market Report • PDF</span>
                   </Link>
                 </li>
               </ul>
@@ -162,23 +162,21 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* CALL TO ACTION BANNER */}
-      <section className="bg-gray-50 border-t border-gray-200 py-20 px-4 text-center">
+      {/* 4. NEWSLETTER - DARK FOOTER STYLE */}
+      <section className="bg-gray-900 text-white py-20 px-4 text-center border-t border-gray-800">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Stop Reading, Start Executing.</h2>
-          <p className="text-gray-600 mb-8 text-lg">
-            Join 200+ Market Leaders who use FT Synergist to secure grants, protect IP, and scale globally.
+          <h2 className="text-2xl font-bold mb-4">Stop Reading, Start Executing.</h2>
+          <p className="text-gray-400 mb-8">
+            Join 200+ Market Leaders using FT Synergist to scale globally.
           </p>
-          
           <Link 
             href="/contact"
-            className="inline-block px-8 py-4 bg-[#d9534f] text-white font-bold rounded-md transition-transform hover:-translate-y-1 hover:shadow-lg text-lg"
+            className="inline-block px-8 py-4 bg-[#8F801B] hover:bg-[#7a6d17] text-white font-bold rounded-md transition-all shadow-lg"
           >
             Book a 30-Min Strategy Call
           </Link>
         </div>
       </section>
-
     </div>
   );
 }
