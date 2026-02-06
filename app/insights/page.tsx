@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, FileText, TrendingUp, ShieldCheck } from "lucide-react";
+import { ArrowRight, TrendingUp } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,8 +12,8 @@ export default function InsightsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans">
       
-      {/* 1. HERO SECTION (Matches 'About Us' Page - Black Background) */}
-      <section className="bg-gray-900 pt-40 pb-24 px-4 sm:px-6 lg:px-8 text-center">
+      {/* 1. HERO SECTION - FORCED PURE BLACK (#000000) */}
+      <section className="bg-black pt-40 pb-24 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <span className="text-[#8F801B] font-bold tracking-widest uppercase text-xs mb-6 block">
             FT Synergist Intelligence
@@ -56,7 +56,7 @@ export default function InsightsPage() {
             </div>
           </div>
 
-          {/* Right: Visual Abstract (Gold/Black Pattern) */}
+          {/* Right: Visual Abstract */}
           <div className="bg-gray-100 lg:w-2/5 min-h-[300px] relative flex items-center justify-center border-l border-gray-100">
              <div className="text-center p-8">
                 <TrendingUp className="w-16 h-16 text-[#8F801B] mx-auto mb-4 opacity-80" />
@@ -66,7 +66,7 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* 3. INSIGHTS GRID (Clean, No Blue) */}
+      {/* 3. INSIGHTS GRID */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12">
