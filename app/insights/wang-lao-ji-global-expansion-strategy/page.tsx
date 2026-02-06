@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Download, Lock, CheckCircle2, X, TrendingUp, Factory, Zap } from "lucide-react";
 
 // --- 1. LEAD CAPTURE MODAL COMPONENT ---
@@ -13,7 +14,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
     // 1. Close Modal
     onClose();
     
-    // 2. Open PDF in New Tab (Your Google Drive Link)
+    // 2. Open PDF in New Tab
     window.open(
       "https://drive.google.com/file/d/1WeQBqm6pvTYqfdIT3EAwwUX8UOf7CIFb/view?usp=drive_link",
       "_blank"
@@ -21,11 +22,11 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-md bg-white rounded-none shadow-2xl overflow-hidden border-t-4 border-[#8F801B]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm animate-in fade-in duration-200">
+      <div className="relative w-full max-w-md bg-white rounded-md shadow-2xl overflow-hidden border-t-4 border-[#8F801B]">
         
-        {/* Modal Header - RICH BLACK */}
-        <div className="bg-gray-900 p-8 text-center">
+        {/* Modal Header */}
+        <div className="bg-gray-900 p-8 text-center border-b border-gray-800">
           <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
             <X size={24} />
           </button>
@@ -38,7 +39,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
           </p>
         </div>
 
-        {/* Modal Form - WHITE & GOLD */}
+        {/* Modal Form */}
         <form onSubmit={handleSubmit} className="p-8 space-y-5 bg-white">
           <div>
             <label className="block text-xs font-bold text-gray-900 uppercase tracking-widest mb-2">Full Name</label>
@@ -97,7 +98,7 @@ export default function WangLaoJiCaseStudy() {
       {/* Inject Modal */}
       <DownloadGate isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      {/* 1. HERO SECTION - BLACK & GOLD BRANDING */}
+      {/* HERO SECTION */}
       <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
           
@@ -138,7 +139,7 @@ export default function WangLaoJiCaseStudy() {
         </div>
       </section>
 
-      {/* 2. EXECUTIVE SUMMARY */}
+      {/* EXECUTIVE SUMMARY */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center">
         <p className="text-2xl md:text-3xl font-medium text-gray-900 leading-relaxed">
           "Most Singaporean brands fail overseas because they try to export their product exactly as it is. They refuse to adapt."
@@ -154,7 +155,7 @@ export default function WangLaoJiCaseStudy() {
         </div>
       </section>
 
-      {/* 3. LESSONS CONTENT */}
+      {/* LESSONS CONTENT */}
       <section className="py-24 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           
@@ -198,7 +199,6 @@ export default function WangLaoJiCaseStudy() {
                 Exporting heavy liquid from China (or Singapore) is a margin-killer due to logistics and tariffs.
               </p>
               
-              {/* REPLACED RED/GREEN BOXES WITH PREMIUM BLACK/WHITE */}
               <div className="grid sm:grid-cols-2 gap-6 my-8">
                 <div className="p-6 bg-white border border-gray-200 rounded-lg">
                   <TrendingUp className="w-8 h-8 text-gray-300 mb-4" />
@@ -223,7 +223,7 @@ export default function WangLaoJiCaseStudy() {
             </div>
           </div>
 
-          {/* Lesson 3 - FIXED: REMOVED ALL BLUE/INDIGO CLASSES */}
+          {/* Lesson 3 */}
           <div>
             <div className="flex items-baseline gap-4 mb-8 border-b border-gray-200 pb-4">
                <span className="text-[#8F801B] font-bold text-sm uppercase tracking-widest">Lesson 03</span>
@@ -244,7 +244,6 @@ export default function WangLaoJiCaseStudy() {
                 <li><strong>Nightlife:</strong> Used as a mixer in cocktails.</li>
               </ul>
               
-              {/* FIXED: Gray/Gold Box (Was Blue) */}
               <div className="bg-white p-8 mt-10 border-l-4 border-[#8F801B] shadow-sm">
                 <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wide flex items-center gap-2 mb-3">
                   <Zap className="w-5 h-5 text-[#8F801B]" /> The SME Takeaway
@@ -259,7 +258,7 @@ export default function WangLaoJiCaseStudy() {
         </div>
       </section>
 
-      {/* 4. LEAD MAGNET SECTION - BLACK BACKGROUND */}
+      {/* LEAD MAGNET FOOTER */}
       <section className="py-24 bg-gray-900 text-white">
          <div className="max-w-4xl mx-auto px-4 text-center">
             <Lock className="w-12 h-12 text-[#8F801B] mx-auto mb-6" />
@@ -268,4 +267,21 @@ export default function WangLaoJiCaseStudy() {
               The complete 20-page document includes the Financial Trajectories, International Can Matrix, and Museum Diplomacy Model.
             </p>
             
-            <div
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white font-bold rounded-md hover:bg-[#7a6d17] transition-all shadow-lg hover:shadow-[#8F801B]/30"
+                >
+                  Request Full Access
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+            </div>
+            <p className="text-sm text-gray-500 mt-8">
+              Available exclusively to Singapore Registered Businesses.
+            </p>
+         </div>
+      </section>
+
+    </div>
+  );
+}
