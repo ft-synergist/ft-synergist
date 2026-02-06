@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, TrendingUp } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export default function InsightsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans">
       
-      {/* 1. HERO SECTION - FORCED PURE BLACK (#000000) */}
+      {/* 1. HERO SECTION - PURE BLACK BACKGROUND */}
       <section className="bg-black pt-40 pb-24 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <span className="text-[#8F801B] font-bold tracking-widest uppercase text-xs mb-6 block">
@@ -30,15 +31,16 @@ export default function InsightsPage() {
 
       {/* 2. LATEST FEATURED REPORT */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-12 relative z-10">
-        <div className="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col lg:flex-row">
+        <div className="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col lg:flex-row min-h-[450px]">
+          
           {/* Left: Content */}
-          <div className="p-10 lg:p-14 lg:w-3/5 flex flex-col justify-center">
+          <div className="p-10 lg:p-14 lg:w-1/2 flex flex-col justify-center">
             <div className="flex items-center space-x-2 text-[#8F801B] font-bold text-xs uppercase tracking-widest mb-6">
               <span className="w-2 h-2 rounded-full bg-[#8F801B]"></span>
               <span>Latest Case Study</span>
             </div>
             
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               The "Wang Lao Ji" Pivot: A Blueprint for Global Expansion
             </h2>
             <p className="text-lg text-gray-500 mb-8 leading-relaxed">
@@ -56,12 +58,17 @@ export default function InsightsPage() {
             </div>
           </div>
 
-          {/* Right: Visual Abstract */}
-          <div className="bg-gray-100 lg:w-2/5 min-h-[300px] relative flex items-center justify-center border-l border-gray-100">
-             <div className="text-center p-8">
-                <TrendingUp className="w-16 h-16 text-[#8F801B] mx-auto mb-4 opacity-80" />
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Global Strategy Series</p>
-             </div>
+          {/* Right: HERO IMAGE (Replaced the boring icon) */}
+          <div className="relative lg:w-1/2 min-h-[300px] lg:min-h-full bg-gray-100">
+             <Image 
+               src="/walovi-hero.jpg" 
+               alt="Wang Lao Ji Red Can vs Blue Can Strategy" 
+               fill
+               className="object-cover"
+               priority={true}
+             />
+             {/* Optional: Subtle Overlay to ensure it blends nicely */}
+             <div className="absolute inset-0 bg-black/10"></div>
           </div>
         </div>
       </section>
@@ -113,16 +120,4 @@ export default function InsightsPage() {
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">
                   Market report on adoption trends in Indonesia and Vietnam.
                 </p>
-                <span className="text-sm font-bold text-[#8F801B] flex items-center">
-                  REQUEST REPORT <ArrowRight className="ml-2 w-4 h-4" />
-                </span>
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-    </div>
-  );
-}
+                <span className="text-sm font-bold text-[#8
