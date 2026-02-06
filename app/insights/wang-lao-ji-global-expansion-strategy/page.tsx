@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"; // Ensure Image is imported
 import { ArrowRight, Download, Globe, CheckCircle2, TrendingUp, Factory } from "lucide-react";
 import { Metadata } from "next";
 
@@ -18,7 +19,7 @@ export default function WangLaoJiCaseStudy() {
   return (
     <div className="bg-white min-h-screen text-slate-900 font-sans selection:bg-[#8F801B]/20">
       
-      {/* 1. HERO SECTION - NOW BRAND CONSISTENT (Rich Black instead of Navy) */}
+      {/* 1. HERO SECTION - BRAND CORRECT RICH BLACK (No More Blue) */}
       <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white overflow-hidden">
         {/* Background Texture */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
@@ -51,18 +52,16 @@ export default function WangLaoJiCaseStudy() {
             </div>
           </div>
 
-          {/* Visual Side: The "Hero Shot" */}
-          <div className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-2xl border border-white/10 group bg-gray-800">
-             {/* PLACEHOLDER: Ensure you have uploaded 'walovi-hero.jpg' */}
-             <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
-                <div className="text-center p-8 bg-black/30 backdrop-blur-md rounded-xl border border-white/10">
-                    <p className="text-white/50 text-xs font-mono mb-2 uppercase tracking-widest">Image Placeholder</p>
-                    <p className="text-white font-serif text-2xl">Red Can vs. Blue Can</p>
-                    <p className="text-white/70 text-sm mt-2">(Upload 'walovi-hero.jpg' to public folder)</p>
-                </div>
-             </div>
-             {/* UNCOMMENT AFTER UPLOAD */}
-             {/* <Image src="/walovi-hero.jpg" alt="Wang Lao Ji Product Matrix" fill className="object-cover" /> */}
+          {/* Visual Side: IMAGE IS NOW ACTIVE */}
+          <div className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-2xl border border-white/10 group bg-gray-900">
+             {/* The placeholder text is gone. The Image component is now active. */}
+             <Image 
+                src="/walovi-hero.jpg" 
+                alt="Wang Lao Ji Red Can vs Blue Can Strategy" 
+                fill 
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                priority={true}
+             />
           </div>
         </div>
       </section>
