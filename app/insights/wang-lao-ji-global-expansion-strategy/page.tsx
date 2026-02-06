@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Download, Globe, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Download, Globe, CheckCircle2, TrendingUp, Factory } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,178 +17,197 @@ export const metadata: Metadata = {
 
 export default function WangLaoJiCaseStudy() {
   return (
-    <div className="bg-background min-h-screen text-foreground font-sans selection:bg-[#8F801B]/20">
+    <div className="bg-white min-h-screen text-slate-900 font-sans selection:bg-[#8F801B]/20">
       
-      {/* 1. HERO SECTION */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+      {/* 1. CINEMATIC HERO SECTION (Dark Mode for Premium Feel) */}
+      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-[#003366] text-white overflow-hidden">
+        {/* Background Texture */}
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
           {/* Text Side */}
           <div className="space-y-8">
-            <div className="inline-flex items-center space-x-2 bg-gray-100 text-gray-800 px-3 py-1 text-xs font-bold uppercase tracking-widest border border-gray-200 rounded-md">
+            <div className="inline-flex items-center space-x-2 bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 text-xs font-bold uppercase tracking-widest border border-[#8F801B]/30 rounded-full">
               <Globe size={14} />
-              <span>Global Expansion Strategy</span>
+              <span>Global Strategy Series</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-[1.1]">
-              From "Medicine" <br/> to <span className="text-[#8F801B]">"Lifestyle"</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-serif font-medium tracking-tight leading-tight">
+              From "Medicine" <br/> to <span className="text-[#8F801B] italic">Lifestyle.</span>
             </h1>
             
-            <p className="text-lg text-gray-600 leading-relaxed max-w-lg border-l-4 border-[#8F801B] pl-6">
-              How Wang Lao Ji grew profits by 15.87% in a saturated market—and what Singapore SMEs can learn from the "WALOVI" pivot.
+            <p className="text-xl text-slate-300 leading-relaxed max-w-lg border-l-2 border-[#8F801B] pl-6">
+              How Wang Lao Ji grew profits by 15.87% in a saturated market—and the exact roadmap Singapore SMEs can copy.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-base font-bold text-white hover:bg-[#7a6d17] transition-all shadow-lg rounded-md"
-              >
-                Book Strategy Briefing
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <a 
                 href="/Global Expansion Roadmap_ 5 Lessons from Wang Lao Ji.pdf" 
                 download
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-base font-bold text-gray-900 hover:bg-gray-50 transition-all rounded-md"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white text-base font-bold rounded-sm hover:bg-[#7a6d17] transition-all shadow-lg hover:shadow-[#8F801B]/50"
               >
-                <Download className="mr-2 h-5 w-5" />
-                Download Report (PDF)
+                <Download className="mr-2 h-5 w-5 group-hover:-translate-y-1 transition-transform" />
+                Download Strategic Report
               </a>
             </div>
           </div>
 
-          {/* Visual Side: Clean Placeholder for Real Image */}
-          <div className="relative h-[400px] w-full bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 shadow-2xl flex items-center justify-center">
-             <div className="text-center p-8">
-                <span className="text-gray-400 text-sm font-mono block mb-2">
-                  [IMAGE PLACEHOLDER]
-                </span>
-                <p className="text-gray-500 text-sm">
-                  Please upload <strong>walovi-hero.jpg</strong> to your public folder.<br/>
-                  (Screenshot of Red Can vs Blue Can from Page 7 of Report)
-                </p>
+          {/* Visual Side: The "Hero Shot" */}
+          <div className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-2xl border border-white/10 group">
+             {/* Step 1: Upload your image as 'walovi-hero.jpg' to the 'public' folder.
+                Step 2: Uncomment the <Image> tag below.
+             */}
+             
+             {/* FALLBACK GRADIENT (Visible until you upload the image) */}
+             <div className="absolute inset-0 bg-gradient-to-br from-red-900 to-blue-900 flex items-center justify-center">
+                <div className="text-center p-8 bg-black/30 backdrop-blur-md rounded-xl border border-white/10">
+                    <p className="text-white/50 text-xs font-mono mb-2 uppercase tracking-widest">Image Placeholder</p>
+                    <p className="text-white font-serif text-2xl">Red Can vs. Blue Can</p>
+                    <p className="text-white/70 text-sm mt-2">(Upload 'walovi-hero.jpg' to public folder)</p>
+                </div>
              </div>
-             {/* UNCOMMENT THE LINE BELOW ONCE IMAGE IS UPLOADED */}
-             {/* <Image src="/walovi-hero.jpg" alt="Wang Lao Ji Product Matrix" fill className="object-cover" /> */}
+
+             {/* UNCOMMENT THIS WHEN IMAGE IS READY */}
+             {/* <Image 
+                src="/walovi-hero.jpg" 
+                alt="Wang Lao Ji Product Matrix" 
+                fill 
+                className="object-cover group-hover:scale-105 transition-transform duration-700" 
+             /> */}
           </div>
         </div>
       </section>
 
-      {/* 2. EXECUTIVE SUMMARY */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <div className="prose prose-lg prose-gray mx-auto text-gray-600">
-          <p className="text-2xl font-bold text-gray-900 leading-relaxed">
-            Most Singaporean brands fail overseas because they try to export their product exactly as it is. They refuse to adapt.
-          </p>
-          <p>
-            In 2025, Wang Lao Ji—a 197-year-old brand synonymous with "traditional medicine"—did the unthinkable. To break into the Western and Southeast Asian markets, they didn't just translate their name; they reinvented their identity to <strong>"WALOVI."</strong>
-          </p>
-          <p>
-            The result? A <strong>15.87% increase in net profit</strong> in H1 2025 and successful entry into Costco and Amazon US. Here is the roadmap.
-          </p>
-        </div>
+      {/* 2. EXECUTIVE SUMMARY (Serif Typography for Authority) */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+        <p className="text-2xl md:text-3xl font-serif text-slate-800 leading-relaxed">
+          "Most Singaporean brands fail overseas because they try to export their product exactly as it is. They refuse to adapt."
+        </p>
+        <div className="mt-8 w-24 h-1 bg-[#8F801B] mx-auto"></div>
+        <p className="mt-8 text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          In 2025, Wang Lao Ji did the unthinkable. To break into Western markets, they didn't just translate their name; they reinvented their identity to <strong>"WALOVI."</strong> The result? Successful entry into Costco and Amazon US. Here is the roadmap.
+        </p>
       </section>
 
-      {/* 3. LESSONS CONTENT (Aligned to Home Page Card Style) */}
-      <section className="py-20 bg-secondary/5 border-t border-gray-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      {/* 3. LESSONS CONTENT (High Contrast Cards) */}
+      <section className="py-24 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
           {/* Lesson 1 */}
-          <div className="bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <div className="flex items-center gap-4 mb-6">
-               <div className="w-10 h-10 rounded-full bg-[#8F801B]/10 flex items-center justify-center text-[#8F801B] font-bold">01</div>
-               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">The "Localization Paradox"</h2>
+          <div className="grid md:grid-cols-12 gap-0 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
+            <div className="md:col-span-1 bg-[#8F801B] flex items-center justify-center p-4">
+                <span className="text-white font-bold text-xl writing-vertical-lr rotate-180 md:rotate-0">LESSON 01</span>
             </div>
-            
-            <div className="prose prose-lg text-gray-600 max-w-none">
-              <p>
-                For decades, Wang Lao Ji’s selling point was "curing internal heat" (<em>shanghuo</em>). This works in China and Singapore. It fails in Europe, where consumers don't understand TCM concepts.
-              </p>
-              <div className="pl-6 border-l-4 border-[#8F801B] my-6">
-                <p className="font-bold text-gray-900 italic">
-                  The Pivot: Instead of educating the West on "internal heat," they rebranded to "WALOVI" and positioned the drink as a "Natural Plant-Based Functional Beverage."
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg mt-8 flex gap-4 items-start">
-                <CheckCircle2 className="w-6 h-6 text-[#8F801B] flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wide mb-1">The SME Takeaway</h4>
-                  <p className="text-gray-600 text-base m-0">
-                    Don't force your Singaporean context on a foreign market. If your "Unique Selling Point" requires a 10-minute explanation, it will fail.
+            <div className="md:col-span-11 p-10 md:p-12">
+                <h2 className="text-3xl font-serif text-slate-900 mb-6">The "Localization Paradox"</h2>
+                <div className="prose prose-lg text-slate-600 max-w-none">
+                  <p>
+                    For decades, Wang Lao Ji’s selling point was "curing internal heat" (<em>shanghuo</em>). This works in China and Singapore. It fails in Europe, where consumers don't understand TCM concepts.
+                  </p>
+                  <p className="text-slate-900 font-medium mt-4">
+                    The Pivot: Instead of educating the West on "internal heat," they rebranded to "WALOVI" and positioned the drink as a "Natural Plant-Based Functional Beverage."
                   </p>
                 </div>
-              </div>
+                <div className="mt-8 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                    <h4 className="font-bold text-blue-900 text-sm uppercase tracking-wide flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4" /> The SME Takeaway
+                    </h4>
+                    <p className="text-blue-800 mt-2 text-base">
+                      Don't force your Singaporean context on a foreign market. If your "Unique Selling Point" requires a 10-minute explanation, it will fail.
+                    </p>
+                </div>
             </div>
           </div>
 
           {/* Lesson 2 */}
-          <div className="bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <div className="flex items-center gap-4 mb-6">
-               <div className="w-10 h-10 rounded-full bg-[#8F801B]/10 flex items-center justify-center text-[#8F801B] font-bold">02</div>
-               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Supply Chain as a Weapon</h2>
+          <div className="grid md:grid-cols-12 gap-0 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
+            <div className="md:col-span-1 bg-slate-800 flex items-center justify-center p-4">
+                <span className="text-white font-bold text-xl writing-vertical-lr rotate-180 md:rotate-0">LESSON 02</span>
             </div>
-            
-            <div className="prose prose-lg text-gray-600 max-w-none">
-              <p>
-                Exporting heavy liquid from China (or Singapore) is a margin-killer due to logistics and tariffs.
-              </p>
-              <div className="pl-6 border-l-4 border-[#8F801B] my-6">
-                <p className="font-bold text-gray-900 italic">
-                   The Pivot: Wang Lao Ji established local production bases in Thailand and Vietnam. By sourcing ingredients locally (the "PCBC Model"), they reduced logistics costs by 30%.
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg mt-8 flex gap-4 items-start">
-                <CheckCircle2 className="w-6 h-6 text-[#8F801B] flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wide mb-1">The SME Takeaway</h4>
-                  <p className="text-gray-600 text-base m-0">
-                    You cannot scale physical products globally by shipping from Tuas forever. You need a Decentralized <Link href="/services" className="text-[#8F801B] font-bold hover:underline">Strategic Roadmap</Link>.
+            <div className="md:col-span-11 p-10 md:p-12">
+                <h2 className="text-3xl font-serif text-slate-900 mb-6">Supply Chain as a Weapon</h2>
+                <div className="prose prose-lg text-slate-600 max-w-none">
+                  <p>
+                    Exporting heavy liquid from China (or Singapore) is a margin-killer due to logistics and tariffs.
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-6 my-6">
+                      <div className="bg-slate-50 p-4 rounded border border-slate-200">
+                          <Factory className="w-6 h-6 text-[#8F801B] mb-2" />
+                          <span className="font-bold text-slate-900 block mb-1">Old Way</span>
+                          <span className="text-sm">Export from Home Base (High Tariffs)</span>
+                      </div>
+                      <div className="bg-slate-50 p-4 rounded border border-slate-200">
+                          <TrendingUp className="w-6 h-6 text-[#8F801B] mb-2" />
+                          <span className="font-bold text-slate-900 block mb-1">New Way</span>
+                          <span className="text-sm">"Factory-in-Market" (Vietnam/Thailand)</span>
+                      </div>
+                  </div>
+                  <p>
+                    By sourcing ingredients locally (the "PCBC Model"), they reduced logistics costs by 30% and bypassed protective tariffs.
                   </p>
                 </div>
-              </div>
+                <div className="mt-8 bg-amber-50 p-6 rounded-lg border-l-4 border-[#8F801B]">
+                    <h4 className="font-bold text-amber-900 text-sm uppercase tracking-wide flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4" /> The SME Takeaway
+                    </h4>
+                    <p className="text-amber-800 mt-2 text-base">
+                      You cannot scale physical products globally by shipping from Tuas forever. You need a Decentralized <Link href="/services" className="underline font-bold hover:text-amber-600">Strategic Roadmap</Link>.
+                    </p>
+                </div>
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* 4. THE LEAD MAGNET (Aligned to Dark Footer Style) */}
-      <section id="strategic-deep-dive" className="py-24 bg-gray-900 text-white">
+      {/* 4. THE LEAD MAGNET (Deep Dive - Dark Theme) */}
+      <section id="strategic-deep-dive" className="py-24 bg-[#003366] text-white">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
-                <div className="inline-block bg-[#8F801B] text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                <div className="inline-block bg-[#8F801B] text-white px-4 py-1 rounded-sm text-xs font-bold uppercase tracking-wider mb-6">
                   Available for Download
                 </div>
-                <h2 className="text-3xl font-bold mb-6">Get the Full Data Set</h2>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">Get the Full Data Set</h2>
+                <p className="text-xl text-slate-300 mb-8 leading-relaxed">
                   The full 20-page "Project WALOVI Strategic Market Report" includes financial trajectories, the International Can Matrix, and the Museum Diplomacy model.
                 </p>
+                
+                <ul className="space-y-4 mb-8 text-slate-300">
+                    <li className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-[#8F801B] rounded-full"></div>
+                        <span>Financial Growth Models & EBITDA Impacts</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-[#8F801B] rounded-full"></div>
+                        <span>The Full PCBC Framework Breakdown</span>
+                    </li>
+                </ul>
+
                 <a 
                   href="/Global Expansion Roadmap_ 5 Lessons from Wang Lao Ji.pdf" 
                   download
-                  className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white text-gray-900 font-bold rounded-md hover:bg-gray-100 transition-all"
+                  className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white text-[#003366] font-bold rounded-sm hover:bg-slate-100 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
                 >
                   <Download className="mr-2 h-5 w-5" />
                   Download Full Report
                 </a>
               </div>
               
-              <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
-                <h3 className="text-xl font-bold mb-4 text-white">Implementation Support</h3>
-                <p className="text-gray-300 mb-6">
-                  Applying the "PCBC Model" to a Singaporean SME requires navigating EDG grants and local IP laws. 
+              <div className="bg-white/5 border border-white/10 p-10 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
+                <h3 className="text-2xl font-serif mb-4 text-white">Implementation Support</h3>
+                <p className="text-slate-300 mb-8 leading-relaxed">
+                  Applying the "PCBC Model" to a Singaporean SME requires navigating EDG grants and local IP laws. We can help you structure this.
                 </p>
                 <Link 
                   href="/contact"
-                  className="flex items-center justify-center w-full py-4 bg-[#8F801B] hover:bg-[#7a6d17] text-white font-bold rounded-md transition-all shadow-md"
+                  className="flex items-center justify-center w-full py-4 bg-[#8F801B] hover:bg-[#7a6d17] text-white font-bold rounded-sm transition-all shadow-md"
                 >
-                  Schedule an Implementation Call
+                  Schedule Strategy Briefing
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <p className="text-xs text-center text-gray-500 mt-4">
-                  Free 30-min consultation for Singapore Registered Businesses.
+                <p className="text-xs text-center text-slate-400 mt-4">
+                  Complimentary 30-min session for Singapore Registered Businesses.
                 </p>
               </div>
             </div>
