@@ -2,24 +2,18 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Download, Lock, CheckCircle2, X, TrendingUp, Factory } from "lucide-react";
+import { ArrowRight, Download, Lock, CheckCircle2, X, TrendingUp, Factory, Zap } from "lucide-react";
 
-// --- COMPONENTS ---
-
-// 1. THE LEAD CAPTURE MODAL (The Gatekeeper)
+// --- 1. LEAD CAPTURE MODAL COMPONENT ---
 const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // OPTIONAL: Here you would ideally send this data to your CRM/Email (e.g. via API)
-    // For now, we simulate success and redirect to the Drive link.
-    
     // 1. Close Modal
     onClose();
     
-    // 2. Open PDF in New Tab
+    // 2. Open PDF in New Tab (Your Google Drive Link)
     window.open(
       "https://drive.google.com/file/d/1WeQBqm6pvTYqfdIT3EAwwUX8UOf7CIFb/view?usp=drive_link",
       "_blank"
@@ -28,64 +22,64 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-md bg-white rounded-xl shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-md bg-white rounded-none shadow-2xl overflow-hidden border-t-4 border-[#8F801B]">
         
-        {/* Modal Header */}
-        <div className="bg-gray-900 p-6 text-center border-b border-gray-800">
+        {/* Modal Header - RICH BLACK */}
+        <div className="bg-gray-900 p-8 text-center">
           <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-            <X size={20} />
+            <X size={24} />
           </button>
-          <div className="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-[#8F801B]/20">
-            <Lock className="w-6 h-6 text-[#8F801B]" />
+          <div className="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-[#8F801B]/10 border border-[#8F801B]/20">
+            <Lock className="w-8 h-8 text-[#8F801B]" />
           </div>
-          <h3 className="text-xl font-bold text-white">Unlock Strategic Report</h3>
-          <p className="text-gray-400 text-sm mt-2">
+          <h3 className="text-2xl font-bold text-white mb-2">Unlock Strategic Report</h3>
+          <p className="text-gray-400 text-sm">
             Enter your details to access the full 20-page market analysis.
           </p>
         </div>
 
-        {/* Modal Form */}
-        <form onSubmit={handleSubmit} className="p-8 space-y-4">
+        {/* Modal Form - WHITE & GOLD */}
+        <form onSubmit={handleSubmit} className="p-8 space-y-5 bg-white">
           <div>
-            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Full Name</label>
+            <label className="block text-xs font-bold text-gray-900 uppercase tracking-widest mb-2">Full Name</label>
             <input 
               required 
               type="text" 
               placeholder="e.g. Frederick Tan"
-              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8F801B] focus:border-transparent transition-all"
+              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-900 focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-sm"
             />
           </div>
           
           <div>
-            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Work Email</label>
+            <label className="block text-xs font-bold text-gray-900 uppercase tracking-widest mb-2">Work Email</label>
             <input 
               required 
               type="email" 
               placeholder="name@company.com"
-              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8F801B] focus:border-transparent transition-all"
+              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-900 focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-sm"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Company Name</label>
+            <label className="block text-xs font-bold text-gray-900 uppercase tracking-widest mb-2">Company Name</label>
             <input 
               required 
               type="text" 
               placeholder="e.g. FT Synergist"
-              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8F801B] focus:border-transparent transition-all"
+              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-900 focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-sm"
             />
           </div>
 
           <button 
             type="submit" 
-            className="w-full mt-2 inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white font-bold rounded-md hover:bg-[#7a6d17] transition-all shadow-lg hover:shadow-xl translate-y-0 hover:-translate-y-1"
+            className="w-full mt-4 inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white font-bold uppercase tracking-wider hover:bg-[#7a6d17] transition-all shadow-lg rounded-sm"
           >
             Unlock Full Report
             <ArrowRight className="ml-2 h-4 w-4" />
           </button>
           
           <p className="text-center text-xs text-gray-400 mt-4">
-            We respect your privacy. Zero spam.
+            Available to Singapore Registered Businesses.
           </p>
         </form>
       </div>
@@ -93,6 +87,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
   );
 };
 
+// --- 2. MAIN PAGE COMPONENT ---
 export default function WangLaoJiCaseStudy() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -120,8 +115,7 @@ export default function WangLaoJiCaseStudy() {
               How Wang Lao Ji grew profits by 15.87% in a saturated market—and the exact roadmap Singapore SMEs can copy.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              {/* BUTTON TRIGGERING MODAL */}
+            <div className="pt-6">
               <button 
                 onClick={() => setIsModalOpen(true)}
                 className="group inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white text-base font-bold rounded-md hover:bg-[#7a6d17] transition-all shadow-lg hover:shadow-[#8F801B]/50"
@@ -132,7 +126,6 @@ export default function WangLaoJiCaseStudy() {
             </div>
           </div>
 
-          {/* Visual Side */}
           <div className="relative h-[500px] w-full rounded-xl overflow-hidden shadow-2xl border border-gray-800 bg-gray-800">
              <Image 
                 src="/walovi-hero.jpg" 
@@ -156,7 +149,7 @@ export default function WangLaoJiCaseStudy() {
             In 2025, Wang Lao Ji—a 197-year-old brand synonymous with "traditional medicine"—did the unthinkable. To break into Western markets, they didn't just translate their name; they reinvented their identity to <strong>"WALOVI."</strong> 
           </p>
           <p>
-            The result? A <strong>15.87% increase in net profit</strong> in H1 2025 and successful entry into Costco and Amazon US. Below is the strategic breakdown of their move.
+            The result? A <strong>15.87% increase in net profit</strong> in H1 2025 and successful entry into Costco and Amazon US. Below is the strategic breakdown.
           </p>
         </div>
       </section>
@@ -205,6 +198,7 @@ export default function WangLaoJiCaseStudy() {
                 Exporting heavy liquid from China (or Singapore) is a margin-killer due to logistics and tariffs.
               </p>
               
+              {/* REPLACED RED/GREEN BOXES WITH PREMIUM BLACK/WHITE */}
               <div className="grid sm:grid-cols-2 gap-6 my-8">
                 <div className="p-6 bg-white border border-gray-200 rounded-lg">
                   <TrendingUp className="w-8 h-8 text-gray-300 mb-4" />
@@ -229,6 +223,39 @@ export default function WangLaoJiCaseStudy() {
             </div>
           </div>
 
+          {/* Lesson 3 - FIXED: REMOVED ALL BLUE/INDIGO CLASSES */}
+          <div>
+            <div className="flex items-baseline gap-4 mb-8 border-b border-gray-200 pb-4">
+               <span className="text-[#8F801B] font-bold text-sm uppercase tracking-widest">Lesson 03</span>
+               <h2 className="text-3xl font-bold text-gray-900">Innovation via Occasion</h2>
+            </div>
+            
+            <div className="prose prose-lg text-gray-600 max-w-none leading-loose">
+              <p>
+                Traditional herbal tea is heavy and sweet. It doesn't fit the "casual Friday" or "nightlife" vibe.
+              </p>
+              
+              <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">The Pivot:</h3>
+              <p>
+                They launched "Sparkling Herbal Tea" and "Sugar-Free" variants. This allowed them to enter:
+              </p>
+              <ul className="list-disc pl-5 mt-4 space-y-2">
+                <li><strong>Fine Dining:</strong> Paired with spicy food (replacing wine/Coke).</li>
+                <li><strong>Nightlife:</strong> Used as a mixer in cocktails.</li>
+              </ul>
+              
+              {/* FIXED: Gray/Gold Box (Was Blue) */}
+              <div className="bg-white p-8 mt-10 border-l-4 border-[#8F801B] shadow-sm">
+                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wide flex items-center gap-2 mb-3">
+                  <Zap className="w-5 h-5 text-[#8F801B]" /> The SME Takeaway
+                </h4>
+                <p className="text-gray-600 text-base m-0 leading-relaxed">
+                   Is your product format limiting your usage occasions? Changing the form factor (e.g. from liquid to sparkling) can unlock entirely new markets. This is key to unlocking new Intellectual Property value.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -241,22 +268,4 @@ export default function WangLaoJiCaseStudy() {
               The complete 20-page document includes the Financial Trajectories, International Can Matrix, and Museum Diplomacy Model.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                {/* BUTTON TRIGGERING MODAL */}
-                <button 
-                  onClick={() => setIsModalOpen(true)}
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white font-bold rounded-md hover:bg-[#7a6d17] transition-all shadow-lg hover:shadow-[#8F801B]/30"
-                >
-                  Request Full Access
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
-            </div>
-            <p className="text-sm text-gray-500 mt-8">
-              Available exclusively to Singapore Registered Businesses.
-            </p>
-         </div>
-      </section>
-
-    </div>
-  );
-}
+            <div
