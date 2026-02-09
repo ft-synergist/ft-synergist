@@ -10,9 +10,45 @@ export const metadata: Metadata = {
 };
 
 export default function InsightsPage() {
+  // --- SEO PART 1: THE DATA DEFINITION (Must be here at the top) ---
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Strategic Insights | FT Synergist",
+    "description": "Market-defining research and actionable roadmaps for Singaporean entrepreneurs.",
+    "url": "https://www.ftsynergist.com/insights",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FT Synergist"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.ftsynergist.com/insights/wang-lao-ji-global-expansion-strategy",
+          "name": "Wang Lao Ji Global Expansion Strategy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.ftsynergist.com/edg-grant",
+          "name": "EDG Grant Eligibility Guide"
+        }
+      ]
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans">
       
+      {/* --- SEO PART 2: THE SCRIPT INJECTION (Must be inside the return) --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* 1. HERO SECTION - PURE BLACK BACKGROUND */}
       <section className="bg-black pt-40 pb-24 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
@@ -67,7 +103,6 @@ export default function InsightsPage() {
                className="object-cover"
                priority={true}
              />
-             {/* Optional: Subtle Overlay to ensure it blends nicely */}
              <div className="absolute inset-0 bg-black/10"></div>
           </div>
         </div>
@@ -120,7 +155,6 @@ export default function InsightsPage() {
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">
                   Market report on adoption trends in Indonesia and Vietnam.
                 </p>
-                {/* THIS IS WHERE YOUR FILE WAS CUT OFF PREVIOUSLY */}
                 <span className="text-sm font-bold text-[#8F801B] flex items-center">
                   REQUEST REPORT <ArrowRight className="ml-2 w-4 h-4" />
                 </span>
