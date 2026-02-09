@@ -5,25 +5,61 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Download, Lock, CheckCircle2, X, TrendingUp, Factory, Zap } from "lucide-react";
 
-// --- 1. LEAD CAPTURE MODAL COMPONENT ---
+// --- 1. LEAD CAPTURE MODAL COMPONENT (Optimized with Email Logic) ---
 const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    onClose();
-    // Redirect to Google Drive
-    window.open(
-      "https://drive.google.com/file/d/1WeQBqm6pvTYqfdIT3EAwwUX8UOf7CIFb/view?usp=drive_link",
-      "_blank"
-    );
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      // 1. Send Data to Email Service (Secure Endpoint)
+      await fetch("https://formsubmit.co/ajax/fredtan@ftsynergist.com", {
+        method: "POST",
+        headers: { 
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            _subject: "New Lead: Wang Lao Ji Report Download",
+            _captcha: "false", // Disable captcha for smoother UX
+            ...data
+        })
+      });
+
+      // 2. Open PDF in New Tab (Your Google Drive Link)
+      window.open(
+        "https://drive.google.com/file/d/1WeQBqm6pvTYqfdIT3EAwwUX8UOf7CIFb/view?usp=drive_link",
+        "_blank"
+      );
+      
+      // 3. Close Modal
+      onClose();
+
+    } catch (error) {
+      console.error("Form submission error", error);
+      // Fallback: If email fails, still give the user the file (Good UX)
+      window.open(
+        "https://drive.google.com/file/d/1WeQBqm6pvTYqfdIT3EAwwUX8UOf7CIFb/view?usp=drive_link",
+        "_blank"
+      );
+      onClose();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="relative w-full max-w-md bg-white rounded-none shadow-2xl overflow-hidden border-t-4 border-[#8F801B]">
         
-        {/* Modal Header - PURE BLACK */}
+        {/* Modal Header - RICH BLACK */}
         <div className="bg-black p-8 text-center border-b border-neutral-800">
           <button onClick={onClose} className="absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors">
             <X size={24} />
@@ -37,12 +73,13 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
           </p>
         </div>
 
-        {/* Modal Form */}
+        {/* Modal Form - WHITE & GOLD */}
         <form onSubmit={handleSubmit} className="p-8 space-y-5 bg-white">
           <div>
             <label className="block text-xs font-bold text-black uppercase tracking-widest mb-2">Full Name</label>
             <input 
               required 
+              name="name"
               type="text" 
               placeholder="e.g. Frederick Tan"
               className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 text-black focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-sm"
@@ -53,6 +90,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
             <label className="block text-xs font-bold text-black uppercase tracking-widest mb-2">Work Email</label>
             <input 
               required 
+              name="email"
               type="email" 
               placeholder="name@company.com"
               className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 text-black focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-sm"
@@ -63,6 +101,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
             <label className="block text-xs font-bold text-black uppercase tracking-widest mb-2">Company Name</label>
             <input 
               required 
+              name="company"
               type="text" 
               placeholder="e.g. FT Synergist"
               className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 text-black focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-sm"
@@ -71,10 +110,15 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 
           <button 
             type="submit" 
-            className="w-full mt-4 inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white font-bold uppercase tracking-wider hover:bg-[#7a6d17] transition-all shadow-lg rounded-sm"
+            disabled={isSubmitting}
+            className="w-full mt-4 inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white font-bold uppercase tracking-wider hover:bg-[#7a6d17] transition-all shadow-lg rounded-sm disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            Unlock Full Report
-            <ArrowRight className="ml-2 h-4 w-4" />
+            {isSubmitting ? "Unlocking..." : (
+              <>
+                Unlock Full Report
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </>
+            )}
           </button>
           
           <p className="text-center text-xs text-neutral-400 mt-4">
