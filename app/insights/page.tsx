@@ -58,7 +58,7 @@ export default function InsightsPage() {
             </div>
           </div>
 
-          {/* Right: HERO IMAGE (Replaced the boring icon) */}
+          {/* Right: HERO IMAGE */}
           <div className="relative lg:w-1/2 min-h-[300px] lg:min-h-full bg-gray-100">
              <Image 
                src="/walovi-hero.jpg" 
@@ -120,4 +120,17 @@ export default function InsightsPage() {
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">
                   Market report on adoption trends in Indonesia and Vietnam.
                 </p>
-                <span className="text-sm font-bold text-[#8
+                {/* THIS IS WHERE YOUR FILE WAS CUT OFF PREVIOUSLY */}
+                <span className="text-sm font-bold text-[#8F801B] flex items-center">
+                  REQUEST REPORT <ArrowRight className="ml-2 w-4 h-4" />
+                </span>
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}
