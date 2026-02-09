@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Download, Lock, CheckCircle2, X, TrendingUp, Factory, Zap } from "lucide-react";
 
-// --- 1. LEAD CAPTURE MODAL COMPONENT (Optimized with Email Logic) ---
+// --- 1. LEAD CAPTURE MODAL COMPONENT ---
 const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -19,8 +19,8 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
     const data = Object.fromEntries(formData.entries());
 
     try {
-      // 1. Send Data to Email Service (Secure Endpoint)
-      await fetch("https://formsubmit.co/ajax/fredtan@ftsynergist.com", {
+      // 1. Send Data to FormSubmit (Secure Token)
+      await fetch("https://formsubmit.co/ajax/2d67f037ef63481e387483f17259598c", {
         method: "POST",
         headers: { 
             "Content-Type": "application/json",
@@ -28,27 +28,22 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
         },
         body: JSON.stringify({
             _subject: "New Lead: Wang Lao Ji Report Download",
-            _captcha: "false", // Disable captcha for smoother UX
+            _captcha: "false",
             ...data
         })
       });
 
-      // 2. Open PDF in New Tab (Your Google Drive Link)
-      window.open(
-        "https://drive.google.com/file/d/1WeQBqm6pvTYqfdIT3EAwwUX8UOf7CIFb/view?usp=drive_link",
-        "_blank"
-      );
+      // 2. Open PDF (SEO Optimized Filename)
+      // ENSURE THE FILE IN 'public' FOLDER IS NAMED EXACTLY THIS:
+      window.open("/ft-synergist-wang-lao-ji-global-expansion-roadmap.pdf", "_blank");
       
       // 3. Close Modal
       onClose();
 
     } catch (error) {
       console.error("Form submission error", error);
-      // Fallback: If email fails, still give the user the file (Good UX)
-      window.open(
-        "https://drive.google.com/file/d/1WeQBqm6pvTYqfdIT3EAwwUX8UOf7CIFb/view?usp=drive_link",
-        "_blank"
-      );
+      // Fallback
+      window.open("/ft-synergist-wang-lao-ji-global-expansion-roadmap.pdf", "_blank");
       onClose();
     } finally {
       setIsSubmitting(false);
@@ -59,7 +54,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="relative w-full max-w-md bg-white rounded-none shadow-2xl overflow-hidden border-t-4 border-[#8F801B]">
         
-        {/* Modal Header - RICH BLACK */}
+        {/* Modal Header */}
         <div className="bg-black p-8 text-center border-b border-neutral-800">
           <button onClick={onClose} className="absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors">
             <X size={24} />
@@ -73,7 +68,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
           </p>
         </div>
 
-        {/* Modal Form - WHITE & GOLD */}
+        {/* Modal Form */}
         <form onSubmit={handleSubmit} className="p-8 space-y-5 bg-white">
           <div>
             <label className="block text-xs font-bold text-black uppercase tracking-widest mb-2">Full Name</label>
@@ -159,16 +154,14 @@ export default function WangLaoJiCaseStudy() {
   return (
     <div className="bg-white min-h-screen text-black font-sans selection:bg-[#8F801B]/20">
       
-      {/* Inject Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      {/* Inject Modal */}
       <DownloadGate isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      {/* 1. HERO SECTION - PURE BLACK (#000000) */}
+      {/* 1. HERO SECTION - PURE BLACK */}
       <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
           
@@ -271,13 +264,11 @@ export default function WangLaoJiCaseStudy() {
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6 my-8">
-                {/* OLD WAY CARD */}
                 <div className="p-6 bg-white border border-neutral-200 rounded-lg">
                   <TrendingUp className="w-8 h-8 text-neutral-300 mb-4" />
                   <span className="block font-bold text-black mb-2">Old Way</span>
                   <span className="text-sm text-neutral-500">Export from Home Base. High Tariffs. Slow Speed.</span>
                 </div>
-                {/* NEW WAY CARD - PURE BLACK */}
                 <div className="p-6 bg-black border border-black rounded-lg text-white">
                   <Factory className="w-8 h-8 text-[#8F801B] mb-4" />
                   <span className="block font-bold text-white mb-2">New Way (PCBC)</span>
@@ -331,7 +322,7 @@ export default function WangLaoJiCaseStudy() {
         </div>
       </section>
 
-      {/* 4. LEAD MAGNET FOOTER - PURE BLACK */}
+      {/* 4. LEAD MAGNET FOOTER */}
       <section className="py-24 bg-black text-white">
          <div className="max-w-4xl mx-auto px-4 text-center">
             <Lock className="w-12 h-12 text-[#8F801B] mx-auto mb-6" />
