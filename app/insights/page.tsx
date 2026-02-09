@@ -103,6 +103,7 @@ export default function InsightsPage() {
                className="object-cover"
                priority={true}
              />
+             {/* Optional: Subtle Overlay to ensure it blends nicely */}
              <div className="absolute inset-0 bg-black/10"></div>
           </div>
         </div>
