@@ -19,26 +19,46 @@ export function ContactContent() {
         setIsSubmitting(true);
 
         const formData = new FormData(e.target as HTMLFormElement);
+        
+        const firstName = formData.get("firstName") as string;
+        const lastName = formData.get("lastName") as string;
+        const email = formData.get("email") as string;
+        const formSubject = formData.get("subject") as string;
+        const message = formData.get("message") as string;
+
         const data = {
-            subject: `New Contact Form Submission: ${formData.get("subject")}`,
+            subject: `New Contact Form Submission: ${formSubject}`,
             text: `
-Name: ${formData.get("firstName")} ${formData.get("lastName")}
-Email: ${formData.get("email")}
-Subject: ${formData.get("subject")}
-Message: ${formData.get("message")}
+Name: ${firstName} ${lastName}
+Email: ${email}
+Subject: ${formSubject}
+Message: ${message}
             `,
             html: `
 <h3>New Contact Form Submission</h3>
-<p><strong>Name:</strong> ${formData.get("firstName")} ${formData.get("lastName")}</p>
-<p><strong>Email:</strong> ${formData.get("email")}</p>
-<p><strong>Subject:</strong> ${formData.get("subject")}</p>
+<p><strong>Name:</strong> ${firstName} ${lastName}</p>
+<p><strong>Email:</strong> ${email}</p>
+<p><strong>Subject:</strong> ${formSubject}</p>
 <p><strong>Message:</strong></p>
-<p>${formData.get("message")}</p>
+<p>${message}</p>
             `,
-            email: formData.get("email") as string
+            email: email
         };
 
+        // 1. Keep your existing email notification active
         const result = await sendEmail(data);
+
+        // 2. Background push directly to your live Lovable CRM Endpoint
+        try {
+            await fetch("https://id-preview--8e901e67-39f6-43d0-9d80-5cd4835a0d8f.lovable.app/api/leads/public-intake", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ firstName, lastName, email, subject: formSubject, message })
+            });
+        } catch (error) {
+            console.error("CRM Sync Error:", error);
+        }
+
         setIsSubmitting(false);
 
         if (result.success) {
@@ -77,8 +97,6 @@ Message: ${formData.get("message")}
                                             </p>
                                         </div>
                                     </div>
-
-
 
                                     <div className="flex items-start space-x-4">
                                         <Clock className="h-6 w-6 text-primary mt-1" />
