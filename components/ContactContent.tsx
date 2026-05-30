@@ -4,13 +4,6 @@ import { Mail, MapPin, Send, Clock } from "lucide-react";
 import { useState } from "react";
 import { sendEmail } from "@/app/actions";
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
-import { createClient } from '@supabase/supabase-js';
-
-// Direct native connection to your exact Supabase instance
-const supabase = createClient(
-    "https://dcvdqgofhuchrqxuaxrv.supabase.co", 
-    "sb_publishable_TtIApKpYF2F0018hLpt0Eg_ZYsUxkxR"
-);
 
 export function ContactContent() {
     const { openModal } = usePersonaModal();
@@ -47,30 +40,7 @@ export function ContactContent() {
             email: email
         };
 
-        // 1. Dispatch standard workspace email notifications
         const result = await sendEmail(data);
-
-        // 2. Direct immutable injection straight to your CRM Kanban board
-        try {
-            const { error } = await supabase
-                .from('leads')
-                .insert([
-                    {
-                        company_name: `Prospect: ${firstName} ${lastName}`,
-                        primary_contact_name: `${firstName} ${lastName}`,
-                        primary_contact_email: email,
-                        target_industry: 'Professional & Biz Services',
-                        lead_source: 'Website Contact Form',
-                        current_column_index: 0,
-                        grant_framework_focus: formSubject,
-                        estimated_grant_value: 0
-                    }
-                ]);
-
-            if (error) console.error("Direct Supabase Contact Write Error:", error);
-        } catch (error) {
-            console.error("Network Pipeline Link Down:", error);
-        }
 
         setIsSubmitting(false);
 
