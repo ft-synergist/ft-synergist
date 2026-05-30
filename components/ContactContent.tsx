@@ -4,6 +4,13 @@ import { Mail, MapPin, Send, Clock } from "lucide-react";
 import { useState } from "react";
 import { sendEmail } from "@/app/actions";
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
+import { createClient } from '@supabase/supabase-js';
+
+// Direct native connection to your exact Supabase instance
+const supabase = createClient(
+    "https://dcvdqgofhuchrqxuaxrv.supabase.co", 
+    "sb_publishable_TtIApKpYF2F0018hLpt0Eg_ZYsUxkxR"
+);
 
 export function ContactContent() {
     const { openModal } = usePersonaModal();
@@ -28,35 +35,41 @@ export function ContactContent() {
 
         const data = {
             subject: `New Contact Form Submission: ${formSubject}`,
-            text: `
-Name: ${firstName} ${lastName}
-Email: ${email}
-Subject: ${formSubject}
-Message: ${message}
-            `,
+            text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nSubject: ${formSubject}\nMessage: ${message}`,
             html: `
-<h3>New Contact Form Submission</h3>
-<p><strong>Name:</strong> ${firstName} ${lastName}</p>
-<p><strong>Email:</strong> ${email}</p>
-<p><strong>Subject:</strong> ${formSubject}</p>
-<p><strong>Message:</strong></p>
-<p>${message}</p>
+                <h3>New Contact Form Submission</h3>
+                <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Subject:</strong> ${formSubject}</p>
+                <p><strong>Message:</strong></p>
+                <p>${message}</p>
             `,
             email: email
         };
 
-        // 1. Keep your existing email notification active
+        // 1. Dispatch standard workspace email notifications
         const result = await sendEmail(data);
 
-        // 2. Background push directly to your live Lovable CRM Endpoint
+        // 2. Direct immutable injection straight to your CRM Kanban board
         try {
-            await fetch("https://id-preview--8e901e67-39f6-43d0-9d80-5cd4835a0d8f.lovable.app/api/leads/public-intake", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ firstName, lastName, email, subject: formSubject, message })
-            });
+            const { error } = await supabase
+                .from('leads')
+                .insert([
+                    {
+                        company_name: `Prospect: ${firstName} ${lastName}`,
+                        primary_contact_name: `${firstName} ${lastName}`,
+                        primary_contact_email: email,
+                        target_industry: 'Professional & Biz Services',
+                        lead_source: 'Website Contact Form',
+                        current_column_index: 0,
+                        grant_framework_focus: formSubject,
+                        estimated_grant_value: 0
+                    }
+                ]);
+
+            if (error) console.error("Direct Supabase Contact Write Error:", error);
         } catch (error) {
-            console.error("CRM Sync Error:", error);
+            console.error("Network Pipeline Link Down:", error);
         }
 
         setIsSubmitting(false);
