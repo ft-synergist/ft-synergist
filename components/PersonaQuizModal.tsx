@@ -4,13 +4,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, ArrowLeft } from "lucide-react";
 import { sendEmail } from "@/app/actions";
-import { createClient } from '@supabase/supabase-js';
-
-// Direct native connection to your exact Supabase instance
-const supabase = createClient(
-    "https://dcvdqgofhuchrqxuaxrv.supabase.co", 
-    "sb_publishable_TtIApKpYF2F0018hLpt0Eg_ZYsUxkxR"
-);
 
 interface PersonaQuizModalProps {
     isOpen: boolean;
@@ -138,28 +131,6 @@ Tags: ${tags.join(', ')}
         };
 
         await sendEmail(formData);
-
-        // Direct ingestion into your Supabase Postgres Database
-        try {
-            const { error } = await supabase
-                .from('leads')
-                .insert([
-                    {
-                        company_name: answers.company || `Assessment Prospect: ${answers.name}`,
-                        primary_contact_name: answers.name || "Anonymous Executive",
-                        primary_contact_email: answers.email,
-                        target_industry: 'Professional & Biz Services',
-                        lead_source: 'Website Strategic Assessment',
-                        current_column_index: 0,
-                        grant_framework_focus: `Persona Profile: ${persona}`,
-                        estimated_grant_value: 0
-                    }
-                ]);
-
-            if (error) console.error("Direct Supabase Assessment Write Error:", error);
-        } catch (error) {
-            console.error("Assessment Network Connection Break:", error);
-        }
 
         setIsLoading(false);
         setStep('RESULT');
@@ -335,7 +306,7 @@ Tags: ${tags.join(', ')}
                             )}
                         </div>
 
-                        {/* Progress Bar */}
+                        {/* Progress Bar (approximate) */}
                         {step !== 'RESULT' && (
                             <div className="h-1 w-full bg-white/5">
                                 <motion.div
