@@ -4,6 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, ArrowLeft } from "lucide-react";
 import { sendEmail } from "@/app/actions";
+import { createClient } from '@supabase/supabase-js';
+
+// Direct native connection to your exact Supabase instance
+const supabase = createClient(
+    "https://dcvdqgofhuchrqxuaxrv.supabase.co", 
+    "sb_publishable_TtIApKpYF2F0018hLpt0Eg_ZYsUxkxR"
+);
 
 interface PersonaQuizModalProps {
     isOpen: boolean;
@@ -64,11 +71,7 @@ export default function PersonaQuizModal({ isOpen, onClose }: PersonaQuizModalPr
     const handleAnswer = (questionId: QuestionId, answer: string, nextStep?: QuestionId, persona?: PersonaType) => {
         setAnswers(prev => ({ ...prev, [questionId.toLowerCase()]: answer }));
 
-        // If a persona is directly assigned (Phase 1 logic), store it temporarily
-        // We will store it in a way that we can retrieve it later, but the override logic comes at the end.
         if (persona) {
-            // We use a temporary answer field or just rely on the path taken.
-            // For simplicity, let's store the "Phase 1 Persona" in the answers for now.
             setAnswers(prev => ({ ...prev, phase1Persona: persona }));
         }
 
@@ -80,21 +83,17 @@ export default function PersonaQuizModal({ isOpen, onClose }: PersonaQuizModalPr
     const calculateResult = () => {
         let finalPersona = answers['phase1Persona'] as PersonaType;
 
-        // Fallback or complex logic for standard paths if not set directly
-        // Q3 paths set personas too
         if (!finalPersona && answers.q3) {
             if (answers.q3 === 'The Chaos') finalPersona = 'The Orchestrator';
             if (answers.q3 === 'The Role') finalPersona = 'The Technical Visionary';
             if (answers.q3 === 'The Strategy') finalPersona = 'The Market Maker';
         }
 
-        // --- OVERRIDE LOGIC ---
-        // IF Q5 (HQ Location) = "International" -> Force Assign: "The International Entrant"
         if (answers.q5 === 'International (Outside Singapore)') {
             finalPersona = 'The International Entrant';
         }
 
-        return finalPersona;
+        return finalPersona || 'The Market Maker';
     };
 
     const handleFinalSubmit = async (e: React.FormEvent) => {
@@ -110,7 +109,7 @@ export default function PersonaQuizModal({ isOpen, onClose }: PersonaQuizModalPr
         if (answers.q5 === 'Singapore' && (answers.q4 === 'S$1M - S$5M' || answers.q4 === 'S$5M - S$25M' || answers.q4 === 'S$25M - S$100M')) tags.push("EDG Potential");
         if (answers.q6 === 'Immediately (Priority)') tags.push("Hot Lead");
 
-        // Send to CRM (simulated via email for now)
+        // Send Email Summary
         const formData = {
             subject: `New Persona Quiz Lead: ${persona}`,
             text: `
@@ -139,6 +138,28 @@ Tags: ${tags.join(', ')}
         };
 
         await sendEmail(formData);
+
+        // Direct ingestion into your Supabase Postgres Database
+        try {
+            const { error } = await supabase
+                .from('leads')
+                .insert([
+                    {
+                        company_name: answers.company || `Assessment Prospect: ${answers.name}`,
+                        primary_contact_name: answers.name || "Anonymous Executive",
+                        primary_contact_email: answers.email,
+                        target_industry: 'Professional & Biz Services',
+                        lead_source: 'Website Strategic Assessment',
+                        current_column_index: 0,
+                        grant_framework_focus: `Persona Profile: ${persona}`,
+                        estimated_grant_value: 0
+                    }
+                ]);
+
+            if (error) console.error("Direct Supabase Assessment Write Error:", error);
+        } catch (error) {
+            console.error("Assessment Network Connection Break:", error);
+        }
 
         setIsLoading(false);
         setStep('RESULT');
@@ -314,7 +335,7 @@ Tags: ${tags.join(', ')}
                             )}
                         </div>
 
-                        {/* Progress Bar (approximate) */}
+                        {/* Progress Bar */}
                         {step !== 'RESULT' && (
                             <div className="h-1 w-full bg-white/5">
                                 <motion.div
