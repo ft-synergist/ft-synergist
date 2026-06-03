@@ -3,19 +3,18 @@ import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// 1. SAFE IMPORTS
+// 1. SAFE COMPONENTS & PROVIDERS IMPORTS
 import { Navbar } from "@/components/Navbar"; 
 import { Footer } from "@/components/Footer"; 
 import { SiteWidgets } from "@/components/SiteWidgets";
-
-// 2. PROVIDERS
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
 
+// 2. FONT OPTIMIZATION: Implements strict display swapping to kill render-blocking layout lag
 const jost = Jost({
   subsets: ["latin"],
   variable: "--font-jost",
-  display: "swap", // Precludes render-blocking font hydration shifts
+  display: "swap", 
 });
 
 const montserrat = Montserrat({
@@ -24,6 +23,7 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+// 3. GLOBAL METADATA OBJECT
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ftsynergist.com'),
   title: {
@@ -42,7 +42,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-  }
+  },
+  verification: {
+    google: "yHh-0...", 
+  },
 };
 
 export default function RootLayout({
@@ -51,6 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   
+  // 4. GENERATIVE ENGINE OPTIMIZATION (GEO) STRUCTURED SCHEMA OBJECT
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -92,16 +96,21 @@ export default function RootLayout({
       >
         <ConsentProvider>
           <PersonaModalProvider>
+            
             <Navbar />
+            
             <main className="flex-grow">
               {children}
             </main>
+            
             <Footer />
+            
             <SiteWidgets />
+
           </PersonaModalProvider>
         </ConsentProvider>
 
-        {/* PRECISION OPTIMIZATION: Pure inline SVG layout block. Zero HTTP network requests. */}
+        {/* 5. WHATSAPP INLINE VECTOR BLOCK: Zero network fetch cost, zero external resource leakage */}
         <a
           href="https://wa.me/6598628906"
           target="_blank"
@@ -112,8 +121,8 @@ export default function RootLayout({
         >
           <svg 
             viewBox="0 0 448 512" 
-            width="35" 
-            height="35" 
+            width="32" 
+            height="32" 
             fill="currentColor" 
             className="text-white"
             xmlns="http://www.w3.org/2000/svg"
@@ -122,14 +131,14 @@ export default function RootLayout({
           </svg>
         </a>
 
-        {/* Google Analytics Bundle Generation */}
+        {/* 6. TRACKING METRICS DEFERRAL: Loads lazily outside window evaluation markers to dump Total Blocking Time */}
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-R8ZGSYLYWJ"
         />
         <Script
           id="google-analytics"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         >
           {`
             window.dataLayer = window.dataLayer || [];
