@@ -12,9 +12,6 @@ import { SiteWidgets } from "@/components/SiteWidgets";
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
 
-// 3. REMOVED: Toaster (Deleted to prevent build failure)
-// 4. REMOVED: JsonLd (Deleted to kill the Duplicate Schema)
-
 const jost = Jost({
   subsets: ["latin"],
   variable: "--font-jost",
@@ -54,8 +51,44 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+  // 3. GEO ENTITY RESOLUTION SCHEMA (Injected for AI Visibility)
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "FT Synergist",
+    "alternateName": "FT Synergist Franchise Consultants",
+    "url": "https://www.ftsynergist.com",
+    "logo": "https://www.ftsynergist.com/logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/ft-synergist"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SG"
+    },
+    "knowsAbout": [
+      "Education Franchise Scaling",
+      "Market Entry Strategy Jakarta",
+      "Franchise Operational Audits Surabaya",
+      "Commercial Scale-up HCMC"
+    ],
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Singapore" },
+      { "@type": "AdministrativeArea", "name": "Jakarta" },
+      { "@type": "AdministrativeArea", "name": "Surabaya" },
+      { "@type": "AdministrativeArea", "name": "Ho Chi Minh City" }
+    ]
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${jost.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
@@ -71,8 +104,6 @@ export default function RootLayout({
             <Footer />
             
             <SiteWidgets />
-            
-            {/* CLEAN: No <JsonLd /> here. No <Toaster /> here. */}
 
           </PersonaModalProvider>
         </ConsentProvider>
