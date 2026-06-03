@@ -1,28 +1,29 @@
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { ChevronRight, TrendingUp, Users, Globe } from "lucide-react";
-import { LogoCarousel } from "@/components/LogoCarousel";
-import ClientImpact from "@/components/ClientImpact";
-import { CountUp } from "@/components/CountUp";
 
-// NEW: Importing your interactive client elements separately
-import {
-  HomeModals,
-  HeroCTAButton,
-  SubscribeButton,
-  ServicesAccordion,
-  FooterCTAButton
-} from "@/components/HomeInteractivity";
+// 1. INSTANTLY LOADED (Above the Fold - Critical Path)
+import { HeroCTAButton } from "@/components/HomeInteractivity";
+
+// 2. LAZY LOADED (Below the Fold - Eradicates 107 KiB of Unused JS)
+const HomeModals = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.HomeModals), { ssr: false });
+const SubscribeButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.SubscribeButton), { ssr: false });
+const ServicesAccordion = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.ServicesAccordion), { ssr: true });
+const FooterCTAButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.FooterCTAButton), { ssr: false });
+
+const ClientImpact = dynamic(() => import("@/components/ClientImpact"), { ssr: true });
+const LogoCarousel = dynamic(() => import("@/components/LogoCarousel").then(mod => mod.LogoCarousel), { ssr: false });
+const CountUp = dynamic(() => import("@/components/CountUp").then(mod => mod.CountUp), { ssr: false });
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
-      {/* Client-Side Modals (Grant, Persona) */}
+      {/* Client-Side Modals - Deferred until interaction */}
       <HomeModals />
 
-      {/* Hero Section - 100% Server Rendered for Instant LCP & AI Crawling */}
+      {/* Hero Section - 100% Server Rendered + fetchPriority Injection */}
       <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden">
-        {/* Background Image with Overlay */}
         <div className="absolute inset-0 -z-20">
           <Image
             src="/hero-bg.jpg"
@@ -30,23 +31,20 @@ export default function Home() {
             fill
             className="object-cover opacity-60"
             priority
+            fetchPriority="high" // <-- OPTIMIZATION: Resolves LCP Request Discovery Error
             quality={50}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
         </div>
-        {/* CONTRAST FIX: Darkened via-black/50 to via-black/70 for text legibility */}
+        
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/70 to-background"></div>
-
-        {/* Dynamic Background Element - Pure CSS Pulse (No JS Blocking) */}
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-transparent mix-blend-overlay animate-pulse" />
 
-        {/* LCP FIX: Removed JS-based motion.div, replaced with native HTML rendering */}
         <div className="relative z-10">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg">
             Synergies Driving <br className="hidden sm:inline" />
             <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">Sustainable Growth</span>
           </h1>
-          {/* CONTRAST FIX: Changed text-gray-200 to text-white */}
           <p className="mt-6 max-w-2xl mx-auto text-lg text-white sm:text-xl drop-shadow-md">
             Empowering Singapore and International Enterprises to dominate Asian markets through proprietary innovation strategies, AI integration, sustainability, and defensible IP creation.
           </p>
@@ -60,10 +58,11 @@ export default function Home() {
       <section className="py-16 bg-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Strategic Intelligence
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground mb-6">
+            {/* CONTRAST FIX: text-muted-foreground upgraded to text-gray-600 */}
+            <p className="mt-4 text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
               Market-defining research and case studies to guide your expansion. Stay ahead of the curve with priority alerts.
             </p>
             <SubscribeButton />
@@ -71,7 +70,7 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-2">
             {/* Report 1: State of AI */}
-            <div className="flex flex-col rounded-2xl bg-card overflow-hidden shadow-sm border border-border/50 group hover:shadow-lg transition-shadow">
+            <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
               <div className="card-image-container relative h-64 sm:h-72">
                 <Image
                   src="/report-ai-cover.png"
@@ -87,8 +86,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold tracking-tight mb-3">State of AI in Southeast Asia 2026</h3>
-                <p className="text-muted-foreground mb-6 flex-grow">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">State of AI in Southeast Asia 2026</h3>
+                <p className="text-gray-600 mb-6 flex-grow">
                   A comprehensive analysis of AI adoption trends across Singapore, Indonesia, and Vietnam. Discover how leading firms are leveraging generative AI to redefine productivity from pilot to utility.
                 </p>
                 <Link href="/insights" className="inline-flex items-center text-primary font-bold hover:underline group-hover:text-primary/80 transition-colors">
@@ -98,7 +97,7 @@ export default function Home() {
             </div>
 
             {/* Report 2: Wang Lao Ji */}
-            <div className="flex flex-col rounded-2xl bg-card overflow-hidden shadow-sm border border-border/50 group hover:shadow-lg transition-shadow">
+            <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
               <div className="card-image-container relative h-64 sm:h-72">
                 <Image
                   src="/report-wlj-cover.png"
@@ -114,8 +113,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold tracking-tight mb-3">Global Expansion Roadmap: Wang Lao Ji</h3>
-                <p className="text-muted-foreground mb-6 flex-grow">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">Global Expansion Roadmap: Wang Lao Ji</h3>
+                <p className="text-gray-600 mb-6 flex-grow">
                   5 Scaling Lessons from Wang Lao Ji for SMEs. Learn how a 197-year legacy brand transformed into a global lifestyle icon, offering a blueprint for brand resilience and market adaptation.
                 </p>
                 <Link href="/insights" className="inline-flex items-center text-primary font-bold hover:underline group-hover:text-primary/80 transition-colors">
@@ -127,14 +126,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section - Extracted to Client Component */}
-      <section className="py-20 bg-background" id="services">
+      {/* Services Section - Lazy Loaded */}
+      <section className="py-20 bg-white" id="services">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our Expertise
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
               Market-defining capabilities designed to turn operational gaps into competitive moats.
             </p>
           </div>
@@ -142,7 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROVEN TRACK RECORD / IMPACT */}
+      {/* PROVEN TRACK RECORD / IMPACT - Lazy Loaded */}
       <ClientImpact />
 
       {/* Impact Stats Section */}
@@ -198,10 +197,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="py-16 bg-background border-t border-border/40 overflow-hidden">
+      {/* Partners Section - Lazy Loaded */}
+      <section className="py-16 bg-white border-t border-gray-100 overflow-hidden">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-12">
+          <p className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-12">
             Partnership Driving 138M Impact
           </p>
           <div className="relative w-full overflow-hidden">
