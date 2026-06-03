@@ -3,10 +3,10 @@ import Image from "next/image";
 import { ChevronRight, TrendingUp, Users, Globe } from "lucide-react";
 import dynamic from "next/dynamic";
 
-// 1. CRITICAL TOP-OF-PAGE ASSETS (Loaded Immediately)
+// 1. CRITICAL ABOVE-THE-FOLD ASSET (Loaded Immediately)
 import { HeroCTAButton } from "@/components/HomeInteractivity";
 
-// 2. CONSOLIDATED DYNAMIC CONTAINER PASS (Safe Server Dynamic Imports)
+// 2. STRATEGIC CONTAINER PASS (Safe Server Dynamic Imports)
 const HomeModals = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.HomeModals));
 const SubscribeButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.SubscribeButton));
 const ServicesAccordion = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.ServicesAccordion));
@@ -22,22 +22,25 @@ export default function Home() {
       {/* Client-Side Modals */}
       <HomeModals />
 
-      {/* Hero Section - Optimized Clean LCP Track */}
-      <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden">
+      {/* Hero Section - Optimized with Content Boundaries to Stop Render Deadlocks */}
+      <section 
+        className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden"
+        style={{ contentVisibility: "auto", containIntrinsicSize: "0 680px" }}
+      >
         <div className="absolute inset-0 -z-20">
           <Image
             src="/hero-bg.jpg"
             alt="Singapore Skyline"
             fill
-            className="object-cover opacity-60"
-            priority // <-- Automatically handles high fetchPriority and resource hints natively
-            quality={50}
+            className="object-cover opacity-60 select-none pointer-events-none"
+            priority 
+            quality={40} // <-- OPTIMIZATION: Crushes network payload weight to satisfy slow 4G auditing
             sizes="100vw"
           />
         </div>
         
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/70 to-background"></div>
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-transparent mix-blend-overlay animate-pulse" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-transparent mix-blend-overlay" />
 
         <div className="relative z-10">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg">
@@ -76,7 +79,6 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
-                  // OPTIMIZATION: Strips mobile asset delivery overhead to precise slot scale
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
@@ -106,7 +108,6 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
-                  // OPTIMIZATION: Strips mobile asset delivery overhead to precise slot scale
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
@@ -156,12 +157,12 @@ export default function Home() {
             alt="Background"
             fill
             className="object-cover"
-            quality={50}
+            quality={40}
             sizes="100vw"
           />
         </div>
         <div className="absolute inset-0 -z-10 bg-black/80"></div>
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/20 to-transparent mix-blend-overlay animate-pulse" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/20 to-transparent mix-blend-overlay" />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
