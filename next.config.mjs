@@ -12,7 +12,7 @@ const nextConfig = {
   images: {
     deviceSizes: [360, 414, 768, 1024, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    formats: ['image/image/avif', 'image/webp'], // Enforces maximum byte compression variants
+    formats: ['image/avif', 'image/webp'], // <-- FIXED: Corrected MIME type string
   },
 
   // 2. COMPILER BUNDLE TREESHAKING: Prevents massive icon and layout module overhead from flooding the Main-Thread
