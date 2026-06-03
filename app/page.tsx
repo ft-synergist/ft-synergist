@@ -1,20 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import { ChevronRight, TrendingUp, Users, Globe } from "lucide-react";
+import dynamic from "next/dynamic";
 
 // 1. INSTANTLY LOADED (Above the Fold - Critical Path)
 import { HeroCTAButton } from "@/components/HomeInteractivity";
 
-// 2. LAZY LOADED (Below the Fold - Eradicates 107 KiB of Unused JS)
-const HomeModals = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.HomeModals), { ssr: false });
-const SubscribeButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.SubscribeButton), { ssr: false });
-const ServicesAccordion = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.ServicesAccordion), { ssr: true });
-const FooterCTAButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.FooterCTAButton), { ssr: false });
+// 2. SERVER COMPONENT SAFE DYNAMIC IMPORTS (No illegal ssr:false options)
+const HomeModals = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.HomeModals));
+const SubscribeButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.SubscribeButton));
+const ServicesAccordion = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.ServicesAccordion));
+const FooterCTAButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.FooterCTAButton));
 
-const ClientImpact = dynamic(() => import("@/components/ClientImpact"), { ssr: true });
-const LogoCarousel = dynamic(() => import("@/components/LogoCarousel").then(mod => mod.LogoCarousel), { ssr: false });
-const CountUp = dynamic(() => import("@/components/CountUp").then(mod => mod.CountUp), { ssr: false });
+const LazyLogoCarousel = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyLogoCarousel));
+const LazyCountUp = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyCountUp));
+const ClientImpact = dynamic(() => import("@/components/ClientImpact"));
 
 export default function Home() {
   return (
@@ -61,7 +61,6 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Strategic Intelligence
             </h2>
-            {/* CONTRAST FIX: text-muted-foreground upgraded to text-gray-600 */}
             <p className="mt-4 text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
               Market-defining research and case studies to guide your expansion. Stay ahead of the curve with priority alerts.
             </p>
@@ -185,7 +184,7 @@ export default function Home() {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">
                   <span className="tabular-nums tracking-tight">
-                    <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} />
+                    <LazyCountUp end={stat.value} duration={2.5} suffix={stat.suffix} />
                   </span>
                 </div>
                 <div className="text-sm font-bold uppercase tracking-wider text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
@@ -205,7 +204,7 @@ export default function Home() {
           </p>
           <div className="relative w-full overflow-hidden">
             <div className="flex items-center justify-center">
-              <LogoCarousel />
+              <LazyLogoCarousel />
             </div>
           </div>
         </div>
