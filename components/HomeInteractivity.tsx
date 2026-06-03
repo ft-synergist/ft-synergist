@@ -4,9 +4,22 @@ import { useState } from "react";
 import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
 import GrantEligibilityModal from "@/components/GrantEligibilityModal";
 import { NewsletterModal } from "@/components/NewsletterModal";
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
+
+// Strict Client-Side Dynamic Imports (Perfectly legal here)
+export const LazyLogoCarousel = dynamic(
+  () => import("@/components/LogoCarousel").then((mod) => mod.LogoCarousel),
+  { ssr: false }
+);
+
+export const LazyCountUp = dynamic(
+  () => import("@/components/CountUp").then((mod) => mod.CountUp),
+  { ssr: false }
+);
 
 export function HomeModals() {
   const [isGrantModalOpen, setIsGrantModalOpen] = useState(false);
@@ -139,7 +152,6 @@ export function ServicesAccordion() {
 
   return (
     <div className="flex flex-col gap-8">
-      {/* Top Row: 3 Pillars */}
       <motion.div
         variants={staggerContainer}
         initial="initial"
@@ -212,7 +224,6 @@ export function ServicesAccordion() {
         ))}
       </motion.div>
 
-      {/* Bottom Row: 2 Pillars (Centered) */}
       <motion.div
         variants={staggerContainer}
         initial="initial"
