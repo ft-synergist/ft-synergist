@@ -3,26 +3,26 @@ import Image from "next/image";
 import { ChevronRight, TrendingUp, Users, Globe } from "lucide-react";
 import dynamic from "next/dynamic";
 
-// 1. INSTANTLY LOADED (Above the Fold - Critical Path)
+// 1. CRITICAL TOP-OF-PAGE ASSETS (Loaded Immediately)
 import { HeroCTAButton } from "@/components/HomeInteractivity";
 
-// 2. SERVER COMPONENT SAFE DYNAMIC IMPORTS (No illegal ssr:false options)
+// 2. CONSOLIDATED DYNAMIC CONTAINER PASS (Safe Server Dynamic Imports)
 const HomeModals = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.HomeModals));
 const SubscribeButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.SubscribeButton));
 const ServicesAccordion = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.ServicesAccordion));
 const FooterCTAButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.FooterCTAButton));
-
 const LazyLogoCarousel = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyLogoCarousel));
 const LazyCountUp = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyCountUp));
+
 const ClientImpact = dynamic(() => import("@/components/ClientImpact"));
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
-      {/* Client-Side Modals - Deferred until interaction */}
+      {/* Client-Side Modals */}
       <HomeModals />
 
-      {/* Hero Section - 100% Server Rendered + fetchPriority Injection */}
+      {/* Hero Section - Optimized Clean LCP Track */}
       <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden">
         <div className="absolute inset-0 -z-20">
           <Image
@@ -30,10 +30,9 @@ export default function Home() {
             alt="Singapore Skyline"
             fill
             className="object-cover opacity-60"
-            priority
-            fetchPriority="high" // <-- OPTIMIZATION: Resolves LCP Request Discovery Error
+            priority // <-- Automatically handles high fetchPriority and resource hints natively
             quality={50}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            sizes="100vw"
           />
         </div>
         
@@ -76,6 +75,9 @@ export default function Home() {
                   alt="State of AI in Southeast Asia 2026 Report Cover"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  // OPTIMIZATION: Strips mobile asset delivery overhead to precise slot scale
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
@@ -103,6 +105,9 @@ export default function Home() {
                   alt="Global Expansion Roadmap: Wang Lao Ji to Global Brand"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  // OPTIMIZATION: Strips mobile asset delivery overhead to precise slot scale
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
@@ -125,7 +130,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section - Lazy Loaded */}
+      {/* Services Section */}
       <section className="py-20 bg-white" id="services">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -140,7 +145,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROVEN TRACK RECORD / IMPACT - Lazy Loaded */}
+      {/* PROVEN TRACK RECORD / IMPACT */}
       <ClientImpact />
 
       {/* Impact Stats Section */}
@@ -152,7 +157,7 @@ export default function Home() {
             fill
             className="object-cover"
             quality={50}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            sizes="100vw"
           />
         </div>
         <div className="absolute inset-0 -z-10 bg-black/80"></div>
@@ -196,7 +201,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partners Section - Lazy Loaded */}
+      {/* Partners Section */}
       <section className="py-16 bg-white border-t border-gray-100 overflow-hidden">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-12">
