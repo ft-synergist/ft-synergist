@@ -3,26 +3,26 @@ import Image from "next/image";
 import { ChevronRight, TrendingUp, Users, Globe } from "lucide-react";
 import dynamic from "next/dynamic";
 
-// 1. IMMEDIATE RENDER ASSETS (Eliminates Render-Blocking CSS Fragmentation)
+// 1. DIRECT IMPORTS (LazyLogoCarousel and LazyCountUp are already split with ssr:false inside this file)
 import { 
   HeroCTAButton, 
   HomeModals, 
   SubscribeButton, 
   ServicesAccordion, 
-  FooterCTAButton 
+  FooterCTAButton,
+  LazyLogoCarousel,
+  LazyCountUp
 } from "@/components/HomeInteractivity";
 
-// 2. BELOW THE FOLD DEFERRALS (Clean, single-chunk allocation)
-const LazyLogoCarousel = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyLogoCarousel), { ssr: false });
-const LazyCountUp = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyCountUp), { ssr: false });
-const ClientImpact = dynamic(() => import("@/components/ClientImpact"), { ssr: false });
+// 2. SERVER-SAFE DYNAMIC IMPORT (Bypasses the Server Component ssr:false restriction)
+const ClientImpact = dynamic(() => import("@/components/ClientImpact"));
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <HomeModals />
 
-      {/* Hero Section - Strict Aspect/Dimension Stability (Kills Layout Shift & Forced Reflow) */}
+      {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden min-h-[600px]">
         <div className="absolute inset-0 -z-20">
           <Image
@@ -30,7 +30,7 @@ export default function Home() {
             alt="Singapore Skyline"
             fill
             className="object-cover opacity-60 pointer-events-none select-none"
-            priority // <-- Forces instant token discovery
+            priority 
             quality={65}
             sizes="100vw"
           />
@@ -76,7 +76,7 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw" // <-- Fixes image footprint delivery leak
+                  sizes="(max-width: 768px) 100vw, 50vw" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
@@ -143,7 +143,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Impact Section */}
+      {/* PROVEN TRACK RECORD / IMPACT */}
       <ClientImpact />
 
       {/* Impact Stats Section */}
