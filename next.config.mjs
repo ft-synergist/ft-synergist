@@ -7,6 +7,19 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+
+  // 1. IMAGE OPTIMIZATION PARAMETERS: Limits resource rendering width variations to precise smartphone breakpoints
+  images: {
+    deviceSizes: [360, 414, 768, 1024, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ['image/image/avif', 'image/webp'], // Enforces maximum byte compression variants
+  },
+
+  // 2. COMPILER BUNDLE TREESHAKING: Prevents massive icon and layout module overhead from flooding the Main-Thread
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
+
   async redirects() {
     return [
       {
@@ -63,6 +76,7 @@ const nextConfig = {
       },
     ];
   },
+
   async headers() {
     return [
       {
