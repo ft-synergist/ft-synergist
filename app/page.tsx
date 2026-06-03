@@ -3,38 +3,35 @@ import Image from "next/image";
 import { ChevronRight, TrendingUp, Users, Globe } from "lucide-react";
 import dynamic from "next/dynamic";
 
-// 1. CRITICAL ABOVE-THE-FOLD ASSET (Loaded Immediately)
-import { HeroCTAButton } from "@/components/HomeInteractivity";
+// 1. IMMEDIATE RENDER ASSETS (Eliminates Render-Blocking CSS Fragmentation)
+import { 
+  HeroCTAButton, 
+  HomeModals, 
+  SubscribeButton, 
+  ServicesAccordion, 
+  FooterCTAButton 
+} from "@/components/HomeInteractivity";
 
-// 2. STRATEGIC CONTAINER PASS (Safe Server Dynamic Imports)
-const HomeModals = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.HomeModals));
-const SubscribeButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.SubscribeButton));
-const ServicesAccordion = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.ServicesAccordion));
-const FooterCTAButton = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.FooterCTAButton));
-const LazyLogoCarousel = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyLogoCarousel));
-const LazyCountUp = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyCountUp));
-
-const ClientImpact = dynamic(() => import("@/components/ClientImpact"));
+// 2. BELOW THE FOLD DEFERRALS (Clean, single-chunk allocation)
+const LazyLogoCarousel = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyLogoCarousel), { ssr: false });
+const LazyCountUp = dynamic(() => import("@/components/HomeInteractivity").then(mod => mod.LazyCountUp), { ssr: false });
+const ClientImpact = dynamic(() => import("@/components/ClientImpact"), { ssr: false });
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
-      {/* Client-Side Modals */}
       <HomeModals />
 
-      {/* Hero Section - Optimized with Content Boundaries to Stop Render Deadlocks */}
-      <section 
-        className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden"
-        style={{ contentVisibility: "auto", containIntrinsicSize: "0 680px" }}
-      >
+      {/* Hero Section - Strict Aspect/Dimension Stability (Kills Layout Shift & Forced Reflow) */}
+      <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden min-h-[600px]">
         <div className="absolute inset-0 -z-20">
           <Image
             src="/hero-bg.jpg"
             alt="Singapore Skyline"
             fill
-            className="object-cover opacity-60 select-none pointer-events-none"
-            priority 
-            quality={40} // <-- OPTIMIZATION: Crushes network payload weight to satisfy slow 4G auditing
+            className="object-cover opacity-60 pointer-events-none select-none"
+            priority // <-- Forces instant token discovery
+            quality={65}
             sizes="100vw"
           />
         </div>
@@ -79,7 +76,7 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 50vw" // <-- Fixes image footprint delivery leak
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
@@ -146,7 +143,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROVEN TRACK RECORD / IMPACT */}
+      {/* Impact Section */}
       <ClientImpact />
 
       {/* Impact Stats Section */}
