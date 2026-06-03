@@ -10,7 +10,7 @@ import GrantEligibilityModal from "@/components/GrantEligibilityModal";
 import { NewsletterModal } from "@/components/NewsletterModal";
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
 
-// Strict Client-Side Dynamic Imports (Perfectly legal here)
+// Core Client-Side Deferrals
 export const LazyLogoCarousel = dynamic(
   () => import("@/components/LogoCarousel").then((mod) => mod.LogoCarousel),
   { ssr: false }
@@ -152,6 +152,7 @@ export function ServicesAccordion() {
 
   return (
     <div className="flex flex-col gap-8">
+      {/* Top Row: 3 Pillars */}
       <motion.div
         variants={staggerContainer}
         initial="initial"
@@ -171,6 +172,9 @@ export function ServicesAccordion() {
                 alt={service.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                // PRECISION OPTIMIZATION: Limits layout fetch boundaries on mobile to actual space occupied
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 384px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
             </div>
@@ -224,6 +228,7 @@ export function ServicesAccordion() {
         ))}
       </motion.div>
 
+      {/* Bottom Row: 2 Pillars (Centered) */}
       <motion.div
         variants={staggerContainer}
         initial="initial"
@@ -245,6 +250,9 @@ export function ServicesAccordion() {
                   alt={service.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                  // PRECISION OPTIMIZATION: Limits layout fetch boundaries on mobile to actual space occupied
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
               </div>
