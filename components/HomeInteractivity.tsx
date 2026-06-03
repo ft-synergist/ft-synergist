@@ -173,7 +173,6 @@ export function ServicesAccordion() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
-                // PRECISION OPTIMIZATION: Limits layout fetch boundaries on mobile to actual space occupied
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 384px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
@@ -185,7 +184,7 @@ export function ServicesAccordion() {
 
               <div className="flex-grow">
                 {!expandedCardIndex || expandedCardIndex !== index ? (
-                  <p className="text-muted-foreground leading-relaxed text-base mb-6">{service.description}</p>
+                  <p className="text-gray-700 font-medium leading-relaxed text-base mb-6">{service.description}</p>
                 ) : null}
 
                 <AnimatePresence>
@@ -197,7 +196,7 @@ export function ServicesAccordion() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-muted-foreground leading-relaxed text-base mb-6">{service.expandedIntro}</p>
+                      <p className="text-gray-700 font-medium leading-relaxed text-base mb-6">{service.expandedIntro}</p>
                       <ul className="space-y-4 mb-6">
                         {service.details.map((detail, idx) => (
                           <li key={idx} className="flex flex-col gap-1">
@@ -205,7 +204,7 @@ export function ServicesAccordion() {
                               <CheckCircle2 className="w-4 h-4 text-[#8F801B] flex-shrink-0" />
                               <span className="font-bold text-foreground text-sm">{detail.title}</span>
                             </div>
-                            <p className="text-sm text-muted-foreground pl-6">{detail.content}</p>
+                            <p className="text-sm text-gray-600 font-medium pl-6">{detail.content}</p>
                           </li>
                         ))}
                       </ul>
@@ -251,7 +250,6 @@ export function ServicesAccordion() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
-                  // PRECISION OPTIMIZATION: Limits layout fetch boundaries on mobile to actual space occupied
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
@@ -263,7 +261,7 @@ export function ServicesAccordion() {
 
                 <div className="flex-grow">
                   {!expandedCardIndex || expandedCardIndex !== actualIndex ? (
-                    <p className="text-muted-foreground leading-relaxed text-base mb-6">{service.description}</p>
+                    <p className="text-gray-700 font-medium leading-relaxed text-base mb-6">{service.description}</p>
                   ) : null}
 
                   <AnimatePresence>
@@ -275,7 +273,7 @@ export function ServicesAccordion() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <p className="text-muted-foreground leading-relaxed text-base mb-6">{service.expandedIntro}</p>
+                        <p className="text-gray-700 font-medium leading-relaxed text-base mb-6">{service.expandedIntro}</p>
                         <ul className="space-y-4 mb-6">
                           {service.details.map((detail, idx) => (
                             <li key={idx} className="flex flex-col gap-1">
@@ -283,7 +281,7 @@ export function ServicesAccordion() {
                                 <CheckCircle2 className="w-4 h-4 text-[#8F801B] flex-shrink-0" />
                                 <span className="font-bold text-foreground text-sm">{detail.title}</span>
                               </div>
-                              <p className="text-sm text-muted-foreground pl-6">{detail.content}</p>
+                              <p className="text-sm text-gray-600 font-medium pl-6">{detail.content}</p>
                             </li>
                           ))}
                         </ul>
