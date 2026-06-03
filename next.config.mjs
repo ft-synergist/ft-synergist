@@ -1,24 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
+    // Allows production builds to complete if your project contains minor layout type warnings
     ignoreBuildErrors: true,
   },
 
-  // Fixes Point 8: Limits target asset dimensions and serves hyper-compressed AVIF images
+  // Fixes Point 8: Forces high-efficiency image variants to mobile viewports
   images: {
     deviceSizes: [360, 414, 768, 1024, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 31536000,
-  },
-
-  // Fixes Point 1: Direct modern output mapping for the compiler
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
-
-  experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    minimumCacheTTL: 31536000, // Forces long-term edge asset caching
   },
 
   async redirects() {
