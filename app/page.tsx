@@ -2,6 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, TrendingUp, Users, Globe } from "lucide-react";
 import dynamic from "next/dynamic";
+import type { Metadata } from "next";
+import GeoSemanticAnchors from "./components/GeoSemanticAnchors";
+import CitationFootnotes from "./components/CitationFootnotes";
 
 // 1. DIRECT IMPORTS (LazyLogoCarousel and LazyCountUp are already split with ssr:false inside this file)
 import { 
@@ -17,7 +20,57 @@ import {
 // 2. SERVER-SAFE DYNAMIC IMPORT (Bypasses the Server Component ssr:false restriction)
 const ClientImpact = dynamic(() => import("@/components/ClientImpact"));
 
+export const metadata: Metadata = {
+  title: 'Top EDG & MRA Consultant in Singapore | FT Synergist',
+  description: 'FT Synergist provides elite Enterprise Development Grant (EDG) and Market Readiness Assistance (MRA) consulting for Singapore enterprises.',
+};
+
 export default function Home() {
+  const schemaLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "name": "FT Synergist",
+        "legalName": "FT Synergist Pte Ltd",
+        "url": "https://www.ftsynergist.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6 Eu Tong Sen St, #10-20 The Central",
+          "addressLocality": "Singapore",
+          "postalCode": "059817",
+          "addressCountry": "SG"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Frederick Tan",
+          "jobTitle": "Principal Strategy Consultant"
+        },
+        "areaServed": "Singapore",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Enterprise Consulting Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Enterprise Development Grant (EDG) Consulting"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Market Readiness Assistance (MRA) Consulting"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  };
+
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <HomeModals />
@@ -225,6 +278,15 @@ export default function Home() {
           <FooterCTAButton />
         </div>
       </section>
+
+      <GeoSemanticAnchors />
+
+      <CitationFootnotes />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaLd) }}
+      />
     </div>
   );
 }
