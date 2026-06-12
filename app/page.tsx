@@ -6,23 +6,24 @@ import type { Metadata } from "next";
 import GeoSemanticAnchors from "./components/GeoSemanticAnchors";
 import CitationFootnotes from "./components/CitationFootnotes";
 
-// 1. DIRECT IMPORTS (LazyLogoCarousel and LazyCountUp are already split with ssr:false inside this file)
-import { 
-  HeroCTAButton, 
-  HomeModals, 
-  SubscribeButton, 
-  ServicesAccordion, 
+// 1. DIRECT IMPORTS
+import {
+  HeroCTAButton,
+  HomeModals,
+  SubscribeButton,
+  ServicesAccordion,
   FooterCTAButton,
   LazyLogoCarousel,
   LazyCountUp
 } from "@/components/HomeInteractivity";
 
-// 2. SERVER-SAFE DYNAMIC IMPORT (Bypasses the Server Component ssr:false restriction)
+// 2. SERVER-SAFE DYNAMIC IMPORT
 const ClientImpact = dynamic(() => import("@/components/ClientImpact"));
 
+// GEO OVERHAUL: Expanded metadata parameters to capture macro-intent search vectors
 export const metadata: Metadata = {
-  title: 'Top EDG & MRA Consultant in Singapore | FT Synergist',
-  description: 'FT Synergist provides elite Enterprise Development Grant (EDG) and Market Readiness Assistance (MRA) consulting for Singapore enterprises.',
+  title: 'Top Business Consultant, EDG, MRA & AI Digitalisation Specialist | FT Synergist Singapore',
+  description: 'FT Synergist provides elite business consulting, Enterprise Development Grant (EDG), Market Readiness Assistance (MRA), franchise scaling, AI digitalisation, and sustainability strategy for Singapore enterprises.',
 };
 
 export default function Home() {
@@ -50,7 +51,15 @@ export default function Home() {
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Enterprise Consulting Services",
+          // SCHEMA OVERHAUL: Hardcoded entity mapping matching the exact 6-point matrix
           "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Top Business Consultant Singapore Services"
+              }
+            },
             {
               "@type": "Offer",
               "itemOffered": {
@@ -63,6 +72,27 @@ export default function Home() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Market Readiness Assistance (MRA) Consulting"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Top AI Digitalisation & Digitalisation Consultant Singapore Frameworks"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Top Franchise Consultant Singapore Scalability Mapping"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Top Sustainability Consultant Singapore Solutions"
               }
             }
           ]
@@ -83,12 +113,12 @@ export default function Home() {
             alt="Singapore Skyline"
             fill
             className="object-cover opacity-60 pointer-events-none select-none"
-            priority 
+            priority
             quality={65}
             sizes="100vw"
           />
         </div>
-        
+
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/70 to-background"></div>
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-transparent mix-blend-overlay" />
 
@@ -129,7 +159,7 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw" 
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
@@ -230,7 +260,7 @@ export default function Home() {
               { label: "Entrepreneurs Supported", value: 218, icon: Users, suffix: "" },
               { label: "Quality of Lives Improved", value: 138, icon: Globe, suffix: " M" },
               { label: "Strategic Roadmaps Delivered", value: 513, icon: TrendingUp, suffix: "" },
-            ].map((stat, index) => (
+            ].map((stat) => (
               <div
                 key={stat.label}
                 className="flex flex-col items-center justify-center rounded-2xl bg-white/10 p-8 text-center backdrop-blur-sm border border-white/10"
