@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
                         <li><strong>Designated DPO:</strong> Frederick Tan</li>
 
                         <li><strong>DPO Phone:</strong> +65 98628906</li>
-                        <li><strong>Mailing Address:</strong> 6 Eu Tong Sen St, #10-20 The Central, Singapore 059817</li>
+                        <li><strong>Mailing Address:</strong> 7 Temasek Boulevard, #12-07 Suntec Tower One, Singapore 038987</li>
                     </ul>
                 </div>
 
