@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
+import StructuredData from './components/StructuredData';
 
 // 1. SAFE COMPONENTS & PROVIDERS IMPORTS
 import { Navbar } from "@/components/Navbar"; 
@@ -94,6 +95,7 @@ export default function RootLayout({
       <body
         className={`${jost.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
+        <StructuredData/>
         <ConsentProvider>
           <PersonaModalProvider>
             
