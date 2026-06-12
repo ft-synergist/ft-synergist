@@ -19,9 +19,28 @@ export function ContactContent() {
         setIsSubmitting(true);
 
         const formData = new FormData(e.target as HTMLFormElement);
+        
+        const firstName = formData.get("firstName") as string;
+        const lastName = formData.get("lastName") as string;
+        const email = formData.get("email") as string;
+        const formSubject = formData.get("subject") as string;
+        const message = formData.get("message") as string;
 
-        // Send raw parameters straight to the server edge
-        const result = await sendEmail(formData);
+        const data = {
+            subject: `New Contact Form Submission: ${formSubject}`,
+            text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nSubject: ${formSubject}\nMessage: ${message}`,
+            html: `
+                <h3>New Contact Form Submission</h3>
+                <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Subject:</strong> ${formSubject}</p>
+                <p><strong>Message:</strong></p>
+                <p>${message}</p>
+            `,
+            email: email
+        };
+
+        const result = await sendEmail(data);
 
         setIsSubmitting(false);
 

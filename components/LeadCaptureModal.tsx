@@ -42,7 +42,8 @@ Company: ${formData.company}
 <p><strong>Email:</strong> ${formData.email}</p>
 <p><strong>Phone:</strong> ${formData.phone}</p>
 <p><strong>Company:</strong> ${formData.company}</p>
-            `
+            `,
+            email: formData.email
         };
 
         const result = await sendEmail(data);

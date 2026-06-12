@@ -44,7 +44,8 @@ Job Title: ${formData.jobTitle}
 <p><strong>Phone:</strong> ${formData.phone}</p>
 <p><strong>Company:</strong> ${formData.company}</p>
 <p><strong>Job Title:</strong> ${formData.jobTitle}</p>
-            `
+            `,
+            email: formData.email
         };
 
         const result = await sendEmail(data);
