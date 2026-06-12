@@ -46,15 +46,15 @@ const jsonLd = {
       "telephone": "+65 9862 8906", 
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "6 Eu Tong Sen St, #10-20 The Central",
+        "streetAddress": "7 Temasek Boulevard, #12-07 Suntec Tower One",
         "addressLocality": "Singapore",
-        "postalCode": "059817",
+        "postalCode": "038987",
         "addressCountry": "SG"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "1.2887",
-        "longitude": "103.8475"
+        "latitude": "1.2936",
+        "longitude": "103.8584"
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",

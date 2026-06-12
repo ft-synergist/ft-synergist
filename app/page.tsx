@@ -36,9 +36,9 @@ export default function Home() {
         "url": "https://www.ftsynergist.com",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "6 Eu Tong Sen St, #10-20 The Central",
+          "streetAddress": "7 Temasek Boulevard, #12-07 Suntec Tower One",
           "addressLocality": "Singapore",
-          "postalCode": "059817",
+          "postalCode": "038987",
           "addressCountry": "SG"
         },
         "founder": {

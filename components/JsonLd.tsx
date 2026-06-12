@@ -7,15 +7,15 @@ export default function JsonLd() {
         "description": "Premium SME Management Consultant & EDG Grant Advisor in Singapore. We help businesses scale through strategic consulting and government grants.",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "6 Eu Tong Sen St, #10-20 The Central",
+            "streetAddress": "7 Temasek Boulevard, #12-07 Suntec Tower One",
             "addressLocality": "Singapore",
-            "postalCode": "059817",
+            "postalCode": "038987",
             "addressCountry": "SG"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 1.2895,
-            "longitude": 103.8465
+            "latitude": 1.2936,
+            "longitude": 103.8584
         },
         "url": "https://www.ftsynergist.com",
         "telephone": "+6598628906",
