@@ -52,9 +52,9 @@ export function Footer() {
                     <div>
                         <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white">Connect</h3>
                         <div className="text-gray-400 text-sm mb-4 space-y-1">
-                            <p>6 Eu Tong Sen St,</p>
-                            <p>#10-20 The Central,</p>
-                            <p>Singapore 059817</p>
+                          <p>7 Temasek Boulevard,</p>
+                          <p>#12-07 Suntec Tower One,</p>
+                          <p>Singapore 038987</p>
                         </div>
                         <div className="flex flex-col space-y-3">
                             <Link
