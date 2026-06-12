@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MapPin, Send, Clock } from "lucide-react";
+import { MapPin, Send, Clock } from "lucide-react";
 import { useState } from "react";
 import { sendEmail } from "@/app/actions";
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
@@ -19,28 +19,9 @@ export function ContactContent() {
         setIsSubmitting(true);
 
         const formData = new FormData(e.target as HTMLFormElement);
-        
-        const firstName = formData.get("firstName") as string;
-        const lastName = formData.get("lastName") as string;
-        const email = formData.get("email") as string;
-        const formSubject = formData.get("subject") as string;
-        const message = formData.get("message") as string;
 
-        const data = {
-            subject: `New Contact Form Submission: ${formSubject}`,
-            text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nSubject: ${formSubject}\nMessage: ${message}`,
-            html: `
-                <h3>New Contact Form Submission</h3>
-                <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Subject:</strong> ${formSubject}</p>
-                <p><strong>Message:</strong></p>
-                <p>${message}</p>
-            `,
-            email: email
-        };
-
-        const result = await sendEmail(data);
+        // Send raw parameters straight to the server edge
+        const result = await sendEmail(formData);
 
         setIsSubmitting(false);
 
@@ -75,8 +56,8 @@ export function ContactContent() {
                                         <div>
                                             <h3 className="font-semibold">Visit Us</h3>
                                             <p className="text-muted-foreground">
-                                                6 Eu Tong Sen St, #10-20 The Central<br />
-                                                Singapore 059817
+                                                7 Temasek Boulevard, #12-07 Suntec Tower One<br />
+                                                Singapore 038987
                                             </p>
                                         </div>
                                     </div>
@@ -120,7 +101,7 @@ export function ContactContent() {
                                         id="firstName"
                                         name="firstName"
                                         required
-                                        className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                        className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground"
                                         placeholder="John"
                                     />
                                 </div>
@@ -130,7 +111,7 @@ export function ContactContent() {
                                         id="lastName"
                                         name="lastName"
                                         required
-                                        className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                        className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground"
                                         placeholder="Doe"
                                     />
                                 </div>
@@ -143,7 +124,7 @@ export function ContactContent() {
                                     name="email"
                                     required
                                     type="email"
-                                    className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                    className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground"
                                     placeholder="john@example.com"
                                 />
                             </div>
@@ -156,7 +137,7 @@ export function ContactContent() {
                                     value={subject}
                                     onChange={(e) => setSubject(e.target.value)}
                                     required
-                                    className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                    className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground"
                                 >
                                     <option value="" disabled>Please select a topic...</option>
                                     <option value="Franchise & Licensing">Franchise & Licensing</option>
@@ -178,7 +159,7 @@ export function ContactContent() {
                                     name="message"
                                     required
                                     rows={4}
-                                    className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                    className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground"
                                     placeholder="How can we help you?"
                                 />
                             </div>
@@ -188,9 +169,7 @@ export function ContactContent() {
                                 disabled={isSubmitting}
                                 className="w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 disabled:opacity-50"
                             >
-                                {isSubmitting ? (
-                                    "Sending..."
-                                ) : (
+                                {isSubmitting ? "Sending..." : (
                                     <>
                                         Send Message
                                         <Send className="ml-2 h-4 w-4" />
