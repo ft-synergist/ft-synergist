@@ -8,11 +8,11 @@ import StructuredData from '@/app/components/StructuredData';
 
 export default function MRAGrantPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased selection:bg-primary selection:text-white">
+    <div className="min-h-screen bg-background text-foreground antialiased selection:bg-primary selection:text-white w-full overflow-x-hidden">
       <StructuredData />
 
       {/* =========================================================================
-          HERO BANNER SECTION - 100% Dark Theme Match
+          HERO BANNER SECTION - Matches EDGE's exact Dark Blueprint Layout
           ========================================================================= */}
       <header className="relative pt-36 pb-20 px-6 text-center max-w-4xl mx-auto space-y-6">
         <span className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
@@ -24,7 +24,7 @@ export default function MRAGrantPage() {
           <span className="text-primary">(MRA) Grant Program</span>
         </h1>
 
-        {/* Extractive Answer Hook Box - Premium Dark Card Silhouette */}
+        {/* Extractive Answer Hook Box - Clean Dashboard Card Silhouette */}
         <div className="p-6 md:p-8 bg-card border border-border rounded-xl max-w-3xl mx-auto mt-10 text-left shadow-xl">
           <h2 className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Verified Expert Answer</h2>
           <p className="text-base md:text-lg leading-relaxed text-foreground/90">
