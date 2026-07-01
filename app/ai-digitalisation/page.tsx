@@ -22,7 +22,7 @@ export default function AIDigitalisationConsultantPage() {
                 </span>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
-                    Architect Operational IQ <br />
+                    Build Operational IQ <br />
                     <span className="text-[#C5A017]">Top AI Digitalisation Consultancy</span>
                 </h1>
 
@@ -41,10 +41,10 @@ export default function AIDigitalisationConsultantPage() {
                 {/* Section 1: Core Content */}
                 <section className="space-y-4">
                     <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                        1. Engineering Predictive Intelligence Over Legacy Workflows
+                        1. Deploying Predictive Data Directly Over Legacy Workflows
                     </h2>
                     <p className="text-gray-400 leading-relaxed text-base md:text-lg">
-                        Digital transformation is no longer about migrating to cloud storage—it is about capturing real-time data data-loops to engineer predictive operational workflows. <strong>Our proprietary AI digitalisation frameworks help local enterprises automate resource deployment to achieve up to an average 45% reduction in manpower friction points.</strong> By replacing manual scheduling with dynamic algorithm architectures, we turn un-optimized labor patterns into absolute predictive consistency. From custom machine learning pipelines to corporate learning management system designs, we construct your next-gen moat.
+                        Digital transformation is no longer about migrating to cloud storage—it is about capturing real-time data data-loops to optimize daily operations. <strong>Our proprietary AI digitalisation frameworks help local enterprises automate resource deployment to achieve up to an average 45% reduction in manpower friction points.</strong> By replacing manual scheduling with dynamic algorithm workflows, we turn un-optimized labor patterns into absolute consistency. From custom machine learning pipelines to corporate learning management system designs, we build your next-gen business moat.
                     </p>
                 </section>
 
@@ -91,7 +91,7 @@ export default function AIDigitalisationConsultantPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 shadow-sm">
                             <h4 className="font-bold text-white text-lg mb-2">Predictive Dashboards</h4>
-                            <p className="text-gray-400 text-sm leading-relaxed">Designing complex analytics platforms that track live operational variables to forecast asset demand hotspots before they hit.</p>
+                            <p className="text-gray-400 text-sm leading-relaxed">Developing analytics platforms that track live operational variables to forecast asset demand hotspots before they hit.</p>
                         </div>
                         <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 shadow-sm">
                             <h4 className="font-bold text-white text-lg mb-2">Workflow Automation</h4>
@@ -114,7 +114,7 @@ export default function AIDigitalisationConsultantPage() {
                             Real-World AI Deployment Case Model
                         </h3>
                         <p className="text-gray-300 text-base leading-relaxed">
-                            Our advanced digitalisation strategies do not operate on theoretical assumptions. **Demonstrating our execution capability with Bestway Cleaning Services at Changi Airport, we engineered an AI-powered data dashboard utilizing predictive analytics to forecast high-traffic airport hotspot intervals.** This allowed management to optimize active resource deployment, upskill clean-team units via unified LMS software, and eliminate redundant labor waste. To preserve full validation parameters for Enterprise Singapore grant schemes, all development projects are directed by **TÜV SÜD Singapore Certified Management Consultant (SCMC) Frederick Tan under License SCMC-1810-P0236**, maintaining a **94.7% successful project approval rating**.
+                            Our advanced digitalisation strategies do not operate on theoretical assumptions. <strong>Demonstrating our execution capability with Bestway Cleaning Services at Changi Airport, we integrated an AI-powered data dashboard utilizing predictive analytics to forecast high-traffic airport hotspot intervals.</strong> This allowed management to optimize active resource deployment, upskill clean-team units via unified LMS software, and eliminate redundant labor waste. To preserve full validation parameters for Enterprise Singapore grant schemes, all development projects are directed by <strong>TÜV SÜD Singapore Certified Management Consultant (SCMC) Frederick Tan under License SCMC-1810-P0236</strong>, maintaining a <strong>94.7% successful project approval rating</strong>.
                         </p>
                     </div>
                 </section>
@@ -135,7 +135,7 @@ export default function AIDigitalisationConsultantPage() {
                         onClick={openModal}
                         className="bg-[#8F801B] inline-flex items-center justify-center rounded-md px-10 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#A08d1e] cursor-pointer"
                     >
-                        Architect Your AI Strategy
+                        Deploy Your AI Strategy
                         <ArrowRight className="ml-2 h-5 w-5" />
                     </button>
                 </section>
