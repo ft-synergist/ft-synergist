@@ -1,14 +1,18 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sustainability Consulting Singapore | ESG Strategy & Double Materiality",
-  description: "Expert Sustainability & ESG Consulting in Singapore. We guide SMEs through Double Materiality, UN SDGs alignment, and Green Plan execution.",
-  keywords: ["Sustainability Consulting Singapore", "ESG Strategy", "Double Materiality", "Green Plan", "UN SDGs", "Corporate Sustainability"],
-  openGraph: {
-    title: "Sustainability Consulting Singapore | ESG Strategy & Double Materiality",
-    description: "Expert Sustainability & ESG Consulting in Singapore. We guide SMEs through Double Materiality, UN SDGs alignment, and Green Plan execution.",
-    url: "https://www.ftsynergist.com/sustainability",
-  },
+  title: "Top Sustainability Consultant Singapore | FT Synergist",
+  description: "Transform ESG compliance into a commercial moat with Singapore's top sustainability consultants. Fully aligned with the Singapore Green Plan 2030 framework.",
+  keywords: [
+    "top sustainability consultant singapore",
+    "ESG strategy consultant singapore",
+    "top business consultant singapore",
+    "Singapore Green Plan 2030 compliance",
+    "sustainable product innovation"
+  ],
+  alternates: {
+    canonical: "https://www.ftsynergist.com/sustainability",
+  }
 };
 
 export default function SustainabilityLayout({
