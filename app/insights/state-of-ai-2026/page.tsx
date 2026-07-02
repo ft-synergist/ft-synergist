@@ -8,8 +8,6 @@ import { ArrowRight, Download, Lock, CheckCircle2, X, TrendingUp, Factory, Zap, 
 const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    if (!isOpen) return null;
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -31,7 +29,6 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                 })
             });
 
-            // Triggers the download of your exact PDF report asset
             window.open("/ft-synergist-state-of-ai-southeast-asia-2026-report.pdf", "_blank");
             onClose();
         } catch (error) {
@@ -120,27 +117,8 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 export default function StateOfAIReportPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const reportSchema = {
-        "@context": "https://schema.org",
-        "@type": "Report",
-        "name": "State of AI in Southeast Asia 2026: A Strategic Analysis for Scaling Enterprises",
-        "description": "Enterprise market velocity, regulatory frameworks, and AI code governance patterns within Singapore, Indonesia, and Vietnam corridors.",
-        "author": {
-            "@type": "Organization",
-            "name": "FT Synergist"
-        },
-        "datePublished": "2026-01-02"
-    };
-
     return (
         <div className="bg-black min-h-screen text-white font-sans antialiased selection:bg-[#8F801B]/20 w-full overflow-x-hidden">
-
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
-            />
-
-            <DownloadGate isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
             {/* 1. HERO CONTEXT */}
             <header className="relative pt-40 pb-20 px-6 text-center max-w-4xl mx-auto space-y-6">
@@ -154,7 +132,7 @@ export default function StateOfAIReportPage() {
                 </h1>
 
                 <p className="text-base md:text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-                    From experimental pilot architectures to mission-critical economic utility[cite: 4, 11, 12]. A strategic analysis built to weaponize proprietary enterprise data networks across SGP, IDN, and VNM[cite: 3, 6, 15].
+                    From experimental pilot frameworks to mission-critical economic utility. A strategic analysis engineered to monetize proprietary enterprise data networks across Singapore, Indonesia, and Vietnam.
                 </p>
 
                 <div className="pt-4">
@@ -173,20 +151,20 @@ export default function StateOfAIReportPage() {
 
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8 border border-neutral-800 p-8 md:p-12 bg-neutral-950/40 backdrop-blur-sm">
                     <div className="space-y-4 text-left">
-                        <h3 className="text-xs font-bold uppercase tracking-widest text-[#8F801B]">Economic Velocity</h3>
+                        <h3 className="text-xs font-bold uppercase tracking-widest text-[#8F801B]">Market Velocity</h3>
                         <p className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-                            $8.22 Billion <span className="text-sm font-light text-neutral-400 block mt-1">Valued regional Al footprint transitioning into a $1 Trillion GDP contribution engine by 2030[cite: 13, 36, 37].</span>
+                            $8.22 Billion <span className="text-sm font-light text-neutral-400 block mt-1">Active regional AI infrastructure footprint, projected to scale rapidly toward a $1 Trillion economic GDP contribution by 2030.</span>
                         </p>
                     </div>
                     <div className="space-y-4 text-left border-t md:border-t-0 md:border-l border-neutral-900 pt-6 md:pt-0 md:pl-8">
-                        <h3 className="text-xs font-bold uppercase tracking-widest text-[#8F801B]">Budget Allocation Shifts</h3>
+                        <h3 className="text-xs font-bold uppercase tracking-widest text-[#8F801B]">Strategic Urgency</h3>
                         <p className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-                            +67% <span className="text-sm font-light text-neutral-400 block mt-1">Aggressive multi-year increase in enterprise Al infrastructure budgets[cite: 14, 38, 39]. The window to build a proprietary data moat is closing fast[cite: 14, 17].</span>
+                            +67% <span className="text-sm font-light text-neutral-400 block mt-1">Aggressive multi-year surge in enterprise AI budgets. Bypassing generic commodity models is required to build a defensible operational moat.</span>
                         </p>
                     </div>
                 </section>
 
-                {/* 3. ADVISORY BREAKDOWNS (THE STAGE 1 TEARDOWN) */}
+                {/* 3. ADVISORY BREAKDOWNS */}
                 <section className="space-y-20">
 
                     {/* Section 1: The Three-Speed ASEAN Matrix */}
@@ -194,42 +172,42 @@ export default function StateOfAIReportPage() {
                         <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Strategic Pillar 01</span>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">The Three-Speed ASEAN Compliance Wall</h2>
                         <p className="text-neutral-400 leading-relaxed text-base">
-                            Generic commodity software platforms fail completely within Southeast Asian operational structures[cite: 16]. Scaling cross-border networks requires specific navigation through divergent localized regulatory frameworks[cite: 15, 29]:
+                            Generic commodity software platforms fail completely within Southeast Asian operational structures. Only 1% of firms achieve true operational AI maturity, stalled by deep cross-border regulatory fragmentation across primary geographic corridors:
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
                             <div className="p-6 bg-neutral-950 border border-neutral-900">
-                                <h4 className="text-white font-bold text-sm tracking-wide mb-2">Singapore Hub</h4>
-                                <p className="text-xs text-neutral-400 leading-relaxed m-0">Mature governance paradigms powered by the Model Framework (NAIS 2.0)[cite: 44]. Focus targets high-value, protected deployment deployments[cite: 64, 68].</p>
+                                <h4 className="text-white font-bold text-sm tracking-wide mb-2">Singapore (SGP)</h4>
+                                <p className="text-xs text-neutral-500 leading-relaxed mb-3">Mature operational frameworks directed by the Model Governance Framework (NAIS 2.0). Captures 55% of total regional funding velocity ($2.4B volume hub).</p>
                             </div>
                             <div className="p-6 bg-neutral-950 border border-neutral-900">
-                                <h4 className="text-white font-bold text-sm tracking-wide mb-2">Indonesia Base</h4>
-                                <p className="text-xs text-neutral-400 leading-relaxed m-0">Hyper-scale physical infrastructure plays targeting 900MW of data center capacity[cite: 53, 83, 84]. Managed via strict sectoral guidelines[cite: 44].</p>
+                                <h4 className="text-white font-bold text-sm tracking-wide mb-2">Indonesia (IDN)</h4>
+                                <p className="text-xs text-neutral-500 leading-relaxed mb-3">Hyper-scale physical infrastructure play targeting 900MW of data center capacity. Dominated by sectoral OJK fintech guidelines and credit automation pipelines.</p>
                             </div>
                             <div className="p-6 bg-neutral-950 border border-neutral-900">
-                                <h4 className="text-white font-bold text-sm tracking-wide mb-2">Vietnam Sector</h4>
-                                <p className="text-xs text-neutral-400 leading-relaxed m-0">Hyper-growth parameters restricted by a rigid Data Law mandate[cite: 93, 95]. Requires mandatory Cross-Border Transfer Assessments (CBTIA)[cite: 44, 96].</p>
+                                <h4 className="text-white font-bold text-sm tracking-wide mb-2">Vietnam (VNM)</h4>
+                                <p className="text-xs text-neutral-500 leading-relaxed mb-3">Hyper-growth parameters (capital inflows up 169%) governed by a strict domestic cloud mandate and rigid Cross-Border Transfer Impact Assessments (CBTIA).</p>
                             </div>
                         </div>
 
                         <p className="text-neutral-400 text-sm pt-4">
-                            Singaporean firms leveraging tech transformation vectors can check grant access paths by coordinating directly through an approved SCMC management advisor via our dedicated <strong><a href="/ai-digitalisation" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top AI digitalisation consultant</a></strong> node[cite: 72, 74].
+                            Eligible Singapore SMEs can leverage official government frameworks to defray 50% of the qualifying costs required to execute an AI-powered technological leap. Coordinate with a certified SCMC advisor via our dedicated <strong><a href="/ai-digitalisation" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top AI digitalisation consultant</a></strong> pipeline.
                         </p>
                     </div>
 
                     {/* Section 2: Building the Intangible Asset Moat */}
                     <div className="space-y-4 border-l-2 border-[#8F801B] pl-6 md:pl-8 text-left">
                         <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Strategic Pillar 02</span>
-                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Linguistic Defense Moats & Regional LLMs</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Linguistic Moats & Fine-Tuned Regional LLMs</h2>
                         <p className="text-neutral-400 leading-relaxed text-base">
-                            Relying on standard global commodity software models exposes scaling firms to significant linguistic friction, as basic tools fail to map the nuanced data dialects of the ASEAN theater[cite: 106, 107]. True defensive market scale is built by taking proprietary organizational data assets and systematically fine-tuning them over hyper-local, regional frameworks (such as the SEA-LION foundation layer)[cite: 31, 109]. This produces an airtight linguistic moat that cross-border competitors cannot copy[cite: 110].
+                            Standard global commodity engines completely fail to accurately extract meaning from the 1,200+ distinct languages and localized regional dialects that define the ASEAN digital economy. True commercial scale requires local enterprises to systematically fine-tune domain-specific workflows over custom regional open models (such as the SEA-LION architecture). By anchoring algorithms to hyper-local context, firms build a linguistic defense perimeter that global competitors cannot dismantle.
                         </p>
                         <div className="bg-neutral-950 border border-neutral-900 p-8 max-w-4xl mt-4">
                             <h4 className="font-bold text-white text-xs uppercase tracking-widest flex items-center gap-2 mb-4">
                                 <ShieldCheck className="w-4 h-4 text-[#8F801B]" /> Defensible IP Strategy Takeaway
                             </h4>
                             <p className="text-neutral-400 text-sm leading-relaxed m-0 text-left">
-                                Protecting these fine-tuned workflows demands a secure legal vault to prevent backend parameter leakage[cite: 14]. Before exporting technology pipelines across regional accelerators, work with a certified <strong><a href="/ip-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top IP consultant in Singapore</a></strong> to structure your defensible global trademark, landscaping, and licensing frameworks.
+                                Securing these highly tailored algorithmic data layers requires robust, formalized asset mapping to prevent code and weight theft. Before exporting technology pipelines across regional accelerators, work with a certified <strong><a href="/ip-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top IP consultant in Singapore</a></strong> to structure your defensible global trademark, landscaping, and licensing frameworks.
                             </p>
                         </div>
                     </div>
@@ -239,10 +217,10 @@ export default function StateOfAIReportPage() {
                         <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Strategic Pillar 03</span>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">The Self-Taught Paradox & Code Governance</h2>
                         <p className="text-neutral-400 leading-relaxed text-base">
-                            While over 72% of regional technology development assets are self-taught—driving rapid implementation velocity—it introduces massive long-term technical debt, architectural fragmentation, and security gaps[cite: 164, 165, 166, 167]. Unstructured code bases routinely trigger regulatory failures when subjected to compliance audits in mature jurisdictions[cite: 168]. Implementing standardized automated tracking structures turns technical liability into a scalable corporate asset[cite: 170].
+                            While over 72% of regional technology development assets operate as self-taught engineers—driving exceptional initial deployment speed—this unstructured execution creates severe technical debt, architectural fragmentation, and security gaps. These vulnerabilities trigger immediate compliance failures when exposed to institutional risk assessments. Implementing rigid, certified code governance audits converts technical liability into standard, highly fundable corporate assets.
                         </p>
                         <p className="text-neutral-400 text-sm">
-                            SMEs looking to safely seed these advanced tools within new geographical networks can secure up to 70% corporate advisory backing via the enhanced Enterprise Singapore <strong><a href="/mra-grant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">MRA grant</a></strong> pipeline[cite: 159, 161].
+                            Singaporean firms scaling workflows into new geographic sectors like Indonesia or Vietnam can utilize official Enterprise Singapore funding to offset up to 50% of qualifying consulting setup costs via our enhanced <strong><a href="/mra-grant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">MRA grant</a></strong> framework.
                         </p>
                     </div>
 
@@ -253,7 +231,7 @@ export default function StateOfAIReportPage() {
                     <Download className="w-8 h-8 text-[#8F801B] mx-auto" />
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Unlock the 17-Page Strategic Analysis</h2>
                     <p className="text-neutral-400 text-sm max-w-lg mx-auto leading-relaxed">
-                        Access complete capital velocity charts, the comprehensive ASEAN-3 Scaling Readiness Matrix, and GTM accelerator access roadmaps[cite: 43, 48, 155].
+                        Access complete capital concentration charts, the comprehensive ASEAN-3 AI Scaling Readiness Matrix, and direct FastTrack AI accelerator roadmaps.
                     </p>
 
                     <div className="pt-2">
