@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function InsightsPage() {
-  // --- SEO PART 1: THE DATA DEFINITION (Must be here at the top) ---
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -42,8 +41,7 @@ export default function InsightsPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans">
-      
-      {/* --- SEO PART 2: THE SCRIPT INJECTION (Must be inside the return) --- */}
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -56,7 +54,7 @@ export default function InsightsPage() {
             FT Synergist Intelligence
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-8">
-            Strategic Intelligence for <br/>
+            Strategic Intelligence for <br />
             <span className="text-[#8F801B]">Scaling Enterprises</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
@@ -68,23 +66,23 @@ export default function InsightsPage() {
       {/* 2. LATEST FEATURED REPORT */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-12 relative z-10">
         <div className="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col lg:flex-row min-h-[450px]">
-          
+
           {/* Left: Content */}
           <div className="p-10 lg:p-14 lg:w-1/2 flex flex-col justify-center">
             <div className="flex items-center space-x-2 text-[#8F801B] font-bold text-xs uppercase tracking-widest mb-6">
               <span className="w-2 h-2 rounded-full bg-[#8F801B]"></span>
               <span>Latest Case Study</span>
             </div>
-            
+
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               The "Wang Lao Ji" Pivot: A Blueprint for Global Expansion
             </h2>
             <p className="text-lg text-gray-500 mb-8 leading-relaxed">
               How a 197-year-old heritage brand grew profits by 15.87% by reinventing itself for the West. A masterclass in localization for Singapore SMEs.
             </p>
-            
+
             <div>
-              <Link 
+              <Link
                 href="/insights/wang-lao-ji-global-expansion-strategy"
                 className="inline-flex items-center px-8 py-4 bg-[#8F801B] text-white font-bold rounded-md hover:bg-[#7a6d17] transition-all shadow-lg"
               >
@@ -96,15 +94,14 @@ export default function InsightsPage() {
 
           {/* Right: HERO IMAGE */}
           <div className="relative lg:w-1/2 min-h-[300px] lg:min-h-full bg-gray-100">
-             <Image 
-               src="/walovi-hero.jpg" 
-               alt="Wang Lao Ji Red Can vs Blue Can Strategy" 
-               fill
-               className="object-cover"
-               priority={true}
-             />
-             {/* Optional: Subtle Overlay to ensure it blends nicely */}
-             <div className="absolute inset-0 bg-black/10"></div>
+            <Image
+              src="/walovi-hero.jpg"
+              alt="Wang Lao Ji Red Can vs Blue Can Strategy"
+              fill
+              className="object-cover"
+              priority={true}
+            />
+            <div className="absolute inset-0 bg-black/10"></div>
           </div>
         </div>
       </section>
@@ -113,7 +110,7 @@ export default function InsightsPage() {
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12">
-            
+
             {/* Card 1 */}
             <div className="group">
               <div className="border-b-2 border-gray-100 pb-4 mb-6 group-hover:border-[#8F801B] transition-colors">
