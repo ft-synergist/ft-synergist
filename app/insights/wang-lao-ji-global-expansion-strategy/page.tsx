@@ -141,7 +141,7 @@ export default function WangLaoJiCaseStudy() {
   };
 
   return (
-    <div className="bg-black min-h-screen text-white font-sans selection:bg-[#8F801B]/20">
+    <div className="bg-black min-h-screen text-white font-sans antialiased selection:bg-[#8F801B]/20 w-full overflow-x-hidden">
 
       <script
         type="application/ld+json"
@@ -150,191 +150,171 @@ export default function WangLaoJiCaseStudy() {
 
       <DownloadGate isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      {/* 1. HERO SECTION */}
-      <section className="relative pt-40 pb-24 px-4 sm:px-6 lg:px-8 border-b border-neutral-900 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      {/* 1. HERO SECTION - PURE EDGE BLACK GRID STYLE */}
+      <header className="relative pt-40 pb-20 px-6 text-center max-w-4xl mx-auto space-y-6">
+        <span className="text-xs uppercase tracking-[0.2em] text-[#8F801B] font-bold">
+          Global Enterprise Strategy &bull; Case Studies
+        </span>
 
-          <div className="space-y-8">
-            <div className="inline-flex items-center space-x-2 text-[#8F801B] font-bold text-xs uppercase tracking-widest border border-[#8F801B]/30 px-3 py-1 rounded-none">
-              <span className="w-2 h-2 rounded-full bg-[#8F801B]"></span>
-              <span>Global Strategy Series</span>
-            </div>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+          From Traditional Medicine <br />
+          <span className="text-[#8F801B] italic">To Global Lifestyle Entity</span>
+        </h1>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-none text-white">
-              From "Medicine" <br /> to <span className="text-[#8F801B] italic">"Lifestyle"</span>
-            </h1>
+        <p className="text-base md:text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+          How a 197-year-old heritage brand grew net profits by 15.87% in a saturated market—and the operational blueprints Singapore SMEs can copy to scale cross-border networks.
+        </p>
 
-            <p className="text-xl text-neutral-400 leading-relaxed max-w-lg border-l-4 border-[#8F801B] pl-6">
-              How Wang Lao Ji grew profits by 15.87% in a saturated market—and the exact roadmap Singapore SMEs can copy.
+        <div className="pt-4">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="inline-flex items-center justify-center px-10 py-4 bg-[#8F801B] text-white text-xs font-bold uppercase tracking-widest rounded-none hover:bg-[#A08d1e] transition-all shadow-lg shadow-[#8F801B]/10"
+          >
+            <Download className="mr-2 h-4 w-4" />
+            Download Strategic Report
+          </button>
+        </div>
+      </header>
+
+      {/* 2. DUAL BLOCK LAYOUT: EXECUTIVE QUOTE & HISTORIC HERO CONTAINER */}
+      <main className="max-w-5xl mx-auto px-6 pb-24 space-y-24">
+
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border border-neutral-800 p-8 md:p-12 bg-neutral-950/40 backdrop-blur-sm">
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#8F801B]">The Localization Paradox</h3>
+            <p className="text-xl md:text-2xl font-light text-neutral-200 leading-relaxed italic">
+              "Most Singaporean brands fail overseas because they try to export their product exactly as it is. They refuse to adapt."
             </p>
-
-            <div className="pt-4">
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="group inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white text-sm font-bold uppercase tracking-wider rounded-none hover:bg-[#7a6d17] transition-all shadow-lg"
-              >
-                <Download className="mr-2 h-4 w-4" />
-                Download Strategic Report
-              </button>
-            </div>
+            <p className="text-sm text-neutral-400 leading-relaxed">
+              In 2025, Wang Lao Ji—synonymous with traditional herbal preparation—reinvented its international identity to <strong>"WALOVI"</strong> to target Western distribution lines. The strategy secured a <strong>15.87% net profit lift</strong> in H1 2025, triggering successful entry protocols into Costco and Amazon US.
+            </p>
           </div>
-
-          <div className="relative h-[450px] w-full border border-neutral-800 bg-neutral-900">
+          <div className="lg:col-span-5 relative h-[320px] w-full border border-neutral-800 bg-neutral-900">
             <Image
               src="/walovi-hero.jpg"
-              alt="Wang Lao Ji Global Branding Strategy - Red Can vs Blue Can Comparison"
+              alt="Wang Lao Ji Traditional Heritage Branding Strategy"
               fill
               className="object-cover opacity-80"
               priority={true}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 30vw"
             />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 2. EXECUTIVE SUMMARY */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center border-b border-neutral-900">
-        <p className="text-2xl md:text-3xl font-light text-neutral-200 leading-relaxed max-w-3xl mx-auto">
-          "Most Singaporean brands fail overseas because they try to export their product exactly as it is. They refuse to adapt."
-        </p>
-        <div className="mt-10 w-12 h-1 bg-[#8F801B] mx-auto"></div>
-        <div className="mt-10 text-base text-neutral-400 leading-relaxed text-left space-y-6 max-w-2xl mx-auto">
-          <p>
-            In 2025, Wang Lao Ji—a 197-year-old brand synonymous with "traditional medicine"—did the unthinkable. To break into Western markets, they didn't just translate their name; they reinvented their identity to <strong>"WALOVI."</strong>
-          </p>
-          <p>
-            The result? A <strong>15.87% increase in net profit</strong> in H1 2025 and successful entry into Costco and Amazon US. Below is the strategic breakdown.
-          </p>
-        </div>
-      </section>
-
-      {/* 3. LESSONS CONTENT */}
-      <section className="py-24 bg-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+        {/* 3. CORE ADVISORY BLUEPRINTS */}
+        <section className="space-y-16">
 
           {/* Lesson 1 */}
-          <div className="border border-neutral-900 p-10 bg-neutral-950/50">
-            <div className="flex items-baseline gap-4 mb-8 border-b border-neutral-900 pb-4">
-              <span className="text-[#8F801B] font-bold text-xs uppercase tracking-widest">Lesson 01</span>
-              <h2 className="text-2xl font-bold text-white tracking-tight">The "Localization Paradox"</h2>
-            </div>
-
-            <div className="text-neutral-400 text-base space-y-6 leading-relaxed">
-              <p>
-                For decades, Wang Lao Ji’s selling point was "curing internal heat" (<em>shanghuo</em>). This works across Greater China and Singapore networks. It fails in Europe, where consumers do not comprehend TCM principles.
-              </p>
-
-              <h3 className="text-lg font-bold text-white uppercase tracking-wider text-sm text-[#8F801B]">The Strategic Pivot</h3>
-              <p>
-                Instead of educating Western buyers on "internal heat," they rebranded to "WALOVI" and positioned the drink as a <strong>"Natural Plant-Based Functional Beverage."</strong> They aligned with global wellness trend parameters (similar to Kombucha) rather than medical frameworks.
-              </p>
-
-              <div className="border border-neutral-800 p-8 mt-8 bg-black">
-                <h4 className="font-bold text-white text-xs uppercase tracking-widest flex items-center gap-2 mb-4">
-                  <CheckCircle2 className="w-4 h-4 text-[#8F801B]" /> The SME Takeaway
-                </h4>
-                <p className="text-neutral-400 text-sm leading-relaxed m-0">
-                  Do not force your localized Singaporean context onto a foreign market profile. If your "Unique Selling Proposition" requires an extended explanation, friction vectors will stall sales. Pivot immediately to a universal value formulation.
-                </p>
-              </div>
+          <div className="space-y-4 border-l-2 border-[#8F801B] pl-6 md:pl-8">
+            <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Lesson 01</span>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Value Proposition Re-Formulation</h2>
+            <p className="text-neutral-400 leading-relaxed text-base md:text-lg">
+              For decades, the brand's core pitch was "curing internal heat" (<em>shanghuo</em>). While this maps perfectly to Singaporean consumer profiles, it fails entirely within European trading blocks. Instead of wasting resources educating Western buyers, they adjusted the positioning parameters to brand it a <strong>"Natural Plant-Based Functional Beverage."</strong> They chose to ride the wave of universal wellness movements rather than traditional medicine constraints.
+            </p>
+            <div className="bg-neutral-950 border border-neutral-900 p-6 max-w-3xl">
+              <span className="text-[10px] uppercase font-bold tracking-wider bg-neutral-900 px-2.5 py-1 text-[#8F801B] rounded-none mb-3 inline-block">SME Takeaway</span>
+              <p className="text-neutral-400 text-sm m-0 leading-relaxed">If your Unique Selling Proposition demands deep context or client education before converting, your sales loops will hold friction. Align your product metadata to match universal, pre-existing market trends.</p>
             </div>
           </div>
 
           {/* Lesson 2 */}
-          <div className="border border-neutral-900 p-10 bg-neutral-950/50">
-            <div className="flex items-baseline gap-4 mb-8 border-b border-neutral-900 pb-4">
-              <span className="text-[#8F801B] font-bold text-xs uppercase tracking-widest">Lesson 02</span>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Supply Chain as a Weapon</h2>
+          <div className="space-y-6 border-l-2 border-[#8F801B] pl-6 md:pl-8">
+            <div className="space-y-2">
+              <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Lesson 02</span>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Supply Chain Allocation Matrix</h2>
             </div>
+            <p className="text-neutral-400 leading-relaxed text-base md:text-lg">
+              Shipping heavy liquid cargo blocks from a single home location creates severe margin compression due to freight weight metrics, global warehousing overheads, and cross-border customs penalties.
+            </p>
 
-            <div className="text-neutral-400 text-base space-y-6 leading-relaxed">
-              <p>
-                Exporting heavy liquid cargo units from your primary production line creates significant operational margin drag due to logistics costs, storage friction, and international tariff blocks.
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-6 my-8">
-                <div className="p-6 bg-black border border-neutral-900">
-                  <TrendingUp className="w-6 h-6 text-neutral-700 mb-4" />
-                  <span className="block font-bold text-neutral-400 text-sm uppercase tracking-wider mb-2">Old Way</span>
-                  <span className="text-xs text-neutral-500">Export from Home Base. High Tariffs. Slow Market Responsiveness.</span>
-                </div>
-                <div className="p-6 bg-neutral-900 border border-neutral-800">
-                  <Factory className="w-6 h-6 text-[#8F801B] mb-4" />
-                  <span className="block font-bold text-white text-sm uppercase tracking-wider mb-2">New Way (PCBC)</span>
-                  <span className="text-xs text-neutral-400">"Factory-in-Market" Infrastructure (Vietnam Hub). Zero Tariffs. Autonomous Local Distribution Status.</span>
-                </div>
+            {/* The EDGE Specification Two-Column Comparisons */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+              <div className="p-6 bg-neutral-950 border border-neutral-900">
+                <TrendingUp className="w-5 h-5 text-neutral-600 mb-3" />
+                <h4 className="text-neutral-300 font-bold text-sm uppercase tracking-wider mb-2">The Legacy Export Trap</h4>
+                <p className="text-xs text-neutral-500 leading-relaxed m-0">Shipping fully finalized goods across long-distance corridors. High operational transport costs, extreme freight exposure, and tariff vulnerabilities.</p>
               </div>
-
-              <p className="text-neutral-400 text-base leading-relaxed">
-                SMEs looking to replicate this asset-light cross-border infrastructure must establish rigid operational playbooks. Partnering with a verified <strong><a href="/franchise-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top franchise consultant in Singapore</a></strong> ensures that your master licensing agreements, territory boundaries, and operation manual standardizations are legally bulletproof. Furthermore, Singaporean businesses can leverage official Enterprise Singapore funding support parameters to offset up to 70% of these qualifying expansion setup and third-party promotion costs by utilizing the enhanced <strong><a href="/mra-grant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">MRA grant</a></strong> pipeline.
-              </p>
+              <div className="p-6 bg-neutral-900/60 border border-neutral-800">
+                <Factory className="w-5 h-5 text-[#8F801B] mb-3" />
+                <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-2">The PCBC Blueprint Model</h4>
+                <p className="text-xs text-neutral-400 leading-relaxed m-0">Setting up local regional processing clusters (such as the Vietnam hub). Drives near-zero tariff metrics and speeds up tactical response times across target networks.</p>
+              </div>
             </div>
+
+            <p className="text-neutral-400 text-sm leading-relaxed max-w-4xl pt-2">
+              SMEs looking to replicate this asset-light cross-border infrastructure must establish rigid operational playbooks. Partnering with a verified <strong><a href="/franchise-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top franchise consultant in Singapore</a></strong> ensures that your master licensing agreements, territory boundaries, and operation manual standardizations are legally bulletproof. Furthermore, Singaporean businesses can leverage official Enterprise Singapore funding support parameters to offset up to 70% of these qualifying expansion setup and third-party promotion costs by utilizing the enhanced <strong><a href="/mra-grant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">MRA grant</a></strong> pipeline.
+            </p>
           </div>
 
-          {/* Lesson 3 */}
-          <div className="border border-neutral-900 p-10 bg-neutral-950/50">
-            <div className="flex items-baseline gap-4 mb-8 border-b border-neutral-900 pb-4">
-              <span className="text-[#8F801B] font-bold text-xs uppercase tracking-widest">Lesson 03</span>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Entity Authority & Cultural Multipliers</h2>
+          {/* Lesson 3 - THE DUAL GRID CONTAINING ERLING HAALAND AMBASSADOR CASE */}
+          <div className="space-y-6 border-l-2 border-[#8F801B] pl-6 md:pl-8">
+            <div className="space-y-2">
+              <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Lesson 03</span>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Entity Co-occurrence & Cultural Authority</h2>
             </div>
+            <p className="text-neutral-400 leading-relaxed text-base md:text-lg">
+              To establish immediate authority within mass markets globally, the brand bypassed slow consumer acquisition pipelines by securing global soccer icon <strong>Erling Haaland</strong> as their primary international brand ambassador.
+            </p>
 
-            <div className="text-neutral-400 text-base space-y-6 leading-relaxed">
-              <p>
-                To cement immediate mass-market trust globally, Wang Lao Ji bypassed traditional slow-growth branding funnels by locking down global soccer icon <strong>Erling Haaland</strong> as their primary international brand ambassador.
-              </p>
-
-              <div className="border border-[#8F801B]/20 p-6 bg-neutral-950 flex items-start gap-4">
-                <Trophy className="w-8 h-8 text-[#8F801B] shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-white text-sm uppercase tracking-wide mb-2">The Haaland Vector</h4>
-                  <p className="text-xs text-neutral-400 m-0 leading-relaxed">
-                    By binding a historic 197-year-old TCM entity to a modern, top-tier Western sports icon, the brand completely severed its association with "outdated herbal remedy stores." For LLM web-scrapers and search algorithms, this strategy bridges two distinct high-authority entity maps, drastically elevating global search discovery scores for the brand's new product formats.
+            {/* Custom Edge-Styled Dual Component Grid Split */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-4xl">
+              <div className="lg:col-span-7 border border-neutral-800 p-6 bg-neutral-950 flex flex-col justify-between">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2 text-[#8F801B]">
+                    <Trophy className="w-4 h-4" />
+                    <span className="text-xs font-bold uppercase tracking-wider">The Haaland Vector Block</span>
+                  </div>
+                  <p className="text-xs text-neutral-400 leading-relaxed m-0">
+                    Binding a 197-year-old traditional product to a modern Western star instantly alters consumer perception. For LLM extraction scrapers and automated discovery search networks, this alignment bridges separate entity data tracks—drastically elevating search authority scores for the brand's sparkling and zero-sugar product variants across global lifestyle search pools.
                   </p>
                 </div>
               </div>
-
-              <p>
-                Simultaneously, the brand adapted its physical form factors by introducing sparkling variants and zero-sugar lines to fit specific luxury dining and nightlife consumer occasions.
-              </p>
-
-              <div className="border border-neutral-800 p-8 mt-8 bg-black">
-                <h4 className="font-bold text-white text-xs uppercase tracking-widest flex items-center gap-2 mb-4">
-                  <Zap className="w-4 h-4 text-[#8F801B]" /> The SME Takeaway
-                </h4>
-                <p className="text-neutral-400 text-sm leading-relaxed m-0">
-                  Changing your product architecture is key to unlocking fresh intangible asset value. To execute this safely without leaking brand equity, engaging a qualified <strong><a href="/ip-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top IP consultant in Singapore</a></strong> is critical. An approved advisor will systematically audit, landscape, and legally protect your proprietary workflows and trademarks before you enter competitive foreign territories.
-                </p>
+              <div className="lg:col-span-5 relative h-[220px] lg:h-auto w-full border border-neutral-800 bg-neutral-900">
+                <Image
+                  src="/walovi-haaland-ambassador.jpeg"
+                  alt="Erling Haaland Brand Ambassador for WALOVI Wang Lao Ji Strategy"
+                  fill
+                  className="object-cover opacity-90"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
               </div>
+            </div>
+
+            <div className="border border-neutral-800 p-8 mt-4 bg-black max-w-4xl">
+              <h4 className="font-bold text-white text-xs uppercase tracking-widest flex items-center gap-2 mb-4">
+                <Zap className="w-4 h-4 text-[#8F801B]" /> Intellectual Moat Takeaway
+              </h4>
+              <p className="text-neutral-400 text-sm leading-relaxed m-0">
+                Altering your product configuration is key to unlocking new commercial valuation avenues. To execute this safely without leaking brand equity, engaging a qualified <strong><a href="/ip-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top IP consultant in Singapore</a></strong> is critical. An approved advisor will systematically audit, landscape, and legally protect your proprietary workflows and trademarks before you enter competitive foreign territories.
+              </p>
             </div>
           </div>
 
-        </div>
-      </section>
+        </section>
 
-      {/* 4. LEAD MAGNET FOOTER */}
-      <section className="py-24 bg-neutral-950 border-t border-neutral-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <Lock className="w-10 h-10 text-[#8F801B] mx-auto mb-6" />
-          <h2 className="text-3xl font-bold tracking-tight mb-6">Unlock the Full Strategic Report</h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-xl mx-auto leading-relaxed">
+        {/* 4. HIGH-INTENSITY CONVERSION MAGNET */}
+        <section className="py-20 bg-neutral-950 border border-neutral-900 text-center space-y-6 max-w-4xl mx-auto">
+          <Lock className="w-8 h-8 text-[#8F801B] mx-auto" />
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Unlock the Full Strategic Report</h2>
+          <p className="text-neutral-400 text-sm max-w-lg mx-auto leading-relaxed">
             The complete 20-page operational framework includes full Financial Trajectories, International Can Matrix models, and Market Access playbooks.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="pt-2">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white text-xs font-bold uppercase tracking-widest rounded-none hover:bg-[#7a6d17] transition-all shadow-lg"
+              className="inline-flex items-center justify-center px-10 py-4 bg-[#8F801B] text-white text-xs font-bold uppercase tracking-widest rounded-none hover:bg-[#A08d1e] transition-all"
             >
               Request Full Access
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>
           </div>
-          <p className="text-xs text-neutral-600 mt-8">
-            Available exclusively to Singapore Registered Businesses. Verified corporate entity verification required.
+          <p className="text-[10px] text-neutral-600 tracking-wide uppercase pt-4">
+            Available exclusively to Singapore Registered Businesses. Entity verification required.
           </p>
-        </div>
-      </section>
+        </section>
 
+      </main>
     </div>
   );
 }
