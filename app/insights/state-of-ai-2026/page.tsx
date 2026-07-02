@@ -29,6 +29,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                 })
             });
 
+            // Triggers the download of your exact PDF report asset from your public folder
             window.open("/ft-synergist-state-of-ai-southeast-asia-2026-report.pdf", "_blank");
             onClose();
         } catch (error) {
@@ -41,11 +42,11 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md animate-in fade-in duration-200">
-            <div className="relative w-full max-w-md bg-neutral-900 rounded-none shadow-2xl overflow-hidden border border-neutral-800 border-t-4 border-[#8F801B]">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm animate-in fade-in duration-200">
+            <div className="relative w-full max-w-md bg-white rounded-none shadow-2xl overflow-hidden border-t-4 border-[#8F801B]">
 
                 <div className="bg-black p-8 text-center border-b border-neutral-800">
-                    <button onClick={onClose} className="absolute top-4 right-4 text-neutral-500 hover:text-white transition-colors">
+                    <button onClick={onClose} className="absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors">
                         <X size={24} />
                     </button>
                     <div className="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-[#8F801B]/10 border border-[#8F801B]/20">
@@ -57,37 +58,37 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                     </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="p-8 space-y-5 bg-black">
+                <form onSubmit={handleSubmit} className="p-8 space-y-5 bg-white">
                     <div>
-                        <label className="block text-xs font-bold text-neutral-400 uppercase tracking-widest mb-2">Full Name</label>
+                        <label className="block text-xs font-bold text-black uppercase tracking-widest mb-2">Full Name</label>
                         <input
                             required
                             name="name"
                             type="text"
                             placeholder="e.g. Frederick Tan"
-                            className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-white focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none placeholder-neutral-600"
+                            className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 text-black focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-xs font-bold text-neutral-400 uppercase tracking-widest mb-2">Work Email</label>
+                        <label className="block text-xs font-bold text-black uppercase tracking-widest mb-2">Work Email</label>
                         <input
                             required
                             name="email"
                             type="email"
                             placeholder="name@company.com"
-                            className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-white focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none placeholder-neutral-600"
+                            className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 text-black focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-xs font-bold text-neutral-400 uppercase tracking-widest mb-2">Company Name</label>
+                        <label className="block text-xs font-bold text-black uppercase tracking-widest mb-2">Company Name</label>
                         <input
                             required
                             name="company"
                             type="text"
                             placeholder="e.g. FT Synergist"
-                            className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-white focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none placeholder-neutral-600"
+                            className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 text-black focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none"
                         />
                     </div>
 
@@ -104,7 +105,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                         )}
                     </button>
 
-                    <p className="text-center text-xs text-neutral-500 mt-4">
+                    <p className="text-center text-xs text-neutral-400 mt-4">
                         Available exclusively to registered regional entities.
                     </p>
                 </form>
@@ -119,6 +120,8 @@ export default function StateOfAIReportPage() {
 
     return (
         <div className="bg-black min-h-screen text-white font-sans antialiased selection:bg-[#8F801B]/20 w-full overflow-x-hidden">
+
+            <DownloadGate isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
             {/* 1. HERO CONTEXT */}
             <header className="relative pt-40 pb-20 px-6 text-center max-w-4xl mx-auto space-y-6">
@@ -172,83 +175,12 @@ export default function StateOfAIReportPage() {
                         <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Strategic Pillar 01</span>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">The Three-Speed ASEAN Compliance Wall</h2>
                         <p className="text-neutral-400 leading-relaxed text-base">
-                            Generic commodity software platforms fail completely within Southeast Asian operational structures. Only 1% of firms achieve true operational AI maturity, stalled by deep cross-border regulatory fragmentation across primary geographic corridors:
+                            Generic commodity software platforms fail completely within Southeast Asian operational structures. Only 1% of regional firms achieve true operational AI maturity, stalled by deep cross-border regulatory fragmentation:
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-                            <div className="p-6 bg-neutral-950 border border-neutral-900">
-                                <h4 className="text-white font-bold text-sm tracking-wide mb-2">Singapore (SGP)</h4>
-                                <p className="text-xs text-neutral-500 leading-relaxed mb-3">Mature operational frameworks directed by the Model Governance Framework (NAIS 2.0). Captures 55% of total regional funding velocity ($2.4B volume hub).</p>
-                            </div>
-                            <div className="p-6 bg-neutral-950 border border-neutral-900">
-                                <h4 className="text-white font-bold text-sm tracking-wide mb-2">Indonesia (IDN)</h4>
-                                <p className="text-xs text-neutral-500 leading-relaxed mb-3">Hyper-scale physical infrastructure play targeting 900MW of data center capacity. Dominated by sectoral OJK fintech guidelines and credit automation pipelines.</p>
-                            </div>
-                            <div className="p-6 bg-neutral-950 border border-neutral-900">
-                                <h4 className="text-white font-bold text-sm tracking-wide mb-2">Vietnam (VNM)</h4>
-                                <p className="text-xs text-neutral-500 leading-relaxed mb-3">Hyper-growth parameters (capital inflows up 169%) governed by a strict domestic cloud mandate and rigid Cross-Border Transfer Impact Assessments (CBTIA).</p>
-                            </div>
-                        </div>
 
-                        <p className="text-neutral-400 text-sm pt-4">
-                            Eligible Singapore SMEs can leverage official government frameworks to defray 50% of the qualifying costs required to execute an AI-powered technological leap. Coordinate with a certified SCMC advisor via our dedicated <strong><a href="/ai-digitalisation" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top AI digitalisation consultant</a></strong> pipeline.
-                        </p>
-                    </div>
-
-                    {/* Section 2: Building the Intangible Asset Moat */}
-                    <div className="space-y-4 border-l-2 border-[#8F801B] pl-6 md:pl-8 text-left">
-                        <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Strategic Pillar 02</span>
-                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Linguistic Moats & Fine-Tuned Regional LLMs</h2>
-                        <p className="text-neutral-400 leading-relaxed text-base">
-                            Standard global commodity engines completely fail to accurately extract meaning from the 1,200+ distinct languages and localized regional dialects that define the ASEAN digital economy. True commercial scale requires local enterprises to systematically fine-tune domain-specific workflows over custom regional open models (such as the SEA-LION architecture). By anchoring algorithms to hyper-local context, firms build a linguistic defense perimeter that global competitors cannot dismantle.
-                        </p>
-                        <div className="bg-neutral-950 border border-neutral-900 p-8 max-w-4xl mt-4">
-                            <h4 className="font-bold text-white text-xs uppercase tracking-widest flex items-center gap-2 mb-4">
-                                <ShieldCheck className="w-4 h-4 text-[#8F801B]" /> Defensible IP Strategy Takeaway
-                            </h4>
-                            <p className="text-neutral-400 text-sm leading-relaxed m-0 text-left">
-                                Securing these highly tailored algorithmic data layers requires robust, formalized asset mapping to prevent code and weight theft. Before exporting technology pipelines across regional accelerators, work with a certified <strong><a href="/ip-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top IP consultant in Singapore</a></strong> to structure your defensible global trademark, landscaping, and licensing frameworks.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Section 3: Technical Debt & Governance Audits */}
-                    <div className="space-y-4 border-l-2 border-[#8F801B] pl-6 md:pl-8 text-left">
-                        <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Strategic Pillar 03</span>
-                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">The Self-Taught Paradox & Code Governance</h2>
-                        <p className="text-neutral-400 leading-relaxed text-base">
-                            While over 72% of regional technology development assets operate as self-taught engineers—driving exceptional initial deployment speed—this unstructured execution creates severe technical debt, architectural fragmentation, and security gaps. These vulnerabilities trigger immediate compliance failures when exposed to institutional risk assessments. Implementing rigid, certified code governance audits converts technical liability into standard, highly fundable corporate assets.
-                        </p>
-                        <p className="text-neutral-400 text-sm">
-                            Singaporean firms scaling workflows into new geographic sectors like Indonesia or Vietnam can utilize official Enterprise Singapore funding to offset up to 50% of qualifying consulting setup costs via our enhanced <strong><a href="/mra-grant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">MRA grant</a></strong> framework.
-                        </p>
-                    </div>
-
-                </section>
-
-                {/* 4. HIGH-INTENSITY CONVERSION MAGNET */}
-                <section className="py-20 bg-neutral-950 border border-neutral-900 text-center space-y-6 max-w-4xl mx-auto">
-                    <Download className="w-8 h-8 text-[#8F801B] mx-auto" />
-                    <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Unlock the 17-Page Strategic Analysis</h2>
-                    <p className="text-neutral-400 text-sm max-w-lg mx-auto leading-relaxed">
-                        Access complete capital concentration charts, the comprehensive ASEAN-3 AI Scaling Readiness Matrix, and direct FastTrack AI accelerator roadmaps.
-                    </p>
-
-                    <div className="pt-2">
-                        <button
-                            onClick={() => setIsModalOpen(true)}
-                            className="inline-flex items-center justify-center px-10 py-4 bg-[#8F801B] text-white text-xs font-bold uppercase tracking-widest rounded-none hover:bg-[#A08d1e] transition-all"
-                        >
-                            Download Full Report
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </button>
-                    </div>
-                    <p className="text-[10px] text-neutral-600 tracking-wide uppercase pt-4">
-                        Available exclusively to regional business profiles. Verified work email required.
-                    </p>
-                </section>
-
-            </main>
-        </div>
-    );
-}
+                            {/* Column 1: Singapore */}
+                            <div className="p-6 bg-neutral-950 border border-neutral-900 flex flex-col justify-between">
+                                <div>
+                                    <div className="flex items-center gap-3 mb-3"></div>
