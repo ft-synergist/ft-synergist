@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Strategic Insights | FT Synergist",
-  description: "Market-defining research and actionable roadmaps for Singaporean entrepreneurs.",
+  description: "Market-defining research, grant frameworks, and operational roadmaps for Singaporean enterprises.",
 };
 
 export default function InsightsPage() {
@@ -14,7 +14,7 @@ export default function InsightsPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Strategic Insights | FT Synergist",
-    "description": "Market-defining research and actionable roadmaps for Singaporean entrepreneurs.",
+    "description": "Market-defining research, grant frameworks, and operational roadmaps for Singaporean enterprises.",
     "url": "https://www.ftsynergist.com/insights",
     "publisher": {
       "@type": "Organization",
@@ -32,8 +32,14 @@ export default function InsightsPage() {
         {
           "@type": "ListItem",
           "position": 2,
-          "url": "https://www.ftsynergist.com/edg-grant",
+          "url": "https://www.ftsynergist.com/insights/edg-grant-eligibility-guide",
           "name": "EDG Grant Eligibility Guide"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.ftsynergist.com/insights/state-of-ai-2026",
+          "name": "State of AI in Southeast Asia"
         }
       ]
     }
@@ -47,13 +53,13 @@ export default function InsightsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* 1. HERO SECTION - BLACK BRUTALIST ALIGNMENT */}
+      {/* 1. HERO SECTION - PREMIUM NOIR ALIGNMENT */}
       <section className="bg-black pt-40 pb-20 px-6 text-center border-b border-neutral-900">
         <div className="max-w-4xl mx-auto space-y-4">
           <span className="text-[#8F801B] font-bold tracking-[0.2em] uppercase text-xs block">
             FT Synergist Intelligence
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
             Strategic Intelligence for <br />
             <span className="text-[#8F801B] italic">Scaling Enterprises</span>
           </h1>
@@ -74,7 +80,7 @@ export default function InsightsPage() {
               <span>Latest Case Study</span>
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight tracking-tight">
               The "Wang Lao Ji" Pivot: A Blueprint for Global Expansion
             </h2>
             <p className="text-sm text-neutral-400 leading-relaxed">
@@ -93,10 +99,10 @@ export default function InsightsPage() {
           </div>
 
           {/* Right: IMAGE */}
-          <div className="relative lg:w-1/2 min-h-[260px] lg:min-h-full bg-neutral-900 border-t lg:border-t-0 lg:border-l border-neutral-800">
+          <div className="relative lg:w-1/2 min-h-[280px] lg:min-h-full bg-neutral-900 border-t lg:border-t-0 lg:border-l border-neutral-800">
             <Image
               src="/walovi-hero.jpg"
-              alt="Wang Lao Ji Red Can vs Blue Can Strategy"
+              alt="Wang Lao Ji Global Branding Strategy Heritage Cans Layout"
               fill
               className="object-cover opacity-80"
               priority={true}
@@ -111,13 +117,13 @@ export default function InsightsPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            {/* Card 1 */}
+            {/* Card 1: Global Strategy */}
             <div className="border border-neutral-900 p-8 bg-neutral-950/40 flex flex-col justify-between space-y-6 text-left">
               <div className="space-y-3">
                 <span className="text-[#8F801B] font-bold text-[10px] uppercase tracking-widest block">Global Strategy</span>
                 <h4 className="text-lg font-bold text-white tracking-tight">5 Scaling Lessons from Wang Lao Ji</h4>
                 <p className="text-neutral-400 text-xs leading-relaxed">
-                  Why localization beats translation. The PCBC Framework explained natively for fast-moving operations.
+                  Why localization beats translation. The PCBC Framework explained natively for fast-moving cross-border operations.
                 </p>
               </div>
               <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
@@ -125,31 +131,31 @@ export default function InsightsPage() {
               </Link>
             </div>
 
-            {/* Card 2 */}
+            {/* Card 2: Grants & Funding */}
             <div className="border border-neutral-900 p-8 bg-neutral-950/40 flex flex-col justify-between space-y-6 text-left">
               <div className="space-y-3">
                 <span className="text-[#8F801B] font-bold text-[10px] uppercase tracking-widest block">Grants & Funding</span>
                 <h4 className="text-lg font-bold text-white tracking-tight">EDG Grant Eligibility Guide</h4>
                 <p className="text-neutral-400 text-xs leading-relaxed">
-                  How to structure your branding project scope parameters to qualify for enterprise support.
+                  How to structure your branding and core transformation scopes to cleanly qualify for Enterprise Singapore co-funding support.
                 </p>
               </div>
-              <Link href="/edg-grant" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
+              <Link href="/insights/edg-grant-eligibility-guide" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
                 Read Article <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
 
-            {/* Card 3 - TEMPORARY LINK ROUTE FIXED TO AI CAPABILITY RESOURCE VECTOR */}
+            {/* Card 3: Innovation & AI */}
             <div className="border border-neutral-900 p-8 bg-neutral-950/40 flex flex-col justify-between space-y-6 text-left">
               <div className="space-y-3">
                 <span className="text-[#8F801B] font-bold text-[10px] uppercase tracking-widest block">Innovation & AI</span>
                 <h4 className="text-lg font-bold text-white tracking-tight">State of AI in Southeast Asia</h4>
                 <p className="text-neutral-400 text-xs leading-relaxed">
-                  Market implementation report detailing operational data automation trends within regional trading networks.
+                  Deep regional intelligence report outlining proprietary data automation and machine learning workflows within ASEAN enterprise silos.
                 </p>
               </div>
-              <Link href="/ai-digitalisation" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
-                Download Report <ArrowRight className="w-3 h-3" />
+              <Link href="/insights/state-of-ai-2026" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
+                Read Article <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
 
