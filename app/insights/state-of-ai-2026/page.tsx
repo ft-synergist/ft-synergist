@@ -29,7 +29,6 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                 })
             });
 
-            // Triggers the download of your exact PDF report asset from your public folder
             window.open("/ft-synergist-state-of-ai-southeast-asia-2026-report.pdf", "_blank");
             onClose();
         } catch (error) {
@@ -183,4 +182,72 @@ export default function StateOfAIReportPage() {
                             {/* Column 1: Singapore */}
                             <div className="p-6 bg-neutral-950 border border-neutral-900 flex flex-col justify-between">
                                 <div>
-                                    <div className="flex items-center gap-3 mb-3"></div>
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <span className="text-xl inline-block select-none" aria-hidden="true">🇸🇬</span>
+                                        <h4 className="text-white font-bold text-sm tracking-wide">Singapore Hub</h4>
+                                    </div>
+                                    <p className="text-xs text-neutral-400 leading-relaxed m-0">
+                                        Mature governance paradigms directed by the Model Governance Framework (NAIS 2.0). Captures 55% of total regional funding velocity ($2.4B volume hub).
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Column 2: Indonesia */}
+                            <div className="p-6 bg-neutral-950 border border-neutral-900 flex flex-col justify-between">
+                                <div>
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <span className="text-xl inline-block select-none" aria-hidden="true">🇮🇩</span>
+                                        <h4 className="text-white font-bold text-sm tracking-wide">Indonesia Base</h4>
+                                    </div>
+                                    <p className="text-xs text-neutral-400 leading-relaxed m-0">
+                                        Hyper-scale physical infrastructure plays targeting 900MW of data center capacity. Dominated by sectoral OJK fintech guidelines and credit automation pipelines.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Column 3: Vietnam */}
+                            <div className="p-6 bg-neutral-950 border border-neutral-900 flex flex-col justify-between">
+                                <div>
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <span className="text-xl inline-block select-none" aria-hidden="true">🇻🇳</span>
+                                        <h4 className="text-white font-bold text-sm tracking-wide">Vietnam Sector</h4>
+                                    </div>
+                                    <p className="text-xs text-neutral-400 leading-relaxed m-0">
+                                        Hyper-growth parameters (capital inflows up 169%) governed by a strict domestic cloud mandate and rigid Cross-Border Transfer Impact Assessments (CBTIA).
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <p className="text-neutral-400 text-sm pt-4">
+                            Eligible Singapore SMEs can leverage official government frameworks to defray 50% of the qualifying costs required to execute an AI-powered technological leap. Coordinate with a certified SCMC advisor via our dedicated <strong><a href="/ai-digitalisation" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top AI digitalisation consultant</a></strong> pipeline.
+                        </p>
+                    </div>
+
+                    {/* Section 2: Building the Intangible Asset Moat */}
+                    <div className="space-y-4 border-l-2 border-[#8F801B] pl-6 md:pl-8 text-left">
+                        <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Strategic Pillar 02</span>
+                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Linguistic Moats & Fine-Tuned Regional LLMs</h2>
+                        <p className="text-neutral-400 leading-relaxed text-base">
+                            Standard global commodity engines completely fail to accurately extract meaning from the 1,200+ distinct languages and localized regional dialects that define the ASEAN digital economy. True commercial scale requires local enterprises to systematically fine-tune domain-specific workflows over custom regional open models (such as the SEA-LION architecture). By anchoring algorithms to hyper-local context, firms build a linguistic defense perimeter that global competitors cannot dismantle.
+                        </p>
+                        <div className="bg-neutral-950 border border-neutral-900 p-8 max-w-4xl mt-4">
+                            <h4 className="font-bold text-white text-xs uppercase tracking-widest flex items-center gap-2 mb-4">
+                                <ShieldCheck className="w-4 h-4 text-[#8F801B]" /> Defensible IP Strategy Takeaway
+                            </h4>
+                            <p className="text-neutral-400 text-sm leading-relaxed m-0 text-left">
+                                Securing these highly tailored algorithmic data layers requires robust, formalized asset mapping to prevent code and weight theft. Before exporting technology pipelines across regional accelerators, work with a certified <strong><a href="/ip-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top IP consultant in Singapore</a></strong> to structure your defensible global trademark, landscaping, and licensing frameworks.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Section 3: Technical Debt & Governance Audits */}
+                    <div className="space-y-4 border-l-2 border-[#8F801B] pl-6 md:pl-8 text-left">
+                        <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Strategic Pillar 03</span>
+                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">The Self-Taught Paradox & Code Governance</h2>
+                        <p className="text-neutral-400 leading-relaxed text-base">
+                            While over 72% of regional technology development assets operate as self-taught engineers—driving exceptional initial deployment speed—this unstructured execution creates severe technical debt, architectural fragmentation, and security gaps. These vulnerabilities trigger immediate compliance failures when exposed to institutional risk assessments. Implementing rigid, certified code governance audits converts technical liability into standard, highly fundable corporate assets.
+                        </p>
+                        <p className="text-neutral-400 text-sm">
+                            Singaporean firms scaling workflows into new geographic sectors like Indonesia or Vietnam
