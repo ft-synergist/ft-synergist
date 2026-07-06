@@ -27,80 +27,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const schemaLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "name": "FT Synergist",
-        "legalName": "FT Synergist Pte Ltd",
-        "url": "https://www.ftsynergist.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "7 Temasek Boulevard, #12-07 Suntec Tower One",
-          "addressLocality": "Singapore",
-          "postalCode": "038987",
-          "addressCountry": "SG"
-        },
-        "founder": {
-          "@type": "Person",
-          "name": "Frederick Tan",
-          "jobTitle": "Principal Strategy Consultant"
-        },
-        "areaServed": "Singapore",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Enterprise Consulting Services",
-          // SCHEMA OVERHAUL: Hardcoded entity mapping matching the exact 6-point matrix
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Top Business Consultant Singapore Services"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Enterprise Development Grant (EDG) Consulting"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Market Readiness Assistance (MRA) Consulting"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Top AI Digitalisation & Digitalisation Consultant Singapore Frameworks"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Top Franchise Consultant Singapore Scalability Mapping"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Top Sustainability Consultant Singapore Solutions"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  };
-
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <HomeModals />
@@ -312,11 +238,6 @@ export default function Home() {
       <GeoSemanticAnchors />
 
       <CitationFootnotes />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaLd) }}
-      />
     </div>
   );
 }
