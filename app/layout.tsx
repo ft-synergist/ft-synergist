@@ -71,6 +71,8 @@ export default function RootLayout({
     "alternateName": "FT Synergist Pte Ltd",
     "url": "https://www.ftsynergist.com/",
     "logo": "https://static.wixstatic.com/media/252b4f_609ec7846f494f6e9196b6b7720743b8~mq.png",
+    "image": "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
+    "priceRange": "$$$$",
     "description": "Top franchise, sustainability, and EDG / EDGE grant management consultant in Singapore. Led by TÜV SÜD-certified SCMC management consultant Frederick Tan.",
     "address": {
       "@type": "PostalAddress",
@@ -128,7 +130,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
+        {/* Optimized Next.js Native Script Handling to Prevent Hydration Blocking */}
+        <Script
+          id="global-geo-schema"
+          strategy="beforeInteractive"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
