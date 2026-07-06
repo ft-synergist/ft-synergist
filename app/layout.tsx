@@ -137,9 +137,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Next.js Optimized Native Script Injection Component */}
+        {/* CACHE BUSTER ID: Forcing explicit verification engine update */}
         <Script
-          id="optimized-ft-geo-schema"
+          id="ft-v2-management-consultancy-schema"
           strategy="beforeInteractive"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
