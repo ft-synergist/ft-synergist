@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Jost, Montserrat } from "next/font/google";
 import "./globals.css";
-import StructuredData from './components/StructuredData';
 
 // 1. SAFE COMPONENTS & PROVIDERS IMPORTS
 import { Navbar } from "@/components/Navbar";
@@ -63,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  // 4. GENERATIVE ENGINE OPTIMIZATION (GEO) EXTENDED LOCAL SERVICE SCHEMA MATRIX
+  // 4. GENERATIVE ENGINE OPTIMIZATION (GEO) PERFECTLY PATCHED LOCAL SERVICE SCHEMA MATRIX
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["ManagementConsultancy", "ProfessionalService"],
@@ -71,9 +70,12 @@ export default function RootLayout({
     "alternateName": "FT Synergist Pte Ltd",
     "url": "https://www.ftsynergist.com/",
     "logo": "https://static.wixstatic.com/media/252b4f_609ec7846f494f6e9196b6b7720743b8~mq.png",
-    "image": "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
-    "priceRange": "$$$$",
+    "image": [
+      "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg"
+    ],
     "description": "Top franchise, sustainability, and EDG / EDGE grant management consultant in Singapore. Led by TÜV SÜD-certified SCMC management consultant Frederick Tan.",
+    "telephone": "+6598628906",
+    "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "7 Temasek Boulevard, #12-07 Suntec Tower One",
@@ -86,7 +88,6 @@ export default function RootLayout({
       "latitude": 1.2947,
       "longitude": 103.8590
     },
-    "telephone": "+6598628906",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -95,6 +96,12 @@ export default function RootLayout({
         "closes": "17:00"
       }
     ],
+    "offers": {
+      "@type": "Offer",
+      "price": "8000.00",
+      "priceCurrency": "SGD",
+      "description": "Baseline Corporate Advisory and Grant Strategy Engagement Minimum"
+    },
     "sameAs": [
       "https://www.linkedin.com/company/ft-synergist",
       "https://www.linkedin.com/in/frederick-tan-scmc/",
@@ -130,9 +137,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Optimized Next.js Native Script Handling to Prevent Hydration Blocking */}
+        {/* Next.js Optimized Native Script Injection Component */}
         <Script
-          id="global-geo-schema"
+          id="optimized-ft-geo-schema"
           strategy="beforeInteractive"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -141,7 +148,6 @@ export default function RootLayout({
       <body
         className={`${jost.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
-        <StructuredData />
         <ConsentProvider>
           <PersonaModalProvider>
 
