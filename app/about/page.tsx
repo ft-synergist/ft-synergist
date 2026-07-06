@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { CheckCircle2, MapPin, Award, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -27,9 +28,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      
-      {/* --- JSON-LD SCHEMA --- */}
-      <script
+
+      {/* --- JSON-LD PROFILE SCHEMA --- */}
+      <Script
+        id="about-profile-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -43,8 +45,8 @@ export default function AboutPage() {
               "image": "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
               "description": "Strategic consultant specializing in SME scale-up and Enterprise Singapore grants.",
               "sameAs": [
-                "https://www.linkedin.com/in/tanfrederick/",
-                "https://www.ftsynergist.com"
+                "https://www.linkedin.com/in/frederick-tan-scmc/",
+                "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
               ],
               "worksFor": {
                 "@type": "Organization",
@@ -81,7 +83,7 @@ export default function AboutPage() {
       <section className="py-20 bg-[#0a0a0a]">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-12 items-start">
-            
+
             {/* Image Column */}
             <div className="w-full md:w-1/3 sticky top-24">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-[#C5A017]/30 shadow-2xl">
@@ -98,19 +100,19 @@ export default function AboutPage() {
                   <p className="text-[#C5A017] text-sm">Principal Consultant (SCMC)</p>
                 </div>
               </div>
-              
+
               {/* LinkedIn Link Below Image */}
               <div className="flex items-center gap-3 mt-6 justify-center md:justify-start">
-                  <Image 
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                    alt="LinkedIn"
-                    width={24}
-                    height={24}
-                    className="opacity-70"
-                  />
-                  <a href="https://www.linkedin.com/in/tanfrederick/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-[#C5A017] hover:underline transition-colors">
-                    Connect on LinkedIn
-                  </a>
+                <Image
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                  alt="LinkedIn"
+                  width={24}
+                  height={24}
+                  className="opacity-70"
+                />
+                <a href="https://www.linkedin.com/in/frederick-tan-scmc/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-[#C5A017] hover:underline transition-colors">
+                  Connect on LinkedIn
+                </a>
               </div>
             </div>
 
@@ -121,22 +123,20 @@ export default function AboutPage() {
                   The Founder's Reality
                 </span>
               </div>
-              
-              {/* CHANGED: FROM "Strategy First" TO "Inspiring a Better World" */}
+
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
                 Inspiring a Better World:
               </h2>
 
               {/* --- FOUNDER NOTE CARD --- */}
-              <div 
-                id="founder-story" 
+              <div
+                id="founder-story"
                 className="bg-[#f8f9fa] text-[#333] p-8 md:p-10 rounded border-l-[5px] border-[#0f3460] shadow-lg"
               >
-                {/* CHANGED: UPDATED TITLE */}
                 <h3 className="text-[#0f3460] font-bold text-xl md:text-2xl mb-6 font-sans leading-tight">
                   The Founder's Note: Accelerating 100 Entrepreneurs to Impact 100 Million Lives in Asia.
                 </h3>
-                
+
                 <p className="text-base md:text-lg leading-relaxed mb-6">
                   "I left the derivatives industry to start an education brand in China because I believed it was the most direct way to give back to society. Later, I took on the challenge of scaling <strong>Adam Khoo Learning Centre</strong> into Indonesia, and subsequently Vietnam and Cambodia.
                 </p>
@@ -149,19 +149,16 @@ export default function AboutPage() {
                   Money without strategy just accelerates chaos. That is why when business owners come to me asking for 'the max <Link href="/edg-grant" className="text-[#0f3460] font-bold underline decoration-2 hover:text-[#C5A017] transition-colors">EDG grant</Link>,' I often tell them to pause. If you cannot explain your 3-year plan on a napkin, the grant won't save you—it will drown you.
                 </p>
 
-                {/* CHANGED: "Entrepreneurs First" text inserted here */}
                 <p className="text-base md:text-lg leading-relaxed mb-8">
                   At FT Synergist, we are <strong>entrepreneurs first and consultants second</strong>. We build the strategic roadmap I wish I had 20 years ago."
                 </p>
 
-                {/* CHANGED: NEW SIGNATURE BLOCK */}
                 <div className="border-t border-gray-300 pt-6">
-                    <p className="font-bold text-[#0f3460] text-lg mb-1">— Frederick Tan (SCMC)</p>
-                    <p className="text-sm text-gray-800 font-medium">Founder and Principal Consultant</p>
-                    <p className="text-sm text-gray-600">FT Synergist</p>
+                  <p className="font-bold text-[#0f3460] text-lg mb-1">— Frederick Tan (SCMC)</p>
+                  <p className="text-sm text-gray-800 font-medium">Founder and Principal Consultant</p>
+                  <p className="text-sm text-gray-600">FT Synergist</p>
                 </div>
               </div>
-              {/* ---------------------------------------------------- */}
 
             </div>
 
@@ -217,14 +214,14 @@ export default function AboutPage() {
             Stop chasing free money. Start building a defensible business strategy that gets funded.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-lg font-bold hover:scale-105 transition-transform"
             >
               Speak to a Consultant
             </Link>
-            <Link 
-              href="/edg-grant" 
+            <Link
+              href="/edg-grant"
               className="inline-flex items-center justify-center bg-white text-black px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Explore EDG Grant <ArrowRight className="ml-2 w-5 h-5" />

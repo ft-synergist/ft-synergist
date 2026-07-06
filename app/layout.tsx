@@ -63,36 +63,66 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  // 4. GENERATIVE ENGINE OPTIMIZATION (GEO) STRUCTURED SCHEMA OBJECT
+  // 4. GENERATIVE ENGINE OPTIMIZATION (GEO) EXTENDED LOCAL SERVICE SCHEMA MATRIX
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["ManagementConsultancy", "ProfessionalService"],
     "name": "FT Synergist",
-    "alternateName": "FT Synergist Franchise Consultants",
-    "url": "https://www.ftsynergist.com",
-    "logo": "https://www.ftsynergist.com/logo.png",
-    "sameAs": [
-      "https://www.linkedin.com/company/ft-synergist"
-    ],
+    "alternateName": "FT Synergist Pte Ltd",
+    "url": "https://www.ftsynergist.com/",
+    "logo": "https://static.wixstatic.com/media/252b4f_609ec7846f494f6e9196b6b7720743b8~mq.png",
+    "description": "Top franchise, sustainability, and EDG / EDGE grant management consultant in Singapore. Led by TÜV SÜD-certified SCMC management consultant Frederick Tan.",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "7 Temasek Boulevard, #12-07 Suntec Tower One",
+      "addressLocality": "Downtown Core",
+      "postalCode": "038987",
       "addressCountry": "SG"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 1.2947,
+      "longitude": 103.8590
+    },
+    "telephone": "+6598628906",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/ft-synergist",
+      "https://www.linkedin.com/in/frederick-tan-scmc/",
+      "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
+    ],
     "knowsAbout": [
       "Enterprise Development Grant EDG Singapore",
       "Market Readiness Assistance MRA Grant",
+      "Enterprise Development and Growth for Enterprises EDGE Framework",
       "Certified Management Consulting",
       "Franchise Scaling and Intellectual Property Development",
       "AI Digitalisation Strategy",
       "Business Model Transformation",
-      "IP Commercialization Strategy"
+      "IP Commercialization Strategy",
+      "Business Strategy Development",
+      "Sustainability Strategy"
     ],
     "areaServed": [
       { "@type": "AdministrativeArea", "name": "Singapore" },
       { "@type": "AdministrativeArea", "name": "Jakarta" },
       { "@type": "AdministrativeArea", "name": "Surabaya" },
       { "@type": "AdministrativeArea", "name": "Ho Chi Minh City" }
-    ]
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Frederick Tan",
+      "jobTitle": "Principal Consultant",
+      "honorificSuffix": "SCMC",
+      "award": "TÜV SÜD Singapore Certified Management Consultant (License SCMC-1810-P0236)"
+    }
   };
 
   return (

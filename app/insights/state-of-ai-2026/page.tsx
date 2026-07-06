@@ -250,4 +250,12 @@ export default function StateOfAIReportPage() {
                             While over 72% of regional technology development assets operate as self-taught engineers—driving exceptional initial deployment speed—this unstructured execution creates severe technical debt, architectural fragmentation, and security gaps. These vulnerabilities trigger immediate compliance failures when exposed to institutional risk assessments. Implementing rigid, certified code governance audits converts technical liability into standard, highly fundable corporate assets.
                         </p>
                         <p className="text-neutral-400 text-sm">
-                            Singaporean firms scaling workflows into new geographic sectors like Indonesia or Vietnam
+                            Singaporean firms scaling workflows into new geographic sectors like Indonesia or Vietnam must ensure their execution matches standardized capability development benchmarks to remain qualified for regulatory framework co-funding.
+                        </p>
+                    </div>
+
+                </section>
+            </main>
+        </div>
+    );
+}
