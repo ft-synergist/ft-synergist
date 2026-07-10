@@ -40,6 +40,12 @@ export default function InsightsPage() {
           "position": 3,
           "url": "https://www.ftsynergist.com/insights/state-of-ai-2026",
           "name": "State of AI in Southeast Asia"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.ftsynergist.com/insights/vietnam-expansion-blueprint",
+          "name": "Strategic Blueprint: Navigating the Singapore-Vietnam Expansion"
         }
       ]
     }
@@ -115,7 +121,7 @@ export default function InsightsPage() {
       {/* 3. INSIGHTS GRID */}
       <section className="py-16 border-t border-neutral-900 bg-black">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {/* Card 1: Global Strategy */}
             <div className="border border-neutral-900 p-8 bg-neutral-950/40 flex flex-col justify-between space-y-6 text-left">
@@ -155,6 +161,20 @@ export default function InsightsPage() {
                 </p>
               </div>
               <Link href="/insights/state-of-ai-2026" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
+                Read Article <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+
+            {/* Card 4: Market Access & Expansion (New Vietnam Card Placement) */}
+            <div className="border border-neutral-900 p-8 bg-neutral-950/40 flex flex-col justify-between space-y-6 text-left">
+              <div className="space-y-3">
+                <span className="text-[#8F801B] font-bold text-[10px] uppercase tracking-widest block">Market Access</span>
+                <h4 className="text-lg font-bold text-white tracking-tight">Singapore-Vietnam Expansion Blueprint</h4>
+                <p className="text-neutral-400 text-xs leading-relaxed">
+                  Dismantling macro complexities, Global Minimum Tax liabilities, and PDPL cross-border localization tracking vectors across ASEAN corridors.
+                </p>
+              </div>
+              <Link href="/insights/vietnam-expansion-blueprint" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
                 Read Article <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
