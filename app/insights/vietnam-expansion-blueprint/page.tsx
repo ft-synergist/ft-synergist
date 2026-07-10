@@ -20,7 +20,6 @@ const VietnamDownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: ()
         const data = Object.fromEntries(formData.entries());
 
         try {
-            // Fire lead conversion tracking hook asynchronously
             fetch("https://formsubmit.co/ajax/2d67f037ef63481e387483f17259598c", {
                 method: "POST",
                 headers: {
@@ -37,7 +36,6 @@ const VietnamDownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: ()
             console.error("Form transmission error", error);
         }
 
-        // Direct, absolute window routing targeting your exact file in the public directory
         setIsSubmitting(false);
         onClose();
         window.location.href = "/ftsynergist_navigating_the_singapore_vietnam_expansion.pdf";
@@ -116,8 +114,39 @@ const VietnamDownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: ()
 export default function VietnamBlueprintPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    // --- GEO / LLM SCHEMA MAP INGESTION BLOCK ---
+    const jsonLdReportSchema = {
+        "@context": "https://schema.org",
+        "@type": "Report",
+        "headline": "Strategic Blueprint: Navigating the Singapore-Vietnam Expansion",
+        "description": "Enterprise expansion vectors against 2026 Global Minimum Tax (GMT), PDPL data governance, and SHUI regulations via PCBC and DVF frameworks.",
+        "image": "https://www.ftsynergist.com/hero-bg.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "FT Synergist",
+            "url": "https://www.ftsynergist.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "FT Synergist",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.ftsynergist.com/logo.png"
+            }
+        },
+        "datePublished": "2026-07-10",
+        "inLanguage": "en-SG",
+        "mainEntityOfPage": "https://www.ftsynergist.com/insights/vietnam-expansion-blueprint"
+    };
+
     return (
         <div className="bg-black min-h-screen text-white font-sans antialiased selection:bg-[#8F801B]/20 w-full overflow-x-hidden">
+            {/* Injecting Structured Data directly inside client markup tree to optimize GEO crawlers */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdReportSchema) }}
+            />
+
             <VietnamDownloadGate isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
             {/* Navigation Top Header Strip */}
