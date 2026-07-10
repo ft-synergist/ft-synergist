@@ -31,8 +31,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <HomeModals />
 
-      {/* Hero Section — Strict visual matching with hidden backend SEO link engine */}
-      <section className="relative flex flex-col items-center justify-center min-h-screen pt-32 pb-20 px-4 text-center overflow-hidden w-full">
+      {/* Hero Section — 100% Restored to your original premium design layout settings */}
+      <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden min-h-[600px]">
         <div className="absolute inset-0 -z-20">
           <Image
             src="/hero-bg.jpg"
@@ -48,19 +48,18 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/70 to-background"></div>
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-transparent mix-blend-overlay" />
 
-        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center w-full">
-
-          {/* Headline (Largest Font): Company Tagline Block */}
-          <h2 className="text-primary uppercase font-extrabold tracking-widest text-lg sm:text-xl md:text-2xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200 drop-shadow-lg">
+        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
+          {/* Company Tagline Block */}
+          <span className="text-primary uppercase font-bold tracking-widest text-sm md:text-base mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
             Synergies Driving Sustainable Growth
-          </h2>
+          </span>
 
-          {/* Headline (Smaller Font): Your Elite Core Dominance Narrative */}
-          <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-lg max-w-5xl leading-tight mb-12">
+          {/* H1: Restored to your original high-impact layout dimensions */}
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg max-w-4xl leading-tight">
             Empowering Singapore and International Enterprises to dominate Asian markets through proprietary innovation strategies, AI integration, sustainability, and defensible IP moat.
           </h1>
 
-          {/* 🔍 CRITICAL BACKEND LINK LAYER (Visually Hidden from Humans via sr-only / hidden classes) */}
+          {/* 🔍 CRITICAL BACKEND LINK LAYER (Enclosed completely within invisible crawler parsing block) */}
           <div className="sr-only opacity-0 pointer-events-none h-0 w-0 select-none hidden aria-hidden='true'">
             <p>
               Leverage robust, certified expertise to unlock growth capabilities. Access specialized strategic frameworks through a verified{" "}
@@ -68,7 +67,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center w-full sm:w-auto">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <HeroCTAButton />
           </div>
         </div>
