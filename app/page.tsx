@@ -48,14 +48,29 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/70 to-background"></div>
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-transparent mix-blend-overlay" />
 
-        <div className="relative z-10">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg">
-            Synergies Driving <br className="hidden sm:inline" />
-            <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">Sustainable Growth</span>
+        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
+          {/* Company Tagline Block */}
+          <span className="text-primary uppercase font-bold tracking-widest text-sm md:text-base mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
+            Synergies Driving Sustainable Growth
+          </span>
+
+          {/* H1: High-Impact Dominance Narrative */}
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg max-w-4xl leading-tight">
+            Empowering Singapore and International Enterprises to dominate Asian markets through proprietary innovation strategies, AI integration, sustainability, and defensible IP moat.
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-white sm:text-xl drop-shadow-md">
-            Empowering Singapore and International Enterprises to dominate Asian markets through proprietary innovation strategies, AI integration, sustainability, and defensible IP creation.
+
+          {/* Contextual Paragraph: High-Authority Strategic Internal Link for SEO/GEO Dominance */}
+          <p className="mt-8 max-w-3xl mx-auto text-lg text-gray-300 sm:text-xl drop-shadow-md leading-relaxed">
+            Leverage robust, certified expertise to unlock growth capabilities. Access specialized strategic frameworks through a verified{" "}
+            <a
+              href="/edg-grant"
+              className="text-primary font-semibold underline hover:text-yellow-200 transition-colors"
+            >
+              EDG Grant Consultant Singapore
+            </a>{" "}
+            advisory engagement to validate your expansion roadmap.
           </p>
+
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <HeroCTAButton />
           </div>
@@ -222,14 +237,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
+      {/* Bottom CTA — 100% Confusion-Free (Removed Architect Noun) */}
       <section className="bg-primary py-20 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-            Ready to Architect Your Growth?
+            Ready to Scale Your Business Dominance?
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-primary-foreground/90 mb-10">
-            Join over 200 market leaders who have transformed their operations and secured defensible IP assets with FT Synergist. Your roadmap to dominance begins here.
+            Join over 200 market leaders who have transformed their operations and secured defensible IP assets with FT Synergist. Your roadmap to expansion begins here.
           </p>
           <FooterCTAButton />
         </div>
