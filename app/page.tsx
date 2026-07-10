@@ -31,7 +31,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <HomeModals />
 
-      {/* Hero Section — 100% Restored to your original premium design layout settings */}
+      {/* Hero Section — Exact typography hierarchy matched to your EDG Page structure */}
       <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden min-h-[600px]">
         <div className="absolute inset-0 -z-20">
           <Image
@@ -49,17 +49,20 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-transparent mix-blend-overlay" />
 
         <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
-          {/* Company Tagline Block */}
-          <span className="text-primary uppercase font-bold tracking-widest text-sm md:text-base mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
-            Synergies Driving Sustainable Growth
-          </span>
 
-          {/* H1: Restored to your original high-impact layout dimensions */}
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg max-w-4xl leading-tight">
-            Empowering Singapore and International Enterprises to dominate Asian markets through proprietary innovation strategies, AI integration, sustainability, and defensible IP moat.
+          {/* Tagline — LARGEST font weight and size, matched to the EDG "Certified EDG Grant..." stack */}
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg max-w-4xl leading-tight mb-8">
+            <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
+              Synergies Driving <br className="hidden sm:inline" /> Sustainable Growth
+            </span>
           </h1>
 
-          {/* 🔍 CRITICAL BACKEND LINK LAYER (Enclosed completely within invisible crawler parsing block) */}
+          {/* Core Title Narrative — SMALLER size baseline, matched to the EDG content context text style */}
+          <p className="max-w-3xl mx-auto text-lg text-white sm:text-xl drop-shadow-md leading-relaxed font-normal mb-10">
+            Empowering Singapore and International Enterprises to dominate Asian markets through proprietary innovation strategies, AI integration, sustainability, and defensible IP moat.
+          </p>
+
+          {/* 🔍 CRITICAL BACKEND LINK LAYER (Invisible crawler parsing block) */}
           <div className="sr-only opacity-0 pointer-events-none h-0 w-0 select-none hidden aria-hidden='true'">
             <p>
               Leverage robust, certified expertise to unlock growth capabilities. Access specialized strategic frameworks through a verified{" "}
