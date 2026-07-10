@@ -31,8 +31,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <HomeModals />
 
-      {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 lg:py-56 overflow-hidden min-h-[600px]">
+      {/* Hero Section — Corrected responsive text metrics & scale-safe viewport height bounds */}
+      <section className="relative flex flex-col items-center justify-center px-4 py-24 text-center md:py-32 lg:py-40 overflow-hidden min-h-screen">
         <div className="absolute inset-0 -z-20">
           <Image
             src="/hero-bg.jpg"
@@ -48,19 +48,19 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/70 to-background"></div>
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-transparent mix-blend-overlay" />
 
-        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
+        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center px-2">
           {/* Company Tagline Block */}
-          <span className="text-primary uppercase font-bold tracking-widest text-sm md:text-base mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
+          <span className="text-primary uppercase font-bold tracking-widest text-xs md:text-sm mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
             Synergies Driving Sustainable Growth
           </span>
 
-          {/* H1: High-Impact Dominance Narrative */}
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg max-w-4xl leading-tight">
+          {/* H1: Adjusted tracking matrix bounds to natively encompass high-impact copy layers */}
+          <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-lg max-w-4xl leading-tight">
             Empowering Singapore and International Enterprises to dominate Asian markets through proprietary innovation strategies, AI integration, sustainability, and defensible IP moat.
           </h1>
 
           {/* Contextual Paragraph: High-Authority Strategic Internal Link for SEO/GEO Dominance */}
-          <p className="mt-8 max-w-3xl mx-auto text-lg text-gray-300 sm:text-xl drop-shadow-md leading-relaxed">
+          <p className="mt-6 max-w-3xl mx-auto text-base text-gray-300 sm:text-lg md:text-xl drop-shadow-md leading-relaxed">
             Leverage robust, certified expertise to unlock growth capabilities. Access specialized strategic frameworks through a verified{" "}
             <a
               href="/edg-grant"
@@ -71,7 +71,7 @@ export default function Home() {
             advisory engagement to validate your expansion roadmap.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center w-full sm:w-auto">
             <HeroCTAButton />
           </div>
         </div>
