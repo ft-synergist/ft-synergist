@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import ClientEDGPage from "@/components/ClientEDGPage";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "EDG Grant Consultant Singapore | Certified SCMC Consultant",
@@ -74,11 +73,12 @@ export default function EDGGrantPage() {
 
   return (
     <>
-      <Script
-        id="edg-page-faq-schema"
-        strategy="afterInteractive"
+      {/* Native data tag script injection with XSS character replacement mapping */}
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+        }}
       />
       <ClientEDGPage />
     </>
