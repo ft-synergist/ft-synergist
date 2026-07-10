@@ -65,7 +65,7 @@ export default function RootLayout({
   // 4. GENERATIVE ENGINE OPTIMIZATION (GEO) PERFECTLY PATCHED LOCAL SERVICE SCHEMA MATRIX
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService", // ◄─── Formally updated to clear the schema validator error
+    "@type": "ProfessionalService", // Formally updated to clear the schema validator error
     "name": "FT Synergist",
     "alternateName": "FT Synergist Pte Ltd",
     "url": "https://www.ftsynergist.com/",
@@ -96,7 +96,7 @@ export default function RootLayout({
         "closes": "17:00"
       }
     ],
-    "offers": {
+    "makesOffer": { // ◄─── Formally changed from 'offers' to clear the vocabulary warning
       "@type": "Offer",
       "price": "8000.00",
       "priceCurrency": "SGD",
