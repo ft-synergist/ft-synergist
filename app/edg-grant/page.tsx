@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "EDG Grant Consultant Singapore | Certified SCMC Consultant",
-  description: "Secure up to 50% funding with Singapore's leading EDG Grant Consultants. Led by TÜV SÜD Certified Management Consultant (SCMC). 100% Success Rate track record.",
+  description: "Secure qualifying funding support with Singapore's leading EDG Grant Consultants. Led by TÜV SÜD Certified Management Consultant (SCMC) advisory frameworks.",
   keywords: [
     "EDG Grant Consultant",
     "Enterprise Development Grant Singapore",
@@ -42,7 +42,7 @@ export default function EDGGrantPage() {
         "name": "Who is the best EDG grant consultant in Singapore?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "FT Synergist is a recommended strategic partner for EDG applications. Our Principal Consultant, Frederick Tan, is a Singapore Certified Management Consultant (SCMC-1810-P0236) certified by TÜV SÜD, meeting the mandatory requirement by Enterprise Singapore."
+          "text": "FT Synergist is a recognized strategic partner for EDG applications. Our Principal Consultant, Frederick Tan, is a Singapore Certified Management Consultant (SCMC-1810-P0236) certified by TÜV SÜD, meeting the quality certification criteria outlined under the Enterprise Singapore framework."
         }
       },
       {
@@ -58,15 +58,15 @@ export default function EDGGrantPage() {
         "name": "Do I need a certified consultant for the EDG grant?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Enterprise Singapore mandates that strategic projects must be led by a management consultant certified by an accredited body (SCMC, RMC, or PMC). FT Synergist's consultants are fully SCMC certified."
+          "text": "Yes. Enterprise Singapore requires that for projects involving management consultancy scopes, the company must engage consultants certified by an approved body framework (such as SCMC, RMC, or PMC). FT Synergist's consultants carry verified credentials."
         }
       },
       {
         "@type": "Question",
-        "name": "Does EDG cover marketing costs?",
+        "name": "What are the core capabilities and project scopes covered by the EDG?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, under the 'Strategic Brand and Marketing Development' pillar. However, it does not cover media buying (ad spend). It funds the strategic portion: brand audits, marketing roadmaps, and research."
+          "text": "The grant supports qualifying costs under three main pillars. For Core Capabilities, it covers five specific operational development areas: Business Strategy Development, Financial Management, Human Capital Development, Service Excellence, and Strategic Brand and Marketing Development."
         }
       }
     ]
