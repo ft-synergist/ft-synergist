@@ -17,37 +17,47 @@ const nextConfig = {
     return [
       {
         source: '/services/strategic-brand-and-market-development',
-        destination: '/#services',
+        destination: '/edg-grant', // ◄─── Upgraded to targeted money page route
         permanent: true,
       },
       {
         source: '/expertise/services/business-strategy-development',
-        destination: '/#services',
+        destination: '/edg-grant', // ◄─── Upgraded to targeted money page route
         permanent: true,
       },
       {
         source: '/services/business-strategy-development',
-        destination: '/#services',
+        destination: '/edg-grant', // ◄─── Upgraded to targeted money page route
         permanent: true,
       },
       {
         source: '/expertise/services/franchise-and-licensing',
-        destination: '/#services',
+        destination: '/franchise-consultant', // ◄─── Upgraded to targeted franchise hub
         permanent: true,
       },
       {
         source: '/services/franchise-and-licensing',
-        destination: '/#services',
+        destination: '/franchise-consultant', // ◄─── Upgraded to targeted franchise hub
         permanent: true,
       },
       {
         source: '/expertise/services/team-alignment-and-strategy',
-        destination: '/#services',
+        destination: '/edg-grant', // ◄─── Upgraded to targeted money page route
+        permanent: true,
+      },
+      {
+        source: '/services/team-alignment-and-strategy',
+        destination: '/edg-grant', // ◄─── Injected direct link from GSC logs
         permanent: true,
       },
       {
         source: '/expertise/services/technology-leap',
-        destination: '/#services',
+        destination: '/ai-digitalisation', // ◄─── Upgraded to precise AI destination
+        permanent: true,
+      },
+      {
+        source: '/services/technology-leap',
+        destination: '/ai-digitalisation', // ◄─── Injected direct link from GSC logs
         permanent: true,
       },
       {
@@ -56,13 +66,13 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/services/:path*',
-        destination: '/#services',
+        source: '/about-us',
+        destination: '/about',
         permanent: true,
       },
       {
-        source: '/about-us',
-        destination: '/about',
+        source: '/services/:path*',
+        destination: '/#services', // Catch-all for non-explicit legacy service sub-paths
         permanent: true,
       },
     ];
