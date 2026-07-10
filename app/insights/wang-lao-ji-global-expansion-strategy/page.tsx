@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ArrowRight, Download, Lock, CheckCircle2, X, TrendingUp, Factory, Zap, Trophy } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Download, Lock, X, TrendingUp, Factory, Zap, Trophy } from "lucide-react";
 
 // --- 1. LEAD CAPTURE MODAL COMPONENT ---
 const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
@@ -67,7 +68,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               name="name"
               type="text"
               placeholder="e.g. Frederick Tan"
-              className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-white focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none placeholder-neutral-600"
+              className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-white focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none placeholder-neutral-600 shadow-none text-sm"
             />
           </div>
 
@@ -78,7 +79,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               name="email"
               type="email"
               placeholder="name@company.com"
-              className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-white focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none placeholder-neutral-600"
+              className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-white focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none placeholder-neutral-600 shadow-none text-sm"
             />
           </div>
 
@@ -89,14 +90,14 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               name="company"
               type="text"
               placeholder="e.g. FT Synergist"
-              className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-white focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none placeholder-neutral-600"
+              className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-white focus:outline-none focus:border-[#8F801B] focus:ring-1 focus:ring-[#8F801B] transition-all rounded-none placeholder-neutral-600 shadow-none text-sm"
             />
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full mt-4 inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white font-bold uppercase tracking-wider hover:bg-[#7a6d17] transition-all shadow-lg rounded-none disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full mt-4 inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white font-bold uppercase tracking-wider hover:bg-[#7a6d17] transition-all shadow-lg rounded-none disabled:opacity-70 disabled:cursor-not-allowed text-xs"
           >
             {isSubmitting ? "Unlocking..." : (
               <>
@@ -183,10 +184,10 @@ export default function WangLaoJiCaseStudy() {
           <div className="lg:col-span-7 space-y-6 text-left">
             <h3 className="text-xs font-bold uppercase tracking-widest text-[#8F801B]">The Localization Paradox</h3>
             <p className="text-xl md:text-2xl font-light text-neutral-200 leading-relaxed italic">
-              "Most Singaporean brands fail overseas because they try to export their product exactly as it is. They refuse to adapt."
+              &quot;Most Singaporean brands fail overseas because they try to export their product exactly as it is. They refuse to adapt.&quot;
             </p>
             <p className="text-sm text-neutral-400 leading-relaxed">
-              In 2025, Wang Lao Ji—synonymous with traditional herbal preparation—reinvented its international identity to <strong>"WALOVI"</strong> to target Western distribution lines. The strategy secured a <strong>15.87% net profit lift</strong> in H1 2025, triggering successful entry protocols into Costco and Amazon US.
+              In 2025, Wang Lao Ji—synonymous with traditional herbal preparation—reinvented its international identity to <strong>&quot;WALOVI&quot;</strong> to target Western distribution lines. The strategy secured a <strong>15.87% net profit lift</strong> in H1 2025, triggering successful entry protocols into Costco and Amazon US.
             </p>
           </div>
           <div className="lg:col-span-5 relative h-[320px] w-full border border-neutral-800 bg-neutral-900">
@@ -205,11 +206,11 @@ export default function WangLaoJiCaseStudy() {
         <section className="space-y-16">
 
           {/* Lesson 1 */}
-          <div className="space-y-4 border-l-2 border-[#8F801B] pl-6 md:pl-8">
+          <div className="space-y-4 border-l-2 border-[#8F801B] pl-6 md:pl-8 text-left">
             <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Lesson 01</span>
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Value Proposition Re-Formulation</h2>
             <p className="text-neutral-400 leading-relaxed text-base md:text-lg">
-              For decades, the brand's core pitch was "curing internal heat" (<em>shanghuo</em>). While this maps perfectly to Singaporean consumer profiles, it fails entirely within European trading blocks. Instead of wasting resources educating Western buyers, they adjusted the positioning parameters to brand it a <strong>"Natural Plant-Based Functional Beverage."</strong> They chose to ride the wave of universal wellness movements rather than traditional medicine constraints.
+              For decades, the brand's core pitch was &quot;curing internal heat&quot; (<em>shanghuo</em>). While this maps perfectly to Singaporean consumer profiles, it fails entirely within European trading blocks. Instead of wasting resources educating Western buyers, they adjusted the positioning parameters to brand it a <strong>&quot;Natural Plant-Based Functional Beverage.&quot;</strong> They chose to ride the wave of universal wellness movements rather than traditional medicine constraints.
             </p>
             <div className="bg-neutral-950 border border-neutral-900 p-6 max-w-3xl">
               <span className="text-[10px] uppercase font-bold tracking-wider bg-neutral-900 px-2.5 py-1 text-[#8F801B] rounded-none mb-3 inline-block">SME Takeaway</span>
@@ -218,13 +219,21 @@ export default function WangLaoJiCaseStudy() {
           </div>
 
           {/* Lesson 2 */}
-          <div className="space-y-6 border-l-2 border-[#8F801B] pl-6 md:pl-8">
+          <div className="space-y-6 border-l-2 border-[#8F801B] pl-6 md:pl-8 text-left">
             <div className="space-y-2">
               <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Lesson 02</span>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Supply Chain Allocation Matrix</h2>
             </div>
+
+            {/* Contextual Link Matrix Insertion Point */}
             <p className="text-neutral-400 leading-relaxed text-base md:text-lg">
-              Shipping heavy liquid cargo blocks from a single home location creates severe margin compression due to freight weight metrics, global warehousing overheads, and cross-border customs penalties.
+              Shipping heavy liquid cargo blocks from a single home location creates severe margin compression due to freight weight metrics, global warehousing overheads, and cross-border customs penalties. To analyze how modern cross-border logistics map cleanly against localized sovereign compliances across ASEAN pipelines, review our blueprint:{" "}
+              <Link
+                href="/insights/vietnam-expansion-blueprint"
+                className="text-[#8F801B] font-bold underline hover:text-white transition-colors decoration-wavy decoration-[#8F801B]/40"
+              >
+                Singapore-Vietnam Expansion Blueprint
+              </Link>.
             </p>
 
             {/* The EDGE Specification Two-Column Comparisons */}
@@ -242,15 +251,15 @@ export default function WangLaoJiCaseStudy() {
             </div>
 
             <p className="text-neutral-400 text-sm leading-relaxed max-w-4xl pt-2">
-              SMEs looking to replicate this asset-light cross-border infrastructure must establish rigid operational playbooks. Partnering with a verified <strong><a href="/franchise-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top franchise consultant in Singapore</a></strong> ensures that your master licensing agreements, territory boundaries, and operation manual standardizations are legally bulletproof. Furthermore, Singaporean businesses can leverage official Enterprise Singapore funding support parameters to offset up to 70% of these qualifying expansion setup and third-party promotion costs by utilizing the enhanced <strong><a href="/mra-grant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">MRA grant</a></strong> pipeline.
+              SMEs looking to replicate this asset-light cross-border infrastructure must establish rigid operational playbooks. Partnering with a verified <strong><Link href="/franchise-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top franchise consultant in Singapore</Link></strong> ensures that your master licensing agreements, territory boundaries, and operation manual standardizations are legally bulletproof. Furthermore, Singaporean businesses can leverage official Enterprise Singapore funding support parameters to offset up to 70% of these qualifying expansion setup and third-party promotion costs by utilizing the enhanced <strong><Link href="/mra-grant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">MRA grant</Link></strong> pipeline.
             </p>
           </div>
 
           {/* Lesson 3 - THE DUAL GRID CONTAINING ERLING HAALAND AMBASSADOR CASE */}
-          <div className="space-y-6 border-l-2 border-[#8F801B] pl-6 md:pl-8">
+          <div className="space-y-6 border-l-2 border-[#8F801B] pl-6 md:pl-8 text-left">
             <div className="space-y-2">
               <span className="text-xs uppercase tracking-widest text-[#8F801B] font-bold">Lesson 03</span>
-              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Entity Co-occurrence & Cultural Authority</h2>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Entity Co-occurrence &amp; Cultural Authority</h2>
             </div>
             <p className="text-neutral-400 leading-relaxed text-base md:text-lg">
               To establish immediate authority within mass markets globally, the brand bypassed slow consumer acquisition pipelines by securing global soccer icon <strong>Erling Haaland</strong> as their primary international brand ambassador.
@@ -285,7 +294,7 @@ export default function WangLaoJiCaseStudy() {
                 <Zap className="w-4 h-4 text-[#8F801B]" /> Intellectual Moat Takeaway
               </h4>
               <p className="text-neutral-400 text-sm leading-relaxed m-0">
-                Altering your product configuration is key to unlocking new commercial valuation avenues. To execute this safely without leaking brand equity, engaging a qualified <strong><a href="/ip-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top IP consultant in Singapore</a></strong> is critical. An approved advisor will systematically audit, landscape, and legally protect your proprietary workflows and trademarks before you enter competitive foreign territories.
+                Altering your product configuration is key to unlocking new commercial valuation avenues. To execute this safely without leaking brand equity, engaging a qualified <strong><Link href="/ip-consultant" className="text-[#8F801B] font-bold underline hover:text-white transition-colors">top IP consultant in Singapore</Link></strong> is critical. An approved advisor will systematically audit, landscape, and legally protect your proprietary workflows and trademarks before you enter competitive foreign territories.
               </p>
             </div>
           </div>
