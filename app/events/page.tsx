@@ -1,4 +1,4 @@
-import { getEvents } from "@/lib/data";
+import { getEvents, Event } from "@/lib/data";
 import { EventsList } from "@/components/EventsList";
 import { EventJsonLd } from "@/components/EventJsonLd";
 import { Metadata } from "next";
@@ -12,7 +12,23 @@ export const metadata: Metadata = {
 };
 
 export default async function EventsPage() {
-    const events = await getEvents();
+    const rawEvents = await getEvents();
+
+    const now = new Date();
+
+    // 1. Filter and sort upcoming events (soonest first)
+    const upcomingEvents = rawEvents
+        .filter((event: Event) => new Date(event.date) >= now)
+        .sort((a: Event, b: Event) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+    // 2. Filter and sort past events (most recently concluded first)
+    const pastEvents = rawEvents
+        .filter((event: Event) => new Date(event.date) < now)
+        .sort((a: Event, b: Event) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    // 3. Combine with upcoming events on top
+    const events: Event[] = [...upcomingEvents, ...pastEvents];
+
     return (
         <>
             <EventJsonLd events={events} />
