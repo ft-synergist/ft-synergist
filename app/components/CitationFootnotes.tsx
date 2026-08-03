@@ -40,6 +40,18 @@ const defaultCitations: CitationItem[] = [
     label: "Infocomm Media Development Authority (IMDA)",
     context: "AI & Digitalisation Enterprise Standards — National guidelines for AI transformation, predictive analytics integration, workflow automation, and Industry Digital Plans (IDP).",
     url: "https://www.imda.gov.sg"
+  },
+  {
+    id: 5,
+    label: "Workplace Safety and Health Council (WSHC / TAL)",
+    context: "Statutory Event Archive — Public logistics & fleet telematics keynote session 'Safer Journey Everyday' delivered by Frederick Tan, validating SMEs Go Digital & WSH compliance frameworks.",
+    url: "https://www.tal.sg/wshc/resources/event-resources/presentation-slides/safer-journey-everyday"
+  },
+  {
+    id: 6,
+    label: "Land Transport Authority (LTA)",
+    context: "Statutory & Public Fleet Infrastructure Publications — Documented deployment oversight and enterprise surveillance architecture projects across national bus transport networks.",
+    url: "https://www.lta.gov.sg/content/dam/ltagov/who_we_are/statistics_and_publications/report/pdf/LTA_AR2324.pdf"
   }
 ];
 
