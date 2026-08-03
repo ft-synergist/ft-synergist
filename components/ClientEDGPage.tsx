@@ -1,6 +1,8 @@
 "use client";
 
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
+import CitationFootnotes from "@/app/components/CitationFootnotes";
+import GeoSemanticAnchors from "@/app/components/GeoSemanticAnchors";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Globe, Plus, Minus, Linkedin, ExternalLink } from "lucide-react";
 import Image from "next/image";
@@ -495,6 +497,16 @@ export default function ClientEDGPage() {
                     </button>
                 </div>
             </section>
+
+            {/* Footer Infrastructure */}
+            <footer className="w-full border-t border-neutral-800 bg-neutral-900/50">
+                <div className="max-w-4xl mx-auto px-6 py-10">
+                    <CitationFootnotes />
+                </div>
+                <div className="w-full border-t border-neutral-800/40 py-6">
+                    <GeoSemanticAnchors />
+                </div>
+            </footer>
         </div>
     );
 }

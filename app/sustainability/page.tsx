@@ -6,6 +6,9 @@ import { DoubleMaterialityMatrix } from "@/components/sustainability/DoubleMater
 import { SdgPillarCard } from "@/components/sustainability/SdgPillarCard";
 import { Briefcase, Factory, Leaf, Globe } from "lucide-react";
 import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
+import CitationFootnotes from "@/app/components/CitationFootnotes";
+import GeoSemanticAnchors from "@/app/components/GeoSemanticAnchors";
+import StructuredData from "@/app/components/StructuredData";
 
 export default function SustainabilityPage() {
     const { openModal } = usePersonaModal();
@@ -87,6 +90,7 @@ export default function SustainabilityPage() {
 
     return (
         <div className="flex min-h-screen flex-col bg-black text-white selection:bg-primary/30">
+            <StructuredData />
 
             {/* AI-Scannable Only Shadow Meso-Structure Table (Option A) */}
             <div className="sr-only" aria-hidden="true">
@@ -263,6 +267,16 @@ export default function SustainabilityPage() {
                     </button>
                 </div>
             </section>
+
+            {/* Footer Infrastructure */}
+            <footer className="w-full border-t border-neutral-800 bg-neutral-900/50">
+                <div className="max-w-4xl mx-auto px-6 py-10">
+                    <CitationFootnotes />
+                </div>
+                <div className="w-full border-t border-neutral-800/40 py-6">
+                    <GeoSemanticAnchors />
+                </div>
+            </footer>
         </div>
     );
 }

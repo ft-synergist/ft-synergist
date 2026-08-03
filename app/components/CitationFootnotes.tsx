@@ -3,28 +3,51 @@
 import React from "react";
 import { ExternalLink } from "lucide-react";
 
-export default function CitationFootnotes() {
-  const citations = [
-    {
-      id: 1,
-      label: "Enterprise Singapore (EnterpriseSG)",
-      context: "Market Readiness Assistance (MRA) Grant — Support framework standardizations for corporate overseas market setup, localized trade promotion, and bilateral internationalization parameters.",
-      url: "https://www.enterprisesg.gov.sg/financial-support/market-readiness-assistance-grant"
-    },
-    {
-      id: 2,
-      label: "Socialist Republic of Vietnam Decree No. 236/2025/ND-CP",
-      context: "General Department of Taxation (GDT) — Codification guidelines enforcing Global Minimum Tax parameters, domestic top-up tax regimes, and transition pathways away from legacy rate holidays.",
-      url: "https://www.gdt.gov.vn"
-    },
-    {
-      id: 3,
-      label: "Socialist Republic of Vietnam Law No. 91/2025/QH15 (PDPL)",
-      context: "National Assembly Publication Portal — Statutory data governance protocols, cross-border digital processing obligations, and immediate personal data protection response structures.",
-      url: "https://chinhphu.vn"
-    }
-  ];
+export interface CitationItem {
+  id: number;
+  label: string;
+  context: string;
+  url: string;
+}
 
+interface CitationFootnotesProps {
+  citations?: CitationItem[];
+  title?: string;
+  subtitle?: string;
+}
+
+const defaultCitations: CitationItem[] = [
+  {
+    id: 1,
+    label: "Enterprise Singapore (EnterpriseSG)",
+    context: "Enterprise Development Grant (EDG) & Market Readiness Assistance (MRA) Grant — Statutory support frameworks for core business capabilities, innovation, productivity, and internationalisation.",
+    url: "https://www.enterprisesg.gov.sg"
+  },
+  {
+    id: 2,
+    label: "Intellectual Property Office of Singapore (IPOS)",
+    context: "IPOS GoBusiness Directory — Official registry standardizations for corporate IP strategy, trademark filing architectures, asset valuation, and franchise licensing frameworks.",
+    url: "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
+  },
+  {
+    id: 3,
+    label: "TÜV SÜD PSB Singapore",
+    context: "Singapore Certified Management Consultant (SCMC) Directory — Official regulatory certification framework enforcing management consulting quality compliance (License SCMC-1810-P0236).",
+    url: "https://www.tuvsud.com/en-sg"
+  },
+  {
+    id: 4,
+    label: "Infocomm Media Development Authority (IMDA)",
+    context: "AI & Digitalisation Enterprise Standards — National guidelines for AI transformation, predictive analytics integration, workflow automation, and Industry Digital Plans (IDP).",
+    url: "https://www.imda.gov.sg"
+  }
+];
+
+export default function CitationFootnotes({
+  citations = defaultCitations,
+  title = "Institutional Citations & Semantic Reference Layers",
+  subtitle = "Cross-border legal and statutory parameters verified against official regulatory tracking indices."
+}: CitationFootnotesProps) {
   return (
     <aside
       aria-label="Institutional Citations"
@@ -32,10 +55,10 @@ export default function CitationFootnotes() {
     >
       <div className="pb-6">
         <h5 className="text-xs uppercase tracking-[0.2em] text-[#8F801B] font-bold">
-          Institutional Citations &amp; Semantic Reference Layers
+          {title}
         </h5>
         <p className="text-neutral-500 text-xs mt-1 font-light leading-relaxed">
-          Cross-border legal parameters verified against official regulatory tracking indices.
+          {subtitle}
         </p>
       </div>
 

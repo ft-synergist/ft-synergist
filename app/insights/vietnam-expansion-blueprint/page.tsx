@@ -6,6 +6,29 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Download, Lock, X, Factory, TrendingUp } from "lucide-react";
 import VietnamAuditForm from "../../../components/VietnamAuditForm";
 
+import CitationFootnotes, { CitationItem } from "@/app/components/CitationFootnotes";
+
+const vietnamCitations: CitationItem[] = [
+    {
+        id: 1,
+        label: "Enterprise Singapore (EnterpriseSG)",
+        context: "Market Readiness Assistance (MRA) Grant — Support framework standardizations for corporate overseas market setup, localized trade promotion, and bilateral internationalization parameters.",
+        url: "https://www.enterprisesg.gov.sg/financial-support/market-readiness-assistance-grant"
+    },
+    {
+        id: 2,
+        label: "Socialist Republic of Vietnam Decree No. 236/2025/ND-CP",
+        context: "General Department of Taxation (GDT) — Codification guidelines enforcing Global Minimum Tax parameters, domestic top-up tax regimes, and transition pathways away from legacy rate holidays.",
+        url: "https://www.gdt.gov.vn"
+    },
+    {
+        id: 3,
+        label: "Socialist Republic of Vietnam Law No. 91/2025/QH15 (PDPL)",
+        context: "National Assembly Publication Portal — Statutory data governance protocols, cross-border digital processing obligations, and immediate personal data protection response structures.",
+        url: "https://chinhphu.vn"
+    }
+];
+
 // --- 1. LEAD CAPTURE MODAL COMPONENT ---
 const VietnamDownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -251,6 +274,13 @@ export default function VietnamBlueprintPage() {
                 <section className="pt-12 border-t border-neutral-900">
                     <VietnamAuditForm />
                 </section>
+
+                {/* Institutional Footnotes & Regulatory Citations */}
+                <CitationFootnotes
+                    citations={vietnamCitations}
+                    title="Vietnam Regulatory Citations & Statutory Reference Layers"
+                    subtitle="Cross-border legal and tax parameters verified against official Socialist Republic of Vietnam tracking indices."
+                />
 
             </main>
         </div>
