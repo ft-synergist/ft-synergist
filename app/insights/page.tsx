@@ -52,134 +52,193 @@ export default function InsightsPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white font-sans antialiased selection:bg-[#8F801B]/20 w-full overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans antialiased w-full overflow-x-hidden">
 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* 1. HERO SECTION - PREMIUM NOIR ALIGNMENT */}
-      <section className="bg-black pt-40 pb-20 px-6 text-center border-b border-neutral-900">
-        <div className="max-w-4xl mx-auto space-y-4">
-          <span className="text-[#8F801B] font-bold tracking-[0.2em] uppercase text-xs block">
+      {/* 1. HERO SECTION — Expansive McKinsey Title */}
+      <section className="pt-16 pb-8 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <div className="border-b border-gray-900 pb-8">
+          <span className="text-[#8F801B] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">
             FT Synergist Intelligence
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            Strategic Intelligence for <br />
-            <span className="text-[#8F801B] italic">Scaling Enterprises</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 tracking-tight leading-tight mb-4">
+            Our Insights
           </h1>
-          <p className="text-base md:text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-            We strip away the academic theory. These are the actionable roadmaps, grant frameworks, and expansion playbooks we use to scale our own ventures.
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl leading-relaxed font-normal">
+            Market-defining research, grant frameworks, and operational roadmaps for scaling Asian enterprises.
           </p>
         </div>
       </section>
 
-      {/* 2. LATEST FEATURED REPORT */}
-      <section className="py-16 px-6 max-w-5xl mx-auto w-full">
-        <div className="bg-neutral-950 border border-neutral-800 overflow-hidden flex flex-col lg:flex-row items-stretch">
+      {/* 2. FEATURED INSIGHT — Expansive Layout */}
+      <section className="py-8 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <div className="mb-6">
+          <span className="text-xs font-bold tracking-widest text-gray-900 uppercase">
+            Featured Insight
+          </span>
+        </div>
 
-          {/* Left: Content */}
-          <div className="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center space-y-6 text-left">
-            <div className="flex items-center space-x-2 text-[#8F801B] font-bold text-xs uppercase tracking-widest">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8F801B]"></span>
-              <span>Latest Case Study</span>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left: Image */}
+          <div className="lg:col-span-7 relative aspect-[16/9] bg-gray-100 overflow-hidden">
+            <Image
+              src="/walovi-hero.jpg"
+              alt="Wang Lao Ji Global Branding Strategy"
+              fill
+              className="object-cover transition-transform duration-500 hover:scale-105"
+              priority={true}
+              sizes="(max-width: 1024px) 100vw, 60vw"
+            />
+          </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight tracking-tight">
-              The "Wang Lao Ji" Pivot: A Blueprint for Global Expansion
+          {/* Right: Text Content */}
+          <div className="lg:col-span-5 flex flex-col justify-center space-y-4 text-left">
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              Case Study
+            </span>
+
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-snug tracking-tight hover:text-[#8F801B] transition-colors">
+              <Link href="/insights/wang-lao-ji-global-expansion-strategy">
+                Singapore's Smart Leap: The "Wang Lao Ji" Blueprint for Global Expansion <ArrowRight className="inline-block ml-1 h-6 w-6 text-[#8F801B]" />
+              </Link>
             </h2>
-            <p className="text-sm text-neutral-400 leading-relaxed">
-              How a 197-year-old heritage brand grew profits by 15.87% by reinventing itself for the West. A masterclass in localization for Singapore SMEs.
+
+            <p className="text-sm font-serif italic text-gray-500">
+              February 2026 — Executive Roadmap
+            </p>
+
+            <p className="text-base text-gray-600 leading-relaxed">
+              How a 197-year-old heritage brand grew profits by 15.87% by reinventing itself for global markets. A masterclass in brand localization, cross-border IP defensibility, and market entry for Asian SMEs.
             </p>
 
             <div className="pt-2">
               <Link
                 href="/insights/wang-lao-ji-global-expansion-strategy"
-                className="inline-flex items-center justify-center px-6 py-3 bg-[#8F801B] text-white font-bold text-xs uppercase tracking-wider rounded-none hover:bg-[#A08d1e] transition-all"
+                className="inline-flex items-center text-sm font-bold text-[#8F801B] hover:text-gray-900 transition-colors uppercase tracking-wider"
               >
-                Read Article
-                <ArrowRight className="ml-2 h-4 w-4" />
+                Read Full Insight <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-          </div>
-
-          {/* Right: IMAGE */}
-          <div className="relative lg:w-1/2 min-h-[280px] lg:min-h-full bg-neutral-900 border-t lg:border-t-0 lg:border-l border-neutral-800">
-            <Image
-              src="/walovi-hero.jpg"
-              alt="Wang Lao Ji Global Branding Strategy Heritage Cans Layout"
-              fill
-              className="object-cover opacity-80"
-              priority={true}
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
           </div>
         </div>
+
+        <div className="border-b border-gray-200 mt-16"></div>
       </section>
 
-      {/* 3. INSIGHTS GRID */}
-      <section className="py-16 border-t border-neutral-900 bg-black">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* 3. MORE INSIGHTS GRID — Borderless Expansive Grid */}
+      <section className="py-12 px-6 md:px-12 max-w-7xl mx-auto w-full flex-grow">
+        <div className="mb-10">
+          <span className="text-xs font-bold tracking-widest text-gray-900 uppercase">
+            More Insights
+          </span>
+        </div>
 
-            {/* Card 1: Global Strategy */}
-            <div className="border border-neutral-900 p-8 bg-neutral-950/40 flex flex-col justify-between space-y-6 text-left">
-              <div className="space-y-3">
-                <span className="text-[#8F801B] font-bold text-[10px] uppercase tracking-widest block">Global Strategy</span>
-                <h4 className="text-lg font-bold text-white tracking-tight">5 Scaling Lessons from Wang Lao Ji</h4>
-                <p className="text-neutral-400 text-xs leading-relaxed">
-                  Why localization beats translation. The PCBC Framework explained natively for fast-moving cross-border operations.
-                </p>
-              </div>
-              <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
-                Read Article <ArrowRight className="w-3 h-3" />
-              </Link>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+
+          {/* Item 1 */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden">
+              <Image
+                src="/report-wlj-cover.png"
+                alt="Wang Lao Ji 5 Scaling Lessons"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
             </div>
-
-            {/* Card 2: Grants & Funding */}
-            <div className="border border-neutral-900 p-8 bg-neutral-950/40 flex flex-col justify-between space-y-6 text-left">
-              <div className="space-y-3">
-                <span className="text-[#8F801B] font-bold text-[10px] uppercase tracking-widest block">Grants & Funding</span>
-                <h4 className="text-lg font-bold text-white tracking-tight">EDG Grant Eligibility Guide</h4>
-                <p className="text-neutral-400 text-xs leading-relaxed">
-                  How to structure your branding and core transformation scopes to cleanly qualify for Enterprise Singapore co-funding support.
-                </p>
-              </div>
-              <Link href="/insights/edg-grant-eligibility-guide" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
-                Read Article <ArrowRight className="w-3 h-3" />
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+              Global Strategy
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/wang-lao-ji-global-expansion-strategy">
+                5 Scaling Lessons from Wang Lao Ji
               </Link>
-            </div>
-
-            {/* Card 3: Innovation & AI */}
-            <div className="border border-neutral-900 p-8 bg-neutral-950/40 flex flex-col justify-between space-y-6 text-left">
-              <div className="space-y-3">
-                <span className="text-[#8F801B] font-bold text-[10px] uppercase tracking-widest block">Innovation & AI</span>
-                <h4 className="text-lg font-bold text-white tracking-tight">State of AI in Southeast Asia</h4>
-                <p className="text-neutral-400 text-xs leading-relaxed">
-                  Deep regional intelligence report outlining proprietary data automation and machine learning workflows within ASEAN enterprise silos.
-                </p>
-              </div>
-              <Link href="/insights/state-of-ai-2026" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
-                Read Article <ArrowRight className="w-3 h-3" />
-              </Link>
-            </div>
-
-            {/* Card 4: Market Access & Expansion (New Vietnam Card Placement) */}
-            <div className="border border-neutral-900 p-8 bg-neutral-950/40 flex flex-col justify-between space-y-6 text-left">
-              <div className="space-y-3">
-                <span className="text-[#8F801B] font-bold text-[10px] uppercase tracking-widest block">Market Access</span>
-                <h4 className="text-lg font-bold text-white tracking-tight">Singapore-Vietnam Expansion Blueprint</h4>
-                <p className="text-neutral-400 text-xs leading-relaxed">
-                  Dismantling macro complexities, Global Minimum Tax liabilities, and PDPL cross-border localization tracking vectors across ASEAN corridors.
-                </p>
-              </div>
-              <Link href="/insights/vietnam-expansion-blueprint" className="text-xs font-bold text-[#8F801B] hover:text-white flex items-center gap-1 transition-colors uppercase tracking-wider">
-                Read Article <ArrowRight className="w-3 h-3" />
-              </Link>
-            </div>
-
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              October 2025
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              Why localization beats translation. The PCBC Framework explained natively for fast-moving cross-border operations.
+            </p>
           </div>
+
+          {/* Item 2 */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-700 to-[#8F801B] flex items-center justify-center p-6 text-white text-center font-serif text-lg font-bold">
+                EDG Grant Framework 2026
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+              Grants & Funding
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/edg-grant-eligibility-guide">
+                EDG Grant Eligibility Guide
+              </Link>
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              January 2026
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              How to structure your branding and core transformation scopes to cleanly qualify for Enterprise Singapore co-funding support.
+            </p>
+          </div>
+
+          {/* Item 3 */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden">
+              <Image
+                src="/report-ai-cover.png"
+                alt="State of AI in Southeast Asia"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
+            </div>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+              Innovation & AI
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/state-of-ai-2026">
+                State of AI in Southeast Asia
+              </Link>
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              September 2025
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              Deep regional intelligence report outlining proprietary data automation and machine learning workflows within ASEAN enterprise silos.
+            </p>
+          </div>
+
+          {/* Item 4 */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden">
+              <div className="absolute inset-0 bg-gray-900 flex items-center justify-center p-6 text-white text-center font-serif text-lg font-bold">
+                Singapore-Vietnam Corridor
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+              Market Access
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/vietnam-expansion-blueprint">
+                Singapore-Vietnam Expansion Blueprint
+              </Link>
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              June 2025
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              Dismantling macro complexities, Global Minimum Tax liabilities, and PDPL cross-border localization tracking vectors across ASEAN corridors.
+            </p>
+          </div>
+
         </div>
       </section>
 

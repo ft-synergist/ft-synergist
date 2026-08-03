@@ -24,9 +24,9 @@ export const LazyCountUp = dynamic(
 export function HomeModals() {
   const [isGrantModalOpen, setIsGrantModalOpen] = useState(false);
   return (
-    <GrantEligibilityModal 
-      isOpen={isGrantModalOpen} 
-      onClose={() => setIsGrantModalOpen(false)} 
+    <GrantEligibilityModal
+      isOpen={isGrantModalOpen}
+      onClose={() => setIsGrantModalOpen(false)}
     />
   );
 }
@@ -54,9 +54,9 @@ export function SubscribeButton() {
       >
         Subscribe to Insights
       </button>
-      <NewsletterModal 
-        isOpen={isNewsletterOpen} 
-        onClose={() => setIsNewsletterOpen(false)} 
+      <NewsletterModal
+        isOpen={isNewsletterOpen}
+        onClose={() => setIsNewsletterOpen(false)}
       />
     </>
   );
@@ -97,7 +97,8 @@ export function ServicesAccordion() {
       title: "Business Strategy Development",
       description: "Crafting actionable roadmaps backed by defensible IP Strategy to secure your legal right to dominate markets.",
       expandedIntro: "We move beyond standard planning to provide IP strategy consulting and build competitive moats.",
-      image: "/service-strategy.png",
+      image: "/ft-synergist-tnt-surveillance-business-strategy.png",
+      alt: "TNT Surveillance iSafe Telematics System deployed for fleet strategy and IP optimization",
       details: [
         { title: "Diagnosis & Market Intelligence (SWOT)", content: "We assess internal strengths and external competition using SWOT Analysis to identify growth bottlenecks." },
         { title: "Strategic Roadmap", content: "Delivering a clear go-to-market implementation plan for business frameworks, Sustainability Governance, and policy development." },
@@ -169,7 +170,7 @@ export function ServicesAccordion() {
             <div className="relative w-full h-48 overflow-hidden flex-shrink-0">
               <Image
                 src={service.image}
-                alt={service.title}
+                alt={(service as any).alt ?? service.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"

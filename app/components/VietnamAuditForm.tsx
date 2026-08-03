@@ -31,7 +31,10 @@ export default function VietnamAuditForm() {
     };
 
     return (
-        <div className="w-full max-w-4xl mx-auto bg-neutral-950 p-8 md:p-12 border border-neutral-800 rounded-none text-white my-8 text-left font-sans">
+        <div
+            data-cache-buster="v2026-gold-release"
+            className="w-full max-w-4xl mx-auto bg-neutral-950 p-8 md:p-12 border border-neutral-800 rounded-none text-white my-8 text-left font-sans"
+        >
             <div className="mb-8 border-b border-neutral-900 pb-6">
                 <span className="text-xs uppercase tracking-[0.2em] text-[#8F801B] font-bold block mb-2">
                     Diagnostic Audit Engine
@@ -40,7 +43,7 @@ export default function VietnamAuditForm() {
                     Vietnam MRA Grant &amp; Compliance Evaluation
                 </h2>
                 <p className="text-neutral-400 text-sm mt-2 leading-relaxed">
-                    Evaluate asset parameters against 2026 Global Minimum Tax paradigms, PDPL privacy mandates, and SHUI labor regulations[cite: 1].
+                    Evaluate asset parameters against 2026 Global Minimum Tax paradigms, PDPL privacy mandates, and SHUI labor regulations.
                 </p>
             </div>
 
@@ -127,22 +130,22 @@ export default function VietnamAuditForm() {
 
                         <div className="border-t border-neutral-800 pt-4">
                             <h5 className="text-white font-bold text-xs uppercase tracking-wider mb-2">1. Fiscal Restructuring (GMT Implementation)</h5>
-                            <p>Under Decree 236/2025/ND-CP, the fiscal framework enforces a 15% minimum corporate tax layer[cite: 1]. Vietnam targets local collection profiles under QDMTT parameters, shifting incentives dynamically away from legacy blanket tax cuts toward cost-based subsidies and onshore Qualified Refundable Tax Credits (QRTC)[cite: 1].</p>
+                            <p>Under Decree 236/2025/ND-CP, the fiscal framework enforces a 15% minimum corporate tax layer. Vietnam targets local collection profiles under QDMTT parameters, shifting incentives dynamically away from legacy blanket tax cuts toward cost-based subsidies and onshore Qualified Refundable Tax Credits (QRTC).</p>
                         </div>
 
                         <div className="border-t border-neutral-800 pt-4">
                             <h5 className="text-white font-bold text-xs uppercase tracking-wider mb-2">2. Cyber Sovereignty &amp; Data Governance Matrix</h5>
-                            <p>Compliance architecture is governed strictly under the Data Governance Matrix (PDPL No. 91/2025/QH15)[cite: 1]. Systems operating across digital processing layers are subject to a mandatory 2-day subject data request acknowledgment SLA alongside a rigid 24-hour illegal content removal mandate[cite: 1].</p>
+                            <p>Compliance architecture is governed strictly under the Data Governance Matrix (PDPL No. 91/2025/QH15). Systems operating across digital processing layers are subject to a mandatory 2-day subject data request acknowledgment SLA alongside a rigid 24-hour illegal content removal mandate.</p>
                         </div>
 
                         <div className="border-t border-neutral-800 pt-4">
                             <h5 className="text-white font-bold text-xs uppercase tracking-wider mb-2">3. Human Capital Framework &amp; SHUI Modifiers</h5>
-                            <p>Operations must maintain a statutory basic salary baseline matching July 2026 regulations[cite: 1]. Total corporate overhead requirements account for mandatory SHUI (Social, Health, and Unemployment Insurance) contributions sitting at 34% of overall gross compensation[cite: 1]. Under Circular 08/2026/TT-BNV, labor contracts must map securely via state-integrated API endpoints[cite: 1].</p>
+                            <p>Operations must maintain a statutory basic salary baseline matching July 2026 regulations. Total corporate overhead requirements account for mandatory SHUI (Social, Health, and Unemployment Insurance) contributions sitting at 34% of overall gross compensation. Under Circular 08/2026/TT-BNV, labor contracts must map securely via state-integrated API endpoints.</p>
                         </div>
 
                         <div className="border-t border-neutral-800 pt-4">
                             <h5 className="text-white font-bold text-xs uppercase tracking-wider mb-2">4. Supply Chain Allocation Moat &amp; Subsidies</h5>
-                            <p>Executing an asset-light processing roadmap allows you to bypass the Legacy Export Trap[cite: 1]. Your infrastructure strategy directly anchors to Enterprise Singapore's 2026 grant parameters, qualifying for up to 70% co-funding support capped at S$100,000 to cleanly eliminate foreign trade exposure liabilities[cite: 1].</p>
+                            <p>Executing an asset-light processing roadmap allows you to bypass the Legacy Export Trap. Your infrastructure strategy directly anchors to Enterprise Singapore's 2026 grant parameters, qualifying for up to 70% co-funding support capped at S$100,000 to cleanly eliminate foreign trade exposure liabilities.</p>
                         </div>
                     </div>
                 </div>
