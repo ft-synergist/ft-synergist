@@ -19,7 +19,7 @@ const vietnamCitations: CitationItem[] = [
         id: 2,
         label: "Socialist Republic of Vietnam Decree No. 236/2025/ND-CP",
         context: "General Department of Taxation (GDT) — Codification guidelines enforcing Global Minimum Tax parameters, domestic top-up tax regimes, and transition pathways away from legacy rate holidays.",
-        url: "https://www.gdt.gov.vn"
+        url: "https://www.mof.gov.vn"
     },
     {
         id: 3,
