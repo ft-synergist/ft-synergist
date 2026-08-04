@@ -129,13 +129,13 @@ export function ServicesAccordion() {
     },
     {
       title: "Market Readiness Assistance",
-      description: "De-risking global expansion with local expertise and IP Intelligence and Search to ensure safe and commercially viable market entry.",
-      expandedIntro: "We help you navigate new markets like Indonesia and Vietnam. Our services cover the three core pillars of the MRA Grant:",
-      image: "/service-market.png",
+      description: "De-risking global expansion with local expertise, regulatory navigation, and IP intelligence to secure viable international growth under Enterprise Singapore's MRA grant.",
+      expandedIntro: "We guide mid-market enterprises like Sundat through complex cross-border expansions, de-risking overseas entry across three core pillars:",
+      image: "/ft-synergist-sundat-mra-global-expansion.jpg",
       details: [
-        { title: "Market Entry (Advisory)", content: "In-depth advisory on market feasibility, Freedom-to-Operate (FTO), and import/export licensing." },
-        { title: "Overseas Business Development", content: "Matching you with licensees, franchisors, and B2B partners in-market." },
-        { title: "Overseas Promotion", content: "Strategies to launch your presence and capture initial market share." }
+        { title: "Market Entry & Feasibility Advisory", content: "In-depth research on regulatory pathways, Freedom-to-Operate (FTO), and acquisition-led entry routes." },
+        { title: "Overseas Business Development", content: "Matching your enterprise with vetted overseas partners, business brokers, and B2B licensees." },
+        { title: "International Marketing & Promotion", content: "Targeted campaigns and go-to-market strategies to establish a defensible presence in overseas territories." }
       ]
     },
     {
