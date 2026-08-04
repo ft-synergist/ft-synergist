@@ -107,13 +107,13 @@ export function ServicesAccordion() {
     },
     {
       title: "Strategic Brand & Marketing",
-      description: "Building resilient, legally protected brand strategies that command market share and turn marketing spend into tradeable equity.",
-      expandedIntro: "A brand is only an asset if it is distinct and differentiable. We differentiate your offering through:",
-      image: "/service-brand.png",
+      description: "Building resilient, legally protected brand strategies under Enterprise Singapore's EDG framework that command market share and turn marketing spend into tradeable equity.",
+      expandedIntro: "A brand is only an asset if it is distinct and legally protected. For scaling consumer brands like Big Fish Small Fish, we differentiate your offering through:",
+      image: "/Big-Fish-Small-Fish-flat-lay.jpg",
       details: [
-        { title: "Market Research", content: "Conducting primary and secondary research to validate customer segments." },
-        { title: "Brand & Trademark Strategy", content: "Structuring your brand architecture to ensure distinctiveness and legal protectability (Trademark Strategy)." },
-        { title: "Strategic Implementation", content: "Developing a plan to optimize marketing resources and extend your reach beyond the domestic market." }
+        { title: "Market Research & Insights", content: "Conducting quantitative primary research to validate target customer segments and willingness-to-pay." },
+        { title: "Brand & Trademark Strategy", content: "Structuring defensible brand architectures aligned with IPOS trademark protection and commercial valuation." },
+        { title: "Strategic Implementation", content: "Developing high-ROI marketing frameworks to optimize resources and extend market reach beyond Singapore." }
       ]
     },
     {
