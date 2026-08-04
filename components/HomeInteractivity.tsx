@@ -140,15 +140,15 @@ export function ServicesAccordion() {
     },
     {
       title: "Franchise & Licensing",
-      description: "Scaling exponentially through robust IP Brokerage and Licensing models that transform your business into a globally replicable asset.",
-      expandedIntro: "We transform your business into a globally replicable asset class.",
-      image: "/service-franchise.png",
+      description: "Under Enterprise Singapore's EDG grant framework, we transform successful local operating models into legally defensible, globally exportable asset classes.",
+      expandedIntro: "We guide high-growth local enterprises (e.g., Pawa Bakery) through complex scaling journeys to monetize existing operational excellence and secure EBITDA expansion:",
+      image: "/ft-synergist-pawa-bakery-franchise-licensing.jpg",
       details: [
-        { title: "IP Brokerage", content: "Handling the commercial transaction of your assets to ensure maximum deal value." },
-        { title: "Licensing Deal Structure", content: "Crafting robust franchise agreements and royalty models that monetize your intellectual property." },
-        { title: "Cross-Border Enforcement", content: "Ensuring your licensing models are legally enforceable across different jurisdictions." }
+        { title: "IP Audit & Monetization Strategy", content: "Auditing intangible assets and structuring royalty models to maximize existing operational revenue streams." },
+        { title: "Legal & Deal Structuring", content: "Crafting robust master franchise agreements and legally protectable operational manuals for scalable multi-jurisdiction execution." },
+        { title: "Cross-Border Market Advisory", content: "Leveraging MRA data to structure go-to-market strategies and Freedom-to-Operate (FTO) advisory for international expansion." }
       ]
-    }
+    },
   ];
 
   return (
