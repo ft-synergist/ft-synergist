@@ -118,13 +118,13 @@ export function ServicesAccordion() {
     },
     {
       title: "Innovation & Productivity",
-      description: "Providing AI-powered Innovation Consultancy to drive efficiency and harvest value by turning operational improvements into proprietary Trade Secrets & Patents.",
-      expandedIntro: "We turn operational improvements into proprietary assets through AI-powered Process Redesign, ensuring you capture the value of your technology.",
-      image: "/service-innovation.png",
+      description: "Providing AI-powered Process Redesign and workflow optimization under Enterprise Singapore frameworks to turn operational improvements into proprietary trade secrets.",
+      expandedIntro: "We turn operational bottlenecks into long-term efficiency moats. Our productivity transformation programs (e.g., Bestway continuous improvement frameworks) deliver:",
+      image: "/ft-synergist-bestway-innovation-productivity.jpg",
       details: [
-        { title: "Process Redesign", content: "Reviewing and streamlining your R&D and operational workflows to remove redundancies." },
-        { title: "Performance Measurement", content: "Developing tracking systems and roadmaps to ensure resource optimization." },
-        { title: "Innovation Harvesting", content: "Helping you adopt best practices to systematize your innovation cycle and capture Trade Secrets." }
+        { title: "Process Redesign & Workflow Automation", content: "Reviewing and streamlining operational workflows to eliminate redundancies and optimize labor allocation." },
+        { title: "Performance Measurement & KPIs", content: "Developing real-time tracking dashboards and data roadmaps to ensure sustained operational gains." },
+        { title: "Innovation Harvesting", content: "Helping enterprises capture and formalize frontline process improvements into protectable Trade Secrets & Patents." }
       ]
     },
     {
