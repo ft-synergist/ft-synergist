@@ -3,7 +3,6 @@ import Image from "next/image";
 import { ChevronRight, TrendingUp, Users, Globe } from "lucide-react";
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
-import GeoSemanticAnchors from "./components/GeoSemanticAnchors";
 import CitationFootnotes from "./components/CitationFootnotes";
 
 // 1. DIRECT IMPORTS
@@ -248,8 +247,6 @@ export default function Home() {
           <FooterCTAButton />
         </div>
       </section>
-
-      <GeoSemanticAnchors />
 
       <CitationFootnotes />
     </div>
