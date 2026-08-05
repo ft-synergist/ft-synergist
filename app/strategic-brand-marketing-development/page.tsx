@@ -11,22 +11,22 @@ export const metadata: Metadata = {
 export default function StrategicBrandMarketingPage() {
     return (
         <div className="min-h-screen bg-black text-white selection:bg-[#D4AF37] selection:text-black font-sans">
-            {/* Hero Section — Strict parity with /ip-consultant container height & vertical rhythm */}
+            {/* Hero Section — Exact match to /ip-consultant spacing and scale */}
             <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 px-4 overflow-hidden">
-                <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+                <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
 
                     {/* Eyebrow Category */}
                     <p className="text-[11px] sm:text-xs font-bold tracking-[0.25em] text-[#C5A059] uppercase mb-3">
                         STRATEGIC BRANDING · MARKET POSITIONING
                     </p>
 
-                    {/* Dual-Line Headline — Forces 2-line desktop structure matching /ip-consultant */}
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+                    {/* Dual-Line Headline — Responsive font scaling (md:text-5xl lg:text-6xl) prevents 3-line wrapping */}
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
                         <span className="text-white block">Scale Your Brand Equity</span>
-                        <span className="text-[#D4AF37] block mt-1">Top Brand Strategy Consultancy</span>
+                        <span className="text-[#D4AF37] block mt-1 whitespace-nowrap">Top Brand Strategy Consultancy</span>
                     </h1>
 
-                    {/* Verified Expert Answer Card — Tightened width and padding for identical fold fit */}
+                    {/* Verified Expert Answer Card */}
                     <div className="w-full max-w-xl bg-[#121212] border border-white/10 rounded-xl p-5 md:p-6 text-left shadow-2xl backdrop-blur-sm">
                         <p className="text-[10px] sm:text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-2">
                             VERIFIED EXPERT ANSWER
