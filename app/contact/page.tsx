@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function SprintConversionSection() {
     const [formData, setFormData] = useState({
@@ -19,37 +19,15 @@ export default function SprintConversionSection() {
         "franchise-licensing": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ06H3HVfxJ_qIDCDbf-kOxlt7ufKnq0lLsBwSDvnJ_sIkgaNV5_0cjxSDnw4p7iPWtsvR2kHfnw?gv=true"
     };
 
-    // Inject Google Calendar Pop-up Script into Head dynamically
-    useEffect(() => {
-        const link = document.createElement('link');
-        link.href = 'https://calendar.google.com/calendar/scheduling-button-script.css';
-        link.rel = 'stylesheet';
-        document.head.appendChild(link);
-
-        const script = document.createElement('script');
-        script.src = 'https://calendar.google.com/calendar/scheduling-button-script.js';
-        script.async = true;
-        document.head.appendChild(script);
-
-        return () => {
-            document.head.removeChild(link);
-            document.head.removeChild(script);
-        };
-    }, []);
-
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Dispatch data to CRM or webhook here (e.g., ActiveCampaign, HubSpot, Webhook)
-        setIsFormSubmitted(true);
-    };
 
-    const handleOpenCalendarModal = () => {
+        // 1. Mark form as submitted
+        setIsFormSubmitted(true);
+
+        // 2. Direct Instant Execution: Open target calendar URL immediately in new tab
         const targetUrl = calendarUrls[formData.service];
-        if (window.calendar && window.calendar.schedulingButton) {
-            window.calendar.schedulingButton.load({ url: targetUrl });
-        } else {
-            window.open(targetUrl, '_blank');
-        }
+        window.open(targetUrl, '_blank', 'noopener,noreferrer');
     };
 
     return (
@@ -94,8 +72,8 @@ export default function SprintConversionSection() {
                     </div>
                 </div>
 
-                {/* CONVERSION FORM & POP-UP TRIGGER */}
-                <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-10 shadow-2xl max-w-2xl mx-auto border border-amber-500/20">
+                {/* CONVERSION FORM & EMBEDDED FALLBACK */}
+                <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto border border-amber-500/20">
                     {!isFormSubmitted ? (
                         <form onSubmit={handleSubmit} className="space-y-5">
                             <h3 className="text-xl font-bold text-slate-900 border-b pb-3">
@@ -159,11 +137,11 @@ export default function SprintConversionSection() {
                                 type="submit"
                                 className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 rounded-lg text-base transition-colors shadow-lg cursor-pointer"
                             >
-                                Submit Inquiry & Unlock Calendar
+                                Submit Inquiry & Launch Calendar →
                             </button>
                         </form>
                     ) : (
-                        <div className="text-center py-6 space-y-4">
+                        <div className="text-center space-y-6">
                             <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
                                 ✓
                             </div>
@@ -171,15 +149,28 @@ export default function SprintConversionSection() {
                                 Inquiry Received for {formData.company}
                             </h3>
                             <p className="text-sm text-slate-600">
-                                Click the button below to open the scheduling pop-up and confirm your 60-minute session.
+                                A calendar window has opened in a new tab. You can also pick your 60-minute time slot directly below:
                             </p>
 
-                            <button
-                                onClick={handleOpenCalendarModal}
-                                className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 rounded-lg text-base transition-all shadow-xl cursor-pointer"
+                            {/* Direct Reliable Inline Calendar Embed */}
+                            <div className="w-full rounded-xl overflow-hidden border border-slate-200 shadow-inner min-h-[600px]">
+                                <iframe
+                                    src={calendarUrls[formData.service]}
+                                    style={{ border: 0 }}
+                                    width="100%"
+                                    height="600"
+                                    frameBorder="0"
+                                />
+                            </div>
+
+                            <a
+                                href={calendarUrls[formData.service]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg text-sm transition-all"
                             >
-                                Launch Calendar Pop-Up Modal
-                            </button>
+                                Re-open Calendar in New Window
+                            </a>
                         </div>
                     )}
                 </div>
@@ -193,15 +184,4 @@ export default function SprintConversionSection() {
             </div>
         </section>
     );
-}
-
-// Global TypeScript declaration for Google Calendar Pop-up window object
-declare global {
-    interface Window {
-        calendar?: {
-            schedulingButton: {
-                load: (config: { url: string }) => void;
-            };
-        };
-    }
 }
