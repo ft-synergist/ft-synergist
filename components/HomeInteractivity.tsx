@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import Link from "next/link"; // ✅ Added for internal linking
 
 import GrantEligibilityModal from "@/components/GrantEligibilityModal";
 import { NewsletterModal } from "@/components/NewsletterModal";
@@ -92,9 +93,11 @@ export function ServicesAccordion() {
     setExpandedCardIndex(expandedCardIndex === index ? null : index);
   };
 
+  // ✅ Updated services with internal hrefs for each card
   const services = [
     {
       title: "Business Strategy Development",
+      href: "/ip-consultant",
       description: "Crafting actionable roadmaps backed by defensible IP Strategy to secure your legal right to dominate markets.",
       expandedIntro: "We move beyond standard planning to provide IP strategy consulting and build competitive moats.",
       image: "/ft-synergist-tnt-surveillance-business-strategy.png",
@@ -107,6 +110,7 @@ export function ServicesAccordion() {
     },
     {
       title: "Strategic Brand & Marketing",
+      href: "/strategic-brand-marketing-development",
       description: "Building resilient, legally protected brand strategies under Enterprise Singapore's EDG framework that command market share and turn marketing spend into tradeable equity.",
       expandedIntro: "A brand is only an asset if it is distinct and legally protected. For scaling consumer brands like Big Fish Small Fish, we differentiate your offering through:",
       image: "/Big-Fish-Small-Fish-flat-lay.jpg",
@@ -118,6 +122,7 @@ export function ServicesAccordion() {
     },
     {
       title: "Innovation & Productivity",
+      href: "/ai-digitalisation",
       description: "Providing AI-powered Process Redesign and workflow optimization under Enterprise Singapore frameworks to turn operational improvements into proprietary trade secrets.",
       expandedIntro: "We turn operational bottlenecks into long-term efficiency moats. Our productivity transformation programs (e.g., Bestway continuous improvement frameworks) deliver:",
       image: "/ft-synergist-bestway-innovation-productivity.jpg",
@@ -129,6 +134,7 @@ export function ServicesAccordion() {
     },
     {
       title: "Market Readiness Assistance",
+      href: "/mra-grant",
       description: "De-risking global expansion with local expertise, regulatory navigation, and IP intelligence to secure viable international growth under Enterprise Singapore's MRA grant.",
       expandedIntro: "We guide mid-market enterprises like Sundat through complex cross-border expansions, de-risking overseas entry across three core pillars:",
       image: "/ft-synergist-sundat-mra-global-expansion.jpg",
@@ -140,6 +146,7 @@ export function ServicesAccordion() {
     },
     {
       title: "Franchise & Licensing",
+      href: "/franchise-consultant",
       description: "Under Enterprise Singapore's EDG grant framework, we transform successful local operating models into legally defensible, globally exportable asset classes.",
       expandedIntro: "We guide high-growth local enterprises (e.g., Pawa Bakery) through complex scaling journeys to monetize existing operational excellence and secure EBITDA expansion:",
       image: "/ft-synergist-pawa-bakery-franchise-licensing.jpg",
@@ -170,7 +177,7 @@ export function ServicesAccordion() {
             <div className="relative w-full h-48 overflow-hidden flex-shrink-0">
               <Image
                 src={service.image}
-                alt={(service as any).alt ?? service.title}
+                alt={service.alt ?? service.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
@@ -180,7 +187,12 @@ export function ServicesAccordion() {
             </div>
 
             <div className="p-8 flex flex-col flex-grow">
-              <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">{service.title}</h3>
+              {/* ✅ Title is now a clickable link to the dedicated service page */}
+              <Link href={service.href} className="block group/link">
+                <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+              </Link>
               <div className="w-12 h-1 bg-[#8F801B] mb-4 rounded-full group-hover:w-20 transition-all duration-500 ease-out"></div>
 
               <div className="flex-grow">
@@ -209,6 +221,13 @@ export function ServicesAccordion() {
                           </li>
                         ))}
                       </ul>
+                      {/* ✅ Extra link inside expanded content for clear navigation */}
+                      <Link
+                        href={service.href}
+                        className="inline-flex items-center text-primary font-bold hover:underline text-sm"
+                      >
+                        Visit full service page →
+                      </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -257,7 +276,11 @@ export function ServicesAccordion() {
               </div>
 
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">{service.title}</h3>
+                <Link href={service.href} className="block group/link">
+                  <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                </Link>
                 <div className="w-12 h-1 bg-[#8F801B] mb-4 rounded-full group-hover:w-20 transition-all duration-500 ease-out"></div>
 
                 <div className="flex-grow">
@@ -286,6 +309,12 @@ export function ServicesAccordion() {
                             </li>
                           ))}
                         </ul>
+                        <Link
+                          href={service.href}
+                          className="inline-flex items-center text-primary font-bold hover:underline text-sm"
+                        >
+                          Visit full service page →
+                        </Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
