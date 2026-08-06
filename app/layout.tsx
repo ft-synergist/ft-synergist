@@ -54,6 +54,10 @@ export const metadata: Metadata = {
   verification: {
     google: "yHh-0...",
   },
+  // ADDED CANONICAL TAG HERE:
+  alternates: {
+    canonical: "https://www.ftsynergist.com/",
+  },
 };
 
 export default function RootLayout({
