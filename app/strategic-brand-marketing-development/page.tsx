@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Strategic Brand & Marketing Development Consultant Singapore | FT Synergist',
@@ -140,12 +141,12 @@ export default function StrategicBrandMarketingPage() {
                     </div>
 
                     {/* Action Button */}
-                    <div className="mt-10 text-center">
+                    <div className="mt-8 text-center">
                         <Link
                             href="/contact"
                             className="btn-start-journey inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-[#8F801B] text-white font-bold text-sm shadow-lg hover:opacity-90 transition-all"
                         >
-                            Request Brand Strategy Advisory &rarr;
+                            Request Brand Strategy Advisory <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                     </div>
                 </section>
