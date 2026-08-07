@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Jost, Montserrat } from "next/font/google";
+import { Jost, Inter } from "next/font/google";
 import "./globals.css";
 
 // 1. SAFE COMPONENTS & PROVIDERS IMPORTS
@@ -10,16 +10,18 @@ import { SiteWidgets } from "@/components/SiteWidgets";
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { PersonaModalProvider } from "@/components/providers/PersonaModalProvider";
 
-// 2. FONT OPTIMIZATION: Implements strict display swapping to kill render-blocking layout lag
+// 2. FONT OPTIMIZATION: Option A (Jost Display + Inter Body)
 const jost = Jost({
   subsets: ["latin"],
   variable: "--font-jost",
+  weight: ["600", "700", "800"],
   display: "swap",
 });
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-inter",
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -54,7 +56,6 @@ export const metadata: Metadata = {
   verification: {
     google: "yHh-0...",
   },
-  // ADDED CANONICAL TAG HERE:
   alternates: {
     canonical: "https://www.ftsynergist.com/",
   },
@@ -66,10 +67,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  // 4. GENERATIVE ENGINE OPTIMIZATION (GEO) PERFECTLY PATCHED LOCAL SERVICE SCHEMA MATRIX
+  // 4. GENERATIVE ENGINE OPTIMIZATION (GEO) LOCAL SERVICE SCHEMA MATRIX
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService", // Formally updated to clear the schema validator error
+    "@type": "ProfessionalService",
     "name": "FT Synergist",
     "alternateName": "FT Synergist Pte Ltd",
     "url": "https://www.ftsynergist.com/",
@@ -100,7 +101,7 @@ export default function RootLayout({
         "closes": "17:00"
       }
     ],
-    "makesOffer": { // ◄─── Formally changed from 'offers' to clear the vocabulary warning
+    "makesOffer": {
       "@type": "Offer",
       "price": "8000.00",
       "priceCurrency": "SGD",
@@ -139,9 +140,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${jost.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
-        {/* CACHE BUSTER ID: Forcing explicit verification engine update */}
         <Script
           id="ft-v2-management-consultancy-schema"
           strategy="beforeInteractive"
@@ -149,9 +149,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body
-        className={`${jost.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col font-sans`}
-      >
+      <body className="font-sans antialiased min-h-screen flex flex-col">
         <ConsentProvider>
           <PersonaModalProvider>
 
@@ -168,7 +166,7 @@ export default function RootLayout({
           </PersonaModalProvider>
         </ConsentProvider>
 
-        {/* 5. WHATSAPP INLINE VECTOR BLOCK: Zero network fetch cost, zero external resource leakage */}
+        {/* WHATSAPP INLINE VECTOR BLOCK */}
         <a
           href="https://wa.me/6598628906"
           target="_blank"
@@ -189,7 +187,7 @@ export default function RootLayout({
           </svg>
         </a>
 
-        {/* 6. TRACKING METRICS DEFERRAL: Loads lazily outside window evaluation markers to dump Total Blocking Time */}
+        {/* TRACKING METRICS DEFERRAL */}
         <Script
           strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-R8ZGSYLYWJ"

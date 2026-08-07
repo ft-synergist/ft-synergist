@@ -76,14 +76,15 @@
 
   --color-border: var(--border);
 
-  --font-sans: var(--font-montserrat);
+  /* OPTION A ENFORCEMENT: Jost Headings + Inter Body */
+  --font-sans: var(--font-inter);
   --font-heading: var(--font-jost);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -94,28 +95,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading), sans-serif;
+  font-family: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* 1. Define the Animation Keyframes */
 @keyframes breathing-gold {
   0% {
-    /* STATE: Resting */
-    /* CHANGE '197, 160, 23' below to your exact Gold RGB numbers */
     box-shadow: 0 0 0 0 rgba(143, 128, 27, 0.4);
     transform: scale(1);
   }
 
   50% {
-    /* STATE: Inhale (Glow Expands) */
-    /* The 20px blur creates the soft halo effect */
     box-shadow: 0 0 20px 0 rgba(143, 128, 27, 0.2);
     transform: scale(1.02);
-    /* button grows 2% larger */
   }
 
   100% {
-    /* STATE: Exhale (Reset) */
     box-shadow: 0 0 0 0 rgba(143, 128, 27, 0);
     transform: scale(1);
   }
@@ -123,66 +118,46 @@ h6 {
 
 /* 2. Apply to the Button Class */
 .btn-start-journey {
-  /* This ensures the animation loops forever */
   animation: breathing-gold 3s infinite ease-in-out;
-
-  /* Performance optimization to prevent jagged text during movement */
   will-change: transform, box-shadow;
-
-  /* Ensure the button has a transition for when the user hovers */
   transition: all 0.3s ease;
 }
 
 /* 3. Interaction State (Stop on Hover) */
 .btn-start-journey:hover {
   animation: none;
-  /* Important: Stops the moving target so user can click */
   transform: scale(1.05);
-  /* Slight lift to indicate clickability */
   box-shadow: 0 5px 15px rgba(143, 128, 27, 0.4);
-  /* Solid shadow */
 }
 
 /* Strategic Intelligence Section Styles */
 .btn-subscribe-ghost {
-  /* Default State (Static & Elegant) */
   background-color: transparent;
   border: 1px solid #C5A017;
-  /* Your Brand Gold Hex */
   color: #333333;
-  /* Dark Grey/Black text */
   padding: 12px 30px;
   font-weight: 500;
   transition: all 0.3s ease;
-  /* Smooth transition is key */
 }
 
 .btn-subscribe-ghost:hover {
-  /* Hover State (High Contrast Inversion) */
   background-color: #000000;
-  /* Solid Black */
   color: #FFFFFF;
-  /* White Text */
   border-color: #000000;
-  /* Border merges with background */
   transform: translateY(-2px);
-  /* Tiny lift for responsiveness */
 }
 
 /* Dark mode adjustment for ghost button */
 @media (prefers-color-scheme: dark) {
   .btn-subscribe-ghost {
     color: #f3f4f6;
-    /* Light text in dark mode */
     border-color: #8F801B;
-    /* Use primary gold */
   }
 }
 
 .card-image-container {
   width: 100%;
   aspect-ratio: 16 / 9;
-  /* Enforces Widescreen */
   overflow: hidden;
 }
 
@@ -190,7 +165,5 @@ h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ensures image covers area without stretching */
   object-position: center;
-  /* Focuses on the center of the image */
 }
