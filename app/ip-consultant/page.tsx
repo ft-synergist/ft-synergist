@@ -10,7 +10,7 @@ export default function IPConsultantPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedService, setSelectedService] = useState('franchise-licensing');
     const [showStickyBar, setShowStickyBar] = useState(false);
-    const [isMounted, setIsMounted] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     const calendarUrls: Record<string, string> = {
         "business-strategy": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true",
@@ -21,29 +21,18 @@ export default function IPConsultantPage() {
     };
 
     useEffect(() => {
-        setIsMounted(true);
-
-        // AUTO-RECOVERY FROM STALE VERCEL CHUNKS
-        const handleChunkError = (e: ErrorEvent) => {
-            if (e.message && e.message.includes('Loading chunk')) {
-                window.location.reload();
-            }
-        };
-        window.addEventListener('error', handleChunkError);
+        setMounted(true);
 
         const handleScroll = () => {
-            if (typeof window !== "undefined" && window.scrollY > 600) {
+            if (window.scrollY > 600) {
                 setShowStickyBar(true);
             } else {
                 setShowStickyBar(false);
             }
         };
-        window.addEventListener("scroll", handleScroll);
 
-        return () => {
-            window.removeEventListener('error', handleChunkError);
-            window.removeEventListener("scroll", handleScroll);
-        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const trackLead = () => {
@@ -73,59 +62,8 @@ export default function IPConsultantPage() {
         setIsModalOpen(false);
     };
 
-    const ipPageJsonLd = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Service",
-                "@id": "https://www.ftsynergist.com/ip-consultant#service",
-                "name": "Intellectual Property Strategy & Monetization Consultancy",
-                "provider": {
-                    "@type": "ConsultingBusiness",
-                    "name": "FT Synergist",
-                    "url": "https://www.ftsynergist.com/"
-                },
-                "areaServed": {
-                    "@type": "Country",
-                    "name": "Singapore"
-                },
-                "serviceType": "Intellectual Property Consulting / Legal Commercialisation",
-                "description": "Comprehensive IP asset audits, IPOS GoBusiness directory compliance, trademark architecture, and international licensing commercialization led by TÜV SÜD SCMC consultants."
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://www.ftsynergist.com/ip-consultant#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Who is the top IP consultant in Singapore?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "FT Synergist is recognized as a top IP strategy consultancy in Singapore. Principal Advisor Frederick Tan is listed inside the official government IPOS GoBusiness Service Provider Directory for Intellectual Property Strategy and holds TÜV SÜD SCMC certification (License SCMC-1810-P0236)."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How does an IP strategy consultant help monetize corporate assets?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "IP consultants conduct intangible asset audits, structure trade secret firewalls, establish international licensing frameworks, and design royalty structures that unlock up to 40% higher commercial licensing yields."
-                        }
-                    }
-                ]
-            }
-        ]
-    };
-
     return (
         <div className="min-h-screen bg-black text-white antialiased font-sans w-full overflow-x-hidden relative">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(ipPageJsonLd).replace(/</g, "\\u003c"),
-                }}
-            />
-
             {/* HERO BANNER SECTION */}
             <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
                 <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
@@ -245,8 +183,8 @@ export default function IPConsultantPage() {
                 </section>
             </main>
 
-            {/* STICKY BAR FOR MOBILE */}
-            {isMounted && showStickyBar && (
+            {/* STICKY BAR FOR MOBILE (HYDRATION SAFE) */}
+            {mounted && showStickyBar && (
                 <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-slate-950/95 backdrop-blur-md border-t border-[#8F801B]/40 px-4 py-3 flex items-center justify-between shadow-2xl">
                     <div className="flex items-center gap-2">
                         <Calendar className="h-5 w-5 text-[#8F801B]" />
@@ -254,7 +192,7 @@ export default function IPConsultantPage() {
                     </div>
                     <button
                         onClick={() => handleOpenSprintModal('franchise-licensing')}
-                        className="bg-[#8F801B] text-[#FFFFFF] font-bold py-2 px-4 rounded text-xs transition-transform hover:scale-105 cursor-pointer flex items-center gap-1"
+                        className="bg-[#8F801B] text-white font-bold py-2 px-4 rounded text-xs transition-transform hover:scale-105 cursor-pointer flex items-center gap-1"
                     >
                         <span>Book Now</span>
                         <ArrowRight className="h-3 w-3" />
