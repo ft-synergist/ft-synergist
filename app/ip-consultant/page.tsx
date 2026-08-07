@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import CitationFootnotes from '@/app/components/CitationFootnotes';
-import GeoSemanticAnchors from '@/app/components/GeoSemanticAnchors';
-import QuantitativeSuccessTable from '@/app/components/QuantitativeSuccessTable';
+import dynamic from 'next/dynamic';
 import { ArrowRight, ExternalLink, ShieldCheck, TrendingUp, Globe, X, Calendar } from 'lucide-react';
+
+// Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
+const CitationFootnotes = dynamic(() => import('@/app/components/CitationFootnotes'), { ssr: false });
+const GeoSemanticAnchors = dynamic(() => import('@/app/components/GeoSemanticAnchors'), { ssr: false });
+const QuantitativeSuccessTable = dynamic(() => import('@/app/components/QuantitativeSuccessTable'), { ssr: false });
 
 export default function IPConsultantPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -183,7 +186,7 @@ export default function IPConsultantPage() {
                 </section>
             </main>
 
-            {/* STICKY BAR FOR MOBILE (HYDRATION SAFE) */}
+            {/* STICKY BAR FOR MOBILE */}
             {mounted && showStickyBar && (
                 <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-slate-950/95 backdrop-blur-md border-t border-[#8F801B]/40 px-4 py-3 flex items-center justify-between shadow-2xl">
                     <div className="flex items-center gap-2">
