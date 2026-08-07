@@ -3,18 +3,43 @@
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { ArrowRight, ExternalLink, ShieldCheck, TrendingUp, Globe, X, Calendar } from 'lucide-react';
+import Script from 'next/script';
+import { ArrowRight, ExternalLink, ShieldCheck, TrendingUp, Globe, X, Calendar, Plus, Minus } from 'lucide-react';
 
 // Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
 const CitationFootnotes = dynamic(() => import('@/app/components/CitationFootnotes'), { ssr: false });
 const GeoSemanticAnchors = dynamic(() => import('@/app/components/GeoSemanticAnchors'), { ssr: false });
 const QuantitativeSuccessTable = dynamic(() => import('@/app/components/QuantitativeSuccessTable'), { ssr: false });
 
+const faqItems = [
+    {
+        q: "What is the difference between an IP Strategy Consultant in Singapore and a patent lawyer?",
+        a: "A patent lawyer exclusively handles the legal filing, registration, and defense of patents and trademarks. An IP Strategy Consultant (like FT Synergist) operates at the executive corporate level. We align your intangible assets with overarching business growth—whether that's securing EnterpriseSG EDG co-funding, preparing for a Series A round, or positioning for a strategic M&A exit. We build the commercial monetization roadmap that legal counsel then executes."
+    },
+    {
+        q: "Can I use the Enterprise Singapore (EDG) grant for an IP Strategy Consultancy project?",
+        a: "Yes. Enterprise Singapore's Enterprise Development Grant (EDG) explicitly co-funds 'IP and Business Strategy Development' projects. Because FT Synergist is led by a TÜV SÜD Certified Management Consultant (SCMC License SCMC-1810-P0236) and listed on the official IPOS GoBusiness directory, our project proposals hold absolute statutory submission integrity. The grant can co-fund diagnostic audits, gap analysis, and implementation roadmaps."
+    },
+    {
+        q: "How does an IP Consultant in Singapore convert trade secrets and workflows into tradeable equity?",
+        a: "Many enterprises leave substantial equity on the table by treating trade secrets, source code, and operational workflows as unvalued internal tools. Through our proprietary IP evaluation matrix, we catalog these assets, ring-fence them legally via IPOS compliance, and engineer high-yield licensing architectures (Royalty Architecture) that generate recurring revenue across Singapore and ASEAN."
+    },
+    {
+        q: "Why is listing on the official IPOS GoBusiness Service Provider Directory crucial?",
+        a: "The IPOS GoBusiness Directory (IP Grow) is the official Intellectual Property Office of Singapore registry for verified service providers. Engaging an accredited IP consultant listed on IPOS GoBusiness guarantees that your asset audits, trademark landscaping, and IP strategy frameworks comply with strict statutory criteria required for Singapore government grant validations and international market defensibility."
+    },
+    {
+        q: "How does building a defensible IP moat increase corporate valuation for M&A or IPO?",
+        a: "A defensible IP moat combines registered trademarks, trade secret protection, and exclusive commercial licensing contracts that prevent competitors from copying your business model. Building an audited IP portfolio de-risks expansion, protects market share, and directly increases enterprise valuation during M&A buyouts, joint ventures, or regional expansion."
+    }
+];
+
 export default function IPConsultantPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedService, setSelectedService] = useState('business-strategy');
     const [showStickyBar, setShowStickyBar] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
     // Locked 5 Sprint Google Calendar Schedule Mapping
     const calendarUrls: Record<string, string> = {
@@ -69,6 +94,22 @@ export default function IPConsultantPage() {
 
     return (
         <div className="min-h-screen bg-black text-white antialiased font-sans w-full overflow-x-hidden relative">
+            {/* GEO / AI SCHEMA MARKUP FOR FAQPAGE */}
+            <Script id="ip-faq-schema" type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqItems.map(item => ({
+                        "@type": "Question",
+                        "name": item.q,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": item.a
+                        }
+                    }))
+                })}
+            </Script>
+
             {/* HERO BANNER SECTION */}
             <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
                 {/* 1. EXACT MATCH H1 */}
@@ -225,6 +266,63 @@ export default function IPConsultantPage() {
                             className="shrink-0 bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-3.5 px-6 rounded-lg text-sm transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center"
                         >
                             Assess IP Valuation
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </button>
+                    </div>
+                </section>
+
+                {/* SECTION 4: FREQUENTLY ASKED QUESTIONS (GEO & SGE OPTIMIZED) */}
+                <section className="space-y-6 pt-4 border-t border-white/10">
+                    <div className="text-center space-y-2">
+                        <h3 className="text-xs font-bold tracking-[0.2em] text-[#8F801B] uppercase">
+                            What Business Owners Ask
+                        </h3>
+                        <h2 className="text-2xl md:text-3xl font-extrabold text-white">
+                            Frequently Asked Questions
+                        </h2>
+                    </div>
+
+                    <div className="space-y-4 pt-4">
+                        {faqItems.map((item, index) => (
+                            <div
+                                key={index}
+                                className="bg-[#121212] border border-white/10 rounded-xl overflow-hidden transition-colors hover:border-[#8F801B]/50"
+                            >
+                                <button
+                                    onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                                    className="w-full flex items-center justify-between p-5 text-left focus:outline-none cursor-pointer"
+                                >
+                                    <span className="text-white font-medium text-sm md:text-base pr-4">{item.q}</span>
+                                    {openFaqIndex === index ? (
+                                        <Minus className="h-5 w-5 flex-shrink-0 text-[#8F801B]" />
+                                    ) : (
+                                        <Plus className="h-5 w-5 flex-shrink-0 text-gray-500" />
+                                    )}
+                                </button>
+
+                                {openFaqIndex === index && (
+                                    <div className="px-5 pb-5 text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
+                                        {index === 0 ? (
+                                            <>
+                                                A patent lawyer exclusively handles the legal filing, registration, and defense of patents and trademarks. An IP Strategy Consultant (like FT Synergist) operates at a higher corporate level. We align your IP assets with your overarching business goals—whether that&apos;s securing <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">EnterpriseSG EDG funding</Link>, preparing for a Series A funding round, or positioning for a strategic M&amp;A exit. We build the commercial roadmap that lawyers then execute.
+                                            </>
+                                        ) : (
+                                            item.a
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* FAQ Lead-Gen Micro-CTA */}
+                    <div className="text-center pt-6 bg-white/5 p-6 rounded-xl border border-white/10 flex flex-col items-center space-y-3">
+                        <p className="text-sm text-gray-300">Still have questions about unlocking your IP value?</p>
+                        <button
+                            onClick={() => handleOpenSprintModal('business-strategy')}
+                            className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-3 px-8 rounded-lg text-sm transition-all shadow-lg hover:scale-105 cursor-pointer inline-flex items-center"
+                        >
+                            Discuss Your IP Strategy Now
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </button>
                     </div>
