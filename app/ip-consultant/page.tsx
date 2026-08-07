@@ -15,12 +15,13 @@ export default function IPConsultantPage() {
     const [showStickyBar, setShowStickyBar] = useState(false);
     const [mounted, setMounted] = useState(false);
 
+    // Locked 5 Sprint Google Calendar Schedule Mapping
     const calendarUrls: Record<string, string> = {
         "business-strategy": "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06H3HVfxJ_qIDCDbf-kOxlt7ufKnq0lLsBwSDvnJ_sIkgaNV5_0cjxSDnw4p7iPWtsvR2kHfnw?gv=true",
         "strategic-brand": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1KtH1PGLFwfzWLr0MYr_Q9O4FLI78uRKX8FpNv0Z7A-NHMgYz2aPOT841cBzNPM8CquHvgBeAV?gv=true",
         "innovation-productivity": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qr3SmjWpxiA6xfoBwO1uTYv4_dX4UkWMSWHn-yY2Z5X-EsSVJiiNeFfvowWLuxBrK0kLJYrTi?gv=true",
         "market-readiness": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2bP4LZ2IUL4kFaw3NW0IYE78GyJIplsadYgcYz4hTWFTVirByvmt9n9rH47vM0W39IbCZqyZJw?gv=true",
-        "franchise-licensing": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ06H3HVfxJ_qIDCDbf-kOxlt7ufKnq0lLsBwSDvnJ_sIkgaNV5_0cjxSDnw4p7iPWtsvR2kHfnw?gv=true"
+        "franchise-licensing": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true"
     };
 
     useEffect(() => {
@@ -203,7 +204,7 @@ export default function IPConsultantPage() {
                 </div>
             )}
 
-            {/* MODAL */}
+            {/* MODAL WITH LOCKED SPRINT TITLES */}
             {isModalOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
                     <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative border border-[#8F801B]/30">
@@ -234,11 +235,11 @@ export default function IPConsultantPage() {
                                     className="w-full border border-slate-300 rounded-lg p-3.5 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none bg-white text-slate-900 font-medium"
                                     onChange={(e) => setSelectedService(e.target.value)}
                                 >
-                                    <option value="business-strategy">Business Strategy Sprint (EDG / IP)</option>
-                                    <option value="franchise-licensing">Franchise & IP Strategy Sprint</option>
-                                    <option value="strategic-brand">Brand Strategy Sprint (EDG)</option>
-                                    <option value="innovation-productivity">Innovation & Productivity Sprint (EDG)</option>
+                                    <option value="business-strategy">Business Strategy Sprint</option>
+                                    <option value="strategic-brand">Brand Strategy Sprint</option>
+                                    <option value="innovation-productivity">Innovation & Productivity Sprint</option>
                                     <option value="market-readiness">Market Readiness Assistance (MRA) Sprint</option>
+                                    <option value="franchise-licensing">Franchise & IP Strategy Sprint</option>
                                 </select>
                             </div>
 
@@ -254,7 +255,7 @@ export default function IPConsultantPage() {
                 </div>
             )}
 
-            {/* FOOTER */}
+            {/* FOOTER INFRASTRUCTURE */}
             <footer className="w-full border-t border-neutral-800 bg-neutral-900/50">
                 <div className="max-w-4xl mx-auto px-6 py-10">
                     <CitationFootnotes />
