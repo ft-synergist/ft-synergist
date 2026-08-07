@@ -155,17 +155,17 @@ export default function ClientEDGPage() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="relative z-10 max-w-5xl mx-auto flex flex-col items-center"
                 >
-                    {/* Updated Hero Headline */}
+                    {/* Exact Match SEO / GEO H1 Headline */}
                     <h1 className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-2xl mb-6">
-                        Ready to Scale Your <br className="hidden sm:inline" />
+                        Enterprise Development Grant <br className="hidden sm:inline" />
                         <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
-                            Business Dominance?
+                            (EDG) Consultant Singapore
                         </span>
                     </h1>
 
                     {/* Streamlined Subheadline (Strictly Two Lines on Desktop) */}
-                    <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed font-normal">
-                        Jump into an executive strategy sprint with our team to find out how we turn government support<br className="hidden md:inline" /> into defensible IP, operational excellence, and global expansion.
+                    <p className="max-w-3xl mx-auto text-base sm:text-xl text-gray-300 mb-10 leading-relaxed font-normal">
+                        Jump into an executive strategy sprint with our team to find out how<br className="hidden md:inline" /> we turn government support into defensible IP, operational excellence, and global expansion.
                     </p>
 
                     {/* Verified Expert Answer Alert Box */}
@@ -436,7 +436,7 @@ export default function ClientEDGPage() {
                 </div>
             </section>
 
-            {/* SECOND CONVERSION BANNER (Updated Headline & Subheadline) */}
+            {/* SECOND CONVERSION BANNER */}
             <section className="bg-slate-900 border-t border-b border-[#8F801B]/30 py-20 text-white relative overflow-hidden">
                 <div className="container mx-auto px-4 text-center max-w-4xl relative z-10 space-y-6">
                     <h2 className="font-heading text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
@@ -457,7 +457,7 @@ export default function ClientEDGPage() {
                 </div>
             </section>
 
-            {/* STREAMLINED MICRO-MODAL (Displays ONLY Sprint Focus Select) */}
+            {/* STREAMLINED MICRO-MODAL */}
             {isModalOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
                     <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative border border-[#8F801B]/30">
