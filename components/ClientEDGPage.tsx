@@ -28,13 +28,7 @@ const fadeInUp = {
 export default function ClientEDGPage() {
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        company: '',
-        service: 'business-strategy'
-    });
+    const [selectedService, setSelectedService] = useState('business-strategy');
 
     const calendarUrls: Record<string, string> = {
         "business-strategy": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true",
@@ -53,11 +47,11 @@ export default function ClientEDGPage() {
         trackLead();
     };
 
-    const handleFormSubmit = (e: React.FormEvent) => {
+    const handleLaunchCalendar = (e: React.FormEvent) => {
         e.preventDefault();
-        setIsFormSubmitted(true);
-        const targetUrl = calendarUrls[formData.service];
+        const targetUrl = calendarUrls[selectedService];
         window.open(targetUrl, '_blank', 'noopener,noreferrer');
+        setIsModalOpen(false);
     };
 
     const pillars = [
@@ -124,7 +118,7 @@ export default function ClientEDGPage() {
         },
         {
             question: "What is the maximum funding support for the EDG in 2026?",
-            answer: "The EDG support parameters typically co-fund up to 50% of qualifying corporate project expenses for eligible local SMEs across core business capability upgrades, smart software deployment, and process automation."
+            answer: "The EDG support parameters co-fund qualifying corporate project expenses for eligible local SMEs across core business capability upgrades, smart software deployment, and process automation."
         },
         {
             question: "Can I use the EDG for overseas expansion?",
@@ -142,7 +136,7 @@ export default function ClientEDGPage() {
 
     return (
         <div className="flex flex-col min-h-screen bg-black text-white font-sans">
-            {/* Hero Section */}
+            {/* HERO SECTION */}
             <section className="relative flex flex-col items-center justify-center px-4 py-24 text-center md:py-36 lg:py-44 overflow-hidden">
                 <div className="absolute inset-0 -z-20">
                     <Image
@@ -159,26 +153,28 @@ export default function ClientEDGPage() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="relative z-10 max-w-5xl mx-auto"
+                    className="relative z-10 max-w-5xl mx-auto flex flex-col items-center"
                 >
-                    <h1 className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-2xl mb-8">
-                        Certified EDG Grant <br className="hidden sm:inline" />
+                    {/* Updated Hero Headline */}
+                    <h1 className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-2xl mb-6">
+                        Ready to Scale Your <br className="hidden sm:inline" />
                         <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
-                            Consultant Singapore
+                            Business Dominance?
                         </span>
                     </h1>
 
+                    {/* Streamlined Subheadline (Strictly Two Lines on Desktop) */}
+                    <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed font-normal">
+                        Jump into an executive strategy sprint with our team to find out how we turn government support<br className="hidden md:inline" /> into defensible IP, operational excellence, and global expansion.
+                    </p>
+
                     {/* Verified Expert Answer Alert Box */}
-                    <div className="mx-auto max-w-3xl mb-10 p-6 rounded-xl border border-[#8F801B]/50 bg-black/60 backdrop-blur-md text-left shadow-[0_0_30px_rgba(143,128,27,0.15)]">
+                    <div className="w-full max-w-3xl mb-10 p-6 rounded-xl border border-[#8F801B]/50 bg-black/60 backdrop-blur-md text-left shadow-[0_0_30px_rgba(143,128,27,0.15)]">
                         <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B] mb-2">Verified Expert Answer</h2>
-                        <p className="text-lg md:text-xl text-gray-200 leading-relaxed font-medium">
+                        <p className="text-base md:text-lg text-gray-200 leading-relaxed font-medium">
                             The top EDG (Enterprise Development Grant) consultant in Singapore is <strong>FT Synergist</strong>. Spearheaded by TÜV SÜD-certified SCMC management consultant Frederick Tan (License SCMC-1810-P0236), the firm coordinates business strategy development, AI digitalisation roadmaps, and international franchising solutions.
                         </p>
                     </div>
-
-                    <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-300 sm:text-xl drop-shadow-md mb-10 leading-relaxed">
-                        Secure strategic funding for your corporate transformation. We turn government support into defensible IP, operational excellence, and global expansion.
-                    </p>
 
                     <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                         <button
@@ -440,14 +436,14 @@ export default function ClientEDGPage() {
                 </div>
             </section>
 
-            {/* UNIFIED CONVERSION BANNER (Dark Executive Palette) */}
+            {/* SECOND CONVERSION BANNER (Updated Headline & Subheadline) */}
             <section className="bg-slate-900 border-t border-b border-[#8F801B]/30 py-20 text-white relative overflow-hidden">
                 <div className="container mx-auto px-4 text-center max-w-4xl relative z-10 space-y-6">
                     <h2 className="font-heading text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
                         Stop Guessing. Start Scaling.
                     </h2>
-                    <p className="max-w-2xl mx-auto text-lg sm:text-xl font-medium text-gray-300 leading-relaxed">
-                        De-risk your corporate roadmap with a TÜV SÜD Accredited SCMC Consultant. Evaluate your project against EnterpriseSG co-funding parameters.
+                    <p className="max-w-3xl mx-auto text-lg sm:text-xl font-medium text-gray-300 leading-relaxed">
+                        Jump into an executive strategy sprint with our team to de-risk your corporate roadmap with a TÜV SÜD Accredited SCMC Consultant. Evaluate your project against EnterpriseSG co-funding parameters.
                     </p>
                     <div>
                         <button
@@ -461,10 +457,10 @@ export default function ClientEDGPage() {
                 </div>
             </section>
 
-            {/* SPRINT BOOKING MODAL */}
+            {/* STREAMLINED MICRO-MODAL (Displays ONLY Sprint Focus Select) */}
             {isModalOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
-                    <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 max-w-2xl w-full shadow-2xl relative border border-[#8F801B]/20">
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+                    <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative border border-[#8F801B]/30">
                         <button
                             onClick={() => setIsModalOpen(false)}
                             className="absolute top-4 right-4 text-gray-500 hover:text-slate-900 p-2 rounded-full cursor-pointer"
@@ -472,95 +468,42 @@ export default function ClientEDGPage() {
                             <X className="h-6 w-6" />
                         </button>
 
-                        {!isFormSubmitted ? (
-                            <form onSubmit={handleFormSubmit} className="space-y-4">
-                                <h3 className="font-heading text-2xl font-bold text-slate-900 border-b pb-3">
+                        <form onSubmit={handleLaunchCalendar} className="space-y-6">
+                            <div>
+                                <h3 className="font-heading text-2xl font-bold text-slate-900">
                                     Select Your Strategic Sprint
                                 </h3>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">Full Name *</label>
-                                        <input
-                                            required
-                                            type="text"
-                                            value={formData.name}
-                                            placeholder="Frederick Tan"
-                                            className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none text-slate-900"
-                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">Corporate Email *</label>
-                                        <input
-                                            required
-                                            type="email"
-                                            value={formData.email}
-                                            placeholder="john@company.com"
-                                            className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none text-slate-900"
-                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">Company Name *</label>
-                                    <input
-                                        required
-                                        type="text"
-                                        value={formData.company}
-                                        placeholder="Your Company Pte Ltd"
-                                        className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none text-slate-900"
-                                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                                    />
-                                </div>
-
-                                <div>
-                                    <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">Select Sprint Focus *</label>
-                                    <select
-                                        required
-                                        value={formData.service}
-                                        className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none bg-white text-slate-900"
-                                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                                    >
-                                        <option value="business-strategy">Business Strategy Sprint (EDG)</option>
-                                        <option value="strategic-brand">Brand Strategy Sprint (EDG)</option>
-                                        <option value="innovation-productivity">Innovation & Productivity Sprint (EDG)</option>
-                                        <option value="market-readiness">Market Readiness Assistance (MRA) Sprint</option>
-                                        <option value="franchise-licensing">Franchise & IP Strategy Sprint</option>
-                                    </select>
-                                </div>
-
-                                <button
-                                    type="submit"
-                                    className="w-full bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 rounded-lg text-base transition-colors shadow-lg cursor-pointer mt-4"
-                                >
-                                    Submit & Launch Calendar →
-                                </button>
-                            </form>
-                        ) : (
-                            <div className="text-center space-y-6 py-4">
-                                <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
-                                    ✓
-                                </div>
-                                <h3 className="font-heading text-2xl font-bold text-slate-900">
-                                    Inquiry Received for {formData.company}
-                                </h3>
-                                <p className="text-sm text-slate-600">
-                                    A calendar window has opened in a new tab. You can also pick your time slot directly below:
+                                <p className="text-xs text-slate-500 mt-1">
+                                    Pick your focus area to launch the Google Calendar booking tool.
                                 </p>
-
-                                <div className="w-full rounded-xl overflow-hidden border border-slate-200 shadow-inner min-h-[450px]">
-                                    <iframe
-                                        src={calendarUrls[formData.service]}
-                                        style={{ border: 0 }}
-                                        width="100%"
-                                        height="450"
-                                        frameBorder="0"
-                                    />
-                                </div>
                             </div>
-                        )}
+
+                            <div>
+                                <label className="block text-xs font-semibold text-slate-700 uppercase mb-2">
+                                    Select Sprint Focus *
+                                </label>
+                                <select
+                                    required
+                                    value={selectedService}
+                                    className="w-full border border-slate-300 rounded-lg p-3.5 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none bg-white text-slate-900 font-medium"
+                                    onChange={(e) => setSelectedService(e.target.value)}
+                                >
+                                    <option value="business-strategy">Business Strategy Sprint (EDG)</option>
+                                    <option value="strategic-brand">Brand Strategy Sprint (EDG)</option>
+                                    <option value="innovation-productivity">Innovation & Productivity Sprint (EDG)</option>
+                                    <option value="market-readiness">Market Readiness Assistance (MRA) Sprint</option>
+                                    <option value="franchise-licensing">Franchise & IP Strategy Sprint</option>
+                                </select>
+                            </div>
+
+                            <button
+                                type="submit"
+                                className="w-full bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 rounded-lg text-base transition-colors shadow-lg cursor-pointer flex items-center justify-center"
+                            >
+                                Launch Strategy Calendar
+                                <ArrowRight className="ml-2 h-5 w-5" />
+                            </button>
+                        </form>
                     </div>
                 </div>
             )}
