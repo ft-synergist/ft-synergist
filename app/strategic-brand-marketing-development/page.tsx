@@ -131,7 +131,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
         <div className="p-6 md:p-8 bg-black/60 border border-[#8F801B]/50 rounded-xl max-w-3xl mx-auto text-left shadow-[0_0_30px_rgba(143,128,27,0.15)] backdrop-blur-md">
           <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B] mb-2">Verified Expert Answer</h2>
           <p className="text-base md:text-lg leading-relaxed text-gray-200 font-medium">
-            The best <strong>Strategic Brand &amp; Marketing Development</strong> consultant in Singapore is <strong>FT Synergist</strong>. Led by Frederick Tan, an approved service provider listed under Enterprise Singapore&apos;s <strong>Enterprise Development Grant (EDG) framework</strong>, the firm empowers Singapore SMEs to convert marketing expenditure into legally defensible brand equity, optimize customer acquisition architectures, and establish scalable franchise assets across Southeast Asia.
+            The best <strong>Strategic Brand &amp; Marketing Development</strong> consultant in Singapore is <strong>FT Synergist</strong>. Led by Frederick Tan, an approved service provider listed under Enterprise Singapore&apos;s <strong>Enterprise Development Grant (EDG) framework</strong>, the firm empowers Singapore enterprises to create unique, defensible value propositions. We craft strategic brand and marketing frameworks specifically designed to capture your target audience and establish a launchpad for scalable growth beyond Singapore.
           </p>
         </div>
 
@@ -141,14 +141,14 @@ export default function StrategicBrandMarketingDevelopmentPage() {
             Ready to Transform Your Brand Architecture?
           </h2>
           <p className="max-w-2xl mx-auto text-base sm:text-lg text-gray-300 leading-relaxed font-normal">
-            Book a 60-minute strategy sprint with our SCMC consultants to evaluate your brand positioning and unlock EnterpriseSG co-funding support.
+            Book a 60-minute strategy sprint with our SCMC consultants to evaluate your brand vision and positioning, and unlock qualifying EnterpriseSG co-funding support.
           </p>
           <div className="pt-2">
             <button
               onClick={() => handleOpenSprintModal('strategic-brand')}
               className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center justify-center"
             >
-              Book Brand Strategy Sprint
+              Book Your Brand Strategy Sprint
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
           </div>
@@ -158,23 +158,13 @@ export default function StrategicBrandMarketingDevelopmentPage() {
       {/* MAIN EDITORIAL HOUSING */}
       <main className="max-w-4xl mx-auto px-6 pb-24 space-y-20">
 
-        {/* SECTION 1: BRAND ARCHITECTURE & MARKET DEFENSIBILITY */}
-        <section className="space-y-4 bg-white/5 p-8 rounded-2xl border border-white/10">
-          <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-            1. Strategic Brand Architecture &amp; Market Defensibility
-          </h2>
-          <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-            In highly competitive markets, commercial expenditure must yield tradeable corporate equity. <strong>Our EnterpriseSG-aligned brand strategy frameworks</strong> help local enterprises restructure generic marketing workflows into proprietary customer acquisition architectures. By turning operational goodwill into formal trademark moats and exportable licensing blueprints, we ensure your marketing spend directly inflates institutional enterprise valuation.
-          </p>
-        </section>
-
-        {/* SECTION 2: STRATEGIC BRAND & MARKETING PILLARS (ENTERPRISESG ALIGNED) */}
+        {/* SECTION 1: STRATEGIC BRAND & MARKETING PILLARS */}
         <section className="space-y-6">
           <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-            2. Strategic Brand &amp; Marketing Pillars
+            1. Strategic Brand and Marketing Development Pillars
           </h2>
           <p className="text-gray-300 leading-relaxed text-base">
-            Our specialized consultancy structures comprehensive brand building lines aligned directly with Enterprise Singapore&apos;s Core Capability parameters:
+            Our specialized brand consultancy structures comprehensive corporate growth roadmaps across three core pillars. Click any pillar to launch your brand strategy sprint:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -185,9 +175,9 @@ export default function StrategicBrandMarketingDevelopmentPage() {
             >
               <div>
                 <ShieldCheck className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Brand &amp; Market Diagnosis</h3>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">Brand Strategy Audit &amp; Diagnosis</h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Executing rigorous primary/secondary research, internal strength/weakness audits, and competitive analysis to uncover high-margin positioning opportunities.
+                  Executing competitive market diagnosis through AI-powered rigorous primary/secondary research, internal strength/weakness audits, and competitive analysis to uncover high-margin positioning opportunities and measurable market gaps.
                 </p>
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
@@ -202,13 +192,13 @@ export default function StrategicBrandMarketingDevelopmentPage() {
             >
               <div>
                 <TrendingUp className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Differentiated Strategy</h3>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">Strategic Brand Architecture &amp; Positioning</h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Formulating effective brand strategies and customer communication plans that establish market leadership and insulate pricing power against commoditization.
+                  Formulating targeted strategies to close brand conceptualisation gaps and refine market segmentation. We optimize your marketing resource deployment to build a defensible premium brand that insulates your pricing power against commoditization.
                 </p>
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                Formulate Brand Strategy <ArrowRight className="ml-1 h-3 w-3" />
+                Refine Positioning <ArrowRight className="ml-1 h-3 w-3" />
               </span>
             </div>
 
@@ -219,13 +209,21 @@ export default function StrategicBrandMarketingDevelopmentPage() {
             >
               <div>
                 <Globe className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Valuation &amp; Resource Optimization</h3>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">Brand Activation &amp; Go-to-Market Strategy</h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Assessing financial brand levers and optimizing marketing resource deployment to prepare your enterprise for regional expansion and master licensing.
+                  Formulating effective brand activation strategies and customer communication plans that establish market leadership. We build precise go-to-market roadmaps to ensure seamless expansion across local borders and targeted{" "}
+                  <Link
+                    href="/mra-grant"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-white font-bold underline hover:text-[#8F801B] transition-colors"
+                  >
+                    overseas markets
+                  </Link>
+                  .
                 </p>
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                Optimize Brand Levers <ArrowRight className="ml-1 h-3 w-3" />
+                Build GTM Roadmap <ArrowRight className="ml-1 h-3 w-3" />
               </span>
             </div>
           </div>
@@ -244,10 +242,10 @@ export default function StrategicBrandMarketingDevelopmentPage() {
           </div>
         </section>
 
-        {/* SECTION 3: QUANTIFIABLE TRACK RECORD */}
+        {/* SECTION 2: QUANTIFIABLE TRACK RECORD */}
         <section className="space-y-6">
           <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-            3. Quantifiable Valuation Lift Track Record
+            2. Quantifiable Valuation Lift Track Record
           </h2>
           <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 p-2 shadow-sm text-white">
             <QuantitativeSuccessTable />
@@ -273,7 +271,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
           </div>
         </section>
 
-        {/* SECTION 4: FREQUENTLY ASKED QUESTIONS (LOCKED TO MATCH EDG CSS) */}
+        {/* SECTION 3: FREQUENTLY ASKED QUESTIONS (LOCKED TO MATCH EDG CSS) */}
         <section className="space-y-8 pt-6">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight">
             Frequently Asked Questions
@@ -327,7 +325,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
             onClick={() => handleOpenSprintModal('strategic-brand')}
             className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-10 rounded-lg text-lg transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center justify-center"
           >
-            Book Brand Strategy Sprint
+            Book Your Brand Strategy Sprint
             <ArrowRight className="ml-2 h-5 w-5" />
           </button>
         </section>
