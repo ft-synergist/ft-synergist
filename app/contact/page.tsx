@@ -1,174 +1,187 @@
-import type { Metadata } from 'next';
-import { MapPin, Clock, ArrowRight, ShieldCheck } from 'lucide-react';
+'use client';
+import { useState } from 'react';
 
-export const metadata: Metadata = {
-    title: 'Contact & Advisory Intake | FT Synergist Singapore',
-    description: 'Schedule a strategic advisory consultation with TÜV SÜD certified management consultants. EnterpriseSG EDG & MRA grant alignment for Singapore SMEs.',
-};
+export default function SprintConversionSection() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        company: '',
+        service: 'business-strategy'
+    });
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
-export default function ContactPage() {
-    const testimonials = [
-        {
-            eyebrow: "IMPACT: ENTERPRISE CRISIS MANAGEMENT & SCALING",
-            title: "Operational Continuity & Leadership",
-            quote: "Frederick is a management consultant with a very authentic and positive personality that enabled him to very quickly build rapport and trust with my senior leadership team. Frederick far exceeded our expectations... and was quick and decisive in helping us to design and activate evolving business continuity plans.",
-            author: "Joshua Tan",
-            company: "TNT Surveillance Pte Ltd"
-        },
-        {
-            eyebrow: "IMPACT: MASSIVE REGIONAL NETWORK GROWTH",
-            title: "Franchise Architecture Deployment",
-            quote: "We partnered with FT Synergist to franchise our banmian business and within two years, our outlets grew from 4 to over 30.",
-            author: "Brandon Toh",
-            company: "Branwood Holdings"
-        },
-        {
-            eyebrow: "IMPACT: GLOBAL M&A STRATEGY",
-            title: "Agrochemical Expansion & IP Monetization",
-            quote: "FT Synergist guided us in charting a 5-year growth strategy for my agrochemical business and overseas expansion and monetization of our IP.",
-            author: "Paul Chen",
-            company: "Sundat (S) Pte Ltd"
-        },
-        {
-            eyebrow: "IMPACT: MULTI-MARKET BRAND STRUCTURING",
-            title: "Sustainable Hybrid Growth Models",
-            quote: "FT Synergist helped us spin off three hybrid models under our Saigon Legend Express brand and positioned our brand for sustainable, multi-market growth.",
-            author: "Thina Nguyen",
-            company: "Mei Le Pte Ltd"
-        },
-        {
-            eyebrow: "IMPACT: S$3M REVENUE SCALE UP",
-            title: "Premiumization & Brand Positioning",
-            quote: "With FT Synergist's help, we developed a clear vision and a bold strategic plan to scale our business to $3 million in revenue over the next five years.",
-            author: "Rosemary Kwa",
-            company: "Petale Tea"
-        },
-        {
-            eyebrow: "IMPACT: FOUNDER CAPABILITY DEVELOPMENT",
-            title: "Purpose-Driven Strategic Scaling",
-            quote: "If you're a founder who wants to scale with purpose, structure, and confidence, Frederick is the kind of consultant you want in your corner. We're grateful for the journey and proud of what we've built together.",
-            author: "Hidayah",
-            company: "Nanay's Kitchen"
-        }
-    ];
+    // Mapped URLs from your official Google Calendar embeds
+    const calendarUrls: Record<string, string> = {
+        "business-strategy": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true",
+        "strategic-brand": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1KtH1PGLFwfzWLr0MYr_Q9O4FLI78uRKX8FpNv0Z7A-NHMgYz2aPOT841cBzNPM8CquHvgBeAV?gv=true",
+        "innovation-productivity": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qr3SmjWpxiA6xfoBwO1uTYv4_dX4UkWMSWHn-yY2Z5X-EsSVJiiNeFfvowWLuxBrK0kLJYrTi?gv=true",
+        "market-readiness": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2bP4LZ2IUL4kFaw3NW0IYE78GyJIplsadYgcYz4hTWFTVirByvmt9n9rH47vM0W39IbCZqyZJw?gv=true",
+        "franchise-licensing": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ06H3HVfxJ_qIDCDbf-kOxlt7ufKnq0lLsBwSDvnJ_sIkgaNV5_0cjxSDnw4p7iPWtsvR2kHfnw?gv=true"
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        // 1. Mark form as submitted
+        setIsFormSubmitted(true);
+
+        // 2. Direct Instant Execution: Open target calendar URL immediately in new tab
+        const targetUrl = calendarUrls[formData.service];
+        window.open(targetUrl, '_blank', 'noopener,noreferrer');
+    };
 
     return (
-        <div className="min-h-screen bg-black text-white selection:bg-[#D4AF37] selection:text-black font-sans pb-20">
+        <section className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto space-y-12">
 
-            {/* 1. HERO HEADER (Exact match to EDG Hero typography & spacing) */}
-            <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 px-4">
-                <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
-                        <span className="text-white block">Certified Advisory Sprint</span>
-                        <span className="text-[#D4AF37] block mt-1">FT Synergist Singapore</span>
+                {/* HEADLINE & SUB-HEAD */}
+                <div className="text-center space-y-4">
+                    <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        Scale Asian Market Share Through Defensible IP Moats, AI Systems, and Sustainable Innovation
                     </h1>
+                    <p className="text-xl sm:text-2xl text-amber-400 font-medium max-w-3xl mx-auto">
+                        Book Your 60-Minute Executive Sprint with a TÜV SÜD Accredited SCMC Consultant.
+                    </p>
+                </div>
 
-                    {/* Frictionless Intake Form - Styled exactly like EDG "Verified Expert Answer" */}
-                    <div className="w-full max-w-2xl bg-[#121212] border border-[#D4AF37]/40 rounded-xl p-6 md:p-8 text-left shadow-2xl relative mt-4">
-                        <p className="text-[10px] sm:text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">
-                            DIRECT CALENDAR BOOKING
-                        </p>
-                        <p className="text-sm text-gray-300 leading-relaxed font-normal mb-6">
-                            Bypass redundant data entry. Select your primary strategic focus below to launch our Google Calendar booking portal. Secure your 60-minute advisory sprint with a TÜV SÜD-certified SCMC consultant.
-                        </p>
+                {/* PROOF GRID */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-slate-300">
+                    <div className="bg-slate-800/80 border border-slate-700 p-5 rounded-xl space-y-2">
+                        <p className="text-sm italic">"We partnered with FT Synergist to franchise our banmian business and within two years, our outlets grew from 4 to over 30."</p>
+                        <p className="text-xs font-bold text-amber-400">— Brandon Toh, Branwood Holdings</p>
+                    </div>
 
-                        <form className="space-y-4">
+                    <div className="bg-slate-800/80 border border-slate-700 p-5 rounded-xl space-y-2">
+                        <p className="text-sm italic">"FT Synergist guided us in charting a 5-year growth strategy for my agrochemical business and overseas expansion and monetization of our IP."</p>
+                        <p className="text-xs font-bold text-amber-400">— Paul Chen, Sundat (S) Pte Ltd</p>
+                    </div>
+
+                    <div className="bg-slate-800/80 border border-slate-700 p-5 rounded-xl space-y-2">
+                        <p className="text-sm italic">"FT Synergist helped us spin off three hybrid models under our Saigon Legend Express brand and positioned our brand for sustainable, multi-market growth."</p>
+                        <p className="text-xs font-bold text-amber-400">— Thina Nguyen, Mei Le Pte Ltd</p>
+                    </div>
+
+                    <div className="bg-slate-800/80 border border-slate-700 p-5 rounded-xl space-y-2">
+                        <p className="text-sm italic">"With FT Synergist’s help, we developed a clear vision and a bold strategic plan to scale our business to $3 million in revenue over the next five years."</p>
+                        <p className="text-xs font-bold text-amber-400">— Rosemary Kwa, Petale Tea</p>
+                    </div>
+
+                    <div className="bg-slate-800/80 border border-slate-700 p-5 rounded-xl space-y-2 md:col-span-2 lg:col-span-2">
+                        <p className="text-sm italic">"If you’re a founder who wants to scale with purpose, structure, and confidence, Frederick is the kind of consultant you want in your corner. We’re grateful for the journey and proud of what we’ve built together."</p>
+                        <p className="text-xs font-bold text-amber-400">— Hidayah, Nanay’s Kitchen</p>
+                    </div>
+                </div>
+
+                {/* CONVERSION FORM & EMBEDDED FALLBACK */}
+                <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto border border-amber-500/20">
+                    {!isFormSubmitted ? (
+                        <form onSubmit={handleSubmit} className="space-y-5">
+                            <h3 className="text-xl font-bold text-slate-900 border-b pb-3">
+                                Select Your Strategic Sprint
+                            </h3>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">Full Name *</label>
+                                    <input
+                                        required
+                                        type="text"
+                                        value={formData.name}
+                                        placeholder="Frederick Tan"
+                                        className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-amber-500 outline-none"
+                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">Corporate Email *</label>
+                                    <input
+                                        required
+                                        type="email"
+                                        value={formData.email}
+                                        placeholder="john@company.com"
+                                        className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-amber-500 outline-none"
+                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                    />
+                                </div>
+                            </div>
+
                             <div>
+                                <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">Company Name *</label>
+                                <input
+                                    required
+                                    type="text"
+                                    value={formData.company}
+                                    placeholder="Your Company Pte Ltd"
+                                    className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-amber-500 outline-none"
+                                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                                />
+                            </div>
+
+                            <div>
+                                <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">Select Sprint Focus *</label>
                                 <select
                                     required
-                                    className="w-full bg-black/80 border border-white/20 rounded-lg px-4 py-3.5 text-sm text-gray-200 focus:outline-none focus:border-[#D4AF37] transition-colors appearance-none"
+                                    value={formData.service}
+                                    className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-amber-500 outline-none bg-white"
+                                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                                 >
-                                    <option value="">Select a Strategic Sprint Focus...</option>
-                                    <option value="business-strategy">Business Strategy Sprint (EDG Aligned)</option>
-                                    <option value="brand-marketing">Strategic Brand &amp; Marketing Development</option>
-                                    <option value="ip-strategy">IP Strategy &amp; Commercial Monetisation</option>
-                                    <option value="mra-expansion">Market Readiness Assistance (MRA Overseas)</option>
-                                    <option value="franchise-licensing">Franchise Architecture &amp; Master Licensing</option>
-                                    <option value="ai-productivity">AI Process Redesign &amp; Productivity</option>
+                                    <option value="business-strategy">Business Strategy Sprint</option>
+                                    <option value="strategic-brand">Brand Strategy Sprint</option>
+                                    <option value="innovation-productivity">Innovation & Productivity Sprint</option>
+                                    <option value="market-readiness">Market Readiness Assistance (MRA) Sprint</option>
+                                    <option value="franchise-licensing">Franchise & IP Strategy Sprint</option>
                                 </select>
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full bg-[#D4AF37] hover:bg-[#C5A059] text-black font-bold text-sm py-3.5 rounded-lg transition-colors shadow-lg flex items-center justify-center gap-2"
+                                className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 rounded-lg text-base transition-colors shadow-lg cursor-pointer"
                             >
-                                Launch Booking Calendar <ArrowRight className="h-4 w-4" />
+                                Submit Inquiry & Launch Calendar →
                             </button>
                         </form>
-                    </div>
-                </div>
-            </section>
-
-            {/* 2. STATUTORY COMPLIANCE & OFFICE BAR */}
-            <section className="py-8 px-4 max-w-5xl mx-auto">
-                <div className="bg-[#121212] rounded-xl p-6 md:p-8 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div className="flex-1">
-                        <p className="text-[10px] font-bold tracking-[0.2em] text-[#C5A059] uppercase mb-4">
-                            HEADQUARTERS
-                        </p>
-                        <div className="flex items-start gap-4">
-                            <MapPin className="h-5 w-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
-                            <div>
-                                <h3 className="font-bold text-white text-sm">Suntec City Tower One</h3>
-                                <p className="text-gray-400 text-xs leading-relaxed mt-1">
-                                    7 Temasek Blvd, #12-07<br />
-                                    Singapore 038987
-                                </p>
+                    ) : (
+                        <div className="text-center space-y-6">
+                            <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
+                                ✓
                             </div>
+                            <h3 className="text-2xl font-bold text-slate-900">
+                                Inquiry Received for {formData.company}
+                            </h3>
+                            <p className="text-sm text-slate-600">
+                                A calendar window has opened in a new tab. You can also pick your 60-minute time slot directly below:
+                            </p>
+
+                            {/* Direct Reliable Inline Calendar Embed */}
+                            <div className="w-full rounded-xl overflow-hidden border border-slate-200 shadow-inner min-h-[600px]">
+                                <iframe
+                                    src={calendarUrls[formData.service]}
+                                    style={{ border: 0 }}
+                                    width="100%"
+                                    height="600"
+                                    frameBorder="0"
+                                />
+                            </div>
+
+                            <a
+                                href={calendarUrls[formData.service]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg text-sm transition-all"
+                            >
+                                Re-open Calendar in New Window
+                            </a>
                         </div>
-                    </div>
-                    <div className="flex-1 md:border-l md:border-white/10 md:pl-8">
-                        <p className="text-[10px] font-bold tracking-[0.2em] text-[#C5A059] uppercase mb-4">
-                            STATUTORY ASSURANCE
-                        </p>
-                        <ul className="space-y-3 text-xs text-gray-300">
-                            <li className="flex items-center gap-3">
-                                <ShieldCheck className="h-4 w-4 text-[#D4AF37] flex-shrink-0" />
-                                <span>TÜV SÜD SCMC-1810-P0236</span>
-                            </li>
-                            <li className="flex items-center gap-3">
-                                <ShieldCheck className="h-4 w-4 text-[#D4AF37] flex-shrink-0" />
-                                <span>EnterpriseSG EDG &amp; MRA Aligned</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            {/* 3. TESTIMONIALS (Exact styling match to EDG "Success Stories" cards) */}
-            <section className="py-16 px-4 max-w-6xl mx-auto border-t border-white/10 mt-12">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-                        Success Stories
-                    </h2>
-                    <p className="text-gray-400 text-sm">Proven Impact across Enterprise Leaders.</p>
+                    )}
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {testimonials.map((t, idx) => (
-                        <div
-                            key={idx}
-                            className="bg-[#121212] rounded-2xl p-6 md:p-8 flex flex-col justify-between border border-transparent hover:border-white/5 transition-colors"
-                        >
-                            <div>
-                                <p className="text-[10px] sm:text-xs font-bold text-[#D4AF37] uppercase tracking-wider mb-4 leading-relaxed">
-                                    {t.eyebrow}
-                                </p>
-                                <h3 className="text-lg font-bold text-white mb-4 leading-snug">
-                                    {t.title}
-                                </h3>
-                                <p className="text-sm text-gray-300 italic leading-relaxed mb-8 border-l-2 border-[#D4AF37] pl-4">
-                                    "{t.quote}"
-                                </p>
-                            </div>
-                            <div className="pt-6 border-t border-white/10">
-                                <p className="text-xs font-medium text-gray-400">— {t.company}</p>
-                            </div>
-                        </div>
-                    ))}
+                {/* TRUST FOOTER */}
+                <div className="text-center text-xs text-slate-400 space-y-1">
+                    <p>FT Synergist Pte Ltd | 7 Temasek Boulevard, #12-07 Suntec Tower One, Singapore 038987</p>
+                    <p>TÜV SÜD Accredited Management Consultancy | Listed on IPOS IP Grow Directory</p>
                 </div>
-            </section>
 
-        </div>
+            </div>
+        </section>
     );
 }
