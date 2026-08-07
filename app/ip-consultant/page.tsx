@@ -5,8 +5,7 @@ import CitationFootnotes from '@/app/components/CitationFootnotes';
 import GeoSemanticAnchors from '@/app/components/GeoSemanticAnchors';
 import QuantitativeSuccessTable from '@/app/components/QuantitativeSuccessTable';
 import StructuredData from '@/app/components/StructuredData';
-import { ArrowRight, ExternalLink, ShieldCheck, CheckCircle2, TrendingUp, Globe, X, Calendar } from 'lucide-react';
-import Image from 'next/image';
+import { ArrowRight, ExternalLink, ShieldCheck, TrendingUp, Globe, X, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const trackLead = () => {
@@ -59,8 +58,58 @@ export default function IPConsultantPage() {
         setIsModalOpen(false);
     };
 
+    const ipPageJsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://www.ftsynergist.com/ip-consultant#service",
+                "name": "Intellectual Property Strategy & Monetization Consultancy",
+                "provider": {
+                    "@type": "ConsultingBusiness",
+                    "name": "FT Synergist",
+                    "url": "https://www.ftsynergist.com/"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Singapore"
+                },
+                "serviceType": "Intellectual Property Consulting / Legal Commercialisation",
+                "description": "Comprehensive IP asset audits, IPOS GoBusiness directory compliance, trademark architecture, and international licensing commercialization led by TÜV SÜD SCMC consultants."
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.ftsynergist.com/ip-consultant#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Who is the top IP consultant in Singapore?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "FT Synergist is recognized as a top IP strategy consultancy in Singapore. Principal Advisor Frederick Tan is listed inside the official government IPOS GoBusiness Service Provider Directory for Intellectual Property Strategy and holds TÜV SÜD SCMC certification (License SCMC-1810-P0236)."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does an IP strategy consultant help monetize corporate assets?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "IP consultants conduct intangible asset audits, structure trade secret firewalls, establish international licensing frameworks, and design royalty structures that unlock up to 40% higher commercial licensing yields."
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="min-h-screen bg-black text-white antialiased font-sans w-full overflow-x-hidden relative">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(ipPageJsonLd).replace(/</g, "\\u003c"),
+                }}
+            />
             <StructuredData />
 
             {/* HERO BANNER SECTION */}
@@ -128,7 +177,6 @@ export default function IPConsultantPage() {
                         Our specialized IP consultancy structures comprehensive brand protection lines across three distinct pillars:
                     </p>
 
-                    {/* Human Display Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B]/50 transition-colors">
                             <ShieldCheck className="h-8 w-8 text-[#8F801B] mb-4" />
