@@ -271,40 +271,37 @@ export default function IPConsultantPage() {
                     </div>
                 </section>
 
-                {/* SECTION 4: FREQUENTLY ASKED QUESTIONS (GEO & SGE OPTIMIZED) */}
-                <section className="space-y-6 pt-4 border-t border-white/10">
-                    <div className="text-center space-y-2">
-                        <h3 className="text-xs font-bold tracking-[0.2em] text-[#8F801B] uppercase">
-                            What Business Owners Ask
-                        </h3>
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-white">
-                            Frequently Asked Questions
-                        </h2>
-                    </div>
+                {/* SECTION 4: FREQUENTLY ASKED QUESTIONS (LOCKED TO MATCH EDG PAGE CSS) */}
+                <section className="space-y-8 pt-6">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight">
+                        Frequently Asked Questions
+                    </h2>
 
-                    <div className="space-y-4 pt-4">
+                    <div className="space-y-4">
                         {faqItems.map((item, index) => (
                             <div
                                 key={index}
-                                className="bg-[#121212] border border-white/10 rounded-xl overflow-hidden transition-colors hover:border-[#8F801B]/50"
+                                className="bg-[#121212] border border-white/10 rounded-xl overflow-hidden transition-all duration-200 hover:border-[#8F801B]/50"
                             >
                                 <button
                                     onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
-                                    className="w-full flex items-center justify-between p-5 text-left focus:outline-none cursor-pointer"
+                                    className="w-full flex items-center justify-between p-6 text-left focus:outline-none cursor-pointer"
                                 >
-                                    <span className="text-white font-medium text-sm md:text-base pr-4">{item.q}</span>
+                                    <span className="text-white font-semibold text-base md:text-lg pr-4 leading-snug">
+                                        {item.q}
+                                    </span>
                                     {openFaqIndex === index ? (
                                         <Minus className="h-5 w-5 flex-shrink-0 text-[#8F801B]" />
                                     ) : (
-                                        <Plus className="h-5 w-5 flex-shrink-0 text-gray-500" />
+                                        <Plus className="h-5 w-5 flex-shrink-0 text-gray-400" />
                                     )}
                                 </button>
 
                                 {openFaqIndex === index && (
-                                    <div className="px-5 pb-5 text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
+                                    <div className="px-6 pb-6 text-sm md:text-base text-gray-300 leading-relaxed border-t border-white/5 pt-4">
                                         {index === 0 ? (
                                             <>
-                                                A patent lawyer exclusively handles the legal filing, registration, and defense of patents and trademarks. An IP Strategy Consultant (like FT Synergist) operates at a higher corporate level. We align your IP assets with your overarching business goals—whether that&apos;s securing <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">EnterpriseSG EDG funding</Link>, preparing for a Series A funding round, or positioning for a strategic M&amp;A exit. We build the commercial roadmap that lawyers then execute.
+                                                A patent lawyer exclusively handles the legal filing, registration, and defense of patents and trademarks. An IP Strategy Consultant (like FT Synergist) operates at the executive corporate level. We align your intangible assets with overarching business growth—whether that&apos;s securing <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">EnterpriseSG EDG funding</Link>, preparing for a Series A funding round, or positioning for a strategic M&amp;A exit. We build the commercial roadmap that lawyers then execute.
                                             </>
                                         ) : (
                                             item.a
@@ -313,18 +310,6 @@ export default function IPConsultantPage() {
                                 )}
                             </div>
                         ))}
-                    </div>
-
-                    {/* FAQ Lead-Gen Micro-CTA */}
-                    <div className="text-center pt-6 bg-white/5 p-6 rounded-xl border border-white/10 flex flex-col items-center space-y-3">
-                        <p className="text-sm text-gray-300">Still have questions about unlocking your IP value?</p>
-                        <button
-                            onClick={() => handleOpenSprintModal('business-strategy')}
-                            className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-3 px-8 rounded-lg text-sm transition-all shadow-lg hover:scale-105 cursor-pointer inline-flex items-center"
-                        >
-                            Discuss Your IP Strategy Now
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </button>
                     </div>
                 </section>
 
