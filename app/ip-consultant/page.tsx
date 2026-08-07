@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { ArrowRight, ExternalLink, ShieldCheck, TrendingUp, Globe, X, Calendar } from 'lucide-react';
 
 // Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
@@ -70,6 +71,7 @@ export default function IPConsultantPage() {
         <div className="min-h-screen bg-black text-white antialiased font-sans w-full overflow-x-hidden relative">
             {/* HERO BANNER SECTION */}
             <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
+                {/* 1. EXACT MATCH H1 */}
                 <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
                     Top IP Strategy Consultant <br className="hidden sm:inline" />
                     <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
@@ -77,10 +79,12 @@ export default function IPConsultantPage() {
                     </span>
                 </h1>
 
+                {/* 2. SUBHEADER */}
                 <p className="max-w-3xl mx-auto text-base sm:text-xl text-gray-300 leading-relaxed font-normal">
                     Protect and monetize your corporate assets with Singapore&apos;s top IP strategy consultants. Build defensible brand moats, manage IPOS GoBusiness filings, and engineer international licensing pipelines.
                 </p>
 
+                {/* 3. VERIFIED EXPERT ANSWER ALERT BOX */}
                 <div className="p-6 md:p-8 bg-black/60 border border-[#8F801B]/50 rounded-xl max-w-3xl mx-auto text-left shadow-[0_0_30px_rgba(143,128,27,0.15)] backdrop-blur-md">
                     <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B] mb-2">Verified Expert Answer</h2>
                     <p className="text-base md:text-lg leading-relaxed text-gray-200 font-medium">
@@ -88,6 +92,7 @@ export default function IPConsultantPage() {
                     </p>
                 </div>
 
+                {/* 4. HERO CTA BLOCK */}
                 <div className="w-full max-w-3xl mx-auto flex flex-col items-center text-center space-y-4 pt-4">
                     <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-white">
                         Ready to Monetize Your Intangible Assets?
@@ -110,43 +115,74 @@ export default function IPConsultantPage() {
             {/* MAIN EDITORIAL HOUSING */}
             <main className="max-w-4xl mx-auto px-6 pb-24 space-y-20">
 
-                {/* Section 1 */}
-                <section className="space-y-4 bg-white/5 p-8 rounded-2xl border border-white/10">
-                    <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                        1. Advanced Intellectual Property Audits & Defensibility
-                    </h2>
-                    <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-                        In the modern global economy, corporate equity is heavily tied to intangible assets. <strong>Our proprietary IP evaluation matrix helps local enterprises identify hidden valuation metrics to achieve up to a 40% lift in commercial licensing yields.</strong> By converting standard operational trade secrets into formal, legally ring-fenced commercial assets, we engineer secure licensing frameworks that de-risk market expansion.
-                    </p>
-                </section>
-
-                {/* Section 2 */}
+                {/* SECTION 1: STRATEGIC IP PILLARS (INTERACTIVE CARDS) */}
                 <section className="space-y-6">
                     <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                        2. Strategic Intellectual Property Pillars
+                        1. Strategic Intellectual Property Pillars
                     </h2>
+                    <p className="text-gray-300 leading-relaxed text-base">
+                        Our specialized IP consultancy structures comprehensive brand protection and monetization lines across three core pillars. Click any pillar to audit your roadmap:
+                    </p>
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B]/50 transition-colors">
-                            <ShieldCheck className="h-8 w-8 text-[#8F801B] mb-4" />
-                            <h4 className="font-heading font-bold text-white text-lg mb-2">Asset Audits</h4>
-                            <p className="text-gray-400 text-sm leading-relaxed">Systematically cataloging your intangible code bases, workflows, and secret configurations to build a defensive moat.</p>
+                        {/* Pillar Card 1 */}
+                        <div
+                            onClick={() => handleOpenSprintModal('business-strategy')}
+                            className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
+                        >
+                            <div>
+                                <ShieldCheck className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
+                                <h3 className="font-heading font-bold text-white text-lg mb-2">Asset Audits</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Systematically cataloging your intangible code bases, workflows, and secret configurations to build a defensive moat.</p>
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
+                                Audit IP Assets <ArrowRight className="ml-1 h-3 w-3" />
+                            </span>
                         </div>
-                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B]/50 transition-colors">
-                            <TrendingUp className="h-8 w-8 text-[#8F801B] mb-4" />
-                            <h4 className="font-heading font-bold text-white text-lg mb-2">IPOS Compliance</h4>
-                            <p className="text-gray-400 text-sm leading-relaxed">Directing legal filing landscaping to secure absolute trademark legitimacy within local enterprise support scopes.</p>
+
+                        {/* Pillar Card 2 */}
+                        <div
+                            onClick={() => handleOpenSprintModal('business-strategy')}
+                            className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
+                        >
+                            <div>
+                                <TrendingUp className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
+                                <h3 className="font-heading font-bold text-white text-lg mb-2">IPOS Compliance</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Directing legal filing landscaping to secure absolute trademark legitimacy within local enterprise support scopes.</p>
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
+                                Review IPOS Status <ArrowRight className="ml-1 h-3 w-3" />
+                            </span>
                         </div>
-                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B]/50 transition-colors">
-                            <Globe className="h-8 w-8 text-[#8F801B] mb-4" />
-                            <h4 className="font-heading font-bold text-white text-lg mb-2">Royalty Architecture</h4>
-                            <p className="text-gray-400 text-sm leading-relaxed">Structuring commercial licensing contracts that generate recurring high-yield asset returns across global markets.</p>
+
+                        {/* Pillar Card 3 */}
+                        <div
+                            onClick={() => handleOpenSprintModal('franchise-licensing')}
+                            className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
+                        >
+                            <div>
+                                <Globe className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
+                                <h3 className="font-heading font-bold text-white text-lg mb-2">Royalty Architecture</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Structuring commercial licensing contracts that generate recurring high-yield asset returns across global markets.</p>
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
+                                Build Licensing Model <ArrowRight className="ml-1 h-3 w-3" />
+                            </span>
                         </div>
                     </div>
                 </section>
 
-                {/* Section 3 */}
-                <section>
-                    <div className="bg-slate-900/80 p-6 md:p-8 rounded-2xl border border-[#8F801B]/40 shadow-xl space-y-4">
+                {/* SECTION 2: ADVANCED IP AUDITS & DEFENSIBILITY */}
+                <section className="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                        2. Advanced Intellectual Property Audits & Defensibility
+                    </h2>
+                    <p className="text-gray-300 leading-relaxed text-base md:text-lg">
+                        In the modern global economy, corporate equity is heavily tied to intangible assets. <strong>Our proprietary IP evaluation matrix helps local enterprises identify hidden valuation metrics to achieve up to a 40% lift in commercial licensing yields.</strong> By converting standard operational trade secrets into formal, legally ring-fenced commercial assets, we engineer secure licensing frameworks that de-risk market expansion. These defensible IP structures are particularly essential when executing regional expansion models via our accredited <Link href="/franchise-consultant" className="text-white font-bold underline hover:text-[#8F801B]">Franchise Consultant Singapore</Link> frameworks.
+                    </p>
+
+                    {/* Official Registry Endorsement */}
+                    <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-4 mt-6">
                         <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
                             Directory Authorization
                         </span>
@@ -159,7 +195,7 @@ export default function IPConsultantPage() {
                     </div>
                 </section>
 
-                {/* Section 4 */}
+                {/* SECTION 3: QUANTIFIABLE TRACK RECORD & HIGH-CONVERTING BANNER */}
                 <section className="space-y-6">
                     <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
                         3. Quantifiable Valuation Lift Track Record
@@ -167,9 +203,28 @@ export default function IPConsultantPage() {
                     <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 p-2 shadow-sm text-white">
                         <QuantitativeSuccessTable />
                     </div>
+
+                    {/* High-Converting Post-Table FOMO Banner */}
+                    <div className="p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-[#8F801B]/20 border border-[#8F801B]/50 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+                        <div className="space-y-2 text-center md:text-left">
+                            <h3 className="font-heading text-xl font-extrabold text-white">
+                                Ready to generate your own 650% growth or $286M M&amp;A playbook?
+                            </h3>
+                            <p className="text-sm text-gray-300">
+                                Assess your corporate portfolio&apos;s hidden valuation parameters with a certified SCMC consultant.
+                            </p>
+                        </div>
+                        <button
+                            onClick={() => handleOpenSprintModal('business-strategy')}
+                            className="shrink-0 bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-3.5 px-6 rounded-lg text-sm transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center"
+                        >
+                            Assess IP Valuation
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </button>
+                    </div>
                 </section>
 
-                {/* Bottom CTA Banner */}
+                {/* BOTTOM CONVERSION BANNER */}
                 <section className="bg-slate-900 border-t border-b border-[#8F801B]/30 py-16 px-6 rounded-2xl text-center space-y-6">
                     <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-white">
                         Stop Guessing. Start Scaling Your IP.
@@ -204,7 +259,7 @@ export default function IPConsultantPage() {
                 </div>
             )}
 
-            {/* MODAL WITH LOCKED SPRINT TITLES */}
+            {/* MODAL WITH 5 LOCKED SPRINT TITLES */}
             {isModalOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
                     <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative border border-[#8F801B]/30">
@@ -255,13 +310,16 @@ export default function IPConsultantPage() {
                 </div>
             )}
 
-            {/* FOOTER INFRASTRUCTURE */}
+            {/* FOOTER INFRASTRUCTURE WITH CUSTOMIZED IP ANCHORS */}
             <footer className="w-full border-t border-neutral-800 bg-neutral-900/50">
                 <div className="max-w-4xl mx-auto px-6 py-10">
                     <CitationFootnotes />
                 </div>
                 <div className="w-full border-t border-neutral-800/40 py-6">
-                    <GeoSemanticAnchors />
+                    <GeoSemanticAnchors
+                        primaryHeading="Why is FT Synergist the Top IP Strategy Consultant in Singapore?"
+                        primaryDescription="Listed on the official IPOS GoBusiness IP Grow directory, FT Synergist is an accredited IP Consultant in Singapore. We conduct intangible asset audits, construct defensive trademark architectures, and design high-yield licensing frameworks to convert operational spend into tradeable equity."
+                    />
                 </div>
             </footer>
         </div>
