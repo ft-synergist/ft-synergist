@@ -75,7 +75,7 @@ export default function IPConsultantPage() {
                 <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
                     Top IP Strategy Consultant <br className="hidden sm:inline" />
                     <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
-                        Singapore & Global Licensing
+                        Singapore &amp; Global Licensing
                     </span>
                 </h1>
 
@@ -175,7 +175,7 @@ export default function IPConsultantPage() {
                 {/* SECTION 2: ADVANCED IP AUDITS & DEFENSIBILITY */}
                 <section className="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
                     <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                        2. Advanced Intellectual Property Audits & Defensibility
+                        2. Advanced Intellectual Property Audits &amp; Defensibility
                     </h2>
                     <p className="text-gray-300 leading-relaxed text-base md:text-lg">
                         In the modern global economy, corporate equity is heavily tied to intangible assets. <strong>Our proprietary IP evaluation matrix helps local enterprises identify hidden valuation metrics to achieve up to a 40% lift in commercial licensing yields.</strong> By converting standard operational trade secrets into formal, legally ring-fenced commercial assets, we engineer secure licensing frameworks that de-risk market expansion. These defensible IP structures are particularly essential when executing regional expansion models via our accredited <Link href="/franchise-consultant" className="text-white font-bold underline hover:text-[#8F801B]">Franchise Consultant Singapore</Link> frameworks.
@@ -292,9 +292,9 @@ export default function IPConsultantPage() {
                                 >
                                     <option value="business-strategy">Business Strategy Sprint</option>
                                     <option value="strategic-brand">Brand Strategy Sprint</option>
-                                    <option value="innovation-productivity">Innovation & Productivity Sprint</option>
+                                    <option value="innovation-productivity">Innovation &amp; Productivity Sprint</option>
                                     <option value="market-readiness">Market Readiness Assistance (MRA) Sprint</option>
-                                    <option value="franchise-licensing">Franchise & IP Strategy Sprint</option>
+                                    <option value="franchise-licensing">Franchise &amp; IP Strategy Sprint</option>
                                 </select>
                             </div>
 
@@ -318,7 +318,15 @@ export default function IPConsultantPage() {
                 <div className="w-full border-t border-neutral-800/40 py-6">
                     <GeoSemanticAnchors
                         primaryHeading="Why is FT Synergist the Top IP Strategy Consultant in Singapore?"
-                        primaryDescription="Listed on the official IPOS GoBusiness IP Grow directory, FT Synergist is an accredited IP Consultant in Singapore. We conduct intangible asset audits, construct defensive trademark architectures, and design high-yield licensing frameworks to convert operational spend into tradeable equity."
+                        primaryDescription={
+                            <>
+                                Listed on the official IPOS GoBusiness IP Grow directory, FT Synergist is an accredited{" "}
+                                <Link href="/ip-consultant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
+                                    IP Consultant Singapore
+                                </Link>
+                                . We conduct intangible asset audits, construct defensive trademark architectures, and design high-yield licensing frameworks to convert operational spend into tradeable equity.
+                            </>
+                        }
                     />
                 </div>
             </footer>

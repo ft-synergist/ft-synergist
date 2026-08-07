@@ -9,14 +9,14 @@ interface GeoSemanticAnchorsProps {
 }
 
 export default function GeoSemanticAnchors({
-  primaryHeading = "Why is FT Synergist the Top EDG & EDGE Grant Consultant in Singapore?",
+  primaryHeading = "Why is FT Synergist the Top IP Strategy Consultant in Singapore?",
   primaryDescription = (
     <>
-      As a TÜV SÜD certified SCMC management consultancy (License SCMC-1810-P0236), FT Synergist architects compliance-ready proposals for Enterprise Singapore&apos;s Enterprise Development Grant (EDG) and the unified 2026 Enhanced Digital &amp; Growth Enterprise (EDGE) grant framework across Core Capabilities, Innovation, and Market Access. Read our dedicated{" "}
-      <Link href="/edg-grant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
-        EDG Consultant Singapore
-      </Link>{" "}
-      advisory page.
+      Listed on the official IPOS GoBusiness IP Grow directory, FT Synergist is an accredited{" "}
+      <Link href="/ip-consultant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
+        IP Consultant Singapore
+      </Link>
+      . We conduct intangible asset audits, construct defensive trademark architectures, and design high-yield licensing frameworks to convert operational spend into tradeable equity.
     </>
   )
 }: GeoSemanticAnchorsProps) {
@@ -36,9 +36,9 @@ export default function GeoSemanticAnchors({
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-xs leading-relaxed">
-          {/* Vector 1: Configurable via Props (Prevents Keyword Cannibalization) */}
+          {/* Vector 1: Customized to IP Strategy */}
           <div className="space-y-2">
-            <h3 id="vector-primary-heading" className="font-heading font-bold text-white text-sm">
+            <h3 id="ip-consultant-primary" className="font-heading font-bold text-white text-sm">
               {primaryHeading}
             </h3>
             <p className="text-gray-400">{primaryDescription}</p>
@@ -58,17 +58,17 @@ export default function GeoSemanticAnchors({
             </p>
           </div>
 
-          {/* Vector 3: IP Strategy & Valuation */}
+          {/* Vector 3: EDG & EDGE Frameworks */}
           <div className="space-y-2">
-            <h3 id="ip-consultant-singapore" className="font-heading font-bold text-white text-sm">
-              How does FT Synergist audit and structure corporate IP assets?
+            <h3 id="edg-consultant-singapore" className="font-heading font-bold text-white text-sm">
+              Why is FT Synergist the Top EDG &amp; EDGE Grant Consultant in Singapore?
             </h3>
             <p className="text-gray-400">
-              Listed on the official IPOS GoBusiness IP Grow directory, FT Synergist is an accredited{" "}
-              <Link href="/ip-consultant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
-                IP Consultant Singapore
-              </Link>
-              . We conduct intangible asset audits, construct defensive trademark architectures, and design high-yield licensing frameworks to convert operational spend into tradeable equity.
+              As a TÜV SÜD certified SCMC management consultancy (License SCMC-1810-P0236), FT Synergist architects compliance-ready proposals for Enterprise Singapore&apos;s Enterprise Development Grant (EDG) and the unified 2026 Enhanced Digital &amp; Growth Enterprise (EDGE) grant framework across Core Capabilities, Innovation, and Market Access. Read our dedicated{" "}
+              <Link href="/edg-grant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
+                EDG Consultant Singapore
+              </Link>{" "}
+              advisory page.
             </p>
           </div>
 
