@@ -22,6 +22,15 @@ export default function IPConsultantPage() {
 
     useEffect(() => {
         setIsMounted(true);
+
+        // AUTO-RECOVERY FROM STALE VERCEL CHUNKS
+        const handleChunkError = (e: ErrorEvent) => {
+            if (e.message && e.message.includes('Loading chunk')) {
+                window.location.reload();
+            }
+        };
+        window.addEventListener('error', handleChunkError);
+
         const handleScroll = () => {
             if (typeof window !== "undefined" && window.scrollY > 600) {
                 setShowStickyBar(true);
@@ -30,7 +39,11 @@ export default function IPConsultantPage() {
             }
         };
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener('error', handleChunkError);
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     const trackLead = () => {
@@ -241,7 +254,7 @@ export default function IPConsultantPage() {
                     </div>
                     <button
                         onClick={() => handleOpenSprintModal('franchise-licensing')}
-                        className="bg-[#8F801B] text-white font-bold py-2 px-4 rounded text-xs transition-transform hover:scale-105 cursor-pointer flex items-center gap-1"
+                        className="bg-[#8F801B] text-[#FFFFFF] font-bold py-2 px-4 rounded text-xs transition-transform hover:scale-105 cursor-pointer flex items-center gap-1"
                     >
                         <span>Book Now</span>
                         <ArrowRight className="h-3 w-3" />
