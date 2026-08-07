@@ -11,12 +11,12 @@ const QuantitativeSuccessTable = dynamic(() => import('@/app/components/Quantita
 
 export default function IPConsultantPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedService, setSelectedService] = useState('franchise-licensing');
+    const [selectedService, setSelectedService] = useState('business-strategy');
     const [showStickyBar, setShowStickyBar] = useState(false);
     const [mounted, setMounted] = useState(false);
 
     const calendarUrls: Record<string, string> = {
-        "business-strategy": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true",
+        "business-strategy": "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06H3HVfxJ_qIDCDbf-kOxlt7ufKnq0lLsBwSDvnJ_sIkgaNV5_0cjxSDnw4p7iPWtsvR2kHfnw?gv=true",
         "strategic-brand": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1KtH1PGLFwfzWLr0MYr_Q9O4FLI78uRKX8FpNv0Z7A-NHMgYz2aPOT841cBzNPM8CquHvgBeAV?gv=true",
         "innovation-productivity": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qr3SmjWpxiA6xfoBwO1uTYv4_dX4UkWMSWHn-yY2Z5X-EsSVJiiNeFfvowWLuxBrK0kLJYrTi?gv=true",
         "market-readiness": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2bP4LZ2IUL4kFaw3NW0IYE78GyJIplsadYgcYz4hTWFTVirByvmt9n9rH47vM0W39IbCZqyZJw?gv=true",
@@ -96,7 +96,7 @@ export default function IPConsultantPage() {
                     </p>
                     <div className="pt-2">
                         <button
-                            onClick={() => handleOpenSprintModal('franchise-licensing')}
+                            onClick={() => handleOpenSprintModal('business-strategy')}
                             className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center justify-center"
                         >
                             Book 60-Minute Strategy Sprint
@@ -177,7 +177,7 @@ export default function IPConsultantPage() {
                         De-risk your intangible asset portfolio with a TÜV SÜD Accredited SCMC Consultant listed on the IPOS GoBusiness directory.
                     </p>
                     <button
-                        onClick={() => handleOpenSprintModal('franchise-licensing')}
+                        onClick={() => handleOpenSprintModal('business-strategy')}
                         className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-10 rounded-lg text-lg transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center justify-center"
                     >
                         Book 60-Minute Strategy Sprint
@@ -194,7 +194,7 @@ export default function IPConsultantPage() {
                         <span className="text-xs font-bold text-white uppercase tracking-wide">60-Min IP Sprint</span>
                     </div>
                     <button
-                        onClick={() => handleOpenSprintModal('franchise-licensing')}
+                        onClick={() => handleOpenSprintModal('business-strategy')}
                         className="bg-[#8F801B] text-white font-bold py-2 px-4 rounded text-xs transition-transform hover:scale-105 cursor-pointer flex items-center gap-1"
                     >
                         <span>Book Now</span>
@@ -234,8 +234,8 @@ export default function IPConsultantPage() {
                                     className="w-full border border-slate-300 rounded-lg p-3.5 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none bg-white text-slate-900 font-medium"
                                     onChange={(e) => setSelectedService(e.target.value)}
                                 >
+                                    <option value="business-strategy">Business Strategy Sprint (EDG / IP)</option>
                                     <option value="franchise-licensing">Franchise & IP Strategy Sprint</option>
-                                    <option value="business-strategy">Business Strategy Sprint (EDG)</option>
                                     <option value="strategic-brand">Brand Strategy Sprint (EDG)</option>
                                     <option value="innovation-productivity">Innovation & Productivity Sprint (EDG)</option>
                                     <option value="market-readiness">Market Readiness Assistance (MRA) Sprint</option>
