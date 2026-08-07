@@ -115,13 +115,13 @@ export default function IPConsultantPage() {
             {/* MAIN EDITORIAL HOUSING */}
             <main className="max-w-4xl mx-auto px-6 pb-24 space-y-20">
 
-                {/* SECTION 1: STRATEGIC IP PILLARS (INTERACTIVE CARDS) */}
+                {/* SECTION 1: BUSINESS STRATEGY DEVELOPMENT PILLARS */}
                 <section className="space-y-6">
                     <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                        1. Strategic Intellectual Property Pillars
+                        1. Business Strategy Development Pillars
                     </h2>
                     <p className="text-gray-300 leading-relaxed text-base">
-                        Our specialized IP consultancy structures comprehensive brand protection and monetization lines across three core pillars. Click any pillar to audit your roadmap:
+                        Our specialized IP &amp; Business Strategy consultancy structures comprehensive corporate growth roadmaps across three core pillars. Click any pillar to launch your strategy sprint:
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -132,11 +132,13 @@ export default function IPConsultantPage() {
                         >
                             <div>
                                 <ShieldCheck className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                                <h3 className="font-heading font-bold text-white text-lg mb-2">Asset Audits</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Systematically cataloging your intangible code bases, workflows, and secret configurations to build a defensive moat.</p>
+                                <h3 className="font-heading font-bold text-white text-lg mb-2">Business &amp; IP Strategy Audit</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                                    We conduct a rigorous diagnosis of your corporate structure, operational workflows, and market positioning. We assess internal efficiency gaps against external competitive threats to identify the exact leverage points that will drive your long-term corporate goals—whether that means EBITDA expansion, market share capture, or preparing for Series A funding.
+                                </p>
                             </div>
                             <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                                Audit IP Assets <ArrowRight className="ml-1 h-3 w-3" />
+                                Audit Business Strategy <ArrowRight className="ml-1 h-3 w-3" />
                             </span>
                         </div>
 
@@ -147,26 +149,30 @@ export default function IPConsultantPage() {
                         >
                             <div>
                                 <TrendingUp className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                                <h3 className="font-heading font-bold text-white text-lg mb-2">IPOS Compliance</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Directing legal filing landscaping to secure absolute trademark legitimacy within local enterprise support scopes.</p>
+                                <h3 className="font-heading font-bold text-white text-lg mb-2">Go-to-Market &amp; IP Commercialisation</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                                    We formulate a high-level commercialisation roadmap by transforming your operational gaps into actionable IP acquisition, licensing, or exit strategies.
+                                </p>
                             </div>
                             <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                                Review IPOS Status <ArrowRight className="ml-1 h-3 w-3" />
+                                Formulate GTM Roadmap <ArrowRight className="ml-1 h-3 w-3" />
                             </span>
                         </div>
 
                         {/* Pillar Card 3 */}
                         <div
-                            onClick={() => handleOpenSprintModal('franchise-licensing')}
+                            onClick={() => handleOpenSprintModal('business-strategy')}
                             className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
                         >
                             <div>
                                 <Globe className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                                <h3 className="font-heading font-bold text-white text-lg mb-2">Royalty Architecture</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Structuring commercial licensing contracts that generate recurring high-yield asset returns across global markets.</p>
+                                <h3 className="font-heading font-bold text-white text-lg mb-2">Strategic Recommendation &amp; IP Monetisation</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                                    We conceptualise concrete implementation plans to monetize your IP into a defensible moat, congruent with your long-term goal of succession planning, leaving a legacy, IPO, or strategic M&amp;A positioning.
+                                </p>
                             </div>
                             <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                                Build Licensing Model <ArrowRight className="ml-1 h-3 w-3" />
+                                Build Monetisation Plan <ArrowRight className="ml-1 h-3 w-3" />
                             </span>
                         </div>
                     </div>
