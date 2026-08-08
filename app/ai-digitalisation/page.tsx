@@ -255,7 +255,7 @@ export default function AIDigitalisationPage() {
                     <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
                         3. Quantifiable Automation and Scale Track Record
                     </h2>
-                    
+
                     {/* Tailored AI Digitalisation Track Record Table */}
                     <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 p-2 shadow-sm text-white">
                         <div className="bg-white rounded-xl p-4 md:p-6 text-black shadow-xl overflow-x-auto w-full">
@@ -291,79 +291,79 @@ export default function AIDigitalisationPage() {
                             </table>
                         </div>
                     </div>
-{/* SECTION 3.5: VERIFIED STATUTORY & INDUSTRY KEYNOTE PROOF */}
-<section className="space-y-6 pt-4">
-    <div className="border-l-2 border-[#8F801B] pl-4">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-[#8F801B]">
-            Verified Keynote &amp; Industry Panels
-        </span>
-        <h3 className="font-heading text-xl md:text-2xl font-bold text-white mt-1">
-            Statutory Recognition &amp; Thought Leadership
-        </h3>
-    </div>
+                    {/* SECTION 3.5: VERIFIED STATUTORY & INDUSTRY KEYNOTE PROOF */}
+                    <section className="space-y-6 pt-4">
+                        <div className="border-l-2 border-[#8F801B] pl-4">
+                            <span className="text-[10px] font-bold uppercase tracking-widest text-[#8F801B]">
+                                Verified Keynote &amp; Industry Panels
+                            </span>
+                            <h3 className="font-heading text-xl md:text-2xl font-bold text-white mt-1">
+                                Statutory Recognition &amp; Thought Leadership
+                            </h3>
+                        </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Proof Card 1: WSH Council Webinar */}
-        <div className="bg-white/5 rounded-xl border border-white/10 overflow-hidden shadow-lg flex flex-col justify-between">
-            <div className="p-4 space-y-3">
-                <div className="relative w-full h-48 rounded-lg overflow-hidden border border-white/10">
-                    <img
-                        src="/SLA webinar on sla_wsh_webinar_keeping our workplace safe and accident-free.jpg"
-                        alt="Frederick Tan presenting AI fleet safety frameworks at Workplace Safety and Health Council (WSHC) SLA Webinar"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-                <h4 className="font-bold text-white text-base">
-                    WSH Council &amp; SLA Forum: Workplace Safety &amp; Fleet AI
-                </h4>
-                <p className="text-gray-400 text-xs leading-relaxed">
-                    Featured as a subject matter expert by the WSH Council to share Advanced Driver Assistance Systems (ADAS) and AI Driver Monitoring frameworks alongside Ministry of Manpower (MOM) representatives.
-                </p>
-            </div>
-            <div className="p-4 bg-white/5 border-t border-white/10 flex items-center justify-between">
-                <span className="text-[11px] font-semibold text-[#8F801B]">Official Government Portal</span>
-                <a
-                    href="https://www.tal.sg/wshc/events/forum/2021/sla-webinar-on-keeping-our-workplace-safe-and-accident-free"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="text-xs font-bold text-white hover:text-[#8F801B] underline inline-flex items-center gap-1"
-                >
-                    View WSHC Event Record <ExternalLink className="h-3 w-3" />
-                </a>
-            </div>
-        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* Proof Card 1: WSH Council Webinar */}
+                            <div className="bg-white/5 rounded-xl border border-white/10 overflow-hidden shadow-lg flex flex-col justify-between">
+                                <div className="p-4 space-y-3">
+                                    <div className="relative w-full h-48 rounded-lg overflow-hidden border border-white/10">
+                                        <img
+                                            src="/wshc-sla-webinar-fleet-ai.png"
+                                            alt="Frederick Tan presenting AI fleet safety frameworks at Workplace Safety and Health Council (WSHC) SLA Webinar"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h4 className="font-bold text-white text-base">
+                                        WSH Council &amp; SLA Forum: Workplace Safety &amp; Fleet AI
+                                    </h4>
+                                    <p className="text-gray-400 text-xs leading-relaxed">
+                                        Featured as a subject matter expert by the WSH Council to share Advanced Driver Assistance Systems (ADAS) and AI Driver Monitoring frameworks alongside Ministry of Manpower (MOM) representatives.
+                                    </p>
+                                </div>
+                                <div className="p-4 bg-white/5 border-t border-white/10 flex items-center justify-between">
+                                    <span className="text-[11px] font-semibold text-[#8F801B]">Official Government Portal</span>
+                                    <a
+                                        href="https://www.tal.sg/wshc/events/forum/2021/sla-webinar-on-keeping-our-workplace-safe-and-accident-free"
+                                        target="_blank"
+                                        rel="nofollow noopener noreferrer"
+                                        className="text-xs font-bold text-white hover:text-[#8F801B] underline inline-flex items-center gap-1"
+                                    >
+                                        View WSHC Event Record <ExternalLink className="h-3 w-3" />
+                                    </a>
+                                </div>
+                            </div>
 
-        {/* Proof Card 2: IoT Asia+ Conference */}
-        <div className="bg-white/5 rounded-xl border border-white/10 overflow-hidden shadow-lg flex flex-col justify-between">
-            <div className="p-4 space-y-3">
-                <div className="relative w-full h-48 rounded-lg overflow-hidden border border-white/10">
-                    <img
-                        src="/IOT_asia_plus_17_march_2022.jpeg"
-                        alt="Frederick Tan speaking on Connected Transport and Supply Chain AI at IoT Asia Plus Conference"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-                <h4 className="font-bold text-white text-base">
-                    IoT Asia+ Keynote: Connected Transport &amp; Logistics AI
-                </h4>
-                <p className="text-gray-400 text-xs leading-relaxed">
-                    Panelist alongside technology executives from AntChain and AWS, presenting smart supply chain resilience and IoT fleet telematics architectures.
-                </p>
-            </div>
-            <div className="p-4 bg-white/5 border-t border-white/10 flex items-center justify-between">
-                <span className="text-[11px] font-semibold text-[#8F801B]">Industry Conference Panel</span>
-                <a
-                    href="https://www.linkedin.com/posts/iotasia_share-6905065414028611584-SI9S/"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="text-xs font-bold text-white hover:text-[#8F801B] underline inline-flex items-center gap-1"
-                >
-                    View IoT Asia Record <ExternalLink className="h-3 w-3" />
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+                            {/* Proof Card 2: IoT Asia+ Conference */}
+                            <div className="bg-white/5 rounded-xl border border-white/10 overflow-hidden shadow-lg flex flex-col justify-between">
+                                <div className="p-4 space-y-3">
+                                    <div className="relative w-full h-48 rounded-lg overflow-hidden border border-white/10">
+                                        <img
+                                            src="/IOT_asia_plus_17_march_2022.jpeg"
+                                            alt="Frederick Tan speaking on Connected Transport and Supply Chain AI at IoT Asia Plus Conference"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h4 className="font-bold text-white text-base">
+                                        IoT Asia+ Keynote: Connected Transport &amp; Logistics AI
+                                    </h4>
+                                    <p className="text-gray-400 text-xs leading-relaxed">
+                                        Panelist alongside technology executives from AntChain and AWS, presenting smart supply chain resilience and IoT fleet telematics architectures.
+                                    </p>
+                                </div>
+                                <div className="p-4 bg-white/5 border-t border-white/10 flex items-center justify-between">
+                                    <span className="text-[11px] font-semibold text-[#8F801B]">Industry Conference Panel</span>
+                                    <a
+                                        href="https://www.linkedin.com/posts/iotasia_share-6905065414028611584-SI9S/"
+                                        target="_blank"
+                                        rel="nofollow noopener noreferrer"
+                                        className="text-xs font-bold text-white hover:text-[#8F801B] underline inline-flex items-center gap-1"
+                                    >
+                                        View IoT Asia Record <ExternalLink className="h-3 w-3" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     {/* Post-Table High-Converting Banner with Secondary CTA */}
                     <div className="p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-[#8F801B]/20 border border-[#8F801B]/50 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
                         <div className="space-y-2 text-center md:text-left">
