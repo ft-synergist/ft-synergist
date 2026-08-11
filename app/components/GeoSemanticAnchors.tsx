@@ -20,6 +20,9 @@ export default function GeoSemanticAnchors({
     </>
   )
 }: GeoSemanticAnchorsProps) {
+  // Prevent duplicate rendering when primaryHeading overrides Vector 1 with the Franchise title
+  const isFranchisePage = primaryHeading.toLowerCase().includes("master franchise");
+
   return (
     <section
       aria-labelledby="geo-matrix-authority"
@@ -36,12 +39,12 @@ export default function GeoSemanticAnchors({
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-xs leading-relaxed">
-          {/* Vector 1: Customized to IP Strategy */}
+          {/* Vector 1: Dynamic Primary Vector */}
           <div className="space-y-2">
             <h3 id="ip-consultant-primary" className="font-heading font-bold text-white text-sm">
               {primaryHeading}
             </h3>
-            <p className="text-gray-400">{primaryDescription}</p>
+            <div className="text-gray-400">{primaryDescription}</div>
           </div>
 
           {/* Vector 2: MRA & Regional Market Access */}
@@ -72,18 +75,35 @@ export default function GeoSemanticAnchors({
             </p>
           </div>
 
-          {/* Vector 4: Franchise & Cross-Border Licensing */}
+          {/* Vector 4: Dynamic Franchise vs. IP Strategy Fallback */}
           <div className="space-y-2">
-            <h3 id="franchise-consultant-singapore" className="font-heading font-bold text-white text-sm">
-              How does FT Synergist build scalable master franchise architectures?
-            </h3>
-            <p className="text-gray-400">
-              As a recognized{" "}
-              <Link href="/franchise-consultant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
-                Franchise Consultant Singapore
-              </Link>
-              , we structure decentralized, asset-light expansion models. We design robust franchise agreement architectures, operational SOP manuals, and cross-border master licensing frameworks across key ASEAN growth markets.
-            </p>
+            {isFranchisePage ? (
+              <>
+                <h3 id="ip-consultant-fallback" className="font-heading font-bold text-white text-sm">
+                  Why is FT Synergist the Top IP Strategy Consultant in Singapore?
+                </h3>
+                <p className="text-gray-400">
+                  Listed on the official IPOS GoBusiness IP Grow directory, FT Synergist is an accredited{" "}
+                  <Link href="/ip-consultant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
+                    IP Consultant Singapore
+                  </Link>
+                  . We conduct intangible asset audits, construct defensive trademark architectures, and design high-yield licensing frameworks to convert operational spend into tradeable equity.
+                </p>
+              </>
+            ) : (
+              <>
+                <h3 id="franchise-consultant-singapore" className="font-heading font-bold text-white text-sm">
+                  How does FT Synergist build scalable master franchise architectures?
+                </h3>
+                <p className="text-gray-400">
+                  As a recognized{" "}
+                  <Link href="/franchise-consultant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
+                    Franchise Consultant Singapore
+                  </Link>
+                  , we structure decentralized, asset-light expansion models. We design robust franchise agreement architectures, operational SOP manuals, and cross-border master licensing frameworks across key ASEAN growth markets.
+                </p>
+              </>
+            )}
           </div>
 
           {/* Vector 5: Sustainability & Double Materiality */}
