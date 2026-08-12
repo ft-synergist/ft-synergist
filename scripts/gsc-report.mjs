@@ -12,6 +12,21 @@ const TARGET_KEYWORDS = [
     "Sustainability Consultant Singapore"
 ];
 
+// Distinctive anchor term(s) for each target — the part that actually
+// discriminates one keyword from another. "Consultant Singapore" is
+// shared across nearly all targets and matches almost everything, so
+// it's deliberately excluded from matching. Regex patterns, so \\b
+// gives a word boundary where the anchor is short/common (e.g. "ip", "ai").
+const TARGET_ANCHORS = {
+    "EDG Consultant Singapore": ["edg"],
+    "MRA Consultant Singapore": ["mra"],
+    "IP Consultant Singapore": ["\\bip\\b"],
+    "Franchise Consultant Singapore": ["franchise"],
+    "Brand Consultant Singapore": ["brand"],
+    "AI Digitalisation Consultant Singapore": ["digitalisation", "digitalization", "\\bai\\b"],
+    "Sustainability Consultant Singapore": ["sustainab"]
+};
+
 function getCredentials() {
     const raw = process.env.GSC_SERVICE_ACCOUNT_KEY;
     if (!raw) {
@@ -71,11 +86,10 @@ async function runGscReport() {
         console.log("=== Position report for target keyword themes ===\n");
 
         for (const target of TARGET_KEYWORDS) {
-            const targetWords = target.toLowerCase().split(' ');
+            const anchors = TARGET_ANCHORS[target] || [];
             const matches = rows.filter(row => {
                 const q = row.keys[0].toLowerCase();
-                // match if the query contains most of the target's key terms
-                return targetWords.some(w => w.length > 3 && q.includes(w));
+                return anchors.some(anchor => new RegExp(anchor).test(q));
             }).sort((a, b) => a.position - b.position);
 
             console.log(`--- Target: "${target}" ---`);
