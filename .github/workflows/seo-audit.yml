@@ -32,3 +32,14 @@ jobs:
           name: seo-audit-${{ github.run_number }}
           path: audit-output.txt
           retention-days: 90
+          - name: Run GSC position report
+        env:
+          GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}
+        run: node scripts/gsc-report.mjs > gsc-report.txt
+
+      - name: Upload GSC report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gsc-report-${{ github.run_number }}
+          path: gsc-report.txt
+          retention-days: 90
