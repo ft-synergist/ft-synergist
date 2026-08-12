@@ -31,11 +31,14 @@ const TARGET_PAGES = [
 ];
 
 // Preferred stable models, in priority order — avoids landing on
-// embedding/vision-only/deprecated models from the raw ListModels response
+// embedding/vision-only/deprecated models from the raw ListModels response.
+// NOTE: gemini-2.5-flash deliberately excluded — Google's API returns it in
+// ListModels as supporting generateContent, but calling it actually 404s
+// with "no longer available to new users." Confirmed via live CI failure
+// on 2026-08-12. Re-verify before re-adding.
 const MODEL_PRIORITY = [
-    "gemini-2.5-flash",
-    "gemini-2.0-flash",
     "gemini-flash-latest",
+    "gemini-2.0-flash",
     "gemini-pro-latest"
 ];
 
@@ -143,11 +146,16 @@ If a file was unreadable, say so explicitly rather than guessing at its content.
 
         const outputText = genData.candidates?.[0]?.content?.parts?.[0]?.text;
 
+        if (!outputText) {
+            throw new Error(`No text returned in response: ${JSON.stringify(genData)}`);
+        }
+
         console.log("\n✅ Agent Audit Complete:\n");
         console.log(outputText);
 
     } catch (err) {
         console.error("❌ Execution Error:", err.message || err);
+        process.exit(1);   // makes CI fail loudly instead of a silent green checkmark
     }
 }
 
