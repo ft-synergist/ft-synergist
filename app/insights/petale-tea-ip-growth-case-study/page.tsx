@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { ArrowLeft, ArrowRight, Award, CheckCircle2, Globe2, Sparkles, TrendingUp, ShieldCheck, FileText, Calendar, Building, Zap, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Award, CheckCircle2, Globe2, Sparkles, TrendingUp, ShieldCheck, FileText, Calendar, Building, Zap, ChevronRight, ExternalLink } from "lucide-react";
 import CitationFootnotes, { CitationItem } from "@/app/components/CitationFootnotes";
 
 const ipWeekCitations: CitationItem[] = [
@@ -424,78 +424,101 @@ export default function PetaleTeaIPCaseStudy() {
           )}
         </section>
 
-        {/* Visual Verification & Credibility Gallery */}
-        <section className="mb-16 space-y-6">
-          <h2 className="text-2xl font-serif font-bold text-white tracking-tight border-b border-neutral-800 pb-3 flex items-center gap-2">
-            <Building className="w-6 h-6 text-[#8F801B]" /> Institutional Validation & Marketplace Credentials
-          </h2>
-          <p className="text-sm text-neutral-300">
-            FT Synergist is an accredited service provider officially listed on the <strong>IPOS GoBusiness IP Grow Directory</strong> and recognized across government and corporate ecosystems in Singapore and ASEAN.
-          </p>
+        {/* Institutional Validation & Statutory Registry Access */}
+        <section className="mb-16 space-y-8">
+          <div className="border-b border-neutral-800 pb-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#8F801B] font-mono block mb-1">
+              Statutory Governance &amp; Registry Verification
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white tracking-tight">
+              Institutional Accreditation &amp; Government Ecosystem
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Card 1: Stage Photo */}
-            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-3 shadow-lg">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-neutral-900 border border-neutral-800">
-                <Image
-                  src="/insights/ipos-ip-week-2026/ipos-ip-marketplace-stage-backdrop.jpg"
-                  alt="IPOS IP Marketplace 2026 stage backdrop featuring Frederick Tan and Rosemary Kwa"
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-              <div>
-                <h4 className="text-white text-sm font-bold">Main Stage Showcase @ Marina Bay Sands</h4>
-                <p className="text-xs text-neutral-400">Featured presentation for Singapore IP Week 2026 organized by the Intellectual Property Office of Singapore (IPOS).</p>
+          {/* 2-Column Classy Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left: Authentic Stage Photo */}
+            <div className="lg:col-span-5 relative aspect-[3/4] rounded-xl overflow-hidden border border-neutral-800 bg-neutral-950 shadow-2xl">
+              <Image
+                src="/insights/ipos-ip-week-2026/ipos-ip-marketplace-stage-backdrop.jpg"
+                alt="IPOS IP Marketplace 2026 stage backdrop featuring Frederick Tan and Rosemary Kwa"
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-[#8F801B] font-bold block">Marina Bay Sands</span>
+                <p className="text-xs text-white font-medium">IP Marketplace Session • IPOS IP Week 2026</p>
               </div>
             </div>
 
-            {/* Card 2: Partners Grid */}
-            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-3 shadow-lg">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white p-3 border border-neutral-800 flex items-center justify-center">
-                <Image
-                  src="/insights/ipos-ip-week-2026/ipos-ip-week-partners-grid.png"
-                  alt="IP Week 2026 partner showcase featuring FT Synergist alongside leading legal and advisory institutions"
-                  fill
-                  className="object-contain p-2"
-                />
-              </div>
-              <div>
-                <h4 className="text-white text-sm font-bold">Featured Among Tier-1 IP &amp; Advisory Firms</h4>
-                <p className="text-xs text-neutral-400">FT Synergist represented alongside EY-Parthenon, Drew &amp; Napier, WongPartnership, Foo Kon Tan, and Spruson &amp; Ferguson.</p>
-              </div>
-            </div>
+            {/* Right: Sleek, Minimalist Institutional Authority Cards with Verified Direct Links */}
+            <div className="lg:col-span-7 space-y-4">
+              <a
+                href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block p-5 rounded-xl bg-neutral-950 border border-neutral-800 hover:border-[#8F801B] transition-all"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="space-y-1.5">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-[#8F801B]">
+                      <ShieldCheck className="w-3.5 h-3.5" /> GoBusiness Singapore
+                    </span>
+                    <h3 className="text-base font-bold text-white group-hover:text-[#8F801B] transition-colors flex items-center gap-2">
+                      IP Grow Service Provider Directory Listing
+                      <ExternalLink className="w-4 h-4 text-neutral-500 group-hover:text-[#8F801B] transition-colors" />
+                    </h3>
+                    <p className="text-xs text-neutral-400 leading-relaxed">
+                      Officially listed and verified under IA/IP Services for Branding Strategy, Innovation Consultancy, IP Brokerage &amp; Licensing, and IP Strategy Consulting.
+                    </p>
+                  </div>
+                </div>
+              </a>
 
-            {/* Card 3: GoBusiness Directory */}
-            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-3 shadow-lg">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white p-3 border border-neutral-800 flex items-center justify-center">
-                <Image
-                  src="/insights/ipos-ip-week-2026/gobusiness-ip-grow-ft-synergist-directory.png"
-                  alt="FT Synergist profile on GoBusiness IP Grow directory"
-                  fill
-                  className="object-contain p-2"
-                />
-              </div>
-              <div>
-                <h4 className="text-white text-sm font-bold">GoBusiness IP Grow Directory Listing</h4>
-                <p className="text-xs text-neutral-400">Verified provider for Branding Strategy, Innovation Consultancy, IP Brokerage &amp; Licensing, and IP Strategy Consulting.</p>
-              </div>
-            </div>
+              <a
+                href="https://www.ipweek2026.sg/ipmp-programme.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block p-5 rounded-xl bg-neutral-950 border border-neutral-800 hover:border-[#8F801B] transition-all"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="space-y-1.5">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-[#8F801B]">
+                      <Award className="w-3.5 h-3.5" /> IPOS IP Week 2026
+                    </span>
+                    <h3 className="text-base font-bold text-white group-hover:text-[#8F801B] transition-colors flex items-center gap-2">
+                      Official IP Marketplace Speaker &amp; Showcase Feature
+                      <ExternalLink className="w-4 h-4 text-neutral-500 group-hover:text-[#8F801B] transition-colors" />
+                    </h3>
+                    <p className="text-xs text-neutral-400 leading-relaxed">
+                      Keynote presentation on &ldquo;Unlocking Intangible Assets: How SMEs can Leverage IP to Accelerate Business Growth&rdquo; presented by IP Grow at Marina Bay Sands.
+                    </p>
+                  </div>
+                </div>
+              </a>
 
-            {/* Card 4: IP Grow Framework */}
-            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-3 shadow-lg">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-black p-2 border border-neutral-800 flex items-center justify-center">
-                <Image
-                  src="/insights/ipos-ip-week-2026/ip-grow-growth-stages-framework.png"
-                  alt="IP Grow Framework: Build & Launch, Go Global, Raise Capital, Forge Partnerships, Resolve Disputes"
-                  fill
-                  className="object-contain p-1"
-                />
-              </div>
-              <div>
-                <h4 className="text-white text-sm font-bold">Full Lifecycle IP Growth Capabilities</h4>
-                <p className="text-xs text-neutral-400">Covering Build &amp; Launch, Go Global, Raise Capital, and Forge Partnerships under statutory Singapore frameworks.</p>
-              </div>
+              <a
+                href="https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block p-5 rounded-xl bg-neutral-950 border border-neutral-800 hover:border-[#8F801B] transition-all"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="space-y-1.5">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-[#8F801B]">
+                      <Building className="w-3.5 h-3.5" /> TÜV SÜD PSB Singapore
+                    </span>
+                    <h3 className="text-base font-bold text-white group-hover:text-[#8F801B] transition-colors flex items-center gap-2">
+                      Certified Management Consultant (SCMC) Certification
+                      <ExternalLink className="w-4 h-4 text-neutral-500 group-hover:text-[#8F801B] transition-colors" />
+                    </h3>
+                    <p className="text-xs text-neutral-400 leading-relaxed">
+                      Practicing under License SCMC-1810-P0236, ensuring statutory submission integrity and eligibility for Enterprise Singapore EDG grant co-funding.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </section>
