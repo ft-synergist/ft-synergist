@@ -293,16 +293,18 @@ export default function FranchiseConsultantPage() {
                         </div>
                     </div>
 
-                    {/* Official Statutory Compliance */}
+                    {/* Official Statutory Compliance & IPOS IP Brokerage Recognition */}
                     <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-4 mt-6">
-                        <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
-                            Authority Credentials
-                        </span>
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                            <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
+                                IPOS Recognized IP Brokerage &amp; Licensing • SCMC Certification
+                            </span>
+                        </div>
                         <h3 className="font-heading text-xl md:text-2xl font-bold tracking-tight text-white">
-                            Verified Governance &amp; Registry Endorsements
+                            Verified Governance &amp; IPOS IP Grow Registry Endorsement
                         </h3>
                         <p className="text-gray-300 text-base leading-relaxed">
-                            Strategic capability development under Enterprise Singapore support guidelines mandates management consultant certifications. <strong>Principal Advisor Frederick Tan is registered as a TÜV SÜD Singapore Certified Management Consultant (SCMC) under License <a href="https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants" target="_blank" rel="nofollow noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] transition-colors inline-flex items-center gap-1">SCMC-1810-P0236 <ExternalLink className="h-3 w-3" /></a>.</strong> Our franchise growth projects maintain a data-verified <strong>94.7% successful approval track record</strong>. Additionally, FT Synergist is recognized as an approved service provider within the official government <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd" target="_blank" rel="nofollow noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] transition-colors inline-flex items-center gap-1">IPOS GoBusiness Directory</a> for specialized Intellectual Property Strategy, ensuring absolute legitimacy.
+                            Franchise and commercial licensing projects executed under statutory co-funding mandate strict capability standards. <strong>Principal Advisor Frederick Tan is registered as a TÜV SÜD Singapore Certified Management Consultant (SCMC) under License <a href="https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] transition-colors inline-flex items-center gap-1">SCMC-1810-P0236 <ExternalLink className="h-3 w-3" /></a>.</strong> Furthermore, FT Synergist is an approved service provider listed on the official government <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] transition-colors inline-flex items-center gap-1">IPOS GoBusiness Directory <ExternalLink className="h-3 w-3" /></a> under <strong>IP Brokerage &amp; Licensing</strong> and <strong>IP Strategy Consulting</strong>, supporting enterprises across the IPOS &ldquo;Forge Partnerships&rdquo; and &ldquo;Raise Capital&rdquo; stages.
                         </p>
                     </div>
                 </section>

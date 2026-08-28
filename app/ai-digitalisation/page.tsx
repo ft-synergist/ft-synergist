@@ -236,16 +236,18 @@ export default function AIDigitalisationPage() {
                         </div>
                     </div>
 
-                    {/* Official Statutory Framework Compliance */}
+                    {/* Official Statutory Framework & IPOS Innovation Consultancy Compliance */}
                     <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-4 mt-6">
-                        <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
-                            Statutory Authorization
-                        </span>
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                            <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
+                                IPOS Recognized Innovation Consultancy &amp; SCMC Certification
+                            </span>
+                        </div>
                         <h3 className="font-heading text-xl md:text-2xl font-bold tracking-tight text-white">
-                            Official Statutory Framework Compliance
+                            Official Statutory Governance &amp; IPOS IP Grow Listing
                         </h3>
                         <p className="text-gray-300 text-base leading-relaxed">
-                            Technology adoption and process redesign projects executed under statutory co-funding must satisfy rigorous capability criteria. <strong>FT Synergist structures proposals strictly aligned with <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">Enterprise Singapore EDG Innovation &amp; Productivity standards</Link>.</strong> Principal Advisor Frederick Tan maintains active accreditation as a TÜV SÜD Singapore Certified Management Consultant (SCMC) under License <strong>SCMC-1810-P0236</strong>, ensuring absolute submission integrity.
+                            Process redesign, automation, and AI adoption projects must meet rigorous statutory capability thresholds. <strong>FT Synergist is officially recognized on the government <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] inline-flex items-center gap-1">IPOS GoBusiness IP Grow Directory <ExternalLink className="h-3 w-3" /></a> for Innovation Consultancy and IA/IP Services.</strong> Furthermore, project proposals are structured strictly under <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">Enterprise Singapore EDG Innovation &amp; Productivity standards</Link> by TÜV SÜD Singapore Certified Management Consultant (SCMC) Frederick Tan (License <strong>SCMC-1810-P0236</strong>), ensuring absolute submission integrity.
                         </p>
                     </div>
                 </section>

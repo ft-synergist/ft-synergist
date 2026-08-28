@@ -240,16 +240,18 @@ export default function MRAGrantPage() {
             </div>
           </div>
 
-          {/* Official Enterprise Singapore Compliance Notice */}
+          {/* Official Enterprise Singapore & IPOS Go Global Compliance Notice */}
           <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-4 mt-6">
-            <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
-              EnterpriseSG Compliance &amp; Governance
-            </span>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
+                EnterpriseSG MRA &amp; IPOS &ldquo;Go Global&rdquo; Framework Alignment
+              </span>
+            </div>
             <h3 className="font-heading text-xl md:text-2xl font-bold tracking-tight text-white">
-              Transparent MRA Project Delivery &amp; SME Application Guidelines
+              Transparent MRA Project Delivery &amp; Cross-Border IP Governance
             </h3>
             <p className="text-gray-300 text-base leading-relaxed">
-              In accordance with Enterprise Singapore regulations, all MRA grant applications and project proposals must be submitted directly by the applicant company via the Business Grants Portal (BGP). Third-party consultants are strictly prohibited from submitting on behalf of companies. <strong>FT Synergist delivers independent, high-impact market entry deliverables</strong>—including ASEAN market feasibility studies, joint venture contract architecture, and in-market channel partner identification—enabling companies to execute compliant, co-funded international expansion.
+              In accordance with Enterprise Singapore regulations, all MRA grant applications must be submitted directly by the applicant company via the Business Grants Portal (BGP). <strong>FT Synergist delivers independent, high-impact market entry deliverables fully aligned with the statutory <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] inline-flex items-center gap-1">IPOS Go Global framework <ExternalLink className="h-3 w-3" /></a></strong>—including Freedom-To-Operate (FTO) IP landscaping, ASEAN market feasibility studies, joint venture contract architecture, and in-market channel partner identification—enabling companies to execute compliant, co-funded international expansion.
             </p>
           </div>
         </section>
