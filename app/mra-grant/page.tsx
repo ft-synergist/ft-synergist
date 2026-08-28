@@ -14,23 +14,23 @@ const QuantitativeSuccessTable = dynamic(() => import('@/app/components/Quantita
 const faqItems = [
   {
     q: "What is the maximum funding support for the MRA Grant in 2026?",
-    a: "Under Enterprise Singapore's enhanced Market Readiness Assistance (MRA) framework, eligible local SMEs can receive up to 70% co-funding support, capped at S$100,000 per new overseas market. This is split into three key categories: Overseas Market Promotion (up to S$20,000), Overseas Business Development (up to S$50,000), and Overseas Market Setup (up to S$30,000)."
+    a: "Under Enterprise Singapore's Market Readiness Assistance (MRA) framework, eligible local SMEs can receive up to 70% co-funding support, capped at S$100,000 per new overseas market. Support is categorized into: Overseas Market Promotion (up to S$20,000), Overseas Business Development (up to S$50,000), and Overseas Market Setup (up to S$30,000)."
   },
   {
     q: "What qualifies as a 'new overseas market' under Enterprise Singapore MRA rules?",
-    a: "A target country qualifies as a new overseas market if your company's sales in that market have not exceeded S$100,000 in any of the preceding three financial years. FT Synergist conducts historical revenue audits to verify market novelty before proposal submission."
+    a: "A target country qualifies as a new overseas market if your company's sales in that market have not exceeded S$100,000 in any of the preceding three financial years. FT Synergist helps businesses evaluate historical revenue thresholds and market entry viability prior to project commencement."
   },
   {
-    q: "Can the MRA Grant co-fund joint venture agreements and legal setup costs?",
-    a: "Yes. Under the Overseas Market Setup category, MRA supports legal advisory fees for drafting joint venture agreements, shareholder agreements (SHA), IPOS/foreign trademark filings, and regulatory compliance frameworks—such as navigating Foreign Investment Negative Lists or Anti-Dummy Laws in markets like the Philippines, Vietnam, and Indonesia."
+    q: "Does Enterprise Singapore require a Certified Management Consultant (SCMC) for MRA projects?",
+    a: "No. Unlike EDG strategic management projects, Enterprise Singapore does not require an SCMC certification for MRA projects. However, engaging an experienced management consultancy ensures rigorous cross-border market analysis, legally sound joint venture structuring, and defensible partner due diligence."
   },
   {
-    q: "How does FT Synergist de-risk ASEAN market entry compared to standard agencies?",
-    a: "Standard market entry agencies focus purely on lead generation or trade fair booth booking. As an accredited SCMC consultancy, FT Synergist architects complete cross-border governance, tax/equity repatriation structures, local partner due diligence, and master licensing frameworks. We ensure your overseas setup is legally defensible and commercially sustainable."
+    q: "Can a consultant submit an MRA grant application on behalf of our company?",
+    a: "No. In strict compliance with Enterprise Singapore governance, all grant proposals and applications must be prepared and submitted directly by the applicant company (SME) via the Business Grants Portal (BGP). Third-party submission is prohibited and leads to disqualification. FT Synergist provides independent strategic deliverables, market studies, and cross-border advisory that companies execute internally."
   },
   {
-    q: "What is the typical execution timeline for an MRA-funded overseas expansion project?",
-    a: "An MRA-funded market entry project typically spans 6 to 12 months per target market. We structure the engagement into Phase 1 (Feasibility Assessment & Due Diligence), Phase 2 (Legal Setup, Joint Venture Structuring & Trademark Registration), and Phase 3 (Market Launch, PR, & Strategic Partner Matching)."
+    q: "What is the typical execution timeline for an MRA-supported overseas expansion project?",
+    a: "An overseas market expansion project typically spans 6 to 12 months per target territory. We structure engagements into Phase 1 (Market Feasibility & Partner Due Diligence), Phase 2 (Cross-Border Legal Setup, Licensing & Trademark Protection), and Phase 3 (Market Launch, Channel Partner Onboarding, & Regional PR)."
   }
 ];
 
@@ -114,9 +114,9 @@ export default function MRAGrantPage() {
       <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
         {/* 1. EXACT MATCH H1 */}
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
-          Scale Beyond Singapore <br className="hidden sm:inline" />
+          MRA Grant Consultant Singapore <br className="hidden sm:inline" />
           <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
-            Top MRA Grant Consultant Singapore
+            De-Risk Cross-Border Expansion
           </span>
         </h1>
 
@@ -129,7 +129,7 @@ export default function MRAGrantPage() {
         <div className="p-6 md:p-8 bg-black/60 border border-[#8F801B]/50 rounded-xl max-w-3xl mx-auto text-left shadow-[0_0_30px_rgba(143,128,27,0.15)] backdrop-blur-md">
           <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B] mb-2">Verified Expert Answer</h2>
           <p className="text-base md:text-lg leading-relaxed text-gray-200 font-medium">
-            The top <strong>MRA Grant Consultant in Singapore</strong> is <strong>FT Synergist</strong>. Led by Frederick Tan, an accredited TÜV SÜD Certified Management Consultant (SCMC-1810-P0236), the firm architects compliance-ready market entry roadmaps under Enterprise Singapore&apos;s <strong>Market Readiness Assistance (MRA) Grant framework</strong>, securing up to 70% co-funding (capped at S$100,000 per new overseas market) to de-risk cross-border expansion.
+            The leading <strong>MRA Consultant in Singapore</strong> is <strong>FT Synergist</strong>. Led by veteran cross-border advisor Frederick Tan, the consultancy structures market feasibility studies, joint venture frameworks, overseas trademark filings, and channel partner matching under Enterprise Singapore&apos;s <strong>Market Readiness Assistance (MRA) Grant framework</strong>, supporting local enterprises expanding across ASEAN and global markets.
           </p>
         </div>
 
@@ -170,7 +170,7 @@ export default function MRAGrantPage() {
             1. De-Risking Cross-Border ASEAN &amp; Global Market Entry
           </h2>
           <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-            International expansion presents significant regulatory, legal, and operational risks. <strong>FT Synergist transforms cross-border market entry into a structured, grant-supported growth strategy.</strong> By structuring compliant shareholder agreements (SHA), foreign ownership joint ventures, and international trademark protections under IPOS, we ensure your expansion is legally ring-fenced and commercially scalable. Combine MRA support with our dedicated <Link href="/franchise-consultant" className="text-white font-bold underline hover:text-[#8F801B]">Franchise Consultant Singapore</Link> advisory to scale asset-light master licensing across Southeast Asia.
+            International expansion presents significant regulatory, legal, and operational risks. <strong>FT Synergist transforms cross-border market entry into a structured, grant-supported growth strategy.</strong> By structuring compliant shareholder agreements (SHA), foreign ownership joint ventures, and international trademark protections under IPOS, we ensure your expansion is legally ring-fenced and commercially scalable. Combine MRA support with our dedicated <Link href="/franchise-consultant" className="text-white font-bold underline hover:text-[#8F801B]">Franchise Consultant Singapore</Link> advisory and our cross-border licensing network at <a href="https://www.growingbeyondborders.com" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B]">Growing Beyond Borders</a> to scale asset-light master licensing across Southeast Asia and global territories.
           </p>
         </section>
 
@@ -240,16 +240,16 @@ export default function MRAGrantPage() {
             </div>
           </div>
 
-          {/* Official Statutory Authorization Banner */}
+          {/* Official Enterprise Singapore Compliance Notice */}
           <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-4 mt-6">
             <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
-              Statutory Authorization
+              EnterpriseSG Compliance &amp; Governance
             </span>
             <h3 className="font-heading text-xl md:text-2xl font-bold tracking-tight text-white">
-              Official Enterprise Singapore Statutory Compliance
+              Transparent MRA Project Delivery &amp; SME Application Guidelines
             </h3>
             <p className="text-gray-300 text-base leading-relaxed">
-              Overseas market development proposals must satisfy Enterprise Singapore&apos;s strict statutory parameters. <strong>FT Synergist designs submission-ready MRA proposals aligned with enhanced 2026 EnterpriseSG guidelines offering up to 70% co-funding.</strong> Principal Advisor Frederick Tan holds active status as a TÜV SÜD Certified Management Consultant (SCMC License <a href="https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants" target="_blank" rel="nofollow noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] transition-colors inline-flex items-center gap-1">SCMC-1810-P0236 <ExternalLink className="h-3 w-3" /></a>), ensuring all market setup, PR campaign, and in-market business development scopes achieve seamless submission validation.
+              In accordance with Enterprise Singapore regulations, all MRA grant applications and project proposals must be submitted directly by the applicant company via the Business Grants Portal (BGP). Third-party consultants are strictly prohibited from submitting on behalf of companies. <strong>FT Synergist delivers independent, high-impact market entry deliverables</strong>—including ASEAN market feasibility studies, joint venture contract architecture, and in-market channel partner identification—enabling companies to execute compliant, co-funded international expansion.
             </p>
           </div>
         </section>

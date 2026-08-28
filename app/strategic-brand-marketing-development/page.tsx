@@ -228,17 +228,54 @@ export default function StrategicBrandMarketingDevelopmentPage() {
             </div>
           </div>
 
-          {/* Official Statutory Framework Compliance */}
-          <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-4 mt-6">
-            <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
-              Statutory Authorization
-            </span>
+          {/* Official Statutory Framework Compliance & IPOS IP Week Showcase */}
+          <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-6 mt-6">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
+                Statutory Authorization &amp; Keynote Showcase
+              </span>
+              <span className="text-xs text-yellow-400/90 font-mono">
+                IPOS IP Week 2026 Speaker
+              </span>
+            </div>
             <h3 className="font-heading text-xl md:text-2xl font-bold tracking-tight text-white">
-              Official Statutory Framework Compliance
+              Official Statutory Framework Compliance &amp; IPOS IP Week 2026 Feature
             </h3>
             <p className="text-gray-300 text-base leading-relaxed">
-              Brand and marketing development projects executed under statutory co-funding must meet strict capability development thresholds. <strong>FT Synergist executes projects fully aligned with Enterprise Singapore EDG standards.</strong> Principal Advisor Frederick Tan maintains active status as a TÜV SÜD Singapore Certified Management Consultant (SCMC) under License <strong>SCMC-1810-P0236</strong>, ensuring all strategic growth proposals hold absolute submission integrity.
+              Brand and marketing development projects executed under statutory co-funding must meet strict capability development thresholds. <strong>FT Synergist is an approved service provider listed on the official <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B]">GoBusiness IP Grow Directory</a> and executes projects fully aligned with Enterprise Singapore EDG standards.</strong> Principal Advisor Frederick Tan maintains active status as a TÜV SÜD Singapore Certified Management Consultant (SCMC) under License <strong>SCMC-1810-P0236</strong>, ensuring all strategic growth proposals hold absolute submission integrity.
             </p>
+
+            {/* Case Study Feature Callout */}
+            <div className="bg-black/70 p-5 rounded-lg border border-neutral-700 flex flex-col sm:flex-row items-center gap-5">
+              <div className="relative w-full sm:w-44 aspect-[16/10] sm:aspect-square shrink-0 rounded overflow-hidden border border-neutral-700">
+                <img
+                  src="/insights/ipos-ip-week-2026/frederick-tan-rosemary-kwa-ip-week-panel.jpg"
+                  alt="Frederick Tan speaking at IPOS IP Week 2026"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="space-y-2 text-left w-full">
+                <span className="text-[11px] font-mono text-[#8F801B] uppercase font-bold tracking-wider">
+                  Featured Case Study @ Marina Bay Sands
+                </span>
+                <h4 className="text-white font-bold text-base hover:text-[#8F801B] transition-colors">
+                  <Link href="/insights/petale-tea-ip-growth-case-study">
+                    Unlocking Intangible Assets: How Strategic Branding &amp; AI Scaled Pétale Tea by 400%
+                  </Link>
+                </h4>
+                <p className="text-xs text-gray-300 leading-relaxed">
+                  Presented at IPOS IP Week 2026 (IP Marketplace): See how unbundling intangible assets and creating an AI-driven personalizing recommendation engine unlocked blue-chip contracts (Google, Meta, Tiffany &amp; Co.) and Indonesian expansion.
+                </p>
+                <div className="pt-1">
+                  <Link
+                    href="/insights/petale-tea-ip-growth-case-study"
+                    className="inline-flex items-center text-xs font-bold text-[#8F801B] hover:text-white uppercase tracking-wider transition-colors"
+                  >
+                    Read Full Brand Transformation Story <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

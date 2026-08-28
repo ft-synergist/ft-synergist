@@ -150,7 +150,7 @@ export default function SustainabilityPage() {
                         transition={{ duration: 0.8 }}
                         className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-xl"
                     >
-                        Our <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">Sustainability</span> Impact
+                        Top <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">Sustainability Consultant</span> Singapore
                     </motion.h1>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -158,7 +158,7 @@ export default function SustainabilityPage() {
                         transition={{ delay: 0.2, duration: 0.8 }}
                         className="text-xl md:text-2xl text-gray-200 font-medium mb-8 max-w-3xl mx-auto drop-shadow-md"
                     >
-                        <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">Synergies Driving Sustainable Growth</span>: Aligning Profit with Purpose.
+                        <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">ESG Strategy &amp; Sustainable Growth</span>: Aligning Profit with Purpose.
                     </motion.h2>
 
                     {/* Extractive Answer Hook Box - Injected seamlessly into your current hero flow */}

@@ -93,19 +93,19 @@ export function ServicesAccordion() {
     setExpandedCardIndex(expandedCardIndex === index ? null : index);
   };
 
-  // ✅ Updated services with internal hrefs for each card
+  // ✅ Updated 6 comprehensive services with direct internal hrefs for each card
   const services = [
     {
-      title: "Business Strategy Development",
-      href: "/ip-consultant",
-      description: "Crafting actionable roadmaps backed by defensible IP Strategy to secure your legal right to dominate markets.",
-      expandedIntro: "We move beyond standard planning to provide IP strategy consulting and build competitive moats.",
+      title: "Enterprise Development Grant (EDG)",
+      href: "/edg-grant",
+      description: "Certified SCMC advisory under Enterprise Singapore's EDG grant framework to co-fund up to 50%–70% of strategic capability projects.",
+      expandedIntro: "As a TÜV SÜD certified management practice, we help qualifying Singapore enterprises structure compliance-ready proposals across all three EDG pillars:",
       image: "/ft-synergist-tnt-surveillance-business-strategy.png",
-      alt: "TNT Surveillance iSafe Telematics System deployed for fleet strategy and IP optimization",
+      alt: "Enterprise Development Grant EDG Consultant Singapore",
       details: [
-        { title: "Diagnosis & Market Intelligence (SWOT)", content: "We assess internal strengths and external competition using SWOT Analysis to identify growth bottlenecks." },
-        { title: "Strategic Roadmap", content: "Delivering a clear go-to-market implementation plan for business frameworks, Sustainability Governance, and policy development." },
-        { title: "R&D & IP Optimization", content: "Structuring your intellectual property assets and R&D operations for maximum valuation and efficiency." }
+        { title: "Core Capabilities Upgrade", content: "Structuring Business Strategy, Strategic Brand & Marketing, and IP Strategy roadmaps." },
+        { title: "Innovation & Productivity", content: "Process redesign, automation workflows, and custom AI software implementation." },
+        { title: "Market Access & Expansion", content: "Overseas market entry, international master franchising, and M&A advisory." }
       ],
     },
     {
@@ -114,6 +114,7 @@ export function ServicesAccordion() {
       description: "Building resilient, legally protected brand strategies under Enterprise Singapore's EDG framework that command market share and turn marketing spend into tradeable equity.",
       expandedIntro: "A brand is only an asset if it is distinct and legally protected. For scaling consumer brands like Big Fish Small Fish, we differentiate your offering through:",
       image: "/Big-Fish-Small-Fish-flat-lay.jpg",
+      alt: "Strategic Brand and Marketing Development Singapore",
       details: [
         { title: "Market Research & Insights", content: "Conducting quantitative primary research to validate target customer segments and willingness-to-pay." },
         { title: "Brand & Trademark Strategy", content: "Structuring defensible brand architectures aligned with IPOS trademark protection and commercial valuation." },
@@ -121,11 +122,12 @@ export function ServicesAccordion() {
       ]
     },
     {
-      title: "Innovation & Productivity",
+      title: "Innovation & AI Productivity",
       href: "/ai-digitalisation",
       description: "Providing AI-powered Process Redesign and workflow optimization under Enterprise Singapore frameworks to turn operational improvements into proprietary trade secrets.",
       expandedIntro: "We turn operational bottlenecks into long-term efficiency moats. Our productivity transformation programs (e.g., Bestway continuous improvement frameworks) deliver:",
       image: "/ft-synergist-bestway-innovation-productivity.jpg",
+      alt: "AI Digitalisation and Innovation Productivity Singapore",
       details: [
         { title: "Process Redesign & Workflow Automation", content: "Reviewing and streamlining operational workflows to eliminate redundancies and optimize labor allocation." },
         { title: "Performance Measurement & KPIs", content: "Developing real-time tracking dashboards and data roadmaps to ensure sustained operational gains." },
@@ -133,11 +135,25 @@ export function ServicesAccordion() {
       ]
     },
     {
-      title: "Market Readiness Assistance",
+      title: "Intellectual Property (IP) Strategy",
+      href: "/ip-consultant",
+      description: "Accredited under IPOS GoBusiness IP Grow to conduct intangible asset audits, defensive trademark structuring, and commercial licensing models.",
+      expandedIntro: "We move beyond standard legal filings to architect comprehensive IP monetisation models and tradeable corporate assets:",
+      image: "/ft-synergist-tnt-surveillance-business-strategy.png",
+      alt: "IP Consultant Singapore IPOS GoBusiness accredited",
+      details: [
+        { title: "Intangible Asset Diagnosis", content: "Auditing registered and unregistered IP, trade secrets, and proprietary SOPs to establish true enterprise valuation." },
+        { title: "Defensive Trademark Structuring", content: "Ring-fencing core brand equity across Singapore, ASEAN, and international WIPO Madrid jurisdictions." },
+        { title: "Licensing & Royalty Engineering", content: "Designing commercial agreements with structured revenue streams and territorial exclusivity." }
+      ]
+    },
+    {
+      title: "Market Readiness Assistance (MRA)",
       href: "/mra-grant",
       description: "De-risking global expansion with local expertise, regulatory navigation, and IP intelligence to secure viable international growth under Enterprise Singapore's MRA grant.",
       expandedIntro: "We guide mid-market enterprises like Sundat through complex cross-border expansions, de-risking overseas entry across three core pillars:",
       image: "/ft-synergist-sundat-mra-global-expansion.jpg",
+      alt: "MRA Grant Consultant Singapore Overseas Market Entry",
       details: [
         { title: "Market Entry & Feasibility Advisory", content: "In-depth research on regulatory pathways, Freedom-to-Operate (FTO), and acquisition-led entry routes." },
         { title: "Overseas Business Development", content: "Matching your enterprise with vetted overseas partners, business brokers, and B2B licensees." },
@@ -145,11 +161,12 @@ export function ServicesAccordion() {
       ]
     },
     {
-      title: "Franchise & Licensing",
+      title: "Franchise & Master Licensing",
       href: "/franchise-consultant",
-      description: "Under Enterprise Singapore's EDG grant framework, we transform successful local operating models into legally defensible, globally exportable asset classes.",
+      description: "Transforming proven operating models into asset-light, multi-market franchise architectures with standardized SOPs and cross-border licensing agreements.",
       expandedIntro: "We guide high-growth local enterprises (e.g., Pawa Bakery) through complex scaling journeys to monetize existing operational excellence and secure EBITDA expansion:",
       image: "/ft-synergist-pawa-bakery-franchise-licensing.jpg",
+      alt: "Franchise Consultant Singapore Master Licensing",
       details: [
         { title: "IP Audit & Monetization Strategy", content: "Auditing intangible assets and structuring royalty models to maximize existing operational revenue streams." },
         { title: "Legal & Deal Structuring", content: "Crafting robust master franchise agreements and legally protectable operational manuals for scalable multi-jurisdiction execution." },
@@ -160,7 +177,7 @@ export function ServicesAccordion() {
 
   return (
     <div className="flex flex-col gap-8">
-      {/* Top Row: 3 Pillars */}
+      {/* 6 Services Grid (2x3) */}
       <motion.div
         variants={staggerContainer}
         initial="initial"
@@ -168,7 +185,7 @@ export function ServicesAccordion() {
         viewport={{ once: true }}
         className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
-        {services.slice(0, 3).map((service, index) => (
+        {services.map((service, index) => (
           <motion.div
             key={index}
             variants={fadeInUp}
@@ -187,7 +204,7 @@ export function ServicesAccordion() {
             </div>
 
             <div className="p-8 flex flex-col flex-grow">
-              {/* ✅ Title is now a clickable link to the dedicated service page */}
+              {/* Title is a clickable link to the dedicated service page */}
               <Link href={service.href} className="block group/link">
                 <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors">
                   {service.title}
@@ -221,7 +238,6 @@ export function ServicesAccordion() {
                           </li>
                         ))}
                       </ul>
-                      {/* ✅ Extra link inside expanded content for clear navigation */}
                       <Link
                         href={service.href}
                         className="inline-flex items-center text-primary font-bold hover:underline text-sm"
@@ -245,94 +261,6 @@ export function ServicesAccordion() {
             </div>
           </motion.div>
         ))}
-      </motion.div>
-
-      {/* Bottom Row: 2 Pillars (Centered) */}
-      <motion.div
-        variants={staggerContainer}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        className="grid gap-8 md:grid-cols-2 lg:w-4/5 lg:mx-auto"
-      >
-        {services.slice(3, 5).map((service, index) => {
-          const actualIndex = index + 3;
-          return (
-            <motion.div
-              key={actualIndex}
-              variants={fadeInUp}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card shadow-sm transition-all duration-500 hover:shadow-2xl hover:border-[#8F801B]/50"
-            >
-              <div className="relative w-full h-48 overflow-hidden flex-shrink-0">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
-              </div>
-
-              <div className="p-8 flex flex-col flex-grow">
-                <Link href={service.href} className="block group/link">
-                  <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-                </Link>
-                <div className="w-12 h-1 bg-[#8F801B] mb-4 rounded-full group-hover:w-20 transition-all duration-500 ease-out"></div>
-
-                <div className="flex-grow">
-                  {!expandedCardIndex || expandedCardIndex !== actualIndex ? (
-                    <p className="text-gray-700 font-medium leading-relaxed text-base mb-6">{service.description}</p>
-                  ) : null}
-
-                  <AnimatePresence>
-                    {expandedCardIndex === actualIndex && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <p className="text-gray-700 font-medium leading-relaxed text-base mb-6">{service.expandedIntro}</p>
-                        <ul className="space-y-4 mb-6">
-                          {service.details.map((detail, idx) => (
-                            <li key={idx} className="flex flex-col gap-1">
-                              <div className="flex items-center gap-2">
-                                <CheckCircle2 className="w-4 h-4 text-[#8F801B] flex-shrink-0" />
-                                <span className="font-bold text-foreground text-sm">{detail.title}</span>
-                              </div>
-                              <p className="text-sm text-gray-600 font-medium pl-6">{detail.content}</p>
-                            </li>
-                          ))}
-                        </ul>
-                        <Link
-                          href={service.href}
-                          className="inline-flex items-center text-primary font-bold hover:underline text-sm"
-                        >
-                          Visit full service page →
-                        </Link>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                <div className="pt-4 border-t border-border/40 mt-auto">
-                  <button
-                    onClick={() => toggleCard(actualIndex)}
-                    className="text-sm font-bold text-primary group-hover:underline flex items-center cursor-pointer bg-transparent border-none p-0 focus:outline-none"
-                  >
-                    {expandedCardIndex === actualIndex ? 'Show Less' : 'Read More'}
-                    <ChevronRight className={`ml-1 h-4 w-4 transition-transform duration-300 ${expandedCardIndex === actualIndex ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          );
-        })}
       </motion.div>
     </div>
   );

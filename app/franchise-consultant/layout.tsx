@@ -1,14 +1,15 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Top Franchise Consultant Singapore | FT Synergist",
-    description: "Scale your business with Singapore's top franchise consultants. We specialize in robust franchise agreement architectures, international compliance, and cross-border expansion models.",
+    title: "Franchise Consultant Singapore | Master Licensing & Expansion | FT Synergist",
+    description: "Scale your enterprise with Singapore's premier Franchise Consultants. TÜV SÜD SCMC certified advisory for master franchising, FDD/SOP standardization, and ASEAN cross-border expansion.",
     keywords: [
-        "top franchise consultant singapore",
-        "top business consultant singapore",
-        "franchise expansion advisor singapore",
+        "Franchise Consultant Singapore",
+        "franchise consulting Singapore",
+        "franchise broker Singapore",
+        "master licensing consultant Singapore",
         "franchising consultant",
-        "SOP manual standardization"
+        "franchise expansion advisor Singapore"
     ],
     alternates: {
         canonical: "https://www.ftsynergist.com/franchise-consultant",

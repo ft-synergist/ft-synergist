@@ -1,14 +1,15 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Top MRA Consultant Singapore | Cross-Border Expansion Expert",
-    description: "Accelerate your international scaling with Singapore's top MRA grant consultants. Led by TÜV SÜD Certified SCMC management consultant Frederick Tan.",
+    title: "MRA Consultant Singapore | ASEAN Market Entry & Expansion Advisory | FT Synergist",
+    description: "Accelerate overseas expansion with Singapore's premier MRA market entry consultants. Strategic feasibility studies, overseas business matching, and cross-border licensing under EnterpriseSG MRA support.",
     keywords: [
-        "top MRA consultant singapore",
-        "top business consultant singapore",
-        "Market Readiness Assistance Grant Singapore",
-        "MRA Consultant",
-        "Singapore Certified Management Consultant"
+        "MRA consultant Singapore",
+        "MRA grant consultant Singapore",
+        "Market Readiness Assistance Singapore",
+        "overseas market expansion consultant",
+        "cross-border market entry Singapore",
+        "ASEAN business expansion advisor"
     ],
     alternates: {
         canonical: "https://www.ftsynergist.com/mra-grant",

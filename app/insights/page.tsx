@@ -26,24 +26,30 @@ export default function InsightsPage() {
         {
           "@type": "ListItem",
           "position": 1,
+          "url": "https://www.ftsynergist.com/insights/petale-tea-ip-growth-case-study",
+          "name": "Unlocking Intangible Assets: How to Leverage Your IP to Grow Your Business by 400%"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "url": "https://www.ftsynergist.com/insights/wang-lao-ji-global-expansion-strategy",
           "name": "Wang Lao Ji Global Expansion Strategy"
         },
         {
           "@type": "ListItem",
-          "position": 2,
+          "position": 3,
           "url": "https://www.ftsynergist.com/insights/edg-grant-eligibility-guide",
           "name": "EDG Grant Eligibility Guide"
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 4,
           "url": "https://www.ftsynergist.com/insights/state-of-ai-2026",
           "name": "State of AI in Southeast Asia"
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 5,
           "url": "https://www.ftsynergist.com/insights/vietnam-expansion-blueprint",
           "name": "Strategic Blueprint: Navigating the Singapore-Vietnam Expansion"
         }
@@ -63,31 +69,35 @@ export default function InsightsPage() {
       <section className="pt-16 pb-8 px-6 md:px-12 max-w-7xl mx-auto w-full">
         <div className="border-b border-gray-900 pb-8">
           <span className="text-[#8F801B] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">
-            FT Synergist Intelligence
+            FT Synergist Intelligence & Executive Case Studies
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 tracking-tight leading-tight mb-4">
             Our Insights
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl leading-relaxed font-normal">
-            Market-defining research, grant frameworks, and operational roadmaps for scaling Asian enterprises.
+            Market-defining research, IP commercialisation frameworks, grant roadmaps, and global expansion case studies for scaling Asian enterprises.
           </p>
         </div>
       </section>
 
-      {/* 2. FEATURED INSIGHT — Expansive Layout */}
+      {/* 2. FEATURED INSIGHT — IPOS IP Week 2026 Showcase */}
       <section className="py-8 px-6 md:px-12 max-w-7xl mx-auto w-full">
-        <div className="mb-6">
-          <span className="text-xs font-bold tracking-widest text-gray-900 uppercase">
-            Featured Insight
+        <div className="mb-6 flex items-center justify-between">
+          <span className="text-xs font-bold tracking-widest text-gray-900 uppercase flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#8F801B] animate-pulse"></span>
+            Featured Case Study — IPOS IP Week 2026
+          </span>
+          <span className="text-xs font-semibold text-[#8F801B] uppercase tracking-wider bg-[#8F801B]/10 px-2.5 py-1 rounded">
+            Presented by IP Grow
           </span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left: Image */}
-          <div className="lg:col-span-7 relative aspect-[16/9] bg-gray-100 overflow-hidden">
+          <div className="lg:col-span-7 relative aspect-[16/10] bg-gray-900 overflow-hidden rounded-lg shadow-xl">
             <Image
-              src="/walovi-hero.jpg"
-              alt="Wang Lao Ji Global Branding Strategy"
+              src="/insights/ipos-ip-week-2026/frederick-tan-rosemary-kwa-ip-week-panel.jpg"
+              alt="Frederick Tan and Rosemary Kwa speaking on stage at IPOS IP Week 2026 Marina Bay Sands"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"
               priority={true}
@@ -97,30 +107,30 @@ export default function InsightsPage() {
 
           {/* Right: Text Content */}
           <div className="lg:col-span-5 flex flex-col justify-center space-y-4 text-left">
-            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              Case Study
+            <span className="text-xs font-semibold text-[#8F801B] uppercase tracking-wider font-mono">
+              Intangible Asset (IA) & IP Commercialisation
             </span>
 
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-snug tracking-tight hover:text-[#8F801B] transition-colors">
-              <Link href="/insights/wang-lao-ji-global-expansion-strategy">
-                Singapore's Smart Leap: The "Wang Lao Ji" Blueprint for Global Expansion <ArrowRight className="inline-block ml-1 h-6 w-6 text-[#8F801B]" />
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-gray-900 leading-snug tracking-tight hover:text-[#8F801B] transition-colors">
+              <Link href="/insights/petale-tea-ip-growth-case-study">
+                Unlocking Intangible Assets: How to Leverage Your IP to Grow Your Business by 400% <ArrowRight className="inline-block ml-1 h-5 w-5 text-[#8F801B]" />
               </Link>
             </h2>
 
             <p className="text-sm font-serif italic text-gray-500">
-              February 2026 — Executive Roadmap
+              August 2026 — Presented at Marina Bay Sands by IPOS & GoBusiness IP Grow
             </p>
 
             <p className="text-base text-gray-600 leading-relaxed">
-              How a 197-year-old heritage brand grew profits by 15.87% by reinventing itself for global markets. A masterclass in brand localization, cross-border IP defensibility, and market entry for Asian SMEs.
+              Inside Pétale Tea’s journey: How Frederick Tan (FT Synergist) and Rosemary Kwa unbundled intangible assets, integrated predictive AI algorithms, and deployed an asset-light licensing framework to unlock global blue-chips and multi-market ASEAN scale.
             </p>
 
             <div className="pt-2">
               <Link
-                href="/insights/wang-lao-ji-global-expansion-strategy"
+                href="/insights/petale-tea-ip-growth-case-study"
                 className="inline-flex items-center text-sm font-bold text-[#8F801B] hover:text-gray-900 transition-colors uppercase tracking-wider"
               >
-                Read Full Insight <ArrowRight className="ml-2 h-4 w-4" />
+                Read Case Study Breakdown <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -133,7 +143,7 @@ export default function InsightsPage() {
       <section className="py-12 px-6 md:px-12 max-w-7xl mx-auto w-full flex-grow">
         <div className="mb-10">
           <span className="text-xs font-bold tracking-widest text-gray-900 uppercase">
-            More Insights
+            More Executive Insights & Strategic Reports
           </span>
         </div>
 

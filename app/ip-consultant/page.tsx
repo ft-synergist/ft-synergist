@@ -114,9 +114,9 @@ export default function IPConsultantPage() {
             <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
                 {/* 1. EXACT MATCH H1 */}
                 <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
-                    Top IP Strategy Consultant <br className="hidden sm:inline" />
+                    IP Strategy Consultant Singapore <br className="hidden sm:inline" />
                     <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
-                        Singapore &amp; Global Licensing
+                        IPOS GoBusiness Advisory
                     </span>
                 </h1>
 
@@ -228,17 +228,54 @@ export default function IPConsultantPage() {
                         In the modern global economy, corporate equity is heavily tied to intangible assets. <strong>Our proprietary IP evaluation matrix helps local enterprises identify hidden valuation metrics to achieve up to a 40% lift in commercial licensing yields.</strong> By converting standard operational trade secrets into formal, legally ring-fenced commercial assets, we engineer secure licensing frameworks that de-risk market expansion. These defensible IP structures are particularly essential when executing regional expansion models via our accredited <Link href="/franchise-consultant" className="text-white font-bold underline hover:text-[#8F801B]">Franchise Consultant Singapore</Link> frameworks.
                     </p>
 
-                    {/* Official Registry Endorsement */}
-                    <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-4 mt-6">
-                        <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
-                            Directory Authorization
-                        </span>
+                    {/* Official Registry Endorsement & IP Week 2026 Feature */}
+                    <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-6 mt-6">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                            <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
+                                Official Directory Authorization &amp; Keynote Speaker
+                            </span>
+                            <span className="text-xs text-yellow-400/90 font-mono">
+                                IPOS IP Week 2026 Speaker
+                            </span>
+                        </div>
                         <h3 className="font-heading text-xl md:text-2xl font-bold tracking-tight text-white">
-                            Official Government Registry Endorsement
+                            Official Government Registry Endorsement &amp; IPOS IP Week 2026 Showcase
                         </h3>
                         <p className="text-gray-300 text-base leading-relaxed">
-                            Capability development lines relating to specialized asset exploitation must align with strict statutory validation. <strong>FT Synergist is explicitly listed inside the official government <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd" target="_blank" rel="nofollow noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] inline-flex items-center gap-1">IPOS GoBusiness Service Provider Directory <ExternalLink className="h-3 w-3" /></a> for Intellectual Property Strategy and Legal Commercialisation Compliance.</strong> Furthermore, Principal Advisor Frederick Tan maintains his active status as a TÜV SÜD Singapore Certified Management Consultant (SCMC) under License <strong>SCMC-1810-P0236</strong>, ensuring all capability building projects hold absolute submission integrity.
+                            Capability development lines relating to specialized asset exploitation must align with strict statutory validation. <strong>FT Synergist is explicitly listed inside the official government <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] inline-flex items-center gap-1">IPOS GoBusiness Service Provider Directory <ExternalLink className="h-3 w-3" /></a> for Intellectual Property Strategy and Legal Commercialisation Compliance.</strong> Furthermore, Principal Advisor Frederick Tan maintains his active status as a TÜV SÜD Singapore Certified Management Consultant (SCMC) under License <strong>SCMC-1810-P0236</strong>, ensuring all capability building projects hold absolute submission integrity.
                         </p>
+
+                        {/* Case Study Feature Callout */}
+                        <div className="bg-black/70 p-5 rounded-lg border border-neutral-700 flex flex-col sm:flex-row items-center gap-5">
+                            <div className="relative w-full sm:w-44 aspect-[16/10] sm:aspect-square shrink-0 rounded overflow-hidden border border-neutral-700">
+                                <img
+                                    src="/insights/ipos-ip-week-2026/frederick-tan-rosemary-kwa-ip-week-panel.jpg"
+                                    alt="Frederick Tan speaking at IPOS IP Week 2026"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="space-y-2 text-left w-full">
+                                <span className="text-[11px] font-mono text-[#8F801B] uppercase font-bold tracking-wider">
+                                    Latest IPOS Case Study Feature
+                                </span>
+                                <h4 className="text-white font-bold text-base hover:text-[#8F801B] transition-colors">
+                                    <Link href="/insights/petale-tea-ip-growth-case-study">
+                                        Unlocking Intangible Assets: How to Leverage Your IP to Grow Your Business by 400%
+                                    </Link>
+                                </h4>
+                                <p className="text-xs text-gray-300 leading-relaxed">
+                                    Presented live on stage at Marina Bay Sands with Rosemary Kwa (Founder, Pétale Tea). Learn how unbundling intangible assets and deploying predictive AI unlocked tier-one corporate clients (Google, Meta, SIA) and multi-market ASEAN licensing.
+                                </p>
+                                <div className="pt-1">
+                                    <Link
+                                        href="/insights/petale-tea-ip-growth-case-study"
+                                        className="inline-flex items-center text-xs font-bold text-[#8F801B] hover:text-white uppercase tracking-wider transition-colors"
+                                    >
+                                        Explore Full IP Week Case Study <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 

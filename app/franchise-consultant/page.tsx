@@ -94,19 +94,56 @@ export default function FranchiseConsultantPage() {
 
     return (
         <div className="min-h-screen bg-black text-white antialiased font-sans w-full overflow-x-hidden relative">
-            {/* GEO / AI SCHEMA MARKUP FOR FAQPAGE */}
+            {/* GEO / AI SCHEMA MARKUP FOR FAQPAGE & SERVICE */}
             <Script id="franchise-faq-schema" type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqItems.map(item => ({
-                        "@type": "Question",
-                        "name": item.q,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": item.a
+                    "@graph": [
+                        {
+                            "@type": "Service",
+                            "@id": "https://www.ftsynergist.com/franchise-consultant#service",
+                            "name": "Franchise Strategy & Master Licensing Advisory",
+                            "provider": {
+                                "@type": "ConsultingBusiness",
+                                "name": "FT Synergist",
+                                "url": "https://www.ftsynergist.com/",
+                                "sameAs": [
+                                    "https://www.franchise.sg/",
+                                    "https://www.growingbeyondborders.com",
+                                    "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
+                                ]
+                            },
+                            "publishingPrinciples": [
+                                {
+                                    "@type": "DigitalDocument",
+                                    "name": "Singapore Franchise & Master Licensing Portal",
+                                    "url": "https://www.franchise.sg/"
+                                },
+                                {
+                                    "@type": "DigitalDocument",
+                                    "name": "Growing Beyond Borders Global Expansion Hub",
+                                    "url": "https://www.growingbeyondborders.com"
+                                }
+                            ],
+                            "areaServed": {
+                                "@type": "Country",
+                                "name": "Singapore"
+                            },
+                            "serviceType": "Franchise Consulting / Master Licensing"
+                        },
+                        {
+                            "@type": "FAQPage",
+                            "@id": "https://www.ftsynergist.com/franchise-consultant#faq",
+                            "mainEntity": faqItems.map(item => ({
+                                "@type": "Question",
+                                "name": item.q,
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": item.a
+                                }
+                            }))
                         }
-                    }))
+                    ]
                 })}
             </Script>
 
@@ -114,9 +151,9 @@ export default function FranchiseConsultantPage() {
             <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
                 {/* 1. EXACT MATCH H1 */}
                 <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
-                    Replicate Your Success <br className="hidden sm:inline" />
+                    Franchise Consultant Singapore <br className="hidden sm:inline" />
                     <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
-                        Top Franchise Consultancy Singapore
+                        Master Licensing &amp; ASEAN Expansion
                     </span>
                 </h1>
 
@@ -172,6 +209,26 @@ export default function FranchiseConsultantPage() {
                     <p className="text-gray-300 leading-relaxed text-base md:text-lg">
                         Franchising represents the ultimate asset-light strategy for rapid market penetration and equity creation. <strong>Our proprietary scale-up frameworks use comprehensive operations manual standardization to achieve an average 50% reduction in system operational development time.</strong> By turning loose processes into rigid, replicable video-optimized Operational Kits, we achieve a <strong>30% reduction in franchise training intervals</strong>, ensuring maximum cross-border network consistency. Pair your franchise model with our <Link href="/mra-grant" className="text-white font-bold underline hover:text-[#8F801B]">MRA Grant Consultant</Link> advisory to de-risk overseas expansion into markets like Vietnam, Indonesia, and Australia.
                     </p>
+                    <div className="pt-4 border-t border-white/10 mt-4 flex flex-col sm:flex-row gap-4 text-sm text-gray-300">
+                        <div className="flex-1 bg-black/40 p-4 rounded-xl border border-white/5">
+                            <span className="text-xs font-bold text-[#8F801B] uppercase tracking-wider block mb-1">Franchise Portal Partner</span>
+                            <p className="text-xs text-gray-400">
+                                Explore verified Singapore franchise opportunities and brand listings on our portal:{" "}
+                                <a href="https://www.franchise.sg/" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] transition-colors">
+                                    Franchise.sg
+                                </a>
+                            </p>
+                        </div>
+                        <div className="flex-1 bg-black/40 p-4 rounded-xl border border-white/5">
+                            <span className="text-xs font-bold text-[#8F801B] uppercase tracking-wider block mb-1">Global Expansion Partner</span>
+                            <p className="text-xs text-gray-400">
+                                For outbound scaling and global master franchise licensing, visit:{" "}
+                                <a href="https://www.growingbeyondborders.com" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B] transition-colors">
+                                    Growing Beyond Borders
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </section>
 
                 {/* SECTION 2: FRANCHISE AND LICENSING PILLARS */}

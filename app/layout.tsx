@@ -108,9 +108,33 @@ export default function RootLayout({
       "description": "Baseline Corporate Advisory and Grant Strategy Engagement Minimum"
     },
     "sameAs": [
+      "https://www.franchise.sg/",
+      "https://www.growingbeyondborders.com",
+      "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd",
+      "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#overview",
+      "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services",
+      "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#markets",
+      "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#key-practice-experts",
+      "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#recognition",
+      "https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants",
       "https://www.linkedin.com/company/ft-synergist",
-      "https://www.linkedin.com/in/frederick-tan-scmc/",
-      "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
+      "https://www.linkedin.com/in/frederick-tan-scmc/"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Certification",
+        "name": "Singapore Certified Management Consultant (SCMC)",
+        "identifier": "SCMC-1810-P0236",
+        "validFrom": "2018-10-18",
+        "validUntil": "2027-10-17",
+        "url": "https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "TÜV SÜD PSB Singapore",
+          "url": "https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants"
+        }
+      }
     ],
     "knowsAbout": [
       "Enterprise Development Grant EDG Singapore",
@@ -132,10 +156,22 @@ export default function RootLayout({
     ],
     "founder": {
       "@type": "Person",
+      "@id": "https://www.ftsynergist.com/#frederick-tan",
       "name": "Frederick Tan",
       "jobTitle": "Principal Consultant",
       "honorificSuffix": "SCMC",
-      "award": "TÜV SÜD Singapore Certified Management Consultant (License SCMC-1810-P0236)"
+      "award": "TÜV SÜD Singapore Certified Management Consultant (License SCMC-1810-P0236)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "FT Synergist Pte Ltd"
+      },
+      "sameAs": [
+        "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd",
+        "https://www.growingbeyondborders.com",
+        "https://www.franchise.sg/",
+        "https://www.linkedin.com/in/frederick-tan-scmc/",
+        "https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants"
+      ]
     }
   };
 

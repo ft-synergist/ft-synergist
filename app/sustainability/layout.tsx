@@ -1,14 +1,16 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Top Sustainability Consultant Singapore | FT Synergist",
-  description: "Transform ESG compliance into a commercial moat with Singapore's top sustainability consultants. Fully aligned with the Singapore Green Plan 2030 framework.",
+  title: "Sustainability Consultant Singapore | ESG Strategy & Green Plan 2030 | FT Synergist",
+  description: "Transform ESG compliance into commercial value with Singapore's premier Sustainability Consultants. SCMC certified advisory for SGX disclosures, Enterprise Sustainability Programme (ESP), and decarbonization roadmaps.",
   keywords: [
-    "top sustainability consultant singapore",
-    "ESG strategy consultant singapore",
-    "top business consultant singapore",
+    "Sustainability Consultant Singapore",
+    "sustainability consulting Singapore",
+    "singapore sustainability consulting",
+    "ESG strategy consultant Singapore",
+    "sustainability consultancy Singapore",
     "Singapore Green Plan 2030 compliance",
-    "sustainable product innovation"
+    "Enterprise Sustainability Programme consultant"
   ],
   alternates: {
     canonical: "https://www.ftsynergist.com/sustainability",

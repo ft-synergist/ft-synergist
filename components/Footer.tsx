@@ -72,7 +72,33 @@ export function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-16 border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">
+                {/* Ecosystem & Strategic Network */}
+                <div className="mt-12 border-t border-white/10 pt-8 grid gap-6 md:grid-cols-2 text-xs text-gray-400">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                        <span className="font-semibold text-gray-300 uppercase tracking-wider text-[11px]">Franchise Portal:</span>
+                        <a
+                            href="https://www.franchise.sg/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-[#8F801B] transition-colors underline decoration-white/20 underline-offset-4"
+                        >
+                            Franchise.sg – Singapore Franchise &amp; Business Opportunity Directory
+                        </a>
+                    </div>
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                        <span className="font-semibold text-gray-300 uppercase tracking-wider text-[11px]">Global Expansion:</span>
+                        <a
+                            href="https://www.growingbeyondborders.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-[#8F801B] transition-colors underline decoration-white/20 underline-offset-4"
+                        >
+                            Growing Beyond Borders – Global Master Franchise Licensing
+                        </a>
+                    </div>
+                </div>
+
+                <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">
                     &copy; {new Date().getFullYear()} FT Synergist Pte Ltd. All rights reserved.
                 </div>
             </div>

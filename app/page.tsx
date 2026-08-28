@@ -54,20 +54,27 @@ export default function Home() {
             </span>
           </h1>
 
-          {/* Core Title Narrative — SMALLER size baseline, matched to the EDG content context text style */}
-          <p className="max-w-3xl mx-auto text-lg text-white sm:text-xl drop-shadow-md leading-relaxed font-normal mb-10">
-            Empowering Singapore and International Enterprises to dominate Asian markets through proprietary innovation strategies, AI integration, sustainability, and defensible IP moat.
+          {/* Core Title Narrative */}
+          <p className="max-w-3xl mx-auto text-lg text-white sm:text-xl drop-shadow-md leading-relaxed font-normal mb-8">
+            Empowering Singapore and International Enterprises to dominate Asian markets through certified management consulting, Enterprise Development Grant (EDG) advisory, AI integration, and defensible IP moats.
           </p>
 
-          {/* 🔍 CRITICAL BACKEND LINK LAYER (Invisible crawler parsing block) */}
-          <div className="sr-only opacity-0 pointer-events-none h-0 w-0 select-none hidden aria-hidden='true'">
-            <p>
-              Leverage robust, certified expertise to unlock growth capabilities. Access specialized strategic frameworks through a verified{" "}
-              <a href="/edg-grant">EDG Grant Consultant Singapore</a> advisory engagement to validate your expansion roadmap.
-            </p>
+          <div className="flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-gray-300 mb-8">
+            <Link href="/edg-grant" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 transition-colors font-medium">
+              EDG Grant Advisory
+            </Link>
+            <Link href="/mra-grant" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 transition-colors font-medium">
+              MRA Market Expansion
+            </Link>
+            <Link href="/franchise-consultant" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 transition-colors font-medium">
+              Master Franchising
+            </Link>
+            <Link href="/ip-consultant" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 transition-colors font-medium">
+              IP Strategy
+            </Link>
           </div>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <HeroCTAButton />
           </div>
         </div>

@@ -22,23 +22,45 @@ export default function StructuredData() {
           "addressCountry": "SG"
         },
         "sameAs": [
+          "https://www.franchise.sg/",
+          "https://www.growingbeyondborders.com",
           "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd",
+          "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#overview",
+          "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services",
+          "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#markets",
+          "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#key-practice-experts",
+          "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#recognition",
           "https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants",
-          "https://www.linkedin.com/company/ft-synergist"
+          "https://www.linkedin.com/company/ft-synergist",
+          "https://www.linkedin.com/in/frederick-tan-scmc/"
         ],
         "hasCredential": [
           {
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "Certification",
             "name": "Singapore Certified Management Consultant (SCMC)",
+            "identifier": "SCMC-1810-P0236",
+            "validFrom": "2018-10-18",
+            "validUntil": "2027-10-17",
+            "url": "https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants",
             "recognizedBy": {
               "@type": "Organization",
-              "name": "TÜV SÜD PSB Singapore"
-            },
-            "identifier": "SCMC-1810-P0236"
+              "name": "TÜV SÜD PSB Singapore",
+              "url": "https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants"
+            }
           }
         ],
         "publishingPrinciples": [
+          {
+            "@type": "DigitalDocument",
+            "name": "Singapore Franchise & Master Licensing Portal",
+            "url": "https://www.franchise.sg/"
+          },
+          {
+            "@type": "DigitalDocument",
+            "name": "Growing Beyond Borders Global Franchise Network",
+            "url": "https://www.growingbeyondborders.com"
+          },
           {
             "@type": "DigitalDocument",
             "name": "Enterprise Singapore EDG & MRA Grant Frameworks",
@@ -64,7 +86,51 @@ export default function StructuredData() {
           "@type": "Person",
           "@id": "https://www.ftsynergist.com/#frederick-tan",
           "name": "Frederick Tan",
-          "jobTitle": "Principal Consultant"
+          "jobTitle": "Principal Consultant & Certified Management Consultant (SCMC)",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "FT Synergist Pte Ltd"
+          },
+          "performerIn": {
+            "@type": "Event",
+            "name": "IP Week 2026: Unlocking Intangible Assets - How SMEs can Leverage IP to Accelerate Business Growth",
+            "startDate": "2026-08-26",
+            "endDate": "2026-08-27",
+            "location": {
+              "@type": "Place",
+              "name": "Marina Bay Sands Expo & Convention Centre, Singapore"
+            },
+            "organizer": {
+              "@type": "GovernmentOrganization",
+              "name": "Intellectual Property Office of Singapore (IPOS)",
+              "url": "https://www.ipos.gov.sg"
+            },
+            "url": "https://www.ipweek2026.sg/ipmp-programme.html"
+          },
+          "knowsAbout": [
+            "Intangible Asset Strategy",
+            "IP Commercialisation & Licensing",
+            "Enterprise Development Grant (EDG)",
+            "Strategic Brand Development",
+            "Cross-Border Franchising & Licensing",
+            "Predictive AI & Digitalisation"
+          ],
+          "sameAs": [
+            "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd",
+            "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services",
+            "https://www.growingbeyondborders.com",
+            "https://www.franchise.sg/",
+            "https://www.linkedin.com/in/frederick-tan-scmc/",
+            "https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants"
+          ]
+        },
+        "makesOffer": {
+          "@type": "Offer",
+          "name": "Free 1-hour Scaling Up Sprint",
+          "description": "Get a tailored roadmap to grow your business, uncover market opportunities, and scale faster with expert guidance.",
+          "url": "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services",
+          "price": "0",
+          "priceCurrency": "SGD"
         }
       }
     ]

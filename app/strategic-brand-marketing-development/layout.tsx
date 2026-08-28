@@ -1,14 +1,15 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Strategic Brand & Marketing Development Consultant Singapore | FT Synergist",
-    description: "FT Synergist is a top Strategic Brand & Marketing Development consultant in Singapore under EnterpriseSG EDG framework. Drive market share, brand positioning, and tradeable IP assets.",
+    title: "Brand Consultant Singapore | Strategic Brand & Marketing Advisory | FT Synergist",
+    description: "Build market dominance and tradeable brand equity with Singapore's premier Brand Consultants. SCMC certified advisory for brand architecture, positioning, and EDG co-funded marketing strategies.",
     keywords: [
-        "strategic brand consultant singapore",
-        "marketing development consultant singapore",
-        "brand strategy EDG grant",
-        "top business consultant singapore",
-        "enterprise development grant brand strategy"
+        "Brand Consultant Singapore",
+        "brand strategy Singapore",
+        "strategic brand consultant Singapore",
+        "marketing development consultant Singapore",
+        "brand consulting Singapore",
+        "EDG brand strategy consultant"
     ],
     alternates: {
         canonical: "https://www.ftsynergist.com/strategic-brand-marketing-development",
