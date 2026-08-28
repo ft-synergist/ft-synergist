@@ -434,13 +434,14 @@ export default function PetaleTeaIPCaseStudy() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-neutral-950 p-4 rounded-lg border border-neutral-800 space-y-3">
-              <div className="relative aspect-[4/3] rounded overflow-hidden bg-neutral-900 border border-neutral-800">
+            {/* Card 1: Stage Photo */}
+            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-3 shadow-lg">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-neutral-900 border border-neutral-800">
                 <Image
                   src="/insights/ipos-ip-week-2026/ipos-ip-marketplace-stage-backdrop.jpg"
                   alt="IPOS IP Marketplace 2026 stage backdrop featuring Frederick Tan and Rosemary Kwa"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <div>
@@ -449,48 +450,51 @@ export default function PetaleTeaIPCaseStudy() {
               </div>
             </div>
 
-            <div className="bg-neutral-950 p-4 rounded-lg border border-neutral-800 space-y-3">
-              <div className="relative aspect-[4/3] rounded overflow-hidden bg-neutral-900 border border-neutral-800">
+            {/* Card 2: Partners Grid */}
+            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-3 shadow-lg">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white p-3 border border-neutral-800 flex items-center justify-center">
                 <Image
                   src="/insights/ipos-ip-week-2026/ipos-ip-week-partners-grid.png"
                   alt="IP Week 2026 partner showcase featuring FT Synergist alongside leading legal and advisory institutions"
                   fill
-                  className="object-cover"
+                  className="object-contain p-2"
                 />
               </div>
               <div>
-                <h4 className="text-white text-sm font-bold">Featured Among Tier-1 IP & Advisory Firms</h4>
-                <p className="text-xs text-neutral-400">FT Synergist represented alongside EY-Parthenon, Drew & Napier, WongPartnership, Foo Kon Tan, and Spruson & Ferguson.</p>
+                <h4 className="text-white text-sm font-bold">Featured Among Tier-1 IP &amp; Advisory Firms</h4>
+                <p className="text-xs text-neutral-400">FT Synergist represented alongside EY-Parthenon, Drew &amp; Napier, WongPartnership, Foo Kon Tan, and Spruson &amp; Ferguson.</p>
               </div>
             </div>
 
-            <div className="bg-neutral-950 p-4 rounded-lg border border-neutral-800 space-y-3">
-              <div className="relative aspect-[16/10] rounded overflow-hidden bg-neutral-900 border border-neutral-800">
+            {/* Card 3: GoBusiness Directory */}
+            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-3 shadow-lg">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white p-3 border border-neutral-800 flex items-center justify-center">
                 <Image
                   src="/insights/ipos-ip-week-2026/gobusiness-ip-grow-ft-synergist-directory.png"
                   alt="FT Synergist profile on GoBusiness IP Grow directory"
                   fill
-                  className="object-cover"
+                  className="object-contain p-2"
                 />
               </div>
               <div>
                 <h4 className="text-white text-sm font-bold">GoBusiness IP Grow Directory Listing</h4>
-                <p className="text-xs text-neutral-400">Verified provider for Branding Strategy, Innovation Consultancy, IP Brokerage & Licensing, and IP Strategy Consulting.</p>
+                <p className="text-xs text-neutral-400">Verified provider for Branding Strategy, Innovation Consultancy, IP Brokerage &amp; Licensing, and IP Strategy Consulting.</p>
               </div>
             </div>
 
-            <div className="bg-neutral-950 p-4 rounded-lg border border-neutral-800 space-y-3">
-              <div className="relative aspect-[16/10] rounded overflow-hidden bg-neutral-900 border border-neutral-800">
+            {/* Card 4: IP Grow Framework */}
+            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-3 shadow-lg">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-black p-2 border border-neutral-800 flex items-center justify-center">
                 <Image
                   src="/insights/ipos-ip-week-2026/ip-grow-growth-stages-framework.png"
                   alt="IP Grow Framework: Build & Launch, Go Global, Raise Capital, Forge Partnerships, Resolve Disputes"
                   fill
-                  className="object-cover"
+                  className="object-contain p-1"
                 />
               </div>
               <div>
                 <h4 className="text-white text-sm font-bold">Full Lifecycle IP Growth Capabilities</h4>
-                <p className="text-xs text-neutral-400">Covering Build & Launch, Go Global, Raise Capital, and Forge Partnerships under statutory Singapore frameworks.</p>
+                <p className="text-xs text-neutral-400">Covering Build &amp; Launch, Go Global, Raise Capital, and Forge Partnerships under statutory Singapore frameworks.</p>
               </div>
             </div>
           </div>
