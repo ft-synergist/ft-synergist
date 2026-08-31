@@ -93,8 +93,37 @@ export default function Home() {
             <SubscribeButton />
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            {/* Report 1: State of AI */}
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {/* Report 1: RTS Link Retail Defense (NEW RELEASE) */}
+            <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
+              <div className="card-image-container relative h-64 sm:h-72">
+                <Image
+                  src="/report-rts-cover.png"
+                  alt="The RTS Link & Singapore Retail Defense Framework"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                <div className="absolute bottom-4 left-4">
+                  <div className="inline-flex items-center rounded-full bg-[#8F801B] px-3 py-1 text-xs font-bold text-white mb-2 shadow-md">
+                    New Release
+                  </div>
+                </div>
+              </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">RTS Link &amp; Singapore Retail Defense</h3>
+                <p className="text-gray-600 mb-6 flex-grow">
+                  Countering S$2.1B revenue leakage, optimizing suburban REIT portfolios, and executing JS-SEZ operational twinning frameworks for Singapore enterprises.
+                </p>
+                <Link href="/insights/rts-link-singapore-retail-defense" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
+                  Read Executive Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Report 2: State of AI */}
             <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
               <div className="card-image-container relative h-64 sm:h-72">
                 <Image
@@ -103,27 +132,27 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
-                  <div className="inline-flex items-center rounded-full bg-primary/90 px-3 py-1 text-xs font-bold text-white mb-2">
-                    New Release
+                  <div className="inline-flex items-center rounded-full bg-white/20 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/30">
+                    Market Intelligence
                   </div>
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">State of AI in Southeast Asia 2026</h3>
                 <p className="text-gray-600 mb-6 flex-grow">
-                  A comprehensive analysis of AI adoption trends across Singapore, Indonesia, and Vietnam. Discover how leading firms are leveraging generative AI to redefine productivity from pilot to utility.
+                  A comprehensive analysis of AI adoption trends across Singapore, Indonesia, and Vietnam. Discover how leading firms leverage AI from pilot to utility.
                 </p>
-                <Link href="/insights" className="inline-flex items-center text-primary font-bold hover:underline group-hover:text-primary/80 transition-colors">
+                <Link href="/insights/state-of-ai-2026" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
                   Read the Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
 
-            {/* Report 2: Wang Lao Ji */}
+            {/* Report 3: Wang Lao Ji */}
             <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
               <div className="card-image-container relative h-64 sm:h-72">
                 <Image
@@ -132,7 +161,7 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
@@ -142,15 +171,24 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">Global Expansion Roadmap: Wang Lao Ji</h3>
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">Global Expansion: Wang Lao Ji</h3>
                 <p className="text-gray-600 mb-6 flex-grow">
-                  5 Scaling Lessons from Wang Lao Ji for SMEs. Learn how a 197-year legacy brand transformed into a global lifestyle icon, offering a blueprint for brand resilience and market adaptation.
+                  5 Scaling Lessons from Wang Lao Ji for SMEs. Learn how a 197-year legacy brand transformed into a global lifestyle icon via the PCBC framework.
                 </p>
-                <Link href="/insights" className="inline-flex items-center text-primary font-bold hover:underline group-hover:text-primary/80 transition-colors">
+                <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
                   Read the Case Study <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/insights"
+              className="inline-flex items-center text-sm font-bold text-[#8F801B] hover:text-gray-900 uppercase tracking-wider bg-white px-6 py-3 rounded-full border border-gray-200 shadow-sm hover:shadow transition-all"
+            >
+              View All Insights &amp; Strategic Reports <ChevronRight className="ml-1 h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
