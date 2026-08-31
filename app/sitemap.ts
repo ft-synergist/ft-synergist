@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/insights/state-of-ai-2026', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/insights/vietnam-expansion-blueprint', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/insights/wang-lao-ji-global-expansion-strategy', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/insights/rts-link-singapore-retail-defense', priority: 0.85, changeFrequency: 'weekly' },
     { path: '/events', priority: 0.7, changeFrequency: 'weekly' },
     { path: '/partnership', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/contact', priority: 0.75, changeFrequency: 'monthly' },

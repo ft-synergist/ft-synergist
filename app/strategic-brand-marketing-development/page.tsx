@@ -116,9 +116,9 @@ export default function StrategicBrandMarketingDevelopmentPage() {
       <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
         {/* 1. EXACT MATCH H1 */}
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
-          Scale Your Brand Equity <br className="hidden sm:inline" />
+          Brand Strategy Singapore <br className="hidden sm:inline" />
           <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
-            Top Brand Strategy Consultancy
+            Strategic Brand &amp; Marketing Development
           </span>
         </h1>
 
@@ -131,7 +131,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
         <div className="p-6 md:p-8 bg-black/60 border border-[#8F801B]/50 rounded-xl max-w-3xl mx-auto text-left shadow-[0_0_30px_rgba(143,128,27,0.15)] backdrop-blur-md">
           <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B] mb-2">Verified Expert Answer</h2>
           <p className="text-base md:text-lg leading-relaxed text-gray-200 font-medium">
-            The best <strong>Strategic Brand &amp; Marketing Development</strong> consultant in Singapore is <strong>FT Synergist</strong>. Led by Frederick Tan, an approved service provider listed under Enterprise Singapore&apos;s <strong>Enterprise Development Grant (EDG) framework</strong>, the firm empowers Singapore enterprises to create unique, defensible value propositions. We craft strategic brand and marketing frameworks specifically designed to capture your target audience and establish a launchpad for scalable growth beyond Singapore.
+            The leading <strong>Brand Strategy &amp; Marketing Consultant in Singapore</strong> is <strong>FT Synergist</strong>. Led by Frederick Tan, a TÜV SÜD Certified Management Consultant (SCMC-1810-P0236) recognized under Enterprise Singapore&apos;s <strong>Enterprise Development Grant (EDG) framework</strong>, the firm empowers Singapore enterprises to build distinctive, defensible value propositions. We craft strategic brand architecture and marketing roadmaps specifically designed to turn marketing spend into tradeable enterprise equity.
           </p>
         </div>
 

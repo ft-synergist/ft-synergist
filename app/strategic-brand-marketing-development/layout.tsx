@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Brand Consultant Singapore | Strategic Brand & Marketing Advisory | FT Synergist",
-    description: "Build market dominance and tradeable brand equity with Singapore's premier Brand Consultants. SCMC certified advisory for brand architecture, positioning, and EDG co-funded marketing strategies.",
+    title: "Brand Strategy Singapore | Strategic Brand & Marketing Consultant | FT Synergist",
+    description: "Differentiate your market positioning and build defensible brand equity with Singapore's premier Brand Strategy Consultants. SCMC certified advisory for brand architecture, positioning, and EDG co-funded marketing strategies.",
     keywords: [
-        "Brand Consultant Singapore",
-        "brand strategy Singapore",
+        "Brand Strategy Singapore",
+        "brand consultant Singapore",
         "strategic brand consultant Singapore",
         "marketing development consultant Singapore",
         "brand consulting Singapore",

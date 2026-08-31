@@ -13,6 +13,14 @@ const QuantitativeSuccessTable = dynamic(() => import('@/app/components/Quantita
 
 const faqItems = [
     {
+        q: "What does a Franchise Consultant in Singapore do?",
+        a: "A Franchise Consultant in Singapore evaluates your business model replicability, standardizes operational workflows into step-by-step SOP manuals, engineers defensible master licensing agreements, and structures sustainable royalty fees. Principal Advisor Frederick Tan, an accredited TÜV SÜD Singapore Certified Management Consultant (SCMC-1810-P0236) listed on the official IPOS GoBusiness directory, helps local enterprises transform proven single-unit models into asset-light, multi-market franchise networks across Singapore and ASEAN."
+    },
+    {
+        q: "How do franchise consulting and master licensing advisors structure franchise fees and royalties?",
+        a: "Franchise consulting frameworks balance upfront initial franchise fees (recovering onboarding and setup costs) with recurring percentage-based royalty fees (typically 3% to 7% of gross sales) and marketing development funds. We conduct unit economics modeling to ensure healthy franchisee margins while maximizing franchisor IP equity value."
+    },
+    {
         q: "What is the difference between an IP Strategy and a Master Franchise Agreement?",
         a: "An IP Strategy ring-fences your trademarks, trade secrets, and proprietary operational workflows legally under frameworks like IPOS GoBusiness. A Master Franchise Agreement uses that protected IP as the commercial vehicle, detailing territorial exclusivity, royalty percentages, SOP compliance rules, and master fee structures to license your business model across international markets."
     },

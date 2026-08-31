@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import ClientEDGPage from "@/components/ClientEDGPage";
 
 export const metadata: Metadata = {
-  title: "EDG Consultant Singapore | Certified SCMC Grant Advisory (EnterpriseSG 2026)",
-  description: "Enterprise Singapore certified EDG grant consultant. TÜV SÜD accredited SCMC management consultant (SCMC-1810-P0236) helping Singapore SMEs secure qualifying EDG grant co-funding.",
+  title: "EDG Grant Consultant Singapore | Certified SCMC Management Advisory | FT Synergist",
+  description: "Enterprise Singapore EDG grant consultant. TÜV SÜD certified SCMC management consultant (SCMC-1810-P0236) helping Singapore SMEs secure qualifying EDG grant co-funding.",
   keywords: [
     "EDG consultant",
     "EDG grant consultant",

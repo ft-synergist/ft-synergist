@@ -52,6 +52,12 @@ export default function InsightsPage() {
           "position": 5,
           "url": "https://www.ftsynergist.com/insights/vietnam-expansion-blueprint",
           "name": "Strategic Blueprint: Navigating the Singapore-Vietnam Expansion"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.ftsynergist.com/insights/rts-link-singapore-retail-defense",
+          "name": "The RTS Link & Singapore Retail Defense Framework"
         }
       ]
     }
@@ -228,24 +234,25 @@ export default function InsightsPage() {
 
           {/* Item 4 */}
           <div className="flex flex-col group cursor-pointer">
-            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden">
-              <div className="absolute inset-0 bg-gray-900 flex items-center justify-center p-6 text-white text-center font-serif text-lg font-bold">
-                Singapore-Vietnam Corridor
+            <div className="relative aspect-[16/9] bg-gray-900 mb-4 overflow-hidden border border-neutral-800">
+              <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-black p-6 flex flex-col justify-between text-left">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#8F801B] border border-[#8F801B]/40 px-2 py-0.5 self-start">Executive Report</span>
+                <span className="text-white font-serif font-bold text-base leading-tight">RTS Link S$2.1B Retail Defense</span>
               </div>
             </div>
             <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
-              Market Access
+              Macroeconomic Strategy
             </span>
             <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
-              <Link href="/insights/vietnam-expansion-blueprint">
-                Singapore-Vietnam Expansion Blueprint
+              <Link href="/insights/rts-link-singapore-retail-defense">
+                The RTS Link &amp; Singapore Retail Defense
               </Link>
             </h3>
             <p className="text-xs font-serif italic text-gray-400 mb-2">
-              June 2025
+              September 2026
             </p>
             <p className="text-sm text-gray-600 leading-relaxed flex-grow">
-              Dismantling macro complexities, Global Minimum Tax liabilities, and PDPL cross-border localization tracking vectors across ASEAN corridors.
+              Countering S$2.1B revenue leakage, optimizing suburban REIT portfolios, and executing JS-SEZ operational twinning frameworks.
             </p>
           </div>
 

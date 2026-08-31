@@ -1,11 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "MRA Consultant Singapore | ASEAN Market Entry & Expansion Advisory | FT Synergist",
+    title: "MRA Grant Consultant Singapore | ASEAN Market Entry Advisory | FT Synergist",
     description: "Accelerate overseas expansion with Singapore's premier MRA market entry consultants. Strategic feasibility studies, overseas business matching, and cross-border licensing under EnterpriseSG MRA support.",
     keywords: [
         "MRA consultant Singapore",
         "MRA grant consultant Singapore",
+        "MRA grant consultant",
+        "mra consultant",
         "Market Readiness Assistance Singapore",
         "overseas market expansion consultant",
         "cross-border market entry Singapore",
