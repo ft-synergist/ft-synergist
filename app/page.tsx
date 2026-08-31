@@ -94,7 +94,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {/* Report 1: RTS Link Retail Defense (NEW RELEASE) */}
+            {/* Report 1: RTS Link Retail Defense */}
             <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
               <div className="card-image-container relative h-64 sm:h-72">
                 <Image
@@ -108,7 +108,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
                   <div className="inline-flex items-center rounded-full bg-[#8F801B] px-3 py-1 text-xs font-bold text-white mb-2 shadow-md">
-                    New Release
+                    Executive Report
                   </div>
                 </div>
               </div>
@@ -118,7 +118,7 @@ export default function Home() {
                   Countering S$2.1B revenue leakage, optimizing suburban REIT portfolios, and executing JS-SEZ operational twinning frameworks for Singapore enterprises.
                 </p>
                 <Link href="/insights/rts-link-singapore-retail-defense" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
-                  Read Executive Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
-                  <div className="inline-flex items-center rounded-full bg-white/20 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/30">
+                  <div className="inline-flex items-center rounded-full bg-[#8F801B]/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/20">
                     Market Intelligence
                   </div>
                 </div>
@@ -147,7 +147,7 @@ export default function Home() {
                   A comprehensive analysis of AI adoption trends across Singapore, Indonesia, and Vietnam. Discover how leading firms leverage AI from pilot to utility.
                 </p>
                 <Link href="/insights/state-of-ai-2026" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
-                  Read the Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
@@ -165,8 +165,8 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
-                  <div className="inline-flex items-center rounded-full bg-white/20 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/30">
-                    Case Study
+                  <div className="inline-flex items-center rounded-full bg-[#8F801B]/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/20">
+                    Global Case Study
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function Home() {
                   5 Scaling Lessons from Wang Lao Ji for SMEs. Learn how a 197-year legacy brand transformed into a global lifestyle icon via the PCBC framework.
                 </p>
                 <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
-                  Read the Case Study <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
