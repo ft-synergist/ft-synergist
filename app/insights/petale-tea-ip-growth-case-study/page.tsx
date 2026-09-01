@@ -72,17 +72,57 @@ export default function PetaleTeaIPCaseStudy() {
           {
             "@type": "Event",
             "name": "IPOS IP Week 2026 - IP Marketplace",
-            "startDate": "2026-08-26",
-            "endDate": "2026-08-27",
+            "description": "IP Marketplace presentation at IPOS IP Week 2026 on how SMEs can leverage IP, predictive AI, and intangible assets to accelerate business growth by 400%.",
+            "image": "https://www.ftsynergist.com/insights/ipos-ip-week-2026/frederick-tan-rosemary-kwa-ip-week-panel.jpg",
+            "startDate": "2026-08-26T09:00:00+08:00",
+            "endDate": "2026-08-27T18:00:00+08:00",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "location": {
               "@type": "Place",
-              "name": "Marina Bay Sands Expo & Convention Centre, Singapore"
+              "name": "Marina Bay Sands Expo & Convention Centre, Singapore",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Bayfront Ave",
+                "addressLocality": "Singapore",
+                "postalCode": "018956",
+                "addressCountry": "SG"
+              }
             },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.ipweek2026.sg/ipmp-programme.html",
+              "price": "0",
+              "priceCurrency": "SGD",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2026-08-01T00:00:00+08:00"
+            },
+            "performer": [
+              {
+                "@type": "Person",
+                "name": "Frederick Tan",
+                "jobTitle": "Principal Consultant",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "FT Synergist Pte Ltd"
+                }
+              },
+              {
+                "@type": "Person",
+                "name": "Rosemary Kwa",
+                "jobTitle": "Founder",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Pétale Tea Private Limited"
+                }
+              }
+            ],
             "organizer": {
               "@type": "GovernmentOrganization",
               "name": "Intellectual Property Office of Singapore (IPOS)",
               "url": "https://www.ipos.gov.sg"
-            }
+            },
+            "url": "https://www.ipweek2026.sg/ipmp-programme.html"
           }
         ]
       },
