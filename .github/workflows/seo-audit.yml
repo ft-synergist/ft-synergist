@@ -44,3 +44,17 @@ jobs:
           name: gsc-report-${{ github.run_number }}
           path: gsc-report.txt
           retention-days: 90
+
+      - name: Run GA4 Weekly Lead & Conversion Report
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}
+        run: node scripts/ga4-report.mjs > ga4-report.txt
+        continue-on-error: true
+
+      - name: Upload GA4 report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ga4-report-${{ github.run_number }}
+          path: ga4-report.txt
+          retention-days: 90
