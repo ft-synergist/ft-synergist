@@ -1,12 +1,22 @@
 # FT Synergist — Competitive Intelligence & Market Dominance Framework
 
-**Version:** 1.0 (Locked: 2026-09-05)  
+**Version:** 2.0 (Locked: 2026-09-05)  
 **Status:** Approved & Immutable Strategic Baseline  
-**Objective:** Page 1, Position 1 Dominance & High-Intent B2B Qualified Lead Generation
+**Core Directive:** Page 1, Position 1 Dominance & Qualified B2B Lead Conversion
 
 ---
 
-## 1. The 7 Core Pillar Keyword Themes (Battleground Terms)
+## 1. Mandatory Data Verification Standard (The 41Labs Post-Mortem Rule)
+
+> [!CAUTION]
+> **RULE OF ENGAGEMENT: Zero Unverified Data Acceptance**  
+> We explicitly prohibit pulling data or competitor names from generic global directory aggregators without localized, real-time SERP verification.  
+> **Case Study (2026-09-05):** `41labs.ai` appeared in global AI lists but had zero local Singapore search dominance or EnterpriseSG accreditation. It was caught and removed during human review.  
+> **Requirement:** Every tracked competitor, keyword position, and market signal MUST be grounded in verified, localized Singapore evidence (`.sg` domain presence, live Google Singapore SERP results, SBACC/EnterpriseSG/IPOS registries).
+
+---
+
+## 2. The 7 Core Pillar Keyword Themes (Battleground Terms)
 
 FT Synergist is hardwired to achieve and defend **Page 1, Position 1** across all 7 strategic advisory pillars:
 
@@ -22,44 +32,32 @@ FT Synergist is hardwired to achieve and defend **Page 1, Position 1** across al
 
 ---
 
-## 2. The 3-Tier Competitive Taxonomy
-
-To eliminate fragmented tracking while maintaining market precision, competitors are structured into **three distinct tiers**:
+## 3. The 3-Tier Competitive Taxonomy (Finalized & Grounded)
 
 ```
- ┌─────────────────────────────────────────────────────────────────────────────────┐
- │ TIER 1: DIRECT COMMERCIAL PEERS (The "Shortlist Contenders")                    │
- │ • Singapore boutique consultancies with certified PMC / EDG / IP credentials   │
- │ • Who prospects compare you against during the final RFP / proposal stage       │
- ├─────────────────────────────────────────────────────────────────────────────────┤
- │ TIER 2: SERP & TOPICAL LEADERS (The "Google Position #1-#3 Competitors")        │
- │ • Specialized firms dominating organic search for specific niches (IP, MRA, AI) │
- │ • Who currently steals search traffic for your 7 core keyword themes            │
- ├─────────────────────────────────────────────────────────────────────────────────┤
- │ TIER 3: ASPIRATIONAL BENCHMARKS (The "Authority & Thought Leadership Standard") │
- │ • Tier-1 Global Strategy & Big 4 Advisory (McKinsey, EY-Parthenon, Roland Berger)│
- │ • Benchmarks for E-E-A-T packaging, whitepaper depth, and institutional brand  │
- └─────────────────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 3. The 3 Strategic Clusters (Consolidated Battlefields)
-
-Rather than maintaining 7 disparate competitor lists, the 7 pillars are grouped into **3 Strategic Clusters**:
-
-```
-                       FT SYNERGIST STRATEGIC CLUSTERING
-┌──────────────────────────────────────┬──────────────────────────────────────┬──────────────────────────────────────┐
-│ CLUSTER A: Enterprise Scaling & MRA  │ CLUSTER B: Asset Commercialization   │ CLUSTER C: Future-Readiness & ESG    │
-│ • EDG Consultant                     │ • IP Consultant                      │ • AI Digitalisation Consultant       │
-│ • MRA Consultant                     │ • Franchise Consultant               │ • Sustainability Consultant          │
-│ • Brand Marketing Consultant         │                                      │                                      │
-├──────────────────────────────────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ Competitor Profile:                  │ Competitor Profile:                  │ Competitor Profile:                  │
-│ Full-service Singapore management    │ Specialized boutique IP law & brand  │ Tech-first & ESG transformation     │
-│ consultancies (PMC-certified)        │ licensing / franchise brokers        │ practices / boutique systems labs    │
-└──────────────────────────────────────┴──────────────────────────────────────┴──────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TIER 1: DIRECT COMMERCIAL PEERS (The 3 Direct B2B Contenders)                                          │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 1. FT Consulting (consultft.com)      ──▶ Franchise, IP Monetization, EDG/MRA, Brand Disambiguation    │
+│ 2. Asiawide Franchise (asiawide.com)  ──▶ China-to-SEA Inbound Pipeline, Cross-Border Commercialization │
+│ 3. Astreem (astreem.com)              ──▶ Franchise Systems, SOP Documentation & Licensing Networks     │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ TIER 2: TOPICAL & SERP CATEGORY LEADERS (Search Ingestion Benchmarks to Outrank)                       │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 4. AI & Digital Transformation:                                                                        │
+│    • Webpuppies (webpuppies.com.sg)   ──▶ Enterprise AI Workflow, Automation & Compliance SEO Leader   │
+│ 5. Branding & Design EDG:                                                                              │
+│    • Creativeans (creativeans.com)    ──▶ EDG Strategic Brand & Design SEO Domination                   │
+│ 6. Grant Eligibility Ingestion:                                                                        │
+│    • KCG Consulting (kcg.com.sg)      ──▶ Top-of-Funnel EDG Application & Diagnostic Search Capture    │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ TIER 3: ASPIRATIONAL BENCHMARKS (Authority & Institutional Rigor)                                      │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 7. Regional Aspirational:                                                                              │
+│    • Consulus (consulus.com)          ──▶ Singapore-Born Global Innovation & Transformation Standard   │
+│ 8. Global Aspirational:                                                                                │
+│    • McKinsey & Company (mckinsey.com)──▶ C-Suite Research, 20-Slide Rigor & High-Retainer Authority   │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -68,7 +66,7 @@ Rather than maintaining 7 disparate competitor lists, the 7 pillars are grouped 
 
 All competitor benchmarking is scored using a **Weighted 4-Vector Index (0–100)**:
 
-$$\text{Competitor Threat Score} = (0.35 \times \text{SERP}) + (0.30 \times \text{Commercial}) + (0.20 \times \text{GEO}) + (0.15 \times \text{Asset Depth})$$
+$$\text{Threat Score} = (0.35 \times \text{SERP}) + (0.30 \times \text{Commercial}) + (0.20 \times \text{GEO}) + (0.15 \times \text{Asset Depth})$$
 
 1. **SERP Dominance (35%):** Positions #1–#5 ownership across the 7 keyword themes.
 2. **Commercial Overlap (30%):** EnterpriseSG PMC Certification, IPOS IP Grow listing, grant eligibility coverage.
@@ -78,8 +76,6 @@ $$\text{Competitor Threat Score} = (0.35 \times \text{SERP}) + (0.30 \times \tex
 ---
 
 ## 5. The 5-Gap Telemetry Stack (Audit Expansion Roadmap)
-
-To maintain world-class digital intelligence, the audit suite incorporates:
 
 1. **GEO & AI Search Citation Share:** Tracking brand inclusion in generative AI answers (Perplexity, SearchGPT, Gemini).
 2. **Core Web Vitals & PageSpeed API:** Automated monitoring of Mobile LCP, INP, CLS, and TTFB.
