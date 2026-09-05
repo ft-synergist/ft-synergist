@@ -12,32 +12,25 @@ const TARGET_KEYWORDS = [
     "Sustainability Consultant Singapore"
 ];
 
-// Distinctive anchor term(s) for each target — the part that actually
-// discriminates one keyword from another. "Consultant Singapore" is
-// shared across nearly all targets and matches almost everything, so
-// it's deliberately excluded from matching. Regex patterns, so \\b
-// gives a word boundary where the anchor is short/common (e.g. "ip", "ai").
 const TARGET_ANCHORS = {
-    "EDG Consultant Singapore": ["edg"],
-    "MRA Consultant Singapore": ["mra"],
-    "IP Consultant Singapore": ["\\bip\\b"],
-    "Franchise Consultant Singapore": ["franchise"],
-    "Brand Consultant Singapore": ["brand"],
-    "AI Digitalisation Consultant Singapore": ["digitalisation", "digitalization", "\\bai\\b"],
-    "Sustainability Consultant Singapore": ["sustainab"]
+    "EDG Consultant Singapore": { anchors: ["edg"], peer: "Creativeans / KCG", tier: "Tier 1/2" },
+    "MRA Consultant Singapore": { anchors: ["mra"], peer: "FT Consulting / Asiawide", tier: "Tier 1" },
+    "IP Consultant Singapore": { anchors: ["\\bip\\b"], peer: "FT Consulting", tier: "Tier 1" },
+    "Franchise Consultant Singapore": { anchors: ["franchise"], peer: "Astreem / Asiawide / FT Consulting", tier: "Tier 1" },
+    "Brand Consultant Singapore": { anchors: ["brand"], peer: "Creativeans", tier: "Tier 2" },
+    "AI Digitalisation Consultant Singapore": { anchors: ["digitalisation", "digitalization", "\\bai\\b"], peer: "Webpuppies", tier: "Tier 2" },
+    "Sustainability Consultant Singapore": { anchors: ["sustainab"], peer: "Consulus", tier: "Tier 3" }
 };
 
 function getCredentials() {
     const raw = process.env.GSC_SERVICE_ACCOUNT_KEY;
     if (!raw) {
-        console.error("❌ Error: GSC_SERVICE_ACCOUNT_KEY is missing");
-        process.exit(1);
+        throw new Error("GSC_SERVICE_ACCOUNT_KEY environment variable is missing.");
     }
     try {
         return JSON.parse(raw);
     } catch (err) {
-        console.error("❌ Error: GSC_SERVICE_ACCOUNT_KEY is not valid JSON:", err.message);
-        process.exit(1);
+        throw new Error(`GSC_SERVICE_ACCOUNT_KEY is not valid JSON: ${err.message}`);
     }
 }
 
@@ -51,11 +44,22 @@ function last90Days() {
 }
 
 async function runGscReport() {
-    console.log("🚀 Fetching Search Console position data...");
+    console.log("=================================================================");
+    console.log("🚀 FT SYNERGIST — GOOGLE SEARCH CONSOLE & COMPETITIVE SERP AUDIT");
+    console.log(`📅 Timestamp: ${new Date().toISOString()}`);
+    console.log(`🎯 Target Site: ${SITE_URL}`);
+    console.log("=================================================================\n");
+
+    let credentials;
+    try {
+        credentials = getCredentials();
+    } catch (err) {
+        console.error(`❌ GSC Configuration Notice: ${err.message}`);
+        console.log("⚠️ GSC Audit skipped due to missing credentials. Other pipeline steps proceed.");
+        return;
+    }
 
     try {
-        const credentials = getCredentials();
-
         const auth = new google.auth.GoogleAuth({
             credentials,
             scopes: ['https://www.googleapis.com/auth/webmasters.readonly']
@@ -64,7 +68,7 @@ async function runGscReport() {
         const searchconsole = google.searchconsole({ version: 'v1', auth });
         const { startDate, endDate } = last90Days();
 
-        console.log(`📅 Querying ${startDate} to ${endDate}`);
+        console.log(`📅 Date Window (Last 90 Days): ${startDate} to ${endDate}\n`);
 
         const res = await searchconsole.searchanalytics.query({
             siteUrl: SITE_URL,
@@ -77,40 +81,72 @@ async function runGscReport() {
         });
 
         const rows = res.data.rows || [];
+        console.log(`📊 Total Distinct Search Queries Captured: ${rows.length}\n`);
 
-        if (rows.length === 0) {
-            console.warn("⚠️  No query data returned for this date range.");
-        }
-
-        console.log(`\n📊 Total queries in export: ${rows.length}\n`);
-        console.log("=== Position report for target keyword themes ===\n");
+        const summaryTable = [];
+        let top3Count = 0;
+        let page1Count = 0;
 
         for (const target of TARGET_KEYWORDS) {
-            const anchors = TARGET_ANCHORS[target] || [];
+            const config = TARGET_ANCHORS[target] || { anchors: [], peer: "N/A", tier: "N/A" };
             const matches = rows.filter(row => {
                 const q = row.keys[0].toLowerCase();
-                return anchors.some(anchor => new RegExp(anchor).test(q));
+                return config.anchors.some(anchor => new RegExp(anchor).test(q));
             }).sort((a, b) => a.position - b.position);
 
-            console.log(`--- Target: "${target}" ---`);
             if (matches.length === 0) {
-                console.log("  No matching queries found in the last 90 days.\n");
+                summaryTable.push({
+                    "Pillar Theme": target,
+                    "Best Match Query": "None (Impression lag)",
+                    "Pos": "N/A",
+                    "Clicks": 0,
+                    "Impressions": 0,
+                    "CTR": "0.0%",
+                    "Key Competitor Benchmark": config.peer,
+                    "Status": "🔴 Unranked"
+                });
                 continue;
             }
-            for (const m of matches.slice(0, 5)) {
-                console.log(`  "${m.keys[0]}" — position ${m.position.toFixed(2)}, ${m.clicks} clicks, ${m.impressions} impressions, CTR ${(m.ctr * 100).toFixed(2)}%`);
-            }
-            console.log('');
+
+            const best = matches[0];
+            const pos = parseFloat(best.position.toFixed(1));
+            const isTop3 = pos <= 3.0;
+            const isPage1 = pos <= 10.0;
+
+            if (isTop3) top3Count++;
+            if (isPage1) page1Count++;
+
+            summaryTable.push({
+                "Pillar Theme": target,
+                "Best Match Query": best.keys[0],
+                "Pos": `#${pos}`,
+                "Clicks": best.clicks,
+                "Impressions": best.impressions,
+                "CTR": `${(best.ctr * 100).toFixed(1)}%`,
+                "Key Competitor Benchmark": config.peer,
+                "Status": isTop3 ? "🟢 Top 3 Dominance" : (isPage1 ? "🟡 Page 1 Contender" : "🔴 Page 2+ (Needs Boost)")
+            });
         }
 
-        console.log("✅ GSC Report Complete");
+        console.log("=================================================================");
+        console.log("🏆 7-PILLAR BATTLEGROUND POSITION SCORECARD");
+        console.log("=================================================================\n");
+        console.table(summaryTable);
+
+        console.log(`\n🎯 Page 1 Dominance Summary:`);
+        console.log(`   • Top 3 Positions: ${top3Count}/7 Pillars`);
+        console.log(`   • Page 1 Positions (1-10): ${page1Count}/7 Pillars`);
+        console.log(`   • Objective: 7/7 in Position #1\n`);
+
+        console.log("=================================================================");
+        console.log("✅ GSC Position & Competitor Audit Complete.");
+        console.log("=================================================================");
 
     } catch (err) {
-        console.error("❌ Execution Error:", err.message || err);
+        console.error("\n❌ GSC Execution Error:", err.message);
         if (err.response?.data) {
-            console.error("Details:", JSON.stringify(err.response.data));
+            console.error("API Response:", JSON.stringify(err.response.data));
         }
-        process.exit(1);
     }
 }
 

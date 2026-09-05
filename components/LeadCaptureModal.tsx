@@ -50,6 +50,16 @@ Company: ${formData.company}
         setIsLoading(false);
 
         if (result.success) {
+            // Dispatch GA4 Custom Key Event
+            if (typeof window !== "undefined" && (window as any).gtag) {
+                (window as any).gtag("event", "lead_form_submit", {
+                    event_category: "lead_generation",
+                    event_label: reportTitle,
+                    lead_type: driveLink ? "pdf_download" : "report_request",
+                    page_path: window.location.pathname
+                });
+            }
+
             onSuccess();
             onClose();
             // Redirect to Google Drive if available

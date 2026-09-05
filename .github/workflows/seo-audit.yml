@@ -58,3 +58,29 @@ jobs:
           name: ga4-report-${{ github.run_number }}
           path: ga4-report.txt
           retention-days: 90
+
+      - name: Run Core Web Vitals & PageSpeed Report
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/cwv-report.mjs > cwv-report.txt
+        continue-on-error: true
+
+      - name: Upload Core Web Vitals report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cwv-report-${{ github.run_number }}
+          path: cwv-report.txt
+          retention-days: 90
+
+      - name: Run GEO & Generative AI Search Citation Audit
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/geo-agent.mjs > geo-report.txt
+        continue-on-error: true
+
+      - name: Upload GEO citation report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: geo-report-${{ github.run_number }}
+          path: geo-report.txt
+          retention-days: 90

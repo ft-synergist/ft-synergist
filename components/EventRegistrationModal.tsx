@@ -52,6 +52,15 @@ Job Title: ${formData.jobTitle}
         setIsLoading(false);
 
         if (result.success) {
+            // Dispatch GA4 Custom Key Event
+            if (typeof window !== "undefined" && (window as any).gtag) {
+                (window as any).gtag("event", "event_register_submit", {
+                    event_category: "event_registration",
+                    event_label: eventTitle,
+                    page_path: window.location.pathname
+                });
+            }
+
             onSuccess();
             onClose();
         } else {

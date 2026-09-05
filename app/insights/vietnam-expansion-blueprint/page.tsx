@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Download, Lock, X, Factory, TrendingUp } from "lucide-react";
 import VietnamAuditForm from "../../../components/VietnamAuditForm";
+import { ScrollDwellTrigger } from "@/components/ScrollDwellTrigger";
 
 import CitationFootnotes, { CitationItem } from "@/app/components/CitationFootnotes";
 
@@ -55,6 +56,16 @@ const VietnamDownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: ()
                     ...data
                 })
             }).catch(() => console.log("Form logged successfully"));
+
+            // Dispatch GA4 Custom Key Event
+            if (typeof window !== "undefined" && (window as any).gtag) {
+                (window as any).gtag("event", "lead_form_submit", {
+                    event_category: "lead_generation",
+                    event_label: "Vietnam Expansion Blueprint Report",
+                    lead_type: "pdf_download",
+                    page_path: "/insights/vietnam-expansion-blueprint"
+                });
+            }
         } catch (error) {
             console.error("Form transmission error", error);
         }
@@ -171,6 +182,12 @@ export default function VietnamBlueprintPage() {
             />
 
             <VietnamDownloadGate isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            <ScrollDwellTrigger
+                onTrigger={() => setIsModalOpen(true)}
+                dwellSeconds={50}
+                scrollPercent={60}
+                storageKey="vietnam_report_lead_prompt"
+            />
 
             {/* Navigation Top Header Strip */}
             <nav className="border-b border-neutral-900 bg-black/90 backdrop-blur fixed top-0 left-0 right-0 z-40">

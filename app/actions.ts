@@ -35,6 +35,21 @@ export async function sendEmail(data: EmailData) {
             return { success: false, message: `Failed to send email: ${error.message}` };
         }
 
+        // Asynchronously forward to CRM Webhook if configured (n8n / CRM Lead Pipeline)
+        if (process.env.CRM_WEBHOOK_URL) {
+            fetch(process.env.CRM_WEBHOOK_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    source: "ftsynergist_web_inquiry",
+                    subject: subject,
+                    email: email,
+                    timestamp: new Date().toISOString(),
+                    data: data
+                })
+            }).catch((webhookErr) => console.error("CRM Webhook forward error:", webhookErr));
+        }
+
         console.log("Email sent successfully. Resend ID:", resendData?.id);
         return { success: true, message: "Email sent successfully" };
     } catch (error) {

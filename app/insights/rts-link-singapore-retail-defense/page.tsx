@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Download, Lock, X, TrendingUp, ShieldCheck, Zap, AlertTriangle, Building2, Landmark, CheckCircle2, ChevronRight } from "lucide-react";
+import { ScrollDwellTrigger } from "@/components/ScrollDwellTrigger";
 
 // --- 1. LEAD CAPTURE MODAL COMPONENT ---
 const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
@@ -31,6 +32,16 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
           ...data
         })
       });
+
+      // Dispatch GA4 Custom Key Event
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "lead_form_submit", {
+          event_category: "lead_generation",
+          event_label: "RTS Link Singapore Retail Defense Report",
+          lead_type: "pdf_download",
+          page_path: "/insights/rts-link-singapore-retail-defense"
+        });
+      }
 
       window.open("/ft-synergist-rts-link-singapore-retail-defense-report.pdf", "_blank");
       onClose();
@@ -154,6 +165,12 @@ export default function RTSLinkRetailDefensePage() {
       />
 
       <DownloadGate isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ScrollDwellTrigger
+        onTrigger={() => setIsModalOpen(true)}
+        dwellSeconds={50}
+        scrollPercent={60}
+        storageKey="rts_report_lead_prompt"
+      />
 
       {/* 1. HERO SECTION */}
       <header className="relative pt-40 pb-20 px-6 text-center max-w-5xl mx-auto space-y-6">
