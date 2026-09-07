@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "IP Consultant Singapore | IPOS GoBusiness Directory | FT Synergist",
-    description: "Protect, value, and monetize intangible assets with Singapore's premier IP Consultants. Listed on the official IPOS GoBusiness directory. SCMC certified advisory for patent and trademark commercialization.",
+    title: "IP Consultant Singapore | IP Strategy, Valuation & Monetization | FT Synergist",
+    description: "Turn intangible assets into commercial equity. IPOS GoBusiness listed IP Strategy Consultant & TÜV SÜD SCMC certified advisor (SCMC-1810-P0236) for IP valuation, licensing, and brand moats in Singapore.",
     keywords: [
         "IP Consultant Singapore",
         "intellectual property consultant Singapore",
@@ -10,7 +10,8 @@ export const metadata: Metadata = {
         "IP strategy consultant Singapore",
         "IPOS GoBusiness provider",
         "trademark strategy Singapore",
-        "IP valuation consultant Singapore"
+        "IP valuation consultant Singapore",
+        "intellectual property rights consultant"
     ],
     alternates: {
         canonical: "https://www.ftsynergist.com/ip-consultant",

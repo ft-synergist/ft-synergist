@@ -58,13 +58,22 @@ export function Footer() {
                         </div>
                         <div className="flex flex-col space-y-3">
                             <Link
+                                href="https://www.linkedin.com/company/ftsynergist"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors flex items-center gap-2"
+                            >
+                                <Linkedin className="h-4 w-4" />
+                                <span>FT Synergist on LinkedIn</span>
+                            </Link>
+                            <Link
                                 href="https://www.linkedin.com/in/tanfrederick/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors flex items-center gap-2"
                             >
                                 <Linkedin className="h-4 w-4" />
-                                <span>Connect on LinkedIn</span>
+                                <span>Connect with Principal Advisor</span>
                             </Link>
                             <Link href="/contact" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">
                                 Contact Us
