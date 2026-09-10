@@ -158,6 +158,19 @@ export default function MRAGrantPage() {
               <ExternalLink className="ml-2 h-4 w-4 opacity-70 group-hover:opacity-100" />
             </Link>
           </div>
+
+          {/* 2026 EDGE TRANSITION BANNER */}
+          <div className="mt-8 p-4 rounded-xl bg-white/5 border border-[#8F801B]/40 text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm backdrop-blur-sm max-w-3xl mx-auto">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-yellow-400 bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/20">EnterpriseSG 2026 Policy Notice</span>
+              </div>
+              <p className="text-gray-300 text-xs sm:text-sm">MRA ceases on <strong>29 September 2026</strong>. From <strong>30 September 2026</strong>, internationalisation transitions to the unified <strong>EDGE Grant</strong> (removing the &apos;new market&apos; sales restriction and raising SME co-funding to 70%).</p>
+            </div>
+            <Link href="/edge-grant" className="shrink-0 text-[#8F801B] hover:text-yellow-300 font-bold underline inline-flex items-center text-xs sm:text-sm">
+              Explore EDGE Internationalisation <ArrowRight className="ml-1 h-3.5 w-3.5" />
+            </Link>
+          </div>
         </div>
       </header>
 

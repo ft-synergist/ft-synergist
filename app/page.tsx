@@ -47,6 +47,15 @@ export default function Home() {
 
         <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
 
+          {/* Urgent Grant Transition Policy Banner */}
+          <Link
+            href="/edge-grant"
+            className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-red-950/80 border border-red-800/80 text-red-300 text-xs font-bold uppercase tracking-wider hover:bg-red-900/90 transition-all shadow-lg"
+          >
+            <span>⚠️ EnterpriseSG Notice: EDG, MRA &amp; PSG Cease 29 Sept 2026 — Explore EDGE Grant</span>
+            <ChevronRight className="h-3.5 w-3.5 text-[#C5A017]" />
+          </Link>
+
           {/* Tagline — LARGEST font weight and size, matched to the EDG "Certified EDG Grant..." stack */}
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg max-w-4xl leading-tight mb-8">
             <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-200">
@@ -56,10 +65,14 @@ export default function Home() {
 
           {/* Core Title Narrative */}
           <p className="max-w-3xl mx-auto text-lg text-white sm:text-xl drop-shadow-md leading-relaxed font-normal mb-8">
-            Empowering Singapore and International Enterprises to dominate Asian markets through certified management consulting, Enterprise Development Grant (EDG) advisory, AI integration, and defensible IP moats.
+            Empowering Singapore and International Enterprises to dominate Asian markets through certified management consulting, Enterprise Development Grant (EDG) &amp; EDGE Grant advisory, AI integration, and defensible IP moats.
           </p>
 
           <div className="flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-gray-300 mb-8">
+            <Link href="/edge-grant" className="bg-[#8F801B] hover:bg-[#A08d1e] text-white px-4 py-2 rounded-full border border-[#8F801B] transition-all font-bold shadow-md flex items-center gap-1.5">
+              <span>EDGE Grant 2026</span>
+              <span className="text-[10px] bg-black/40 text-yellow-300 px-1.5 py-0.5 rounded font-mono uppercase">New</span>
+            </Link>
             <Link href="/edg-grant" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 transition-colors font-medium">
               EDG Grant Advisory
             </Link>

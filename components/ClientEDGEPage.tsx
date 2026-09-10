@@ -26,6 +26,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { EDGEGrantCalculator } from "@/components/EDGEGrantCalculator";
 
 // Helper function to send data to GA4
 const trackLead = () => {
@@ -193,14 +194,20 @@ export default function ClientEDGEPage() {
                         Prepare your enterprise for the consolidated grant framework. Understand verified support levels, the S$100,000 annual funding cap, and strategic roadmap requirements with certified management consulting expertise.
                     </p>
 
-                    <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <button
                             onClick={handleButtonClick}
-                            className="bg-[#8F801B] btn-start-journey inline-flex items-center justify-center rounded-md px-8 py-4 text-base sm:text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#A08d1e] cursor-pointer"
+                            className="w-full sm:w-auto bg-[#8F801B] btn-start-journey inline-flex items-center justify-center rounded-md px-8 py-4 text-base sm:text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#A08d1e] cursor-pointer"
                         >
                             Check Grant Eligibility
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </button>
+                        <a
+                            href="#calculator"
+                            className="w-full sm:w-auto bg-neutral-900 border border-neutral-700 hover:border-[#8F801B] hover:text-white text-gray-200 inline-flex items-center justify-center rounded-md px-8 py-4 text-base sm:text-lg font-semibold transition-all cursor-pointer"
+                        >
+                            Open Grant Calculator
+                        </a>
                     </div>
                 </motion.div>
             </section>
@@ -362,6 +369,13 @@ export default function ClientEDGEPage() {
                             <ExternalLink className="h-3.5 w-3.5 inline" />
                         </a>
                     </div>
+                </div>
+            </section>
+
+            {/* Interactive Grant Calculator Section */}
+            <section id="calculator" className="py-20 bg-neutral-900/60 border-b border-white/10">
+                <div className="container mx-auto px-4 max-w-6xl">
+                    <EDGEGrantCalculator />
                 </div>
             </section>
 

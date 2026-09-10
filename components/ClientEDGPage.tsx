@@ -180,12 +180,12 @@ export default function ClientEDGPage() {
                     <div className="w-full max-w-3xl mb-12 p-4 rounded-xl bg-white/5 border border-[#8F801B]/40 text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm backdrop-blur-sm">
                         <div>
                             <div className="flex items-center gap-2 mb-1">
-                                <span className="text-[10px] uppercase font-bold tracking-wider text-yellow-400 bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/20">EnterpriseSG 2H 2026 Update</span>
+                                <span className="text-[10px] uppercase font-bold tracking-wider text-yellow-400 bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/20">EnterpriseSG 2026 Policy Notice</span>
                             </div>
-                            <p className="text-gray-300 text-xs sm:text-sm">Enterprise Singapore announced the upcoming unified <strong>EDGE Grant</strong> launching in 2H 2026. While EDG remains fully open today on BGP, explore our forward-looking guide on the transition.</p>
+                            <p className="text-gray-300 text-xs sm:text-sm">Enterprise Singapore has confirmed that EDG, MRA, and PSG cease on <strong>29 September 2026</strong>. From <strong>30 September 2026</strong>, the unified <strong>EDGE Grant</strong> becomes the sole application pathway.</p>
                         </div>
                         <Link href="/edge-grant" className="shrink-0 text-[#8F801B] hover:text-yellow-300 font-bold underline inline-flex items-center text-xs sm:text-sm">
-                            View EDGE Guide <ArrowRight className="ml-1 h-3.5 w-3.5" />
+                            Explore EDGE Grant Hub <ArrowRight className="ml-1 h-3.5 w-3.5" />
                         </Link>
                     </div>
 

@@ -38,13 +38,14 @@ export function Footer() {
 
                     {/* Column 3: Resources */}
                     <div>
-                        <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white">Resources</h3>
+                        <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white">Resources &amp; Grants</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/edg-grant#faq" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">FAQ</Link></li>
-                            <li><Link href="/events" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Events</Link></li>
-                            <li><Link href="/insights" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Insights</Link></li>
-                            <li><Link href="/privacy-policy" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="/edg-grant" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Enterprise Development Grant</Link></li>
+                            <li><Link href="/edge-grant" className="text-sm font-semibold text-[#C5A017] hover:text-white transition-colors">EDGE Grant 2026 (New)</Link></li>
+                            <li><Link href="/insights/edg-mra-psg-vs-edge-comparison" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">EDG vs MRA vs PSG vs EDGE</Link></li>
+                            <li><Link href="/insights/what-happens-to-psg-after-september-2026" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">PSG Transition Guide</Link></li>
+                            <li><Link href="/edg-grant" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Enterprise Development Grant (EDG)</Link></li>
+                            <li><Link href="/insights" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Insights &amp; Whitepapers</Link></li>
+                            <li><Link href="/events" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Events &amp; Panels</Link></li>
                         </ul>
                     </div>
 

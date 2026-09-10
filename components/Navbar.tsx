@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
     { name: "Home", href: "/" },
+    { name: "EDGE Grant 2026", href: "/edge-grant", highlight: true },
     { name: "Insights", href: "/insights" },
     { name: "Events", href: "/events" },
     { name: "Contact", href: "/contact" },
@@ -40,9 +41,18 @@ export function Navbar() {
                         <Link
                             key={item.href}
                             href={item.href}
-                            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                            className={`text-sm font-medium transition-colors flex items-center gap-1.5 ${
+                                item.highlight
+                                    ? "text-[#C5A017] font-semibold hover:text-white"
+                                    : "text-muted-foreground hover:text-primary"
+                            }`}
                         >
                             {item.name}
+                            {item.highlight && (
+                                <span className="text-[10px] uppercase font-mono px-1.5 py-0.2 bg-[#8F801B]/20 border border-[#8F801B]/50 text-[#C5A017] rounded">
+                                    New
+                                </span>
+                            )}
                         </Link>
                     ))}
                     <button
@@ -70,10 +80,21 @@ export function Navbar() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                                className={`block rounded-md px-3 py-2 text-base font-medium transition-colors ${
+                                    item.highlight
+                                        ? "text-[#C5A017] font-semibold bg-[#8F801B]/10 border border-[#8F801B]/30"
+                                        : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                                }`}
                                 onClick={() => setIsOpen(false)}
                             >
-                                {item.name}
+                                <span className="flex items-center justify-between">
+                                    {item.name}
+                                    {item.highlight && (
+                                        <span className="text-[10px] uppercase font-mono px-2 py-0.5 bg-[#8F801B] text-black font-bold rounded">
+                                            New
+                                        </span>
+                                    )}
+                                </span>
                             </Link>
                         ))}
                         <button
