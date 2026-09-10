@@ -19,7 +19,9 @@ import {
     Leaf,
     DollarSign,
     Clock,
-    Award
+    Award,
+    Building2,
+    AlertCircle
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -138,6 +140,10 @@ export default function ClientEDGEPage() {
         {
             question: "Can vendors be changed after an EDGE application is submitted?",
             answer: "Change requests are only allowed for changes to project end date and claim due date. Should businesses wish to make any other changes (such as changing vendor), they must terminate the existing project on the Business Grants Portal (BGP) and submit a new application."
+        },
+        {
+            question: "Is the EDGE Grant available to non-SMEs and larger businesses?",
+            answer: "Yes. A significant structural change from the legacy schemes is that the EDGE Grant extends support to all Singapore-registered businesses, including non-SMEs. SMEs are supported at up to 70% of qualifying costs, while non-SMEs are supported at up to 50%. This is a direct expansion from EDG, MRA, and PSG, which were primarily SME-focused schemes."
         }
     ];
 
@@ -292,6 +298,32 @@ export default function ClientEDGEPage() {
                                 </p>
                             </div>
                         </div>
+
+                        {/* Fact 7 */}
+                        <div className="p-6 rounded-xl border border-white/10 bg-white/5 flex flex-col justify-between">
+                            <div>
+                                <div className="inline-flex p-3 rounded-lg bg-white/10 text-[#C5A017] mb-4">
+                                    <Calendar className="h-6 w-6" />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">Annual Cap Reset Date</h3>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    The S$100,000 annual grant cap <strong>refreshes on 1 April each year</strong>.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Fact 8 */}
+                        <div className="p-6 rounded-xl border border-[#C5A017]/40 bg-[#C5A017]/5 flex flex-col justify-between">
+                            <div>
+                                <div className="inline-flex p-3 rounded-lg bg-[#C5A017]/20 text-[#C5A017] mb-4">
+                                    <Building2 className="h-6 w-6" />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">Open to Non-SMEs</h3>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    Unlike legacy schemes, EDGE extends grant support to <strong>all Singapore-registered businesses</strong>, including non-SMEs, at up to <strong>50%</strong> of qualifying costs.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Coverage Banner */}
@@ -388,6 +420,17 @@ export default function ClientEDGEPage() {
                             </p>
                         </div>
                     </div>
+
+                    {/* Internal link to PSG insight */}
+                    <div className="mt-10 text-center">
+                        <Link
+                            href="/insights/what-happens-to-psg-after-september-2026"
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-[#C5A017] hover:text-white transition-colors underline underline-offset-4"
+                        >
+                            Read the full PSG-to-EDGE Transition Guide
+                            <ExternalLink className="h-4 w-4" />
+                        </Link>
+                    </div>
                 </div>
             </section>
 
@@ -464,6 +507,100 @@ export default function ClientEDGEPage() {
                     <p className="mt-6 text-xs text-gray-400">
                         Note: Other activity-specific requirements may apply depending on the selected project type under the 8 business areas.
                     </p>
+                </div>
+            </section>
+
+            {/* Apply Now vs. Wait Decision Framework */}
+            <section id="apply-now-or-wait" className="py-20 bg-[#0a0a0a] border-t border-white/10">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <div className="text-center mb-12">
+                        <div className="inline-block px-4 py-1.5 mb-3 border border-[#C5A017]/30 rounded-full bg-[#C5A017]/10">
+                            <span className="text-xs font-bold text-[#C5A017] uppercase tracking-wider">Practical Decision Framework</span>
+                        </div>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Should You Apply Now, or Wait for EDGE?</h2>
+                        <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+                            The right timing depends on your specific project. Use this scenario-based framework to decide.
+                        </p>
+                    </div>
+
+                    <div className="space-y-4">
+                        {/* Scenario A */}
+                        <div className="rounded-xl border border-white/10 bg-white/5 p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start">
+                            <div className="shrink-0">
+                                <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 font-extrabold text-sm">A</div>
+                            </div>
+                            <div className="flex-1">
+                                <div className="flex flex-wrap items-center gap-2 mb-2">
+                                    <h3 className="font-bold text-white text-base">Your project is ready now and fits current EDG, MRA, or PSG criteria</h3>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">Apply Now</span>
+                                </div>
+                                <p className="text-gray-400 text-sm leading-relaxed">EDG, MRA, and PSG remain fully open on the Business Grants Portal until 29 September 2026. Their requirements are established and processing continues as normal. Delaying carries real risk: EDGE's individual activity funding percentages and documentation requirements have not yet been published. For most projects that are ready to go, applying now under known rules is the lower-risk path.</p>
+                            </div>
+                        </div>
+
+                        {/* Scenario B */}
+                        <div className="rounded-xl border border-white/10 bg-white/5 p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start">
+                            <div className="shrink-0">
+                                <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 font-extrabold text-sm">B</div>
+                            </div>
+                            <div className="flex-1">
+                                <div className="flex flex-wrap items-center gap-2 mb-2">
+                                    <h3 className="font-bold text-white text-base">Your project involves deepening an existing overseas market (not a new one)</h3>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">Consider Waiting</span>
+                                </div>
+                                <p className="text-gray-400 text-sm leading-relaxed">MRA currently requires a &ldquo;new market&rdquo; criterion — support is tied to entering a market you have not previously operated in. EDGE removes this restriction entirely, and raises overseas expansion support from 50% to 70% for SMEs. If your project is about deepening an existing overseas presence, timing your application around the EDGE launch on 30 September 2026 could be the stronger commercial decision — provided your timeline has flexibility of a few months.</p>
+                            </div>
+                        </div>
+
+                        {/* Scenario C */}
+                        <div className="rounded-xl border border-[#C5A017]/40 bg-[#C5A017]/5 p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start">
+                            <div className="shrink-0">
+                                <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-[#C5A017]/20 border border-[#C5A017]/40 text-[#C5A017] font-extrabold text-sm">C</div>
+                            </div>
+                            <div className="flex-1">
+                                <div className="flex flex-wrap items-center gap-2 mb-2">
+                                    <h3 className="font-bold text-white text-base">Your business is a non-SME (larger enterprise or MNC)</h3>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#C5A017]/20 text-[#C5A017] border border-[#C5A017]/30 px-2 py-0.5 rounded-full whitespace-nowrap">Prepare Now — Apply at EDGE Launch</span>
+                                </div>
+                                <p className="text-gray-400 text-sm leading-relaxed">Non-SMEs are currently excluded from EDG, PSG, and MRA support in most cases. EDGE extends eligibility to all Singapore-registered businesses, including non-SMEs, at up to 50% of qualifying project costs. Use the period before 30 September 2026 to scope your projects, gather cost estimates, and identify which capability-building, productivity, or internationalisation activities to fund — so you are ready to apply the moment EDGE opens.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Epistemic Transparency — What Remains Unconfirmed */}
+            <section id="what-is-unconfirmed" className="py-20 bg-black border-t border-white/10">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12">
+                        <div className="flex items-start gap-4 mb-6">
+                            <AlertCircle className="h-6 w-6 text-[#C5A017] shrink-0 mt-0.5" />
+                            <div>
+                                <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">What Enterprise Singapore Has Not Yet Confirmed About EDGE</h2>
+                                <p className="text-gray-400 text-sm">Several guides have published granular EDGE details beyond what is officially confirmed. The following specifics are not yet published — treat any third-party claims on these points with caution until official guidelines appear on the Business Grants Portal.</p>
+                            </div>
+                        </div>
+                        <ul className="space-y-3">
+                            {[
+                                "Precise co-funding percentage tiers for individual domestic transformation and productivity activities (beyond the confirmed 70% SME / 50% non-SME headline rates)",
+                                "The complete list of pre-approved vendors and pre-scoped packages under EDGE's Digitalisation and Automation areas (the EDGE equivalent of the PSG vendor catalogue)",
+                                "Full documentation and evidence requirements for the unified EDGE application workflow",
+                                "Detailed qualification criteria for each of the 100+ supported activities across the 8 business areas",
+                            ].map((item, i) => (
+                                <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                                    <span className="shrink-0 mt-2 h-1.5 w-1.5 rounded-full bg-[#C5A017]" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                        <p className="text-xs text-gray-500 mt-8 border-t border-white/10 pt-6">
+                            Monitor the{" "}
+                            <a href="https://www.businessgrants.gov.sg" target="_blank" rel="noopener noreferrer" className="text-[#C5A017] hover:underline">Business Grants Portal</a>
+                            {" "}and{" "}
+                            <a href="https://www.enterprisesg.gov.sg/resources/all-faqs/edge-grant" target="_blank" rel="noopener noreferrer" className="text-[#C5A017] hover:underline">Enterprise Singapore&apos;s official EDGE Grant FAQ</a>
+                            {" "}for updates as they are published.
+                        </p>
+                    </div>
                 </div>
             </section>
 
