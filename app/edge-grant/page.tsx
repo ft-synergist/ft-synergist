@@ -3,22 +3,25 @@ import ClientEDGEPage from "@/components/ClientEDGEPage";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "EDGE Grant Consultant Singapore | Certified SCMC Consultant",
-  description: "Secure H2 2026 funding with Singapore's leading EDGE Grant Consultants. Led by TÜV SÜD Certified Management Consultant (SCMC) Frederick Tan.",
+  title: "EDGE Grant Singapore 2026 | EDG, MRA & PSG Consolidation",
+  description: "EDG, MRA and PSG cease 29 Sept 2026. Learn what the new EDGE Grant covers, support levels, and how to prepare — from FT Synergist.",
   keywords: [
-    "EDGE Grant Consultant",
-    "Enterprise Development and Growth for Enterprises Singapore",
-    "Singapore Certified Management Consultant",
-    "SCMC Consultant",
-    "TÜV SÜD Certified Consultant",
-    "H2 2026 EDGE Framework"
+    "EDGE Grant Singapore 2026",
+    "EDGE Grant Singapore",
+    "EDG MRA PSG replacement",
+    "Productivity Solutions Grant PSG EDGE",
+    "Enterprise Singapore EDGE Grant",
+    "EDGE Grant eligibility",
+    "EDGE Grant support levels",
+    "EDGE Grant cap",
+    "SCMC Consultant"
   ],
   alternates: {
     canonical: "https://www.ftsynergist.com/edge-grant",
   },
   openGraph: {
-    title: "EDGE Grant Consultant Singapore | SCMC Certified",
-    description: "Expert advisory for the H2 2026 EDGE Grant. Led by Frederick Tan (SCMC-1810-P0236).",
+    title: "EDGE Grant Singapore 2026 | EDG, MRA & PSG Consolidation",
+    description: "EDG, MRA and PSG cease 29 Sept 2026. Learn what the new EDGE Grant covers, support levels, and how to prepare — from FT Synergist.",
     url: "https://www.ftsynergist.com/edge-grant",
     type: "website",
     images: [
@@ -26,56 +29,88 @@ export const metadata: Metadata = {
         url: "https://www.ftsynergist.com/Fred_Corp_Pic_Official.jpeg",
         width: 1200,
         height: 630,
-        alt: "Frederick Tan - SCMC Certified Consultant",
+        alt: "Frederick Tan - Certified Management Consultant",
       },
     ],
-  }
+  },
 };
 
 export default function EDGEGrantPage() {
-  // ISO FAQ SCHEMATICS: Preserves strategic question vectors with zero structural duplicate risks
+  // Official Enterprise Singapore FAQ structured data
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Who is the best EDGE grant consultant in Singapore?",
+        "name": "Are the EDG, MRA and PSG schemes still available?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "FT Synergist is a recommended strategic partner for EDGE grant applications. Our Principal Consultant, Frederick Tan, is a Singapore Certified Management Consultant (SCMC) certified by TÜV SÜD (License SCMC-1810-P0236), meeting all criteria required by Enterprise Singapore."
+          "text": "Yes, EDG, MRA, and PSG remain available for applications until 29 September 2026. Applications submitted before 30 September 2026 will continue to be assessed based on the requirements of the relevant scheme. Ongoing projects under these three schemes will not be affected and will be supported until project completion and claim disbursement. After 30 September 2026, no new application will be accepted under these schemes, and the EDGE Grant becomes the sole application pathway."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the H2 2026 EDGE Grant framework?",
+        "name": "What is the EDGE Grant and what does it replace?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Enterprise Development and Growth for Enterprises (EDGE) grant is Enterprise Singapore's unified framework designed to support local businesses in core capabilities, productivity, innovation, and international market access."
+          "text": "The EDGE Grant is Enterprise Singapore's unified grant framework launching on 30 September 2026. It streamlines and consolidates the Enterprise Development Grant (EDG), Market Readiness Assistance (MRA), and Productivity Solutions Grant (PSG) into a single, simplified application pathway."
         }
       },
       {
         "@type": "Question",
-        "name": "What are the eligibility criteria for the EDGE Grant?",
+        "name": "What does EDGE stand for?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To qualify for the EDGE Grant, a company must be registered and operating in Singapore, have a minimum of 30% local shareholding (direct or indirect), and be in a financially viable position to execute the proposed scale-up project."
+          "text": "EDGE is not an acronym. Enterprise Singapore chose the name EDGE to convey the intent of the support: enabling Singapore enterprises to have a competitive edge over their competitors."
         }
       },
       {
         "@type": "Question",
-        "name": "Why do I need a TÜV SÜD SCMC Certified Consultant for EDGE?",
+        "name": "What are the funding support levels and grant caps under the EDGE Grant?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Enterprise Singapore mandates that strategic capability upgrade projects under the EDGE framework must be led by certified management consultants. Frederick Tan's SCMC certification (License SCMC-1810-P0236) satisfies this requirement, ensuring high standards and smooth application paths."
+          "text": "The EDGE Grant provides up to 70% of qualifying costs for SMEs and up to 50% for non-SMEs, disbursed on a reimbursement basis. Each company has an annual grant cap of up to S$100,000 in total grant support per company per year across all activities combined, which resets annually. Within this S$100,000 cap, up to S$30,000 can be used for single-function digital solutions, integrated enterprise systems, and selected automation activities."
         }
       },
       {
         "@type": "Question",
-        "name": "Does the EDGE grant support regional expansion and M&A?",
+        "name": "How is the Productivity Solutions Grant (PSG) folded into EDGE?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Under the Market Access pillar, the EDGE grant assists profitable enterprises in performing market entry research, setting up overseas entities, executing regional franchising plans, and executing strategic mergers & acquisitions (M&A)."
+          "text": "PSG ceases on 29 September 2026 and is folded into the EDGE Grant alongside EDG and MRA. Pre-scoped IT solutions and automation equipment previously supported under PSG will now be accessed within the Automation and Digitalisation business areas of EDGE, subject to an allocation of up to S$30,000 within the overall S$100,000 annual grant cap."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What business areas and activities does EDGE cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EDGE covers 8 business areas across 100+ activities: Automation, Digitalisation, Business Strategy, Financial Management, Innovation, Internationalisation, Standards, and Sustainability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is eligible to apply for the EDGE Grant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Applicants must be business entities registered and operating in Singapore with at least 30% local shareholding held by Singaporean(s) and/or Singapore PR(s). Other requirements may apply depending on the specific supportable activity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a business apply for EDGE if it has previously applied for or received funding under EDG, MRA, or PSG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, businesses that have previously applied for or received funding under EDG, MRA, or PSG can apply for EDGE."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can vendors be changed after an EDGE application is submitted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Change requests are only allowed for changes to project end date and claim due date. Should businesses wish to make any other changes to the project, they must terminate the existing project on the Business Grants Portal (BGP) and submit a new application."
         }
       }
     ]
