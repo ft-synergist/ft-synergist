@@ -58,6 +58,12 @@ export default function InsightsPage() {
           "position": 6,
           "url": "https://www.ftsynergist.com/insights/rts-link-singapore-retail-defense",
           "name": "The RTS Link & Singapore Retail Defense Framework"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.ftsynergist.com/insights/what-happens-to-psg-after-september-2026",
+          "name": "What Happens to PSG After September 2026? Singapore SME Transition Guide"
         }
       ]
     }
@@ -153,17 +159,17 @@ export default function InsightsPage() {
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
 
           {/* Item 1 */}
           <div className="flex flex-col group cursor-pointer">
-            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden">
+            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden rounded-lg shadow-sm">
               <Image
                 src="/report-wlj-cover.png"
                 alt="Wang Lao Ji 5 Scaling Lessons"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 25vw"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
             <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
@@ -184,7 +190,7 @@ export default function InsightsPage() {
 
           {/* Item 2 */}
           <div className="flex flex-col group cursor-pointer">
-            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden">
+            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden rounded-lg shadow-sm">
               <div className="absolute inset-0 bg-gradient-to-br from-amber-700 to-[#8F801B] flex items-center justify-center p-6 text-white text-center font-serif text-lg font-bold">
                 EDG Grant Framework 2026
               </div>
@@ -207,13 +213,13 @@ export default function InsightsPage() {
 
           {/* Item 3 */}
           <div className="flex flex-col group cursor-pointer">
-            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden">
+            <div className="relative aspect-[16/9] bg-gray-100 mb-4 overflow-hidden rounded-lg shadow-sm">
               <Image
                 src="/report-ai-cover.png"
                 alt="State of AI in Southeast Asia"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 25vw"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
             <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
@@ -234,11 +240,14 @@ export default function InsightsPage() {
 
           {/* Item 4 */}
           <div className="flex flex-col group cursor-pointer">
-            <div className="relative aspect-[16/9] bg-gray-900 mb-4 overflow-hidden border border-neutral-800">
-              <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-black p-6 flex flex-col justify-between text-left">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#8F801B] border border-[#8F801B]/40 px-2 py-0.5 self-start">Executive Report</span>
-                <span className="text-white font-serif font-bold text-base leading-tight">RTS Link S$2.1B Retail Defense</span>
-              </div>
+            <div className="relative aspect-[16/9] bg-gray-900 mb-4 overflow-hidden rounded-lg shadow-sm border border-neutral-800">
+              <Image
+                src="/report-rts-cover.png"
+                alt="The RTS Link & Singapore Retail Defense"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
             </div>
             <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
               Macroeconomic Strategy
@@ -253,6 +262,60 @@ export default function InsightsPage() {
             </p>
             <p className="text-sm text-gray-600 leading-relaxed flex-grow">
               Countering S$2.1B revenue leakage, optimizing suburban REIT portfolios, and executing JS-SEZ operational twinning frameworks.
+            </p>
+          </div>
+
+          {/* Item 5 - Vietnam Expansion Blueprint */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-gray-900 mb-4 overflow-hidden rounded-lg shadow-sm border border-neutral-800">
+              <Image
+                src="/report-vietnam-cover.png"
+                alt="Navigating the Singapore-Vietnam Expansion"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                priority={false}
+              />
+            </div>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+              Cross-Border Expansion & MRA
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/vietnam-expansion-blueprint">
+                Navigating the Singapore-Vietnam Expansion
+              </Link>
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              July 2026
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              Dismantling regulatory complexities via PCBC and DVF frameworks—from Global Minimum Tax down to localized data sovereignty compliance.
+            </p>
+          </div>
+
+          {/* Item 6 - PSG After September 2026 */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-neutral-900 mb-4 overflow-hidden rounded-lg shadow-sm border border-neutral-800">
+              <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-red-950/60 to-[#8F801B]/40 flex flex-col items-center justify-center p-6 text-center gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-red-400 border border-red-800/60 px-2 py-0.5">
+                  Scheme Closure · 29 Sept 2026
+                </span>
+                <span className="text-white font-serif font-bold text-lg leading-snug">PSG Transition Guide</span>
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+              Grants &amp; Funding
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/what-happens-to-psg-after-september-2026">
+                What Happens to PSG After September 2026?
+              </Link>
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              September 2026
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              PSG ceases 29 September 2026. How the Productivity Solutions Grant folds into EDGE, what the S$30,000 sub-cap means, and what happens to existing PSG projects.
             </p>
           </div>
 
