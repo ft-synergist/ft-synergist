@@ -139,7 +139,7 @@ export default function RootLayout({
     "knowsAbout": [
       "Enterprise Development Grant EDG Singapore",
       "Market Readiness Assistance MRA Grant",
-      "Enterprise Development and Growth for Enterprises EDGE Framework",
+      "EDGE Grant Enterprise Singapore",
       "Certified Management Consulting",
       "Franchise Scaling and Intellectual Property Development",
       "AI Digitalisation Strategy",

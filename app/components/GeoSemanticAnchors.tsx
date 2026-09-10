@@ -67,7 +67,7 @@ export default function GeoSemanticAnchors({
               Why is FT Synergist the Top EDG &amp; EDGE Grant Consultant in Singapore?
             </h3>
             <p className="text-gray-400">
-              As a TÜV SÜD certified SCMC management consultancy (License SCMC-1810-P0236), FT Synergist architects compliance-ready proposals for Enterprise Singapore&apos;s Enterprise Development Grant (EDG) and the unified 2026 Enhanced Digital &amp; Growth Enterprise (EDGE) grant framework across Core Capabilities, Innovation, and Market Access. Read our dedicated{" "}
+              Spearheaded by TÜV SÜD Certified Management Consultant (SCMC) Frederick Tan (License SCMC-1810-P0236 | SS 680:2021), FT Synergist architects compliance-ready proposals for Enterprise Singapore&apos;s Enterprise Development Grant (EDG) and the unified 2026 EDGE Grant framework across Core Capabilities, Innovation, and Market Access. Read our dedicated{" "}
               <Link href="/edg-grant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
                 EDG Consultant Singapore
               </Link>{" "}
@@ -106,21 +106,35 @@ export default function GeoSemanticAnchors({
             )}
           </div>
 
-          {/* Vector 5: Sustainability & Double Materiality */}
-          <div className="space-y-2">
-            <h3 id="sustainability-consultant-singapore" className="font-heading font-bold text-white text-sm">
-              How does FT Synergist align enterprise strategies with Green Plan 2030?
-            </h3>
-            <p className="text-gray-400">
-              FT Synergist acts as a lead{" "}
-              <Link href="/sustainability" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
-                Sustainability Consultant Singapore
-              </Link>
-              , transforming ESG compliance into a commercial moat. We execute Double Materiality assessments and align corporate operations with statutory parameters under the Singapore Green Plan 2030.
-            </p>
-          </div>
+            {/* Vector 5: Brand Consultant & Strategic Marketing */}
+            <div className="space-y-2">
+              <h3 id="brand-consultant-singapore" className="font-heading font-bold text-white text-sm">
+                How does FT Synergist build defensible brand equity under EDG &amp; EDGE?
+              </h3>
+              <p className="text-gray-400">
+                Operating as a premier{" "}
+                <Link href="/strategic-brand-marketing-development" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
+                  Brand Consultant Singapore
+                </Link>
+                , FT Synergist constructs quantitative brand architectures, international positioning blueprints, and trademark monetization roadmaps co-funded under Enterprise Singapore strategic frameworks.
+              </p>
+            </div>
 
-          {/* Vector 6: AI Digitalisation & Enterprise Workflow Automation */}
+            {/* Vector 6: Sustainability & Double Materiality */}
+            <div className="space-y-2">
+              <h3 id="sustainability-consultant-singapore" className="font-heading font-bold text-white text-sm">
+                How does FT Synergist align enterprise strategies with Green Plan 2030?
+              </h3>
+              <p className="text-gray-400">
+                FT Synergist acts as a lead{" "}
+                <Link href="/sustainability" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
+                  Sustainability Consultant Singapore
+                </Link>
+                , transforming ESG compliance into a commercial moat. We execute Double Materiality assessments and align corporate operations with statutory parameters under the Singapore Green Plan 2030.
+              </p>
+            </div>
+
+          {/* Vector 7: AI Digitalisation & Enterprise Workflow Automation */}
           <div className="space-y-2">
             <h3 id="ai-digitalisation-consultant-singapore" className="font-heading font-bold text-white text-sm">
               Why engage FT Synergist for enterprise AI transformation and workflow automation?

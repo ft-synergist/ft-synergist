@@ -151,7 +151,7 @@ export default function PSGAfterSeptember2026Page() {
             name: "What replaces PSG in Singapore?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "PSG is absorbed into the new EDGE Grant (Enterprise Development and Growth with Enterprise Grant), which also consolidates the Enterprise Development Grant (EDG) and Market Readiness Assistance (MRA). PSG's supportable activities—pre-scoped IT solutions, off-the-shelf software, and equipment—are integrated into EDGE's Automation and Digitalisation business areas.",
+              text: "PSG is absorbed into the new EDGE Grant, which also consolidates the Enterprise Development Grant (EDG) and Market Readiness Assistance (MRA). PSG's supportable activities—pre-scoped IT solutions, off-the-shelf software, and equipment—are integrated into EDGE's Automation and Digitalisation business areas.",
             },
           },
           {
