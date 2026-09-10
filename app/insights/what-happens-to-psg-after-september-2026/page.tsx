@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { PSGToEDGEMigrationAudit } from "@/components/PSGToEDGEMigrationAudit";
 import {
   ArrowRight,
   X,
@@ -224,20 +225,20 @@ export default function PSGAfterSeptember2026Page() {
         </p>
 
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#psg-migration-audit"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white text-xs font-bold uppercase tracking-widest rounded-none hover:bg-[#A08d1e] transition-all shadow-lg shadow-[#8F801B]/10 w-full sm:w-auto cursor-pointer"
+          >
+            Launch Migration Audit
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
           <Link
             href="/edge-grant"
-            className="inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white text-xs font-bold uppercase tracking-widest rounded-none hover:bg-[#A08d1e] transition-all shadow-lg shadow-[#8F801B]/10 w-full sm:w-auto"
-          >
-            Full EDGE Grant Guide
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-          <button
-            onClick={() => setIsModalOpen(true)}
             className="inline-flex items-center justify-center px-8 py-4 bg-neutral-900 border border-neutral-800 text-neutral-300 text-xs font-bold uppercase tracking-widest hover:bg-neutral-800 hover:text-white transition-all w-full sm:w-auto"
           >
-            Assess My EDGE Readiness
+            Full EDGE Grant Guide
             <ShieldCheck className="ml-2 h-4 w-4 text-[#8F801B]" />
-          </button>
+          </Link>
         </div>
       </header>
 
@@ -279,6 +280,9 @@ export default function PSGAfterSeptember2026Page() {
             ))}
           </div>
         </section>
+
+        {/* INTERACTIVE DIAGNOSTIC MAGNET */}
+        <PSGToEDGEMigrationAudit />
 
         {/* 2. WHAT PSG WAS */}
         <section className="space-y-6 text-left border-l-2 border-[#8F801B] pl-6 md:pl-8">
