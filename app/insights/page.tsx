@@ -64,6 +64,12 @@ export default function InsightsPage() {
           "position": 7,
           "url": "https://www.ftsynergist.com/insights/what-happens-to-psg-after-september-2026",
           "name": "What Happens to PSG After September 2026? Singapore SME Transition Guide"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.ftsynergist.com/insights/edg-mra-psg-vs-edge-comparison",
+          "name": "EDG vs MRA vs PSG vs EDGE Grant: Full Side-by-Side Comparison (Singapore 2026)"
         }
       ]
     }
@@ -316,6 +322,32 @@ export default function InsightsPage() {
             </p>
             <p className="text-sm text-gray-600 leading-relaxed flex-grow">
               PSG ceases 29 September 2026. How the Productivity Solutions Grant folds into EDGE, what the S$30,000 sub-cap means, and what happens to existing PSG projects.
+            </p>
+          </div>
+
+          {/* Item 7 - EDG vs MRA vs PSG vs EDGE Comparison */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-neutral-900 mb-4 overflow-hidden rounded-lg shadow-sm border border-neutral-800">
+              <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-amber-950/60 to-[#8F801B]/50 flex flex-col items-center justify-center p-6 text-center gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C5A017] border border-[#8F801B]/60 px-2 py-0.5">
+                  Full Benchmark Matrix
+                </span>
+                <span className="text-white font-serif font-bold text-lg leading-snug">EDG vs MRA vs PSG vs EDGE</span>
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+              Grants &amp; Policy Benchmark
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/edg-mra-psg-vs-edge-comparison">
+                EDG vs MRA vs PSG vs EDGE Comparison
+              </Link>
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              September 2026
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              Side-by-side comparative analysis of Singapore&apos;s legacy grant schemes vs the consolidated EDGE Grant launching 30 September 2026.
             </p>
           </div>
 

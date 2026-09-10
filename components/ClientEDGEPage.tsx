@@ -89,7 +89,7 @@ export default function ClientEDGEPage() {
         },
         {
             name: "Internationalisation",
-            description: "Market entry research, foreign presence setup, and cross-border commercial expansion.",
+            description: "Market entry research, foreign presence setup, and cross-border commercial expansion (complemented by DTDi cap raised to S$400k).",
             icon: Globe,
         },
         {
@@ -324,6 +324,19 @@ export default function ClientEDGEPage() {
                                 </p>
                             </div>
                         </div>
+
+                        {/* Fact 9 */}
+                        <div className="p-6 rounded-xl border border-white/10 bg-white/5 flex flex-col justify-between">
+                            <div>
+                                <div className="inline-flex p-3 rounded-lg bg-white/10 text-[#C5A017] mb-4">
+                                    <Globe className="h-6 w-6" />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">DTDi Cap Increase (Budget 2026)</h3>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    Double Tax Deduction for Internationalisation (DTDi) automatic expenditure cap increases from <strong>S$150,000 to S$400,000</strong> per year of assessment, complementing EDGE Internationalisation.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Coverage Banner */}
@@ -421,13 +434,21 @@ export default function ClientEDGEPage() {
                         </div>
                     </div>
 
-                    {/* Internal link to PSG insight */}
-                    <div className="mt-10 text-center">
+                    {/* Internal links to Transition & Comparison insights */}
+                    <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
                         <Link
                             href="/insights/what-happens-to-psg-after-september-2026"
                             className="inline-flex items-center gap-2 text-sm font-semibold text-[#C5A017] hover:text-white transition-colors underline underline-offset-4"
                         >
                             Read the full PSG-to-EDGE Transition Guide
+                            <ExternalLink className="h-4 w-4" />
+                        </Link>
+                        <span className="hidden sm:inline text-neutral-600">|</span>
+                        <Link
+                            href="/insights/edg-mra-psg-vs-edge-comparison"
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-[#C5A017] hover:text-white transition-colors underline underline-offset-4"
+                        >
+                            Read the EDG vs MRA vs PSG vs EDGE Comparison Guide
                             <ExternalLink className="h-4 w-4" />
                         </Link>
                     </div>
