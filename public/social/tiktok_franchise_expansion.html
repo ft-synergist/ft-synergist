@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Photo Mode: Singapore F&B and Retail Franchise Blueprint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #030712;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 20px;
+    }
+    .poster-container {
+      width: 1080px;
+      height: 1920px;
+      max-width: 100%;
+      aspect-ratio: 9 / 16;
+      background: radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.18) 0%, rgba(3, 7, 18, 0) 50%),
+                  radial-gradient(circle at 15% 85%, rgba(239, 68, 68, 0.15) 0%, rgba(3, 7, 18, 0) 50%),
+                  #070d19;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 40px;
+      padding: 80px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #f8fafc;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(245, 158, 11, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .grid-lines {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      padding: 12px 24px;
+      border-radius: 100px;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .header h1 {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .header h1 span {
+      background: linear-gradient(135deg, #fbbf24 0%, #f97316 50%, #f43f5e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header p {
+      font-size: 28px;
+      color: #94a3b8;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .cards-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      border-radius: 28px;
+      padding: 32px 36px;
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+    }
+    .card.highlight {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(14, 165, 233, 0.08);
+    }
+    .num {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #fff;
+      font-size: 26px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 8px 16px rgba(245, 158, 11, 0.3);
+    }
+    .num.grant {
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      box-shadow: 0 8px 16px rgba(14, 165, 233, 0.3);
+    }
+    .card-content h3 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #f1f5f9;
+    }
+    .card-content p {
+      font-size: 24px;
+      color: #94a3b8;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+    .card-content strong {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+    .card.highlight .card-content strong {
+      color: #38bdf8;
+    }
+    .footer-bar {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 26px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .brand-logo-text {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #f8fafc;
+    }
+    .brand-sub {
+      font-size: 18px;
+      color: #64748b;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .action-prompt {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fbbf24;
+    }
+    .action-prompt span {
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      padding: 8px 18px;
+      border-radius: 12px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="poster-container">
+    <div class="grid-lines"></div>
+
+    <!-- Top Header -->
+    <div class="header">
+      <div class="badge">
+        <span>🌏 F&B & Retail Expansion</span>
+      </div>
+      <h1>From 1 Singapore Outlet<br><span>To Regional Franchise</span></h1>
+      <p>The 4-step framework local brands use to scale into Malaysia, Vietnam & Indonesia:</p>
+    </div>
+
+    <!-- Core Points Cards -->
+    <div class="cards-grid">
+      <div class="card">
+        <div class="num">1</div>
+        <div class="card-content">
+          <h3>Lock Cross-Border IP & Trademarks</h3>
+          <p>Register trademarks in destination countries via the <strong>Madrid Protocol (IPOS)</strong> before announcing expansion to prevent trademark squatters.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="num">2</div>
+        <div class="card-content">
+          <h3>Codify Operations Manuals (SOP)</h3>
+          <p>Turn kitchen recipes, store setup, and supply chain logistics into <strong>plug-and-play digital franchise documentation</strong> that franchisees can replicate.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="num">3</div>
+        <div class="card-content">
+          <h3>Master Franchise Agreement & Royalties</h3>
+          <p>Structure legal contracts defining <strong>upfront franchise fees, 3%–6% gross royalty terms</strong>, territorial exclusivity, and quality audit rights.</p>
+        </div>
+      </div>
+
+      <div class="card highlight">
+        <div class="num grant">4</div>
+        <div class="card-content">
+          <h3>Claim EnterpriseSG MRA & EDG Funding</h3>
+          <p>Tap government grants covering up to <strong>50% of overseas market setup, PR campaigns, and franchise advisory costs</strong> (capped at S$100k per market).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA Bar -->
+    <div class="footer-bar">
+      <div class="footer-left">
+        <div>
+          <div class="brand-logo-text">FT SYNERGIST</div>
+          <div class="brand-sub">Franchise & Cross-Border Advisory</div>
+        </div>
+      </div>
+      <div class="action-prompt">
+        <span>💾 Save for Expansion</span>
+        <span>↗ Share with Co-Founder</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

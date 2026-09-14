@@ -10,9 +10,16 @@ export default function ClientImpact() {
             Proven Track Record
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-            Empowering Singapore enterprises to dominate Asian markets.
-            <br className="hidden md:block" />
-            Recognized by <span className="font-semibold text-[#8F801B]">IPOS & Enterprise Singapore</span>.
+            Empowering Singapore enterprises to dominate Asian markets as a{" "}
+            <a
+              href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#8F801B] hover:underline"
+            >
+              Recognised IP Expert under IPOS&apos;s IP Grow programme
+            </a>
+            .
           </p>
         </div>
 

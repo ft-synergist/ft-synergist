@@ -3,8 +3,8 @@ import ClientEDGEPage from "@/components/ClientEDGEPage";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "EDGE Grant Singapore 2026 | EDG, MRA & PSG Consolidation",
-  description: "EDG, MRA and PSG cease 29 Sept 2026. Learn what the new EDGE Grant covers, support levels, and how to prepare — from FT Synergist.",
+  title: "EDGE Grant Singapore [2026/2027 Eligibility Guide] — FT Synergist",
+  description: "Enterprise Singapore's EDGE Grant replaces EDG, MRA & PSG on 30 Sept 2026. Get up to 70% co-funding, S$100,000 annual cap rules & verified transition roadmaps.",
   keywords: [
     "EDGE Grant Singapore 2026",
     "EDGE Grant Singapore",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     canonical: "https://www.ftsynergist.com/edge-grant",
   },
   openGraph: {
-    title: "EDGE Grant Singapore 2026 | EDG, MRA & PSG Consolidation",
-    description: "EDG, MRA and PSG cease 29 Sept 2026. Learn what the new EDGE Grant covers, support levels, and how to prepare — from FT Synergist.",
+    title: "EDGE Grant Singapore [2026/2027 Eligibility Guide] — FT Synergist",
+    description: "Enterprise Singapore's EDGE Grant replaces EDG, MRA & PSG on 30 Sept 2026. Get up to 70% co-funding, S$100,000 annual cap rules & verified transition roadmaps.",
     url: "https://www.ftsynergist.com/edge-grant",
     type: "website",
     images: [

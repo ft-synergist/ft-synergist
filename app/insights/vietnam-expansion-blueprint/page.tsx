@@ -154,7 +154,7 @@ export default function VietnamBlueprintPage() {
         "@type": "Report",
         "headline": "Strategic Blueprint: Navigating the Singapore-Vietnam Expansion",
         "description": "Enterprise expansion vectors against 2026 Global Minimum Tax (GMT), PDPL data governance, and SHUI regulations via PCBC and DVF frameworks.",
-        "image": "https://www.ftsynergist.com/hero-bg.jpg",
+        "image": "https://www.ftsynergist.com/report-vietnam-cover.png",
         "author": {
             "@type": "Organization",
             "name": "FT Synergist",
@@ -240,12 +240,12 @@ export default function VietnamBlueprintPage() {
                             As of mid-2026, Singapore stands as the preeminent source of foreign direct investment (FDI) into Vietnam. Total bilateral trade reached <strong>SGD 23.3 billion</strong> in the first five months of 2026 alone, exhibiting a staggering <strong>43.4% year-on-year surge</strong>.
                         </p>
                     </div>
-                    <div className="lg:col-span-5 relative h-[320px] w-full border border-neutral-800 bg-neutral-900">
+                    <div className="lg:col-span-5 relative h-[320px] w-full border border-neutral-800 bg-neutral-900 overflow-hidden shadow-2xl">
                         <Image
-                            src="/hero-bg.jpg"
-                            alt="Singapore-Vietnam Trade Integration Overview"
+                            src="/report-vietnam-cover.png"
+                            alt="Strategic Blueprint: Navigating the Singapore-Vietnam Expansion"
                             fill
-                            className="object-cover opacity-60 grayscale"
+                            className="object-cover hover:scale-105 transition-transform duration-500"
                             priority={true}
                             sizes="(max-width: 768px) 100vw, 30vw"
                         />

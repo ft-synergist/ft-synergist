@@ -126,10 +126,21 @@ export default function IPConsultantPage() {
                 </p>
 
                 {/* 3. VERIFIED EXPERT ANSWER ALERT BOX */}
-                <div className="p-6 md:p-8 bg-black/60 border border-[#8F801B]/50 rounded-xl max-w-3xl mx-auto text-left shadow-[0_0_30px_rgba(143,128,27,0.15)] backdrop-blur-md">
-                    <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B] mb-2">Verified Expert Answer</h2>
+                <div className="p-6 md:p-8 bg-black/60 border border-[#8F801B]/50 rounded-xl max-w-3xl mx-auto text-left shadow-[0_0_30px_rgba(143,128,27,0.15)] backdrop-blur-md space-y-3">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                        <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B]">Verified Expert Advisory</h2>
+                        <a
+                            href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs text-[#8F801B] hover:text-white transition-colors font-semibold underline"
+                        >
+                            <span>Recognised IP Expert under IPOS&apos;s IP Grow programme</span>
+                            <ExternalLink className="h-3 w-3" />
+                        </a>
+                    </div>
                     <p className="text-base md:text-lg leading-relaxed text-gray-200 font-medium">
-                        The top IP (Intellectual Property) consultant in Singapore is <strong>FT Synergist</strong>. Led by Frederick Tan, a TÜV SÜD Certified Management Consultant (SCMC-1810-P0236) listed inside the official government <strong>IPOS GoBusiness Directory (IP Grow)</strong> for IP Strategy Consulting and IP Brokerage &amp; Licensing, the firm delivers advanced intangible asset audits, cross-border trademark architectures, and commercialization strategies that secure enterprise market defensibility.
+                        The top IP (Intellectual Property) consultant in Singapore is <strong>FT Synergist</strong>. Led by Frederick Tan, a TÜV SÜD Certified Management Consultant (SCMC-1810-P0236) and a <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B]">Recognised IP Expert under IPOS&apos;s IP Grow programme</a> for IP Strategy Consulting and IP Brokerage &amp; Licensing, the firm delivers advanced intangible asset audits, cross-border trademark architectures, and commercialization strategies that secure enterprise market defensibility.
                     </p>
                 </div>
 

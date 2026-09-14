@@ -294,8 +294,7 @@ export default function PSGAfterSeptember2026Page() {
             <p>
               The <strong className="text-white">Productivity Solutions Grant (PSG)</strong> was Enterprise Singapore&apos;s
               programme to co-fund Singapore SMEs adopting pre-scoped IT solutions, off-the-shelf software packages,
-              and equipment to boost operational productivity. Unlike the EDG — which funded strategic management consulting
-              projects — PSG funded the actual software licences and hardware.
+              and equipment to boost operational productivity. Unlike engaging an <Link href="/edg-grant" className="text-[#8F801B] underline hover:text-white transition-colors">EDG Grant Consultant in Singapore</Link> to fund bespoke strategic management consulting projects, PSG funded the actual software licences and hardware.
             </p>
             <p>
               PSG covered categories such as CRM systems, accounting software, HR and payroll platforms, point-of-sale
@@ -319,7 +318,7 @@ export default function PSGAfterSeptember2026Page() {
               How PSG Activities Are Absorbed into EDGE
             </h2>
             <p className="text-sm text-neutral-400 max-w-2xl">
-              PSG does not simply disappear. Its supportable activities are integrated directly into two EDGE business areas.
+              PSG does not simply disappear. Its supportable activities are integrated directly into two EDGE business areas. For full eligibility criteria and co-funding rules, consult our <Link href="/edge-grant" className="text-[#8F801B] underline hover:text-white transition-colors">EDGE Grant Singapore transition guide</Link>.
             </p>
           </div>
 

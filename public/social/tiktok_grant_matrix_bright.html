@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Photo Mode: 2026 Singapore SME Grant Cheat Sheet (Clean Bright Edition)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 20px;
+    }
+    .poster-container {
+      width: 1080px;
+      height: 1920px;
+      max-width: 100%;
+      aspect-ratio: 9 / 16;
+      background: radial-gradient(circle at 10% 10%, #eff6ff 0%, #ffffff 40%),
+                  radial-gradient(circle at 90% 90%, #f0fdf4 0%, #ffffff 50%);
+      border: 2px solid #e2e8f0;
+      border-radius: 44px;
+      padding: 75px 65px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #0f172a;
+      box-shadow: 0 30px 70px -20px rgba(0, 50, 120, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Decorative vibrant glowing blobs for instant thumb-stopping pop */
+    .glow-blob-1 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      top: -100px;
+      right: -100px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
+      pointer-events: none;
+    }
+    .glow-blob-2 {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      bottom: 50px;
+      left: -80px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+      pointer-events: none;
+    }
+
+    /* Top Pill */
+    .top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #0284c7;
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.4);
+      margin-bottom: 24px;
+    }
+
+    .header h1 {
+      font-size: 68px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+    .header h1 span {
+      background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #7c3aed 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header p {
+      font-size: 27px;
+      color: #475569;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    /* Cards Stack */
+    .cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin: 35px 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 28px;
+      padding: 30px 34px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card-icon-box {
+      width: 72px;
+      height: 72px;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      flex-shrink: 0;
+    }
+    .icon-blue {
+      background: #eff6ff;
+      border: 2px solid #bfdbfe;
+      color: #2563eb;
+    }
+    .icon-green {
+      background: #f0fdf4;
+      border: 2px solid #bbf7d0;
+      color: #16a34a;
+    }
+    .icon-purple {
+      background: #faf5ff;
+      border: 2px solid #e9d5ff;
+      color: #9333ea;
+    }
+    .icon-coral {
+      background: #fff1f2;
+      border: 2px solid #fecdd3;
+      color: #e11d48;
+    }
+
+    .card-body {
+      flex: 1;
+    }
+    .card-body .title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .card-body h3 {
+      font-size: 30px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .card-body .tag {
+      font-size: 20px;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .tag-blue { background: #dbeafe; color: #1e40af; }
+    .tag-green { background: #dcfce7; color: #166534; }
+    .tag-purple { background: #f3e8ff; color: #6b21a8; }
+    .tag-coral { background: #ffe4e6; color: #9f1239; }
+
+    .card-body p {
+      font-size: 23px;
+      color: #475569;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+    .card-body strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* Red Flag / Warning Card */
+    .warning-card {
+      background: #fff5f5;
+      border: 2px solid #fecaca;
+    }
+
+    /* Bottom Footer Bar */
+    .footer-bar {
+      background: #0f172a;
+      border-radius: 26px;
+      padding: 26px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.4);
+    }
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-title {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    .brand-subtitle {
+      font-size: 17px;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .cta-pills {
+      display: flex;
+      gap: 12px;
+    }
+    .cta-pill {
+      background: #2563eb;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 21px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-pill.share {
+      background: #059669;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="poster-container">
+    <div class="glow-blob-1"></div>
+    <div class="glow-blob-2"></div>
+
+    <!-- Top Header -->
+    <div class="header">
+      <div class="top-badge">
+        <span>🇸🇬 Singapore SME Grant Guide 2026</span>
+      </div>
+      <h1>How Much Grant Funding<br><span>Can Your Business Claim?</span></h1>
+      <p>Save this 1-minute breakdown of EnterpriseSG grant co-funding caps:</p>
+    </div>
+
+    <!-- Cards Stack -->
+    <div class="cards-stack">
+      
+      <!-- Card 1: EDG Core Capabilities -->
+      <div class="card">
+        <div class="card-icon-box icon-blue">🎯</div>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Brand & Strategic Growth (EDG)</h3>
+            <span class="tag tag-blue">UP TO 50%</span>
+          </div>
+          <p>Co-funds <strong>strategic brand marketing, franchise systems, and IP strategy</strong> with SCMC certified consultants.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: EDG AI & Productivity -->
+      <div class="card">
+        <div class="card-icon-box icon-purple">⚡</div>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>AI & Digital Automation (EDG)</h3>
+            <span class="tag tag-purple">UP TO 50%</span>
+          </div>
+          <p>Co-funds <strong>custom AI integrations, ERP workflow automation, and predictive analytics</strong> software.</p>
+        </div>
+      </div>
+
+      <!-- Card 3: MRA Global Expansion -->
+      <div class="card">
+        <div class="card-icon-box icon-green">🌏</div>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Overseas Expansion (MRA)</h3>
+            <span class="tag tag-green">CAP S$100K</span>
+          </div>
+          <p>Co-funds <strong>overseas market setup, PR campaigns, trade fairs, and partner matching</strong> per target country.</p>
+        </div>
+      </div>
+
+      <!-- Card 4: The Danger Trap -->
+      <div class="card warning-card">
+        <div class="card-icon-box icon-coral">⚠️</div>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>The #1 Reason Grants Get Rejected</h3>
+            <span class="tag tag-coral">REJECTION TRAP</span>
+          </div>
+          <p><strong>Pre-signing contracts or paying deposits</strong> before EnterpriseSG grant approval = <strong>instant 100% disqualification</strong>.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Footer Bar -->
+    <div class="footer-bar">
+      <div class="footer-left">
+        <div>
+          <div class="brand-title">FT SYNERGIST</div>
+          <div class="brand-subtitle">Enterprise Advisory • Singapore</div>
+        </div>
+      </div>
+      <div class="cta-pills">
+        <div class="cta-pill">💾 Save Post</div>
+        <div class="cta-pill share">↗ Share</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

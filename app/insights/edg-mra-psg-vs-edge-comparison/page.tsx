@@ -324,7 +324,7 @@ export default function EDGMRAMPSGvsEDGEComparisonPage() {
             </h2>
           </div>
           <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
-            On <strong>29 September 2026</strong>, Singapore&apos;s three most widely utilised business grants—the <strong>Enterprise Development Grant (EDG)</strong>, <strong>Market Readiness Assistance (MRA)</strong>, and <strong>Productivity Solutions Grant (PSG)</strong>—will officially cease accepting new applications. On <strong>30 September 2026</strong>, they will be replaced by the <strong>EDGE Grant</strong>.
+            On <strong>29 September 2026</strong>, Singapore&apos;s three most widely utilised business grants—the <strong>Enterprise Development Grant (EDG)</strong>, <strong>Market Readiness Assistance (MRA)</strong>, and <strong>Productivity Solutions Grant (PSG)</strong>—will officially cease accepting new applications. On <strong>30 September 2026</strong>, they will be replaced by the <strong>EDGE Grant</strong>. To prepare your organization, consult our detailed <Link href="/edge-grant" className="text-[#8F801B] underline hover:text-white transition-colors">EDGE Grant Singapore transition guide</Link>.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
             <div className="p-6 bg-neutral-900 border border-neutral-800">
@@ -504,7 +504,7 @@ export default function EDGMRAMPSGvsEDGEComparisonPage() {
               </div>
               <h3 className="text-base font-bold text-white">Large Transformation Projects</h3>
               <p className="text-xs text-neutral-400 leading-relaxed">
-                If your project budget significantly exceeds S$150,000 in qualifying consultancy (e.g. multi-pillar brand restructuring, IP valuation, or major regional franchise rollouts), submit under EDG before 29 Sept to evaluate project-based grant support beyond the EDGE S$100k annual cap.
+                If your project budget significantly exceeds S$150,000 in qualifying consultancy (e.g. multi-pillar brand restructuring, IP valuation, or major regional franchise rollouts), engage an <Link href="/edg-grant" className="text-[#8F801B] underline hover:text-white transition-colors">EDG Grant Consultant in Singapore</Link> to submit under EDG before 29 Sept and evaluate project-based grant support beyond the EDGE S$100k annual cap.
               </p>
             </div>
 

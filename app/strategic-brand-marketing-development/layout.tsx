@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Brand Consultant Singapore | Strategic Brand Marketing | FT Synergist",
-    description: "Premier Brand Consultant Singapore. Certified SCMC advisory (SCMC-1810-P0236) for brand architecture, market positioning & EDG / EDGE co-funded marketing strategies.",
+    title: "Brand Consultant Singapore | Strategic Brand Marketing — FT Synergist",
+    description: "Scale market valuation with Singapore's top strategic brand consultants. SCMC-certified advisory for brand architecture, ASEAN market expansion & grant co-funding.",
     keywords: [
         "Brand Consultant Singapore",
         "Brand Strategy Singapore",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
         canonical: "https://www.ftsynergist.com/strategic-brand-marketing-development",
     },
     openGraph: {
-        title: "Brand Consultant Singapore | Strategic Brand Marketing | FT Synergist",
-        description: "Premier Brand Consultant Singapore. SCMC-certified advisory for brand architecture, market positioning & EDG / EDGE co-funded marketing strategies.",
+        title: "Brand Consultant Singapore | Strategic Brand Marketing — FT Synergist",
+        description: "Scale market valuation with Singapore's top strategic brand consultants. SCMC-certified advisory for brand architecture, ASEAN market expansion & grant co-funding.",
         url: "https://www.ftsynergist.com/strategic-brand-marketing-development",
         type: "website",
         images: [

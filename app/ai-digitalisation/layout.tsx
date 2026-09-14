@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "AI Digitalisation Consultant Singapore | Enterprise AI & Workflow Advisory | FT Synergist",
-    description: "Accelerate enterprise growth with Singapore's premier AI Digitalisation Consultants. SCMC accredited advisory for custom AI architecture, predictive analytics, and SME workflow automation.",
+    title: "AI Digitalisation Consultant Singapore | Enterprise AI — FT Synergist",
+    description: "Deploy practical enterprise AI workflows and automation with Singapore's top AI consultants. SCMC-certified advisory for grant-eligible digital transformation.",
     keywords: [
         "AI Digitalisation Consultant Singapore",
         "AI consultant Singapore",

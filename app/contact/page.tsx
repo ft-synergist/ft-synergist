@@ -191,7 +191,7 @@ export default function ContactPage() {
                     {/* TRUST FOOTER */}
                     <div className="text-center text-xs text-gray-400 space-y-1">
                         <p>FT Synergist Pte Ltd | 7 Temasek Boulevard, #12-07 Suntec Tower One, Singapore 038987</p>
-                        <p>TÜV SÜD Accredited Management Consultancy | Listed on IPOS IP Grow Directory</p>
+                        <p>Led by TÜV SÜD SCMC Certified Consultant (SCMC-1810-P0236 | SS 680:2021) | Listed on IPOS IP Grow Directory</p>
                     </div>
 
                 </div>

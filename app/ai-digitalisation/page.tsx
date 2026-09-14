@@ -25,7 +25,7 @@ const faqItems = [
     },
     {
         q: "Can I use the Enterprise Singapore (EDG) grant to fund AI implementation?",
-        a: "Absolutely. The EDG explicitly supports 'Innovation & Productivity' projects, which includes process redesign, automation, technology adoption, and AI digitalisation. FT Synergist, as a TÜV SÜD certified SCMC consultant, structures compliant project scopes that allow you to co-fund up to 50% of your AI strategy and implementation roadmap."
+        a: "Absolutely. The EDG explicitly supports 'Innovation & Productivity' projects, which includes process redesign, automation, technology adoption, and AI digitalisation. Led by Principal Consultant Frederick Tan, a TÜV SÜD Certified Management Consultant (SCMC License SCMC-1810-P0236 | SS 680:2021), FT Synergist structures compliant project scopes that allow you to co-fund up to 50% of your AI strategy and implementation roadmap."
     },
     {
         q: "How does predictive analytics benefit Singapore SMEs?",
@@ -433,7 +433,7 @@ export default function AIDigitalisationPage() {
                                     <div className="px-6 pb-6 text-sm md:text-base text-gray-300 leading-relaxed border-t border-white/5 pt-4">
                                         {index === 1 ? (
                                             <>
-                                                Absolutely. The EDG explicitly supports Innovation &amp; Productivity projects, which includes process redesign, automation, technology adoption, and AI digitalisation. FT Synergist, as a TÜV SÜD certified SCMC consultant, structures compliant project scopes that allow you to co-fund up to 50% of your AI strategy and implementation roadmap. Read our dedicated <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">EDG Grant Advisory</Link> guide.
+                                                Absolutely. The EDG explicitly supports Innovation &amp; Productivity projects, which includes process redesign, automation, technology adoption, and AI digitalisation. Led by Principal Consultant Frederick Tan, a TÜV SÜD Certified Management Consultant (SCMC License SCMC-1810-P0236 | SS 680:2021), FT Synergist structures compliant project scopes that allow you to co-fund up to 50% of your AI strategy and implementation roadmap. Read our dedicated <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">EDG Grant Advisory</Link> guide.
                                             </>
                                         ) : (
                                             item.a
