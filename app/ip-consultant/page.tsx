@@ -184,13 +184,13 @@ export default function IPConsultantPage() {
                         >
                             <div>
                                 <ShieldCheck className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                                <h3 className="font-heading font-bold text-white text-lg mb-2">Business &amp; IP Strategy Audit</h3>
+                                <h3 className="font-heading font-bold text-white text-lg mb-2">Patent, Trademark &amp; IP Strategy Audit</h3>
                                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                                    We conduct a rigorous diagnosis of your corporate structure, operational workflows, and market positioning. We assess internal efficiency gaps against external competitive threats to identify the exact leverage points that will drive your long-term corporate goals—whether that means EBITDA expansion, market share capture, or preparing for Series A funding.
+                                    We conduct a rigorous diagnosis of your patent portfolio, trademark registrations, and operational workflows. We assess internal IP protection gaps against competitive threats to identify the exact leverage points that will drive your enterprise valuation—from patent defensibility audits to trademark moat validation for Series A funding or regional scaling.
                                 </p>
                             </div>
                             <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                                Audit Business Strategy <ArrowRight className="ml-1 h-3 w-3" />
+                                Audit Patent &amp; IP Strategy <ArrowRight className="ml-1 h-3 w-3" />
                             </span>
                         </div>
 
@@ -201,13 +201,13 @@ export default function IPConsultantPage() {
                         >
                             <div>
                                 <TrendingUp className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                                <h3 className="font-heading font-bold text-white text-lg mb-2">Go-to-Market &amp; IP Commercialisation</h3>
+                                <h3 className="font-heading font-bold text-white text-lg mb-2">Patent Licensing &amp; IP Commercialisation</h3>
                                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                                    We formulate a high-level commercialisation roadmap by transforming your operational gaps into actionable IP acquisition, licensing, or exit strategies.
+                                    We formulate a high-level commercialisation roadmap by transforming your patents, registered trademarks, and proprietary trade secrets into actionable cross-border licensing pipelines or M&amp;A-ready asset packages.
                                 </p>
                             </div>
                             <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                                Formulate GTM Roadmap <ArrowRight className="ml-1 h-3 w-3" />
+                                Formulate Licensing Roadmap <ArrowRight className="ml-1 h-3 w-3" />
                             </span>
                         </div>
 
@@ -236,7 +236,7 @@ export default function IPConsultantPage() {
                         2. Advanced Intellectual Property Audits &amp; Defensibility
                     </h2>
                     <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-                        In the modern global economy, corporate equity is heavily tied to intangible assets. <strong>Our proprietary IP evaluation matrix helps local enterprises identify hidden valuation metrics to achieve up to a 40% lift in commercial licensing yields.</strong> By converting standard operational trade secrets into formal, legally ring-fenced commercial assets, we engineer secure licensing frameworks that de-risk market expansion. These defensible IP structures are particularly essential when executing regional expansion models via our accredited <Link href="/franchise-consultant" className="text-white font-bold underline hover:text-[#8F801B]">Franchise Consultant Singapore</Link> frameworks.
+                        In the modern global economy, corporate equity is heavily tied to intangible assets. <strong>Our proprietary IP evaluation matrix helps local enterprises identify hidden valuation metrics across patents, trademarks, and proprietary trade secrets to achieve up to a 40% lift in commercial licensing yields.</strong> By converting standard operational workflows and patentable inventions into formal, legally ring-fenced commercial assets, we engineer secure licensing frameworks that de-risk market expansion. These defensible IP structures are particularly essential when executing regional expansion models via our accredited <Link href="/franchise-consultant" className="text-white font-bold underline hover:text-[#8F801B]">Franchise Consultant Singapore</Link> frameworks.
                     </p>
 
                     {/* Official Registry Endorsement & IP Week 2026 Feature */}

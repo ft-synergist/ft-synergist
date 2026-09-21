@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "IP Consultant Singapore | IP Strategy, Valuation & Monetization | FT Synergist",
-    description: "Turn intangible assets into commercial equity. IPOS GoBusiness listed IP Strategy Consultant & TÜV SÜD SCMC certified advisor (SCMC-1810-P0236) for IP valuation, licensing, and brand moats in Singapore.",
+    description: "Protect and monetize patents, trademarks, and intangible assets with Singapore's IPOS-listed IP Strategy Consultant. TÜV SÜD SCMC certified advisor (SCMC-1810-P0236) for IP valuation, licensing, and brand protection.",
     keywords: [
         "IP Consultant Singapore",
         "intellectual property consultant Singapore",
