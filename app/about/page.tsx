@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { CheckCircle2, MapPin, Award, ArrowRight } from "lucide-react";
+import { CheckCircle2, MapPin, Award, ArrowRight, Landmark, Building2, TrendingUp, ShieldCheck, Briefcase } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About FT Synergist | Strategic SME Consultants Singapore",
-  description: "Founded by Frederick Tan (SCMC). We are entrepreneurs first and consultants second. We build the strategic roadmaps that scaled brands like Adam Khoo Learning Centre.",
+  description: "Founded by Frederick Tan (SCMC). We are entrepreneurs first and consultants second. Strategic management consulting, cross-border capital allocation, and enterprise scaling.",
   openGraph: {
     title: "About FT Synergist | Strategic SME Consultants Singapore",
     description: "Accelerating 100 Entrepreneurs to Impact 100 Million Lives in Asia.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "/frederick-tan-scmc-certified-edg-consultant.jpg",
         width: 1200,
         height: 630,
-        alt: "Frederick Tan - Principal Consultant",
+        alt: "Frederick Tan - Principal Management Consultant",
       },
     ],
     locale: "en_SG",
@@ -36,31 +36,43 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProfilePage",
-            "mainEntity": {
-              "@type": "Person",
-              "name": "Frederick Tan",
-              "jobTitle": "Principal Consultant",
-              "honorificSuffix": "SCMC",
-              "image": "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
-              "description": "Strategic consultant specializing in SME scale-up and Enterprise Singapore grants.",
-              "sameAs": [
-                "https://www.linkedin.com/in/frederick-tan-scmc/",
-                "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
-              ],
-              "worksFor": {
-                "@type": "Organization",
-                "name": "FT Synergist"
-              },
-              "hasCredential": {
-                "@type": "EducationalOccupationalCredential",
-                "name": "Singapore Certified Management Consultant (SCMC)",
-                "recognizedBy": {
+            "@type": "AboutPage",
+            "mainEntity": [
+              {
+                "@type": "Person",
+                "name": "Frederick Tan",
+                "jobTitle": "Principal Management Consultant",
+                "honorificSuffix": "SCMC",
+                "image": "https://www.ftsynergist.com/frederick-tan-scmc-certified-edg-consultant.jpg",
+                "description": "Strategic consultant specializing in SME scale-up and Enterprise Singapore grants.",
+                "sameAs": [
+                  "https://www.linkedin.com/in/frederick-tan-scmc/",
+                  "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
+                ],
+                "worksFor": {
                   "@type": "Organization",
-                  "name": "TÜV SÜD PSB"
+                  "name": "FT Synergist"
+                },
+                "hasCredential": {
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "Singapore Certified Management Consultant (SCMC)",
+                  "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "TÜV SÜD PSB"
+                  }
+                }
+              },
+              {
+                "@type": "Person",
+                "name": "Andrew Ling",
+                "jobTitle": "Associate Director — Capital Allocation & Family Office Advisory",
+                "description": "Specializing in cross-border capital allocation, family office governance, M&A scaling, and digital banking strategy.",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "FT Synergist"
                 }
               }
-            }
+            ]
           }),
         }}
       />
@@ -89,7 +101,7 @@ export default function AboutPage() {
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-[#C5A017]/30 shadow-2xl">
                 <Image
                   src="/frederick-tan-scmc-certified-edg-consultant.jpg"
-                  alt="Frederick Tan Principal Consultant"
+                  alt="Frederick Tan Principal Management Consultant"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -97,7 +109,7 @@ export default function AboutPage() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
                   <p className="text-white font-bold text-lg">Frederick Tan</p>
-                  <p className="text-[#C5A017] text-sm">Principal Consultant (SCMC)</p>
+                  <p className="text-[#C5A017] text-sm">Principal Management Consultant (SCMC)</p>
                 </div>
               </div>
 
@@ -146,7 +158,7 @@ export default function AboutPage() {
                 </p>
 
                 <p className="text-base md:text-lg leading-relaxed mb-6">
-                  Money without strategy just accelerates chaos. That is why when business owners come to me asking for 'the max <Link href="/edg-grant" className="text-[#0f3460] font-bold underline decoration-2 hover:text-[#C5A017] transition-colors">EDG grant</Link>,' I often tell them to pause. If you cannot explain your 3-year plan on a napkin, the grant won't save you—it will drown you.
+                  Money without strategy just accelerates chaos. That is why when business owners come to me asking for 'the max <Link href="/edge-grant" className="text-[#0f3460] font-bold underline decoration-2 hover:text-[#C5A017] transition-colors">EDGE grant</Link>,' I often tell them to pause. If you cannot explain your 3-year plan on a napkin, the grant won't save you—it will drown you.
                 </p>
 
                 <p className="text-base md:text-lg leading-relaxed mb-8">
@@ -155,7 +167,7 @@ export default function AboutPage() {
 
                 <div className="border-t border-gray-300 pt-6">
                   <p className="font-bold text-[#0f3460] text-lg mb-1">— Frederick Tan (SCMC)</p>
-                  <p className="text-sm text-gray-800 font-medium">Founder and Principal Consultant</p>
+                  <p className="text-sm text-gray-800 font-medium">Founder &amp; Principal Management Consultant</p>
                   <p className="text-sm text-gray-600">FT Synergist</p>
                 </div>
               </div>
@@ -166,11 +178,104 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* --- LEADERSHIP & ADVISORY PARTNERS --- */}
+      <section className="py-20 border-t border-white/10 bg-neutral-950">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-block px-4 py-1.5 mb-4 border border-[#C5A017]/30 rounded-full bg-[#C5A017]/10">
+              <span className="text-xs font-bold text-[#C5A017] uppercase tracking-widest">
+                Strategic Advisory &amp; Capital Practice
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
+              Leadership &amp; Strategic Advisory Partners
+            </h2>
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+              Combining on-the-ground operational mastery with institutional capital deployment and cross-border governance.
+            </p>
+          </div>
+
+          {/* Andrew Ling Profile Card */}
+          <div className="max-w-5xl mx-auto bg-black border border-white/10 rounded-2xl p-8 md:p-12 hover:border-[#C5A017]/40 transition-all shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#C5A017]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+              
+              {/* Partner Header Info */}
+              <div className="w-full lg:w-1/3 space-y-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#C5A017]/10 border border-[#C5A017]/20 text-[#C5A017]">
+                  <Briefcase className="w-8 h-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-extrabold text-white">Andrew Ling</h3>
+                  <p className="text-sm font-semibold text-[#C5A017] mt-1 leading-snug">
+                    Associate Director — Capital Allocation &amp; Family Office Advisory
+                  </p>
+                </div>
+                <p className="text-xs text-neutral-400 leading-relaxed pt-2 border-t border-neutral-800">
+                  Over two decades of senior executive leadership spanning family office investment management, institutional digital banking governance, and high-velocity cross-border venture scaling.
+                </p>
+              </div>
+
+              {/* 4 Core Pillars Grid */}
+              <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
+                {/* 1. Family Office & Capital Allocation */}
+                <div className="p-5 bg-neutral-900/60 border border-neutral-800 rounded-xl space-y-2">
+                  <div className="flex items-center gap-2 text-[#C5A017]">
+                    <Landmark className="w-4 h-4" />
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-white">Family Office &amp; Capital Allocation</h4>
+                  </div>
+                  <p className="text-xs text-neutral-300 leading-relaxed m-0">
+                    Serves as investment professional for a Singaporean family office and Co-Founder of the Family Office Alliance (FOA), overseeing cross-border portfolios, private equity, and HNW capital deployment across Asia and Europe.
+                  </p>
+                </div>
+
+                {/* 2. Banking & Governance */}
+                <div className="p-5 bg-neutral-900/60 border border-neutral-800 rounded-xl space-y-2">
+                  <div className="flex items-center gap-2 text-[#C5A017]">
+                    <ShieldCheck className="w-4 h-4" />
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-white">Banking &amp; Governance</h4>
+                  </div>
+                  <p className="text-xs text-neutral-300 leading-relaxed m-0">
+                    Former Board Member of Finext Eastern Bank (FEB), leading strategic compliance, digital banking development, and regional business growth.
+                  </p>
+                </div>
+
+                {/* 3. Corporate Scaling & M&A */}
+                <div className="p-5 bg-neutral-900/60 border border-neutral-800 rounded-xl space-y-2">
+                  <div className="flex items-center gap-2 text-[#C5A017]">
+                    <TrendingUp className="w-4 h-4" />
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-white">Corporate Scaling &amp; M&amp;A</h4>
+                  </div>
+                  <p className="text-xs text-neutral-300 leading-relaxed m-0">
+                    Over 20 years of operator and investor experience across fintech, med-tech, and Web3, previously driving regional platform expansion that achieved up to 25x EBITDA growth across six Asian markets.
+                  </p>
+                </div>
+
+                {/* 4. Government & Strategic Initiatives */}
+                <div className="p-5 bg-neutral-900/60 border border-neutral-800 rounded-xl space-y-2">
+                  <div className="flex items-center gap-2 text-[#C5A017]">
+                    <Building2 className="w-4 h-4" />
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-white">Government &amp; Strategic Initiatives</h4>
+                  </div>
+                  <p className="text-xs text-neutral-300 leading-relaxed m-0">
+                    Served on the steering committee and advisory board for NTUC’s associate board, contributing to nationwide leadership and enterprise development initiatives alongside Singapore government stakeholders.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* --- CREDENTIALS / TRUST SIGNALS --- */}
       <section className="py-20 border-y border-white/10 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Authority & Track Record</h2>
+            <h2 className="text-3xl font-bold mb-4">Authority &amp; Track Record</h2>
             <p className="text-gray-400">Why enterprise leaders partner with us.</p>
           </div>
 
@@ -221,10 +326,10 @@ export default function AboutPage() {
               Speak to a Consultant
             </Link>
             <Link
-              href="/edg-grant"
+              href="/edge-grant"
               className="inline-flex items-center justify-center bg-white text-black px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
-              Explore EDG Grant <ArrowRight className="ml-2 w-5 h-5" />
+              Explore EDGE Grant <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
         </div>
