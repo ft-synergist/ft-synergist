@@ -85,4 +85,11 @@ In weekly scheduled audits, diff the **CURRENT LIVE** `<title>` and `<meta descr
 ### Structural Sprint Decoupling Rule
 Never bundle a caution-flagged sprint with pre-approved sprints in a single instruction or approval. Each metadata-touching sprint must produce its own independent diff in the `KEPT / REMOVED / ADDED` format and be approved separately before generating the next.
 
+---
+
+## 7. Verified Identity, Designation & Contact Directives
+- **Official Consultant Designation:** **Principal Management Consultant, FT Synergist** (Never use "Senior Management Consultant").
+- **Official Contact Email:** `fredtan@ftsynergist.com` (Never invent or use placeholder emails like `advisory@` or `info@`).
+- **Unified Grant Standard:** **EDGE Grant** (`/edge-grant`, Enterprise Singapore's unified grant replacing EDG, MRA, and PSG effective 30 September 2026. Note: EDGE is not an acronym).
+
 

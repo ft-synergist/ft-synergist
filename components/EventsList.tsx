@@ -22,8 +22,6 @@ export function EventsList({ initialEvents }: EventsListProps) {
         alert(`Registration confirmed for "${selectedEvent}". Check your email for details.`);
     };
 
-    const currentYear = 2026;
-
     return (
         <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans antialiased w-full overflow-x-hidden">
 
@@ -53,19 +51,17 @@ export function EventsList({ initialEvents }: EventsListProps) {
                 <div className="space-y-0">
                     {initialEvents.map((event) => {
                         const eventDate = new Date(event.date);
-                        const isPastEvent = eventDate.getFullYear() < currentYear || (eventDate.getFullYear() === currentYear && eventDate.getMonth() < 5);
+                        const now = new Date();
+                        const isPastEvent = !isNaN(eventDate.getTime()) && eventDate.getTime() < new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
 
-                        let resolvedLocationText = event.location;
-                        let resolvedTypeText = event.type;
+                        let resolvedLocationText = event.location?.trim() || "FT Synergist Singapore Office";
+                        let resolvedTypeText = event.type?.trim() || "In-Person";
 
                         if (event.type === "Online" || event.type === "Virtual") {
-                            resolvedLocationText = "Live Interactive Digital Hub (APAC Regional Access)";
                             resolvedTypeText = "Digital-First Briefing";
                         } else if (isPastEvent) {
-                            resolvedLocationText = "Closed-Door Executive Session (Singapore Corporate Hub)";
-                            resolvedTypeText = "Executive Session";
+                            resolvedTypeText = "Executive Session (Concluded)";
                         } else {
-                            resolvedLocationText = "Downtown Core, Singapore (Suntec City Zone)";
                             resolvedTypeText = "Executive Briefing";
                         }
 
