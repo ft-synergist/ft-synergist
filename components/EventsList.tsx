@@ -74,12 +74,17 @@ export function EventsList({ initialEvents }: EventsListProps) {
                         }
 
                         const eventUrl = `https://www.ftsynergist.com/events#event-${event.id}`;
-                        const waText = `*${event.title.trim()}*\n📅 Date: ${event.date}\n⏰ Time: ${event.time}\n📍 Location: ${resolvedLocationText}\n\nRegister & details: ${eventUrl}`;
+                        const eventTitleClean = event.title.trim();
+                        
+                        // Contextualized share payloads
+                        const waText = `*${eventTitleClean}*\n\n${event.description ? event.description.trim() + '\n\n' : ''}📅 Date: ${event.date}\n⏰ Time: ${event.time}\n📍 Venue: ${resolvedLocationText}\n\n🔗 View Session & Registration:\n${eventUrl}`;
                         const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(waText)}`;
-                        const tgText = `${event.title.trim()} | ${event.date} (${event.time}) - FT Synergist`;
+                        
+                        const tgText = `${eventTitleClean} — ${event.date} (${event.time}) | ${resolvedLocationText}`;
                         const tgUrl = `https://t.me/share/url?url=${encodeURIComponent(eventUrl)}&text=${encodeURIComponent(tgText)}`;
-                        const emailSub = `Invitation: ${event.title.trim()} — FT Synergist`;
-                        const emailBody = `Hi,\n\nI thought you might be interested in attending this executive session with FT Synergist:\n\n${event.title.trim()}\nDate: ${event.date}\nTime: ${event.time}\nLocation: ${resolvedLocationText}\n\n${event.description ? event.description + '\n\n' : ''}View full event details & register here: ${eventUrl}\n\nBest regards.`;
+                        
+                        const emailSub = `${eventTitleClean} — Executive Session & Registration Details`;
+                        const emailBody = `Hi,\n\nI thought you would be interested in this upcoming executive session:\n\n${eventTitleClean}\n\n${event.description ? event.description.trim() + '\n\n' : ''}📅 Date: ${event.date}\n⏰ Time: ${event.time}\n📍 Venue: ${resolvedLocationText}\n\n🔗 View Full Event Briefing & Registration:\n${eventUrl}\n\nBest regards.`;
                         const emailUrl = `mailto:?subject=${encodeURIComponent(emailSub)}&body=${encodeURIComponent(emailBody)}`;
 
                         return (
@@ -123,7 +128,7 @@ export function EventsList({ initialEvents }: EventsListProps) {
                                     {/* Share Action Tray */}
                                     <div className="flex items-center gap-2 pt-3 border-t border-gray-100">
                                         <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mr-1 flex items-center gap-1">
-                                            <Share2 className="w-3 h-3 text-gray-400" /> Share:
+                                            <Share2 className="w-3 h-3 text-gray-400" /> Share Event:
                                         </span>
 
                                         {/* WhatsApp */}
@@ -131,7 +136,8 @@ export function EventsList({ initialEvents }: EventsListProps) {
                                             href={waUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            title="Share on WhatsApp"
+                                            title={`Share "${eventTitleClean}" on WhatsApp`}
+                                            aria-label={`Share ${eventTitleClean} on WhatsApp`}
                                             className="inline-flex items-center justify-center gap-1 px-2.5 py-1 rounded bg-[#25D366]/10 text-[#128C7E] hover:bg-[#25D366] hover:text-white transition-all text-xs font-semibold"
                                         >
                                             <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -145,7 +151,8 @@ export function EventsList({ initialEvents }: EventsListProps) {
                                             href={tgUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            title="Share on Telegram"
+                                            title={`Share "${eventTitleClean}" on Telegram`}
+                                            aria-label={`Share ${eventTitleClean} on Telegram`}
                                             className="inline-flex items-center justify-center gap-1 px-2.5 py-1 rounded bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc] hover:text-white transition-all text-xs font-semibold"
                                         >
                                             <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -157,7 +164,8 @@ export function EventsList({ initialEvents }: EventsListProps) {
                                         {/* Email */}
                                         <a
                                             href={emailUrl}
-                                            title="Share via Email"
+                                            title={`Email invitation for "${eventTitleClean}"`}
+                                            aria-label={`Email invitation for ${eventTitleClean}`}
                                             className="inline-flex items-center justify-center gap-1 px-2.5 py-1 rounded bg-gray-100 text-gray-700 hover:bg-gray-900 hover:text-white transition-all text-xs font-semibold"
                                         >
                                             <Mail className="w-3.5 h-3.5" />
@@ -167,7 +175,8 @@ export function EventsList({ initialEvents }: EventsListProps) {
                                         {/* Copy Link */}
                                         <button
                                             onClick={() => handleCopyLink(event.id)}
-                                            title="Copy Event Link"
+                                            title={`Copy direct link for "${eventTitleClean}"`}
+                                            aria-label={`Copy direct link for ${eventTitleClean}`}
                                             className="inline-flex items-center justify-center gap-1 px-2 py-1 rounded bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all text-xs font-medium ml-auto"
                                         >
                                             {copiedEventId === event.id ? (
