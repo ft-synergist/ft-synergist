@@ -1,0 +1,7 @@
+Issue,Validation,Items
+Missing field 'address' (in 'location'),Not Started,1
+Missing field 'offers',Not Started,1
+Missing field 'image',Not Started,1
+Missing field 'eventStatus',Not Started,1
+Missing field 'description',Not Started,1
+Missing field 'performer',Not Started,1

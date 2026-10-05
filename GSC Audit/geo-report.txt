@@ -1,0 +1,40 @@
+◇ injected env (1) from .env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+=================================================================
+🚀 FT SYNERGIST — GENERATIVE ENGINE OPTIMIZATION (GEO) AUDIT
+📅 Timestamp: 2026-09-07T00:01:24.421Z
+=================================================================
+
+🤖 Simulating AI buyer query for: "EDG Consultant Singapore"... ❌ Failed (Unable to reach Gemini models for GEO evaluation.)
+🤖 Simulating AI buyer query for: "MRA Consultant Singapore"... ❌ Failed (Unable to reach Gemini models for GEO evaluation.)
+🤖 Simulating AI buyer query for: "IP Consultant Singapore"... ❌ Failed (Unable to reach Gemini models for GEO evaluation.)
+🤖 Simulating AI buyer query for: "Franchise Consultant Singapore"... ❌ Failed (Unable to reach Gemini models for GEO evaluation.)
+🤖 Simulating AI buyer query for: "Brand Consultant Singapore"... ❌ Failed (Unable to reach Gemini models for GEO evaluation.)
+🤖 Simulating AI buyer query for: "AI Digitalisation Consultant Singapore"... ❌ Failed (Unable to reach Gemini models for GEO evaluation.)
+🤖 Simulating AI buyer query for: "Sustainability Consultant Singapore"... ❌ Failed (Unable to reach Gemini models for GEO evaluation.)
+
+=================================================================
+📊 GEO CITATION SHARE & AI BRAND PERCEPTION MATRIX
+=================================================================
+
+┌─────────┬──────────────────────────────────────────┬────────────────────┬──────────────────────────┐
+│ (index) │ Pillar                                   │ FT Synergist Cited │ Competitors Cited by LLM │
+├─────────┼──────────────────────────────────────────┼────────────────────┼──────────────────────────┤
+│ 0       │ 'EDG Consultant Singapore'               │ 'ERR'              │ 'N/A'                    │
+│ 1       │ 'MRA Consultant Singapore'               │ 'ERR'              │ 'N/A'                    │
+│ 2       │ 'IP Consultant Singapore'                │ 'ERR'              │ 'N/A'                    │
+│ 3       │ 'Franchise Consultant Singapore'         │ 'ERR'              │ 'N/A'                    │
+│ 4       │ 'Brand Consultant Singapore'             │ 'ERR'              │ 'N/A'                    │
+│ 5       │ 'AI Digitalisation Consultant Singapore' │ 'ERR'              │ 'N/A'                    │
+│ 6       │ 'Sustainability Consultant Singapore'    │ 'ERR'              │ 'N/A'                    │
+└─────────┴──────────────────────────────────────────┴────────────────────┴──────────────────────────┘
+
+🎯 FT Synergist GEO Citation Share: 0/7 Pillars (0.0%)
+
+💡 GEO Action Levers to Boost AI Citations:
+   1. Expand structured JSON-LD Organization & Service schemas on pillar pages.
+   2. Seed authoritative third-party entity co-occurrences (IPOS, EnterpriseSG, SBACC).
+   3. Publish research-backed whitepapers with direct quantitative data tables.
+
+=================================================================
+✅ GEO Audit Complete.
+=================================================================

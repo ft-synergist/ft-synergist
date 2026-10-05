@@ -1,0 +1,42 @@
+◇ injected env (1) from .env.local // tip: ⌘ override existing { override: true }
+=================================================================
+🚀 FT SYNERGIST — CORE WEB VITALS & PAGESPEED AUDIT
+📅 Timestamp: 2026-09-07T00:01:09.841Z
+🎯 Target Domain: https://ftsynergist.com
+=================================================================
+
+📱 Auditing Mobile Performance & Core Web Vitals...
+   Scanning Homepage (/)... ⚠️ Notice (Rate limit / Key pending)
+   Scanning EDG Consultant (/edg-grant)... ⚠️ Notice (Rate limit / Key pending)
+   Scanning MRA Consultant (/mra-grant)... ⚠️ Notice (Rate limit / Key pending)
+   Scanning IP Consultant (/ip-consultant)... ⚠️ Notice (Rate limit / Key pending)
+   Scanning Franchise Consultant (/franchise-consultant)... ⚠️ Notice (Rate limit / Key pending)
+   Scanning Brand Consultant (/strategic-brand-marketing-development)... ⚠️ Notice (Rate limit / Key pending)
+   Scanning AI Digitalisation (/ai-digitalisation)... ⚠️ Notice (Rate limit / Key pending)
+   Scanning Sustainability (/sustainability)... ⚠️ Notice (Rate limit / Key pending)
+
+=================================================================
+📊 CORE WEB VITALS BENCHMARK MATRIX (MOBILE)
+=================================================================
+
+┌─────────┬────────────────────────┬──────────────────────────────────────────┬───────┬───────┬───────┬───────┬────────────┬──────────────────────┐
+│ (index) │ Route                  │ Path                                     │ Score │ LCP   │ CLS   │ TBT   │ SpeedIndex │ Status               │
+├─────────┼────────────────────────┼──────────────────────────────────────────┼───────┼───────┼───────┼───────┼────────────┼──────────────────────┤
+│ 0       │ 'Homepage'             │ '/'                                      │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A'      │ '⚪ Pending API Key' │
+│ 1       │ 'EDG Consultant'       │ '/edg-grant'                             │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A'      │ '⚪ Pending API Key' │
+│ 2       │ 'MRA Consultant'       │ '/mra-grant'                             │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A'      │ '⚪ Pending API Key' │
+│ 3       │ 'IP Consultant'        │ '/ip-consultant'                         │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A'      │ '⚪ Pending API Key' │
+│ 4       │ 'Franchise Consultant' │ '/franchise-consultant'                  │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A'      │ '⚪ Pending API Key' │
+│ 5       │ 'Brand Consultant'     │ '/strategic-brand-marketing-development' │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A'      │ '⚪ Pending API Key' │
+│ 6       │ 'AI Digitalisation'    │ '/ai-digitalisation'                     │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A'      │ '⚪ Pending API Key' │
+│ 7       │ 'Sustainability'       │ '/sustainability'                        │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A' │ 'N/A'      │ '⚪ Pending API Key' │
+└─────────┴────────────────────────┴──────────────────────────────────────────┴───────┴───────┴───────┴───────┴────────────┴──────────────────────┘
+
+💡 Core Web Vitals Standards (Google 2026 Ranking Signals):
+   • LCP (Largest Contentful Paint): Good <= 2.5s
+   • CLS (Cumulative Layout Shift):  Good <= 0.1
+   • TBT (Total Blocking Time):     Good <= 200ms
+
+=================================================================
+✅ Core Web Vitals Audit Complete.
+=================================================================
