@@ -59,7 +59,7 @@ export function Footer() {
                         </div>
                         <div className="flex flex-col space-y-3">
                             <Link
-                                href="https://www.linkedin.com/company/ftsynergist"
+                                href="https://www.linkedin.com/company/ft-synergist"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors flex items-center gap-2"

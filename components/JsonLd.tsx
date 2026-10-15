@@ -26,7 +26,7 @@ export default function JsonLd() {
             "name": "Frederick Tan"
         },
 "sameAs": [
-      "https://www.linkedin.com/company/ftsynergist",
+      "https://www.linkedin.com/company/ft-synergist",
       "https://www.linkedin.com/in/tanfrederick/",
       "https://www.facebook.com/ftsynergist"
     ]

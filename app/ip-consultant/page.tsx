@@ -31,6 +31,10 @@ const faqItems = [
     {
         q: "How does building a defensible IP moat increase corporate valuation for M&A or IPO?",
         a: "A defensible IP moat combines registered trademarks, trade secret protection, and exclusive commercial licensing contracts that prevent competitors from copying your business model. Building an audited IP portfolio de-risks expansion, protects market share, and directly increases enterprise valuation during M&A buyouts, joint ventures, or regional expansion."
+    },
+    {
+        q: "What are the recognized IP valuation methodologies in Singapore?",
+        a: "Under the Institute of Valuers and Appraisers, Singapore (IVAS) and International Valuation Standards (IVS), three core approaches are recognized: the Income Approach (utilizing Discounted Cash Flow and Relief-from-Royalty for cash-generating patents and trademarks), the Market Approach (benchmarking against comparable third-party transactions and royalty databases), and the Cost Approach (calculating reproduction or replacement costs for early-stage software and R&D). As an IPOS-listed provider and TÜV SÜD SCMC certified advisor (SCMC-1810-P0236), FT Synergist aligns intangible asset audits with these statutory methodologies for corporate transactions, licensing, and M&A positioning."
     }
 ];
 
@@ -290,10 +294,86 @@ export default function IPConsultantPage() {
                     </div>
                 </section>
 
-                {/* SECTION 3: QUANTIFIABLE TRACK RECORD & HIGH-CONVERTING BANNER */}
+                {/* SECTION 3: INTANGIBLE ASSET & IP VALUATION METHODOLOGY */}
+                <section className="space-y-8 bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <div className="space-y-3">
+                        <div className="flex flex-wrap items-center gap-2">
+                            <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
+                                Statutory Standards &amp; SIPS 2030 Alignment
+                            </span>
+                            <span className="text-xs text-gray-400 font-mono">
+                                IVAS / IVS Compliance
+                            </span>
+                        </div>
+                        <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                            3. Intangible Asset &amp; IP Valuation Methodologies in Singapore
+                        </h2>
+                        <p className="text-gray-300 leading-relaxed text-base md:text-lg">
+                            Accurate valuation of intangible assets is a critical foundation for mergers &amp; acquisitions (M&amp;A), commercial licensing agreements, joint venture structuring, and statutory grant verification. As an accredited <strong>Intellectual Property Consultant in Singapore</strong>, FT Synergist conducts audits in accordance with the <strong>Institute of Valuers and Appraisers, Singapore (IVAS)</strong> standards and the <strong>International Valuation Standards (IVS)</strong> under the Singapore IP Strategy 2030 (SIPS 2030). Intangible assets and intellectual property are evaluated across three recognized valuation methodologies:
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {/* Approach 1: Income Approach */}
+                        <div className="bg-black/60 p-6 rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
+                            <div className="space-y-2">
+                                <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B]">Primary Standard</span>
+                                <h3 className="font-heading text-lg font-bold text-white">Income Approach (DCF &amp; Relief-from-Royalty)</h3>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    Measures the economic value of an intangible asset based on the present value of future economic earnings attributable to it.
+                                </p>
+                                <ul className="text-xs text-gray-400 space-y-2 pt-2 list-disc list-inside">
+                                    <li><strong className="text-gray-200">Relief-from-Royalty:</strong> Calculates the hypothetical royalty payments an enterprise saves by owning the patent or trademark rather than licensing it from an independent third party.</li>
+                                    <li><strong className="text-gray-200">Discounted Cash Flow (DCF):</strong> Capitalizes incremental operating profit streams using a risk-weighted cost of capital (WACC) reflecting commercial adoption risk.</li>
+                                    <li><strong className="text-gray-200">Best Applied To:</strong> Revenue-generating patents, commercial software, registered trademarks, and cross-border licensing networks.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Approach 2: Market Approach */}
+                        <div className="bg-black/60 p-6 rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
+                            <div className="space-y-2">
+                                <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B]">Comparative Benchmark</span>
+                                <h3 className="font-heading text-lg font-bold text-white">Market Approach (Comparable Transactions)</h3>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    Determines asset value by benchmarking against observed transactional pricing and arm&apos;s-length licensing agreements for comparable IP assets.
+                                </p>
+                                <ul className="text-xs text-gray-400 space-y-2 pt-2 list-disc list-inside">
+                                    <li><strong className="text-gray-200">Empirical Multiples:</strong> Analyzes Singapore and ASEAN transactional disclosures, adjusting for market exclusivity, remaining statutory patent protection, and territory scope.</li>
+                                    <li><strong className="text-gray-200">Royalty Rate Databases:</strong> Cross-references verified industry licensing rates to establish arm&apos;s-length transfer pricing and franchise fee structures.</li>
+                                    <li><strong className="text-gray-200">Best Applied To:</strong> Active franchise systems, established consumer trademarks, and standard technology patents with public transaction comps.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Approach 3: Cost Approach */}
+                        <div className="bg-black/60 p-6 rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
+                            <div className="space-y-2">
+                                <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B]">Replacement Value</span>
+                                <h3 className="font-heading text-lg font-bold text-white">Cost Approach (Reproduction &amp; Replacement)</h3>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    Establishes the value of an intangible asset based on the total economic expenditure required to reconstruct an identical asset or reproduce equivalent utility.
+                                </p>
+                                <ul className="text-xs text-gray-400 space-y-2 pt-2 list-disc list-inside">
+                                    <li><strong className="text-gray-200">Reproduction Cost:</strong> Calculates direct R&amp;D hours, prototype tooling, laboratory validation, and statutory filing expenditures incurred to create the asset.</li>
+                                    <li><strong className="text-gray-200">Replacement Cost:</strong> Estimates current market replacement cost while discounting for technological obsolescence, functional wear, or economic utility loss.</li>
+                                    <li><strong className="text-gray-200">Best Applied To:</strong> Early-stage uncommercialized codebases, defensive patent clusters, proprietary algorithms, and internal trade secret documentation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-slate-900/90 p-5 rounded-xl border border-neutral-700 text-sm text-gray-300 leading-relaxed">
+                        <p>
+                            <strong className="text-white">Commercial Application for Singapore Enterprises:</strong> Intangible asset valuation reports prepared for institutional transactions must reconcile technical patent defensibility with verifiable commercial cash flows. As a TÜV SÜD Certified Management Consultant (SCMC-1810-P0236) listed on the official IPOS GoBusiness directory, FT Synergist provides independent IP strategic audits that support enterprise valuation validation for M&amp;A due diligence, private equity investment, and statutory grant reporting.
+                        </p>
+                    </div>
+                </section>
+
+                {/* SECTION 4: QUANTIFIABLE TRACK RECORD & HIGH-CONVERTING BANNER */}
                 <section className="space-y-6">
                     <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                        3. Quantifiable Valuation Lift Track Record
+                        4. Quantifiable Valuation Lift Track Record
                     </h2>
                     <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 p-2 shadow-sm text-white">
                         <QuantitativeSuccessTable />

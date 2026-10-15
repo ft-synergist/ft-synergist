@@ -121,7 +121,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
                 "sameAs": [
                   "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd",
                   "https://www.tuvsud.com/en-sg/services/training/asmea/list-of-certified-consultants",
-                  "https://www.linkedin.com/company/ftsynergist"
+                  "https://www.linkedin.com/company/ft-synergist"
                 ]
               },
               "areaServed": {
