@@ -128,12 +128,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
                 "@type": "Country",
                 "name": "Singapore"
               },
-              "description": "Premier Brand Consultant Singapore. Certified SCMC advisory (SCMC-1810-P0236) for brand architecture, positioning, and EDG / EDGE co-funded marketing strategies.",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "42"
-              }
+              "description": "Premier Brand Consultant Singapore. Certified SCMC advisory (SCMC-1810-P0236) for brand architecture, positioning, and EDG / EDGE co-funded marketing strategies."
             },
             {
               "@type": "FAQPage",
