@@ -235,6 +235,9 @@ export function EDGEGrantCalculator() {
               </div>
               <input
                 type="range"
+                aria-label="Strategic consultancy budget (SGD)"
+                id="consultancy-budget"
+                name="consultancyBudget"
                 min="0"
                 max="200000"
                 step="5000"
@@ -257,6 +260,9 @@ export function EDGEGrantCalculator() {
               </div>
               <input
                 type="range"
+                aria-label="Software and automation budget (SGD)"
+                id="software-budget"
+                name="softwareBudget"
                 min="0"
                 max="80000"
                 step="2500"
@@ -359,6 +365,10 @@ export function EDGEGrantCalculator() {
                   <input
                     required
                     type="text"
+                    id="calc-name"
+                    name="name"
+                    autoComplete="name"
+                    aria-label="Full name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Your Full Name"
@@ -369,6 +379,10 @@ export function EDGEGrantCalculator() {
                   <input
                     required
                     type="email"
+                    id="calc-email"
+                    name="email"
+                    autoComplete="email"
+                    aria-label="Work email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Work Email (name@company.com)"
@@ -379,6 +393,10 @@ export function EDGEGrantCalculator() {
                   <input
                     required
                     type="text"
+                    id="calc-company"
+                    name="company"
+                    autoComplete="organization"
+                    aria-label="Company name"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
                     placeholder="Company Name (e.g. Acme Pte Ltd)"

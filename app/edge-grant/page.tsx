@@ -7,7 +7,7 @@ import Script from "next/script";
 const protectedKeywords = ["EDGE Grant Singapore", "EDGE Grant eligibility", "EDG", "MRA", "PSG", "70%", "S$100,000", "SCMC"];
 
 export const metadata: Metadata = {
-  title: "EDGE Grant Singapore 2026: Eligibility & 70% Funding | FT Synergist",
+  title: "EDGE Grant Singapore 2026: Eligibility & 70% Funding", // layout template appends " | FT Synergist"
   description: "Check EDGE Grant eligibility: up to 70% support and S$100,000 annual cap. Replaces EDG, MRA & PSG from 30 Sept 2026. Speak to a certified SCMC consultant.",
   keywords: [
     "EDGE Grant Singapore 2026",

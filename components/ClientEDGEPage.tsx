@@ -648,8 +648,11 @@ export default function ClientEDGEPage() {
                                 <Image
                                     src="/frederick-tan-scmc-certified-edg-consultant.jpg"
                                     alt="Frederick Tan - Certified Management Consultant"
-                                    fill
-                                    className="object-cover"
+                                    width={176}
+                                    height={176}
+                                    sizes="176px"
+                                    priority
+                                    className="h-full w-full object-cover"
                                 />
                             </div>
 
