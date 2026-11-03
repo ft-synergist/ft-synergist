@@ -8,7 +8,7 @@ const protectedKeywords = ["EDGE Grant Singapore", "EDGE Grant eligibility", "ED
 
 export const metadata: Metadata = {
   title: "EDGE Grant Singapore 2026: Eligibility & 70% Funding | FT Synergist",
-  description: "Check EDGE Grant eligibility: up to 70% support and S$100,000 annual cap. Replaces EDG, MRA & PSG from 30 Sept 2026. Advice from an SCMC consultant.",
+  description: "Check EDGE Grant eligibility: up to 70% support and S$100,000 annual cap. Replaces EDG, MRA & PSG from 30 Sept 2026. Speak to a certified SCMC consultant.",
   keywords: [
     "EDGE Grant Singapore 2026",
     "EDGE Grant Singapore",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "EDGE Grant Singapore 2026: Eligibility & 70% Funding | FT Synergist",
-    description: "Check EDGE Grant eligibility: up to 70% support and S$100,000 annual cap. Replaces EDG, MRA & PSG from 30 Sept 2026. Advice from an SCMC consultant.",
+    description: "Check EDGE Grant eligibility: up to 70% support and S$100,000 annual cap. Replaces EDG, MRA & PSG from 30 Sept 2026. Speak to a certified SCMC consultant.",
     url: "https://www.ftsynergist.com/edge-grant",
     type: "website",
     images: [
