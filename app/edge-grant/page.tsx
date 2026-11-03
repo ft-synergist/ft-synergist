@@ -2,9 +2,13 @@ import { Metadata } from "next";
 import ClientEDGEPage from "@/components/ClientEDGEPage";
 import Script from "next/script";
 
+// protected-keywords (AGENTS.md §6): literal terms to diff before any title/description change.
+// Approved 3 Nov 2026: "Enterprise Singapore's EDGE Grant" phrase removed from description.
+const protectedKeywords = ["EDGE Grant Singapore", "EDGE Grant eligibility", "EDG", "MRA", "PSG", "70%", "S$100,000", "SCMC"];
+
 export const metadata: Metadata = {
-  title: "EDGE Grant Singapore [2026/2027 Eligibility Guide] — FT Synergist",
-  description: "Enterprise Singapore's EDGE Grant replaces EDG, MRA & PSG on 30 Sept 2026. Get up to 70% co-funding, S$100,000 annual cap rules & verified transition roadmaps.",
+  title: "EDGE Grant Singapore 2026: Eligibility & 70% Funding | FT Synergist",
+  description: "Check EDGE Grant eligibility: up to 70% support and S$100,000 annual cap. Replaces EDG, MRA & PSG from 30 Sept 2026. Advice from an SCMC consultant.",
   keywords: [
     "EDGE Grant Singapore 2026",
     "EDGE Grant Singapore",
@@ -20,8 +24,8 @@ export const metadata: Metadata = {
     canonical: "https://www.ftsynergist.com/edge-grant",
   },
   openGraph: {
-    title: "EDGE Grant Singapore [2026/2027 Eligibility Guide] — FT Synergist",
-    description: "Enterprise Singapore's EDGE Grant replaces EDG, MRA & PSG on 30 Sept 2026. Get up to 70% co-funding, S$100,000 annual cap rules & verified transition roadmaps.",
+    title: "EDGE Grant Singapore 2026: Eligibility & 70% Funding | FT Synergist",
+    description: "Check EDGE Grant eligibility: up to 70% support and S$100,000 annual cap. Replaces EDG, MRA & PSG from 30 Sept 2026. Advice from an SCMC consultant.",
     url: "https://www.ftsynergist.com/edge-grant",
     type: "website",
     images: [
