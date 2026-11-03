@@ -32,11 +32,11 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
         })
       });
 
-      window.location.href = "/edg-grant";
+      window.location.href = "/edge-grant";
       onClose();
     } catch (error) {
       console.error("Form submission error", error);
-      window.location.href = "/edg-grant";
+      window.location.href = "/edge-grant";
       onClose();
     } finally {
       setIsSubmitting(false);
@@ -190,6 +190,15 @@ export default function EDGGrantEligibilityGuidePage() {
           Enterprise Singapore Grant Advisory &bull; 2026 Definitive Framework
         </span>
 
+        <div className="p-4 bg-amber-500/10 border border-amber-500/30 rounded-none text-left max-w-3xl mx-auto">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-2 py-0.5">Official ESG Cutover Notice</span>
+          </div>
+          <p className="text-xs text-neutral-300 leading-relaxed m-0">
+            The <strong>Enterprise Development Grant (EDG)</strong> ceased accepting new applications on <strong>29 September 2026</strong>. From <strong>30 September 2026</strong> onwards, all new capability, internationalisation, and productivity upgrading projects are supported under Enterprise Singapore's unified <strong><Link href="/edge-grant" className="text-[#8F801B] underline hover:text-white font-semibold">EDGE Grant</Link></strong>. Ongoing EDG projects continue unaffected through completion and final claim disbursement.
+          </p>
+        </div>
+
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
           EDG Grant Eligibility Guide: <br />
           <span className="text-[#8F801B]">Enterprise Singapore Qualifying Criteria &amp; Project Scopes</span>
@@ -201,10 +210,10 @@ export default function EDGGrantEligibilityGuidePage() {
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
-            href="/edg-grant"
+            href="/edge-grant"
             className="inline-flex items-center justify-center px-8 py-4 bg-[#8F801B] text-white text-xs font-bold uppercase tracking-widest rounded-none hover:bg-[#A08d1e] transition-all shadow-lg shadow-[#8F801B]/10 w-full sm:w-auto"
           >
-            Explore EDG Advisory Services
+            Explore Unified EDGE Grant Hub
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
           <button
@@ -312,10 +321,10 @@ export default function EDGGrantEligibilityGuidePage() {
 
           <div className="pt-2 flex items-center gap-4">
             <Link
-              href="/edg-grant"
+              href="/edge-grant"
               className="text-xs font-bold text-[#8F801B] uppercase tracking-widest hover:text-white transition-colors underline"
             >
-              Verify SCMC Certified Advisory Credentials &rarr;
+              Verify SCMC Certified Advisory for EDGE &amp; EDG Projects &rarr;
             </Link>
           </div>
         </section>
@@ -359,10 +368,10 @@ export default function EDGGrantEligibilityGuidePage() {
 
           <div className="pt-2 flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/edg-grant"
+              href="/edge-grant"
               className="inline-flex items-center justify-center px-10 py-4 bg-[#8F801B] text-white text-xs font-bold uppercase tracking-widest rounded-none hover:bg-[#A08d1e] transition-all shadow-lg shadow-[#8F801B]/20"
             >
-              Visit Official EDG Grant Hub
+              Visit Official EDGE Grant Hub
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <button

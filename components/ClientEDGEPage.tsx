@@ -108,11 +108,11 @@ export default function ClientEDGEPage() {
     const faqs = [
         {
             question: "Are the EDG, MRA and PSG schemes still available?",
-            answer: "Yes, EDG, MRA, and PSG remain available for applications until 29 September 2026. Applications submitted before 30 September 2026 will continue to be assessed based on the requirements of the relevant scheme. Ongoing projects under these three schemes will not be affected and will be supported until project completion and claim disbursement. After 30 September 2026, no new application will be accepted under these schemes, and the EDGE Grant becomes the sole application pathway."
+            answer: "EDG, MRA, and PSG officially ceased on 29 September 2026. From 30 September 2026 onwards, the new EDGE Grant is the sole application pathway for business grant support. Ongoing applications and approved projects under EDG, MRA, and PSG will continue to be processed and supported through project completion and claim disbursement. After 30 September 2026, no new applications are accepted under legacy schemes."
         },
         {
             question: "What is the EDGE Grant and what does it replace?",
-            answer: "The EDGE Grant is Enterprise Singapore's unified grant framework launching on 30 September 2026. It streamlines and consolidates three legacy schemes—the Enterprise Development Grant (EDG), Market Readiness Assistance (MRA), and Productivity Solutions Grant (PSG)—into a single grant mechanism enabling businesses to access support more seamlessly."
+            answer: "The EDGE Grant is Enterprise Singapore's unified grant framework launched on 30 September 2026. It streamlines and consolidates three legacy schemes—the Enterprise Development Grant (EDG), Market Readiness Assistance (MRA), and Productivity Solutions Grant (PSG)—into a single grant mechanism covering 8 business areas and over 150 activities."
         },
         {
             question: "What does EDGE stand for?",
@@ -120,7 +120,7 @@ export default function ClientEDGEPage() {
         },
         {
             question: "What are the funding support levels and grant caps under the EDGE Grant?",
-            answer: "Under the EDGE Grant, support levels are up to 70% of qualifying costs for SMEs and up to 50% for non-SMEs, disbursed on a reimbursement basis. Each company has an annual grant cap of up to S$100,000 across all 8 business areas and 100+ eligible activities combined, resetting annually. Within the S$100,000 cap, up to S$30,000 can be used for single-function digital solutions, integrated enterprise systems, and selected automation activities."
+            answer: "The EDGE Grant provides up to 50% co-funding support for SMEs and up to 30% for non-SMEs on general capability activities, and up to 70% support for SMEs and up to 50% for non-SMEs on internationalisation and sustainability activities, disbursed on a reimbursement basis. Each company has an annual grant cap of up to S$100,000 across all activities combined, refreshed on 1 April each year. Within this S$100,000 cap, up to S$30,000 can be used for single-function digital solutions, integrated enterprise systems, and pre-scoped equipment."
         },
         {
             question: "How is the Productivity Solutions Grant (PSG) folded into EDGE?",
@@ -128,7 +128,7 @@ export default function ClientEDGEPage() {
         },
         {
             question: "What business areas and activities does EDGE cover?",
-            answer: "EDGE covers 8 business areas across 100+ activities: Automation, Digitalisation, Business Strategy, Financial Management, Innovation, Internationalisation, Standards, and Sustainability."
+            answer: "EDGE covers 8 business areas across over 150 activities: Automation, Digitalisation, Business Strategy, Financial Management, Innovation, Internationalisation, Standards, and Sustainability."
         },
         {
             question: "Who can apply for the EDGE Grant?",
@@ -136,7 +136,7 @@ export default function ClientEDGEPage() {
         },
         {
             question: "Can a business apply for EDGE if it has previously applied for or received funding under EDG, MRA, or PSG?",
-            answer: "Yes. Businesses that have previously applied for or received funding under EDG, MRA, or PSG are fully eligible to apply for the EDGE Grant once it opens on 30 September 2026."
+            answer: "Yes. Businesses that have previously applied for or received funding under EDG, MRA, or PSG can apply for EDGE. The grant caps under EDGE do not take into account previous grant utilisation under legacy schemes. However, EDGE support is intended strictly for new projects; businesses cannot seek grant support for the same project already supported under legacy schemes."
         },
         {
             question: "Can vendors be changed after an EDGE application is submitted?",
@@ -171,7 +171,7 @@ export default function ClientEDGEPage() {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-[#C5A017]/40 bg-[#C5A017]/10 text-[#C5A017] text-xs md:text-sm font-semibold uppercase tracking-wider">
                         <Calendar className="h-4 w-4" />
-                        Enterprise Singapore Official Grant Cutover
+                        Enterprise Singapore Official Grant Framework (Active)
                     </div>
 
                     <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl drop-shadow-2xl mb-8 leading-tight">
@@ -186,7 +186,7 @@ export default function ClientEDGEPage() {
                             </span>
                         </div>
                         <p className="text-base sm:text-lg text-gray-200 leading-relaxed font-medium">
-                            Enterprise Singapore has announced that the <strong>Enterprise Development Grant (EDG)</strong>, <strong>Market Readiness Assistance (MRA)</strong>, and <strong>Productivity Solutions Grant (PSG)</strong> will cease on <strong>29 September 2026</strong>. From <strong>30 September 2026</strong>, the new <strong>EDGE Grant</strong> becomes the sole application pathway. Ongoing applications and approved projects under EDG, MRA, and PSG will continue to be processed and supported through completion and claim disbursement.
+                            Enterprise Singapore's legacy grant schemes—the <strong>Enterprise Development Grant (EDG)</strong>, <strong>Market Readiness Assistance (MRA)</strong>, and <strong>Productivity Solutions Grant (PSG)</strong>—officially ceased on <strong>29 September 2026</strong>. From <strong>30 September 2026</strong> onwards, the new <strong>EDGE Grant</strong> is the sole application pathway. Ongoing applications and approved projects under EDG, MRA, and PSG will continue to be processed and supported through project completion and claim disbursement.
                         </p>
                     </div>
 
@@ -236,7 +236,7 @@ export default function ClientEDGEPage() {
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2">Scheme Cessation Date</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    EDG, MRA and PSG cease on <strong>29 September 2026</strong>.
+                                    EDG, MRA and PSG officially ceased on <strong>29 September 2026</strong>.
                                 </p>
                             </div>
                         </div>
@@ -249,7 +249,7 @@ export default function ClientEDGEPage() {
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2">Sole Application Pathway</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    The EDGE Grant becomes the sole application pathway from <strong>30 September 2026</strong>.
+                                    The EDGE Grant is the sole application pathway active since <strong>30 September 2026</strong>.
                                 </p>
                             </div>
                         </div>
@@ -275,7 +275,7 @@ export default function ClientEDGEPage() {
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2">Funding Support Levels</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    Support levels: up to <strong>70%</strong> of qualifying costs for SMEs, up to <strong>50%</strong> for non-SMEs.
+                                    Support levels: up to <strong>70%</strong> for SMEs and up to <strong>50%</strong> for non-SMEs (up to 70%/50% for internationalisation & sustainability; up to 50%/30% for general capability activities).
                                 </p>
                             </div>
                         </div>
@@ -288,7 +288,7 @@ export default function ClientEDGEPage() {
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2">Annual Funding Cap</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    Funding cap: up to <strong>S$100,000</strong> in total grant support per company per year, across all activities combined (this replaces having separate caps per grant).
+                                    Funding cap: up to <strong>S$100,000</strong> in total grant support per company per year, across all activities combined. A sub-cap of up to <strong>S$30,000</strong> applies to digital solutions and pre-scoped equipment.
                                 </p>
                             </div>
                         </div>
@@ -314,7 +314,7 @@ export default function ClientEDGEPage() {
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2">Annual Cap Reset Date</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    The S$100,000 annual grant cap <strong>refreshes on 1 April each year</strong>.
+                                    The S$100,000 annual grant cap <strong>refreshes on 1 April each year</strong> (valid 1 April to 31 March).
                                 </p>
                             </div>
                         </div>
@@ -349,10 +349,10 @@ export default function ClientEDGEPage() {
                     {/* Coverage Banner */}
                     <div className="mt-8 p-6 rounded-xl border border-white/15 bg-white/5 text-center max-w-4xl mx-auto">
                         <h4 className="text-base sm:text-lg font-bold text-white mb-2">
-                            Comprehensive Scope Across 8 Business Areas &amp; 100+ Activities
+                            Comprehensive Scope Across 8 Business Areas &amp; Over 150 Activities
                         </h4>
                         <p className="text-gray-300 text-sm leading-relaxed">
-                            EDGE covers 8 business areas across 100+ activities: <strong>Automation</strong>, <strong>Digitalisation</strong>, <strong>Business Strategy</strong>, <strong>Financial Management</strong>, <strong>Innovation</strong>, <strong>Internationalisation</strong>, <strong>Standards</strong>, and <strong>Sustainability</strong>.
+                            EDGE covers 8 business areas across over 150 activities: <strong>Automation</strong>, <strong>Digitalisation</strong>, <strong>Business Strategy</strong>, <strong>Financial Management</strong>, <strong>Innovation</strong>, <strong>Internationalisation</strong>, <strong>Standards</strong>, and <strong>Sustainability</strong>.
                         </p>
                     </div>
 
@@ -365,7 +365,7 @@ export default function ClientEDGEPage() {
                             rel="noopener noreferrer"
                             className="text-[#C5A017] underline hover:text-yellow-300 transition-colors inline-flex items-center gap-1 font-medium"
                         >
-                            Enterprise Singapore, EDGE Grant FAQ (verified 10 September 2026)
+                            Enterprise Singapore, EDGE Grant FAQ (verified 3 November 2026)
                             <ExternalLink className="h-3.5 w-3.5 inline" />
                         </a>
                     </div>
@@ -401,7 +401,7 @@ export default function ClientEDGEPage() {
                                 PSG Folded into the EDGE Framework
                             </h3>
                             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                                Historically, the <strong>Productivity Solutions Grant (PSG)</strong> supported businesses adopting pre-scoped IT solutions, software, and equipment to enhance productivity. Alongside EDG and MRA, PSG will officially cease on <strong>29 September 2026</strong>.
+                                Historically, the <strong>Productivity Solutions Grant (PSG)</strong> supported businesses adopting pre-scoped IT solutions, software, and equipment to enhance productivity. Alongside EDG and MRA, PSG officially ceased on <strong>29 September 2026</strong>.
                             </p>
                             <p className="text-gray-300 text-sm leading-relaxed">
                                 Starting <strong>30 September 2026</strong>, businesses will no longer apply for PSG as an independent grant. Its supportable activities are unified directly into EDGE under the <strong>Automation</strong> and <strong>Digitalisation</strong> business areas.
@@ -440,7 +440,7 @@ export default function ClientEDGEPage() {
                                 Existing PSG Submissions &amp; Claims Processing
                             </h3>
                             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                                Any PSG application submitted before 30 September 2026 will continue to be evaluated against PSG criteria.
+                                Any PSG application submitted before 30 September 2026 continues to be evaluated against PSG criteria and supported through project completion.
                             </p>
                             <p className="text-gray-300 text-sm leading-relaxed">
                                 Approved PSG projects proceed unaffected until project completion and claim disbursement. After 29 September 2026, no new PSG submissions will be accepted, and all new productivity requests transition to EDGE.
@@ -545,16 +545,16 @@ export default function ClientEDGEPage() {
                 </div>
             </section>
 
-            {/* Apply Now vs. Wait Decision Framework */}
+            {/* EDGE Application Roadmap Framework */}
             <section id="apply-now-or-wait" className="py-20 bg-[#0a0a0a] border-t border-white/10">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <div className="text-center mb-12">
                         <div className="inline-block px-4 py-1.5 mb-3 border border-[#C5A017]/30 rounded-full bg-[#C5A017]/10">
-                            <span className="text-xs font-bold text-[#C5A017] uppercase tracking-wider">Practical Decision Framework</span>
+                            <span className="text-xs font-bold text-[#C5A017] uppercase tracking-wider">Application Roadmap</span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Should You Apply Now, or Wait for EDGE?</h2>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">How to Structure Your EDGE Grant Application</h2>
                         <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
-                            The right timing depends on your specific project. Use this scenario-based framework to decide.
+                            The EDGE Grant is live and accepting applications on the Business Grants Portal (BGP). Determine your project track and funding parameters below.
                         </p>
                     </div>
 
@@ -566,10 +566,10 @@ export default function ClientEDGEPage() {
                             </div>
                             <div className="flex-1">
                                 <div className="flex flex-wrap items-center gap-2 mb-2">
-                                    <h3 className="font-bold text-white text-base">Your project is ready now and fits current EDG, MRA, or PSG criteria</h3>
-                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">Apply Now</span>
+                                    <h3 className="font-bold text-white text-base">Core Business Strategy &amp; Capability Upgrading</h3>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">Up to 50% SME / 30% Non-SME</span>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed">EDG, MRA, and PSG remain fully open on the Business Grants Portal until 29 September 2026. Their requirements are established and processing continues as normal. Delaying carries real risk: EDGE's individual activity funding percentages and documentation requirements have not yet been published. For most projects that are ready to go, applying now under known rules is the lower-risk path.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Projects in Business Strategy, Financial Management, Standards, and custom Process Redesign require engaging an SAC-accredited SS 680 certified management consultant (such as TÜV SÜD PSB, SBACC, or IMCS). Proposals, scopes, and expected commercial KPIs must be prepared upfront before submitting via BGP.</p>
                             </div>
                         </div>
 
@@ -580,10 +580,10 @@ export default function ClientEDGEPage() {
                             </div>
                             <div className="flex-1">
                                 <div className="flex flex-wrap items-center gap-2 mb-2">
-                                    <h3 className="font-bold text-white text-base">Your project involves deepening an existing overseas market (not a new one)</h3>
-                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">Consider Waiting</span>
+                                    <h3 className="font-bold text-white text-base">Internationalisation &amp; Sustainability Transformation</h3>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">Priority Co-Funding: Up to 70%</span>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed">MRA currently requires a &ldquo;new market&rdquo; criterion — support is tied to entering a market you have not previously operated in. EDGE removes this restriction entirely, and raises overseas expansion support from 50% to 70% for SMEs. If your project is about deepening an existing overseas presence, timing your application around the EDGE launch on 30 September 2026 could be the stronger commercial decision — provided your timeline has flexibility of a few months.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Enterprise Singapore prioritises global expansion and environmental sustainability. SMEs qualify for the highest support tier of up to 70% (non-SMEs up to 50%). Businesses can apply for internationalisation across multiple target countries concurrently, defrayed under the overall S,000 annual company grant cap.</p>
                             </div>
                         </div>
 
@@ -594,33 +594,34 @@ export default function ClientEDGEPage() {
                             </div>
                             <div className="flex-1">
                                 <div className="flex flex-wrap items-center gap-2 mb-2">
-                                    <h3 className="font-bold text-white text-base">Your business is a non-SME (larger enterprise or MNC)</h3>
-                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#C5A017]/20 text-[#C5A017] border border-[#C5A017]/30 px-2 py-0.5 rounded-full whitespace-nowrap">Prepare Now — Apply at EDGE Launch</span>
+                                    <h3 className="font-bold text-white text-base">Digital Solutions, Automation &amp; Non-SME Inclusion</h3>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#C5A017]/20 text-[#C5A017] border border-[#C5A017]/30 px-2 py-0.5 rounded-full whitespace-nowrap">Sk Digital Sub-Cap / All Entities</span>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed">Non-SMEs are currently excluded from EDG, PSG, and MRA support in most cases. EDGE extends eligibility to all Singapore-registered businesses, including non-SMEs, at up to 50% of qualifying project costs. Use the period before 30 September 2026 to scope your projects, gather cost estimates, and identify which capability-building, productivity, or internationalisation activities to fund — so you are ready to apply the moment EDGE opens.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Single-function digital tools, integrated enterprise systems, and pre-scoped automation tap an allocated sub-cap of up to S,000 within the S,000 annual limit. Unlike legacy schemes, larger enterprises and non-SMEs with Singapore registration and ≥30% local shareholding are fully eligible to apply.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Epistemic Transparency — What Remains Unconfirmed */}
+            {/* Enterprise Singapore Governance Directives */}
             <section id="what-is-unconfirmed" className="py-20 bg-black border-t border-white/10">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12">
                         <div className="flex items-start gap-4 mb-6">
                             <AlertCircle className="h-6 w-6 text-[#C5A017] shrink-0 mt-0.5" />
                             <div>
-                                <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">What Enterprise Singapore Has Not Yet Confirmed About EDGE</h2>
-                                <p className="text-gray-400 text-sm">Several guides have published granular EDGE details beyond what is officially confirmed. The following specifics are not yet published — treat any third-party claims on these points with caution until official guidelines appear on the Business Grants Portal.</p>
+                                <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">Official Enterprise Singapore Compliance &amp; Submission Rules</h2>
+                                <p className="text-gray-400 text-sm">To ensure successful grant evaluation and claims disbursement on the Business Grants Portal, applicant companies must adhere to these statutory governance directives.</p>
                             </div>
                         </div>
                         <ul className="space-y-3">
                             {[
-                                "Precise co-funding percentage tiers for individual domestic transformation and productivity activities (beyond the confirmed 70% SME / 50% non-SME headline rates)",
-                                "The complete list of pre-approved vendors and pre-scoped packages under EDGE's Digitalisation and Automation areas (the EDGE equivalent of the PSG vendor catalogue)",
-                                "Full documentation and evidence requirements for the unified EDGE application workflow",
-                                "Detailed qualification criteria for each of the 100+ supported activities across the 8 business areas",
+                                "Strictly No Retrospective Applications: Applicants must not have commenced project work, signed binding supplier contracts, or made any payment or deposit prior to BGP submission.",
+                                "Direct Applicant Submission via Corppass: Applications must be submitted directly by authorised company staff holding BGP Preparer or Acceptor roles. Submissions by third-party vendors or consultants on behalf of the applicant are strictly prohibited.",
+                                "Certified Management Consultant Standard: Consultancy projects must appoint an SAC-accredited SS 680 certified management consultant (e.g., TÜV SÜD PSB, SBACC, or IMCS) identified upfront in the BGP proposal.",
+                                "Phased Claims Timeline: Claims for single-function digital solutions and pre-scoped equipment open on 1 December 2026; claims for all other business areas open on 1 January 2027 upon project completion and full payment.",
+                                "Vendor Independence & Related-Party Exclusion: Appointed consultants, suppliers, and service providers must have zero common directors, common shareholding, or commercial ownership ties with the applicant enterprise.",
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
                                     <span className="shrink-0 mt-2 h-1.5 w-1.5 rounded-full bg-[#C5A017]" />
@@ -629,11 +630,10 @@ export default function ClientEDGEPage() {
                             ))}
                         </ul>
                         <p className="text-xs text-gray-500 mt-8 border-t border-white/10 pt-6">
-                            Monitor the{" "}
+                            Verified against official guidelines on{" "}
                             <a href="https://www.businessgrants.gov.sg" target="_blank" rel="noopener noreferrer" className="text-[#C5A017] hover:underline">Business Grants Portal</a>
                             {" "}and{" "}
-                            <a href="https://www.enterprisesg.gov.sg/resources/all-faqs/edge-grant" target="_blank" rel="noopener noreferrer" className="text-[#C5A017] hover:underline">Enterprise Singapore&apos;s official EDGE Grant FAQ</a>
-                            {" "}for updates as they are published.
+                            <a href="https://www.enterprisesg.gov.sg/resources/all-faqs/edge-grant" target="_blank" rel="noopener noreferrer" className="text-[#C5A017] hover:underline">Enterprise Singapore&apos;s official EDGE Grant Documentation</a>.
                         </p>
                     </div>
                 </div>

@@ -191,10 +191,10 @@ export default function PSGAfterSeptember2026Page() {
 
       {/* ── HERO ── */}
       <header className="relative pt-40 pb-16 px-6 text-center max-w-5xl mx-auto space-y-6">
-        {/* Urgency badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-950/60 border border-red-800/60 text-red-400 text-xs font-bold uppercase tracking-widest">
-          <AlertTriangle className="w-3.5 h-3.5" />
-          PSG ceases 29 September 2026 — 19 days remaining
+        {/* Status badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest">
+          <CheckCircle2 className="w-3.5 h-3.5" />
+          PSG Ceased 29 September 2026 — EDGE Grant Live as Sole Pathway
         </div>
 
         <span className="block text-xs uppercase tracking-[0.25em] text-[#8F801B] font-extrabold">
@@ -263,8 +263,8 @@ export default function PSGAfterSeptember2026Page() {
               },
               {
                 n: "02",
-                title: "EDGE Opens 30 Sept 2026",
-                body: "The new EDGE Grant launches 30 September 2026 as the single consolidated pathway replacing EDG, MRA, and PSG.",
+                title: "EDGE Live as of 30 Sept 2026",
+                body: "The new EDGE Grant is officially active as the single consolidated pathway replacing EDG, MRA, and PSG across 8 business areas.",
               },
               {
                 n: "03",

@@ -50,7 +50,7 @@ export default function EDGEGrantPage() {
         "name": "Are the EDG, MRA and PSG schemes still available?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, EDG, MRA, and PSG remain available for applications until 29 September 2026. Applications submitted before 30 September 2026 will continue to be assessed based on the requirements of the relevant scheme. Ongoing projects under these three schemes will not be affected and will be supported until project completion and claim disbursement. After 30 September 2026, no new application will be accepted under these schemes, and the EDGE Grant becomes the sole application pathway."
+          "text": "EDG, MRA, and PSG officially ceased on 29 September 2026. From 30 September 2026 onwards, the new EDGE Grant is the sole application pathway for business grant support. Ongoing applications and approved projects under EDG, MRA, and PSG will continue to be processed and supported through project completion and claim disbursement. After 30 September 2026, no new applications are accepted under legacy schemes."
         }
       },
       {
@@ -58,7 +58,7 @@ export default function EDGEGrantPage() {
         "name": "What is the EDGE Grant and what does it replace?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The EDGE Grant is Enterprise Singapore's unified grant framework launching on 30 September 2026. It streamlines and consolidates the Enterprise Development Grant (EDG), Market Readiness Assistance (MRA), and Productivity Solutions Grant (PSG) into a single, simplified application pathway."
+          "text": "The EDGE Grant is Enterprise Singapore's unified grant framework launched on 30 September 2026. It streamlines and consolidates the Enterprise Development Grant (EDG), Market Readiness Assistance (MRA), and Productivity Solutions Grant (PSG) into a single application pathway covering 8 business areas and over 150 activities."
         }
       },
       {
@@ -74,7 +74,7 @@ export default function EDGEGrantPage() {
         "name": "What are the funding support levels and grant caps under the EDGE Grant?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The EDGE Grant provides up to 70% of qualifying costs for SMEs and up to 50% for non-SMEs, disbursed on a reimbursement basis. Each company has an annual grant cap of up to S$100,000 in total grant support per company per year across all activities combined, which resets annually. Within this S$100,000 cap, up to S$30,000 can be used for single-function digital solutions, integrated enterprise systems, and selected automation activities."
+          "text": "The EDGE Grant provides up to 50% co-funding support for SMEs and up to 30% for non-SMEs on general capability activities, and up to 70% support for SMEs and up to 50% for non-SMEs on internationalisation and sustainability activities, disbursed on a reimbursement basis. Each company has an annual grant cap of up to S$100,000 across all activities combined, refreshed on 1 April each year. Within this S$100,000 cap, up to S$30,000 can be used for single-function digital solutions, integrated enterprise systems, and pre-scoped equipment."
         }
       },
       {
@@ -90,7 +90,7 @@ export default function EDGEGrantPage() {
         "name": "What business areas and activities does EDGE cover?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "EDGE covers 8 business areas across 100+ activities: Automation, Digitalisation, Business Strategy, Financial Management, Innovation, Internationalisation, Standards, and Sustainability."
+          "text": "EDGE covers 8 business areas across over 150 activities: Automation, Digitalisation, Business Strategy, Financial Management, Innovation, Internationalisation, Standards, and Sustainability."
         }
       },
       {
@@ -106,7 +106,7 @@ export default function EDGEGrantPage() {
         "name": "Can a business apply for EDGE if it has previously applied for or received funding under EDG, MRA, or PSG?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, businesses that have previously applied for or received funding under EDG, MRA, or PSG can apply for EDGE."
+          "text": "Yes, businesses that have previously applied for or received funding under EDG, MRA, or PSG can apply for EDGE. The grant caps under EDGE do not take into account previous grant utilisation under legacy schemes. However, EDGE support is intended strictly for new projects; businesses cannot seek grant support for the same project already supported under legacy schemes."
         }
       },
       {

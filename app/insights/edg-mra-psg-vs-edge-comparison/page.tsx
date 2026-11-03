@@ -264,9 +264,9 @@ export default function EDGMRAMPSGvsEDGEComparisonPage() {
 
       {/* ── HERO ── */}
       <header className="relative pt-40 pb-16 px-6 text-center max-w-5xl mx-auto space-y-6">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-950/60 border border-amber-800/60 text-amber-400 text-xs font-bold uppercase tracking-widest">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest">
           <Clock className="w-3.5 h-3.5" />
-          Transition Deadline: 29 September 2026 · Launch: 30 September 2026
+          Cutover Completed: 29 September 2026 · EDGE Grant Active
         </div>
 
         <span className="block text-xs uppercase tracking-[0.25em] text-[#8F801B] font-extrabold">
@@ -279,7 +279,7 @@ export default function EDGMRAMPSGvsEDGEComparisonPage() {
         </h1>
 
         <p className="text-base md:text-lg text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-          The ultimate side-by-side comparative guide: How Enterprise Singapore&apos;s three legacy schemes differ from the unified EDGE Grant framework launching 30 September 2026, and how business leaders should position their grant strategy.
+          The ultimate side-by-side comparative guide: How Enterprise Singapore&apos;s three legacy schemes differ from the unified EDGE Grant framework (active as of 30 September 2026), and how business leaders should position their grant strategy.
         </p>
 
         <p className="text-xs text-neutral-500 max-w-xl mx-auto">
