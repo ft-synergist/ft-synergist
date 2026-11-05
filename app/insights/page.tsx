@@ -70,6 +70,12 @@ export default function InsightsPage() {
           "position": 8,
           "url": "https://www.ftsynergist.com/insights/edg-mra-psg-vs-edge-comparison",
           "name": "EDG vs MRA vs PSG vs EDGE Grant: Full Side-by-Side Comparison (Singapore 2026)"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://www.ftsynergist.com/insights/starting-scaling-2027-ip-engine",
+          "name": "Starting & Scaling in 2027 Through the IP Engine: How Singapore Brands Navigate 4 Macroeconomic Shocks by Commercialising Defensible, Asset-Light Intellectual Property"
         }
       ]
     }
@@ -166,6 +172,33 @@ export default function InsightsPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+
+          {/* Item 0 - Starting & Scaling in 2027 Through the IP Engine */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-gray-900 mb-4 overflow-hidden rounded-lg shadow-sm border border-neutral-800">
+              <Image
+                src="/report-2027-ip-engine-cover.png"
+                alt="Starting & Scaling in 2027 Through the IP Engine"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
+            <span className="text-xs font-semibold text-[#8F801B] uppercase tracking-wider mb-1">
+              IP Commercialisation &amp; 2027 Strategy
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/starting-scaling-2027-ip-engine">
+                Starting &amp; Scaling in 2027 Through the IP Engine
+              </Link>
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              November 2026
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              How Singapore brands navigate 4 macroeconomic shocks (RTS Link, 34.4% occupancy cost, manpower caps, and AI disruption) by commercialising defensible, asset-light intellectual property.
+            </p>
+          </div>
 
           {/* Item 1 */}
           <div className="flex flex-col group cursor-pointer">
