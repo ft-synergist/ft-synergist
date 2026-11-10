@@ -1,11 +1,10 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Starting & Scaling in 2027 Through the IP Engine | IP Consulting Singapore | FT Synergist",
+  title: "Starting & Scaling in 2027 Through the IP Engine | FT Synergist",
   description:
-    "How Singapore brands navigate 4 macroeconomic shocks by commercialising defensible, asset-light intellectual property. Executive IP consulting Singapore report benchmarking LEGO, Charles & Keith, Eu Yan Sang (S$808M exit), and Banyan Group via the PCBC Model.",
+    "How Singapore brands navigate 4 macroeconomic shocks by commercialising defensible, asset-light intellectual property. Benchmark LEGO, Charles & Keith, Eu Yan Sang (S$808M exit), and Banyan Group via the PCBC Model.",
   keywords: [
-    "IP consulting Singapore",
     "IP consultant Singapore",
     "intellectual property consultant Singapore",
     "IP strategy consultant Singapore",
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     canonical: "https://www.ftsynergist.com/insights/starting-scaling-2027-ip-engine",
   },
   openGraph: {
-    title: "Starting & Scaling in 2027 Through the IP Engine | IP Consulting Singapore | FT Synergist",
+    title: "Starting & Scaling in 2027 Through the IP Engine | FT Synergist",
     description:
       "How Singapore brands navigate 4 macroeconomic shocks by commercialising defensible, asset-light intellectual property. Full 19-slide PCBC benchmark report by FT Synergist.",
     url: "https://www.ftsynergist.com/insights/starting-scaling-2027-ip-engine",
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
         url: "https://www.ftsynergist.com/report-2027-ip-engine-cover.png",
         width: 1280,
         height: 720,
-        alt: "Starting & Scaling in 2027 Through the IP Engine — IP Consulting Singapore Executive Report",
+        alt: "Starting & Scaling in 2027 Through the IP Engine — FT Synergist Executive Report",
       },
     ],
     locale: "en_SG",

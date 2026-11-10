@@ -136,12 +136,12 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Report 2: State of AI */}
+            {/* Report 2: Starting & Scaling in 2027 Through the IP Engine */}
             <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
               <div className="card-image-container relative h-64 sm:h-72">
                 <Image
-                  src="/report-ai-cover.png"
-                  alt="State of AI in Southeast Asia 2026 Report Cover"
+                  src="/report-2027-ip-engine-cover.png"
+                  alt="Starting &amp; Scaling in 2027 Through the IP Engine Report Cover"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -150,16 +150,16 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4">
                   <div className="inline-flex items-center rounded-full bg-[#8F801B]/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/20">
-                    Market Intelligence
+                    IP Engine &amp; 2027 Strategy
                   </div>
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">State of AI in Southeast Asia 2026</h3>
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">Starting &amp; Scaling in 2027: IP Engine</h3>
                 <p className="text-gray-600 mb-6 flex-grow">
-                  A comprehensive analysis of AI adoption trends across Singapore, Indonesia, and Vietnam. Discover how leading firms leverage AI from pilot to utility.
+                  How Singapore brands navigate 4 macroeconomic shocks by commercialising defensible, asset-light IP across the PCBC framework. Benchmarking LEGO, Charles &amp; Keith, Eu Yan Sang, and Banyan Group.
                 </p>
-                <Link href="/insights/state-of-ai-2026" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
+                <Link href="/insights/starting-scaling-2027-ip-engine" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
                   Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
