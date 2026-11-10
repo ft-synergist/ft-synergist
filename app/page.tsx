@@ -21,6 +21,9 @@ const ClientImpact = dynamic(() => import("@/components/ClientImpact"));
 export const metadata: Metadata = {
   title: 'Top Business Consultant, EDG, MRA & AI Digitalisation Specialist | FT Synergist Singapore',
   description: 'FT Synergist provides elite business consulting, Enterprise Development Grant (EDG), Market Readiness Assistance (MRA), franchise scaling, AI digitalisation, and sustainability strategy for Singapore enterprises.',
+  alternates: {
+    canonical: 'https://www.ftsynergist.com/',
+  },
 };
 
 export default function Home() {

@@ -7,6 +7,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Strategic Insights | FT Synergist",
   description: "Market-defining research, grant frameworks, and operational roadmaps for Singaporean enterprises.",
+  alternates: {
+    canonical: "https://www.ftsynergist.com/insights",
+  },
 };
 
 export default function InsightsPage() {

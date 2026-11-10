@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: "Upcoming Business Events & Workshops | FT Synergist",
     description: "Join our exclusive events, workshops, and networking sessions in Singapore. Learn about EDG grants, AI implementation, and business scaling strategies.",
     keywords: ["Business Events Singapore", "SME Workshops", "Networking Events", "EDG Grant Seminar", "AI for Business Workshop"],
+    alternates: {
+        canonical: "https://www.ftsynergist.com/events",
+    },
 };
 
 export default async function EventsPage() {

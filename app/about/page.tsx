@@ -7,6 +7,9 @@ import { CheckCircle2, MapPin, Award, ArrowRight, Landmark, Building2, TrendingU
 export const metadata: Metadata = {
   title: "About FT Synergist | Strategic SME Consultants Singapore",
   description: "Founded by Frederick Tan (SCMC). We are entrepreneurs first and consultants second. Strategic management consulting, cross-border capital allocation, and enterprise scaling.",
+  alternates: {
+    canonical: "https://www.ftsynergist.com/about",
+  },
   openGraph: {
     title: "About FT Synergist | Strategic SME Consultants Singapore",
     description: "Accelerating 100 Entrepreneurs to Impact 100 Million Lives in Asia.",
