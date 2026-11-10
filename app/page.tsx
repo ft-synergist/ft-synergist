@@ -112,7 +112,7 @@ export default function Home() {
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {/* Report 1: RTS Link Retail Defense */}
             <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
-              <div className="card-image-container relative h-64 sm:h-72">
+              <div className="card-image-container relative aspect-[16/9] w-full border-b border-gray-100 bg-gray-900">
                 <Image
                   src="/report-rts-cover.png"
                   alt="The RTS Link & Singapore Retail Defense Framework"
@@ -122,78 +122,88 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-                <div className="absolute bottom-4 left-4">
-                  <div className="inline-flex items-center rounded-full bg-[#8F801B] px-3 py-1 text-xs font-bold text-white mb-2 shadow-md">
+                <div className="absolute bottom-3 left-4">
+                  <div className="inline-flex items-center rounded-full bg-[#8F801B] px-3 py-1 text-xs font-bold text-white shadow-md">
                     Executive Report
                   </div>
                 </div>
               </div>
-              <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">RTS Link &amp; Singapore Retail Defense</h3>
-                <p className="text-gray-600 mb-6 flex-grow">
-                  Countering S$2.1B revenue leakage, optimizing suburban REIT portfolios, and executing JS-SEZ operational twinning frameworks for Singapore enterprises.
-                </p>
-                <Link href="/insights/rts-link-singapore-retail-defense" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
-                  Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+              <div className="p-8 flex flex-col flex-grow justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">RTS Link &amp; Singapore Retail Defense</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
+                    Countering S$2.1B revenue leakage, optimizing suburban REIT portfolios, and executing JS-SEZ operational twinning frameworks for Singapore enterprises.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <Link href="/insights/rts-link-singapore-retail-defense" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
+                    Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Report 2: Starting & Scaling in 2027 Through the IP Engine */}
             <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
-              <div className="card-image-container relative h-64 sm:h-72">
+              <div className="card-image-container relative aspect-[16/9] w-full border-b border-gray-100 bg-gray-50">
                 <Image
                   src="/report-2027-ip-engine-cover.png"
                   alt="Starting &amp; Scaling in 2027 Through the IP Engine Report Cover"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-contain transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-                <div className="absolute bottom-4 left-4">
-                  <div className="inline-flex items-center rounded-full bg-[#8F801B]/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/20">
+                <div className="absolute bottom-3 left-4">
+                  <div className="inline-flex items-center rounded-full bg-[#8F801B] px-3 py-1 text-xs font-bold text-white shadow-md">
                     IP Engine &amp; 2027 Strategy
                   </div>
                 </div>
               </div>
-              <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">Starting &amp; Scaling in 2027: IP Engine</h3>
-                <p className="text-gray-600 mb-6 flex-grow">
-                  How Singapore brands navigate 4 macroeconomic shocks by commercialising defensible, asset-light IP across the PCBC framework. Benchmarking LEGO, Charles &amp; Keith, Eu Yan Sang, and Banyan Group.
-                </p>
-                <Link href="/insights/starting-scaling-2027-ip-engine" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
-                  Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+              <div className="p-8 flex flex-col flex-grow justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">Starting &amp; Scaling in 2027: IP Engine</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
+                    How Singapore brands navigate 4 macroeconomic shocks by commercialising defensible, asset-light IP across the PCBC framework. Benchmarking LEGO, Charles &amp; Keith, Eu Yan Sang, and Banyan Group.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <Link href="/insights/starting-scaling-2027-ip-engine" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
+                    Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Report 3: Wang Lao Ji */}
             <div className="flex flex-col rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-200 group hover:shadow-lg transition-shadow">
-              <div className="card-image-container relative h-64 sm:h-72">
+              <div className="card-image-container relative aspect-[16/9] w-full border-b border-gray-100 bg-gray-50">
                 <Image
                   src="/report-wlj-cover.png"
                   alt="Global Expansion Roadmap: Wang Lao Ji to Global Brand"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-contain transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-                <div className="absolute bottom-4 left-4">
-                  <div className="inline-flex items-center rounded-full bg-[#8F801B]/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white mb-2 border border-white/20">
+                <div className="absolute bottom-3 left-4">
+                  <div className="inline-flex items-center rounded-full bg-[#8F801B] px-3 py-1 text-xs font-bold text-white shadow-md">
                     Global Case Study
                   </div>
                 </div>
               </div>
-              <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">Global Expansion: Wang Lao Ji</h3>
-                <p className="text-gray-600 mb-6 flex-grow">
-                  5 Scaling Lessons from Wang Lao Ji for SMEs. Learn how a 197-year legacy brand transformed into a global lifestyle icon via the PCBC framework.
-                </p>
-                <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
-                  Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+              <div className="p-8 flex flex-col flex-grow justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">Global Expansion: Wang Lao Ji</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
+                    5 Scaling Lessons from Wang Lao Ji for SMEs. Learn how a 197-year legacy brand transformed into a global lifestyle icon via the PCBC framework.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="inline-flex items-center text-[#8F801B] font-bold hover:underline group-hover:text-[#8F801B]/80 transition-colors">
+                    Read Full Report <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
