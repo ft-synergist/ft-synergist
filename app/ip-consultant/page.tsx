@@ -40,13 +40,14 @@ const faqItems = [
 
 export default function IPConsultantPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedService, setSelectedService] = useState('business-strategy');
+    const [selectedService, setSelectedService] = useState('ip-strategy');
     const [showStickyBar, setShowStickyBar] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
-    // Locked 5 Sprint Google Calendar Schedule Mapping
+    // Locked 5 Sprint Google Calendar Schedule Mapping + IP Strategy
     const calendarUrls: Record<string, string> = {
+        "ip-strategy": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true",
         "business-strategy": "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06H3HVfxJ_qIDCDbf-kOxlt7ufKnq0lLsBwSDvnJ_sIkgaNV5_0cjxSDnw4p7iPWtsvR2kHfnw?gv=true",
         "strategic-brand": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1KtH1PGLFwfzWLr0MYr_Q9O4FLI78uRKX8FpNv0Z7A-NHMgYz2aPOT841cBzNPM8CquHvgBeAV?gv=true",
         "innovation-productivity": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qr3SmjWpxiA6xfoBwO1uTYv4_dX4UkWMSWHn-yY2Z5X-EsSVJiiNeFfvowWLuxBrK0kLJYrTi?gv=true",
@@ -79,17 +80,15 @@ export default function IPConsultantPage() {
         }
     };
 
-    const handleOpenSprintModal = (presetService?: string) => {
-        if (presetService) {
-            setSelectedService(presetService);
-        }
+    const handleOpenSprintModal = (presetService: string = 'ip-strategy') => {
+        setSelectedService(presetService);
         setIsModalOpen(true);
         trackLead();
     };
 
     const handleLaunchCalendar = (e: React.FormEvent) => {
         e.preventDefault();
-        const targetUrl = calendarUrls[selectedService];
+        const targetUrl = calendarUrls[selectedService] || calendarUrls["ip-strategy"];
         if (typeof window !== "undefined") {
             window.open(targetUrl, '_blank', 'noopener,noreferrer');
         }
@@ -118,9 +117,9 @@ export default function IPConsultantPage() {
             <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
                 {/* 1. EXACT MATCH H1 */}
                 <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
-                    IP Strategy Consultant Singapore <br className="hidden sm:inline" />
-                    <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
-                        IPOS GoBusiness Advisory
+                    IP Consultant Singapore <br className="hidden sm:inline" />
+                    <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200 text-2xl sm:text-3xl md:text-4xl block mt-3 font-semibold">
+                        IP Strategy, Valuation &amp; IPOS GoBusiness Advisory
                     </span>
                 </h1>
 
@@ -158,7 +157,7 @@ export default function IPConsultantPage() {
                     </p>
                     <div className="pt-2">
                         <button
-                            onClick={() => handleOpenSprintModal('business-strategy')}
+                            onClick={() => handleOpenSprintModal('ip-strategy')}
                             className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center justify-center"
                         >
                             Book 60-Minute Strategy Sprint
@@ -183,7 +182,7 @@ export default function IPConsultantPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Pillar Card 1 */}
                         <div
-                            onClick={() => handleOpenSprintModal('business-strategy')}
+                            onClick={() => handleOpenSprintModal('ip-strategy')}
                             className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
                         >
                             <div>
@@ -200,7 +199,7 @@ export default function IPConsultantPage() {
 
                         {/* Pillar Card 2 */}
                         <div
-                            onClick={() => handleOpenSprintModal('business-strategy')}
+                            onClick={() => handleOpenSprintModal('ip-strategy')}
                             className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
                         >
                             <div>
@@ -217,7 +216,7 @@ export default function IPConsultantPage() {
 
                         {/* Pillar Card 3 */}
                         <div
-                            onClick={() => handleOpenSprintModal('business-strategy')}
+                            onClick={() => handleOpenSprintModal('ip-strategy')}
                             className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
                         >
                             <div>
@@ -390,7 +389,7 @@ export default function IPConsultantPage() {
                             </p>
                         </div>
                         <button
-                            onClick={() => handleOpenSprintModal('business-strategy')}
+                            onClick={() => handleOpenSprintModal('ip-strategy')}
                             className="shrink-0 bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-3.5 px-6 rounded-lg text-sm transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center"
                         >
                             Assess IP Valuation
@@ -450,7 +449,7 @@ export default function IPConsultantPage() {
                         De-risk your intangible asset portfolio with a TÜV SÜD Accredited SCMC Consultant listed on the IPOS GoBusiness directory.
                     </p>
                     <button
-                        onClick={() => handleOpenSprintModal('business-strategy')}
+                        onClick={() => handleOpenSprintModal('ip-strategy')}
                         className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-10 rounded-lg text-lg transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center justify-center"
                     >
                         Book 60-Minute Strategy Sprint
@@ -467,7 +466,7 @@ export default function IPConsultantPage() {
                         <span className="text-xs font-bold text-white uppercase tracking-wide">60-Min IP Sprint</span>
                     </div>
                     <button
-                        onClick={() => handleOpenSprintModal('business-strategy')}
+                        onClick={() => handleOpenSprintModal('ip-strategy')}
                         className="bg-[#8F801B] text-white font-bold py-2 px-4 rounded text-xs transition-transform hover:scale-105 cursor-pointer flex items-center gap-1"
                     >
                         <span>Book Now</span>
@@ -507,6 +506,7 @@ export default function IPConsultantPage() {
                                     className="w-full border border-slate-300 rounded-lg p-3.5 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none bg-white text-slate-900 font-medium"
                                     onChange={(e) => setSelectedService(e.target.value)}
                                 >
+                                    <option value="ip-strategy">IP &amp; Business Strategy Sprint (60 Mins)</option>
                                     <option value="business-strategy">Business Strategy Sprint</option>
                                     <option value="strategic-brand">Brand Strategy Sprint</option>
                                     <option value="innovation-productivity">Innovation &amp; Productivity Sprint</option>
