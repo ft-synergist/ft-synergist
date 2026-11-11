@@ -92,4 +92,12 @@ Never bundle a caution-flagged sprint with pre-approved sprints in a single inst
 - **Official Contact Email:** `fredtan@ftsynergist.com` (Never invent or use placeholder emails like `advisory@` or `info@`).
 - **Unified Grant Standard:** **EDGE Grant** (`/edge-grant`, Enterprise Singapore's unified grant replacing EDG, MRA, and PSG effective 30 September 2026. Note: EDGE is not an acronym).
 
+---
+
+## 8. Immutable Source of Truth Standard (EDGE Grant Policy & Capabilities)
+- **Official Protected S.O.T. Document:** `docs/verified-edge-facts-2026-11-12.md`
+- **Protected File Directive:** This document is strictly protected and **MUST NEVER be overwritten, modified, or truncated** unless explicitly authorized by the user.
+- **Strict Implementation Mandate:** All new code, metadata, copy, grant calculators, audit forms, and consultation frameworks created or modified henceforth MUST strictly adhere to the verified figures, support levels, and cost exclusions defined in `docs/verified-edge-facts-2026-11-12.md`.
+- **Accompanying Hash-Pinned Raw Evidence:** Raw HTML snapshots, tab endpoints, and activity payloads are permanently archived under `docs/source-snapshots/enterprisesg-cp-2026-11-12/` with checksums pinned in `docs/source-snapshots/enterprisesg-cp-2026-11-12/SHA256SUMS`.
+
 

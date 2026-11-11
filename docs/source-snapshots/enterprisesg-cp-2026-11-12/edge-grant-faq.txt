@@ -1,0 +1,357 @@
+-
+Resources
+/
+-
+All FAQs
+/
+-
+EDGE Grant
+/
+FAQ: EDGE Grant
+Application
+EDGE
+-
+What is EDGE?
+EDGE streamlines EDG, MRA and PSG into a single grant, enabling businesses to access support aligned to their needs more seamlessly. Businesses can benefit from a simplified and more seamless process when navigating and applying for funding based on their intended activities, such as improving business efficiencies, expanding into a new market, and enhancing digitalisation capabilities, among others.
+-
+What does EDGE stand for?
+EDGE is not an acronym. EDGE conveys the intent of the support, which is for our enterprises to have an edge over their competitors.
+-
+Who can apply for EDGE?
+The applicant must be a business entity registered in Singapore with at least 30% Singaporean(s) and/or Singapore PR(s) ownership. Other requirements may apply, depending on the supportable activity.
+-
+Can a non-profit organisation apply for EDGE?
+EDGE only supports Singapore-registered business entities. Applications from entities such as non-profit organisations, societies, religious entities, voluntary welfare organisation, government statutory boards or government subsidiaries, etc. will be rejected.
+-
+When to apply for EDGE?
+EDGE has launched on 30 September 2026. Businesses can discover suitable activities through Enterprise Singapore's website or BizSG, and submit applications via the Business Grants Portal (BGP) links provided on the respective activity pages.
+-
+What is the grant cap for EDGE?
+Under EDGE, each company has an annual grant cap of S$100,000 for all eligible activities, with the cap resetting each year (starting on 1 April and ending on 31 March the following year). Within the S$100,000 grant cap, the company can use up to S$30,000 on single-function digital solutions, integrated enterprise systems and pre-scoped equipment. If businesses are unable to find a suitable activity under EDGE, they may approach the SME Centres for business advice, access to relevant toolkits and resources, or referrals to relevant partners, as well as advice on other relevant non-EDGE government support schemes.
+-
+What happens when the grant cap is fully utilised?
+Companies that have fully utilised their grant caps will not be eligible for further support within the validity period of the grant cap. They may apply for new activities in the next period when the grant caps are refreshed.
+-
+Is the $100,000 grant cap the sum of all the activities applied by the company?
+Each company can receive up to $100,000 a year in total, for all eligible activities it plans to carry out during the year. Within this S$100,000, the company can use up to S$30,000 on single-function digital solutions, integrated enterprise systems and pre-scoped equipment. This information can be found on the Enterprise Singapore's website and BizSG.
+-
+What is the funding support level (e.g., percentage, cap) under EDGE?
+Businesses will receive funding support of up to 50% support for SMEs and up to 30% support for non-SMEs (up to 70% support for internationalisation and sustainability activities for SMEs and up to 50% support for non-SMEs). Details on the grant cap and eligibility criteria for each supportable activity can be found on the Enterprise Singapore's website or BizSG.
+-
+What is the maximum project duration allowed under EDGE?
+The supportable period varies depending on the activity selected.
+For more details, businesses may refer to the Enterprise Singapore's website.
+-
+How long does it take for EDGE applications to be processed?
+The processing duration varies depending on the activity selected. This information can be found either on the EDGE webpages on Enterprise Singapore's website or BizSG from 30 September 2026 onwards.
+-
+How many grants can a company apply for?
+Companies can apply for suitable activities based on their business needs, with one application submitted for each activity, subject to the annual grant cap of S$100,000.
+Support for single function digital solutions, integrated enterprise systems and pre-scoped equipment will count towards the company's annual grant cap of S$30,000, within the overall annual grant cap of S$100,000.
+Support is extended as follows:
+- Selected single-function digital solutions & integrated enterprise systems: Limited to one application per UEN
+- Pre-scoped equipment: Applicable for multiple locations per UEN
+Deployment locations are defined based on postal code. To illustrate, different unit numbers with the same postal code will be deemed as the same deployment location.
+Please note that the supportability is subject to further assessment on business use and reasonableness.
+-
+Can a company submit a single application for multiple activities? (e.g. 1 application for digitalisation & internationalisation activities)
+Companies should apply for suitable activities based on their business needs, with one application submitted for each activity.
+-
+Can I apply for 2 projects/ solutions concurrently?
+Yes, the company can submit multiple applications at the same time for different activities.
+-
+What does a retrospective application mean?
+An application is deemed to be retrospective if the applicant has started work or made any payment or deposit to a supplier, vendor, or third party prior to application submission. Retrospective applications will not be supported.
+-
+Can I claim expenses that were incurred before EDGE was launched?
+EDGE will only support expenses incurred within the project qualifying period for applications submitted after its launch. Businesses must not have started work or made any payment or deposit to a supplier, vendor, or third party prior to application submission.
+-
+Can I pay for my project/ solution after submitting my EDGE application but before receiving approval?
+You may purchase the solution after successfully submitting the application and before receiving approval. Payment made after the application submission date may be supported if the application is subsequently approved. However, submission does not guarantee approval, and the company will bear the risk of any commitment made before the grant is approved.
+-
+Are three quotations required for an EDGE application?
+The documents required for assessment vary depending on the activity selected. Businesses are reminded to exercise due diligence in their vendor selection, and may refer to the Enterprise Singapore's website for more details on the documents and information required.
+-
+What criteria should I use when selecting a vendor for an EDGE project?
+Vendor requirements vary by EDGE activity. Please refer to the "Application Documents and Information to Prepare" section on the Enterprise Singapore's website for requirements applicable to the selected activity, and exercise due diligence when assessing vendor suitability.
+-
+How can I find a qualified consultant?
+There is no restriction on where consultants are sourced from, as long as they meet the qualifications required for the grant activity.
+-
+For application of EDGE, can I engage any vendor, or do I have to choose from a pre-approved list?
+This is dependent on the activity selected. For activities with pre-approved vendors, businesses should choose from the list as they have been assessed for their credibility. For activities where no pre-approved vendor is required, businesses may engage a vendor of their choice.
+-
+Why do I need to work with consultants who possess the SAC-accredited SS 680 certification? How do I benefit?
+These consultants are certified by personnel certification bodies that have been accredited by the SAC to help businesses identify and select management consultants that can support their business upgrading journey.
+This certification recognises management consultants who possess the right knowledge, competence, ethics and experience with the management consultancy process to support businesses in their projects and growth strategies.
+-
+How can I engage consultants who possess the SAC-accredited SS 680 certification?
+The SAC has accredited personnel certification bodies with certification schemes for management consultants. Examples of SAC-accredited personnel certification bodies include the Institute of Management Consultants (Singapore) , Singapore Business Advisors and Consultants Council Ltd and TUV SUD PSB Pte Ltd . Companies can find more information on respective certification body’s respective websites.
+-
+Can companies engage a related associate as the third-party consultant/ vendor?
+The grant applicant shall ensure that the suppliers and service providers engaged in the project do not have any relationship, connection, association or dealings with the grant applicant or its related companies or their directors and common shareholders.
+-
+What are the supportable projects and/or activities under EDGE?
+Supportable activities include improving business efficiencies, expansion into new markets and enhancement of digitalisation capabilities, among others. Businesses can refer to the list of supportable activities on the EDGE website or BizSG .
+-
+What if I don’t know what scope my project falls under?
+Businesses can find details on EDGE on the Enterprise Singapore's website or BizSG. For further assistance, businesses can make an appointment with the SME Centres here .
+-
+What should I do if the solution I need is not available under EDGE?
+If you are unable to find a suitable activity, you may approach the SME Centres to find out about other forms of support that may be available.
+-
+Which entity should apply, pay and claim?
+The grant applicant company should apply and make payment for the project. Application/ claim submission and payment must not be made by vendors or third parties on behalf of the Company. Applicant will also be required to declare any relationship with vendors.
+-
+Who within my company can submit an EDGE application on BGP?
+Personnel given the Corppass roles of BGP Preparer and BGP Acceptor can submit EDGE applications.
+-
+What happens if the personnel handling the company’s grant application leaves the company? Can another staff submit the application on his/her behalf?
+Any personnel assigned as a BGP user in the company and given a Preparer or Acceptor role by the company’s Corppass Administrator can edit and submit the grant application. Contact details of the new user should be updated on BGP.
+-
+Can a company request other parties such as vendors/ service providers/ corporate secretaries or any other third party to submit EDGE applications, change requests, claims, on their behalf?
+All submissions in BGP must be made by the grant applicant through its authorised employees/ staff (i.e. users). Submissions must not be made by vendors, service providers, or any other third party, on behalf of the grant applicant.
+-
+My application was rejected previously. Can I try again?
+You may wish to consider why the previous application was rejected before submitting a new application. Projects that are not aligned with the intent of the EDGE grant, or those that have already commenced, will not be supported.
+You may speak to business advisors at our SME Centres for advice on business upgrading.
+-
+Can the EDGE grant be provided on a cash advancement basis?
+No. The EDGE grant is administered on a reimbursement basis to ensure that the grants are strictly utilised for the approved project.
+-
+Can a company apply for EDGE in addition to other financial schemes from Enterprise Singapore or other government agencies?
+Companies are not allowed to apply for EDGE support after they have received grant approvals from Enterprise Singapore or other agencies for the same eligible expenses.
+-
+Can businesses still apply for EDG, MRA, and PSG once EDGE is launched, and when is the last date to submit claims under SkillsFuture Enterprise Credit?
+Applications submitted for EDG, MRA, and PSG before 30 September 2026 will continue to be assessed based on the requirements of the relevant scheme. Ongoing projects under these three schemes will not be affected and will be supported until project completion and claim disbursement. After 30 September 2026, no new application will be accepted under these schemes.
+For SkillsFuture Enterprise Credit (SFEC)- supported programmes under the abovementioned grant schemes, employers are required to submit the final claims by 30 November 2026. More details on SFEC can be found here . EDGE will not be supportable under SFEC.
+-
+I recently applied for EDG, MRA and PSG. What will happen to my application?
+Applications submitted for EDG, MRA, and PSG before 30 September 2026 will continue to be assessed based on the requirements of the relevant scheme. Ongoing projects under these three schemes will not be affected and will be supported until project completion and claim disbursement. After 30 September 2026, no new application will be accepted under these schemes.
+For SkillsFuture Enterprise Credit (SFEC)- supported programmes under the abovementioned grant schemes, employers are required to submit the final claims by 30 November 2026. More details on SFEC can be found here. EDGE will not be supportable under SFEC.
+-
+Can a business apply for EDGE if it has previously applied for or received funding under EDG, MRA, or PSG?
+Yes, businesses that have previously applied for or received funding under EDG, MRA, or PSG can apply for EDGE. Businesses can refer to the Enterprise Singapore's website for the list of supportable activities under EDGE and submit an application based on their business needs. Businesses should note that EDGE grant support is intended for new projects. If a project has previously received support under EDG, MRA, or PSG, businesses should not be seeking grant support for the same project under EDGE, and are encouraged to direct their grant balance towards new projects instead.
+-
+Will my existing EDG, MRA or PSG grant amounts count towards the EDGE grant cap?
+Under EDGE, each company has an annual grant cap of S$100,000 for all eligible activities, with the cap resetting each year (starting on 1 April and ending on 31 March the following year). Within the S$100,000 grant cap, the company can use up to S$30,000 on single-function digital solutions, integrated enterprise systems and selected automation activities. These caps are applicable for EDGE applications, and do not take into account previous grant utilisation under EDG, MRA and PSG. Companies should note that EDGE grant support is intended for new projects. If a project has previously received support under EDG, MRA, or PSG, companies should not be seeking grant support for the same project under EDGE, and are encouraged to direct their grant balance towards new projects instead.
+-
+What is a grant activity for EDGE?
+Grant activity refers to a scope that a company can undertake and receive grant support for. Each EDGE activity has its own requirements, in terms of supported costs and expected deliverables.
+-
+What is a project qualifying period for EDGE?
+Project duration/Project qualifying period refers to the period of time that a project is expected to run from start to finish, within which all project deliverables and supported expenses must be completed and incurred to be eligible for grant support.
+-
+How is project qualifying period calculated?
+Upon application approval, the project qualifying period begins from the date of application submission, with the end date calculated from the date of application approval. The project qualifying period varies by activity. Please refer to the relevant activity page on EnterpriseSG's corporate website or your Letter of Offer for more details.
+-
+What is an EDGE project deliverable?
+Project deliverable refers to the specific outputs that the company must complete and demonstrate by the end of the project, in order to submit a claim to EnterpriseSG to obtain the grant support. These are stated within the grant Letter of Offer, and applicants will be required to show proof and documentations that they have been achieved when submitting the claim.
+-
+What is an SME?
+An SME refers to a company that has a group annual sales turnover of not more than S$100 million, or a group employment size of no more than 200 workers. The group refers to all companies that own more than 50% of the applicant company, as well as all companies that the applicant company owns more than 50% of.
+Automation & Digitalisation
+-
+How does the $30,000 cap for digitalisation & automation work?
+Each company can receive up to S$100,000 a year in total, for all eligible activities it plans to carry out during the year. Within this S$100,000, the company can only use up to S$30,000 on single-function digital solutions, integrated enterprise systems and pre-scoped equipment. This is to encourage businesses across industries to take their first steps in adopting solutions to improve their productivity. Businesses have a diverse range of solutions and vendors to choose from, and they can select solutions that best suit their needs and offer value for money.
+-
+Does the $30,000 refresh per FY?
+Each company can receive up to S$100,000 a year in total, for all eligible activities it plans to carry out during the year. Within this S$100,000, companies can only use up to S$30,000 on single-function digital solutions, integrated enterprise systems and pre-scoped equipment. These caps are refreshed annually, starting on 1 April and ending on 31 March the following year. To tap on the grant caps within the same year, applications should be submitted before 31 March.
+-
+Can the equipment or digital solution supported under EDGE be used for the grant applicant’s subsidiary or related party?
+No, the equipment or digital solution should only be used by the applicant entity and not by a related party.
+-
+Can I submit a future-dated Tenancy Agreement for my EDGE Automation & Digitalisation application?
+Companies will be requested for their tenancy agreement only if they are deploying the solution to a non-ACRA-registered address. A valid tenancy agreement should be current, indicating that the company has started operations at the mentioned location. This is to ensure that they are deploying the solution to a location that they are operating from.
+-
+For EDGE Automation support, how long must the purchased equipment be held for?
+The holding period for the equipment is 1 year from the date of approval of the claim.
+-
+Where can companies find the list of pre-approved vendors or authorised agents for speed limiter?
+Companies are advised to refer to the list of pre-approved vendors for speed limiters available for EDGE grant support within the BGP application form.
+-
+Can I apply for an IT solution that is not pre-approved under EDGE?
+You may first refer to the EDGE Enterprise Singapore's website for the list of supported digitalisation activities. If no suitable activity is available, you may approach an SME Centre for assistance.
+For the EDGE - Digitalisation: Integrated Enterprise Systems Digital Solutions ( Integrated Enterprise Resource Planning ERP ), you may choose a package from the pre-approved vendors, or engage other vendors if the required functions are not available.
+- Pre-approved vendor – Use a pre-approved vendor for pre-packaged solutions with at least 3 core functions.
+- Your own vendor – Use your own vendor if you can't find a suitable pre-approved vendor. Solution should include at least 3 core functions.
+Do note that the processing time differs: 1 week for a pre-approved vendor and 10 weeks for a non pre-approved vendor.
+Additionally, for single-function digital solutions ,you can browse for vendors and solutions on the IMDA SMEs Go Digital platform, which also includes a package builder that lets you adjust variable components within solution packages to better suit your needs (such as staff sizes, implementation period, and training services required). You can find out more here .
+You may visit the grant directory for the full grant catalogue.
+-
+For Integrated Enterprise Resource Planning (ERP) activity, what functions should the solution have?
+An Integrated Enterprise Resource Planning (ERP) solution must include at least three functions from the following list: Asset Management, Field Service Management, Financial Management, Fleet Management, Human Resources Management, Manufacturing Management, Project Management, Supply Chain & Inventory Management. Sales & Customer Relationship Management.
+-
+Are data migration costs or integration costs claimable under EDGE?
+Please refer to the IMDA SMEs Go Digital platform for the detailed breakdown of supportable cost components.
+Additional costs such as professional services costs may be supported as part of the solution package where they are assessed to be meaningful to the solution’s adoption. Support remains subject to the scope and cost components stated for the selected solution package.
+-
+What is a unique identifier?
+Unique identifier is a project deliverable for single-function digital solutions and integrated enterprise systems. Examples of unique identifier are software license number, user ID and user email address.
+Internationalisation
+-
+Can I submit a single application for all internationalisation activities within one country?
+A separate application is required for each internationalisation activity within a country. Each application will be assessed based on the project scope, deliverables, and alignment with the company's overseas expansion objectives.
+-
+Can I apply for internationalisation support to multiple markets concurrently?
+Yes, companies may apply for multiple markets simultaneously.
+-
+How do I make payment to the employees? Can I pay through my foreign company?
+All payments should be incurred and paid for by the applicant, with sufficient supporting documents to demonstrate that payments have been duly made.
+This will be verified by auditors. If the applicant does not incur expenses directly but assigns its overseas entity to execute and pay for the expenses, an internal cost transfer may be used to recharge these expenses back to the Singapore applicant.
+-
+If I am targeting a region or more than a country, which market should I select in my application?
+Select the primary market that your project is focusing on.
+-
+If I need to register IP across multiple markets as part of one business expansion plan, do I need to submit a separate application for each market?
+Yes. Each application corresponds to the activity in one specific market.
+-
+Can a company apply for Double Tax Deduction for Internationalisation (DTDi) on the same expenses supported by EDGE's Internationalisation activities?
+Yes, companies can also benefit from the DTDi for the same expenses. Qualifying expenses for tax deduction will be computed net of the EDGE grant.
+-
+Can a company seek EDGE support for LEAD-supported trade fairs?
+We strongly encourage companies to tap on LEAD supported trade fairs to reach global customers, get feedback on products and services, and learn more about overseas markets. Please refer here for LEAD supported tradeshows.
+EDGE support will not be provided for LEAD-supported trade fairs, including in any of the circumstances:
+- There is unavailable booth space under the Singapore National Pavilion supported under LEAD
+- It can secure a better booth location compared to the Singapore National Pavilion
+- It prefers not to be part of the Singapore National Pavilion for various reasons
+- It prefers to exhibit at a different specialty hall within the same LEAD supported tradeshow
+-
+For EDGE Overseas physical trade fairs, why is the grant support for booth space capped at 36 square metres?
+EDGE support covers up to the standard booth size based on majority of applications. Based on overall trends, a booth space of 36 sqm is reasonable for companies across different industries (includes the display of machines, furniture, etc.)
+-
+Does a company need to follow any standard design for its booth supported under EDGE Overseas physical trade fairs?
+No, but the applicant company’s name or brand should be clearly displayed on the booth and exhibitor listing. The brand may be represented by the applicant company (e.g., as an exclusive distributor) or owned by the applicant company through intellectual property rights.
+Additionally, the overseas trade show should be an international trade fair where companies showcase their products and services primarily to trade visitors. These fairs must have international exhibitors and visitors.
+-
+If I want to participate in multiple trade fairs within one country, can I submit a single application?
+No. Companies need to submit 1 application for every trade fair.
+-
+Can EDGE Identification of potential overseas partnerships projects be conducted virtually?
+While virtual business matching meetings can serve as initial touchpoints to identify potential partners, these projects should primarily be conducted in-person as they are generally more effective. In-person meetings allow for direct participation from companies and customised one-to-one business meetings in the target markets. The intent is to support companies in finding suitable partners and generate new leads for quicker access to overseas markets.
+-
+Can companies apply for EDGE Overseas business development staff deployment support if they have not confirmed/ hired the BD staff who will be posted into the target market?
+Yes. In such cases, please submit the Job Description of the BD staff (in place of the Employment/Appointment Letter) for application evaluation. Please note that support for BD staff covers basic salary only, and the staff member must be stationed in the market throughout the project duration. Owners and shareholders of the applicant company are not supported under Overseas Business Development Staff Deployment.
+-
+For EDGE Overseas business development staff deployment support, does the Business Development (BD) staff need to be permanent staff of the applicant company?
+No, the BD staff may be hired on full-time contracts and can be employed either by the Singapore applicant company or its subsidiaries, depending on overseas market requirements. For expenses incurred by overseas subsidiaries, documentation must clearly demonstrate the inter-billing of invoices to show that the Singapore applicant company ultimately bears the costs.
+-
+For EDGE Market entry setup applications, would support be granted for the incorporation/ registration of entities in the overseas market under individuals’ (e.g., company shareholder/director/employee etc.) names?
+No. To qualify for EDGE support, the entity should be registered with the applicant company as the corporate shareholder unless local regulations prohibit corporate shareholding and supporting documentation is provided.
+-
+For EDGE Market entry setup applications, would support be granted for import/ export certifications for overseas markets?
+Yes, the costs associated with obtaining registration costs for import/ export certification purposes are supportable, such as FDA registration costs and factory registration costs.
+-
+For EDGE Market entry setup applications, can a company seek support for IP search and registration across multiple overseas markets in one single application?
+For international IP applications, companies can submit one single application for multiple overseas markets under the Madrid System, Patent Cooperation Treaty (PCT) System, Hague System, etc. Companies should indicate all the target markets covered under these international systems in the application form. Singapore IP registration costs are eligible for support when they form part of an international IP application process.
+For direct national IP applications, companies should submit one EDGE application for each overseas market. For more information, please refer to IPOS' website.
+-
+Does the IP area of support under EDGE Market entry setup cover objection fees?
+IP registration support can include prior art search, examination costs, objection costs, and filing costs etc. However, once the claim has been submitted and approved, objection costs will not be supported as a standalone cost.
+-
+Under EDGE Market entry setup, can the IP to be registered be owned by the license/ franchisor?
+The trademark/ logo/ device/ patent etc. must be owned by the grant applicant.
+Standards
+-
+Must the consultant and certification body be accredited or pre-approved for EDGE?
+There is no pre‑approved list of consultants or certification bodies for standards adoption projects under EDGE. However, cost components are supportable only if the appointed vendors meet the stipulated criteria.
+Consultant requirements:
+The grant supports professional consultancy costs, provided that the appointed consultant possesses SS 680 certification and is deemed suitable for the project. You are required to identify and propose your consultant upfront as part of your application. Once the application is approved, the consultant will be reflected in the Letter of Offer (LOF), and all claim invoices must be billed by this approved consultant.
+Certification body requirements:
+The appointed certification (conformity assessment) body must be accredited by the Singapore Accreditation Council (SAC) or by an internationally recognised accreditation body listed under the ILAC MRA, IAF MRA, or APAC MRA frameworks.
+In summary, while vendors are not pre‑approved, both consultancy and certification costs are supportable only when the respective eligibility and accreditation requirements are met, and when the vendors are formally approved and stated in the Letter of Offer.
+Sustainability
+-
+Are carbon emissions data mandatory in the claim submission?
+The submission is kept optional in the claim submission.
+Systems
+-
+How can I check my remaining grant balance?
+To check your remaining grant balance, please log in to the Business Grants Portal (BGP). You may view your approved grants, remaining grant balance and claim history there. For further assistance, please contact EnterpriseSG.
+-
+What should I do if my grant balance is not updated?
+The annual grant cap is the maximum grant amount a company can receive during a year (1 April to 31 March). This cap takes into account applications submitted during the year. Once the application is approved, the approved grant amount will draw down from this cap.
+If company terminates an approved project without making any claims, the grant amount will be returned to the company's annual grant cap balance, for the year the project was originally approved in.
+For further clarifications, please reach out to EnterpriseSG directly.
+-
+Will I receive an approval letter when my EDGE application is approved?
+Yes. Once an EDGE application is approved, the company will receive a Letter of Offer with the approved project and grant terms. Please refer to the Enterprise Singapore's website for further information on the post-approval process.
+-
+What if the portal does not behave as expected?
+For technical issues, you may refer to system-related FAQs here or submit your query here .
+Change request/ termination
+EDGE
+-
+When can I submit a Change Request?
+After project commencement, if you need to make changes to your project, you may submit a change request during the project qualifying period. Note that only two types of changes are permitted:
+- Change to project end date
+- Change to claim due date
+All change requests are subject to approval.
+Please note that Change Requests can only be submitted from 1 November 2026 onwards.
+-
+What are the changes that are allowed for a project/ application that has been approved?
+Changes to project end date and claim due date are allowed. Please refer to the Enterprise Singapore's website for more information on the requirements for each activity.
+-
+What if a company cannot complete the project within approved qualifying period or submit the claims within the stipulated deadline?
+Companies with valid reasons may request for an extension from Enterprise Singapore via BGP before the project end date by submitting a change request. The request will be subject to approval.
+For projects with prolonged delay, especially those that have not commenced or have barely started, companies should consider terminating the current application and submitting a fresh application when they are ready to proceed.
+-
+Can I change my vendor after the application is approved?
+No changes to vendor is allowed after application is approved. Please terminate the application and resubmit a new one before proceeding with the project and making payment to the new vendor. Otherwise, your claims may be rejected subsequently.
+-
+What if I made a mistake in my grant application that was discovered after my application is approved? (e.g. uploaded wrong/ invalid quotation)
+Please terminate the application and resubmit a new one before proceeding with the project and making payment to the vendor. Otherwise, your claims may be rejected subsequently.
+-
+Can I change vendor after I have submitted my EDGE application?
+Change requests are only allowed for changes to project end date and claim due date. Should businesses wish to make any other changes to the project, they should terminate the existing project and submit a new application. Termination of the application can be done on the Business Grants Portal (BGP).
+-
+Can I terminate an approved EDGE project due to financial difficulties?
+Yes. If financial difficulties prevent the company from continuing with an approved project, the company may terminate the project through the Business Grants Portal (BGP). Expenses incurred for terminated projects will not be claimable.
+Internationalisation
+-
+What if after the grant is approved, mid way doing the project, i find that the country that i want to expand to is no longer viable for me as suddenly there is no more opportunity for me?
+If your business situation changes after your grant is approved (for example, if you decide not to enter the overseas market anymore), do terminate your project. When you are ready with new business plans or needs, you are welcome to submit a fresh application.
+-
+Can I change the target country after my internationalisation project has started?
+If your business situation changes after your grant is approved (for example, if you decide not to enter the overseas market anymore), do terminate your project. When you are ready with new business plans or needs, you are welcome to submit a fresh application.
+Systems
+-
+How can I extend claim due date?
+To do so, please navigate to Dashboard > All grants > View project > Click on “submit new” under Change request.
+Businesses may submit a one-time claim extension before the due date expires. Please note that only one extension is allowed, after which your grant will automatically expire.
+Please extend the due date early if required, and allow for ample time prior to the expiry date. This is to mitigate any potential delays that may occur when accessing or navigating the system. Once the due date has passed, you will not be able to extend the due date in BGP.
+To view the newly extended due date, please check the notification email sent to the email address provided in BGP at the application stage.
+-
+How can I terminate/ cancel my grant application?
+You may cancel or terminate your application in BGP if you no longer wish to continue with the project.
+To do so, please navigate to Dashboard > All grants > Select the relevant Ref ID > Click on “Terminate Grant”.
+Claims
+-
+When can I submit a claim?
+Submit a claim after you have completed the project deliverables and paid for all project expenses in full. Please refer to the How to apply section in each activity page for more details on documentation required.
+Please note that claims can only be submitted from:
+- 1 December 2026 onwards for single-function digital solutions and pre-scoped equipment activities
+- 1 January 2027 onwards for other activities
+-
+What happens if I miss the claim due date?
+If you miss the claim due date, you will not be able to submit a claim in BGP. Note that multiple reminder emails will be sent to the main contact person before the claim due date expires.
+-
+What happens if there is a change in my eligibility criteria at claims stage (e.g. change in 30% local equity)?
+The company is required to meet the eligibility criteria to enjoy EDGE support. If the company no longer meets the eligibility criteria after application is approved, claims will not be supported.
+-
+Is inter-billing and/or cost sharing between related companies of the applicant company allowed?
+All payments should be incurred and paid for by the applicant. Supportable costs will be verified based on the principle that there are sufficient supporting documents to show that all payments have been duly made as required.
+For internationalisation activities, if the applicant does not incur expenses directly but assigns its overseas entity to execute and pay for the expenses, inter-billing can be used to transfer expenses back to the Singapore applicant.
+-
+Can a company claim for additional expenses which would only be billed by the third-party consultant/ vendor after the activity is completed?
+EDGE accepts only a single and final claim. The approved quantum is final, and additional claims are not allowed.
+BGP/ Technical queries
+-
+Who should I contact for technical enquiries about the Business Grants Portal?
+If you need assistance, please contact the BGP helpdesk at https://go.gov.sg/bgphelpdesk . Operating hours are Monday to Friday, 8.30am to 5.30pm, excluding Public Holidays.
+Browse similar topics
+- FAQ: Enterprise Development Grant (EDG)
+- FAQ: Market Readiness Assistance Grant (MRA)
+- FAQ: Productivity Solutions Grant (PSG)
+- FAQ: SkillsFuture Enterprise Credit (SFEC)
+- FAQ: Business Adaptation Grant (BizAdapt)
