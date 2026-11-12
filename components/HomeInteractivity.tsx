@@ -93,32 +93,45 @@ export function ServicesAccordion() {
     setExpandedCardIndex(expandedCardIndex === index ? null : index);
   };
 
-  // The 5 Core Services with embedded IPOS recognized keywords & statutory EDG frameworks
+  // The 6 Core Services aligned with Enterprise Singapore EDGE Grant & IPOS GoBusiness IP Grow S.O.T.
   const services = [
     {
       title: "Business Strategy Development",
-      href: "/ip-consultant",
-      description: "Crafting actionable roadmaps backed by defensible IP strategy, intangible asset audits, and portfolio management to secure your legal right to dominate markets.",
-      expandedIntro: "We convert unvalued operational workflows and corporate capabilities into tradeable, defensible equity moats:",
+      href: "/edge-grant",
+      description: "Formulating corporate growth strategies, business models, and operational optimisation roadmaps under Enterprise Singapore's EDGE Business Strategic Planning framework.",
+      expandedIntro: "Led by TÜV SÜD SCMC (SS 680:2021) certified management consultants, our Business Strategic Planning practice structures actionable 1-to-5-year growth roadmaps:",
       image: "/ft-synergist-tnt-surveillance-business-strategy.png",
-      alt: "Business Strategy Development and IP Strategy Consultant Singapore",
+      alt: "Business Strategy Development and Business Strategic Planning Consultant Singapore",
       details: [
-        { title: "Intangible Asset (IA) & IP Audit", content: "Auditing registered and unregistered IP, trade secrets, and proprietary SOPs to establish true enterprise valuation." },
-        { title: "IP Strategy & Portfolio Management", content: "Structuring long-term IP roadmaps aligned with corporate growth, capital raising, and M&A defensibility." },
-        { title: "Commercialisation & Due Diligence", content: "Transforming internal operational know-how into legally protected licensing models with territorial exclusivity." }
+        { title: "Internal & External Market Analysis", content: "Evaluating core enterprise capabilities, target market sizing, and competitor positioning gaps." },
+        { title: "Growth Models & Strategic Roadmaps", content: "Designing scalable business models, intellectual property asset alignment, and multi-year execution plans." },
+        { title: "Implementation & Governance", content: "Translating strategic plans into measurable revenue growth and high-value workforce outcomes." }
+      ]
+    },
+    {
+      title: "IP Strategy & Advisory",
+      href: "/ip-consultant",
+      description: "Identifying, protecting, and commercialising intangible assets across FT Synergist's 4 official IPOS GoBusiness IP Grow scopes: IP Strategy Consulting, IP Brokerage & Licensing, Innovation Consultancy, and Branding Strategy.",
+      expandedIntro: "Recognised on the IPOS GoBusiness IP Grow directory and supported under Enterprise Singapore's EDGE Business Strategic Planning framework, we help SMEs leverage IA/IP for growth:",
+      image: "/insights/ipos-ip-week-2026/frederick-tan-rosemary-kwa-ip-week-panel.jpg",
+      alt: "IP Strategy and Advisory Consultant Singapore IPOS GoBusiness IP Grow",
+      details: [
+        { title: "IP Strategy Consulting", content: "Identifying key IP assets (tech, data, content, know-how), evaluating risks and opportunities, and aligning IP with business goals." },
+        { title: "IP Brokerage and Licensing", content: "Monetising brands, recipes, and technologies through F&B/enterprise franchising, brand licensing, and licensee negotiations." },
+        { title: "Innovation Consultancy", content: "Using data analysis and market research to uncover untapped value, optimise R&D processes, and build new revenue streams." }
       ]
     },
     {
       title: "Strategic Brand & Marketing",
       href: "/strategic-brand-marketing-development",
-      description: "Building distinctive, legally protected brand strategies under Enterprise Singapore's EDG framework that command market share and turn marketing spend into tradeable equity.",
-      expandedIntro: "A brand is only an asset if it is distinct and defensible. For scaling consumer and B2B leaders (e.g., Big Fish Small Fish, Pétale Tea), we differentiate your offering through:",
+      description: "Structuring coherent brand architectures, international branding strategies, and cross-border go-to-market roadmaps under Enterprise Singapore's EDGE International Branding framework.",
+      expandedIntro: "Recognised under IPOS GoBusiness IP Grow (Branding Strategy) and EnterpriseSG EDGE (International Branding, up to 70% SME support for new overseas markets), we deliver:",
       image: "/Big-Fish-Small-Fish-flat-lay.jpg",
-      alt: "Strategic Brand and Marketing Development Singapore",
+      alt: "Strategic Brand and Marketing Development International Branding Singapore",
       details: [
-        { title: "Market Research & Distinctive Positioning", content: "Conducting primary quantitative and qualitative market research to validate customer willingness-to-pay and distinctiveness." },
-        { title: "Trade Mark & Brand Landscaping", content: "Structuring defensible brand architectures integrated with trademark protection and commercial equity valuation." },
-        { title: "Brand Commercialisation & GTM", content: "Developing high-ROI marketing playbooks and cross-border brand asset guidelines to scale beyond Singapore." }
+        { title: "Brand Research, Audit & Competitor Gap Analysis", content: "Executing primary market research, brand diagnostics, and target customer persona analysis for overseas market entry." },
+        { title: "Brand Architecture & Market Positioning", content: "Developing brand positioning, value propositions, narrative messaging, and 3-to-5-year implementation plans." },
+        { title: "Brand Identity Refresh & Cross-Border Guidelines", content: "Refreshing brand identity elements and codifying brand guidelines to govern local and overseas market activation." }
       ]
     },
     {
