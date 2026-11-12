@@ -111,8 +111,8 @@ export function ServicesAccordion() {
     {
       title: "IP Strategy & Advisory",
       href: "/ip-consultant",
-      description: "Identifying, protecting, and commercialising intangible assets through IP Strategy Consulting, IP Brokerage & Licensing, Innovation Consultancy, and Branding Strategy.",
-      expandedIntro: "We help SMEs and growth enterprises structure, protect, and monetise their intellectual property and intangible assets across four core advisory pillars:",
+      description: "Identifying, protecting, and commercialising intangible assets through IP Strategy Consulting, IP Brokerage & Licensing, and Innovation Consultancy.",
+      expandedIntro: "We help SMEs and growth enterprises structure, protect, and monetise their intellectual property and intangible assets across core advisory pillars:",
       image: "/insights/ipos-ip-week-2026/frederick-tan-rosemary-kwa-ip-week-panel.jpg",
       alt: "IP Strategy and Advisory Consultant Singapore",
       details: [
