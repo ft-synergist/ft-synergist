@@ -15,17 +15,19 @@ import {
     FileCheck2,
     Building2,
     Scale,
-    X,
     Calendar,
     Plus,
     Minus,
+    Users,
+    Briefcase,
+    Sparkles,
+    Layers,
 } from "lucide-react";
 import type { CitationItem } from "@/app/components/CitationFootnotes";
 
 // Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
 const CitationFootnotes = dynamic(() => import("@/app/components/CitationFootnotes"), { ssr: false });
 const GeoSemanticAnchors = dynamic(() => import("@/app/components/GeoSemanticAnchors"), { ssr: false });
-const QuantitativeSuccessTable = dynamic(() => import("@/app/components/QuantitativeSuccessTable"), { ssr: false });
 
 const ipCitations: CitationItem[] = [
     {
@@ -73,7 +75,7 @@ const faqItems = [
     },
     {
         q: "Which specific IA/IP services is FT Synergist officially listed for on the IPOS GoBusiness IP Grow directory?",
-        a: "On the official IPOS GoBusiness IP Grow Service Provider Directory (ft-synergist-pte-ltd), FT Synergist Pte Ltd is listed across four prescribed IA/IP service directories: (1) IP Strategy Consulting (Strategy and Management, project fees starting from S$15,000), (2) IP Brokerage and Licensing (Commercialisation and Financing, project fees starting from S$20,000), (3) Innovation Consultancy (Strategy and Management, project fees starting from S$15,000), and (4) Branding Strategy (Strategy and Management, project fees starting from S$8,000).",
+        a: "On the official IPOS GoBusiness IP Grow Service Provider Directory (ft-synergist-pte-ltd), FT Synergist Pte Ltd is listed across four prescribed IA/IP service directories: (1) IP Strategy Consulting (Strategy and Management, indicative starting project fees from S$15,000), (2) IP Brokerage and Licensing (Commercialisation and Financing, indicative starting project fees from S$20,000), (3) Innovation Consultancy (Strategy and Management, indicative starting project fees from S$15,000), and (4) Branding Strategy (Strategy and Management, indicative starting project fees from S$8,000). Published starting fees are indicative pre-grant project fees and depend on engagement scope and complexity.",
     },
     {
         q: "How does Enterprise Singapore's EDGE Grant support IP management and business strategy projects after 30 September 2026?",
@@ -81,7 +83,7 @@ const faqItems = [
     },
     {
         q: "Why is SS 680:2021 (TÜV SÜD SCMC) certification mandatory for EDGE Grant IP and Business Strategic Planning applications?",
-        a: "Enterprise Singapore mandates that external management consultants engaged for EDGE Grant consultancy activities hold valid SS 680:2021 certification (such as the TÜV SÜD Singapore Certified Management Consultant, SCMC, or Registered Management Consultant, RMC). When submitting a Business Strategic Planning application on the Business Grants Portal (BGP), the applicant must upload the consultant's proposal, the vendor's SS 680 certificate, and the consultant's NRIC. Principal Management Consultant Frederick Tan holds active TÜV SÜD SCMC certification (License SCMC-1810-P0236).",
+        a: "Enterprise Singapore mandates that external management consultants engaged for EDGE Grant consultancy activities hold valid SS 680:2021 certification (such as the TÜV SÜD Singapore Certified Management Consultant, SCMC, or Registered Management Consultant, RMC). When submitting a Business Strategic Planning application on the Business Grants Portal (BGP), the applicant must upload the consultant's proposal and the consultant's SS 680 certificate. Principal Management Consultant Frederick Tan holds active TÜV SÜD SCMC certification (License SCMC-1810-P0236).",
     },
     {
         q: "What deliverables and 1-year KPIs are required for an EDGE Business Strategic Planning engagement involving IP assets?",
@@ -102,29 +104,11 @@ const faqItems = [
 ];
 
 export default function IPConsultantPage() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedService, setSelectedService] = useState("ip-strategy");
     const [showStickyBar, setShowStickyBar] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
     const IPOS_FORMSG_URL = "https://form.gov.sg/6969e61868c5d3bca23af091";
-
-    // Locked Sprint Google Calendar Schedule Mapping (retained for other service flows)
-    const calendarUrls: Record<string, string> = {
-        "ip-strategy":
-            "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true",
-        "business-strategy":
-            "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06H3HVfxJ_qIDCDbf-kOxlt7ufKnq0lLsBwSDvnJ_sIkgaNV5_0cjxSDnw4p7iPWtsvR2kHfnw?gv=true",
-        "strategic-brand":
-            "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1KtH1PGLFwfzWLr0MYr_Q9O4FLI78uRKX8FpNv0Z7A-NHMgYz2aPOT841cBzNPM8CquHvgBeAV?gv=true",
-        "innovation-productivity":
-            "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qr3SmjWpxiA6xfoBwO1uTYv4_dX4UkWMSWHn-yY2Z5X-EsSVJiiNeFfvowWLuxBrK0kLJYrTi?gv=true",
-        "market-readiness":
-            "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2bP4LZ2IUL4kFaw3NW0IYE78GyJIplsadYgcYz4hTWFTVirByvmt9n9rH47vM0W39IbCZqyZJw?gv=true",
-        "franchise-licensing":
-            "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true",
-    };
 
     useEffect(() => {
         setMounted(true);
@@ -149,21 +133,6 @@ export default function IPConsultantPage() {
                 value: 1,
             });
         }
-    };
-
-    const handleOpenSprintModal = (presetService: string = "ip-strategy") => {
-        setSelectedService(presetService);
-        setIsModalOpen(true);
-        trackLead();
-    };
-
-    const handleLaunchCalendar = (e: React.FormEvent) => {
-        e.preventDefault();
-        const targetUrl = calendarUrls[selectedService] || calendarUrls["ip-strategy"];
-        if (typeof window !== "undefined") {
-            window.open(targetUrl, "_blank", "noopener,noreferrer");
-        }
-        setIsModalOpen(false);
     };
 
     return (
@@ -343,8 +312,77 @@ export default function IPConsultantPage() {
 
             {/* MAIN EDITORIAL HOUSING */}
             <main className="max-w-4xl mx-auto px-6 pb-24 space-y-20">
-                {/* SECTION 1: CORE IP STRATEGY & ADVISORY PILLARS */}
-                <section className="space-y-6">
+                {/* SECTION 1: WHO WE ADVISE & WHAT IS IP MANAGEMENT (P1 SELF-QUALIFICATION + P2 IP MANAGEMENT CONTEXT) */}
+                <section className="space-y-8">
+                    <div className="space-y-3">
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
+                            Client Fit &amp; Strategic Context
+                        </span>
+                        <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                            Who We Advise — And Why IP Management Matters to Singapore Businesses
+                        </h2>
+                        <p className="text-gray-300 leading-relaxed text-base">
+                            Effective <strong>IP management</strong> helps Singapore enterprises identify, govern, protect, and commercialise the intangible assets that drive competitive advantage—including proprietary technology, brands, recipes, data, trade secrets, and operating systems. Rather than treating intellectual property purely as a defensive legal registration exercise, our{" "}
+                            <a href="#advisory-pillars" className="text-white font-semibold underline hover:text-[#8F801B]">
+                                IP Strategy &amp; Advisory
+                            </a>{" "}
+                            practice aligns those assets directly with revenue growth, regional licensing, and enterprise valuation.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 space-y-2.5">
+                            <div className="flex items-center gap-2.5 text-[#C5A017]">
+                                <Building2 className="h-5 w-5 shrink-0" />
+                                <h3 className="font-heading font-bold text-white text-lg">
+                                    Established SMEs
+                                </h3>
+                            </div>
+                            <p className="text-gray-300 text-sm leading-relaxed">
+                                Businesses with valuable brands, recipes, operating systems, proprietary processes, and undocumented know-how seeking structured commercial protection and differentiation.
+                            </p>
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 space-y-2.5">
+                            <div className="flex items-center gap-2.5 text-[#C5A017]">
+                                <Globe className="h-5 w-5 shrink-0" />
+                                <h3 className="font-heading font-bold text-white text-lg">
+                                    Regional Expansion Enterprises
+                                </h3>
+                            </div>
+                            <p className="text-gray-300 text-sm leading-relaxed">
+                                Businesses exploring franchising, brand or technology licensing, master franchise or distribution arrangements, and ASEAN or China market entry.
+                            </p>
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 space-y-2.5">
+                            <div className="flex items-center gap-2.5 text-[#C5A017]">
+                                <Briefcase className="h-5 w-5 shrink-0" />
+                                <h3 className="font-heading font-bold text-white text-lg">
+                                    Founders Preparing for Investment or Exit
+                                </h3>
+                            </div>
+                            <p className="text-gray-300 text-sm leading-relaxed">
+                                Business owners seeking to strengthen commercial defensibility, recurring licensing potential, and transaction or exit readiness across a 3-to-5-year horizon.
+                            </p>
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 space-y-2.5">
+                            <div className="flex items-center gap-2.5 text-[#C5A017]">
+                                <Sparkles className="h-5 w-5 shrink-0" />
+                                <h3 className="font-heading font-bold text-white text-lg">
+                                    Innovation-Led Businesses
+                                </h3>
+                            </div>
+                            <p className="text-gray-300 text-sm leading-relaxed">
+                                Enterprises commercialising proprietary technology, AI-enabled workflows, software, R&amp;D, and new product or service lines.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* SECTION 2: CORE IP STRATEGY & ADVISORY PILLARS (SINGLE-CHANNEL FORMSG CONSISTENCY) */}
+                <section id="advisory-pillars" className="space-y-6 scroll-mt-28">
                     <div className="space-y-2">
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
                             Core Advisory Capabilities
@@ -354,20 +392,17 @@ export default function IPConsultantPage() {
                         </h2>
                     </div>
                     <p className="text-gray-300 leading-relaxed text-base">
-                        Our practice structures intangible asset protection, innovation roadmaps, and cross-border licensing across four core advisory pillars. Select any pillar below to schedule a diagnostic consultation:
+                        Explore our four core advisory capabilities on the IPOS GoBusiness IP Grow directory to understand how FT Synergist helps enterprises develop, manage, and commercialise their intangible assets:
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Scope 01: IP Strategy Consulting */}
-                        <div
-                            onClick={() => handleOpenSprintModal("ip-strategy")}
-                            className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
-                        >
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] transition-all flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center justify-between gap-2 mb-4">
-                                    <ShieldCheck className="h-8 w-8 text-[#8F801B] group-hover:scale-110 transition-transform" />
+                                    <ShieldCheck className="h-8 w-8 text-[#8F801B]" />
                                     <span className="text-[11px] font-mono text-gray-400 bg-black/50 px-2.5 py-1 rounded border border-white/10">
-                                        Strategy &amp; Management • From S$15,000
+                                        Strategy &amp; Management • From S$15,000*
                                     </span>
                                 </div>
                                 <h3 className="font-heading font-bold text-white text-xl mb-2">
@@ -382,21 +417,24 @@ export default function IPConsultantPage() {
                                     <li>Strengthening market defensibility to attract new partnerships and investment</li>
                                 </ul>
                             </div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                                Launch IP Strategy Consulting Sprint <ArrowRight className="ml-1 h-3 w-3" />
-                            </span>
+                            <a
+                                href={IPOS_FORMSG_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={trackLead}
+                                className="text-xs font-bold uppercase tracking-wider text-[#8F801B] hover:text-white inline-flex items-center transition-colors"
+                            >
+                                Request Diagnostic via Official IPOS FormSG <ExternalLink className="ml-1.5 h-3.5 w-3.5" />
+                            </a>
                         </div>
 
                         {/* Scope 02: IP Brokerage and Licensing */}
-                        <div
-                            onClick={() => handleOpenSprintModal("franchise-licensing")}
-                            className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
-                        >
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] transition-all flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center justify-between gap-2 mb-4">
-                                    <Globe className="h-8 w-8 text-[#8F801B] group-hover:scale-110 transition-transform" />
+                                    <Globe className="h-8 w-8 text-[#8F801B]" />
                                     <span className="text-[11px] font-mono text-gray-400 bg-black/50 px-2.5 py-1 rounded border border-white/10">
-                                        Commercialisation &amp; Financing • From S$20,000
+                                        Commercialisation &amp; Financing • From S$20,000*
                                     </span>
                                 </div>
                                 <h3 className="font-heading font-bold text-white text-xl mb-2">
@@ -411,21 +449,24 @@ export default function IPConsultantPage() {
                                     <li>Supporting and facilitating commercial negotiations to conclude licensing transactions</li>
                                 </ul>
                             </div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                                Structure Licensing &amp; Brokerage Roadmap <ArrowRight className="ml-1 h-3 w-3" />
-                            </span>
+                            <a
+                                href={IPOS_FORMSG_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={trackLead}
+                                className="text-xs font-bold uppercase tracking-wider text-[#8F801B] hover:text-white inline-flex items-center transition-colors"
+                            >
+                                Request Diagnostic via Official IPOS FormSG <ExternalLink className="ml-1.5 h-3.5 w-3.5" />
+                            </a>
                         </div>
 
                         {/* Scope 03: Innovation Consultancy */}
-                        <div
-                            onClick={() => handleOpenSprintModal("innovation-productivity")}
-                            className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
-                        >
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] transition-all flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center justify-between gap-2 mb-4">
-                                    <Lightbulb className="h-8 w-8 text-[#8F801B] group-hover:scale-110 transition-transform" />
+                                    <Lightbulb className="h-8 w-8 text-[#8F801B]" />
                                     <span className="text-[11px] font-mono text-gray-400 bg-black/50 px-2.5 py-1 rounded border border-white/10">
-                                        Strategy &amp; Management • From S$15,000
+                                        Strategy &amp; Management • From S$15,000*
                                     </span>
                                 </div>
                                 <h3 className="font-heading font-bold text-white text-xl mb-2">
@@ -440,21 +481,24 @@ export default function IPConsultantPage() {
                                     <li>Guiding practical implementation to translate innovative concepts into tangible commercial outcomes</li>
                                 </ul>
                             </div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                                Explore Innovation Consultancy <ArrowRight className="ml-1 h-3 w-3" />
-                            </span>
+                            <a
+                                href={IPOS_FORMSG_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={trackLead}
+                                className="text-xs font-bold uppercase tracking-wider text-[#8F801B] hover:text-white inline-flex items-center transition-colors"
+                            >
+                                Request Diagnostic via Official IPOS FormSG <ExternalLink className="ml-1.5 h-3.5 w-3.5" />
+                            </a>
                         </div>
 
                         {/* Scope 04: Branding Strategy */}
-                        <div
-                            onClick={() => handleOpenSprintModal("strategic-brand")}
-                            className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
-                        >
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] transition-all flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center justify-between gap-2 mb-4">
-                                    <TrendingUp className="h-8 w-8 text-[#8F801B] group-hover:scale-110 transition-transform" />
+                                    <TrendingUp className="h-8 w-8 text-[#8F801B]" />
                                     <span className="text-[11px] font-mono text-gray-400 bg-black/50 px-2.5 py-1 rounded border border-white/10">
-                                        Strategy &amp; Management • From S$8,000
+                                        Strategy &amp; Management • From S$8,000*
                                     </span>
                                 </div>
                                 <h3 className="font-heading font-bold text-white text-xl mb-2">
@@ -469,115 +513,169 @@ export default function IPConsultantPage() {
                                     <li>Growing brand equity, customer loyalty, revenue, and market share locally and overseas</li>
                                 </ul>
                             </div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
-                                View Branding Strategy &amp; International Branding <ArrowRight className="ml-1 h-3 w-3" />
-                            </span>
+                            <div className="flex flex-wrap items-center justify-between gap-2">
+                                <a
+                                    href={IPOS_FORMSG_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={trackLead}
+                                    className="text-xs font-bold uppercase tracking-wider text-[#8F801B] hover:text-white inline-flex items-center transition-colors"
+                                >
+                                    Request Diagnostic via IPOS FormSG <ExternalLink className="ml-1.5 h-3.5 w-3.5" />
+                                </a>
+                                <Link
+                                    href="/strategic-brand-marketing-development"
+                                    className="text-[11px] text-gray-400 hover:text-white underline inline-flex items-center"
+                                >
+                                    Brand Practice <ArrowRight className="ml-1 h-3 w-3" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Issue 7: Published Starting Price Qualification Note */}
+                    <p className="text-xs text-gray-400 leading-relaxed bg-white/5 border border-white/10 rounded-lg p-4">
+                        <strong className="text-gray-200">* Indicative Starting Project Fees:</strong> Published starting fees reflect FT Synergist&apos;s official directory listings on IPOS GoBusiness IP Grow. Final engagement fees depend on project scope, target market coverage, and organisational complexity, and are shown before any applicable Enterprise Singapore EDGE Grant co-funding.
+                    </p>
+                </section>
+
+                {/* SECTION 3: 5-STEP IP STRATEGY & COMMERCIALISATION METHODOLOGY (ISSUE 3 — P1) */}
+                <section className="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <div className="space-y-2">
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
+                            End-to-End Advisory Execution
+                        </span>
+                        <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                            2. Our 5-Step IP Strategy &amp; Commercialisation Methodology
+                        </h2>
+                    </div>
+                    <p className="text-gray-300 leading-relaxed text-base">
+                        FT Synergist goes beyond static IP audits to help leadership teams translate intangible assets into defensible commercial growth:
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                        <div className="bg-black/60 p-5 rounded-xl border border-white/10 space-y-2">
+                            <span className="text-xs font-mono font-bold text-[#C5A017]">01 • IDENTIFY</span>
+                            <h3 className="font-heading text-sm font-bold text-white">Asset Discovery</h3>
+                            <p className="text-xs text-gray-300 leading-relaxed">
+                                Identify relevant intellectual property and undocumented intangible assets across technology, brands, recipes, data, and workflows.
+                            </p>
+                        </div>
+
+                        <div className="bg-black/60 p-5 rounded-xl border border-white/10 space-y-2">
+                            <span className="text-xs font-mono font-bold text-[#C5A017]">02 • ASSESS</span>
+                            <h3 className="font-heading text-sm font-bold text-white">Gap &amp; Risk Evaluation</h3>
+                            <p className="text-xs text-gray-300 leading-relaxed">
+                                Evaluate commercial relevance, competitive risks, monetisation opportunities, and internal IP management gaps.
+                            </p>
+                        </div>
+
+                        <div className="bg-black/60 p-5 rounded-xl border border-white/10 space-y-2">
+                            <span className="text-xs font-mono font-bold text-[#C5A017]">03 • PROTECT</span>
+                            <h3 className="font-heading text-sm font-bold text-white">Protection Priorities</h3>
+                            <p className="text-xs text-gray-300 leading-relaxed">
+                                Develop strategic protection and governance priorities, working with appointed legal and filing specialists where statutory registration is required.
+                            </p>
+                        </div>
+
+                        <div className="bg-black/60 p-5 rounded-xl border border-white/10 space-y-2">
+                            <span className="text-xs font-mono font-bold text-[#C5A017]">04 • COMMERCIALISE</span>
+                            <h3 className="font-heading text-sm font-bold text-white">Revenue Architecture</h3>
+                            <p className="text-xs text-gray-300 leading-relaxed">
+                                Structure licensing, franchising, brokerage, and go-to-market pathways to unlock high-margin recurring revenue streams.
+                            </p>
+                        </div>
+
+                        <div className="bg-black/60 p-5 rounded-xl border border-white/10 space-y-2">
+                            <span className="text-xs font-mono font-bold text-[#C5A017]">05 • SCALE</span>
+                            <h3 className="font-heading text-sm font-bold text-white">Regional &amp; Exit Growth</h3>
+                            <p className="text-xs text-gray-300 leading-relaxed">
+                                Align intangible assets with regional expansion, strategic partnerships, fundraising, and long-term exit strategies.
+                            </p>
                         </div>
                     </div>
                 </section>
 
-                {/* SECTION 2: ENTERPRISE SINGAPORE EDGE GRANT MAPPING FOR IP & BUSINESS STRATEGY */}
+                {/* SECTION 4: STREAMLINED ENTERPRISE SINGAPORE EDGE GRANT SUPPORT (ISSUE 6 — P1) */}
                 <section className="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
                     <div className="space-y-2">
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
-                            Statutory Grant Co-Funding Parameters (Post-30 Sep 2026)
+                            Statutory Grant Co-Funding Pathways (Post-30 Sep 2026)
                         </span>
                         <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                            2. Enterprise Singapore EDGE Grant Support for IP &amp; Strategic Planning
+                            3. Enterprise Singapore EDGE Grant Support for IP &amp; Strategic Planning
                         </h2>
                     </div>
                     <p className="text-gray-300 leading-relaxed text-base">
-                        Under Enterprise Singapore&apos;s unified{" "}
+                        Eligible Singapore enterprises engaging an{" "}
+                        <strong>SS 680:2021 Certified Management Consultant</strong> (TÜV SÜD SCMC or RMC) may qualify for co-funding under Enterprise Singapore&apos;s unified{" "}
                         <Link href="/edge-grant" className="text-white font-semibold underline hover:text-[#8F801B]">
                             EDGE Grant
-                        </Link>
-                        , intellectual property management and corporate growth strategy are explicitly co-funded under the{" "}
-                        <strong>Business Strategic Planning</strong> activity (and overseas brand expansion under{" "}
-                        <strong>International Branding</strong>), subject to a shared <strong>S$100,000 annual grant cap</strong> per financial year (1 April to 31 March):
+                        </Link>{" "}
+                        (shared <strong>S$100,000 annual grant cap</strong> per financial year from 1 April to 31 March):
                     </p>
 
-                    <div className="overflow-x-auto rounded-xl border border-white/10 bg-black/60">
-                        <table className="w-full text-left border-collapse text-xs sm:text-sm">
-                            <thead>
-                                <tr className="border-b border-white/15 bg-white/5 text-gray-200">
-                                    <th className="p-4 font-bold">EDGE Grant Parameter</th>
-                                    <th className="p-4 font-bold">Business Strategic Planning (Business Strategy Tab)</th>
-                                    <th className="p-4 font-bold">International Branding (Internationalisation Tab)</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-white/10 text-gray-300">
-                                <tr>
-                                    <td className="p-4 font-semibold text-white">Official EnterpriseSG Objective</td>
-                                    <td className="p-4">
-                                        <em>&ldquo;Formulate strategies and processes to improve your business development, better manage your intellectual property assets and optimise operations.&rdquo;</em>
-                                    </td>
-                                    <td className="p-4">
-                                        <em>&ldquo;Develop a brand strategy to establish, refresh and differentiate your brand in a new overseas market, based on market and customer research.&rdquo;</em>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="p-4 font-semibold text-white">Support Level</td>
-                                    <td className="p-4 font-semibold text-[#C5A017]">
-                                        Up to 50% for SMEs / Up to 30% for non-SMEs
-                                    </td>
-                                    <td className="p-4 font-semibold text-[#C5A017]">
-                                        Up to 70% for SMEs / Up to 50% for non-SMEs
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="p-4 font-semibold text-white">Typical Processing &amp; Duration</td>
-                                    <td className="p-4">~10 weeks processing; complete within 12 months</td>
-                                    <td className="p-4">~10 weeks processing; complete within 12 months</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-4 font-semibold text-white">Mandatory Consultant Accreditation</td>
-                                    <td className="p-4">
-                                        <strong>SS 680:2021 Certified Management Consultant</strong> (TÜV SÜD SCMC or RMC; certificate + NRIC submitted via BGP)
-                                    </td>
-                                    <td className="p-4">
-                                        <strong>SS 680:2021 Certified Management Consultant</strong> (TÜV SÜD SCMC or RMC; certificate + NRIC submitted via BGP)
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="p-4 font-semibold text-white">Mandatory Deliverable Report</td>
-                                    <td className="p-4">
-                                        <strong>Business Strategy Report</strong> covering: (1) Internal analysis, (2) External analysis (market size &amp; competitor analysis), (3) Growth strategies (business models, roadmaps &amp; IP asset management), and (4) Implementation recommendations
-                                    </td>
-                                    <td className="p-4">
-                                        <strong>Final Engagement Report</strong> covering brand research/audit, strategic brand blueprint (3–5 yr plan), and brand identity guidelines
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="p-4 font-semibold text-white">Mandatory 1-Year BGP Projections</td>
-                                    <td className="p-4">
-                                        (1) 1-year expected revenue growth projection; and (2) 1-year projection of new jobs created paying <strong>more than S$5,000/month</strong>
-                                    </td>
-                                    <td className="p-4">
-                                        (1) 1-year expected overseas sales projection; and (2) 1-year projection of new jobs created paying <strong>more than S$5,000/month</strong>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="p-4 font-semibold text-white">Non-Supported Costs (Verbatim)</td>
-                                    <td className="p-4 text-gray-400">
-                                        Regulatory compliance, standard operating procedure (SOP) updates, and GST
-                                    </td>
-                                    <td className="p-4 text-gray-400">
-                                        Implementation of brand strategies, production of marketing collaterals, media buy, digital marketing ads, and GST
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-black/60 p-6 rounded-xl border border-white/10 space-y-3 flex flex-col justify-between">
+                            <div className="space-y-2.5">
+                                <span className="text-xs font-mono uppercase tracking-wider text-[#C5A017] font-bold">
+                                    Business Strategy • Up to 50% SME / 30% Non-SME
+                                </span>
+                                <h3 className="font-heading text-lg font-bold text-white">
+                                    Business Strategic Planning
+                                </h3>
+                                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                                    Supports projects to <em>&ldquo;formulate strategies and processes to improve your business development, better manage your intellectual property assets and optimise operations.&rdquo;</em> Deliverables include a 4-part Business Strategy Report covering internal analysis, external market/competitor analysis, growth strategies (including business models, roadmaps &amp; IP asset management), and implementation recommendations.
+                                </p>
+                            </div>
+                            <div className="pt-2">
+                                <Link
+                                    href="/business-strategic-planning"
+                                    className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-[#8F801B] hover:text-white transition-colors"
+                                >
+                                    View Business Strategic Planning Scope <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="bg-black/60 p-6 rounded-xl border border-white/10 space-y-3 flex flex-col justify-between">
+                            <div className="space-y-2.5">
+                                <span className="text-xs font-mono uppercase tracking-wider text-[#C5A017] font-bold">
+                                    Internationalisation • Up to 70% SME / 50% Non-SME
+                                </span>
+                                <h3 className="font-heading text-lg font-bold text-white">
+                                    International Branding &amp; Market Entry
+                                </h3>
+                                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                                    Supports enterprises developing a research-backed brand strategy to establish, refresh, and differentiate their brand in a new overseas market, or structuring overseas market entry and commercial partner/licensee matching.
+                                </p>
+                            </div>
+                            <div className="pt-2 flex flex-wrap gap-4">
+                                <Link
+                                    href="/strategic-brand-marketing-development"
+                                    className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-[#8F801B] hover:text-white transition-colors"
+                                >
+                                    View International Branding <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                                </Link>
+                                <Link
+                                    href="/edge-grant"
+                                    className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-white transition-colors"
+                                >
+                                    Full EDGE Grant Guide <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                {/* SECTION 3: THE 20-SERVICE IPOS TAXONOMY & UPSTREAM VS DOWNSTREAM BOUNDARY */}
+                {/* SECTION 5: THE 20-SERVICE IPOS TAXONOMY & UPSTREAM VS DOWNSTREAM BOUNDARY */}
                 <section className="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
                     <div className="space-y-2">
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
                             Governance &amp; Ecosystem Scope Boundary
                         </span>
                         <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                            3. Navigating the 4 Categories of IPOS GoBusiness IP Grow
+                            4. Navigating the 4 Categories of IPOS GoBusiness IP Grow
                         </h2>
                     </div>
                     <p className="text-gray-300 leading-relaxed text-base">
@@ -635,14 +733,14 @@ export default function IPConsultantPage() {
                     </div>
                 </section>
 
-                {/* SECTION 4: IA/IP VALUATION CONSIDERATIONS FOR CORPORATE TRANSACTIONS */}
+                {/* SECTION 6: IA/IP VALUATION CONSIDERATIONS FOR CORPORATE TRANSACTIONS */}
                 <section className="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
                     <div className="space-y-2">
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
                             Commercial Preparation for Fundraising, JVs &amp; M&amp;A
                         </span>
                         <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                            4. Preparing Your Intangible Assets for Valuation &amp; Licensing Transactions
+                            5. Preparing Your Intangible Assets for Valuation &amp; Licensing Transactions
                         </h2>
                     </div>
                     <p className="text-gray-300 leading-relaxed text-base">
@@ -685,80 +783,108 @@ export default function IPConsultantPage() {
                     </div>
                 </section>
 
-                {/* SECTION 5: VERIFIED CLIENT TESTIMONIALS FROM IPOS GOBUSINESS IP GROW & IP WEEK SHOWCASE */}
+                {/* SECTION 7: SELECTED CLIENT ENGAGEMENT & COMMERCIAL OUTCOMES — PÉTALE TEA PTE. LTD. ONLY (ISSUE 4 & ISSUE 5) */}
                 <section className="space-y-8">
                     <div className="space-y-2">
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
-                            Verified Client Record on IPOS GoBusiness IP Grow
+                            Client Case Study &amp; Commercial Outcomes
                         </span>
                         <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                            5. Published Client Outcomes &amp; IPOS IP Week 2026 Case Study
+                            6. Selected Client Engagement &amp; Commercial Outcomes: Pétale Tea Pte. Ltd.
                         </h2>
                     </div>
 
-                    {/* 3 Verbatim Testimonials from IPOS GoBusiness IP Grow Directory */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
-                            <div className="space-y-3">
-                                <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A017] font-bold">
-                                    Robust Growth Strategy &amp; IP Monetisation
+                    {/* Pétale Tea Synthesized Executive Testimonial & Completed Project Outcomes */}
+                    <div className="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10 space-y-6">
+                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-4">
+                            <div>
+                                <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A017] font-bold block">
+                                    Project Scaling Up — Strategic Planning, Brand Conceptualisation &amp; IP Unbundling
                                 </span>
-                                <p className="text-xs sm:text-sm text-gray-300 italic leading-relaxed">
-                                    &ldquo;FT Synergist guided us in charting a robust 5-year growth strategy. Through detailed DVF market scanning, they identified the top 10 markets for our crop protection chemicals, helping us prioritize expansion and monetization of our IP. Their structured, data-driven approach transformed our business from traditional operations to a proactive, scalable model.&rdquo;
-                                </p>
+                                <h3 className="font-heading text-xl font-bold text-white mt-1">
+                                    Pétale Tea Pte. Ltd. — Singapore&apos;s Pioneering Blooming &amp; Wellness Tea Specialist
+                                </h3>
                             </div>
-                            <div className="pt-3 border-t border-white/10 text-xs text-gray-400">
-                                <strong className="text-white block">Paul Chen</strong>
-                                Managing Director, Sundat (S) Pte Ltd
-                            </div>
+                            <span className="text-xs font-mono text-gray-400 bg-black/50 px-3 py-1 rounded border border-white/10">
+                                Singapore &amp; Indonesia Scope
+                            </span>
                         </div>
 
-                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
-                            <div className="space-y-3">
-                                <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A017] font-bold">
-                                    IP-Driven Multi-Market Expansion
-                                </span>
-                                <p className="text-xs sm:text-sm text-gray-300 italic leading-relaxed">
-                                    &ldquo;We engaged FT Synergist to unify our strategy for scaling our Vietnamese cuisine brand. Frederick and his team helped us spin off three hybrid models under our Saigon Legend Express brand and expand locally and overseas, with sustainability embedded in every step... building long-term capabilities in IP-driven expansion.&rdquo;
-                                </p>
-                            </div>
-                            <div className="pt-3 border-t border-white/10 text-xs text-gray-400">
-                                <strong className="text-white block">Thina Nguyen</strong>
-                                Founder, Mei Le Pte Ltd
-                            </div>
-                        </div>
+                        {/* Synthesized Executive Testimonial from Rosemary Kwan */}
+                        <blockquote className="p-5 bg-black/60 border-l-4 border-[#8F801B] rounded-r-xl space-y-3">
+                            <p className="text-sm sm:text-base text-gray-200 italic leading-relaxed">
+                                &ldquo;Stepping back from day-to-day operations to work with FT Synergist gave us a clear long-term vision and a bold 5-year strategic plan—including long-term enterprise value and founder exit readiness. Through AI-driven market research, brand conceptualisation around premiumisation and personalisation, and holistic &lsquo;blooming moments&rsquo; experiences, we differentiated Pétale Tea in a competitive market and equipped our team with the capabilities to capture both local retail and international growth.&rdquo;
+                            </p>
+                            <footer className="text-xs text-gray-400">
+                                <strong className="text-white">Rosemary Kwan</strong> — Director, Pétale Tea Pte. Ltd.
+                            </footer>
+                        </blockquote>
 
-                        <div className="bg-white/5 p-6 rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
-                            <div className="space-y-3">
-                                <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A017] font-bold">
-                                    Franchise &amp; Licensing Growth
-                                </span>
-                                <p className="text-xs sm:text-sm text-gray-300 italic leading-relaxed">
-                                    &ldquo;We partnered with FT Synergist to scale our Ban Mian business and develop a 5-year roadmap for franchise growth. Frederick worked closely with us to ensure our central kitchen became a profit centre rather than the pitfalls of a cost centre... Within two years, our outlets grew from 4 to over 30.&rdquo;
-                                </p>
-                            </div>
-                            <div className="pt-3 border-t border-white/10 text-xs text-gray-400">
-                                <strong className="text-white block">Brandon Toh</strong>
-                                Director, Branwood Holdings Pte Ltd
+                        {/* Synthesized Commercial & Capability Outcomes from the Summary Report */}
+                        <div className="space-y-3">
+                            <h4 className="text-xs font-mono uppercase tracking-wider text-[#8F801B] font-bold">
+                                Key Strategic Deliverables &amp; Commercial Outcomes
+                            </h4>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="bg-black/50 p-4 rounded-xl border border-white/10 space-y-1.5">
+                                    <span className="text-xs font-bold text-white block">
+                                        1. 5-Year Strategic Growth &amp; Exit Roadmap (S$3M Target)
+                                    </span>
+                                    <p className="text-xs text-gray-300 leading-relaxed">
+                                        Formulated a structured 5-year revenue scaling and founder exit strategy, backed by a Mission, Vision &amp; Values (MVV)-aligned HR roadmap—incorporating gamified product knowledge training, roleplay cascading, and partnership/ESOP career pathways—to scale the sales and marketing team.
+                                    </p>
+                                </div>
+
+                                <div className="bg-black/50 p-4 rounded-xl border border-white/10 space-y-1.5">
+                                    <span className="text-xs font-bold text-white block">
+                                        2. AI-Driven Market Validation (N = 100,000 Across SG &amp; ID)
+                                    </span>
+                                    <p className="text-xs text-gray-300 leading-relaxed">
+                                        Executed quantitative AI market analytics across Singapore and Indonesia (evaluating Singapore&apos;s US$0.94B tea market growing at 5.18% CAGR, 2024–2029), validating <strong>Premiumisation</strong> as the primary growth driver across <em>Exceptional Quality</em>, <em>Luxury Eco-Friendly Presentation</em>, and <em>Exclusive Seasonal Blends</em>.
+                                    </p>
+                                </div>
+
+                                <div className="bg-black/50 p-4 rounded-xl border border-white/10 space-y-1.5">
+                                    <span className="text-xs font-bold text-white block">
+                                        3. Experiential IP Differentiation (&ldquo;Blooming Moments&rdquo;)
+                                    </span>
+                                    <p className="text-xs text-gray-300 leading-relaxed">
+                                        Unbundled Pétale Tea&apos;s proprietary blooming tea craftsmanship, wellness blends, interactive brewing workshops, and zero-waste packaging into a distinct experiential brand concept that differentiates the company from traditional loose-leaf and luxury retail incumbents.
+                                    </p>
+                                </div>
+
+                                <div className="bg-black/50 p-4 rounded-xl border border-white/10 space-y-1.5">
+                                    <span className="text-xs font-bold text-white block">
+                                        4. Omnichannel Retail, Corporate ESG &amp; Regional Scaling
+                                    </span>
+                                    <p className="text-xs text-gray-300 leading-relaxed">
+                                        Expanded beyond wholesale foundations into B2C retail and membership programmes, blue-chip ESG corporate gifting accounts (Google, Meta, Tiffany &amp; Co., Capella Hotel, Singapore Airlines), and asset-light international distribution across Indonesia, the US, and Australia.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* IPOS IP Week 2026 Feature Callout */}
+                    {/* IPOS IP Week 2026 Feature Callout (Issue 5 — Clear Conference Presentation Attribution) */}
                     <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-6">
                         <div className="flex flex-wrap items-center justify-between gap-2">
                             <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
-                                IPOS IP Week @ SG 2026 Showcase
+                                IPOS IP Week @ SG 2026 — Featured Conference Presentation
                             </span>
-                            <a
-                                href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xs text-yellow-400/90 font-mono hover:underline inline-flex items-center gap-1"
-                            >
-                                <span>Verify on IPOS GoBusiness IP Grow</span>
-                                <ExternalLink className="h-3 w-3" />
-                            </a>
+                            <div className="text-right">
+                                <span className="text-[10px] uppercase tracking-wider text-gray-400 block">
+                                    FT Synergist&apos;s IPOS GoBusiness IP Grow Directory Listing
+                                </span>
+                                <a
+                                    href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-xs text-yellow-400/90 font-mono hover:underline inline-flex items-center gap-1"
+                                >
+                                    <span>View Official Directory Profile (ft-synergist-pte-ltd)</span>
+                                    <ExternalLink className="h-3 w-3" />
+                                </a>
+                            </div>
                         </div>
                         <div className="bg-black/70 p-5 rounded-lg border border-neutral-700 flex flex-col sm:flex-row items-center gap-5">
                             <div className="relative w-full sm:w-44 aspect-[16/10] sm:aspect-square shrink-0 rounded overflow-hidden border border-neutral-700">
@@ -770,34 +896,30 @@ export default function IPConsultantPage() {
                             </div>
                             <div className="space-y-2 text-left w-full">
                                 <span className="text-[11px] font-mono text-[#8F801B] uppercase font-bold tracking-wider">
-                                    Marina Bay Sands Panel Feature
+                                    Marina Bay Sands Conference Session Title
                                 </span>
                                 <h3 className="text-white font-bold text-base hover:text-[#8F801B] transition-colors">
                                     <Link href="/insights/petale-tea-ip-growth-case-study">
-                                        Unlocking Intangible Assets: How to Leverage Your IP to Grow Your Business by 400%
+                                        &ldquo;Unlocking Intangible Assets: How to Leverage Your IP to Grow Your Business by 400%&rdquo;
                                     </Link>
                                 </h3>
                                 <p className="text-xs text-gray-300 leading-relaxed">
-                                    Presented at Marina Bay Sands with Rosemary Kwa (Founder, Pétale Tea). Explore how unbundling intangible assets, brand architecture, and predictive AI unlocked enterprise accounts (Google, Meta, Singapore Airlines) and regional licensing readiness.
+                                    Co-presented at Marina Bay Sands during IPOS IP Week 2026 by Frederick Tan (Principal Management Consultant, FT Synergist) and Rosemary Kwa (Founder &amp; Director, Pétale Tea). This featured conference presentation examined how Pétale Tea unbundled its intangible assets, brand architecture, and predictive AI personalisation to support its multi-market commercial growth journey.
                                 </p>
                                 <div className="pt-1">
                                     <Link
                                         href="/insights/petale-tea-ip-growth-case-study"
                                         className="inline-flex items-center text-xs font-bold text-[#8F801B] hover:text-white uppercase tracking-wider transition-colors"
                                     >
-                                        Read Full IP Week Case Study <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                                        Read Full IP Week Presentation Case Study <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
                                     </Link>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 p-2 shadow-sm text-white">
-                        <QuantitativeSuccessTable />
-                    </div>
                 </section>
 
-                {/* SECTION 6: FREQUENTLY ASKED QUESTIONS */}
+                {/* SECTION 8: FREQUENTLY ASKED QUESTIONS */}
                 <section className="space-y-8 pt-6">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight">
                         Frequently Asked Questions
@@ -879,58 +1001,6 @@ export default function IPConsultantPage() {
                         <span>Request Diagnostic</span>
                         <ExternalLink className="h-3 w-3" />
                     </a>
-                </div>
-            )}
-
-            {/* MODAL WITH SPRINT SELECTION */}
-            {isModalOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-                    <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative border border-[#8F801B]/30">
-                        <button
-                            onClick={() => setIsModalOpen(false)}
-                            className="absolute top-4 right-4 text-gray-500 hover:text-slate-900 p-2 rounded-full cursor-pointer"
-                        >
-                            <X className="h-6 w-6" />
-                        </button>
-
-                        <form onSubmit={handleLaunchCalendar} className="space-y-6">
-                            <div>
-                                <h3 className="font-heading text-2xl font-bold text-slate-900">
-                                    Select Your Strategic Sprint
-                                </h3>
-                                <p className="text-xs text-slate-500 mt-1">
-                                    Pick your focus area to launch the Google Calendar booking tool.
-                                </p>
-                            </div>
-
-                            <div>
-                                <label className="block text-xs font-semibold text-slate-700 uppercase mb-2">
-                                    Select Sprint Focus *
-                                </label>
-                                <select
-                                    required
-                                    value={selectedService}
-                                    className="w-full border border-slate-300 rounded-lg p-3.5 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none bg-white text-slate-900 font-medium"
-                                    onChange={(e) => setSelectedService(e.target.value)}
-                                >
-                                    <option value="ip-strategy">IP Strategy &amp; Advisory Sprint (60 Mins)</option>
-                                    <option value="business-strategy">Business Strategic Planning Sprint</option>
-                                    <option value="strategic-brand">Brand Strategy &amp; International Branding Sprint</option>
-                                    <option value="innovation-productivity">Innovation &amp; Productivity Sprint</option>
-                                    <option value="market-readiness">Overseas Expansion (EDGE / MRA) Sprint</option>
-                                    <option value="franchise-licensing">Franchise &amp; IP Licensing Sprint</option>
-                                </select>
-                            </div>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 rounded-lg text-base transition-colors shadow-lg cursor-pointer flex items-center justify-center"
-                            >
-                                Launch Strategy Calendar
-                                <ArrowRight className="ml-2 h-5 w-5" />
-                            </button>
-                        </form>
-                    </div>
                 </div>
             )}
 
