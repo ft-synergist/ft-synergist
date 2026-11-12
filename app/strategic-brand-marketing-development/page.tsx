@@ -398,7 +398,9 @@ export default function StrategicBrandMarketingDevelopmentPage() {
                   </tr>
                   <tr>
                     <td className="p-3.5 font-bold text-white border-r border-white/10">
-                      Business Strategic Planning
+                      <Link href="/business-strategic-planning" className="text-white underline hover:text-[#8F801B]">
+                        Business Strategic Planning
+                      </Link>
                       <span className="block text-[11px] font-normal text-[#8F801B] mt-0.5">Area: Business Strategy</span>
                     </td>
                     <td className="p-3.5 font-semibold text-white border-r border-white/10">
