@@ -1,27 +1,27 @@
 import { Metadata } from "next";
 
 // protected-keywords (AGENTS.md §6): literal terms to diff before any title/description change.
+// Kept in alignment with User Brief & AGENTS.md §5 (measured non-hyperbolic terminology).
 const protectedKeywords = [
     "AI Digitalisation Consultant Singapore",
-    "Enterprise AI",
-    "Large-Scale Automation",
-    "AI workflows",
+    "AI & Automation Use Cases",
+    "workflows",
+    "integrate systems",
     "automation",
     "AI consultants",
-    "SCMC-certified",
     "EDGE",
-    "grant-eligible",
-    "digital transformation"
+    "Enterprise Singapore",
+    "digital solutions"
 ];
 
 export const metadata: Metadata = {
-    title: "AI Digitalisation Consultant Singapore | Enterprise AI & Large-Scale Automation",
-    description: "Deploy practical enterprise AI workflows and automation with Singapore's top AI consultants. SCMC-certified advisory for EDGE grant-eligible large-scale digital transformation and automation.",
+    title: "AI Digitalisation Consultant Singapore | AI & Automation Use Cases",
+    description: "Help your Singapore business redesign workflows, integrate systems and adopt AI, automation and digital solutions. Explore practical SME use cases and Enterprise Singapore EDGE pathways.",
     keywords: [
         "AI Digitalisation Consultant Singapore",
         "AI consultant Singapore",
         "AI consultancy Singapore",
-        "best AI consultants in Singapore",
+        "AI consultants for SME",
         "digital transformation consultancy Singapore",
         "digitalisation consultant Singapore",
         "enterprise AI solution provider Singapore",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
         canonical: "https://www.ftsynergist.com/ai-digitalisation",
     },
     openGraph: {
-        title: "AI Digitalisation Consultant Singapore | Enterprise AI & Large-Scale Automation | FT Synergist",
-        description: "Deploy practical enterprise AI workflows and automation with Singapore's top AI consultants. SCMC-certified advisory for EDGE grant-eligible large-scale digital transformation and automation.",
+        title: "AI Digitalisation Consultant Singapore | AI & Automation Use Cases | FT Synergist",
+        description: "Help your Singapore business redesign workflows, integrate systems and adopt AI, automation and digital solutions. Explore practical SME use cases and Enterprise Singapore EDGE pathways.",
         url: "https://www.ftsynergist.com/ai-digitalisation",
         type: "website",
         images: [

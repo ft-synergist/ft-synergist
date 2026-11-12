@@ -135,16 +135,16 @@ export function ServicesAccordion() {
       ]
     },
     {
-      title: "Innovation & Productivity",
+      title: "AI Digitalisation & Automation",
       href: "/ai-digitalisation",
-      description: "Providing AI-powered Process Redesign and workflow optimization under Enterprise Singapore frameworks to turn operational improvements into proprietary trade secrets.",
-      expandedIntro: "We turn operational bottlenecks into long-term efficiency moats. Our productivity transformation programs (e.g., Bestway continuous improvement frameworks) deliver:",
+      description: "Redesigning workflows and deploying AI dashboards and automation for SMEs, structured for Enterprise Singapore's EDGE Large-scale Digital Transformation and Large-scale Automation activities.",
+      expandedIntro: "We start from the business case and the workflow, not the software. In an operational transformation for Bestway Cleaning at Changi Airport Terminal 2, FT Synergist acted as independent process architect and project counsel:",
       image: "/ft-synergist-bestway-innovation-productivity.jpg",
-      alt: "Innovation and Productivity AI Digitalisation Singapore",
+      alt: "AI Digitalisation and Automation Consultant Singapore - Bestway Changi Airport Terminal 2",
       details: [
-        { title: "Process Redesign & Workflow Automation", content: "Reviewing and streamlining operational workflows to eliminate redundancies and optimize labor allocation." },
-        { title: "Predictive Analytics & KPI Dashboards", content: "Developing real-time operational telemetry and custom AI automation bridges for sustained productivity gains." },
-        { title: "Trade Secret & Innovation Harvesting", content: "Helping enterprises formalize frontline process improvements and algorithmic models into protectable trade secrets." }
+        { title: "Process Redesign & Operational Architecture", content: "Auditing frontline workflows and designing demand-driven operations to replace rigid patrol cycles with sensor- and data-informed task coordination." },
+        { title: "Predictive Analytics & Command Dashboard", content: "Architecting a 9-module solution, including 4 AI BI dashboard modules with passenger surge anticipation and human-in-the-loop supervisory oversight." },
+        { title: "Multilingual Digital Learning Architecture", content: "5 AI LMS modules supporting structured bite-sized learning and competency tracking across English, Mandarin, Bengali, and Malay." }
       ]
     },
     {

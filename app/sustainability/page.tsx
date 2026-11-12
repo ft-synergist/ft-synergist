@@ -42,7 +42,7 @@ export default function SustainabilityPage() {
                 },
                 {
                     label: "AI & Upskilling",
-                    text: "We integrated an AI-powered Dashboard & LMS for Bestway Cleaning, enabling dynamic resource deployment that minimized idling while upskilling the cleaning workforce."
+                    text: "As independent process architect for Bestway Cleaning at Changi Airport Terminal 2, we redesigned operational workflows and developed predictive analytics capabilities, working alongside a technology partner who built a 9-module AI dashboard and multilingual learning architecture to support demand-driven operations and workforce capability."
                 },
                 {
                     label: "Digital Transformation",
@@ -111,7 +111,7 @@ export default function SustainabilityPage() {
                         <tr>
                             <td>AI Resource Digitalisation</td>
                             <td>SDG 9: Industry, Innovation &amp; Infrastructure</td>
-                            <td>Engineered AI Dashboard and operational software framework for Bestway Cleaning at Changi Airport.</td>
+                            <td>Independent process architect for Bestway Cleaning at Changi Airport Terminal 2: redesigned operational workflows and developed predictive analytics capabilities alongside a 9-module AI dashboard and multilingual digital learning architecture.</td>
                         </tr>
                         <tr>
                             <td>Sustainable OPEX Reduction</td>
