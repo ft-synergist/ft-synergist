@@ -31,6 +31,7 @@ export function Footer() {
                             <li><Link href="/about" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">About Us</Link></li>
                             <li><Link href="/#services" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Our Expertise</Link></li>
                             <li><Link href="/ip-consultant" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">IP Strategy &amp; Advisory</Link></li>
+                            <li><Link href="/strategic-brand-marketing-development" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Brand Strategy &amp; International Branding</Link></li>
                             <li><Link href="/edg-grant#success-stories" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Success Stories</Link></li>
                             <li><Link href="/sustainability" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Our Sustainability Impact</Link></li>
                             <li><Link href="/partnership" className="text-sm text-gray-400 hover:text-[#8F801B] transition-colors">Partnership Opportunity</Link></li>

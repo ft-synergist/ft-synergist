@@ -569,7 +569,7 @@ export default function ClientEDGEPage() {
                                     <h3 className="font-bold text-white text-base">Core Business Strategy &amp; Capability Upgrading</h3>
                                     <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">Up to 50% SME / 30% Non-SME</span>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed">Projects in Business Strategy, Financial Management, Standards, and custom Process Redesign require engaging an SAC-accredited SS 680 certified management consultant (such as TÜV SÜD PSB, SBACC, or IMCS). Proposals, scopes, and expected commercial KPIs must be prepared upfront before submitting via BGP.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Projects in Business Strategy (including <Link href="/ip-consultant" className="text-white underline hover:text-[#C5A017]">IP asset management</Link>), Financial Management, Standards, and custom Process Redesign require engaging an SAC-accredited SS 680 certified management consultant (such as TÜV SÜD PSB, SBACC, or IMCS). Proposals, scopes, and expected commercial KPIs must be prepared upfront before submitting via BGP.</p>
                             </div>
                         </div>
 
@@ -583,7 +583,7 @@ export default function ClientEDGEPage() {
                                     <h3 className="font-bold text-white text-base">Internationalisation &amp; Sustainability Transformation</h3>
                                     <span className="text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">Priority Co-Funding: Up to 70%</span>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed">Enterprise Singapore prioritises global expansion and environmental sustainability. SMEs qualify for the highest support tier of up to 70% (non-SMEs up to 50%). Businesses can apply for internationalisation across multiple target countries concurrently, defrayed under the overall S,000 annual company grant cap.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Enterprise Singapore prioritises global expansion (including <Link href="/strategic-brand-marketing-development" className="text-white underline hover:text-[#C5A017]">International Branding</Link>, overseas market entry, and overseas partnerships) and <Link href="/sustainability" className="text-white underline hover:text-[#C5A017]">environmental sustainability</Link>. SMEs qualify for the highest support tier of up to 70% (non-SMEs up to 50%). Businesses can apply for internationalisation across multiple target countries concurrently, defrayed under the overall S$100,000 annual company grant cap.</p>
                             </div>
                         </div>
 
@@ -595,9 +595,9 @@ export default function ClientEDGEPage() {
                             <div className="flex-1">
                                 <div className="flex flex-wrap items-center gap-2 mb-2">
                                     <h3 className="font-bold text-white text-base">Digital Solutions, Automation &amp; Non-SME Inclusion</h3>
-                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#C5A017]/20 text-[#C5A017] border border-[#C5A017]/30 px-2 py-0.5 rounded-full whitespace-nowrap">Sk Digital Sub-Cap / All Entities</span>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#C5A017]/20 text-[#C5A017] border border-[#C5A017]/30 px-2 py-0.5 rounded-full whitespace-nowrap">S$30k Digital Sub-Cap / All Entities</span>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed">Single-function digital tools, integrated enterprise systems, and pre-scoped automation tap an allocated sub-cap of up to S,000 within the S,000 annual limit. Unlike legacy schemes, larger enterprises and non-SMEs with Singapore registration and ≥30% local shareholding are fully eligible to apply.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Single-function digital tools, integrated enterprise systems, and pre-scoped automation tap an allocated sub-cap of up to S$30,000 within the S$100,000 annual limit. Unlike legacy schemes, larger enterprises and non-SMEs with Singapore registration and ≥30% local shareholding are fully eligible to apply.</p>
                             </div>
                         </div>
                     </div>

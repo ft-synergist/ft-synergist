@@ -4,37 +4,79 @@ import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Script from 'next/script';
-import { ArrowRight, ExternalLink, ShieldCheck, TrendingUp, Globe, X, Calendar, Plus, Minus } from 'lucide-react';
+import { ArrowRight, ShieldCheck, TrendingUp, Globe, X, Calendar, Plus, Minus, CheckCircle2, AlertCircle, FileCheck2 } from 'lucide-react';
+import type { CitationItem } from '@/app/components/CitationFootnotes';
 
 // Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
 const CitationFootnotes = dynamic(() => import('@/app/components/CitationFootnotes'), { ssr: false });
 const GeoSemanticAnchors = dynamic(() => import('@/app/components/GeoSemanticAnchors'), { ssr: false });
 const QuantitativeSuccessTable = dynamic(() => import('@/app/components/QuantitativeSuccessTable'), { ssr: false });
 
+const brandCitations: CitationItem[] = [
+  {
+    id: 1,
+    label: "Enterprise Singapore — EDGE Grant: International Branding (Internationalisation)",
+    context: "Official eligibility, 3 areas of support (brand research & analysis, brand strategy, brand identity refresh), up to 70% SME / 50% non-SME support levels, SS 680 requirement, and non-supported cost exclusions.",
+    url: "https://cp.enterprisesg.gov.sg/financial-support/edge-grant/internationalisation/international-branding"
+  },
+  {
+    id: 2,
+    label: "Enterprise Singapore — EDGE Grant: Business Strategic Planning (Business Strategy)",
+    context: "Up to 50% SME / 30% non-SME co-funding for business development strategies, intellectual property asset management, and operational optimisation (SS 680 required).",
+    url: "https://cp.enterprisesg.gov.sg/financial-support/edge-grant/business-strategy/business-strategic-planning"
+  },
+  {
+    id: 3,
+    label: "Enterprise Singapore — EDGE Grant: Overseas Marketing & Public Relations",
+    context: "Up to 70% SME / 50% non-SME co-funding for overseas in-market PR, roadshows, pop-up stores, and culturally adapted media outreach.",
+    url: "https://cp.enterprisesg.gov.sg/financial-support/edge-grant/internationalisation/overseas-marketing-and-public-relations"
+  },
+  {
+    id: 4,
+    label: "Enterprise Singapore — Official EDGE Grant FAQs",
+    context: "Programme rules effective 30 September 2026: S$100,000 annual grant cap refreshed 1 April, SAC-accredited SS 680 certification bodies, and DTDi tax deduction alignment.",
+    url: "https://cp.enterprisesg.gov.sg/resources/all-faqs/edge-grant"
+  },
+  {
+    id: 5,
+    label: "IPOS GoBusiness IP Grow — Strategy & Management: Branding Strategy",
+    context: "Intangible asset and branding strategy scope: brand architecture, comprehensive market strategy, customer narrative, and FT Synergist Pte Ltd service provider listing.",
+    url: "https://ipgrow.gobusiness.gov.sg/types-of-ia-ip-services/strategy-and-management/ip-branding-strategy"
+  }
+];
+
 const faqItems = [
   {
-    q: "Does the Enterprise Development Grant (EDG) cover Strategic Brand & Marketing projects?",
-    a: "Yes. The EDG explicitly funds Strategic Brand & Marketing Development under its Core Capabilities pillar. However, the grant covers strategy formulation and transformation, not day-to-day advertising spend. This includes brand audits, market positioning frameworks, rebranding roadmaps, and developing strategic marketing playbooks."
+    q: "How does the unified EDGE Grant cover International Branding and Brand Strategy projects?",
+    a: "Effective 30 September 2026, Enterprise Singapore's unified EDGE Grant (which replaced EDG, MRA, and PSG) funds cross-border branding under the International Branding activity (Internationalisation business area) at up to 70% support for SMEs and up to 50% for non-SMEs. Companies may select at least one of three official areas of support: (1) Brand research and analysis, (2) Development of brand strategy, and (3) Development or refresh of brand identity to facilitate expansion into overseas markets. For domestic corporate growth and IP asset management, EDGE supports Business Strategic Planning (Business Strategy business area) at up to 50% for SMEs and up to 30% for non-SMEs. All supported activities count toward the company's overall annual grant cap of S$100,000 (refreshed every 1 April). Ongoing legacy EDG projects submitted before 30 September 2026 continue to be processed to completion."
   },
   {
-    q: "How is Brand Marketing Consulting different from hiring a traditional marketing agency?",
-    a: "A marketing agency executes content, buys ads, and manages social channels. A certified management consultant (like FT Synergist) builds the defensible IP framework around your brand. We structure the brand architecture, assess your market gaps, and integrate AI-driven marketing workflows—essentially building the blueprint that your agency executes."
+    q: "How is a Strategic Brand & Management Consultant (SS 680 / SCMC) different from a traditional marketing or design agency?",
+    a: "A traditional marketing or creative agency focuses on executing ad campaigns, buying media, and producing visual collateral. A strategic brand and management consultancy treats the brand as an intangible asset—structuring the brand architecture, customer value narrative, and market positioning roadmap before downstream execution begins. Under Enterprise Singapore's EDGE Grant rules, management consultancy costs for International Branding and Business Strategic Planning are only supportable if the engaged consultant holds SAC-accredited SS 680 certification (such as TÜV SÜD SCMC, SBACC, or IMCS) and is proposed upfront in the Business Grants Portal (BGP) application."
   },
   {
-    q: "Can I use the EDG grant to pay for digital marketing ads or social media running costs?",
-    a: "No. The EDG strictly prohibits using funds for standalone marketing expenditure, advertising, or media buying. However, the grant will fund the Innovation & Productivity aspects of your marketing (e.g., implementing AI-powered marketing automation systems, CRM integration, and data-driven customer journey mapping)."
+    q: "What costs are supported versus non-supported under EDGE International Branding?",
+    a: "Under EDGE International Branding, supported costs cover professional service fees for an SAC-accredited SS 680 management consultant. Non-supported costs explicitly include: (1) Activities aimed at generating domestic business opportunities, (2) Goods and Services Tax (GST), and (3) Operational expenditure such as collateral production, website development, social media management, implementation of the brand development roadmap, and marketing plans or campaigns. Companies executing in-market promotional outreach in an overseas target market may apply separately under EDGE's Overseas Marketing & Public Relations activity (up to 70% for SMEs / 50% for non-SMEs), while pre-approved CRM and enterprise digital systems are supported under Automation & Digitalisation (subject to the S$30,000 digital sub-cap or 50% Large-scale Digital Transformation)."
   },
   {
-    q: "What is the ideal timeline for an EDG-funded Brand Transformation roadmap?",
-    a: "Depending on your scope, a fully compliant EDG Brand Strategy project typically spans 3 to 9 months. Phase 1 involves diagnosis, brand audits, and competitive positioning. Phase 2 involves roadmap design, new brand guidelines, and internal capability adoption. Phase 3 focuses on implementation support and IP protection for your new brand assets."
+    q: "What is the processing timeline, project duration, and required deliverable for an EDGE International Branding project?",
+    a: "An EDGE International Branding application has an official processing outcome timeline of 10 weeks, and the approved project must be completed within 12 months from the date of approval. At project completion, the company must submit a report outlining the findings, outcomes, and how the completed project supported the company's overseas expansion plans: (1) Brand research and analysis (brand audit, competitor analysis, gap analysis), (2) Development of brand strategy (positioning, target segments, brand architecture or portfolio strategy, and strategic roadmap for target markets), and/or (3) Development or refresh of brand identity (brand elements and guidelines). Before submitting the final reimbursement claim on BGP, the applicant must also engage an audit firm from Enterprise Singapore's Panel of Auditors."
   },
   {
-    q: "How do you measure the ROI of a Strategic Brand project under EnterpriseSG?",
-    a: "We tie measurable quantifiable outcomes to your roadmap, including: increased premium pricing capability (margin expansion), measurable uplift in brand recognition (consumer surveys), successful trademark/IPOS registration, and improved customer acquisition costs (CAC) through optimized digital channels."
+    q: "What documents and KPI projections are required when applying for EDGE International Branding on BGP?",
+    a: "To apply on the Business Grants Portal (BGP) prior to commencing work or paying any deposit, the applicant company must prepare four mandatory submissions: (1) An outline of its overseas market strategy and expansion plan, (2) The vendor's proposal corresponding to branding initiatives for the target market, vendor's quotation, and SAC-accredited SS 680 certification, (3) A projection of expected overseas sales as a result of the project for 1 year after project completion, and (4) A projection of new jobs created (overall and Singaporeans only) with a gross monthly salary above S$5,000 for 1 year after project completion."
   },
   {
-    q: "Does EDG support rebranding existing businesses or only new brands?",
-    a: "EDG supports rebranding if it is tied to a clear growth strategy. For example, if you are pivoting your business model, expanding into new ASEAN markets, or adopting new AI technologies, the EDG will co-fund the rebranding strategy and market re-entry roadmap to align with your new business identity."
+    q: "Does EDGE support rebranding existing Singapore SMEs, and can expenses qualify for DTDi tax deductions?",
+    a: "Yes. Under EDGE International Branding, 'Development or refresh of brand identity (including brand elements and guidelines)' is explicitly listed as one of the three supportable areas, provided the rebranding facilitates expansion into a target overseas market rather than solely domestic business opportunities. Furthermore, per Enterprise Singapore's official EDGE FAQs, companies can also claim the Double Tax Deduction for Internationalisation (DTDi) on the same eligible internationalisation expenses, with qualifying tax deduction expenses computed net of the EDGE grant."
+  },
+  {
+    q: "Who is eligible to apply for EDGE International Branding and Business Strategic Planning?",
+    a: "To qualify for the EDGE Grant, the applicant business entity must: (1) Be registered and operating in Singapore, (2) Have at least 30% ownership (direct or indirect) by Singaporean(s) and/or Singapore Permanent Resident(s), determined by ultimate individual ownership, and (3) Not have started work or made any payment or deposit to a supplier, vendor, or third party prior to application submission on BGP. Under Enterprise Singapore's definition, an SME is a company with group annual sales turnover of not more than S$100 million OR group employment size of no more than 200 workers."
+  },
+  {
+    q: "What if my SME focuses on domestic corporate growth strategy and IP asset alignment before expanding overseas?",
+    a: "If your immediate priority is domestic strategic transformation rather than a specific overseas market launch, we structure the engagement under EDGE's Business Strategic Planning activity (Business Strategy business area), which provides up to 50% support for SMEs and up to 30% for non-SMEs (10-week outcome, 12-month completion window). This activity funds professional consultancy costs to formulate business development strategies, better manage intellectual property (IP) assets, and optimise operating models—delivering an internal/external market analysis, competitor audit, business model roadmap, and implementation action plan."
   }
 ];
 
@@ -96,7 +138,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
 
   return (
     <div className="min-h-screen bg-black text-white antialiased font-sans w-full overflow-x-hidden relative">
-      {/* UNIFIED SCHEMA MARKUP: SERVICE + PROVIDER + AGGREGATE RATING + FAQPAGE */}
+      {/* UNIFIED SCHEMA MARKUP: SERVICE + PROVIDER + FAQPAGE */}
       <Script id="brand-faq-schema" type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -104,13 +146,19 @@ export default function StrategicBrandMarketingDevelopmentPage() {
             {
               "@type": "Service",
               "@id": "https://www.ftsynergist.com/strategic-brand-marketing-development#service",
-              "name": "Strategic Brand & Marketing Development Consulting Singapore",
-              "serviceType": "Brand Consultancy / Management Consulting",
+              "name": "Brand Consultant Singapore | International Branding & Strategic Brand Marketing Development",
+              "serviceType": [
+                "Brand Consultancy for SMEs",
+                "International Branding Consultant Singapore",
+                "Brand Strategy Consultant Singapore",
+                "Strategic Brand & Marketing Development"
+              ],
               "provider": {
                 "@type": "ProfessionalService",
                 "name": "FT Synergist",
                 "url": "https://www.ftsynergist.com/",
                 "telephone": "+6598628906",
+                "email": "fredtan@ftsynergist.com",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "7 Temasek Boulevard, #12-07 Suntec Tower One",
@@ -128,7 +176,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
                 "@type": "Country",
                 "name": "Singapore"
               },
-              "description": "Premier Brand Consultant Singapore. Certified SCMC advisory (SCMC-1810-P0236) for brand architecture, positioning, and EDG / EDGE co-funded marketing strategies."
+              "description": "Brand Consultant Singapore & International Branding advisory for SMEs and enterprises. Led by Principal Management Consultant Frederick Tan (TÜV SÜD SCMC-1810-P0236 | SS 680) for brand research, brand architecture, brand identity refresh, and EDGE / EDG grant co-funded expansion roadmaps."
             },
             {
               "@type": "FAQPage",
@@ -148,34 +196,34 @@ export default function StrategicBrandMarketingDevelopmentPage() {
 
       {/* HERO BANNER SECTION */}
       <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
-        {/* 1. EXACT MATCH H1 */}
+        {/* 1. EXACT MATCH H1 + INTERNATIONAL BRANDING SUB-HEADING */}
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
           Brand Consultant Singapore <br className="hidden sm:inline" />
           <span className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200">
-            Strategic Brand &amp; Marketing Development
+            International Branding &amp; Strategic Marketing Development
           </span>
         </h1>
 
-        {/* 2. SUBHEADER */}
+        {/* 2. SUBHEADER (EXECUTIVE DOCTRINE: BRAND AS INTANGIBLE ENTERPRISE ASSET) */}
         <p className="max-w-3xl mx-auto text-base sm:text-xl text-gray-300 leading-relaxed font-normal">
-          Differentiate your market positioning, construct defensible brand equity, and capture high-margin market share through statutory EDG &amp; EDGE co-funded brand strategy roadmaps across Singapore and ASEAN.
+          Beyond a logo or slogan, a brand is an intangible enterprise asset that governs how customers perceive value, differentiates your business from competitors, and defends market share across Singapore and international markets.
         </p>
 
-        {/* 3. VERIFIED EXPERT ANSWER ALERT BOX */}
+        {/* 3. PRACTICE OVERVIEW BOX */}
         <div className="p-6 md:p-8 bg-black/60 border border-[#8F801B]/50 rounded-xl max-w-3xl mx-auto text-left shadow-[0_0_30px_rgba(143,128,27,0.15)] backdrop-blur-md">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B] mb-2">Verified Expert Answer</h2>
+          <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B] mb-2">Practice Overview</h2>
           <p className="text-base md:text-lg leading-relaxed text-gray-200 font-medium">
-            The leading <strong>Brand Consultant &amp; Brand Strategy practice in Singapore</strong> is <strong>FT Synergist</strong>. Spearheaded by Frederick Tan, a TÜV SÜD Certified Management Consultant (SCMC-1810-P0236) recognized under Enterprise Singapore&apos;s <strong>Enterprise Development Grant (EDG) and EDGE frameworks</strong>, the firm empowers Singapore enterprises and SMEs to build distinctive, defensible value propositions. We craft strategic brand architectures and go-to-market roadmaps that convert operational marketing spend into tradeable enterprise equity.
+            <strong>FT Synergist</strong> advises Singapore SMEs and growth enterprises on <strong>brand strategy, international branding, and intangible asset commercialisation</strong>. Backed by over two decades of first-hand operator and master-franchisee experience scaling Singapore brands into overseas markets across <strong>China, Malaysia, Indonesia, and Vietnam</strong>—including a successful commercial exit—our practice structures coherent brand architectures, compelling customer narratives, and cross-border go-to-market roadmaps. Led by <strong>Frederick Tan, Principal Management Consultant, FT Synergist</strong> (TÜV SÜD Certified Management Consultant, <strong>SCMC-1810-P0236 | SS 680:2021</strong>), engagements qualify for co-funding under Enterprise Singapore&apos;s <strong>EDGE Grant</strong> (up to 70% SME support for <em>International Branding</em>; up to 50% for <em>Business Strategic Planning</em>).
           </p>
         </div>
 
         {/* 4. HERO CTA BLOCK */}
         <div className="w-full max-w-3xl mx-auto flex flex-col items-center text-center space-y-4 pt-4">
           <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-white">
-            Ready to Transform Your Brand Architecture?
+            Structure Your Brand Architecture &amp; Regional Expansion Roadmap
           </h2>
           <p className="max-w-2xl mx-auto text-base sm:text-lg text-gray-300 leading-relaxed font-normal">
-            Book a 60-minute strategy sprint with our SCMC consultants to evaluate your brand positioning, and unlock up to 70% qualifying EnterpriseSG co-funding support.
+            Book a 60-minute strategy sprint with our SS 680 certified management consultant to evaluate your brand positioning, portfolio architecture, and EnterpriseSG EDGE Grant eligibility.
           </p>
           <div className="pt-2">
             <button
@@ -187,16 +235,20 @@ export default function StrategicBrandMarketingDevelopmentPage() {
             </button>
           </div>
 
-          {/* 2026 EDGE TRANSITION BANNER */}
-          <div className="mt-8 p-4 rounded-xl bg-white/5 border border-[#8F801B]/40 text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm backdrop-blur-sm max-w-3xl mx-auto">
-            <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-yellow-400 bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/20">EnterpriseSG 2026 Policy Notice</span>
+          {/* 2026 EDGE GRANT POLICY NOTICE (LOCKED S.O.T. ALIGNED) */}
+          <div className="mt-8 p-5 rounded-xl bg-white/5 border border-[#8F801B]/40 text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm backdrop-blur-sm max-w-3xl mx-auto">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-yellow-400 bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/20">
+                  EnterpriseSG EDGE Grant Policy (Effective 30 Sep 2026)
+                </span>
               </div>
-              <p className="text-gray-300 text-xs sm:text-sm">Strategic Brand &amp; Marketing Development under EDG transitions into the unified <strong>EDGE Grant</strong> on <strong>30 September 2026</strong> under the Business Strategy business area (up to 70% SME co-funding).</p>
+              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                EDG, MRA, and PSG ceased on 29 September 2026. Under the unified <strong>EDGE Grant</strong> (shared <strong>S$100,000 annual cap</strong> refreshed 1 April), cross-border brand strategy is supported under <strong>International Branding</strong> (<em>Internationalisation</em>: <strong>up to 70% for SMEs / 50% for non-SMEs</strong>), while domestic growth &amp; IP roadmaps are supported under <strong>Business Strategic Planning</strong> (<em>Business Strategy</em>: <strong>up to 50% for SMEs / 30% for non-SMEs</strong>).
+              </p>
             </div>
             <Link href="/edge-grant" className="shrink-0 text-[#8F801B] hover:text-yellow-300 font-bold underline inline-flex items-center text-xs sm:text-sm">
-              Explore EDGE Strategy <ArrowRight className="ml-1 h-3.5 w-3.5" />
+              Explore EDGE Grant <ArrowRight className="ml-1 h-3.5 w-3.5" />
             </Link>
           </div>
         </div>
@@ -205,26 +257,35 @@ export default function StrategicBrandMarketingDevelopmentPage() {
       {/* MAIN EDITORIAL HOUSING */}
       <main className="max-w-4xl mx-auto px-6 pb-24 space-y-20">
 
-        {/* SECTION 1: STRATEGIC BRAND & MARKETING PILLARS */}
-        <section className="space-y-6">
-          <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-            1. Brand Consultancy for SMEs: Core Transformation Pillars
-          </h2>
-          <p className="text-gray-300 leading-relaxed text-base">
-            Our specialized brand consultancy structures comprehensive corporate growth roadmaps across three core pillars. Click any pillar to launch your brand strategy sprint:
-          </p>
+        {/* SECTION 1: 3 CORE PILLARS (BRAND CONSULTANCY FOR SMES & INTERNATIONAL BRANDING) */}
+        <section className="space-y-8">
+          <div className="space-y-3">
+            <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+              1. Brand Consultancy for SMEs &amp; International Branding: Core Advisory Pillars
+            </h2>
+            <p className="text-gray-300 leading-relaxed text-base">
+              An effective brand strategy is a structured plan that defines how your business creates, protects, and scales its desired identity and value proposition. Our practice structures advisory mandates across three core pillars—aligned directly with the three supportable areas under Enterprise Singapore&apos;s <strong>EDGE International Branding</strong> framework:
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Pillar Card 1 */}
+            {/* Pillar Card 1: Area 1 - Brand Research & Analysis */}
             <div
               onClick={() => handleOpenSprintModal('strategic-brand')}
               className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
             >
               <div>
-                <ShieldCheck className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Brand Strategy Audit &amp; Diagnosis</h3>
+                <div className="flex items-center justify-between mb-4">
+                  <ShieldCheck className="h-8 w-8 text-[#8F801B] group-hover:scale-110 transition-transform" />
+                  <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-[#8F801B]/20 text-yellow-300 border border-[#8F801B]/40">
+                    Scope 01
+                  </span>
+                </div>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">
+                  Brand Research, Audit &amp; Competitor Gap Analysis
+                </h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Executing competitive market diagnosis through AI-powered rigorous primary/secondary research, internal strength/weakness audits, and competitive analysis to uncover high-margin positioning opportunities and measurable market gaps.
+                  Executing primary and secondary market diagnosis—comprehensive <strong>brand audits</strong>, customer perception analysis, <strong>competitor benchmarking</strong>, and <strong>market gap analysis</strong> across Singapore and target overseas markets to identify defensible positioning white space.
                 </p>
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
@@ -232,16 +293,23 @@ export default function StrategicBrandMarketingDevelopmentPage() {
               </span>
             </div>
 
-            {/* Pillar Card 2 */}
+            {/* Pillar Card 2: Area 2 - Development of Brand Strategy */}
             <div
               onClick={() => handleOpenSprintModal('strategic-brand')}
               className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
             >
               <div>
-                <TrendingUp className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Strategic Brand Architecture &amp; Positioning</h3>
+                <div className="flex items-center justify-between mb-4">
+                  <TrendingUp className="h-8 w-8 text-[#8F801B] group-hover:scale-110 transition-transform" />
+                  <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-[#8F801B]/20 text-yellow-300 border border-[#8F801B]/40">
+                    Scope 02
+                  </span>
+                </div>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">
+                  Strategic Brand Architecture &amp; Market Positioning
+                </h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Formulating targeted strategies to close brand conceptualisation gaps and refine market segmentation. We optimize your marketing resource deployment to build a defensible premium brand that insulates your pricing power against commoditization.
+                  Developing a structured <strong>brand architecture and portfolio strategy</strong>, defining target segments, crafting a compelling value narrative that resonates with buyers, and formulating a <strong>strategic roadmap to market your goods and services</strong> across domestic and regional markets.
                 </p>
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#8F801B] group-hover:underline inline-flex items-center">
@@ -249,22 +317,29 @@ export default function StrategicBrandMarketingDevelopmentPage() {
               </span>
             </div>
 
-            {/* Pillar Card 3 */}
+            {/* Pillar Card 3: Area 3 - Development or Refresh of Brand Identity */}
             <div
               onClick={() => handleOpenSprintModal('strategic-brand')}
               className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:border-[#8F801B] hover:bg-white/10 transition-all cursor-pointer group flex flex-col justify-between"
             >
               <div>
-                <Globe className="h-8 w-8 text-[#8F801B] mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-heading font-bold text-white text-lg mb-2">Brand Activation &amp; Go-to-Market Strategy</h3>
+                <div className="flex items-center justify-between mb-4">
+                  <Globe className="h-8 w-8 text-[#8F801B] group-hover:scale-110 transition-transform" />
+                  <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-[#8F801B]/20 text-yellow-300 border border-[#8F801B]/40">
+                    Scope 03
+                  </span>
+                </div>
+                <h3 className="font-heading font-bold text-white text-lg mb-2">
+                  Brand Identity Refresh &amp; Cross-Border Guidelines
+                </h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Formulating effective brand activation strategies and customer communication plans that establish market leadership. We build precise go-to-market roadmaps to ensure seamless expansion across local borders and targeted{" "}
+                  Leading the <strong>development or refresh of brand identity</strong>—codifying distinctive <strong>brand elements and governance guidelines</strong> prepared for trademark protection, regional licensing, franchising, and{" "}
                   <Link
                     href="/mra-grant"
                     onClick={(e) => e.stopPropagation()}
                     className="text-white font-bold underline hover:text-[#8F801B] transition-colors"
                   >
-                    overseas markets
+                    overseas market entry
                   </Link>
                   .
                 </p>
@@ -275,21 +350,170 @@ export default function StrategicBrandMarketingDevelopmentPage() {
             </div>
           </div>
 
-          {/* Official Statutory Framework Compliance & IPOS IP Week Showcase */}
+          {/* SECTION 1B: VERIFIED ENTERPRISESG EDGE GRANT MATRIX FOR BRAND & MARKETING */}
+          <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-white/15 shadow-xl space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
+                Enterprise Singapore Grant Architecture
+              </span>
+              <span className="text-xs text-gray-400 font-mono">
+                Annual Cap: S$100,000 / Year (Resets 1 April)
+              </span>
+            </div>
+
+            <h3 className="font-heading text-xl md:text-2xl font-bold tracking-tight text-white">
+              How Brand, Marketing &amp; Growth Projects Map to the Unified EDGE Grant
+            </h3>
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+              Under the unified <Link href="/edge-grant" className="text-white font-bold underline hover:text-[#8F801B]">EDGE Grant</Link>, Enterprise Singapore categorizes cross-border brand strategy, domestic corporate strategy, and overseas promotional execution into separate activities. Because scope or vendor changes are not permitted after Business Grants Portal (BGP) submission without terminating and reapplying, engagements should be mapped to the appropriate track upfront:
+            </p>
+
+            <div className="overflow-x-auto rounded-lg border border-white/10">
+              <table className="min-w-full text-left text-xs sm:text-sm text-gray-300 border-collapse">
+                <thead>
+                  <tr className="bg-black/70 text-white font-semibold border-b border-white/10">
+                    <th className="p-3.5 border-r border-white/10">EDGE Activity &amp; Business Area</th>
+                    <th className="p-3.5 border-r border-white/10">Support Level (SME / Non-SME)</th>
+                    <th className="p-3.5 border-r border-white/10">Outcome &amp; Duration</th>
+                    <th className="p-3.5">Eligible Scope &amp; Consultant Requirement</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/10 bg-black/40">
+                  <tr>
+                    <td className="p-3.5 font-bold text-white border-r border-white/10">
+                      International Branding
+                      <span className="block text-[11px] font-normal text-[#8F801B] mt-0.5">Area: Internationalisation</span>
+                    </td>
+                    <td className="p-3.5 font-semibold text-yellow-400 border-r border-white/10">
+                      Up to 70% (SME)<br />
+                      <span className="text-gray-400 font-normal">Up to 50% (Non-SME)</span>
+                    </td>
+                    <td className="p-3.5 border-r border-white/10">
+                      10 weeks outcome<br />
+                      <span className="text-gray-400">Complete within 12 months</span>
+                    </td>
+                    <td className="p-3.5 leading-relaxed">
+                      Professional service costs for (1) Brand research &amp; analysis, (2) Development of brand strategy, and/or (3) Development or refresh of brand identity to facilitate overseas expansion. <strong>Requires SAC-accredited SS 680 consultant certification.</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3.5 font-bold text-white border-r border-white/10">
+                      Business Strategic Planning
+                      <span className="block text-[11px] font-normal text-[#8F801B] mt-0.5">Area: Business Strategy</span>
+                    </td>
+                    <td className="p-3.5 font-semibold text-white border-r border-white/10">
+                      Up to 50% (SME)<br />
+                      <span className="text-gray-400 font-normal">Up to 30% (Non-SME)</span>
+                    </td>
+                    <td className="p-3.5 border-r border-white/10">
+                      10 weeks outcome<br />
+                      <span className="text-gray-400">Complete within 12 months</span>
+                    </td>
+                    <td className="p-3.5 leading-relaxed">
+                      Professional service costs to formulate strategies and processes to improve business development, better manage <Link href="/ip-consultant" className="text-white underline hover:text-[#8F801B]">intellectual property (IP) assets</Link>, and optimise operations. <strong>Requires SAC-accredited SS 680 consultant certification.</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3.5 font-bold text-white border-r border-white/10">
+                      Overseas Marketing &amp; Public Relations
+                      <span className="block text-[11px] font-normal text-[#8F801B] mt-0.5">Area: Internationalisation</span>
+                    </td>
+                    <td className="p-3.5 font-semibold text-yellow-400 border-r border-white/10">
+                      Up to 70% (SME)<br />
+                      <span className="text-gray-400 font-normal">Up to 50% (Non-SME)</span>
+                    </td>
+                    <td className="p-3.5 border-r border-white/10">
+                      6 weeks outcome<br />
+                      <span className="text-gray-400">Complete within 12 months</span>
+                    </td>
+                    <td className="p-3.5 leading-relaxed">
+                      In-market outreach in target overseas markets: in-store promotions, roadshows, pop-up stores, and publicity across social/online/offline media with localized content adaptation (not mere translation). Requires vendor track record in the target market.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* SUPPORTED VS NON-SUPPORTED COSTS & MANDATORY BGP DOCUMENTS */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+              <div className="p-5 rounded-lg bg-black/60 border border-white/10 space-y-3">
+                <div className="flex items-center gap-2 text-yellow-400 font-bold text-sm">
+                  <AlertCircle className="h-4 w-4 shrink-0" />
+                  <h4>Non-Supported Costs (International Branding)</h4>
+                </div>
+                <p className="text-xs text-gray-300 leading-relaxed">
+                  Under Enterprise Singapore&apos;s activity parameters, <strong>International Branding</strong> covers strategic professional consultancy and explicitly <strong>excludes</strong>:
+                </p>
+                <ul className="text-xs text-gray-400 space-y-1.5 list-disc pl-4 leading-relaxed">
+                  <li>Activities aimed at generating <strong>domestic business opportunities</strong>;</li>
+                  <li>Operational expenditure such as <strong>collateral production, website development, social media management</strong>, implementation of brand development roadmaps, marketing plans, or campaigns;</li>
+                  <li>Goods and Services Tax (<strong>GST</strong>) and retrospective work started or deposits paid before BGP submission.</li>
+                </ul>
+              </div>
+
+              <div className="p-5 rounded-lg bg-black/60 border border-white/10 space-y-3">
+                <div className="flex items-center gap-2 text-[#8F801B] font-bold text-sm">
+                  <FileCheck2 className="h-4 w-4 shrink-0" />
+                  <h4>Mandatory BGP Application Documents &amp; KPIs</h4>
+                </div>
+                <p className="text-xs text-gray-300 leading-relaxed">
+                  Before submitting an <strong>International Branding</strong> application via Corppass on the Business Grants Portal (BGP), applicants must prepare:
+                </p>
+                <ul className="text-xs text-gray-400 space-y-1.5 list-disc pl-4 leading-relaxed">
+                  <li><strong>Outline of overseas market strategy</strong> and expansion plan;</li>
+                  <li>Vendor&apos;s proposal for the target market, quotation, and <strong>SAC-accredited SS 680 certification</strong>;</li>
+                  <li><strong>1-year projection of expected overseas sales</strong> resulting from the project;</li>
+                  <li><strong>1-year projection of new jobs created</strong> (overall and Singaporeans only) with <strong>gross monthly salary above S$5,000</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* SECTION 1C: STRATEGIC CONSULTANCY SCOPE VS DOWNSTREAM CAMPAIGN EXECUTION */}
+          <div className="bg-white/5 p-6 md:p-8 rounded-xl border border-white/10 space-y-5">
+            <h3 className="font-heading text-xl md:text-2xl font-bold text-white">
+              Distinguishing Strategic Brand Consultancy from Downstream Campaign Execution
+            </h3>
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+              When scoping a brand transformation or market entry mandate, enterprises should separate upstream strategic advisory from downstream creative and media execution:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
+              <div className="p-5 rounded-lg bg-black/70 border border-[#8F801B]/40 space-y-2.5">
+                <div className="flex items-center gap-2 font-bold text-white">
+                  <CheckCircle2 className="h-4 w-4 text-[#8F801B] shrink-0" />
+                  <span>Upstream Strategy &amp; Intangible Asset Management (SS 680 Scope)</span>
+                </div>
+                <p className="text-gray-300 leading-relaxed">
+                  Addresses market research, competitor gap analysis, brand architecture, customer value narratives, <Link href="/ip-consultant" className="text-white underline hover:text-[#8F801B]">IP and trademark portfolio alignment</Link>, and multi-market commercial roadmaps. Under EDGE <em>International Branding</em> (up to 70% SME support) and <em>Business Strategic Planning</em> (up to 50% SME support), this scope must be led by an SAC-accredited SS 680 certified management consultant.
+                </p>
+              </div>
+              <div className="p-5 rounded-lg bg-black/40 border border-white/10 space-y-2.5">
+                <div className="flex items-center gap-2 font-bold text-gray-200">
+                  <Globe className="h-4 w-4 text-gray-400 shrink-0" />
+                  <span>Downstream Creative Production &amp; Media Execution</span>
+                </div>
+                <p className="text-gray-400 leading-relaxed">
+                  Covers operational implementation—website development, collateral production, social media management, advertising, and in-market PR events. Under EDGE, routine collateral and website production are excluded from <em>International Branding</em>, while overseas PR, roadshows, and localized media outreach are supported under the separate <em>Overseas Marketing &amp; Public Relations</em> activity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Governance Credentials & Case Study Feature */}
           <div className="bg-slate-900/90 p-6 md:p-8 rounded-xl border border-[#8F801B]/40 shadow-xl space-y-6 mt-6">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-[10px] uppercase tracking-wider font-bold bg-[#8F801B]/20 text-[#8F801B] px-3 py-1 rounded border border-[#8F801B]/40">
-                Statutory Authorization &amp; Keynote Showcase
+                Governance &amp; Case Study Record
               </span>
               <span className="text-xs text-yellow-400/90 font-mono">
                 IPOS IP Week 2026 Speaker
               </span>
             </div>
             <h3 className="font-heading text-xl md:text-2xl font-bold tracking-tight text-white">
-              Official Statutory Framework Compliance &amp; IPOS IP Week 2026 Feature
+              Accredited Management Consultancy &amp; IPOS IP Week 2026 Feature
             </h3>
             <p className="text-gray-300 text-base leading-relaxed">
-              Brand and marketing development projects executed under statutory co-funding must meet strict capability development thresholds. <strong>FT Synergist is an approved service provider listed on the official <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B]">GoBusiness IP Grow Directory</a> and executes projects fully aligned with Enterprise Singapore EDG standards.</strong> Principal Advisor Frederick Tan maintains active status as a TÜV SÜD Singapore Certified Management Consultant (SCMC) under License <strong>SCMC-1810-P0236</strong>, ensuring all strategic growth proposals hold absolute submission integrity.
+              <strong>Frederick Tan, Principal Management Consultant, FT Synergist</strong>, holds active accreditation as a TÜV SÜD Singapore Certified Management Consultant (SCMC) under License <strong>SCMC-1810-P0236</strong> (SAC-accredited SS 680 standard). FT Synergist Pte Ltd is listed on the official <a href="https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-[#8F801B]">IPOS GoBusiness IP Grow Directory</a> across four practice areas: <strong>Branding Strategy</strong>, <strong>IP Strategy Consulting</strong>, <strong>Innovation Consultancy</strong>, and <strong>IP Brokerage &amp; Licensing</strong>.
             </p>
 
             {/* Case Study Feature Callout */}
@@ -329,7 +553,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
         {/* SECTION 2: QUANTIFIABLE TRACK RECORD */}
         <section className="space-y-6">
           <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-            2. Quantifiable Valuation Lift Track Record
+            2. Quantifiable Enterprise Track Record
           </h2>
           <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 p-2 shadow-sm text-white">
             <QuantitativeSuccessTable />
@@ -339,10 +563,10 @@ export default function StrategicBrandMarketingDevelopmentPage() {
           <div className="p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-[#8F801B]/20 border border-[#8F801B]/50 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
             <div className="space-y-2 text-center md:text-left">
               <h3 className="font-heading text-xl font-extrabold text-white">
-                Ready to scale your brand equity and expand across ASEAN?
+                Planning a brand transformation or regional expansion?
               </h3>
               <p className="text-sm text-gray-300">
-                Evaluate your brand levers and secure EnterpriseSG EDG co-funding support with an accredited SCMC consultant.
+                Evaluate your brand architecture and structure an EnterpriseSG EDGE International Branding or Business Strategic Planning roadmap with an SCMC (SS 680) consultant.
               </p>
             </div>
             <button
@@ -385,7 +609,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
                   <div className="px-6 pb-6 text-sm md:text-base text-gray-300 leading-relaxed border-t border-white/5 pt-4">
                     {index === 0 ? (
                       <>
-                        Yes. The EDG explicitly funds Strategic Brand &amp; Marketing Development under its Core Capabilities pillar. However, the grant covers strategy formulation and transformation, not day-to-day advertising spend. Read our dedicated <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">EDG Grant Advisory</Link> guide.
+                        {item.a} Explore our dedicated <Link href="/edge-grant" className="text-white font-bold underline hover:text-[#8F801B]">EDGE Grant Singapore</Link> and <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">EDG Grant Advisory</Link> guides.
                       </>
                     ) : (
                       item.a
@@ -400,10 +624,10 @@ export default function StrategicBrandMarketingDevelopmentPage() {
         {/* BOTTOM CONVERSION BANNER */}
         <section className="bg-slate-900 border-t border-b border-[#8F801B]/30 py-16 px-6 rounded-2xl text-center space-y-6">
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-white">
-            Build a High-Valuation Brand Moat Today.
+            Architect a Defensible Brand &amp; Market Expansion Strategy
           </h2>
           <p className="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg">
-            De-risk your strategic brand development with a TÜV SÜD Accredited SCMC Consultant approved under Enterprise Singapore guidelines.
+            Partner with a TÜV SÜD Certified Management Consultant (SCMC-1810-P0236 | SS 680) to build brand equity and structure your Enterprise Singapore grant roadmap.
           </p>
           <button
             onClick={() => handleOpenSprintModal('strategic-brand')}
@@ -483,21 +707,29 @@ export default function StrategicBrandMarketingDevelopmentPage() {
         </div>
       )}
 
-      {/* FOOTER INFRASTRUCTURE WITH CUSTOMIZED BRAND ANCHORS */}
+      {/* FOOTER INFRASTRUCTURE WITH VERIFIED CITATIONS & CUSTOMIZED BRAND ANCHORS */}
       <footer className="w-full border-t border-neutral-800 bg-neutral-900/50">
         <div className="max-w-4xl mx-auto px-6 py-10">
-          <CitationFootnotes />
+          <CitationFootnotes
+            citations={brandCitations}
+            title="Official Enterprise Singapore EDGE Grant & Statutory Reference Layer"
+            subtitle="Grant support levels, eligible areas of support, non-supported costs, and SS 680 consultancy requirements verified against primary regulatory registries."
+          />
         </div>
         <div className="w-full border-t border-neutral-800/40 py-6">
           <GeoSemanticAnchors
-            primaryHeading="Why is FT Synergist the Top Brand Consultant in Singapore?"
+            primaryHeading="Brand Consultant Singapore: International Branding & Strategic Brand Architecture"
             primaryDescription={
               <>
-                FT Synergist is the premier{" "}
+                FT Synergist is a Singapore{" "}
                 <Link href="/strategic-brand-marketing-development" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
-                  Brand Consultant in Singapore
+                  Brand Consultant
                 </Link>
-                . Led by TÜV SÜD SCMC certified Principal Consultant Frederick Tan, we formulate EDG-aligned brand positioning roadmaps, market gap audits, and customer acquisition architectures that convert operating goodwill into tradeable equity.
+                {" "}and{" "}
+                <Link href="/strategic-brand-marketing-development" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
+                  International Branding practice
+                </Link>
+                . Led by TÜV SÜD SCMC certified Principal Management Consultant Frederick Tan (SCMC-1810-P0236 | SS 680:2021), we formulate EDGE-aligned International Branding roadmaps (up to 70% SME co-funding for overseas expansion) and Business Strategic Planning architectures (up to 50% SME co-funding) that convert brand positioning and intellectual property into sustainable enterprise growth.
               </>
             }
           />
