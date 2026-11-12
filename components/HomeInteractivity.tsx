@@ -96,16 +96,16 @@ export function ServicesAccordion() {
   // The 6 Core Services aligned with Enterprise Singapore EDGE Grant & IPOS GoBusiness IP Grow S.O.T.
   const services = [
     {
-      title: "Business Strategy Development",
-      href: "/edge-grant",
+      title: "Business Strategic Planning",
+      href: "/business-strategic-planning",
       description: "Formulating corporate growth strategies, business models, and operational optimisation roadmaps under Enterprise Singapore's EDGE Business Strategic Planning framework.",
       expandedIntro: "Led by TÜV SÜD SCMC (SS 680:2021) certified management consultants, our Business Strategic Planning practice structures actionable 1-to-5-year growth roadmaps:",
       image: "/ft-synergist-tnt-surveillance-business-strategy.png",
-      alt: "Business Strategy Development and Business Strategic Planning Consultant Singapore",
+      alt: "Business Strategic Planning and Business Strategy Development Consultant Singapore",
       details: [
-        { title: "Internal & External Market Analysis", content: "Evaluating core enterprise capabilities, target market sizing, and competitor positioning gaps." },
-        { title: "Growth Models & Strategic Roadmaps", content: "Designing scalable business models, intellectual property asset alignment, and multi-year execution plans." },
-        { title: "Implementation & Governance", content: "Translating strategic plans into measurable revenue growth and high-value workforce outcomes." }
+        { title: "Internal Diagnostic & Business Excellence (SQC)", content: "Evaluating existing business drivers, operating models, and 7-pillar Business Excellence gaps (e.g., guiding TNT Surveillance to Singapore Quality Class)." },
+        { title: "AI-Augmented Market Sizing & Competitor Analysis", content: "Quantifying multi-market TAM/SAM/SOM and regulatory barriers (e.g., Sundat's ~USD 5.65B Australian M&A and 5-market portfolio roadmap)." },
+        { title: "Growth Models, IP Alignment & 5Cs Execution", content: "Translating strategic plans, IP asset management, and the 5Cs Playbook into measurable 1-year revenue growth and >S$5,000/mo job creation." }
       ]
     },
     {

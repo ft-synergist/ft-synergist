@@ -80,10 +80,10 @@ export default function ClientEDGPage() {
             client: "PPE Distribution (S) Pte Ltd"
         },
         {
-            impact: "IMPACT: S$55.4M NEW SALES CHANNEL CAPTURED",
-            title: "EDG for Security & Technology",
-            quote: "FT Synergist helped us secure funding for business strategy development to design business continuity plans and attain the Singapore Quality Class (SQC) certification. This strategic foundation helped us architect a $55.4 million new sales channel through our T-Guard system.",
-            client: "TNT Surveillance"
+            impact: "IMPACT: 10,000+ VEHICLES | 97%–100% PUBLIC FLEET SHARE | SQC AWARDED",
+            title: "Business Strategic Planning & Business Excellence (SQC)",
+            quote: "Frederick quickly built trust with our senior leadership, distilling the Business Excellence framework into practical examples our team could immediately contextualise. His consulting expertise and decisive guidance helped us navigate evolving business continuity plans and attain the Singapore Quality Class award from Enterprise Singapore.",
+            client: "Joshua Tan, Director, TNT Surveillance Pte Ltd"
         },
         {
             impact: "IMPACT: S$3.15M REVENUE SCALE & CLEAR EXIT STRATEGY",
@@ -92,10 +92,10 @@ export default function ClientEDGPage() {
             client: "Petale Tea"
         },
         {
-            impact: "IMPACT: GLOBAL M&A & STRUCTURAL SUSTAINABILITY ROADMAP",
-            title: "EDG for Manufacturing & Global Expansion",
-            quote: "We moved from an opportunistic approach to a clear global roadmap aligned with the UN SDGs. The MRA and EDG grants are now co-funding our M&A targets in Australia and strategic hubs in Vietnam.",
-            client: "Sundat (S) Pte. Ltd."
+            impact: "IMPACT: ~USD 5.65B AUSTRALIAN M&A & 5-MARKET PORTFOLIO ROADMAP",
+            title: "Business Strategic Planning ('Project Scaling Up')",
+            quote: "The engagement with FT Synergist has been transformative. Stepping back to assess our business strategically, we have developed an ambitious global roadmap and have equipped our management team with invaluable new capabilities in strategic planning and data-driven analysis.",
+            client: "Paul Chen, Director, Sundat (S) Pte. Ltd."
         },
         {
             impact: "IMPACT: MULTI-MARKET EXPANSION & HALAL CERTIFICATION CORE",
@@ -252,7 +252,12 @@ export default function ClientEDGPage() {
                             <ul className="space-y-4 text-gray-300">
                                 <li className="flex items-start">
                                     <CheckCircle2 className="h-5 w-5 text-[#8F801B] mr-3 shrink-0 mt-0.5 opacity-80" />
-                                    <span><strong className="text-white">Business Strategy Development</strong> &amp; Transformation</span>
+                                    <span>
+                                        <Link href="/business-strategic-planning" className="text-white font-bold underline hover:text-[#8F801B] transition-colors">
+                                            Business Strategic Planning
+                                        </Link>{" "}
+                                        (Legacy Business Strategy Development)
+                                    </span>
                                 </li>
                                 <li className="flex items-start">
                                     <CheckCircle2 className="h-5 w-5 text-[#8F801B] mr-3 shrink-0 mt-0.5 opacity-80" />

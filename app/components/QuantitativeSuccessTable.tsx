@@ -8,8 +8,8 @@ const fallbackDataset = [
   {
     id: 1,
     name: "TNT Surveillance Pte Ltd",
-    grantServices: [{ parameterDetails: "IP Strategy & Telematics Architecture (EDG/EDGE Aligned)" }],
-    quantitativeOutcomes: [{ outcomeMetric: "Reduced driver fatigue & accidents by 90% in 8 weeks; scaled smart fleet deployment across nationwide public bus networks (SBS Transit)", timelineMonths: 18 }]
+    grantServices: [{ parameterDetails: "Business Strategic Planning, IP Co-Creation & Singapore Quality Class (SQC)" }],
+    quantitativeOutcomes: [{ outcomeMetric: "85% drop in driver hazard alerts in 1 month; 72% cut in per-bus installation manpower costs (24 ➔ 9 man-hrs); 97% SBST, 100% SMRT & 100% PSA prime mover fleet share (10,000+ vehicles); awarded EnterpriseSG SQC", timelineMonths: 18 }]
   },
   {
     id: 2,
@@ -20,8 +20,8 @@ const fallbackDataset = [
   {
     id: 3,
     name: "Sundat (S) Pte Ltd",
-    grantServices: [{ parameterDetails: "Global Market Entry & M&A Strategy (Powered by BeyondBorders® AI)" }],
-    quantitativeOutcomes: [{ outcomeMetric: "Bypassed >11-year, >$286M APVMA regulatory barrier via an acquisition-led M&A playbook to access a $2.7B Tier-1 agrochemical market", timelineMonths: 12 }]
+    grantServices: [{ parameterDetails: "Business Strategic Planning & 5-Market AI Portfolio Strategy (Project Scaling Up)" }],
+    quantitativeOutcomes: [{ outcomeMetric: "Quantified ~USD 5.65B Australian agrochemical market & bypassed APVMA organic registration hurdle via acquisition-led M&A entry; structured 3-Tier global roadmap (Australia, Bangladesh, Brazil, Vietnam, Taiwan) & 5Cs Playbook", timelineMonths: 12 }]
   }
 ];
 

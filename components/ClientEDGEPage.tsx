@@ -569,7 +569,7 @@ export default function ClientEDGEPage() {
                                     <h3 className="font-bold text-white text-base">Core Business Strategy &amp; Capability Upgrading</h3>
                                     <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">Up to 50% SME / 30% Non-SME</span>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed">Projects in Business Strategy (including <Link href="/ip-consultant" className="text-white underline hover:text-[#C5A017]">IP asset management</Link>), Financial Management, Standards, and custom Process Redesign require engaging an SAC-accredited SS 680 certified management consultant (such as TÜV SÜD PSB, SBACC, or IMCS). Proposals, scopes, and expected commercial KPIs must be prepared upfront before submitting via BGP.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Projects in <Link href="/business-strategic-planning" className="text-white underline hover:text-[#C5A017]">Business Strategic Planning</Link> (including <Link href="/ip-consultant" className="text-white underline hover:text-[#C5A017]">IP asset management</Link>), Financial Management, Standards, and custom Process Redesign require engaging an SAC-accredited SS 680 certified management consultant (such as TÜV SÜD PSB, SBACC, or IMCS). Proposals, scopes, and expected commercial KPIs must be prepared upfront before submitting via BGP.</p>
                             </div>
                         </div>
 

@@ -21,13 +21,18 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/business-strategy-development',
+        destination: '/business-strategic-planning',
+        permanent: true,
+      },
+      {
         source: '/expertise/services/business-strategy-development',
-        destination: '/edg-grant', // ◄─── Upgraded to targeted money page route
+        destination: '/business-strategic-planning',
         permanent: true,
       },
       {
         source: '/services/business-strategy-development',
-        destination: '/edg-grant', // ◄─── Upgraded to targeted money page route
+        destination: '/business-strategic-planning',
         permanent: true,
       },
       {
