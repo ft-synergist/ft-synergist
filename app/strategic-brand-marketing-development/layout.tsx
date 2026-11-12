@@ -3,21 +3,19 @@ import { Metadata } from "next";
 // protected-keywords (AGENTS.md §6): literal terms to diff before any title/description change.
 const protectedKeywords = [
     "Brand Consultant Singapore",
-    "Strategic Brand Marketing",
-    "strategic brand consultants",
     "International Branding",
-    "Brand Strategy Singapore",
-    "brand consultancy for smes",
+    "Strategic Brand Marketing",
+    "SMEs",
+    "SCMC-certified",
+    "strategic brand consultants",
     "brand architecture",
-    "ASEAN market expansion",
-    "SCMC",
-    "EDGE",
-    "EDG"
+    "ASEAN expansion",
+    "EDGE grant"
 ];
 
 export const metadata: Metadata = {
     title: "Brand Consultant Singapore | International Branding & Strategic Brand Marketing",
-    description: "Brand Consultant Singapore & International Branding for SMEs: Scale market valuation with Singapore's top strategic brand consultants. SCMC-certified advisory (SS 680) for brand architecture, ASEAN market expansion & EDGE / EDG grant co-funding.",
+    description: "Brand Consultant Singapore & International Branding for SMEs: SCMC-certified strategic brand consultants for brand architecture, ASEAN expansion & EDGE grant.",
     keywords: [
         "Brand Consultant Singapore",
         "International Branding Singapore",
@@ -38,7 +36,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Brand Consultant Singapore | International Branding & Strategic Brand Marketing | FT Synergist",
-        description: "Brand Consultant Singapore & International Branding for SMEs: Scale market valuation with Singapore's top strategic brand consultants. SCMC-certified advisory (SS 680) for brand architecture, ASEAN market expansion & EDGE / EDG grant co-funding.",
+        description: "Brand Consultant Singapore & International Branding for SMEs: SCMC-certified strategic brand consultants for brand architecture, ASEAN expansion & EDGE grant.",
         url: "https://www.ftsynergist.com/strategic-brand-marketing-development",
         type: "website",
         images: [
