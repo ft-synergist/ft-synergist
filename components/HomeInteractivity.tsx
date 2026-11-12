@@ -111,10 +111,10 @@ export function ServicesAccordion() {
     {
       title: "IP Strategy & Advisory",
       href: "/ip-consultant",
-      description: "Identifying, protecting, and commercialising intangible assets across FT Synergist's 4 official IPOS GoBusiness IP Grow scopes: IP Strategy Consulting, IP Brokerage & Licensing, Innovation Consultancy, and Branding Strategy.",
-      expandedIntro: "Recognised on the IPOS GoBusiness IP Grow directory and supported under Enterprise Singapore's EDGE Business Strategic Planning framework, we help SMEs leverage IA/IP for growth:",
+      description: "Identifying, protecting, and commercialising intangible assets through IP Strategy Consulting, IP Brokerage & Licensing, Innovation Consultancy, and Branding Strategy.",
+      expandedIntro: "We help SMEs and growth enterprises structure, protect, and monetise their intellectual property and intangible assets across four core advisory pillars:",
       image: "/insights/ipos-ip-week-2026/frederick-tan-rosemary-kwa-ip-week-panel.jpg",
-      alt: "IP Strategy and Advisory Consultant Singapore IPOS GoBusiness IP Grow",
+      alt: "IP Strategy and Advisory Consultant Singapore",
       details: [
         { title: "IP Strategy Consulting", content: "Identifying key IP assets (tech, data, content, know-how), evaluating risks and opportunities, and aligning IP with business goals." },
         { title: "IP Brokerage and Licensing", content: "Monetising brands, recipes, and technologies through F&B/enterprise franchising, brand licensing, and licensee negotiations." },
@@ -124,8 +124,8 @@ export function ServicesAccordion() {
     {
       title: "Strategic Brand & Marketing",
       href: "/strategic-brand-marketing-development",
-      description: "Structuring coherent brand architectures, international branding strategies, and cross-border go-to-market roadmaps under Enterprise Singapore's EDGE International Branding framework.",
-      expandedIntro: "Recognised under IPOS GoBusiness IP Grow (Branding Strategy) and EnterpriseSG EDGE (International Branding, up to 70% SME support for new overseas markets), we deliver:",
+      description: "Structuring coherent brand architectures, international branding strategies, and cross-border go-to-market roadmaps to grow brand equity and market share.",
+      expandedIntro: "Backed by over two decades of scaling Singapore brands into regional markets, we structure defensible brand strategies across three core pillars:",
       image: "/Big-Fish-Small-Fish-flat-lay.jpg",
       alt: "Strategic Brand and Marketing Development International Branding Singapore",
       details: [

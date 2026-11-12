@@ -239,7 +239,7 @@ export default function IPConsultantPage() {
                         According to Brand Finance data cited by IPOS, global intangible asset value has grown 11% annually since 1996 to surpass physical assets at over US$74 trillion. From proprietary technology, software, and data to brand equity, recipes, and operational know-how, intellectual property (IP) and intangible assets (IA) are primary drivers of competitive advantage, recurring licensing revenue, and long-term enterprise value.
                     </p>
                     <p className="text-sm md:text-base leading-relaxed text-gray-300">
-                        Backed by over two decades of first-hand operator, master-franchisee, and management consulting experience scaling Singapore businesses into China, Malaysia, Indonesia, and Vietnam—including a successful commercial exit—<strong>FT Synergist</strong> advises SMEs and growth enterprises across four official IA/IP service scopes: <strong>IP Strategy Consulting</strong>, <strong>IP Brokerage and Licensing</strong>, <strong>Innovation Consultancy</strong>, and <strong>Branding Strategy</strong>.
+                        Backed by over two decades of first-hand operator, master-franchisee, and management consulting experience scaling Singapore businesses into China, Malaysia, Indonesia, and Vietnam—including a successful commercial exit—<strong>FT Synergist</strong> advises SMEs and growth enterprises on <strong>IP Strategy Consulting</strong>, <strong>IP Brokerage and Licensing</strong>, <strong>Innovation Consultancy</strong>, and <strong>Branding Strategy</strong>.
                     </p>
                     <div className="pt-2 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-gray-400">
                         <span>
@@ -309,19 +309,18 @@ export default function IPConsultantPage() {
 
             {/* MAIN EDITORIAL HOUSING */}
             <main className="max-w-4xl mx-auto px-6 pb-24 space-y-20">
-                {/* SECTION 1: FT SYNERGIST'S 4 REGISTERED IPOS GOBUSINESS IP GROW SCOPES */}
+                {/* SECTION 1: CORE IP STRATEGY & ADVISORY PILLARS */}
                 <section className="space-y-6">
                     <div className="space-y-2">
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
-                            Official IPOS GoBusiness IP Grow Directory Scopes
+                            Core Advisory Capabilities
                         </span>
                         <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-                            1. IP Strategy &amp; Advisory Pillars (4 Prescribed IA/IP Scopes)
+                            1. IP Strategy &amp; Advisory Pillars
                         </h2>
                     </div>
                     <p className="text-gray-300 leading-relaxed text-base">
-                        IPOS GoBusiness IP Grow organises Singapore&apos;s intangible asset and intellectual property landscape into 20 service directories across 4 categories.{" "}
-                        <strong>FT Synergist Pte Ltd</strong> is officially listed across four upstream strategic and commercial directories. Select any scope below to schedule a diagnostic consultation:
+                        Our practice structures intangible asset protection, innovation roadmaps, and cross-border licensing across four core advisory pillars. Select any pillar below to schedule a diagnostic consultation:
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -897,11 +896,11 @@ export default function IPConsultantPage() {
                         primaryHeading="IP Consultant Singapore: IP Strategy Consulting, Brokerage & Licensing"
                         primaryDescription={
                             <>
-                                Listed on the official IPOS GoBusiness IP Grow directory across four service scopes, FT Synergist is an accredited{" "}
+                                FT Synergist is a Singapore management consultancy and{" "}
                                 <Link href="/ip-consultant" className="text-white font-semibold underline hover:text-[#8F801B] transition-colors">
                                     IP Consultant Singapore
-                                </Link>
-                                . Led by Principal Management Consultant Frederick Tan (TÜV SÜD SCMC-1810-P0236 | SS 680:2021), we advise SMEs on IP Strategy Consulting, IP Brokerage and Licensing, Innovation Consultancy, and Branding Strategy.
+                                </Link>{" "}
+                                advising SMEs and growth enterprises on IP Strategy Consulting, IP Brokerage and Licensing, Innovation Consultancy, and Branding Strategy. Led by Principal Management Consultant Frederick Tan (TÜV SÜD SCMC-1810-P0236 | SS 680:2021; listed on the IPOS GoBusiness IP Grow directory).
                             </>
                         }
                     />
