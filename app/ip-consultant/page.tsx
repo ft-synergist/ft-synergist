@@ -108,7 +108,9 @@ export default function IPConsultantPage() {
     const [mounted, setMounted] = useState(false);
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
-    // Locked Sprint Google Calendar Schedule Mapping
+    const IPOS_FORMSG_URL = "https://form.gov.sg/6969e61868c5d3bca23af091";
+
+    // Locked Sprint Google Calendar Schedule Mapping (retained for other service flows)
     const calendarUrls: Record<string, string> = {
         "ip-strategy":
             "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true",
@@ -287,22 +289,54 @@ export default function IPConsultantPage() {
                     </p>
                 </div>
 
-                {/* 5. HERO CTA BLOCK */}
-                <div className="w-full max-w-3xl mx-auto flex flex-col items-center text-center space-y-4 pt-2">
-                    <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-white">
-                        Ready to Structure and Commercialise Your Intangible Assets?
-                    </h2>
-                    <p className="max-w-2xl mx-auto text-base sm:text-lg text-gray-300 leading-relaxed font-normal">
-                        Schedule a 1-hour Scaling Up Sprint to evaluate your IP portfolio, licensing architecture, and EDGE Grant eligibility.
-                    </p>
-                    <div className="pt-2">
-                        <button
-                            onClick={() => handleOpenSprintModal("ip-strategy")}
-                            className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center justify-center"
+                {/* 5. HERO DIAGNOSTIC OFFER BLOCK (SINGLE-CHANNEL OFFICIAL IPOS FORMSG) */}
+                <div className="w-full max-w-3xl mx-auto bg-white/5 border border-[#8F801B]/50 rounded-2xl p-6 sm:p-8 text-left space-y-5 shadow-[0_0_30px_rgba(143,128,27,0.12)]">
+                    <div className="space-y-2">
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#C5A017] font-bold">
+                            Complimentary Consultation
+                        </span>
+                        <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-white">
+                            Complimentary 60-Minute IP &amp; Intangible Asset Strategy Diagnostic
+                        </h2>
+                        <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                            Your business may own more valuable intangible assets than you realise. FT Synergist helps business owners identify opportunities to better manage, protect, and commercialise their intellectual property and intangible assets.
+                        </p>
+                    </div>
+
+                    <div className="bg-black/50 p-5 rounded-xl border border-white/10 space-y-3">
+                        <h3 className="text-xs font-mono uppercase tracking-wider text-[#8F801B] font-bold">
+                            What We Will Explore (4 Consultation Discussion Areas)
+                        </h3>
+                        <ol className="text-xs sm:text-sm text-gray-300 space-y-2 list-decimal list-inside leading-relaxed">
+                            <li>
+                                <strong className="text-white">Intangible Asset Identification:</strong> Identify potentially undervalued or undocumented intangible assets across your business.
+                            </li>
+                            <li>
+                                <strong className="text-white">IP Management &amp; Protection Gaps:</strong> Assess current IP management practices and commercial defensibility gaps.
+                            </li>
+                            <li>
+                                <strong className="text-white">Licensing &amp; Commercialisation Opportunities:</strong> Explore licensing, franchising, and regional expansion opportunities.
+                            </li>
+                            <li>
+                                <strong className="text-white">Business Growth &amp; Support Pathways:</strong> Discuss potential business growth, valuation, and commercialisation pathways, including relevant grant support pathways.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div className="pt-1 flex flex-col items-start space-y-3">
+                        <a
+                            href={IPOS_FORMSG_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={trackLead}
+                            className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-8 rounded-lg text-base sm:text-lg transition-all shadow-xl hover:scale-[1.02] cursor-pointer inline-flex items-center justify-center"
                         >
-                            Book 60-Minute IP Strategy Sprint
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                        </button>
+                            Request Your Complimentary Diagnostic
+                            <ExternalLink className="ml-2 h-5 w-5" />
+                        </a>
+                        <p className="text-xs text-gray-400 leading-relaxed">
+                            Enquiries are submitted through the official IPOS FormSG channel (<em>&ldquo;Connect with FT Synergist Pte Ltd&rdquo;</em>). Submitting an enquiry does not automatically confirm an appointment; FT Synergist will follow up directly to qualify your requirements and arrange the 60-minute consultation. Use of the GoBusiness IP Grow FormSG channel facilitates enquiry routing and does not imply IPOS endorsement of consultation outcomes.
+                        </p>
                     </div>
                 </div>
             </header>
@@ -799,21 +833,32 @@ export default function IPConsultantPage() {
                     </div>
                 </section>
 
-                {/* BOTTOM CONVERSION BANNER */}
+                {/* BOTTOM CONVERSION BANNER (OFFICIAL IPOS FORMSG SINGLE CHANNEL) */}
                 <section className="bg-slate-900 border-t border-b border-[#8F801B]/30 py-16 px-6 rounded-2xl text-center space-y-6">
+                    <span className="text-xs font-mono uppercase tracking-widest text-[#C5A017] font-bold block">
+                        Complimentary Consultation
+                    </span>
                     <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-white">
-                        Structure Your IP &amp; Intangible Asset Roadmap
+                        Complimentary 60-Minute IP &amp; Intangible Asset Strategy Diagnostic
                     </h2>
                     <p className="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg">
-                        Work with an IPOS GoBusiness IP Grow listed management consultancy and TÜV SÜD SCMC certified advisor (SCMC-1810-P0236) to align your intangible assets with corporate growth and EDGE Grant support.
+                        Explore your business&apos;s undocumented intangible assets, IP management and protection gaps, licensing and commercialisation opportunities, and relevant business growth pathways with Principal Management Consultant Frederick Tan (SCMC-1810-P0236).
                     </p>
-                    <button
-                        onClick={() => handleOpenSprintModal("ip-strategy")}
-                        className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-10 rounded-lg text-lg transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center justify-center"
-                    >
-                        Book 60-Minute IP Strategy Sprint
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                    </button>
+                    <div className="space-y-3">
+                        <a
+                            href={IPOS_FORMSG_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={trackLead}
+                            className="bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 px-10 rounded-lg text-lg transition-all shadow-xl hover:scale-105 cursor-pointer inline-flex items-center justify-center"
+                        >
+                            Request Your Complimentary Diagnostic
+                            <ExternalLink className="ml-2 h-5 w-5" />
+                        </a>
+                        <p className="max-w-xl mx-auto text-xs text-gray-400 leading-relaxed">
+                            Enquiries are submitted through the official IPOS FormSG channel (<em>&ldquo;Connect with FT Synergist Pte Ltd&rdquo;</em>). Consultation arrangements are subject to follow-up and confirmation by FT Synergist.
+                        </p>
+                    </div>
                 </section>
             </main>
 
@@ -822,15 +867,18 @@ export default function IPConsultantPage() {
                 <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-slate-950/95 backdrop-blur-md border-t border-[#8F801B]/40 px-4 py-3 flex items-center justify-between shadow-2xl">
                     <div className="flex items-center gap-2">
                         <Calendar className="h-5 w-5 text-[#8F801B]" />
-                        <span className="text-xs font-bold text-white uppercase tracking-wide">60-Min IP Sprint</span>
+                        <span className="text-xs font-bold text-white uppercase tracking-wide">60-Min IP Diagnostic</span>
                     </div>
-                    <button
-                        onClick={() => handleOpenSprintModal("ip-strategy")}
+                    <a
+                        href={IPOS_FORMSG_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={trackLead}
                         className="bg-[#8F801B] text-white font-bold py-2 px-4 rounded text-xs transition-transform hover:scale-105 cursor-pointer flex items-center gap-1"
                     >
-                        <span>Book Now</span>
-                        <ArrowRight className="h-3 w-3" />
-                    </button>
+                        <span>Request Diagnostic</span>
+                        <ExternalLink className="h-3 w-3" />
+                    </a>
                 </div>
             )}
 
