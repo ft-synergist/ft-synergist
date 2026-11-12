@@ -100,4 +100,12 @@ Never bundle a caution-flagged sprint with pre-approved sprints in a single inst
 - **Strict Implementation Mandate:** All new code, metadata, copy, grant calculators, audit forms, and consultation frameworks created or modified henceforth MUST strictly adhere to the verified figures, support levels, and cost exclusions defined in `docs/verified-edge-facts-2026-11-12.md`.
 - **Accompanying Hash-Pinned Raw Evidence:** Raw HTML snapshots, tab endpoints, and activity payloads are permanently archived under `docs/source-snapshots/enterprisesg-cp-2026-11-12/` with checksums pinned in `docs/source-snapshots/enterprisesg-cp-2026-11-12/SHA256SUMS`.
 
+---
+
+## 9. Immutable Source of Truth Standard (IPOS GoBusiness IP Grow IA/IP Services & Scopes)
+- **Official Protected S.O.T. Document:** `docs/verified-ipos-ipgrow-facts-2026-11-12.md`
+- **Protected File Directive:** This document is strictly protected and **MUST NEVER be overwritten, modified, or truncated** unless explicitly authorized by the user.
+- **Strict Implementation Mandate:** All new code, metadata, copy, service names, scope descriptions, and accreditation references relating to IPOS GoBusiness IP Grow and IA/IP advisory MUST strictly adhere to the 4 official categories, 20 prescribed IA/IP service directories, verbatim definitions, and FT Synergist's 4 registered service listings (`Branding Strategy`, `Innovation Consultancy`, `IP Brokerage and Licensing`, `IP Strategy Consulting`) locked in `docs/verified-ipos-ipgrow-facts-2026-11-12.md`.
+- **Accompanying Hash-Pinned Raw Evidence:** Raw HTML snapshots of all 25 IPOS GoBusiness IP Grow IA/IP service pages and FT Synergist's official provider profile are permanently archived under `docs/source-snapshots/ipos-ipgrow-2026-11-12/` with checksums pinned in `docs/source-snapshots/ipos-ipgrow-2026-11-12/SHA256SUMS`.
+
 
