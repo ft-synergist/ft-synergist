@@ -79,8 +79,8 @@ export default function Home() {
             <Link href="/edg-grant" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 transition-colors font-medium">
               EDG Grant Advisory
             </Link>
-            <Link href="/mra-grant" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 transition-colors font-medium">
-              MRA Market Expansion
+            <Link href="/internationalisation" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 transition-colors font-medium">
+              Internationalisation (EDGE)
             </Link>
             <Link href="/franchise-consultant" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 transition-colors font-medium">
               Master Franchising

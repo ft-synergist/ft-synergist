@@ -16,6 +16,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/mra-grant',
+        destination: '/internationalisation',
+        permanent: true,
+      },
+      {
         source: '/services/strategic-brand-and-market-development',
         destination: '/strategic-brand-marketing-development', // ◄─── Fixed: routes brand legacy slug to brand pillar
         permanent: true,

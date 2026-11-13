@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/edg-grant', priority: 0.85, changeFrequency: 'weekly' },
     { path: '/franchise-consultant', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/ip-consultant', priority: 0.9, changeFrequency: 'weekly' },
-    { path: '/mra-grant', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/internationalisation', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/ai-digitalisation', priority: 0.85, changeFrequency: 'weekly' },
     { path: '/strategic-brand-marketing-development', priority: 0.85, changeFrequency: 'weekly' },
     { path: '/sustainability', priority: 0.8, changeFrequency: 'weekly' },

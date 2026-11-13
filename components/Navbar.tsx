@@ -12,7 +12,7 @@ const serviceItems = [
     { name: "Franchise & Licensing (IP)", href: "/franchise-consultant" },
     { name: "Strategic Brand & Marketing", href: "/strategic-brand-marketing-development" },
     { name: "AI Digitalisation & Automation", href: "/ai-digitalisation" },
-    { name: "Internationalisation (Market Entry)", href: "/mra-grant" },
+    { name: "Internationalisation (Market Entry)", href: "/internationalisation" },
     { name: "Sustainability & ESG", href: "/sustainability" },
 ];
 

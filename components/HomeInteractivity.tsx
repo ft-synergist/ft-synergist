@@ -148,16 +148,16 @@ export function ServicesAccordion() {
       ]
     },
     {
-      title: "Market Readiness Assistance",
-      href: "/mra-grant",
-      description: "De-risking global expansion with local expertise, regulatory navigation, and Freedom-To-Operate (FTO) intelligence to secure viable international growth under Enterprise Singapore's MRA grant.",
-      expandedIntro: "We guide mid-market enterprises (e.g., Sundat) through complex cross-border expansions, de-risking overseas entry across three core statutory pillars:",
+      title: "Internationalisation (EDGE Grant)",
+      href: "/internationalisation",
+      description: "De-risking cross-border expansion using our proprietary PCBC Model, structured for Enterprise Singapore's EDGE Grant Internationalisation activities (up to 70% SME / 50% non-SME support).",
+      expandedIntro: "We guide Singapore enterprises (e.g., Sundat and regional engineering & commercial groups) through overseas expansion across core EDGE Internationalisation pillars:",
       image: "/ft-synergist-sundat-mra-global-expansion.jpg",
-      alt: "Market Readiness Assistance MRA Grant Consultant Singapore",
+      alt: "Internationalisation Consultant Singapore - EDGE Grant Market Entry Advisory",
       details: [
-        { title: "Overseas Feasibility & FTO Clearance", content: "In-depth research on overseas regulatory pathways, trade barriers, and Freedom-To-Operate (FTO) IP clearance." },
-        { title: "Cross-Border Partner Matching", content: "Matching your enterprise with vetted overseas master distributors, joint-venture partners, and B2B licensees." },
-        { title: "International Marketing & Promotion", content: "Targeted localized campaigns and go-to-market roadmaps to establish immediate market share in overseas territories." }
+        { title: "Market Entry Setup & IP Protection", content: "Entity incorporation, market-specific agreements, import/export licences, and pre-emptive overseas trademark registration." },
+        { title: "Overseas Partnerships & BD Deployment", content: "Vetted 1-to-1 in-premises meetings with distributors, franchisees, licensees, and JV partners, plus in-market BD staff deployment." },
+        { title: "Overseas Marketing, PR & Trade Fairs", content: "Locally adapted outreach campaigns and B2B overseas trade fair participation aligned with EDGE deliverables." }
       ]
     },
     {
