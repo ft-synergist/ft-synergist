@@ -311,7 +311,7 @@ export default function BusinessStrategicPlanningPage() {
                         </span>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                    <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
                         Business Strategic Planning Consultant Singapore{" "}
                         <span className="block text-[#8F801B] mt-2 text-2xl md:text-3xl font-bold">
                             Enterprise Growth Roadmaps, IP Asset Alignment &amp; Operational Excellence
@@ -398,7 +398,7 @@ export default function BusinessStrategicPlanningPage() {
                                 <span className="inline-block text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
                                     Executive Strategy Consultation
                                 </span>
-                                <h2 className="text-xl sm:text-2xl font-extrabold text-white">
+                                <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-white">
                                     Complimentary 60-Minute Business Strategic Planning Diagnostic
                                 </h2>
                                 <p className="text-sm text-gray-300 leading-relaxed max-w-3xl">
@@ -476,7 +476,7 @@ export default function BusinessStrategicPlanningPage() {
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
                             Statutory Deliverable Architecture
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                        <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
                             What Enterprise Singapore Mandates in a Business Strategic Planning Project
                         </h2>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-3xl">
@@ -617,7 +617,7 @@ export default function BusinessStrategicPlanningPage() {
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
                             Reasons to Believe • Verified Advisory Track Record
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                        <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
                             Why Singapore Enterprise Leaders Trust FT Synergist
                         </h2>
                         <p className="text-gray-300 text-sm leading-relaxed max-w-3xl">
@@ -944,7 +944,7 @@ export default function BusinessStrategicPlanningPage() {
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
                             Enterprise Singapore Statutory Governance (Post-30 Sep 2026)
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                        <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
                             EDGE Grant Co-Funding Parameters, Eligibility &amp; Cost Exclusions
                         </h2>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-3xl">
@@ -1030,7 +1030,7 @@ export default function BusinessStrategicPlanningPage() {
                             <Link href="/franchise-consultant" className="text-white underline hover:text-[#8F801B]">
                                 Franchise &amp; Licensing Advisory →
                             </Link>
-                            <Link href="/mra-grant" className="text-white underline hover:text-[#8F801B]">
+                            <Link href="/internationalisation" className="text-white underline hover:text-[#8F801B]">
                                 Overseas Market Expansion →
                             </Link>
                         </div>
@@ -1043,7 +1043,7 @@ export default function BusinessStrategicPlanningPage() {
                         <span className="text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
                             Statutory &amp; Commercial FAQ
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                        <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
                             Frequently Asked Questions: Business Strategic Planning (EDGE Grant)
                         </h2>
                     </div>
@@ -1083,7 +1083,7 @@ export default function BusinessStrategicPlanningPage() {
                     <span className="inline-block text-xs font-mono uppercase tracking-widest text-[#8F801B] font-bold">
                         Start Your 1-to-5-Year Corporate Transformation
                     </span>
-                    <h2 className="text-2xl sm:text-3xl font-extrabold text-white max-w-2xl mx-auto">
+                    <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-white max-w-2xl mx-auto">
                         Architect Your Business Strategic Planning Roadmap with Certified SCMC Advisory
                     </h2>
                     <p className="text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
