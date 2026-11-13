@@ -28,6 +28,7 @@ import type { CitationItem } from "@/app/components/CitationFootnotes";
 // Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
 const CitationFootnotes = dynamic(() => import("@/app/components/CitationFootnotes"), { ssr: false });
 const GeoSemanticAnchors = dynamic(() => import("@/app/components/GeoSemanticAnchors"), { ssr: false });
+const QuantitativeSuccessTable = dynamic(() => import("@/app/components/QuantitativeSuccessTable"), { ssr: false });
 
 const ipCitations: CitationItem[] = [
     {
@@ -919,9 +920,19 @@ export default function IPConsultantPage() {
                     </div>
                 </section>
 
+                {/* QUANTIFIABLE TRACK RECORD */}
+                <section className="space-y-6">
+                    <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                        Quantifiable Valuation Lift Track Record
+                    </h2>
+                    <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 p-2 shadow-sm text-white">
+                        <QuantitativeSuccessTable />
+                    </div>
+                </section>
+
                 {/* SECTION 8: FREQUENTLY ASKED QUESTIONS */}
                 <section className="space-y-8 pt-6">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight">
+                    <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight">
                         Frequently Asked Questions
                     </h2>
 

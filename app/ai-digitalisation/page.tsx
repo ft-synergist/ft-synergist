@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Script from 'next/script';
+import { SprintBookingModal } from '@/components/pillar/SprintBookingModal';
+import { SprintKey } from '@/components/pillar/sprintConfig';
 import {
     ArrowRight,
     ExternalLink,
@@ -34,6 +36,7 @@ import type { CitationItem } from '@/app/components/CitationFootnotes';
 // Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
 const CitationFootnotes = dynamic(() => import('@/app/components/CitationFootnotes'), { ssr: false });
 const GeoSemanticAnchors = dynamic(() => import('@/app/components/GeoSemanticAnchors'), { ssr: false });
+const QuantitativeSuccessTable = dynamic(() => import('@/app/components/QuantitativeSuccessTable'), { ssr: false });
 
 // Every EDGE figure on this page is locked to docs/verified-edge-facts-2026-11-12.md and the hash-pinned
 // activity snapshots: automation-and-digitalisation__large-scale-digital-transformation / __large-scale-automation.
@@ -105,30 +108,8 @@ const faqItems = [
 
 export default function AIDigitalisationPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedService, setSelectedService] = useState('innovation-productivity');
-    const [showStickyBar, setShowStickyBar] = useState(false);
-    const [mounted, setMounted] = useState(false);
+    const [selectedService, setSelectedService] = useState<SprintKey>('innovation-productivity');
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-
-    // Locked Sprint Google Calendar Schedule Mapping
-    const calendarUrls: Record<string, string> = {
-        "business-strategy": "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06H3HVfxJ_qIDCDbf-kOxlt7ufKnq0lLsBwSDvnJ_sIkgaNV5_0cjxSDnw4p7iPWtsvR2kHfnw?gv=true",
-        "strategic-brand": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1KtH1PGLFwfzWLr0MYr_Q9O4FLI78uRKX8FpNv0Z7A-NHMgYz2aPOT841cBzNPM8CquHvgBeAV?gv=true",
-        "innovation-productivity": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qr3SmjWpxiA6xfoBwO1uTYv4_dX4UkWMSWHn-yY2Z5X-EsSVJiiNeFfvowWLuxBrK0kLJYrTi?gv=true",
-        "market-readiness": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2bP4LZ2IUL4kFaw3NW0IYE78GyJIplsadYgcYz4hTWFTVirByvmt9n9rH47vM0W39IbCZqyZJw?gv=true",
-        "franchise-licensing": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true"
-    };
-
-    useEffect(() => {
-        setMounted(true);
-
-        const handleScroll = () => {
-            setShowStickyBar(window.scrollY > 600);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     const trackLead = () => {
         if (typeof window !== "undefined" && (window as any).gtag) {
@@ -140,21 +121,10 @@ export default function AIDigitalisationPage() {
         }
     };
 
-    const handleOpenSprintModal = (presetService?: string) => {
+    const handleOpenSprintModal = (presetService?: SprintKey) => {
         setSelectedService(presetService || 'innovation-productivity');
         setIsModalOpen(true);
         trackLead();
-    };
-
-    const handleLaunchCalendar = (e: React.FormEvent) => {
-        e.preventDefault();
-        const targetUrl = calendarUrls[selectedService];
-        if (typeof window !== "undefined") {
-            setTimeout(() => {
-                window.open(targetUrl, '_blank', 'noopener,noreferrer');
-            }, 150);
-        }
-        setIsModalOpen(false);
     };
 
     return (
@@ -210,7 +180,7 @@ export default function AIDigitalisationPage() {
                     AI Digitalisation Consultant Singapore
                 </h1>
 
-                <h2 className="text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200 text-2xl sm:text-3xl md:text-4xl font-semibold -mt-2">
+                <h2 className="font-heading text-[#8F801B] bg-clip-text text-transparent bg-gradient-to-r from-[#8F801B] to-yellow-200 text-2xl sm:text-3xl md:text-4xl font-semibold -mt-2">
                     AI Consultants for SME Digital Transformation &amp; Automation
                 </h2>
 
@@ -762,7 +732,7 @@ export default function AIDigitalisationPage() {
 
                 {/* SECTION 8: RELATED ADVISORY */}
                 <section className="space-y-4 bg-white/5 p-8 rounded-2xl border border-white/10">
-                    <h2 className="font-heading text-xl md:text-2xl font-extrabold tracking-tight text-white">
+                    <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
                         Related Strategic Advisory for Singapore Enterprises
                     </h2>
                     <ul className="text-sm text-gray-300 space-y-2 leading-relaxed">
@@ -772,9 +742,19 @@ export default function AIDigitalisationPage() {
                     </ul>
                 </section>
 
+                {/* QUANTIFIABLE TRACK RECORD */}
+                <section className="space-y-6">
+                    <h2 className="font-heading text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                        Quantifiable Valuation Lift Track Record
+                    </h2>
+                    <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 p-2 shadow-sm text-white">
+                        <QuantitativeSuccessTable />
+                    </div>
+                </section>
+
                 {/* SECTION 9: FAQ */}
                 <section className="space-y-8 pt-6">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight">
+                    <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight">
                         Frequently Asked Questions
                     </h2>
 
@@ -840,73 +820,14 @@ export default function AIDigitalisationPage() {
                 </section>
             </main>
 
-            {/* STICKY BAR FOR MOBILE */}
-            {mounted && showStickyBar && (
-                <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-slate-950/95 backdrop-blur-md border-t border-[#8F801B]/40 px-4 py-3 flex items-center justify-between shadow-2xl">
-                    <div className="flex items-center gap-2">
-                        <Calendar className="h-5 w-5 text-[#8F801B]" />
-                        <span className="text-xs font-bold text-white uppercase tracking-wide">Digitalisation Diagnostic</span>
-                    </div>
-                    <button
-                        onClick={() => handleOpenSprintModal('innovation-productivity')}
-                        className="bg-[#8F801B] text-white font-bold py-2 px-4 rounded text-xs transition-transform hover:scale-105 cursor-pointer flex items-center gap-1"
-                    >
-                        <span>Book Now</span>
-                        <ArrowRight className="h-3 w-3" />
-                    </button>
-                </div>
-            )}
-
-            {/* MODAL WITH SPRINT SELECTION */}
-            {isModalOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-                    <div className="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative border border-[#8F801B]/30">
-                        <button
-                            onClick={() => setIsModalOpen(false)}
-                            className="absolute top-4 right-4 text-gray-500 hover:text-slate-900 p-2 rounded-full cursor-pointer"
-                        >
-                            <X className="h-6 w-6" />
-                        </button>
-
-                        <form onSubmit={handleLaunchCalendar} className="space-y-6">
-                            <div>
-                                <h3 className="font-heading text-2xl font-bold text-slate-900">
-                                    Select Your Strategic Sprint
-                                </h3>
-                                <p className="text-xs text-slate-500 mt-1">
-                                    Pick your focus area to launch the Google Calendar booking tool.
-                                </p>
-                            </div>
-
-                            <div>
-                                <label className="block text-xs font-semibold text-slate-700 uppercase mb-2">
-                                    Select Sprint Focus *
-                                </label>
-                                <select
-                                    required
-                                    value={selectedService}
-                                    className="w-full border border-slate-300 rounded-lg p-3.5 text-sm focus:ring-2 focus:ring-[#8F801B] outline-none bg-white text-slate-900 font-medium"
-                                    onChange={(e) => setSelectedService(e.target.value)}
-                                >
-                                    <option value="innovation-productivity">Digitalisation &amp; Automation Diagnostic (60 Mins)</option>
-                                    <option value="business-strategy">Business Strategic Planning Sprint</option>
-                                    <option value="strategic-brand">Brand Strategy Sprint</option>
-                                    <option value="market-readiness">Overseas Expansion Sprint</option>
-                                    <option value="franchise-licensing">Franchise &amp; IP Strategy Sprint</option>
-                                </select>
-                            </div>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-[#8F801B] hover:bg-[#7a6c16] text-white font-bold py-4 rounded-lg text-base transition-colors shadow-lg cursor-pointer flex items-center justify-center"
-                            >
-                                Launch Strategy Calendar
-                                <ArrowRight className="ml-2 h-5 w-5" />
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            )}
+            <SprintBookingModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                selectedService={selectedService}
+                onSelectService={setSelectedService}
+                stickyLabel="Digitalisation Diagnostic"
+                onOpenFromSticky={() => handleOpenSprintModal('innovation-productivity')}
+            />
 
             {/* FOOTER INFRASTRUCTURE WITH VERIFIED CITATIONS */}
             <footer className="w-full border-t border-neutral-800 bg-neutral-900/50">
