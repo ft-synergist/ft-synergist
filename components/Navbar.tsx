@@ -3,7 +3,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
+
+const serviceItems = [
+    { name: "Business Strategic Planning", href: "/business-strategic-planning" },
+    { name: "IP Strategy & Advisory", href: "/ip-consultant" },
+    { name: "Franchise & Licensing (IP)", href: "/franchise-consultant" },
+    { name: "Strategic Brand & Marketing", href: "/strategic-brand-marketing-development" },
+    { name: "AI Digitalisation & Automation", href: "/ai-digitalisation" },
+    { name: "Internationalisation (Market Entry)", href: "/mra-grant" },
+    { name: "Sustainability & ESG", href: "/sustainability" },
+];
 
 const navItems = [
     { name: "Home", href: "/" },
@@ -13,10 +24,9 @@ const navItems = [
     { name: "Contact", href: "/contact" },
 ];
 
-import { usePersonaModal } from "@/components/providers/PersonaModalProvider";
-
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
     const { openModal } = usePersonaModal();
 
     return (
@@ -37,7 +47,49 @@ export function Navbar() {
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex md:items-center md:space-x-6">
-                    {navItems.map((item) => (
+                    <Link
+                        href="/"
+                        className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                    >
+                        Home
+                    </Link>
+
+                    {/* Advisory Services Dropdown (Passes site-wide internal equity to all core pillars) */}
+                    <div
+                        className="relative group"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                    >
+                        <button
+                            type="button"
+                            onClick={() => setIsServicesOpen(!isServicesOpen)}
+                            aria-expanded={isServicesOpen}
+                            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 py-2 cursor-pointer"
+                        >
+                            Advisory Services
+                            <ChevronDown className={`h-4 w-4 transition-transform duration-150 ${isServicesOpen ? "rotate-180" : ""}`} />
+                        </button>
+                        <div
+                            className={`absolute left-0 top-full w-72 pt-1 transition-all duration-150 ${
+                                isServicesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1 pointer-events-none"
+                            }`}
+                        >
+                            <div className="rounded-xl border border-white/15 bg-neutral-950/95 backdrop-blur-xl p-2 shadow-2xl space-y-0.5">
+                                {serviceItems.map((service) => (
+                                    <Link
+                                        key={service.href}
+                                        href={service.href}
+                                        onClick={() => setIsServicesOpen(false)}
+                                        className="block rounded-lg px-3 py-2 text-xs font-medium text-gray-200 hover:bg-[#8F801B]/20 hover:text-white transition-colors"
+                                    >
+                                        {service.name}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {navItems.slice(1).map((item) => (
                         <Link
                             key={item.href}
                             href={item.href}
@@ -64,19 +116,47 @@ export function Navbar() {
                 </div>
 
                 {/* Mobile Menu Button */}
-      <button
-        aria-label="Toggle Main Menu"
-        className="flex items-center space-x-2 md:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >                    <span className="sr-only">Toggle menu</span>
+                <button
+                    aria-label="Toggle Main Menu"
+                    className="flex items-center space-x-2 md:hidden p-2 text-muted-foreground hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    <span className="sr-only">Toggle menu</span>
                 </button>
             </div>
 
             {/* Mobile Nav */}
             {isOpen && (
-                <div className="md:hidden">
-                    <div className="space-y-1 px-4 pb-3 pt-2">
-                        {navItems.map((item) => (
+                <div className="md:hidden border-t border-white/10 bg-neutral-950/95">
+                    <div className="space-y-1 px-4 pb-4 pt-2">
+                        <Link
+                            href="/"
+                            className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Home
+                        </Link>
+
+                        <div className="py-1">
+                            <div className="px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-[#C5A017]">
+                                Advisory Services
+                            </div>
+                            <div className="pl-3 space-y-0.5 border-l border-white/10 ml-3">
+                                {serviceItems.map((service) => (
+                                    <Link
+                                        key={service.href}
+                                        href={service.href}
+                                        className="block rounded-md px-3 py-1.5 text-sm font-medium text-gray-300 hover:bg-accent hover:text-white transition-colors"
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {service.name}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+
+                        {navItems.slice(1).map((item) => (
                             <Link
                                 key={item.href}
                                 href={item.href}

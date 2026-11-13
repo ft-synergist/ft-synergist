@@ -3,19 +3,21 @@ import { Metadata } from "next";
 // protected-keywords (AGENTS.md §6): literal terms to diff before any title/description change.
 const protectedKeywords = [
     "Brand Consultant Singapore",
-    "International Branding",
     "Strategic Brand Marketing",
-    "SMEs",
-    "SCMC-certified",
     "strategic brand consultants",
+    "International Branding",
+    "Brand Strategy Singapore",
+    "brand consultancy for smes",
     "brand architecture",
-    "ASEAN expansion",
-    "EDGE grant"
+    "ASEAN market expansion",
+    "SCMC",
+    "EDGE",
+    "EDG"
 ];
 
 export const metadata: Metadata = {
     title: "Brand Consultant Singapore | International Branding & Strategic Brand Marketing",
-    description: "Brand Consultant Singapore & International Branding for SMEs: SCMC-certified strategic brand consultants for brand architecture, ASEAN expansion & EDGE grant.",
+    description: "Brand Consultant Singapore & International Branding for SMEs. SCMC-certified strategic brand consultants for brand architecture, ASEAN market expansion & EDGE grant co-funding.",
     keywords: [
         "Brand Consultant Singapore",
         "International Branding Singapore",
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Brand Consultant Singapore | International Branding & Strategic Brand Marketing | FT Synergist",
-        description: "Brand Consultant Singapore & International Branding for SMEs: SCMC-certified strategic brand consultants for brand architecture, ASEAN expansion & EDGE grant.",
+        description: "Brand Consultant Singapore & International Branding for SMEs. SCMC-certified strategic brand consultants for brand architecture, ASEAN market expansion & EDGE grant co-funding.",
         url: "https://www.ftsynergist.com/strategic-brand-marketing-development",
         type: "website",
         images: [

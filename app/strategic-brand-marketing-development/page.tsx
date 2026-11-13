@@ -213,7 +213,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
         <div className="p-6 md:p-8 bg-black/60 border border-[#8F801B]/50 rounded-xl max-w-3xl mx-auto text-left shadow-[0_0_30px_rgba(143,128,27,0.15)] backdrop-blur-md">
           <h2 className="text-xs font-bold uppercase tracking-widest text-[#8F801B] mb-2">Practice Overview</h2>
           <p className="text-base md:text-lg leading-relaxed text-gray-200 font-medium">
-            <strong>FT Synergist</strong> advises Singapore SMEs and growth enterprises on <strong>brand strategy, international branding, and intangible asset commercialisation</strong>. Backed by over two decades of first-hand operator and master-franchisee experience scaling Singapore brands into overseas markets across <strong>China, Malaysia, Indonesia, and Vietnam</strong>—including a successful commercial exit—our practice structures coherent brand architectures, compelling customer narratives, and cross-border go-to-market roadmaps. Led by <strong>Frederick Tan, Principal Management Consultant, FT Synergist</strong> (TÜV SÜD Certified Management Consultant, <strong>SCMC-1810-P0236 | SS 680:2021</strong>), engagements qualify for co-funding under Enterprise Singapore&apos;s <strong>EDGE Grant</strong> (up to 70% SME support for <em>International Branding</em>; up to 50% for <em>Business Strategic Planning</em>).
+            <strong>FT Synergist</strong> advises Singapore SMEs and growth enterprises on <strong>brand strategy, international branding, and intangible asset commercialisation</strong>. Led by <strong>Frederick Tan, Principal Management Consultant, FT Synergist</strong> (TÜV SÜD Certified Management Consultant, <strong>SCMC-1810-P0236 | SS 680:2021</strong>), our practice structures coherent brand architectures, compelling customer narratives, and cross-border go-to-market roadmaps—eligible for co-funding under Enterprise Singapore&apos;s <strong>EDGE Grant</strong> (up to 70% SME support for <em>International Branding</em>; up to 50% for <em>Business Strategic Planning</em>).
           </p>
         </div>
 
@@ -398,9 +398,7 @@ export default function StrategicBrandMarketingDevelopmentPage() {
                   </tr>
                   <tr>
                     <td className="p-3.5 font-bold text-white border-r border-white/10">
-                      <Link href="/business-strategic-planning" className="text-white underline hover:text-[#8F801B]">
-                        Business Strategic Planning
-                      </Link>
+                      Business Strategic Planning
                       <span className="block text-[11px] font-normal text-[#8F801B] mt-0.5">Area: Business Strategy</span>
                     </td>
                     <td className="p-3.5 font-semibold text-white border-r border-white/10">

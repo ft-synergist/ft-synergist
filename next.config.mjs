@@ -17,7 +17,7 @@ const nextConfig = {
     return [
       {
         source: '/services/strategic-brand-and-market-development',
-        destination: '/edg-grant', // ◄─── Upgraded to targeted money page route
+        destination: '/strategic-brand-marketing-development', // ◄─── Fixed: routes brand legacy slug to brand pillar
         permanent: true,
       },
       {
