@@ -79,6 +79,12 @@ export default function InsightsPage() {
           "position": 9,
           "url": "https://www.ftsynergist.com/insights/starting-scaling-2027-ip-engine",
           "name": "Starting & Scaling in 2027 Through the IP Engine: How Singapore Brands Navigate 4 Macroeconomic Shocks by Commercialising Defensible, Asset-Light Intellectual Property"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://www.ftsynergist.com/insights/sme-business-continuity-plan-singapore",
+          "name": "Why Business Continuity Planning (BCP) Is Not Only for Big Corporations: Lessons from Cloud, Energy & Supply-Chain Shocks"
         }
       ]
     }
@@ -175,6 +181,32 @@ export default function InsightsPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+
+          {/* Item - SME Business Continuity Plan (BCP) & EDGE ERM */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-neutral-900 mb-4 overflow-hidden rounded-lg shadow-sm border border-neutral-800">
+              <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-slate-900 to-[#8F801B]/50 flex flex-col items-center justify-center p-6 text-center gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C5A017] border border-[#8F801B]/60 px-2 py-0.5">
+                  ERM &amp; Operational Resilience
+                </span>
+                <span className="text-white font-serif font-bold text-lg leading-snug">SME Business Continuity Plan (BCP)</span>
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-[#8F801B] uppercase tracking-wider mb-1">
+              Enterprise Risk &amp; Continuity
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/sme-business-continuity-plan-singapore">
+                Why Business Continuity Planning (BCP) Is Not Only for Big Corporations
+              </Link>
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              November 2026
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              Lessons from the Microsoft Outlook outage, Equinix SG3 cooling failure, and ASEAN export bans—and how SMEs co-fund ERM manuals at up to 50% under the EDGE Grant.
+            </p>
+          </div>
 
           {/* Item 0 - Starting & Scaling in 2027 Through the IP Engine */}
           <div className="flex flex-col group cursor-pointer">

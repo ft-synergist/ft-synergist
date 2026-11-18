@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/insights/what-happens-to-psg-after-september-2026', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/insights/edg-mra-psg-vs-edge-comparison', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/insights/starting-scaling-2027-ip-engine', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/insights/sme-business-continuity-plan-singapore', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/events', priority: 0.7, changeFrequency: 'weekly' },
     { path: '/partnership', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/contact', priority: 0.75, changeFrequency: 'monthly' },

@@ -1,0 +1,796 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Length 1739 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 12 Tf 0.82 0.06 0.12 rg 42 440 Td (FT SYNERGIST) Tj ET
+BT /F2 32 Tf 0.08 0.08 0.1 rg 42 365 Td (SME Business Continuity & ERM:) Tj ET
+BT /F2 32 Tf 0.08 0.08 0.1 rg 42 322 Td (5 Resilience Lessons from Cloud,) Tj ET
+BT /F2 32 Tf 0.08 0.08 0.1 rg 42 279 Td (Energy & Supply-Chain Shocks) Tj ET
+BT /F1 14 Tf 0.38 0.38 0.42 rg 42 215 Td (Transforming Single-Point Fragility into Enterprise Tender Qualification) Tj ET
+BT /F1 14 Tf 0.38 0.38 0.42 rg 42 190 Td (& 50% EDGE Grant Co-Funded Risk Architecture) Tj ET
+0.82 0.06 0.12 rg 42 172 72 3 re f
+BT /F1 10 Tf 0.38 0.38 0.42 rg 42 120 Td (Prepared by Frederick Tan, Principal Management Consultant | FT Synergist (SCMC-1810-P0236)) Tj ET
+0.08 0.08 0.11 rg 560 115 235 280 re f
+0.82 0.06 0.12 rg 560 391 235 4 re f
+BT /F2 11 Tf 0.85 0.72 0.22 rg 580 360 Td (4-VECTOR RISK MATRIX) Tj ET
+BT /F2 9.5 Tf 1 1 1 rg 580 328 Td (01. Cloud & SaaS Monoculture) Tj ET
+BT /F1 8.5 Tf 0.75 0.75 0.78 rg 580 313 Td (M365 / Outlook & CrowdStrike) Tj ET
+BT /F2 9.5 Tf 1 1 1 rg 580 280 Td (02. Energy & Cooling Grid) Tj ET
+BT /F1 8.5 Tf 0.75 0.75 0.78 rg 580 265 Td (Equinix SG3 & Industrial Power) Tj ET
+BT /F2 9.5 Tf 1 1 1 rg 580 232 Td (03. Political Export Bans) Tj ET
+BT /F1 8.5 Tf 0.75 0.75 0.78 rg 580 217 Td (MY Poultry & ID Palm Oil Bans) Tj ET
+BT /F2 9.5 Tf 1 1 1 rg 580 184 Td (04. Tariffs & Chokepoints) Tj ET
+BT /F1 8.5 Tf 0.75 0.75 0.78 rg 580 169 Td (Red Sea & CAFTA 3.0 Shifts) Tj ET
+BT /F2 9 Tf 0.82 0.06 0.12 rg 580 135 Td (EDGE GRANT: UP TO 50%-70%) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (1) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 2619 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (EXECUTIVE SUMMARY) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.96 0.96 0.965 rg 42 85 365 280 re f
+0.82 0.06 0.12 rg 42 85 3.5 280 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 60 337 Td (The SME Vulnerability Paradox) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 315 Td (Singapore SMEs operate on lean 30-to-60-day working) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 300 Td (capital cycles yet carry acute single-point dependencies) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 285 Td (across cloud software, payment rails, and suppliers.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 270 Td () Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 60 255 Td (Key Insight \(QBE & CNA Data\):) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 240 Td (While 74% to 77% of Singapore SMEs worry about business) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 225 Td (interruption income loss, only 22% to 23% hold active) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 210 Td (protection and 19% have zero formal digital safeguards.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 195 Td (Cloud file backups do not keep live orders moving.) Tj ET
+0.96 0.96 0.965 rg 435 85 365 280 re f
+0.82 0.06 0.12 rg 435 85 3.5 280 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 453 337 Td (The Resilience & Growth Engine) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 315 Td (FT Synergist transforms Business Continuity Planning) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 300 Td (\(BCP\) and Enterprise Risk Management \(ERM\) from sunk) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 285 Td (compliance overhead into a B2B tender qualification asset.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 270 Td () Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 453 255 Td (Commercial & Grant Impact:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 240 Td (Structured BCP + Singapore Quality Class \(SQC\) unlocked) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 225 Td (a S$55M enterprise channel for TNT Surveillance.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 210 Td (Eligible SMEs receive up to 50% EDGE Grant support for) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 195 Td (ERM & Strategic Planning \(up to 70% Internationalisation\).) Tj ET
+BT /F1 8 Tf 0.38 0.38 0.42 rg 42 55 Td (Source: QBE Singapore SME Survey; SBF National Business Survey; Channel NewsAsia; Enterprise Singapore EDGE S.O.T.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (2) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2486 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (SITUATION: THE SINGAPORE SME CONTINUITY GAP) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+BT /F2 14 Tf 0.12 0.12 0.14 rg 42 350 Td (Why Lean SMEs Suffer Disproportionate Fallout from Short Outages) Tj ET
+BT /F1 10 Tf 0.22 0.22 0.25 rg 42 322 Td (Large corporations maintain multi-region IT failover teams, dual credit lines, and buffer inventory.) Tj ET
+BT /F1 10 Tf 0.22 0.22 0.25 rg 42 305 Td (SMEs consolidate onto single vendors for cost efficiency - creating hidden concentration risk:) Tj ET
+BT /F2 10 Tf 0.82 0.06 0.12 rg 54 270 Td (1. Preparedness Deficit:) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 182 270 Td (74%-77% fear business interruption, but only 22%-23% hold cover (QBE).) Tj ET
+BT /F2 10 Tf 0.82 0.06 0.12 rg 54 242 Td (2. Unprotected Digital Core:) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 202 242 Td (19% of Singapore SMEs have zero processes against cyber/IT outages.) Tj ET
+BT /F2 10 Tf 0.82 0.06 0.12 rg 54 214 Td (3. Macro Volatility Pressure:) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 206 214 Td (41%-43% face heightened supply-chain and cost volatility (SBF NBS).) Tj ET
+BT /F2 10 Tf 0.82 0.06 0.12 rg 54 186 Td (4. Tender Disqualification:) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 198 186 Td (MNCs and public agencies screen out SME vendors lacking ERM/BCP manuals.) Tj ET
+0.96 0.96 0.965 rg 535 140 265 220 re f
+0.82 0.06 0.12 rg 535 140 3.5 220 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 553 332 Td (Key Benchmark Metrics) Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 553 310 Td (74% - 77%) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 553 295 Td (SMEs concerned over interruption loss) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 553 280 Td () Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 553 265 Td (22% - 23%) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 553 250 Td (SMEs with active interruption cover) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 553 235 Td () Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 553 220 Td (19% \(Nearly 1 in 5\)) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 553 205 Td (SMEs with zero formal digital safeguards) Tj ET
+BT /F1 8 Tf 0.38 0.38 0.42 rg 42 55 Td (Source: QBE Singapore SME Survey; Singapore Business Federation (SBF) National Business Survey) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (3) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 1029 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (COMPLICATION: THE CLOUD & BACKUP ILLUSION) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+BT /F2 21 Tf 0.82 0.06 0.12 rg 145 275 Td ("We have cloud backups - doesn't that mean we have a BCP?") Tj ET
+BT /F1 11.5 Tf 0.38 0.38 0.42 rg 330 238 Td (The SME Operational Fallacy) Tj ET
+BT /F1 11 Tf 0.2 0.2 0.23 rg 135 190 Td (As NTU Professor Boh Wai Fong highlighted following the global Microsoft Outlook outage,) Tj ET
+BT /F1 11 Tf 0.2 0.2 0.23 rg 125 168 Td (cloud backups protect historical data from deletion, but do nothing to maintain live incoming) Tj ET
+BT /F1 11 Tf 0.2 0.2 0.23 rg 140 146 Td (and outgoing customer orders, quotations, approvals, or cashless payment processing.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (4) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 411 >>
+stream
+0.82 0.06 0.12 rg 0 0 842 474 re f
+1 1 1 RG 2.2 w 370 295 m 472 295 l S
+BT /F2 30 Tf 1 1 1 rg 180 245 Td (THE 4-VECTOR SHOCK REALITY) Tj ET
+BT /F1 13 Tf 0.96 0.92 0.92 rg 210 205 Td (Why Business Continuity Extends Far Beyond the IT Server Room) Tj ET
+BT /F1 8.5 Tf 0.9 0.75 0.75 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 1 1 1 rg 790 18 Td (5) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 3264 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (STRATEGIC FRAMEWORK: THE 4-VECTOR DISRUPTION MODEL) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.985 0.985 0.99 rg 42 85 176 275 re f
+0.88 0.88 0.90 RG 0.6 w 42 85 176 275 re S
+0.82 0.06 0.12 rg 42 85 176 3.5 re f
+0.82 0.06 0.12 rg 112.0 318.0 36 22 re f
+BT /F2 9 Tf 1 1 1 rg 119.0 325.0 Td (V1) Tj ET
+BT /F2 12 Tf 0.12 0.12 0.14 rg 56 292 Td (Cloud & SaaS) Tj ET
+BT /F2 9 Tf 0.12 0.12 0.14 rg 56 272 Td (Single-Suite Lock-In) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 258 Td (Microsoft 365 / Outlook) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 244 Td (\(74 countries\) &) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 230 Td (CrowdStrike \(8.5M PCs\)) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 216 Td (paralyse live comms,) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 202 Td (ERP, and POS checkouts.) Tj ET
+0.985 0.985 0.99 rg 236 85 176 275 re f
+0.88 0.88 0.90 RG 0.6 w 236 85 176 275 re S
+0.82 0.06 0.12 rg 236 85 176 3.5 re f
+0.82 0.06 0.12 rg 306.0 318.0 36 22 re f
+BT /F2 9 Tf 1 1 1 rg 313.0 325.0 Td (V2) Tj ET
+BT /F2 12 Tf 0.12 0.12 0.14 rg 250 292 Td (Energy & Cooling) Tj ET
+BT /F2 9 Tf 0.12 0.12 0.14 rg 250 272 Td (Physical Utility Shocks) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 250 258 Td (Equinix SG3 chilled-water) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 250 244 Td (failure \(14 Oct 2023\) &) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 250 230 Td (ASEAN industrial grid) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 250 216 Td (blackouts halt banking,) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 250 202 Td (PayNow & factory lines.) Tj ET
+0.985 0.985 0.99 rg 430 85 176 275 re f
+0.88 0.88 0.90 RG 0.6 w 430 85 176 275 re S
+0.82 0.06 0.12 rg 430 85 176 3.5 re f
+0.82 0.06 0.12 rg 500.0 318.0 36 22 re f
+BT /F2 9 Tf 1 1 1 rg 507.0 325.0 Td (V3) Tj ET
+BT /F2 12 Tf 0.12 0.12 0.14 rg 444 292 Td (Export Bans) Tj ET
+BT /F2 9 Tf 0.12 0.12 0.14 rg 444 272 Td (Resource Nationalism) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 444 258 Td (Malaysia live chicken ban) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 444 244 Td (\(Jun 2022, 34% SG supply\)) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 444 230 Td (& Indonesia palm oil ban) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 444 216 Td (catch single-source F&B) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 444 202 Td (and food SMEs cold.) Tj ET
+0.985 0.985 0.99 rg 624 85 176 275 re f
+0.88 0.88 0.90 RG 0.6 w 624 85 176 275 re S
+0.82 0.06 0.12 rg 624 85 176 3.5 re f
+0.82 0.06 0.12 rg 694.0 318.0 36 22 re f
+BT /F2 9 Tf 1 1 1 rg 701.0 325.0 Td (V4) Tj ET
+BT /F2 12 Tf 0.12 0.12 0.14 rg 638 292 Td (Tariffs & Shipping) Tj ET
+BT /F2 9 Tf 0.12 0.12 0.14 rg 638 272 Td (Geopolitical Friction) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 638 258 Td (Red Sea rerouting \(+200%) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 638 244 Td (to 300% spot freight\) &) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 638 230 Td (tariff walls compress) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 638 216 Td (margins on fixed-price) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 638 202 Td (supply contracts.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (6) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 2979 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (VECTOR 1: CLOUD & SAAS MONOCULTURE OUTAGES) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+BT /F2 14 Tf 0.12 0.12 0.14 rg 42 352 Td (Three Structural BCP Gaps Exposed by the Global Microsoft Outlook Outage) Tj ET
+BT /F1 10 Tf 0.38 0.38 0.42 rg 42 332 Td (Synthesised from Channel NewsAsia analysis and commentary by Prof. Boh Wai Fong (NTU) across 74 countries) Tj ET
+0.96 0.96 0.965 rg 42 85 238 230 re f
+0.82 0.06 0.12 rg 42 85 3.5 230 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 60 287 Td (1. Shared Infrastructure) Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 60 265 Td (The Efficiency Trap:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 250 Td (Outlook, Teams, SharePoint,) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 235 Td (and OneDrive appear modular) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 220 Td (but share core routing and) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 205 Td (authentication layers.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 190 Td (When one layer fails, internal) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 175 Td (and external comms go dark) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 160 Td (at the exact same moment.) Tj ET
+0.96 0.96 0.965 rg 301 85 238 230 re f
+0.82 0.06 0.12 rg 301 85 3.5 230 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 319 287 Td (2. Backup != Live Flow) Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 319 265 Td (Old Files vs. New Orders:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 319 250 Td (Offline desktop caches let) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 319 235 Td (staff read old emails, but) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 319 220 Td (live quotations, purchase) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 319 205 Td (orders, invoice approvals,) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 319 190 Td (and customer enquiries) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 319 175 Td (stall completely without) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 319 160 Td (out-of-band routing.) Tj ET
+0.96 0.96 0.965 rg 560 85 240 230 re f
+0.82 0.06 0.12 rg 560 85 3.5 230 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 578 287 Td (3. Post-Recovery Backlog) Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 578 265 Td (The Day-After Bottleneck:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 578 250 Td (Most BCPs end when IT) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 578 235 Td (restores the server.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 578 220 Td (They fail to define how a) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 578 205 Td (lean SME team clears 24-48) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 578 190 Td (hours of stalled approvals,) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 578 175 Td (delayed dispatches, and) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 578 160 Td (SLA penalty risks.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (7) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 2672 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (VECTOR 2: ENERGY, COOLING & PHYSICAL FACILITY SHOCKS) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.96 0.96 0.965 rg 42 85 365 280 re f
+0.82 0.06 0.12 rg 42 85 3.5 280 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 60 337 Td (Equinix SG3 Cooling Failure \(14 Oct 2023\)) Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 60 315 Td (Incident Overview \(Singapore\):) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 300 Td (A technical issue in the chilled-water cooling system) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 285 Td (at Equinix SG3 caused data-hall temperatures to rise,) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 270 Td (forcing hardware shutdowns across client servers.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 255 Td () Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 60 240 Td (Cascade Impact on Singapore SMEs:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 225 Td (1. Disrupted DBS and Citibank digital banking & ATMs.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 210 Td (2. Knocked out PayNow and card payment rails for 12-24) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 195 Td (   hours on a Saturday - leaving retail and F&B SMEs) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 180 Td (   without secondary acquirer rails unable to transact.) Tj ET
+0.96 0.96 0.965 rg 435 85 365 280 re f
+0.82 0.06 0.12 rg 435 85 3.5 280 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 453 337 Td (ASEAN Industrial Grid Blackouts \(2023\)) Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 453 315 Td (Incident Overview \(Northern Vietnam\):) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 300 Td (Extreme heatwaves and hydro/coal constraints triggered) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 285 Td (rolling power cuts across industrial parks in Bac Ninh) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 270 Td (and Bac Giang during May-June 2023.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 255 Td () Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 453 240 Td (Cascade Impact on Regional Supply Chains:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 225 Td (1. Unannounced factory halts delayed component deliveries) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 210 Td (   for Singapore engineering and trading SMEs.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 195 Td (2. Proved that facility energy resilience and multi-site) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 180 Td (   production tolerances are core BCP requirements.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (8) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 2486 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (VECTOR 3: SUDDEN POLITICAL EXPORT BANS) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.96 0.96 0.965 rg 42 85 365 280 re f
+0.82 0.06 0.12 rg 42 85 3.5 280 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 60 337 Td (The Problem: Single-Country Dependency) Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 60 315 Td (Malaysia Live Chicken Ban \(1 Jun - Oct 2022\):) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 300 Td (Halted 3.6 million monthly chicken exports overnight) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 285 Td (\(34% of Singapore's total supply\) to curb domestic) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 270 Td (inflation.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 255 Td () Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 60 240 Td (Indonesia Palm Oil Export Ban \(Apr - May 2022\):) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 225 Td (Overnight prohibition disrupted cooking oil and food-) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 210 Td (processing inputs across Southeast Asia.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 195 Td (Single-source SMEs faced immediate stall closures.) Tj ET
+0.96 0.96 0.965 rg 435 85 365 280 re f
+0.82 0.06 0.12 rg 435 85 3.5 280 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 453 337 Td (The Solution: Dual-Origin & Formulation BCP) Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 453 315 Td (1. Pre-Qualified Dual-Origin Supplier Matrix:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 300 Td (Pair primary ASEAN suppliers with pre-approved secondary) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 285 Td (sources \(e.g. Brazil, Thailand, Australia\) before a crisis.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 270 Td () Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 453 255 Td (2. Process & Formulation Agility:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 240 Td (Pre-test chilled vs. frozen or alternative-grade inputs) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 225 Td (in central kitchen SOPs so product quality holds.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 210 Td () Tj ET
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 453 195 Td (3. Dynamic Margin & Contract Clauses:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 180 Td (Build raw-material price-index triggers into B2B contracts.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (9) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 2265 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (VECTOR 4: TARIFFS, SHIPPING & "FACTORY-IN-MARKET") Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.96 0.96 0.965 rg 42 145 365 220 re f
+0.82 0.06 0.12 rg 42 145 3.5 220 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 60 337 Td (Geopolitical & Maritime Chokepoints) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 60 315 Td (Red Sea / Suez Rerouting & Tariff Shifts:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 300 Td (- Container spot rates spiked 200%-300% with +10 to 14) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 285 Td (  days added to Europe/Asia transit schedules.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 270 Td (- Export-only manufacturers face sudden tariff walls) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 255 Td (  and working-capital lockups at customs.) Tj ET
+0.96 0.96 0.965 rg 435 145 365 220 re f
+0.82 0.06 0.12 rg 435 145 3.5 220 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 453 337 Td (PCBC "Factory-in-Market" Countermeasure) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 453 315 Td (Wang Lao Ji / Project WALOVI Benchmark:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 300 Td (- Partnered with Baosteel Packaging to establish) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 285 Td (  production lines in Malaysia and Vietnam.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 270 Td (- Leverages CAFTA 3.0 tariff efficiency, cuts lead time,) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 255 Td (  and insulates ASEAN supply from shipping shocks.) Tj ET
+BT /F2 12 Tf 0.82 0.06 0.12 rg 42 112 Td (DID YOU KNOW?) Tj ET
+BT /F1 9.5 Tf 0.12 0.12 0.14 rg 42 94 Td (Eligible Singapore SMEs can receive up to 70% EDGE Grant support under Internationalisation (Identification of Potential) Tj ET
+BT /F1 9.5 Tf 0.12 0.12 0.14 rg 42 80 Td (Overseas Partnerships & Market Entry Setup) to diversify overseas manufacturing and distribution partners.) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 42 62 Td (Contact FT Synergist (fredtan@ftsynergist.com) to check your eligibility.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (10) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 1868 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (THE MINDSET SHIFT: COST CENTRE VS. REVENUE ENGINE) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.98 0.98 0.985 rg 42 125 365 235 re f
+0.85 0.15 0.15 rg 42 125 365 4 re f
+BT /F2 14 Tf 0.82 0.06 0.12 rg 42 372 Td (The Outdated SME View) Tj ET
+BT /F1 11 Tf 0.12 0.12 0.14 rg 62 290 Td ("BCP is an expensive, 200-page IT binder) Tj ET
+BT /F1 11 Tf 0.12 0.12 0.14 rg 62 268 Td (that only banks and MNCs need. We will) Tj ET
+BT /F1 11 Tf 0.12 0.12 0.14 rg 62 246 Td (improvise if an outage or ban happens.") Tj ET
+BT /F2 10 Tf 0.82 0.06 0.12 rg 62 195 Td (- Result: Disqualified from MNC/Gov tenders) Tj ET
+BT /F2 10 Tf 0.82 0.06 0.12 rg 62 175 Td (- Result: Paralysed during 24-hr blackouts) Tj ET
+0.98 0.98 0.985 rg 435 125 365 235 re f
+0.08 0.58 0.32 rg 435 125 365 4 re f
+BT /F2 14 Tf 0.08 0.58 0.32 rg 435 372 Td (The Institutional Growth View) Tj ET
+BT /F1 11 Tf 0.12 0.12 0.14 rg 455 290 Td ("Audited ERM & BCP manuals prove to) Tj ET
+BT /F1 11 Tf 0.12 0.12 0.14 rg 455 268 Td (MNCs, REITs, and government buyers that) Tj ET
+BT /F1 11 Tf 0.12 0.12 0.14 rg 455 246 Td (our SME is a low-risk, tier-one partner.") Tj ET
+BT /F2 10 Tf 0.08 0.58 0.32 rg 455 195 Td (- Result: Qualifies for multimillion tenders) Tj ET
+BT /F2 10 Tf 0.08 0.58 0.32 rg 455 175 Td (- Result: Up to 50% co-funded under EDGE) Tj ET
+BT /F2 10 Tf 0.82 0.06 0.12 rg 42 82 Td (Strategic Implication:) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 165 82 Td (Institutional procurement teams use BCP & ERM readiness as a mandatory vendor pre-qualification gate.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (11) Tj ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 409 >>
+stream
+0.82 0.06 0.12 rg 0 0 842 474 re f
+1 1 1 RG 2.2 w 370 295 m 472 295 l S
+BT /F2 30 Tf 1 1 1 rg 180 245 Td (PORTFOLIO CASE EVIDENCE) Tj ET
+BT /F1 13 Tf 0.96 0.92 0.92 rg 210 205 Td (How Continuity, SQC & Diversification Unlock Enterprise Value) Tj ET
+BT /F1 8.5 Tf 0.9 0.75 0.75 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 1 1 1 rg 790 18 Td (12) Tj ET
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 3121 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (VERIFIED PORTFOLIO PROOF: RESILIENCE IN ACTION) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.985 0.985 0.99 rg 42 85 238 275 re f
+0.88 0.88 0.90 RG 0.6 w 42 85 238 275 re S
+0.82 0.06 0.12 rg 42 85 238 3.5 re f
+0.82 0.06 0.12 rg 143.0 318.0 36 22 re f
+BT /F2 9 Tf 1 1 1 rg 150.0 325.0 Td (SQC) Tj ET
+BT /F2 12 Tf 0.12 0.12 0.14 rg 56 292 Td (TNT Surveillance Pte Ltd) Tj ET
+BT /F2 9 Tf 0.82 0.06 0.12 rg 56 272 Td (Challenge:) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 258 Td (Qualifying for tier-one public) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 244 Td (and enterprise security tenders.) Tj ET
+BT /F2 9 Tf 0.12 0.12 0.14 rg 56 230 Td (FT Synergist Solution:) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 216 Td (Designed Business Continuity) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 202 Td (Plans & Singapore Quality Class) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 188 Td (\(SQC\) Business Excellence systems,) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 56 174 Td (unlocking a S$55M sales channel.) Tj ET
+0.985 0.985 0.99 rg 301 85 238 275 re f
+0.88 0.88 0.90 RG 0.6 w 301 85 238 275 re S
+0.82 0.06 0.12 rg 301 85 238 3.5 re f
+0.82 0.06 0.12 rg 402.0 318.0 36 22 re f
+BT /F2 9 Tf 1 1 1 rg 409.0 325.0 Td (DVF) Tj ET
+BT /F2 12 Tf 0.12 0.12 0.14 rg 315 292 Td (Sundat \(S\) Pte Ltd) Tj ET
+BT /F2 9 Tf 0.82 0.06 0.12 rg 315 272 Td (Challenge:) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 315 258 Td (Regional climate & regulatory) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 315 244 Td (exposure in crop protection trade.) Tj ET
+BT /F2 9 Tf 0.12 0.12 0.14 rg 315 230 Td (FT Synergist Solution:) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 315 216 Td (Architected a 5-year multi-market) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 315 202 Td (roadmap across Australia, Vietnam,) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 315 188 Td (and Taiwan - diversifying supply) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 315 174 Td (and market risk.) Tj ET
+0.985 0.985 0.99 rg 560 85 240 275 re f
+0.88 0.88 0.90 RG 0.6 w 560 85 240 275 re S
+0.82 0.06 0.12 rg 560 85 240 3.5 re f
+0.82 0.06 0.12 rg 662.0 318.0 36 22 re f
+BT /F2 9 Tf 1 1 1 rg 669.0 325.0 Td (PCBC) Tj ET
+BT /F2 12 Tf 0.12 0.12 0.14 rg 574 292 Td (Bestway Cleaning \(T2\)) Tj ET
+BT /F2 9 Tf 0.82 0.06 0.12 rg 574 272 Td (Challenge:) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 574 258 Td (Rigid manual patrol cycles across) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 574 244 Td (high-traffic airport operations.) Tj ET
+BT /F2 9 Tf 0.12 0.12 0.14 rg 574 230 Td (FT Synergist Solution:) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 574 216 Td (Independent process architect for) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 574 202 Td (predictive analytics & 9-module) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 574 188 Td (human-in-the-loop operational) Tj ET
+BT /F1 9 Tf 0.38 0.38 0.42 rg 574 174 Td (visibility at Changi T2.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (13) Tj ET
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 27 0 R >>
+endobj
+29 0 obj
+<< /Length 2417 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (COMPARISON: IT BACKUP VS. ENTERPRISE RISK & BCP) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.82 0.06 0.12 rg 42 325 758 34 re f
+BT /F2 10 Tf 1 1 1 rg 54 338 Td (Resilience Dimension) Tj ET
+BT /F2 10 Tf 1 1 1 rg 255 338 Td (Standard SME Cloud Backup (Passive)) Tj ET
+BT /F2 10 Tf 1 1 1 rg 530 338 Td (FT Synergist ERM & BCP Architecture (Active)) Tj ET
+0.93 0.94 0.96 rg 42 285 758 38 re f
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 54 299 Td (1. Cloud / Email Outage) Tj ET
+BT /F1 9.5 Tf 0.25 0.25 0.28 rg 255 299 Td (Protects old files; live orders & email freeze) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 530 299 Td (Out-of-band comms + offline PO/quotation SOPs) Tj ET
+0.975 0.975 0.98 rg 42 245 758 38 re f
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 54 259 Td (2. Post-Outage Recovery) Tj ET
+BT /F1 9.5 Tf 0.25 0.25 0.28 rg 255 259 Td (No plan for clearing 48-hr backlog queues) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 530 259 Td (First-12-hour priority triage & SLA protection) Tj ET
+0.93 0.94 0.96 rg 42 205 758 38 re f
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 54 219 Td (3. Payment & Banking Rails) Tj ET
+BT /F1 9.5 Tf 0.25 0.25 0.28 rg 255 219 Td (Single bank / single PayNow terminal dependency) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 530 219 Td (Multi-acquirer QR/card fallback & cash-flow buffer) Tj ET
+0.975 0.975 0.98 rg 42 165 758 38 re f
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 54 179 Td (4. Export Bans & Tariffs) Tj ET
+BT /F1 9.5 Tf 0.25 0.25 0.28 rg 255 179 Td (Single-country supplier exposure \(margin shock\)) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 530 179 Td (Dual-origin supplier matrix & PCBC regionalisation) Tj ET
+0.93 0.94 0.96 rg 42 125 758 38 re f
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 54 139 Td (5. B2B Tender Readiness) Tj ET
+BT /F1 9.5 Tf 0.25 0.25 0.28 rg 255 139 Td (Fails MNC / government ERM pre-qualification) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 530 139 Td (Audited Risk Report, ERM Manuals & Self-Assessment) Tj ET
+BT /F1 8 Tf 0.38 0.38 0.42 rg 42 62 Td (*Aligned with Enterprise Singapore EDGE Grant 'Enterprise Risk Management and Internal Controls' deliverable requirements.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (14) Tj ET
+endstream
+endobj
+30 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 29 0 R >>
+endobj
+31 0 obj
+<< /Length 1807 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (BENCHMARK: THE SINGAPORE SME PREPAREDNESS GAP) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+BT /F2 14 Tf 0.12 0.12 0.14 rg 42 350 Td (Singapore SME Risk Exposure vs. Active Continuity Protection (QBE & SBF Benchmarks)) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 42 303 Td (SMEs Concerned Over Business Interruption Loss \(QBE\)) Tj ET
+0.92 0.92 0.94 rg 42 281 540 16 re f
+0.82 0.06 0.12 rg 42 281 415 16 re f
+BT /F2 9.5 Tf 0.82 0.06 0.12 rg 595 284 Td (77% \(High Concern\)) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 42 247 Td (SMEs Facing Heightened Macro / Supply Volatility \(SBF\)) Tj ET
+0.92 0.92 0.94 rg 42 225 540 16 re f
+0.561 0.502 0.106 rg 42 225 232 16 re f
+BT /F2 9.5 Tf 0.561 0.502 0.106 rg 595 228 Td (43% \(Elevated Exposure\)) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 42 191 Td (SMEs Holding Active Business Interruption Cover \(QBE\)) Tj ET
+0.92 0.92 0.94 rg 42 169 540 16 re f
+0.25 0.35 0.48 rg 42 169 124 16 re f
+BT /F2 9.5 Tf 0.25 0.35 0.48 rg 595 172 Td (23% \(Protected\)) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 42 135 Td (SMEs With Zero Formal Cyber / Digital Safeguards \(QBE\)) Tj ET
+0.92 0.92 0.94 rg 42 113 540 16 re f
+0.45 0.12 0.15 rg 42 113 102 16 re f
+BT /F2 9.5 Tf 0.45 0.12 0.15 rg 595 116 Td (19% \(Completely Exposed\)) Tj ET
+BT /F2 10 Tf 0.82 0.06 0.12 rg 42 62 Td (Key Takeaway:) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 125 62 Td (A 54-percentage-point gap separates SME awareness of interruption risk (77%) from actual protection (23%).) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (15) Tj ET
+endstream
+endobj
+32 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 31 0 R >>
+endobj
+33 0 obj
+<< /Length 2493 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (EDGE GRANT: CO-FUNDING RESILIENCE & DIVERSIFICATION) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.82 0.06 0.12 rg 42 325 758 34 re f
+BT /F2 9.5 Tf 1 1 1 rg 52 338 Td (EDGE Grant Activity (Post-30 Sep 2026)) Tj ET
+BT /F2 9.5 Tf 1 1 1 rg 275 338 Td (Support Rate (SME / Non-SME)) Tj ET
+BT /F2 9.5 Tf 1 1 1 rg 445 338 Td (Outcome / Window) Tj ET
+BT /F2 9.5 Tf 1 1 1 rg 565 338 Td (Prescribed Deliverables & Rules) Tj ET
+0.93 0.94 0.96 rg 42 280 758 42 re f
+BT /F2 8.8 Tf 0.12 0.12 0.14 rg 52 296 Td (Enterprise Risk Management & Internal Controls) Tj ET
+BT /F2 8.8 Tf 0.82 0.06 0.12 rg 275 296 Td (Up to 50% / Up to 30%) Tj ET
+BT /F1 8.8 Tf 0.12 0.12 0.14 rg 445 296 Td (10 wks / 12 mos) Tj ET
+BT /F1 8.2 Tf 0.2 0.2 0.23 rg 565 296 Td (Risk Report, Template, ERM Manuals, Control Self-Assessment \(SS 680\)) Tj ET
+0.975 0.975 0.98 rg 42 235 758 42 re f
+BT /F2 8.8 Tf 0.12 0.12 0.14 rg 52 251 Td (Business Strategic Planning) Tj ET
+BT /F2 8.8 Tf 0.82 0.06 0.12 rg 275 251 Td (Up to 50% / Up to 30%) Tj ET
+BT /F1 8.8 Tf 0.12 0.12 0.14 rg 445 251 Td (10 wks / 12 mos) Tj ET
+BT /F1 8.2 Tf 0.2 0.2 0.23 rg 565 251 Td (Internal/External Analysis, Growth Strategy & IP Management \(SS 680\)) Tj ET
+0.93 0.94 0.96 rg 42 190 758 42 re f
+BT /F2 8.8 Tf 0.12 0.12 0.14 rg 52 206 Td (Identification of Overseas Partnerships) Tj ET
+BT /F2 8.8 Tf 0.82 0.06 0.12 rg 275 206 Td (Up to 70% / Up to 50%) Tj ET
+BT /F1 8.8 Tf 0.12 0.12 0.14 rg 445 206 Td (6 wks / 12 mos) Tj ET
+BT /F1 8.2 Tf 0.2 0.2 0.23 rg 565 206 Td (Partner suitability & 1-to-1 in-premises meetings \(Track record\)) Tj ET
+0.975 0.975 0.98 rg 42 145 758 42 re f
+BT /F2 8.8 Tf 0.12 0.12 0.14 rg 52 161 Td (Market Entry Setup \(Internationalisation\)) Tj ET
+BT /F2 8.8 Tf 0.82 0.06 0.12 rg 275 161 Td (Up to 70% / Up to 50%) Tj ET
+BT /F1 8.8 Tf 0.12 0.12 0.14 rg 445 161 Td (6 wks / 18 mos) Tj ET
+BT /F1 8.2 Tf 0.2 0.2 0.23 rg 565 161 Td (Entity incorp \(>50%\), bespoke contracts, overseas IP & tax advisory) Tj ET
+BT /F1 8.2 Tf 0.38 0.38 0.42 rg 42 62 Td (Source: Enterprise Singapore Official EDGE Grant Portal (Locked S.O.T. 12 Nov 2026). Shared S$100,000 annual company cap refreshed 1 April.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (16) Tj ET
+endstream
+endobj
+34 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 33 0 R >>
+endobj
+35 0 obj
+<< /Length 2356 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (ENTREPRENEURIAL LESSONS \(1 OF 2\)) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.96 0.96 0.965 rg 42 165 365 200 re f
+0.82 0.06 0.12 rg 42 165 3.5 200 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 60 337 Td (1. Redundancy Over Monoculture) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 315 Td (Never let a single SaaS vendor or single bank acquirer) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 300 Td (become a total kill-switch for your daily revenue.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 285 Td () Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 60 270 Td (Execution Rule:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 255 Td (Pair primary cloud suites with out-of-band communication) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 240 Td (channels, offline quotation/PO templates, and a secondary) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 225 Td (PayNow/card payment acquirer rail.) Tj ET
+0.96 0.96 0.965 rg 435 165 365 200 re f
+0.82 0.06 0.12 rg 435 165 3.5 200 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 453 337 Td (2. Supply Chain as a Strategic Shield) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 315 Td (Marketing wins the first order; supply-chain resilience) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 300 Td (protects the thousandth. Export bans and tariff walls) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 285 Td (strike with zero warning.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 270 Td () Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 453 255 Td (Execution Rule:) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 240 Td (Apply the PCBC Model: pre-qualify dual-origin suppliers) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 225 Td (and localise ASEAN production/licensing partnerships.) Tj ET
+0.1 0.1 0.13 rg 435 55 365 92 re f
+0.82 0.06 0.12 rg 435 55 5 92 re f
+BT /F2 10 Tf 1 1 1 rg 452 118 Td ("Continuity is not about predicting the exact crisis;) Tj ET
+BT /F2 10 Tf 1 1 1 rg 452 100 Td (it is about eliminating single points of failure.") Tj ET
+BT /F1 8.5 Tf 0.8 0.7 0.2 rg 452 75 Td (- Frederick Tan, Principal Management Consultant, FT Synergist) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (17) Tj ET
+endstream
+endobj
+36 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 35 0 R >>
+endobj
+37 0 obj
+<< /Length 2772 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (ENTREPRENEURIAL LESSONS \(2 OF 2\)) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.96 0.96 0.965 rg 42 205 365 160 re f
+0.82 0.06 0.12 rg 42 205 3.5 160 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 60 337 Td (3. Triage the Post-Recovery Backlog) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 315 Td (As the Microsoft Outlook outage proved, the hardest bottleneck) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 300 Td (arrives the morning after systems come back online.) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 285 Td (Pre-assign a 12-hour triage protocol prioritizing Key Accounts,) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 60 270 Td (live dispatches, and statutory filings before routine admin.) Tj ET
+0.96 0.96 0.965 rg 435 205 365 160 re f
+0.82 0.06 0.12 rg 435 205 3.5 160 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 453 337 Td (4. Turn BCP into a Tender Weapon) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 315 Td (Do not leave your ERM manual on a shelf. Use your audited) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 300 Td (Risk Report, Control Self-Assessment, and Singapore Quality) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 285 Td (Class \(SQC\) readiness to pre-qualify for MNC and government) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 270 Td (contracts \(as TNT Surveillance did to win S$55M\).) Tj ET
+0.96 0.96 0.965 rg 435 55 365 135 re f
+0.82 0.06 0.12 rg 435 55 3.5 135 re f
+BT /F2 13 Tf 0.12 0.12 0.14 rg 453 162 Td (5. Pre-Emptive IP & Contract Defence) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 140 Td (Before onboarding backup manufacturers or overseas distributors,) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 125 Td (ring-fence your trademarks, trade secrets, and market-specific) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 110 Td (agreements under IPOS GoBusiness IP Grow & EDGE Market Entry) Tj ET
+BT /F1 9.5 Tf 0.22 0.22 0.25 rg 453 95 Td (Setup so backup partners cannot appropriate your brand.) Tj ET
+0.1 0.1 0.13 rg 42 55 365 135 re f
+0.82 0.06 0.12 rg 42 55 365 4 re f
+BT /F2 10.5 Tf 0.85 0.72 0.22 rg 58 162 Td (IPOS GOBUSINESS IP GROW ALIGNMENT) Tj ET
+BT /F1 9 Tf 1 1 1 rg 58 138 Td (FT Synergist Pte Ltd is officially listed across 4 directories:) Tj ET
+BT /F2 9 Tf 0.9 0.9 0.92 rg 58 118 Td (- IP Strategy Consulting (Strategy & Management)) Tj ET
+BT /F2 9 Tf 0.9 0.9 0.92 rg 58 102 Td (- IP Brokerage and Licensing (Commercialisation)) Tj ET
+BT /F2 9 Tf 0.9 0.9 0.92 rg 58 86 Td (- Innovation Consultancy & Branding Strategy) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (18) Tj ET
+endstream
+endobj
+38 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 37 0 R >>
+endobj
+39 0 obj
+<< /Length 1936 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 11 Tf 0.82 0.06 0.12 rg 42 442 Td (FT SYNERGIST) Tj ET
+BT /F2 22 Tf 0.82 0.06 0.12 rg 42 402 Td (12-MONTH ERM & CONTINUITY IMPLEMENTATION HORIZON) Tj ET
+0.82 0.82 0.84 RG 0.6 w 42 394 m 800 394 l S
+0.82 0.06 0.12 RG 1.8 w 42 260 m 800 260 l S
+BT /F2 15 Tf 0.82 0.06 0.12 rg 78 278 Td (Months 1-2: Diagnose) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 72 232 Td (BGP Application Submission.) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 68 214 Td (4-Vector Vulnerability Audit.) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 65 196 Td (Enterprise Risk Register Setup.) Tj ET
+BT /F2 15 Tf 0.82 0.06 0.12 rg 332 278 Td (Months 3-6: Architect) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 325 232 Td (ERM Manuals & Reporting Templates.) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 330 214 Td (Out-of-Band & Payment Fallbacks.) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 332 196 Td (Control Self-Assessment & Drills.) Tj ET
+BT /F2 15 Tf 0.82 0.06 0.12 rg 585 278 Td (Months 7-12: Scale) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 575 232 Td (Dual-Origin Supplier Onboarding.) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 572 214 Td (MNC / Public Tender Qualification.) Tj ET
+BT /F1 10 Tf 0.12 0.12 0.14 rg 580 196 Td (Audit & EDGE Grant Disbursement.) Tj ET
+BT /F2 12 Tf 0.82 0.06 0.12 rg 42 125 Td (DID YOU KNOW?) Tj ET
+BT /F1 9.5 Tf 0.12 0.12 0.14 rg 42 105 Td (Eligible Singapore SMEs can receive up to 50% EDGE Grant support under Enterprise Risk Management and Internal Controls) Tj ET
+BT /F1 9.5 Tf 0.12 0.12 0.14 rg 42 90 Td (or Business Strategic Planning to defray the professional consultancy costs of developing this roadmap.) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 42 70 Td (Contact FT Synergist to check your eligibility before starting work.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (19) Tj ET
+endstream
+endobj
+40 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 39 0 R >>
+endobj
+41 0 obj
+<< /Length 1283 >>
+stream
+1 1 1 rg 0 0 842 474 re f
+0.82 0.06 0.12 rg 42 468 72 6 re f
+BT /F2 12 Tf 0.82 0.06 0.12 rg 42 440 Td (FT SYNERGIST) Tj ET
+BT /F2 25 Tf 0.82 0.06 0.12 rg 48 335 Td (Is your SME exposed to a "Single-Point Shock" like the) Tj ET
+BT /F2 25 Tf 0.82 0.06 0.12 rg 115 298 Td (Outlook outage, Equinix failure, or export bans?) Tj ET
+BT /F1 14 Tf 0.22 0.22 0.25 rg 105 245 Td (Claim your 60-Minute Business Sprint with us to architect your ERM & BCP roadmap!) Tj ET
+0.82 0.82 0.84 RG 0.8 w 52 195 m 790 195 l S
+BT /F2 12 Tf 0.82 0.06 0.12 rg 325 162 Td (Frederick Tan | FT Synergist) Tj ET
+BT /F1 10 Tf 0.38 0.38 0.42 rg 235 142 Td (Principal Management Consultant (TUV SUD License SCMC-1810-P0236 | SS 680:2021)) Tj ET
+BT /F1 11 Tf 0.38 0.38 0.42 rg 320 122 Td (www.ftsynergist.com | fredtan@ftsynergist.com) Tj ET
+BT /F2 12 Tf 0.82 0.06 0.12 rg 48 95 Td (IMPORTANT!) Tj ET
+BT /F1 9.5 Tf 0.12 0.12 0.14 rg 48 75 Td (Check if your company qualifies for up to 50%-70% EDGE Grant funding support for a similar roadmap.) Tj ET
+BT /F2 9.5 Tf 0.12 0.12 0.14 rg 48 56 Td (Contact FT Synergist to check your eligibility.) Tj ET
+BT /F1 8.5 Tf 0.38 0.38 0.42 rg 42 18 Td (SME Business Continuity & ERM Roadmap: 5 Resilience Lessons for SMEs) Tj ET
+BT /F2 8.5 Tf 0.12 0.12 0.14 rg 790 18 Td (20) Tj ET
+endstream
+endobj
+42 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 842 474] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 41 0 R >>
+endobj
+43 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R 30 0 R 32 0 R 34 0 R 36 0 R 38 0 R 40 0 R 42 0 R] /Count 20 >>
+endobj
+44 0 obj
+<< /Type /Catalog /Pages 43 0 R >>
+endobj
+xref
+0 45
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000002005 00000 n 
+0000002142 00000 n 
+0000004813 00000 n 
+0000004950 00000 n 
+0000007488 00000 n 
+0000007625 00000 n 
+0000008706 00000 n 
+0000008844 00000 n 
+0000009307 00000 n 
+0000009446 00000 n 
+0000012763 00000 n 
+0000012902 00000 n 
+0000015934 00000 n 
+0000016073 00000 n 
+0000018798 00000 n 
+0000018937 00000 n 
+0000021476 00000 n 
+0000021615 00000 n 
+0000023933 00000 n 
+0000024072 00000 n 
+0000025993 00000 n 
+0000026132 00000 n 
+0000026593 00000 n 
+0000026732 00000 n 
+0000029906 00000 n 
+0000030045 00000 n 
+0000032515 00000 n 
+0000032654 00000 n 
+0000034514 00000 n 
+0000034653 00000 n 
+0000037199 00000 n 
+0000037338 00000 n 
+0000039747 00000 n 
+0000039886 00000 n 
+0000042711 00000 n 
+0000042850 00000 n 
+0000044839 00000 n 
+0000044978 00000 n 
+0000046314 00000 n 
+0000046453 00000 n 
+0000046643 00000 n 
+trailer
+<< /Size 45 /Root 44 0 R >>
+startxref
+46694
+%%EOF
