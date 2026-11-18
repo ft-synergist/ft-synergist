@@ -10,11 +10,11 @@ import {
   ZapOff,
   Globe,
   Ship,
-  ArrowRight,
   Download,
   Lock,
   X,
   FileText,
+  Quote,
 } from "lucide-react";
 import type { CitationItem } from "@/app/components/CitationFootnotes";
 import { ScrollDwellTrigger } from "@/components/ScrollDwellTrigger";
@@ -58,7 +58,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
       name: formData.get("name") as string,
       email: formData.get("email") as string,
       company: formData.get("company") as string,
-      reportName: "SME Business Continuity Plan (BCP) & ERM Roadmap (20-Slide Executive Report)",
+      reportName: "The Continuity Paradox: 20-Slide SME BCP & ERM Executive Report",
       consent: true,
       pagePath: "/insights/sme-business-continuity-plan-singapore",
     };
@@ -80,7 +80,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
       if (typeof window !== "undefined" && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
         (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", "lead_form_submit", {
           event_category: "lead_generation",
-          event_label: "SME Business Continuity Plan (BCP) & ERM Roadmap",
+          event_label: "The Continuity Paradox: 20-Slide SME BCP & ERM Executive Report",
           lead_type: "pdf_download",
           page_path: "/insights/sme-business-continuity-plan-singapore",
         });
@@ -115,7 +115,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
             Unlock 20-Slide Executive Report (PDF)
           </h3>
           <p className="text-neutral-400 text-sm">
-            Enter your business details to download the complete 20-slide SME Business Continuity Plan (BCP), 4-Vector Disruption Matrix, and 50% EDGE Grant ERM Roadmap.
+            Enter your business details to download Frederick Tan&apos;s 20-slide executive deck: <em>The Continuity Paradox</em>, the 4-Vector Ambush Matrix, and the 50% EDGE Grant ERM Playbook.
           </p>
         </div>
 
@@ -187,7 +187,7 @@ const DownloadGate = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               "Unlocking PDF..."
             ) : (
               <>
-                Download Executive PDF <Download className="ml-2 h-4 w-4" />
+                Download 20-Slide Executive PDF <Download className="ml-2 h-4 w-4" />
               </>
             )}
           </button>
@@ -239,50 +239,50 @@ const citationsData: CitationItem[] = [
 const disruptionMatrix = [
   {
     icon: ServerCrash,
-    vector: "Vector 1: Cloud & SaaS Monoculture Outages",
+    vector: "The Cloud Trap: Why Microsoft Going Down Paralyses Your Lean SME",
     incidents: "Microsoft 365 / Outlook Global Outage (74 countries incl. Singapore) · CrowdStrike Falcon Sensor Outage (19 Jul 2024, ~8.5M Windows devices)",
     smeImpact:
-      "SMEs rely heavily on single-vendor cloud suites (Outlook, Teams, SharePoint, OneDrive) for cost efficiency. When shared routing or authentication fails, live quotations, purchase orders, and client communications halt simultaneously—even if historical file backups exist.",
+      "SMEs consolidate email, Teams, SharePoint, and OneDrive onto one login to save money. When shared routing or authentication fails, your sales team cannot send urgent quotations, approve purchase orders, or receive RFQs—even if last week's files are backed up.",
     mitigation:
-      "Out-of-band communication protocols, secondary communication continuity gateways, and post-outage backlog triage playbooks.",
+      "Out-of-band communication lifeboats, offline PO/quotation templates, and a scripted first-12-hour post-recovery backlog triage protocol.",
   },
   {
     icon: ZapOff,
-    vector: "Vector 2: Energy, Cooling & Physical Facility Failures",
-    incidents: "Equinix SG3 Data Centre Chilled-Water Cooling Failure (14 Oct 2023, Singapore) · Northern Vietnam Industrial Grid Rolling Blackouts (May–Jun 2023)",
+    vector: "When the Chillers Fail: How a Data Centre Took Down Saturday's Cash Register",
+    incidents: "Equinix SG3 Data Centre Chilled-Water Cooling Failure (14 Oct 2023, Singapore) · Northern Vietnam Industrial Grid Blackouts (May–Jun 2023)",
     smeImpact:
-      "During the October 2023 Equinix SG3 cooling failure, rising data-hall temperatures forced hardware shutdowns that disrupted DBS and Citibank digital banking, ATMs, and PayNow/card rails for 12–24 hours—leaving Singapore retail and F&B SMEs unable to process cashless payments on a Saturday. In regional manufacturing hubs, heatwave grid cuts halted factory lines.",
+      "It wasn't a cyberattack. On 14 October 2023, a chilled-water cooling malfunction at Equinix SG3 forced server shutdowns that knocked out DBS and Citibank digital banking, ATMs, and PayNow/card rails for 12–24 hours—leaving Singapore retail and F&B SMEs with a single payment acquirer unable to collect weekend walk-in revenue.",
     mitigation:
-      "Multi-acquirer payment rail redundancy (independent QR/terminal acquirers), offline POS fallback SOPs, and multi-site production tolerances.",
+      "Secondary bank acquirer QR/terminal rails at checkout, offline POS fallback SOPs, and supplier facility power redundancy audits.",
   },
   {
     icon: Globe,
-    vector: "Vector 3: Sudden Political Export Bans & Resource Nationalism",
+    vector: "Midnight Border Bans: When Neighbours Shut the Supply Tap Overnight",
     incidents: "Malaysia Live Chicken Export Ban (1 Jun – Oct 2022, 34% of Singapore supply / ~3.6M chickens/month) · Indonesia Palm Oil Export Ban (Apr–May 2022)",
     smeImpact:
-      "Overnight export prohibitions caught single-source F&B operators, central kitchens, and food manufacturers unprepared—forcing temporary closures or emergency margin compression while scrambling for alternative supply.",
+      "Saving 5% by buying 100% of a critical input from one cross-border source looks smart on a spreadsheet—until a foreign ministry bans exports overnight. Single-source F&B operators, central kitchens, and food manufacturers were forced to shut stalls or swallow spot-market margin compression.",
     mitigation:
-      "Pre-qualified dual-origin supplier matrices (e.g., ASEAN + Brazil/Thailand/Australia), formulation flexibility, and inventory buffer triggers.",
+      "The 70/30 Dual-Origin Supplier Rule (keeping 20%–30% warm with Thailand, Brazil, or Australia) and pre-tested recipe/spec agility.",
   },
   {
     icon: Ship,
-    vector: "Vector 4: Tariff Walls & Maritime Chokepoints",
+    vector: "Tariff Walls & The PCBC 'Factory-in-Market' Escape Hatch",
     incidents: "Red Sea / Suez Canal Rerouting (200%–300% spot container spikes, +10–14 days transit) · US–China & Regional Tariff Shifts",
     smeImpact:
-      "Wholesale, engineering, and product SMEs reliant on single-country export manufacturing or fixed-price delivery contracts face severe working-capital strain when duties or transit lead times spike.",
+      "SMEs shipping finished goods from a single home factory bear 100% of sudden freight spikes and tariff walls on fixed-price B2B contracts.",
     mitigation:
-      "FT Synergist's PCBC 'Factory-in-Market' and regional licensing architecture—localising production and channel partnerships inside ASEAN (CAFTA 3.0) to insulate margins.",
+      "FT Synergist's PCBC 'Factory-in-Market' and regional licensing architecture—localising ASEAN production and channel partnerships (CAFTA 3.0) to insulate margins.",
   },
 ];
 
 const faqItems: PillarFAQItem[] = [
   {
     q: "Why is cloud backup not the same as a Business Continuity Plan (BCP)?",
-    a: "As highlighted during the Microsoft Outlook and 365 outage analysed by Channel NewsAsia and NTU researchers, cloud backups protect historical data against deletion or corruption, but do not provide live service availability. When a primary cloud suite goes down, staff may view old cached files but cannot send or receive new quotations, approvals, or customer orders, nor clear the post-recovery backlog without pre-tested out-of-band workflows.",
+    a: "A cloud backup saves your history; it does nothing to save your Friday afternoon revenue. As highlighted during the Microsoft Outlook and 365 outage analysed by Channel NewsAsia and NTU researchers, backups protect old files against deletion, but when a live platform goes dark, staff cannot send or receive new quotations, approvals, or customer orders—nor clear the 48-hour backlog traffic jam the morning after systems return.",
   },
   {
     q: "Isn't Business Continuity Planning (BCP) only for large MNCs with big budgets?",
-    a: "No. In fact, large corporations have the balance-sheet buffers to absorb a 48-hour operational freeze or a single-market supply ban, whereas an SME operating on 30-to-60-day working capital cycles can face immediate cash-flow distress or lose a key enterprise contract. Furthermore, MNCs and Singapore government agencies increasingly require SME suppliers to demonstrate formal BCP and Enterprise Risk Management (ERM) readiness during tender qualification.",
+    a: "No—that is the Continuity Paradox. Big MNCs have the balance sheet to survive a 48-hour operational freeze; a lean SME running on a 30-to-60-day working-capital cycle only has next month's payroll. Furthermore, MNCs, REITs, and Singapore government agencies now use ERM and BCP readiness as a mandatory Gate 1 filter before awarding tenders to SME vendors.",
   },
   {
     q: "How does Enterprise Singapore's EDGE Grant co-fund BCP and Enterprise Risk Management for SMEs?",
@@ -325,7 +325,7 @@ export default function SMEBusinessContinuityPlanInsightPage() {
             {
               "@type": "Article",
               headline:
-                "Why Business Continuity Planning (BCP) Is Not Just for Big Corporations: Lessons from Singapore's Cloud, Energy, and Supply-Chain Shocks",
+                "The Continuity Paradox: Why Lean SMEs Break First When Cloud, Power & Borders Shut Down (And How to Turn BCP into a S$55M Tender Weapon)",
               datePublished: "2026-11-18",
               dateModified: "2026-11-18",
               author: {
@@ -362,18 +362,18 @@ export default function SMEBusinessContinuityPlanInsightPage() {
 
       {/* UNIFIED PILLAR HERO */}
       <PillarHero
-        badge="Executive Insight · Enterprise Risk Management & Operational Resilience"
+        badge="Executive Insight · The Continuity Paradox (20-Slide Boardroom Briefing)"
         badgeIcon={<ShieldCheck className="h-3.5 w-3.5" />}
-        h1Main="Why Business Continuity Planning (BCP) Is Not Only for Big Corporations"
-        h1Accent="Lessons from Cloud, Energy & Geopolitical Shocks"
-        subheader="From the global Microsoft Outlook outage and Singapore's Equinix SG3 data-centre cooling failure to overnight ASEAN export bans and tariff shifts—why lean SMEs face the sharpest concentration risk, and how to structure an EDGE Grant-supported continuity architecture."
-        expertBoxLabel="Executive Summary — Frederick Tan, Principal Management Consultant, FT Synergist (SCMC-1810-P0236)"
+        h1Main="The Continuity Paradox: Why 'Lean' SMEs Break First"
+        h1Accent="When Cloud, Chillers & Borders Shut Down"
+        subheader="Every founder loves talking about top-line growth when the sun is shining. Nobody wants to talk about plumbing until the basement floods. Here is why assuming Business Continuity Planning (BCP) is 'only for big boys' is a fatal trap—and how smart SMEs turn ERM into a multimillion-dollar tender weapon."
+        expertBoxLabel="The Hard Truth — Frederick Tan, Principal Management Consultant, FT Synergist (SCMC-1810-P0236)"
         expertBoxContent={
           <>
-            While <strong>74% to 77%</strong> of Singapore SMEs express moderate-to-high concern over income loss from business interruptions (QBE SME Survey), only <strong>22% to 23%</strong> hold active business interruption protection and <strong>19%</strong> operate without formal disruption safeguards. Treating Business Continuity Planning (BCP) as a big-budget MNC exercise leaves SMEs exposed to single-point failures across cloud software, payment rails, utility infrastructure, and cross-border supply chains—while disqualifying them from high-value enterprise and public-sector tenders.
+            &ldquo;Big MNCs have balance sheets to survive a 48-hour blackout. Lean SMEs on 30-to-60-day working-capital cycles only have next month&apos;s payroll. While <strong>74% to 77%</strong> of Singapore SMEs worry about business interruption killing their income (QBE Survey), only <strong>22% to 23%</strong> hold active protection and <strong>19%</strong> fly completely blind without digital safeguards. Hope is not a continuity strategy.&rdquo;
           </>
         }
-        ctaHeading="Audit Your Enterprise Risk & Continuity Gaps"
+        ctaHeading="Don't Wait for the Next Blackout to Test Your Plumbing"
         ctaSubheading="Book a 60-minute Strategy Sprint with Principal Management Consultant Frederick Tan (SS 680 SCMC) or download the 20-slide Executive Report PDF."
         primaryCtaLabel="Book ERM & Continuity Sprint"
         onOpenSprintModal={() => handleOpenSprintModal("business-strategy")}
@@ -386,7 +386,7 @@ export default function SMEBusinessContinuityPlanInsightPage() {
                 </span>
               </div>
               <p className="text-gray-300 text-xs sm:text-sm">
-                Get the complete 20-slide <strong>SME Business Continuity &amp; ERM Roadmap PDF</strong>—including the 4-Vector Disruption Matrix, 5-Point Board Self-Audit, and <strong>50% EDGE Grant</strong> co-funding guide.
+                Get Frederick Tan&apos;s 20-slide deck—<strong>The Continuity Paradox</strong>—featuring the 4-Vector Ambush Matrix, 5 Boardroom Rules, and the <strong>50% EDGE Grant</strong> ERM playbook.
               </p>
             </div>
             <button
@@ -402,16 +402,30 @@ export default function SMEBusinessContinuityPlanInsightPage() {
 
       {/* MAIN EDITORIAL HOUSING */}
       <main className={PILLAR_MAIN}>
-        {/* SECTION 1: THE MICROSOFT OUTLOOK OUTAGE & THE SME CLOUD ILLUSION */}
+        {/* SECTION 1: THE BACKUP DELUSION */}
         <section className="space-y-6">
           <div className="space-y-3">
             <h2 className={PILLAR_H2}>
-              1. What the Microsoft Outlook Outage Exposed About SME Continuity
+              1. The Backup Delusion: Saving History vs. Saving Friday&apos;s Revenue
             </h2>
             <p className={PILLAR_BODY}>
-              When the global Microsoft 365 and Outlook outage disrupted organisations across 74 countries—including major banks and enterprises in Singapore—it exposed a structural flaw in how businesses think about continuity. As <a href="https://www.channelnewsasia.com/singapore/microsoft-outlook-outage-risks-limitations-gaps-6549346" target="_blank" rel="noopener noreferrer" className="text-white font-semibold underline hover:text-[#8F801B]">Channel NewsAsia reported with commentary from Nanyang Technological University (NTU) Professor Boh Wai Fong</a>, three critical blind spots caught organisations off guard:
+              When the global Microsoft 365 and Outlook outage knocked out workflows across 74 countries—including major banks and enterprises in Singapore—thousands of SME owners discovered a painful lesson. As <a href="https://www.channelnewsasia.com/singapore/microsoft-outlook-outage-risks-limitations-gaps-6549346" target="_blank" rel="noopener noreferrer" className="text-white font-semibold underline hover:text-[#8F801B]">Channel NewsAsia reported with commentary from Nanyang Technological University (NTU) Professor Boh Wai Fong</a>, three blind spots ambushed businesses that thought they were &ldquo;backed up&rdquo;:
             </p>
           </div>
+
+          {/* THE HARD TRUTH CALLOUT 1 */}
+          <blockquote className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-red-950/50 via-slate-900 to-black border-l-4 border-red-600 shadow-xl space-y-2">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#C5A017] font-bold">
+              <Quote className="h-4 w-4 text-red-500" />
+              <span>The Hard Truth · Frederick Tan</span>
+            </div>
+            <p className="font-heading text-xl md:text-2xl font-bold text-white leading-snug">
+              &ldquo;A cloud backup saves your history. It does absolutely nothing to save your Friday afternoon revenue.&rdquo;
+            </p>
+            <p className="font-sans text-xs sm:text-sm text-gray-300">
+              If your team&apos;s only backup plan when Outlook dies is &lsquo;wait and refresh the browser,&rsquo; you don&apos;t have a Business Continuity Plan. You have a spectator pass to your own revenue outage.
+            </p>
+          </blockquote>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className={PILLAR_CARD}>
@@ -419,10 +433,10 @@ export default function SMEBusinessContinuityPlanInsightPage() {
                 Blind Spot 01
               </span>
               <h3 className="font-heading font-bold text-white text-lg mb-2">
-                The Cloud Monoculture Trap
+                One Plug, Four Blackouts
               </h3>
               <p className="font-sans text-sm text-gray-300 leading-relaxed">
-                SMEs consolidate email, chat, file storage, and workflows onto a single cloud suite for cost and administrative efficiency. Because these tools share underlying routing and authentication infrastructure, a single core failure disables internal coordination and external client communication simultaneously.
+                You think Outlook, Teams, SharePoint, and OneDrive are four separate tools. They aren&apos;t. They share underlying routing and login pipes. When one core pipe bursts, your internal coordination and external client communication go mute at the exact same moment.
               </p>
             </div>
 
@@ -431,10 +445,10 @@ export default function SMEBusinessContinuityPlanInsightPage() {
                 Blind Spot 02
               </span>
               <h3 className="font-heading font-bold text-white text-lg mb-2">
-                &ldquo;Backup&rdquo; Does Not Equal Live Continuity
+                Cached Mail $\neq$ Cash Flow
               </h3>
               <p className="font-sans text-sm text-gray-300 leading-relaxed">
-                Many SME owners assume cloud backups protect them from outages. Standard backups protect <em>historical files</em> against deletion or ransomware, but do nothing to keep <em>live incoming and outgoing quotations, purchase orders, or invoices</em> moving during a platform blackout.
+                Desktop caching lets your sales team read last week&apos;s emails. It does nothing to help them receive today&apos;s time-sensitive RFQ, issue a quotation, approve a purchase order, or dispatch an invoice during a live platform blackout.
               </p>
             </div>
 
@@ -443,23 +457,23 @@ export default function SMEBusinessContinuityPlanInsightPage() {
                 Blind Spot 03
               </span>
               <h3 className="font-heading font-bold text-white text-lg mb-2">
-                The Post-Recovery Backlog Bottleneck
+                The Monday-Morning Traffic Jam
               </h3>
               <p className="font-sans text-sm text-gray-300 leading-relaxed">
-                Traditional IT recovery plans stop once the server comes back online. They rarely define how a lean SME team will triage and clear 24 to 48 hours of stalled approvals, delayed dispatches, and customer service queues after restoration.
+                Most IT recovery plans stop the second the server comes back online. They completely ignore the post-recovery flood: how a lean 15-person SME clears 48 hours of jammed approvals, delayed dispatches, and angry client queues without breaching SLAs.
               </p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 2: THE 4-VECTOR DISRUPTION CHRONOLOGY (BEYOND IT) */}
+        {/* SECTION 2: THE 4-VECTOR AMBUSH */}
         <section className="space-y-6">
           <div className="space-y-3">
             <h2 className={PILLAR_H2}>
-              2. Beyond IT: 4 Vectors Where Singapore &amp; ASEAN Companies Were Caught Cold
+              2. The 4-Vector Ambush: When Chillers, Power Grids &amp; Borders Shut Down
             </h2>
             <p className={PILLAR_BODY}>
-              Business continuity is not solely an IT department responsibility. Over the past four years, Singapore and regional SMEs have faced sudden operational halts across four distinct vectors—<strong>Cloud/IT</strong>, <strong>Energy &amp; Cooling Infrastructure</strong>, <strong>Political Export Bans</strong>, and <strong>Tariffs &amp; Maritime Chokepoints</strong>:
+              Stop thinking Business Continuity is an IT department problem. Over the past four years, the hardest shocks that froze Singapore and ASEAN SMEs came from four completely different directions—<strong>Cloud Monoculture</strong>, <strong>Overheating Data Centres &amp; Power Grids</strong>, <strong>Midnight Export Bans</strong>, and <strong>Tariff Chokepoints</strong>:
             </p>
           </div>
 
@@ -480,10 +494,10 @@ export default function SMEBusinessContinuityPlanInsightPage() {
                         Verified Incidents: {item.incidents}
                       </p>
                       <p className="font-sans text-sm text-gray-300 leading-relaxed">
-                        <strong className="text-white">Operational Impact:</strong> {item.smeImpact}
+                        <strong className="text-white">How SMEs Got Caught Cold:</strong> {item.smeImpact}
                       </p>
                       <p className="font-sans text-xs text-gray-400 border-t border-white/10 pt-2 leading-relaxed">
-                        <strong className="text-gray-200">Continuity Countermeasure:</strong> {item.mitigation}
+                        <strong className="text-gray-200">FT Synergist Countermeasure:</strong> {item.mitigation}
                       </p>
                     </div>
                   </div>
@@ -491,53 +505,64 @@ export default function SMEBusinessContinuityPlanInsightPage() {
               );
             })}
           </div>
+
+          {/* THE HARD TRUTH CALLOUT 2 */}
+          <blockquote className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-red-950/50 via-slate-900 to-black border-l-4 border-red-600 shadow-xl space-y-2">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#C5A017] font-bold">
+              <Quote className="h-4 w-4 text-red-500" />
+              <span>The Hard Truth · Frederick Tan</span>
+            </div>
+            <p className="font-heading text-xl md:text-2xl font-bold text-white leading-snug">
+              &ldquo;Saving 5% by buying 100% of your raw materials from one cross-border supplier looks smart on a spreadsheet—right up until a foreign ministry signs an export ban on a Tuesday night.&rdquo;
+            </p>
+          </blockquote>
         </section>
 
-        {/* SECTION 3: COMMERCIAL UPSIDE — BCP AS A TENDER & GROWTH ENGINE */}
+        {/* SECTION 3: THE TENDER PARADOX */}
         <section className="space-y-6">
           <div className="space-y-3">
             <h2 className={PILLAR_H2}>
-              3. Why BCP Is a Revenue Enabler (Not Sunk Compliance Overhead)
+              3. The Tender Paradox: Why &ldquo;Boring&rdquo; ERM Manuals Win S$55M Contracts
             </h2>
             <p className={PILLAR_BODY}>
-              SME founders often postpone Business Continuity Planning because they view it as defensive paperwork. In practice, documented continuity and risk governance directly unlock enterprise revenue and protect valuation across three real-world engagements from FT Synergist&apos;s portfolio:
+              Typical SME founders ask: <em>&ldquo;Why spend money writing Risk Registers and BCP Manuals when I could hire another salesperson?&rdquo;</em> Because when that salesperson brings back a major MNC, airport, or government tender, institutional procurement will disqualify you at Gate 1 if you cannot prove operational continuity. Look at three real engagements from FT Synergist&apos;s portfolio:
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className={PILLAR_CARD}>
               <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A017] font-bold block mb-2">
-                B2B &amp; Public Tender Qualification
+                S$55M Tender Qualification
               </span>
               <h3 className="font-heading font-bold text-white text-lg mb-2">
                 TNT Surveillance Pte Ltd
               </h3>
               <p className="font-sans text-sm text-gray-300 leading-relaxed">
-                By designing structured business continuity plans, operational processes, and guiding the company to attain Enterprise Singapore&apos;s <strong>Singapore Quality Class (SQC)</strong> under the Business Excellence framework, FT Synergist helped position the company to secure a <strong>S$55 million</strong> new enterprise sales channel.
+                TNT didn&apos;t build a Business Continuity Plan because they loved paperwork. By architecting their BCP and guiding them to Enterprise Singapore&apos;s <strong>Singapore Quality Class (SQC)</strong>, FT Synergist helped qualify them to win a <strong>S$55 million</strong> new enterprise sales channel.
               </p>
             </div>
 
             <div className={PILLAR_CARD}>
               <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A017] font-bold block mb-2">
-                Multi-Market Supply &amp; Climate Resilience
+                Multi-Market Supply Shield
               </span>
               <h3 className="font-heading font-bold text-white text-lg mb-2">
                 Sundat (S) Pte Ltd
               </h3>
               <p className="font-sans text-sm text-gray-300 leading-relaxed">
-                Transformed an opportunistic cross-border trading posture into a structured 5-year multi-market roadmap across Australia, Vietnam, and Taiwan—diversifying supply chains and market exposure against regional regulatory and climate disruptions.
+                Transformed an opportunistic cross-border trading model into a structured 5-year multi-market roadmap across Australia, Vietnam, and Taiwan—insulating supply chains and revenue from single-territory climate and regulatory shocks.
               </p>
             </div>
 
             <div className={PILLAR_CARD}>
               <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A017] font-bold block mb-2">
-                PCBC &ldquo;Factory-in-Market&rdquo; Tariff Insulation
+                PCBC &ldquo;Factory-in-Market&rdquo;
               </span>
               <h3 className="font-heading font-bold text-white text-lg mb-2">
                 Wang Lao Ji / Project WALOVI
               </h3>
               <p className="font-sans text-sm text-gray-300 leading-relaxed">
-                As analysed in our <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="text-white underline hover:text-[#8F801B]">Wang Lao Ji Global Expansion study</Link>, establishing localised ASEAN production lines in Malaysia and Vietnam via strategic packaging alliances leverages CAFTA 3.0 tariff efficiency and insulates regional supply chains from shipping disruptions.
+                As detailed in our <Link href="/insights/wang-lao-ji-global-expansion-strategy" className="text-white underline hover:text-[#8F801B]">Wang Lao Ji Global Expansion study</Link>, partnering with Baosteel Packaging to run production lines inside Malaysia and Vietnam captures CAFTA 3.0 tariff efficiency and insulates ASEAN supply from shipping chokepoints.
               </p>
             </div>
           </div>
@@ -553,10 +578,10 @@ export default function SMEBusinessContinuityPlanInsightPage() {
                   Complimentary Boardroom Deck (20-Slide PDF)
                 </span>
                 <h3 className="font-heading text-xl font-bold text-white">
-                  Download the 20-Slide SME Business Continuity &amp; ERM Roadmap
+                  Download &ldquo;The Continuity Paradox&rdquo; (20-Slide Executive Report)
                 </h3>
                 <p className="font-sans text-sm text-gray-300">
-                  Includes the 5 Resilience Lessons, 4-Vector Disruption Matrix, Portfolio Case Studies, and Enterprise Singapore EDGE Grant ERM co-funding parameters.
+                  Includes FT Synergist&apos;s 5 Continuity Rules for SMEs, the 4-Vector Ambush Matrix, and Enterprise Singapore EDGE Grant ERM co-funding parameters.
                 </p>
               </div>
             </div>
@@ -579,10 +604,10 @@ export default function SMEBusinessContinuityPlanInsightPage() {
             </span>
           </div>
           <h2 className={PILLAR_H2}>
-            4. How Singapore SMEs Co-Fund Continuity &amp; Risk Architecture Under EDGE
+            4. Don&apos;t Pay 100% Out of Pocket: Let EnterpriseSG Co-Fund Your ERM Shield
           </h2>
           <p className="font-sans text-sm md:text-base text-gray-300 leading-relaxed">
-            Singapore SMEs do not need a multinational budget to build institutional-grade risk and continuity systems. Under Enterprise Singapore&apos;s unified <Link href="/edge-grant" className="text-white font-semibold underline hover:text-[#8F801B]">EDGE Grant</Link> (shared <strong>S$100,000 annual company cap</strong> refreshed 1 April), three prescribed pathways support resilience and diversification when engaging an <strong>SAC-accredited SS 680 certified management consultant</strong>:
+            You do not need a multinational budget to build institutional-grade risk and continuity systems. Under Enterprise Singapore&apos;s unified <Link href="/edge-grant" className="text-white font-semibold underline hover:text-[#8F801B]">EDGE Grant</Link> (shared <strong>S$100,000 annual company cap</strong> refreshed 1 April), three prescribed pathways co-fund resilience and diversification when you engage an <strong>SAC-accredited SS 680 certified management consultant</strong>:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
@@ -630,7 +655,7 @@ export default function SMEBusinessContinuityPlanInsightPage() {
           <div className="pt-2">
             <PillarConversionBanner
               variant="mid"
-              heading="Build Your ERM & Continuity Roadmap with Up to 50% EDGE Support"
+              heading="Build Your ERM & Continuity Shield with Up to 50% EDGE Support"
               subheading="Work directly with Frederick Tan, Principal Management Consultant, FT Synergist (TÜV SÜD License SCMC-1810-P0236)."
               primaryCtaLabel="Book 60-Min ERM & Strategy Sprint"
               onOpenSprintModal={() => handleOpenSprintModal("business-strategy")}
@@ -647,8 +672,8 @@ export default function SMEBusinessContinuityPlanInsightPage() {
         {/* SECTION 6: BOTTOM CONVERSION BANNER */}
         <PillarConversionBanner
           variant="bottom"
-          heading="Don't Wait for the Next Outage or Export Ban to Test Your Resilience."
-          subheading="Structure a practical, EDGE Grant-compliant Enterprise Risk Management (ERM) and Business Continuity roadmap with Principal Management Consultant Frederick Tan (SCMC-1810-P0236)."
+          heading="Is Your Business One Outage, One Chiller Failure, or One Export Ban Away from a Crisis?"
+          subheading="Make hay while the sun shines. Structure an EDGE Grant-supported Enterprise Risk Management (ERM) and Business Continuity roadmap with Principal Management Consultant Frederick Tan (SCMC-1810-P0236)."
           primaryCtaLabel="Book ERM & Continuity Sprint"
           onOpenSprintModal={() => handleOpenSprintModal("business-strategy")}
         />
