@@ -38,11 +38,11 @@ export default function CitationFootnotes({
             </span>
             <span className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              IPOS GoBusiness Accredited
+              IPOS GoBusiness IP Grow Listed
             </span>
             <span className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              EnterpriseSG EDG & MRA Aligned
+              EnterpriseSG EDGE Grant Aligned
             </span>
             <span className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
