@@ -25,6 +25,20 @@ const inter = Inter({
   display: "swap",
 });
 
+// protected-keywords (AGENTS.md §6): literal terms to diff before any title/description change.
+const protectedKeywords = [
+  "FT Synergist",
+  "Singapore",
+  "business consulting",
+  "certified management consultants",
+  "EDGE Grant",
+  "EDG",
+  "MRA",
+  "franchise scaling",
+  "AI digitalisation",
+  "IP strategy"
+];
+
 // 3. GLOBAL METADATA OBJECT - OPTIMIZED FOR SG CONSULTANT CLUSTERS
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ftsynergist.com'),
@@ -32,8 +46,9 @@ export const metadata: Metadata = {
     default: "FT Synergist | Singapore's Top Corporate Growth & Grant Consultancy",
     template: "%s | FT Synergist"
   },
-  description: "Singapore's leading business consulting firm. Certified management consultants specializing in EDG/MRA grants, franchise scaling, AI digitalisation, and IP strategy.",
+  description: "Singapore business consulting firm. SCMC certified management consultants for EDGE Grant (former EDG/MRA), franchise scaling, AI digitalisation & IP strategy.",
   keywords: [
+    "EDGE Grant consultant singapore",
     "top EDG consultant singapore",
     "top MRA consultant singapore",
     "top Franchise consultant singapore",
@@ -44,7 +59,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "FT Synergist | Singapore's Top Corporate Growth & Grant Consultancy",
-    description: "Singapore's leading business consulting firm. Certified management consultants specializing in EDG/MRA grants, franchise scaling, AI digitalisation, and IP strategy.",
+    description: "Singapore business consulting firm. SCMC certified management consultants for EDGE Grant (former EDG/MRA), franchise scaling, AI digitalisation & IP strategy.",
     url: "https://www.ftsynergist.com",
     siteName: "FT Synergist",
     locale: "en_SG",
