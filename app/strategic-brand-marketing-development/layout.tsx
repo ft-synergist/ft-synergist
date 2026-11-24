@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 
 // protected-keywords (AGENTS.md §6): literal terms to diff before any title/description change.
+// Approved 24 Nov 2026: "Strategic Brand Marketing" removed (0 impr. in 3M GSC); "Brand Strategy Singapore" added.
 const protectedKeywords = [
     "Brand Consultant Singapore",
-    "Strategic Brand Marketing",
+    "Brand Strategy Singapore",
     "strategic brand consultants",
     "International Branding",
-    "Brand Strategy Singapore",
     "brand consultancy for smes",
     "brand architecture",
     "ASEAN market expansion",
@@ -16,8 +16,8 @@ const protectedKeywords = [
 ];
 
 export const metadata: Metadata = {
-    title: "Brand Consultant Singapore | International Branding & Strategic Brand Marketing",
-    description: "Brand Consultant Singapore & International Branding for SMEs. SCMC-certified strategic brand consultants for brand architecture, ASEAN market expansion & EDGE grant co-funding.",
+    title: "Brand Consultant Singapore | Brand Strategy & EDGE",
+    description: "International Branding & Brand Strategy Singapore for SMEs. SCMC strategic brand consultants for brand architecture, ASEAN market expansion & EDGE grant.",
     keywords: [
         "Brand Consultant Singapore",
         "International Branding Singapore",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
         canonical: "https://www.ftsynergist.com/strategic-brand-marketing-development",
     },
     openGraph: {
-        title: "Brand Consultant Singapore | International Branding & Strategic Brand Marketing | FT Synergist",
-        description: "Brand Consultant Singapore & International Branding for SMEs. SCMC-certified strategic brand consultants for brand architecture, ASEAN market expansion & EDGE grant co-funding.",
+        title: "Brand Consultant Singapore | Brand Strategy & EDGE | FT Synergist",
+        description: "International Branding & Brand Strategy Singapore for SMEs. SCMC strategic brand consultants for brand architecture, ASEAN market expansion & EDGE grant.",
         url: "https://www.ftsynergist.com/strategic-brand-marketing-development",
         type: "website",
         images: [
