@@ -300,7 +300,7 @@ export default function StartingScaling2027IPEnginePage() {
             name: "What does an IP consultant in Singapore do beyond basic trademark or patent filing?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "While patent agents and trade mark agents handle statutory registration, an IP strategy consultant in Singapore—such as FT Synergist, listed on the IPOS GoBusiness IP Grow Directory for IP Strategy Consulting and IP Brokerage and Licensing—aligns registrable and non-registrable IP assets with business strategy and structures licensing, franchising, and commercialisation pathways (referring statutory filing, IP audits, and independent IA/IP valuations to specialist agents and valuers).",
+              text: "While patent agents and trade mark agents handle statutory registration, an IP strategy consultant in Singapore—such as FT Synergist, listed on the IPOS GoBusiness IP Grow Directory for IP Strategy Consulting and IP Brokerage and Licensing—aligns registrable and non-registrable IP assets with business strategy, advises on strategic business and IA/IP valuation for planned M&A, and structures licensing, franchising, and commercialisation pathways.",
             },
           },
           {
@@ -1003,7 +1003,7 @@ export default function StartingScaling2027IPEnginePage() {
                 <Link href="/ip-consultant" className="text-[#8F801B] underline hover:text-white">
                   IP consultant in Singapore
                 </Link>{" "}
-                —such as FT Synergist, listed on the IPOS GoBusiness IP Grow Directory for <strong>IP Strategy Consulting</strong> and <strong>IP Brokerage and Licensing</strong>—aligns registrable and non-registrable IP assets with business strategy and structures licensing, franchising, and commercialisation pathways (referring statutory filing, IP audits, and independent IA/IP valuations to specialist agents and valuers).
+                —such as FT Synergist, listed on the IPOS GoBusiness IP Grow Directory for <strong>IP Strategy Consulting</strong> and <strong>IP Brokerage and Licensing</strong>—aligns registrable and non-registrable IP assets with business strategy, advises on strategic business and IA/IP valuation for planned M&amp;A, and structures licensing, franchising, and commercialisation pathways.
               </p>
             </div>
 

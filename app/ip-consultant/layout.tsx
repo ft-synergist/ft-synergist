@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 
 // protected-keywords (AGENTS.md §6): literal terms to diff before any title/description change.
+// Approved 24 Nov 2026: "Advisory" removed (replaced by IPOS verbatim "IP Strategy Consulting"); "Valuation" retained.
 const protectedKeywords = [
     "IP Consultant Singapore",
     "IP Strategy",
-    "Advisory",
+    "IP Strategy Consulting",
     "Valuation",
     "Monetization",
     "patents",
@@ -18,11 +19,10 @@ const protectedKeywords = [
 ];
 
 export const metadata: Metadata = {
-    title: "IP Consultant Singapore | IP Strategy & Advisory, Valuation & Monetization",
-    description: "Protect and monetize patents, trademarks, and intangible assets with Singapore's IPOS-listed IP Strategy Consultant. TÜV SÜD SCMC certified advisor (SCMC-1810-P0236) for IP strategy & advisory, valuation, licensing, brand protection & EDGE grant.",
+    title: "IP Consultant Singapore | IP Strategy, Valuation & Monetization",
+    description: "IPOS-listed IP Strategy Consulting for patents, trademarks & intangible assets. SCMC-1810-P0236: strategic valuation, licensing, brand protection & EDGE grant.",
     keywords: [
         "IP Consultant Singapore",
-        "IP Strategy & Advisory Singapore",
         "IP Strategy Consulting Singapore",
         "IP Brokerage and Licensing Singapore",
         "Innovation Consultancy Singapore",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
         canonical: "https://www.ftsynergist.com/ip-consultant",
     },
     openGraph: {
-        title: "IP Consultant Singapore | IP Strategy & Advisory, Valuation & Monetization | FT Synergist",
-        description: "Protect and monetize patents, trademarks, and intangible assets with Singapore's IPOS-listed IP Strategy Consultant. TÜV SÜD SCMC certified advisor (SCMC-1810-P0236) for IP strategy & advisory, valuation, licensing, brand protection & EDGE grant.",
+        title: "IP Consultant Singapore | IP Strategy, Valuation & Monetization | FT Synergist",
+        description: "IPOS-listed IP Strategy Consulting for patents, trademarks & intangible assets. SCMC-1810-P0236: strategic valuation, licensing, brand protection & EDGE grant.",
         url: "https://www.ftsynergist.com/ip-consultant",
         type: "website",
         images: [

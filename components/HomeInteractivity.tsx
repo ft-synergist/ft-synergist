@@ -163,12 +163,12 @@ export function ServicesAccordion() {
     {
       title: "Franchise & Licensing",
       href: "/franchise-consultant",
-      description: "Transforming proven operating models into asset-light, multi-market franchise architectures with standardized SOPs, commercial licensing structures, and cross-border royalty models.",
+      description: "Transforming proven operating models into asset-light, multi-market franchise architectures with standardized SOPs, commercial licensing structures, and cross-border royalty valuation.",
       expandedIntro: "We guide high-growth local enterprises (e.g., Pawa Bakery) through asset-light international scaling to multiply revenue without heavy overseas factory capex:",
       image: "/ft-synergist-pawa-bakery-franchise-licensing.jpg",
       alt: "Franchise and Licensing Consultant Singapore Master Franchising",
       details: [
-        { title: "Royalty & Licensing Architecture", content: "Structuring franchise and licensing royalty models under IP Brokerage and Licensing, which IPOS describes as including F&B franchising, where the franchisor grants the franchisee the right to use their brand, recipes, know-how, and other intangible assets for a fee." },
+        { title: "Royalty Architecture & Strategic Valuation", content: "Structuring franchise and licensing royalty models (aligned with IPOS's IP Brokerage and Licensing framework) alongside strategic business and IA/IP valuation for planned near-, mid-, or long-term M&A." },
         { title: "Master Franchise & Contract Structuring", content: "Crafting robust master licensing agreements, territory covenants, and protectable operational manuals (SOPs)." },
         { title: "Cross-Border Partner Due Diligence", content: "Vetting international franchisees and deploying defensible governance frameworks across ASEAN and global markets." }
       ]
