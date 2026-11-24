@@ -85,6 +85,12 @@ export default function InsightsPage() {
           "position": 10,
           "url": "https://www.ftsynergist.com/insights/sme-business-continuity-plan-singapore",
           "name": "Why Business Continuity Planning (BCP) Is Not Only for Big Corporations: Lessons from Cloud, Energy & Supply-Chain Shocks"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://www.ftsynergist.com/insights/international-branding-singapore-asean-launchpad",
+          "name": "International Branding vs. International Marketing: Using Singapore as an ASEAN Launchpad Under EDGE"
         }
       ]
     }
@@ -416,6 +422,32 @@ export default function InsightsPage() {
             </p>
             <p className="text-sm text-gray-600 leading-relaxed flex-grow">
               Side-by-side comparative analysis of Singapore&apos;s legacy grant schemes vs the consolidated EDGE Grant launching 30 September 2026.
+            </p>
+          </div>
+
+          {/* Item 8 - International Branding & ASEAN Launchpad */}
+          <div className="flex flex-col group cursor-pointer">
+            <div className="relative aspect-[16/9] bg-neutral-900 mb-4 overflow-hidden rounded-lg shadow-sm border border-neutral-800">
+              <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-slate-900 to-[#8F801B]/50 flex flex-col items-center justify-center p-6 text-center gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C5A017] border border-[#8F801B]/60 px-2 py-0.5">
+                  EDGE Internationalisation · 70% SME
+                </span>
+                <span className="text-white font-serif font-bold text-lg leading-snug">International Branding vs. Marketing</span>
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+              Brand Strategy &amp; ASEAN Expansion
+            </span>
+            <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#8F801B] transition-colors leading-snug mb-2">
+              <Link href="/insights/international-branding-singapore-asean-launchpad">
+                International Branding vs. International Marketing: Using Singapore as an ASEAN Launchpad
+              </Link>
+            </h3>
+            <p className="text-xs font-serif italic text-gray-400 mb-2">
+              November 2026
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              How Singapore SMEs structure brand architecture before funding cross-border campaigns—separating EDGE International Branding (SS 680) from Overseas Marketing &amp; PR.
             </p>
           </div>
 

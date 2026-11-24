@@ -1,16 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import Script from 'next/script';
 import { ArrowRight, ShieldCheck, TrendingUp, Globe, X, Calendar, Plus, Minus, CheckCircle2, AlertCircle, FileCheck2 } from 'lucide-react';
-import type { CitationItem } from '@/app/components/CitationFootnotes';
-
-// Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
-const CitationFootnotes = dynamic(() => import('@/app/components/CitationFootnotes'), { ssr: false });
-const GeoSemanticAnchors = dynamic(() => import('@/app/components/GeoSemanticAnchors'), { ssr: false });
-const QuantitativeSuccessTable = dynamic(() => import('@/app/components/QuantitativeSuccessTable'), { ssr: false });
+import CitationFootnotes, { type CitationItem } from '@/app/components/CitationFootnotes';
+import GeoSemanticAnchors from '@/app/components/GeoSemanticAnchors';
+import QuantitativeSuccessTable from '@/app/components/QuantitativeSuccessTable';
 
 const brandCitations: CitationItem[] = [
   {
@@ -138,9 +133,12 @@ export default function StrategicBrandMarketingDevelopmentPage() {
 
   return (
     <div className="min-h-screen bg-black text-white antialiased font-sans w-full overflow-x-hidden relative">
-      {/* UNIFIED SCHEMA MARKUP: SERVICE + PROVIDER + FAQPAGE */}
-      <Script id="brand-faq-schema" type="application/ld+json">
-        {JSON.stringify({
+      {/* UNIFIED SCHEMA MARKUP: SERVICE + PROVIDER + FAQPAGE (NATIVE SSR) */}
+      <script
+        id="brand-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
             {
@@ -191,8 +189,9 @@ export default function StrategicBrandMarketingDevelopmentPage() {
               }))
             }
           ]
-        })}
-      </Script>
+          })
+        }}
+      />
 
       {/* HERO BANNER SECTION */}
       <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
