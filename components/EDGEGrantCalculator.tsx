@@ -39,14 +39,14 @@ export function EDGEGrantCalculator() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const businessAreasList = [
-    { id: "Automation", name: "Automation (Hardware/Robotics)", subCap: true },
-    { id: "Digitalisation", name: "Digitalisation (Enterprise Systems/ERP/CRM)", subCap: true },
-    { id: "Business Strategy", name: "Business Strategy & Strategic Branding", subCap: false },
-    { id: "Financial Management", name: "Financial Governance & Risk", subCap: false },
-    { id: "Innovation", name: "Innovation & Proprietary IP", subCap: false },
-    { id: "Internationalisation", name: "Internationalisation (Market Deepening)", subCap: false },
-    { id: "Standards", name: "Standards & ISO/SS Certification", subCap: false },
-    { id: "Sustainability", name: "Sustainability & Decarbonisation", subCap: false },
+    { id: "Automation", name: "Automation (Pre-scoped / Large-scale)", subCap: true },
+    { id: "Digitalisation", name: "Digitalisation (Single-function / ERP / Transformation)", subCap: true },
+    { id: "Business Strategy", name: "Business Strategy (Strategic Planning & IP)", subCap: false },
+    { id: "Financial Management", name: "Financial Management (ERM & Corporate Strategy)", subCap: false },
+    { id: "Innovation", name: "Innovation (Product Development)", subCap: false },
+    { id: "Internationalisation", name: "Internationalisation (incl. International Branding — 70% SME)", subCap: false },
+    { id: "Standards", name: "Standards (General / Digital / Sector / Sustainability)", subCap: false },
+    { id: "Sustainability", name: "Sustainability (Strategy / Resources / ESG — 70% SME)", subCap: false },
   ];
 
   const toggleArea = (id: string) => {
@@ -59,16 +59,19 @@ export function EDGEGrantCalculator() {
     }
   };
 
-  // Calculations
-  const supportRate = isSME ? 0.70 : 0.50;
-  
-  // Software / Automation is subject to S$30,000 sub-cap
-  const rawSoftwareGrant = softwareBudget * supportRate;
+  // S.O.T.-compliant rate split: 70%/50% for Internationalisation & Sustainability; 50%/30% for general activities
+  const hasPriorityArea =
+    selectedAreas.includes("Internationalisation") || selectedAreas.includes("Sustainability");
+  const consultancyRate = isSME ? (hasPriorityArea ? 0.70 : 0.50) : (hasPriorityArea ? 0.50 : 0.30);
+  const softwareRate = isSME ? 0.50 : 0.30;
+
+  // Software / Automation is subject to S$30,000 sub-cap (illustrative general baseline; rates differ by activity)
+  const rawSoftwareGrant = softwareBudget * softwareRate;
   const eligibleSoftwareGrant = Math.min(rawSoftwareGrant, 30000);
-  
+
   // Strategic / Other consultancy
-  const rawConsultancyGrant = consultancyBudget * supportRate;
-  
+  const rawConsultancyGrant = consultancyBudget * consultancyRate;
+
   // Total Grant capped at S$100,000 annual limit
   const totalGrantUncapped = eligibleSoftwareGrant + rawConsultancyGrant;
   const finalEstimatedGrant = Math.min(totalGrantUncapped, 100000);
@@ -87,7 +90,9 @@ export function EDGEGrantCalculator() {
           name,
           email,
           company,
-          isSME: isSME ? "SME (Up to 70%)" : "Non-SME (Up to 50%)",
+          isSME: isSME
+            ? `SME (Up to ${Math.round(consultancyRate * 100)}% selected / 50%–70% tier)`
+            : `Non-SME (Up to ${Math.round(consultancyRate * 100)}% selected / 30%–50% tier)`,
           has30PercentLocal: isLocalShareholding ? "Yes (Eligible)" : "No (<30% Local)",
           selectedAreas: selectedAreas.join(", "),
           consultancyBudget: `S$${consultancyBudget.toLocaleString()}`,
@@ -140,10 +145,10 @@ export function EDGEGrantCalculator() {
               >
                 <div className="font-bold text-sm text-white flex items-center justify-between">
                   <span>SME Tier</span>
-                  <span className="text-xs px-2 py-0.5 bg-[#8F801B] text-black font-extrabold rounded">70% Support</span>
+                  <span className="text-xs px-2 py-0.5 bg-[#8F801B] text-black font-extrabold rounded">Up to 50%–70%</span>
                 </div>
                 <p className="text-[11px] text-neutral-400 mt-1">
-                  Group Revenue ≤S$100M or Staff ≤200
+                  Group Revenue ≤S$100M or Staff ≤200 (50% general; 70% Intl./Sust.)
                 </p>
               </button>
 
@@ -158,10 +163,10 @@ export function EDGEGrantCalculator() {
               >
                 <div className="font-bold text-sm text-white flex items-center justify-between">
                   <span>Non-SME Tier</span>
-                  <span className="text-xs px-2 py-0.5 bg-neutral-700 text-white font-bold rounded">50% Support</span>
+                  <span className="text-xs px-2 py-0.5 bg-neutral-700 text-white font-bold rounded">Up to 30%–50%</span>
                 </div>
                 <p className="text-[11px] text-neutral-400 mt-1">
-                  Group Revenue &gt;S$100M or Staff &gt;200
+                  Group Revenue &gt;S$100M &amp; Staff &gt;200 (30% general; 50% Intl./Sust.)
                 </p>
               </button>
             </div>
@@ -176,7 +181,7 @@ export function EDGEGrantCalculator() {
                 className="w-4 h-4 accent-[#8F801B] rounded"
               />
               <label htmlFor="shareholding" className="text-neutral-300 cursor-pointer">
-                Company has at least <strong>30% local shareholding</strong> (Singapore Citizens / PRs).
+                For-profit Singapore-registered company with at least <strong>30% Singaporean / PR ultimate individual ownership</strong>.
               </label>
             </div>
             {!isLocalShareholding && (
@@ -288,7 +293,7 @@ export function EDGEGrantCalculator() {
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <span className="text-xs font-mono uppercase text-[#8F801B] font-bold">Estimated Grant Support</span>
               <span className="text-xs px-2 py-0.5 bg-[#8F801B]/20 text-[#C5A017] rounded font-bold">
-                {Math.round(supportRate * 100)}% Support
+                Up to {Math.round(consultancyRate * 100)}% Support
               </span>
             </div>
 

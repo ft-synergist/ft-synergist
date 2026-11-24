@@ -119,9 +119,9 @@ export default function PSGAfterSeptember2026Page() {
     "@graph": [
       {
         "@type": "Article",
-        headline: "What Happens to PSG After 29 September 2026? Singapore SME Transition Guide",
+        headline: "What Happens to PSG After 29 September 2026? Post-Cutover EDGE Guide for Singapore SMEs",
         description:
-          "The Productivity Solutions Grant (PSG) ceases on 29 September 2026. Understand what replaces PSG, how EDGE absorbs it, the S$30,000 sub-cap, and continuity rules for existing PSG projects.",
+          "The Productivity Solutions Grant (PSG) ceased on 29 September 2026. Learn how EDGE Automation & Digitalisation replaces PSG, the S$30,000 sub-cap, 1 Dec 2026 claims opening, and continuity rules for existing PSG projects.",
         image: "https://www.ftsynergist.com/hero-bg.jpg",
         author: { "@type": "Organization", name: "FT Synergist" },
         publisher: {
@@ -130,7 +130,7 @@ export default function PSGAfterSeptember2026Page() {
           logo: { "@type": "ImageObject", url: "https://www.ftsynergist.com/logo.png" },
         },
         datePublished: "2026-09-10",
-        dateModified: "2026-09-10",
+        dateModified: "2026-11-24",
         mainEntityOfPage: {
           "@type": "WebPage",
           "@id": "https://www.ftsynergist.com/insights/what-happens-to-psg-after-september-2026",
@@ -144,7 +144,7 @@ export default function PSGAfterSeptember2026Page() {
             name: "What happens to PSG after 29 September 2026?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "The Productivity Solutions Grant (PSG) ceases on 29 September 2026. No new PSG applications will be accepted after that date. From 30 September 2026, the EDGE Grant becomes the sole application pathway for Singapore businesses seeking government co-funding for productivity and digitalisation activities.",
+              text: "The Productivity Solutions Grant (PSG) ceased on 29 September 2026. No new PSG applications are accepted after that date. Since 30 September 2026, the EDGE Grant is the sole application pathway for Singapore businesses seeking Enterprise Singapore co-funding for productivity, automation, and digitalisation activities.",
             },
           },
           {
@@ -152,7 +152,7 @@ export default function PSGAfterSeptember2026Page() {
             name: "What replaces PSG in Singapore?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "PSG is absorbed into the new EDGE Grant, which also consolidates the Enterprise Development Grant (EDG) and Market Readiness Assistance (MRA). PSG's supportable activities—pre-scoped IT solutions, off-the-shelf software, and equipment—are integrated into EDGE's Automation and Digitalisation business areas.",
+              text: "PSG was folded into the unified EDGE Grant alongside the Enterprise Development Grant (EDG) and Market Readiness Assistance (MRA). Pre-scoped IT solutions, single-function digital solutions, integrated enterprise systems, and pre-scoped equipment now sit under EDGE's Automation and Digitalisation business areas.",
             },
           },
           {
@@ -160,7 +160,7 @@ export default function PSGAfterSeptember2026Page() {
             name: "How much grant support is available for digital tools under EDGE to replace PSG?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Under EDGE, companies can deploy up to S$30,000 of their annual S$100,000 grant cap on single-function digital solutions, integrated enterprise systems, and selected automation activities—the activities that were previously supported under PSG.",
+              text: "Under EDGE, companies can deploy up to S$30,000 within their shared S$100,000 annual grant cap (refreshed 1 April) for single-function digital solutions (1-week outcome), integrated enterprise systems (10-week outcome, or 1 week with a pre-approved vendor), and pre-scoped equipment (4-week outcome). Claims for single-function digital solutions and pre-scoped equipment open on 1 December 2026.",
             },
           },
           {
@@ -168,7 +168,7 @@ export default function PSGAfterSeptember2026Page() {
             name: "Will my existing PSG project be affected by the closure?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "No. PSG applications submitted before 30 September 2026 will continue to be assessed under PSG criteria. Approved PSG projects proceed unaffected and will be supported through project completion and claim disbursement, even after 29 September 2026.",
+              text: "No. PSG applications submitted before 30 September 2026 continue to be assessed under PSG criteria. Approved PSG projects proceed unaffected and are supported through project completion and claim disbursement.",
             },
           },
           {
@@ -176,7 +176,7 @@ export default function PSGAfterSeptember2026Page() {
             name: "Can a business that previously received PSG funding apply for EDGE?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes. Businesses that have previously received PSG funding are fully eligible to apply for EDGE from 30 September 2026 onwards.",
+              text: "Yes. Businesses that previously received PSG funding can apply for new projects under EDGE, provided they meet the baseline eligibility criteria (registered and operating in Singapore on a for-profit basis, ≥30% Singaporean/PR ultimate individual ownership, and no prior work or deposit before BGP submission).",
             },
           },
         ],
@@ -194,11 +194,11 @@ export default function PSGAfterSeptember2026Page() {
         {/* Status badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest">
           <CheckCircle2 className="w-3.5 h-3.5" />
-          PSG Ceased 29 September 2026 — EDGE Grant Live as Sole Pathway
+          PSG Closed 29 Sep 2026 — EDGE Active · Digital Claims Open 1 Dec 2026
         </div>
 
         <span className="block text-xs uppercase tracking-[0.25em] text-[#8F801B] font-extrabold">
-          Enterprise Singapore Grant Policy Update · September 2026
+          Enterprise Singapore Post-Cutover Guide · Updated November 2026
         </span>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
@@ -207,9 +207,9 @@ export default function PSGAfterSeptember2026Page() {
         </h1>
 
         <p className="text-base md:text-lg text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-          The Productivity Solutions Grant ends on 29 September 2026. This guide explains what replaces PSG,
-          how your tools and software subscriptions transition to EDGE, the S$30,000 sub-cap,
-          and what happens to your existing PSG claims — based exclusively on verified Enterprise Singapore sources.
+          The Productivity Solutions Grant (PSG) ceased on 29 September 2026. Now that Enterprise Singapore&apos;s unified{" "}
+          <Link href="/edge-grant" className="text-white underline hover:text-[#8F801B] font-semibold">EDGE Grant</Link>{" "}
+          is live, this updated guide explains how pre-scoped IT tools transition into EDGE Automation &amp; Digitalisation, how the S$30,000 sub-cap works, when claims open (1 December 2026), and how existing PSG projects are completed.
         </p>
 
         <p className="text-xs text-neutral-600 max-w-xl mx-auto">

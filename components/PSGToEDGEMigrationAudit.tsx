@@ -56,8 +56,8 @@ export function PSGToEDGEMigrationAudit() {
     }
   };
 
-  // Calculations
-  const coFundingRate = isSME ? 0.70 : 0.50;
+  // Calculations (illustrative general EDGE baseline: up to 50% SME / 30% non-SME; actual pre-scoped rates differ by activity)
+  const coFundingRate = isSME ? 0.50 : 0.30;
   const rawSoftwareSupport = annualSoftwareSpend * coFundingRate;
   
   // The official EDGE S$30k Digitalisation sub-cap
@@ -84,7 +84,7 @@ export function PSGToEDGEMigrationAudit() {
           email,
           company,
           phone,
-          tier: isSME ? "SME (Up to 70%)" : "Non-SME (Up to 50%)",
+          tier: isSME ? "SME (Up to 50% General / Digital Baseline)" : "Non-SME (Up to 30% General / Digital Baseline)",
           selectedSolutions: selectedSolutions.join("; "),
           annualSoftwareSpend: `S$${annualSoftwareSpend.toLocaleString()}`,
           estimatedDigitalGrant: `S$${Math.round(eligibleSoftwareSupport).toLocaleString()}`,
@@ -111,7 +111,7 @@ export function PSGToEDGEMigrationAudit() {
           PSG-to-EDGE Software Migration &amp; Sub-Cap Audit
         </h3>
         <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
-          PSG ceases on 29 September 2026. Test your software migration viability, model your S$30,000 Digitalisation sub-cap, and calculate your remaining S$70,000 strategic transformation headroom under EDGE.
+          PSG ceased on 29 September 2026. Model your S$30,000 Digitalisation &amp; Automation sub-cap (illustrative 50% SME / 30% non-SME general baseline; rates differ by activity) and calculate your remaining headroom within the shared S$100,000 annual EDGE cap.
         </p>
       </div>
 
@@ -135,7 +135,7 @@ export function PSGToEDGEMigrationAudit() {
                 }`}
               >
                 <div className="font-bold text-sm text-white">Singapore SME</div>
-                <div className="text-xs text-[#C5A017] font-semibold mt-0.5">70% Co-Funding Support</div>
+                <div className="text-xs text-[#C5A017] font-semibold mt-0.5">Up to 50% General Baseline</div>
                 <p className="text-[10px] text-neutral-400 mt-1">≤S$100M revenue / ≤200 staff</p>
               </button>
 
@@ -149,8 +149,8 @@ export function PSGToEDGEMigrationAudit() {
                 }`}
               >
                 <div className="font-bold text-sm text-white">Non-SME Scale-Up</div>
-                <div className="text-xs text-neutral-300 font-semibold mt-0.5">50% Co-Funding Support</div>
-                <p className="text-[10px] text-neutral-400 mt-1">&gt;S$100M revenue / &gt;200 staff</p>
+                <div className="text-xs text-neutral-300 font-semibold mt-0.5">Up to 30% General Baseline</div>
+                <p className="text-[10px] text-neutral-400 mt-1">&gt;S$100M revenue &amp; &gt;200 staff</p>
               </button>
             </div>
           </div>
@@ -210,7 +210,7 @@ export function PSGToEDGEMigrationAudit() {
               />
               <div className="flex justify-between text-[10px] text-neutral-500">
                 <span>S$5,000</span>
-                <span>S$42,857 (Max 70% SME Sub-Cap)</span>
+                <span>S$60,000 (50% SME = S$30k Sub-Cap)</span>
                 <span>S$80,000</span>
               </div>
             </div>
