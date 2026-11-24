@@ -25,7 +25,7 @@ const fallbackDataset = [
   }
 ];
 
-export default async function QuantitativeSuccessTable() {
+export default function QuantitativeSuccessTable() {
   // Swap this back to `await db.query.clients.findMany()` when billing resets
   const dataset = fallbackDataset;
 
