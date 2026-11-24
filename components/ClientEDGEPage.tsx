@@ -124,15 +124,23 @@ export default function ClientEDGEPage() {
         },
         {
             question: "How is the Productivity Solutions Grant (PSG) folded into EDGE?",
-            answer: "The Productivity Solutions Grant (PSG) ceases on 29 September 2026 alongside EDG and MRA. Pre-scoped IT equipment and off-the-shelf software solutions previously funded through PSG will be integrated into EDGE under the Automation and Digitalisation business areas. Companies will be able to deploy up to S$30,000 of their S$100,000 annual grant cap toward single-function digital solutions, integrated enterprise systems, and selected automation activities."
+            answer: "The Productivity Solutions Grant (PSG) ceased on 29 September 2026 alongside EDG and MRA. Pre-scoped IT equipment and off-the-shelf software solutions previously funded through PSG are integrated into EDGE under the Automation and Digitalisation business areas. Companies can deploy up to S$30,000 of their S$100,000 annual grant cap toward single-function digital solutions, integrated enterprise systems, and pre-scoped equipment."
         },
         {
             question: "What business areas and activities does EDGE cover?",
             answer: "EDGE covers 8 business areas across over 150 activities: Automation, Digitalisation, Business Strategy, Financial Management, Innovation, Internationalisation, Standards, and Sustainability."
         },
         {
-            question: "Who can apply for the EDGE Grant?",
-            answer: "Applicants must be business entities registered and operating in Singapore with at least 30% local shareholding held by Singapore Citizens and/or Singapore Permanent Residents. Other requirements may apply depending on the specific supportable activity."
+            question: "Who is eligible to apply for the EDGE Grant?",
+            answer: "To qualify for the EDGE Grant, a business entity must: (1) be registered and operating in Singapore on a for-profit basis, (2) have at least 30% ownership (direct or indirect) by Singaporean(s) and/or Singapore PR(s), determined by the ultimate individual ownership, and (3) not have started work or made any payment or deposit to a supplier, vendor, or third party prior to application submission. SMEs are defined as companies with group annual sales turnover of not more than S$100 million or group employment of not more than 200 workers."
+        },
+        {
+            question: "How do I apply for the EDGE Grant on the Business Grants Portal (BGP)?",
+            answer: "The official application process follows 8 steps: (1) Prepare your documents (vendor proposal, quotation, SS 680 certification where required, and 1-year revenue and job projections), (2) Identify a suitable vendor, (3) Apply on the Business Grants Portal (BGP) using your company's Corppass account (third-party companies are not permitted to apply for or manage the grant on behalf of the applicant), (4) Receive and accept your Letter of Offer (LOF), (5) Complete your project deliverables, (6) Prepare your claim submission and payment method, (7) Submit your claim on BGP, and (8) Receive reimbursement via PayNow Corporate (14 working days after claim approval) or GIRO (up to eight weeks after claim approval)."
+        },
+        {
+            question: "What are the qualifying and non-supported costs under the EDGE Grant?",
+            answer: "For consultancy-led activities such as Business Strategic Planning and International Branding, supported costs cover professional service costs (requiring an SAC-accredited SS 680 management consultant). Non-supported costs include Goods and Services Tax (GST), expenses relating to regulatory compliance and updates to Standard Operating Procedures, and—for International Branding—activities aimed at generating domestic business opportunities as well as operational expenditure such as collateral production, website development, social media management, and marketing campaigns."
         },
         {
             question: "Can a business apply for EDGE if it has previously applied for or received funding under EDG, MRA, or PSG?",
@@ -144,7 +152,7 @@ export default function ClientEDGEPage() {
         },
         {
             question: "Is the EDGE Grant available to non-SMEs and larger businesses?",
-            answer: "Yes. A significant structural change from the legacy schemes is that the EDGE Grant extends support to all Singapore-registered businesses, including non-SMEs. SMEs are supported at up to 70% of qualifying costs, while non-SMEs are supported at up to 50%. This is a direct expansion from EDG, MRA, and PSG, which were primarily SME-focused schemes."
+            answer: "Yes. A significant structural change from the legacy schemes is that the EDGE Grant extends support to all Singapore-registered businesses, including non-SMEs. Support levels differ by activity: up to 50% for SMEs and up to 30% for non-SMEs on general activities, and up to 70% for SMEs and up to 50% for non-SMEs on Internationalisation and Sustainability activities. This is a direct expansion from EDG, MRA, and PSG, which were primarily SME-focused schemes."
         }
     ];
 
@@ -327,7 +335,7 @@ export default function ClientEDGEPage() {
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2">Open to Non-SMEs</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    Unlike legacy schemes, EDGE extends grant support to <strong>all Singapore-registered businesses</strong>, including non-SMEs, at up to <strong>50%</strong> of qualifying costs.
+                                    Unlike legacy schemes, EDGE extends grant support to <strong>all eligible Singapore-registered for-profit businesses</strong>, including non-SMEs, at up to <strong>30%</strong> for general activities and up to <strong>50%</strong> for Internationalisation and Sustainability.
                                 </p>
                             </div>
                         </div>
@@ -365,7 +373,7 @@ export default function ClientEDGEPage() {
                             rel="noopener noreferrer"
                             className="text-[#C5A017] underline hover:text-yellow-300 transition-colors inline-flex items-center gap-1 font-medium"
                         >
-                            Enterprise Singapore, EDGE Grant FAQ (verified 3 November 2026)
+                            Enterprise Singapore, EDGE Grant Programme &amp; FAQ (verified 23 November 2026)
                             <ExternalLink className="h-3.5 w-3.5 inline" />
                         </a>
                     </div>
@@ -480,7 +488,7 @@ export default function ClientEDGEPage() {
                             The 8 Business Areas Covered Under EDGE
                         </h2>
                         <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
-                            The EDGE Grant unifies more than 100 supportable activities across 8 dedicated business areas under one annual grant cap.
+                            The EDGE Grant covers 8 business areas and over 150 activities under one shared S$100,000 annual grant cap.
                         </p>
                     </div>
 
@@ -504,27 +512,103 @@ export default function ClientEDGEPage() {
                             </motion.div>
                         ))}
                     </div>
+
+                    {/* Verbatim Approved Activities, Support Levels & Outcome Timelines */}
+                    <div id="approved-activities" className="mt-16 rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8">
+                        <div className="mb-6">
+                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+                                EDGE Grant Approved Activities, Support Levels &amp; Outcome Timelines
+                            </h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Official Enterprise Singapore activity names, SME / non-SME support tiers, and application outcome timelines across the 8 business areas. All approved activities draw from your shared <strong>S$100,000 annual grant cap</strong> (refreshed 1 April).
+                            </p>
+                        </div>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                                <thead>
+                                    <tr className="border-b border-white/15 text-[#C5A017] uppercase tracking-wider text-[11px]">
+                                        <th className="py-3 pr-4 font-bold">Business Area</th>
+                                        <th className="py-3 pr-4 font-bold">Official EDGE Activities</th>
+                                        <th className="py-3 pr-4 font-bold">Support Level (SME / Non-SME)</th>
+                                        <th className="py-3 font-bold">Outcome</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/10 text-gray-300">
+                                    <tr>
+                                        <td className="py-3.5 pr-4 font-semibold text-white">Business Strategy</td>
+                                        <td className="py-3.5 pr-4">
+                                            <Link href="/business-strategic-planning" className="text-white underline hover:text-[#C5A017]">Business Strategic Planning</Link> (business development, <Link href="/ip-consultant" className="text-white underline hover:text-[#C5A017]">intellectual property assets</Link>, operations)
+                                        </td>
+                                        <td className="py-3.5 pr-4 whitespace-nowrap">Up to 50% / 30%</td>
+                                        <td className="py-3.5 whitespace-nowrap">10 weeks</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="py-3.5 pr-4 font-semibold text-white">Internationalisation</td>
+                                        <td className="py-3.5 pr-4">
+                                            <Link href="/strategic-brand-marketing-development" className="text-white underline hover:text-[#C5A017]">International Branding (Brand Strategy Singapore)</Link>; International Financial and Tax Planning; <Link href="/franchise-consultant" className="text-white underline hover:text-[#C5A017]">Identification of Potential Overseas Partnerships</Link>; <Link href="/internationalisation" className="text-white underline hover:text-[#C5A017]">Market Entry Setup</Link> (overseas incorporation &amp; IP protection); Overseas Business Development Staff Deployment; Overseas Marketing &amp; Public Relations; Overseas Physical Trade Fairs
+                                        </td>
+                                        <td className="py-3.5 pr-4 whitespace-nowrap text-[#C5A017] font-semibold">Up to 70% / 50%</td>
+                                        <td className="py-3.5 whitespace-nowrap">6–10 weeks</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="py-3.5 pr-4 font-semibold text-white">Financial Management</td>
+                                        <td className="py-3.5 pr-4">Financial Framework and Corporate Strategy; Enterprise Risk Management and Internal Controls; Investor Relations</td>
+                                        <td className="py-3.5 pr-4 whitespace-nowrap">Up to 50% / 30%</td>
+                                        <td className="py-3.5 whitespace-nowrap">10 weeks</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="py-3.5 pr-4 font-semibold text-white">Sustainability</td>
+                                        <td className="py-3.5 pr-4">
+                                            <Link href="/sustainability" className="text-white underline hover:text-[#C5A017]">Resource Management &amp; Optimisation; Sustainability Services; Sustainability Strategy Development; Sustainable Product / Service Development</Link>
+                                        </td>
+                                        <td className="py-3.5 pr-4 whitespace-nowrap text-[#C5A017] font-semibold">Up to 70% / 50%</td>
+                                        <td className="py-3.5 whitespace-nowrap">10 wks / Case-by-case</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="py-3.5 pr-4 font-semibold text-white">Automation &amp; Digitalisation</td>
+                                        <td className="py-3.5 pr-4">
+                                            Pre-scoped Equipment (4 wks); Single-function Digital Solutions (1 wk); Integrated Enterprise Systems (10 wks); Large-scale Automation; <Link href="/ai-digitalisation" className="text-white underline hover:text-[#C5A017]">Large-scale Digital Transformation</Link>
+                                        </td>
+                                        <td className="py-3.5 pr-4 whitespace-nowrap">Up to 50% / 30% (Large-scale); S$30k sub-cap for pre-scoped</td>
+                                        <td className="py-3.5 whitespace-nowrap">1–10 wks / Case-by-case</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="py-3.5 pr-4 font-semibold text-white">Innovation</td>
+                                        <td className="py-3.5 pr-4">Product Development (new products, services and solutions through technological innovation)</td>
+                                        <td className="py-3.5 pr-4 whitespace-nowrap">Up to 50% / 30%</td>
+                                        <td className="py-3.5 whitespace-nowrap">Case-by-case</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="py-3.5 pr-4 font-semibold text-white">Standards</td>
+                                        <td className="py-3.5 pr-4">General; Digitalisation; Sector-specific; Sustainability</td>
+                                        <td className="py-3.5 pr-4 whitespace-nowrap">Refer to activity</td>
+                                        <td className="py-3.5 whitespace-nowrap">10 weeks</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             {/* Eligibility Criteria */}
             <section id="eligibility" className="py-20 bg-black border-t border-white/10">
-                <div className="container mx-auto px-4 max-w-4xl text-center">
+                <div className="container mx-auto px-4 max-w-5xl text-center">
                     <div className="inline-block px-4 py-1.5 mb-3 border border-[#C5A017]/30 rounded-full bg-[#C5A017]/10">
-                        <span className="text-xs font-bold text-[#C5A017] uppercase tracking-wider">Applicant Requirements</span>
+                        <span className="text-xs font-bold text-[#C5A017] uppercase tracking-wider">EDGE Grant Eligibility &amp; Requirements</span>
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">Who Can Apply for the EDGE Grant?</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">Who Qualifies for the EDGE Grant?</h2>
                     <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mb-10">
-                        Enterprise Singapore enforces standard eligibility baselines for all applicants under the EDGE framework.
+                        Enterprise Singapore enforces strict baseline eligibility criteria on BizSG and the Business Grants Portal (BGP). Grant eligibility criteria apply until claim submission.
                     </p>
 
                     <div className="grid gap-6 sm:grid-cols-2 text-left">
                         <div className="flex items-start bg-white/5 p-6 rounded-xl border border-white/10">
                             <CheckCircle2 className="w-6 h-6 text-[#C5A017] mr-4 shrink-0 mt-0.5" />
                             <div>
-                                <h3 className="font-bold text-white text-base mb-1">Singapore Registered Entity</h3>
+                                <h3 className="font-bold text-white text-base mb-1">Registered &amp; Operating on a For-Profit Basis</h3>
                                 <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-                                    The applicant must be a business entity registered and operating in Singapore.
+                                    The business entity must be registered and operating in Singapore on a <strong>for-profit basis</strong>.
                                 </p>
                             </div>
                         </div>
@@ -532,16 +616,60 @@ export default function ClientEDGEPage() {
                         <div className="flex items-start bg-white/5 p-6 rounded-xl border border-white/10">
                             <CheckCircle2 className="w-6 h-6 text-[#C5A017] mr-4 shrink-0 mt-0.5" />
                             <div>
-                                <h3 className="font-bold text-white text-base mb-1">Min. 30% Local Shareholding</h3>
+                                <h3 className="font-bold text-white text-base mb-1">At Least 30% Singaporean / PR Ultimate Ownership</h3>
                                 <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-                                    Must maintain at least 30% local shareholding held by Singaporean(s) and/or Singapore PR(s).
+                                    Have at least 30% ownership (direct or indirect) by Singaporean(s) and/or Singapore PR(s), determined by the ultimate individual ownership.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start bg-white/5 p-6 rounded-xl border border-white/10">
+                            <CheckCircle2 className="w-6 h-6 text-[#C5A017] mr-4 shrink-0 mt-0.5" />
+                            <div>
+                                <h3 className="font-bold text-white text-base mb-1">No Prior Work, Contract, or Deposit</h3>
+                                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                    Must not have started work or made any payment or deposit to a supplier, vendor, or third party prior to application submission on BGP.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start bg-white/5 p-6 rounded-xl border border-white/10">
+                            <CheckCircle2 className="w-6 h-6 text-[#C5A017] mr-4 shrink-0 mt-0.5" />
+                            <div>
+                                <h3 className="font-bold text-white text-base mb-1">SME vs. Non-SME Tier Qualification</h3>
+                                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                    SMEs (group annual sales turnover ≤ S$100 million or group employment ≤ 200 workers) receive up to 50%–70%. Non-SMEs qualify at up to 30%–50%.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <p className="mt-6 text-xs text-gray-400">
-                        Note: Other activity-specific requirements may apply depending on the selected project type under the 8 business areas.
-                    </p>
+
+                    {/* Qualifying vs Non-Supported Costs & 8-Step BGP Process */}
+                    <div id="how-to-apply" className="mt-14 grid gap-6 md:grid-cols-2 text-left">
+                        <div className="rounded-xl border border-white/10 bg-white/5 p-6 md:p-8">
+                            <h3 className="text-lg font-bold text-white mb-3">EDGE Grant Qualifying &amp; Non-Supported Costs</h3>
+                            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed mb-3">
+                                <strong className="text-emerald-400">Supported costs:</strong> Professional service costs (e.g., SAC-accredited SS 680 management consultancy fees for Business Strategic Planning, International Branding, Financial Management, and Sustainability Strategy). Costs incurred from the date of application are covered upon approval.
+                            </p>
+                            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                                <strong className="text-red-400">Non-supported costs include:</strong> Goods and Services Tax (GST); expenses relating to regulatory compliance and updates to Standard Operating Procedures; and (for International Branding) domestic-only branding, collateral production, website development, social media management, and marketing campaigns.
+                            </p>
+                        </div>
+
+                        <div className="rounded-xl border border-white/10 bg-white/5 p-6 md:p-8">
+                            <h3 className="text-lg font-bold text-white mb-3">How to Apply for EDGE on BGP (8 Official Steps)</h3>
+                            <ol className="space-y-1.5 text-xs sm:text-sm text-gray-300 list-decimal list-inside">
+                                <li>Prepare your documents (vendor proposal, quotation, SS 680 cert &amp; 1-year KPI projections).</li>
+                                <li>Identify a suitable vendor (related-party vendors are excluded).</li>
+                                <li>Apply directly on the Business Grants Portal (BGP) via Corppass.</li>
+                                <li>Receive and accept your Letter of Offer (LOF).</li>
+                                <li>Complete your project deliverables (only project end date &amp; claim due date changes allowed).</li>
+                                <li>Prepare your claim submission and payment method.</li>
+                                <li>Submit your single and final claim on BGP.</li>
+                                <li>Receive reimbursement: <strong>PayNow Corporate (14 working days)</strong> or <strong>GIRO (up to 8 weeks)</strong> after claim approval.</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -663,7 +791,7 @@ export default function ClientEDGEPage() {
                                     </span>
                                 </div>
                                 <h2 className="mb-1 text-2xl sm:text-3xl font-bold text-white">Frederick Tan</h2>
-                                <p className="mb-4 text-lg text-[#C5A017]">Principal Consultant</p>
+                                <p className="mb-4 text-lg text-[#C5A017]">Principal Management Consultant, FT Synergist</p>
 
                                 <p className="mb-6 text-gray-300 leading-relaxed text-xs sm:text-sm">
                                     Strategic capability transformation projects require certified management consultants to satisfy Enterprise Singapore proposal standards. Listed in the official IPOS GoBusiness Service Provider Directory, FT Synergist guides Singapore enterprises through capability diagnostics, business strategy, and compliant grant submission roadmaps.
@@ -792,7 +920,7 @@ export default function ClientEDGEPage() {
                         Prepare for the EDGE Grant Framework
                     </h2>
                     <p className="max-w-2xl mx-auto text-base sm:text-lg font-medium text-black/80 mb-8">
-                        Assess your eligibility, align your 2026 transformation initiatives, and navigate the transition before the 29 September 2026 cutover.
+                        Assess your EDGE Grant eligibility, align your transformation roadmap with Enterprise Singapore&apos;s 8 business areas, and prepare your BGP submission with an SS 680 certified consultant.
                     </p>
                     <button
                         onClick={handleButtonClick}

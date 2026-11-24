@@ -1,0 +1,87 @@
+
+=== PAGE 1 ===
+Single Source of Truth for EDGE Source: Enterprise Singapore (enterprisesg.gov.sg/financial-support/edge-grant) About this programme The EDGE Grant covers 8 business areas, and over 150 activities to help your business grow. Whether you're looking to automate your operations, adopt new digital solutions, expand overseas, or build a more sustainable business, EDGE brings all that support under one roof. Start from what matters most, select the business area most relevant to your priorities: Automation & Digitalisation, Business Strategy, Financial Management, Innovation, Internationalisation, Standards, or Sustainability. What you need to know
+● Receive up to 70% for SMEs and up to 50% for non-SMEs: Support levels differ by activity. Refer to each activity for more details.
+● Access up to S$100,000 in total grant support per year, across all activities: Use the funding where it matters most. The total grant support cap is shared across all activities and refreshed on 1 April each year.
+● Grant support is disbursed on a reimbursement basis: Claims can be submitted once the activity is completed and full payment has been made. The 8 Business Areas and Activities Covered by EDGE Note: On the Enterprise Singapore EDGE Grant website, Automation and Digitalisation are grouped together under a single tab ("Automation & Digitalisation"), which is why there are 7 tabs representing all 8 business areas. Below, all 8 areas are separated individually.
+
+1. Automation
+● Pre-scoped Equipment: Adopt pre-scoped equipment to streamline processes and improve productivity. Application outcome in 4 weeks
+● Large-scale Automation: Implement customised enterprise-wide automation for efficiency and transformative business growth. Assessed on a case-by-case basis
+
+2. Digitalisation
+● Single-function Digital Solutions: Streamline business processes with pre-approved digital solutions designed for specific 
+=== PAGE 2 ===
+functions. Application outcome in 1 week
+● Integrated Enterprise Systems: Implement a unified Enterprise System to consolidate multiple business functions into one unified platform. Application outcome in 10 weeks
+● Large-scale Digital Transformation: Execute large scale digital transformation through modern and integrated technologies to deliver sustainable growth and efficiency. Assessed on a case-by-case basis
+
+3. Internationalisation
+● International Branding: Develop and refine your brand strategy to strengthen your value proposition for overseas customers. Application outcome in 10 weeks
+● International Financial and Tax Planning: Enhance international tax planning and optimise global financial structures to support cost-effective overseas expansion and regulatory compliance. Application outcome in 10 weeks
+● Identification of Potential Overseas Partnerships: Identify potential overseas partners such as franchisees, distributors, joint-venture partners, logistic providers. Application outcome in 6 weeks
+● Market Entry Setup: Apply for overseas incorporation, IP protection, and other setup services in the target market. Application outcome in 6 weeks
+● Overseas Business Development Staff Deployment: Deploy a full-time employee overseas to drive business development and sales/business opportunities. Application outcome in 6 weeks
+● Overseas Marketing & Public Relations: Conduct marketing and PR activities in the target market to build brand visibility and promote offerings. Application outcome in 6 weeks
+● Overseas Physical Trade Fairs: Participate in overseas physical trade fairs to showcase offerings, connect with potential buyers, and build brand visibility. Application outcome in 6 weeks
+
+4. Innovation Note: The specific activity cards under the Innovation tab are dynamically rendered on the Enterprise Singapore website and were not captured in full in the indexed text. Based on Enterprise Singapore programme documentation, this area covers:
+● Product Development: 
+=== PAGE 3 ===
+Supports the development of new technologically innovative products, services, and solutions for commercialisation (including prototype development, small-batch production, technical feasibility assessments, user testing, and product commercialisation planning).
+
+5. Sustainability
+● Resource Management & Optimisation: Support optimisation of resources to guide improvements in energy, water, and materials usage for long-term sustainability. Application outcome in 10 weeks
+● Sustainability Services: Manage environmental, social, and governance (ESG) performance via ESG rating service providers. Application outcome in 10 weeks
+● Sustainability Strategy Development: Guide and strengthen sustainability efforts through development of a sustainability strategy, sustainability report, and obtain assurance. Application outcome in 10 weeks
+● Sustainable Product / Service Development: Develop new technologically innovative sustainable products, services, and solutions for commercialisation. Assessed on a case-by-case basis
+
+6. Standards Note: The specific activity cards under the Standards tab are dynamically rendered on the Enterprise Singapore website and were not captured in full in the indexed text. Based on Enterprise Singapore programme documentation, this area covers:
+● Standards Adoption (Consultancy, Testing & Certification): Supports businesses in adopting recognised industry and international standards (such as ISO 14001 for environmental management, ISO 50001 for energy management, ISO 14064 for greenhouse gas reporting, and Common Criteria / ISO 15408 for IT product security certification).
+
+7. Business Strategy Business Strategic Planning
+● Support Level: Up to 50% support for SMEs and up to 30% support for non-SMEs
+● Application Outcome: Application outcome in 10 weeks About this activity Formulate strategies and processes to improve your business development, better manage your intellectual property assets and optimise operations.
+● Support received for this activity counts towards your company's overall annual grant cap of S$100,000
+● Project must be completed within 12 months from date of approval
+● Costs incurred from date of application are covered upon approval 
+=== PAGE 4 ===
+Supported costs
+● Professional service costs Non-supported costs Include (but are not limited to):
+● Expenses relating to regulatory compliance and updates to Standard Operating Procedures
+● Goods and Services Tax (GST) Eligibility Check your company's eligibility on BizSG. Business entity must:
+● Be registered and operating in Singapore on a for-profit basis
+● Have at least 30% ownership (direct or indirect) by Singaporean(s) and/or Singapore PR(s), determined by the ultimate individual ownership
+● Not have started work or made any payment or deposit to a supplier, vendor, or third party prior to application submission Project deliverables At the end of the project, submit a business strategy report, including (but not limited to):
+● Internal analysis: assessment of existing business drivers, challenges, strengths, weaknesses, operating model
+● External analysis: market size and trend analysis, competitor analysis
+● Growth strategies: proposed business models and strategic roadmaps
+● Recommendations: implementation roadmap and timeline, and expected measurable outcomes
+
+8. Financial Management
+● Financial Framework and Corporate Strategy: Enhance financial management practices, improve performance monitoring systems, and obtain clarity for sustainable business growth. Application outcome in 10 weeks
+● Enterprise Risk Management and Internal Controls: Enhance risk awareness and management capabilities, improve internal controls, and establish systematic risk governance frameworks that support long-term business stability and growth. Application outcome in 10 weeks
+● Investor Relations: Enhance investment readiness, formulate investor relations strategy and establish systematic approaches to investor relations that support fundraising, long-term business growth and market positioning. Application outcome in 10 weeks Application documents and information required
+● Vendor's proposal, quotation, and SS 680 certification
+● Projection of expected revenue growth as a result of the project, for 1 year after project completion
+● Projection of new jobs created (overall and Singaporeans only) with gross monthly salary above S$5,000, for 1 year after project completion 
+=== PAGE 5 ===
+How to apply
+
+1. Step 1: Prepare your documents Ensure you have all documents listed under the "Application documents and information required" section ready before you begin.
+
+2. Step 2: Identify a suitable vendor Identify a suitable vendor for your intended activity.
+
+3. Step 3: Apply on the Business Grants Portal (BGP) Sign in to your company's Corppass account to apply on BGP. If you do not have a Corppass account, refer to this guide to sign up. Note: Third-party companies are not permitted to apply for or manage the grant on behalf of the applicant company.
+
+4. Step 4: Receive your Letter of Offer If the application is approved, a Letter of Offer (LOF) will be issued and must be accepted. The LOF will include the following details: ○ Conditions of support ○ Grant amount awarded ○ Project qualifying period ○ Project deliverables
+
+5. Step 5: Complete your project As proof of project completion, ensure all project deliverables outlined in the 'Project deliverables' section on this page or in the LOF are met. After project commencement, if you need to make changes to your project, you may submit a change request during the project qualifying period. Note that only two types of changes are permitted: ○ Change to project end date ○ Change to claim due date All change requests are subject to approval.
+
+6. Step 6: Prepare your claim submission ○ 6a. Set up your payment method ○ 6b. Prepare your claim submission
+
+7. Step 7: Submit your claim on the Business Grants Portal Once your documents are ready, log into the Business Grants Portal to submit your claim. Ensure all documents are clear and complete, as incomplete submissions may result in delays or rejection. Important notes: ○ Additional documents or clarification may be requested during the claim process. Prompt responses will help ensure smooth processing of the claim. ○ Grant eligibility criteria apply until claim submission. If your company no longer meets the eligibility criteria at any point during the project, your claim will not be supported.
+
+8. Step 8: Receive your disbursement Once your claim is approved, you will receive an email notification. You may expect to receive the grant disbursement in the stipulated bank account via your selected mode in the claim form within the timeline below. ○ PayNow Corporate: 14 working days after claim approval ○ GIRO: Up to eight weeks after claim approval Check your bank account to confirm receipt of the grant. For enquiry on grant disbursement, contact Enterprise Singapore. 
+=== PAGE 6 ===
+ 

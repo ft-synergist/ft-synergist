@@ -111,7 +111,7 @@ export function ServicesAccordion() {
     {
       title: "IP Strategy & Advisory",
       href: "/ip-consultant",
-      description: "Identifying, protecting, and commercialising intangible assets through IP Strategy Consulting, IP Brokerage & Licensing, and Innovation Consultancy.",
+      description: "Identifying, protecting, and commercialising intangible assets through IP Strategy Consulting, IP Brokerage and Licensing, and Innovation Consultancy.",
       expandedIntro: "We help SMEs and growth enterprises structure, protect, and monetise their intellectual property and intangible assets across core advisory pillars:",
       image: "/insights/ipos-ip-week-2026/frederick-tan-rosemary-kwa-ip-week-panel.jpg",
       alt: "IP Strategy and Advisory Consultant Singapore",
@@ -163,12 +163,12 @@ export function ServicesAccordion() {
     {
       title: "Franchise & Licensing",
       href: "/franchise-consultant",
-      description: "Transforming proven operating models into asset-light, multi-market franchise architectures with standardized SOPs, commercial licensing contracts, and cross-border royalty valuation.",
+      description: "Transforming proven operating models into asset-light, multi-market franchise architectures with standardized SOPs, commercial licensing structures, and cross-border royalty models.",
       expandedIntro: "We guide high-growth local enterprises (e.g., Pawa Bakery) through asset-light international scaling to multiply revenue without heavy overseas factory capex:",
       image: "/ft-synergist-pawa-bakery-franchise-licensing.jpg",
       alt: "Franchise and Licensing Consultant Singapore Master Franchising",
       details: [
-        { title: "Royalty Architecture & Valuation", content: "Auditing intangible assets and engineering high-yield commercial royalty structures with IA/IP valuation considerations." },
+        { title: "Royalty & Licensing Architecture", content: "Structuring franchise and licensing royalty models under IP Brokerage and Licensing, which IPOS describes as including F&B franchising, where the franchisor grants the franchisee the right to use their brand, recipes, know-how, and other intangible assets for a fee." },
         { title: "Master Franchise & Contract Structuring", content: "Crafting robust master licensing agreements, territory covenants, and protectable operational manuals (SOPs)." },
         { title: "Cross-Border Partner Due Diligence", content: "Vetting international franchisees and deploying defensible governance frameworks across ASEAN and global markets." }
       ]

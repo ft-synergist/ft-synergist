@@ -17,7 +17,7 @@ const ipWeekCitations: CitationItem[] = [
   {
     id: 2,
     label: "GoBusiness Singapore — IP Grow Service Provider Directory",
-    context: "FT Synergist Pte Ltd listed under IA/IP Services (Branding Strategy, Innovation Consultancy, IP Brokerage & Licensing, IP Strategy Consulting).",
+    context: "FT Synergist Pte Ltd listed under IA/IP Services (Branding Strategy, Innovation Consultancy, IP Brokerage and Licensing, IP Strategy Consulting).",
     url: "https://ipgrow.gobusiness.gov.sg/service-provider-directory/ft-synergist-pte-ltd#ia-ip-services"
   },
   {
@@ -510,7 +510,7 @@ export default function PetaleTeaIPCaseStudy() {
                       <ExternalLink className="w-4 h-4 text-neutral-500 group-hover:text-[#8F801B] transition-colors" />
                     </h3>
                     <p className="text-xs text-neutral-400 leading-relaxed">
-                      Officially listed and verified under IA/IP Services for Branding Strategy, Innovation Consultancy, IP Brokerage &amp; Licensing, and IP Strategy Consulting.
+                      Listed on IPOS GoBusiness IP Grow under IA/IP Services for Branding Strategy, Innovation Consultancy, IP Brokerage and Licensing, and IP Strategy Consulting.
                     </p>
                   </div>
                 </div>

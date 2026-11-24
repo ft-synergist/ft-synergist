@@ -268,7 +268,7 @@ export default function VietnamBlueprintPage() {
                             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Sovereign Subsidy Capitalization</h2>
                         </div>
                         <p className="text-neutral-400 leading-relaxed text-base md:text-lg">
-                            The financial execution of these modern processing footprints can be heavily co-funded through official channels. The enhanced <strong>MRA Grant</strong> architecture offers up to <strong>70% support</strong> allocations capped at <strong>S$100,000 per target market</strong>, completely stripping out previous territory constraints.
+                            The financial execution of these modern processing footprints can be heavily co-funded through official channels. Since 30 September 2026, the <strong>EDGE Grant</strong> Internationalisation business area offers <strong>up to 70% support for SMEs</strong> (up to 50% for non-SMEs), counting towards a total grant support cap of <strong>S$100,000 per company per year</strong>, shared across all activities.
                         </p>
 
                         {/* Replicating the Two-Column Specifications UI Container layout exactly */}

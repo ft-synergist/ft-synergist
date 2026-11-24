@@ -143,7 +143,7 @@ export default function VietnamAuditForm() {
 
             <div className="border-t border-neutral-800 pt-4">
               <h5 className="text-white font-bold text-xs uppercase tracking-wider mb-2">4. Supply Chain Allocation Moat &amp; Subsidies</h5>
-              <p>By mapping your operational strategy into regional processing clusters, you bypass the Legacy Export Trap. Your infrastructure setup qualifies for up to 70% grant co-funding support capped at S$100,000 per target market under Enterprise Singapore's updated internationalization pipeline guidelines.</p>
+              <p>By mapping your operational strategy into regional processing clusters, you bypass the Legacy Export Trap. Eligible Singapore-registered companies may apply for EDGE Grant Internationalisation activities (up to 70% support for SMEs, up to 50% for non-SMEs), counting towards a total grant support cap of S$100,000 per company per year, shared across all activities.</p>
             </div>
           </div>
         </div>

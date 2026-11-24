@@ -14,7 +14,7 @@ const QuantitativeSuccessTable = dynamic(() => import('@/app/components/Quantita
 const faqItems = [
   {
     q: "What is the maximum funding support for the MRA Grant in 2026?",
-    a: "Under Enterprise Singapore's Market Readiness Assistance (MRA) framework, eligible local SMEs can receive up to 70% co-funding support, capped at S$100,000 per new overseas market. Support is categorized into: Overseas Market Promotion (up to S$20,000), Overseas Business Development (up to S$50,000), and Overseas Market Setup (up to S$30,000)."
+    a: "MRA ceased on 29 September 2026. From 30 September 2026, overseas expansion support is under Enterprise Singapore's EDGE Grant (Internationalisation business area): up to 70% support for SMEs and up to 50% support for non-SMEs, counting towards a total grant support cap of S$100,000 per company per year, shared across all activities and refreshed on 1 April each year."
   },
   {
     q: "What qualifies as a 'new overseas market' under Enterprise Singapore MRA rules?",
@@ -165,7 +165,7 @@ export default function MRAGrantPage() {
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-[10px] uppercase font-bold tracking-wider text-yellow-400 bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/20">EnterpriseSG 2026 Policy Notice</span>
               </div>
-              <p className="text-gray-300 text-xs sm:text-sm">MRA ceases on <strong>29 September 2026</strong>. From <strong>30 September 2026</strong>, internationalisation transitions to the unified <strong>EDGE Grant</strong> (removing the &apos;new market&apos; sales restriction and raising SME co-funding to 70%).</p>
+              <p className="text-gray-300 text-xs sm:text-sm">MRA ceased on <strong>29 September 2026</strong>. From <strong>30 September 2026</strong>, internationalisation support transitioned to the unified <strong>EDGE Grant</strong> (up to 70% support for SMEs and up to 50% for non-SMEs, within a shared S$100,000 annual grant cap per company).</p>
             </div>
             <Link href="/edge-grant" className="shrink-0 text-[#8F801B] hover:text-yellow-300 font-bold underline inline-flex items-center text-xs sm:text-sm">
               Explore EDGE Internationalisation <ArrowRight className="ml-1 h-3.5 w-3.5" />
@@ -282,7 +282,7 @@ export default function MRAGrantPage() {
           <div className="p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-[#8F801B]/20 border border-[#8F801B]/50 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
             <div className="space-y-2 text-center md:text-left">
               <h3 className="font-heading text-xl font-extrabold text-white">
-                Ready to secure up to S$100,000 MRA co-funding per market?
+                Planning overseas expansion under EDGE Internationalisation?
               </h3>
               <p className="text-sm text-gray-300">
                 Evaluate your overseas market eligibility with an accredited SCMC consultant.
@@ -337,7 +337,7 @@ export default function MRAGrantPage() {
                   <div className="px-6 pb-6 text-sm md:text-base text-gray-300 leading-relaxed border-t border-white/5 pt-4">
                     {index === 0 ? (
                       <>
-                        Under Enterprise Singapore&apos;s enhanced Market Readiness Assistance (MRA) framework, eligible Singapore SMEs can receive up to 70% co-funding support, capped at S$100,000 per new overseas market. Read our dedicated <Link href="/edg-grant" className="text-white font-bold underline hover:text-[#8F801B]">EDG Grant Advisory</Link> guide for broader capability building support.
+                        MRA ceased on 29 September 2026. Its successor activities sit under the EDGE Grant Internationalisation business area (up to 70% support for SMEs and up to 50% for non-SMEs), within the shared S$100,000 per company per year cap. Read our <Link href="/edge-grant" className="text-white font-bold underline hover:text-[#8F801B]">EDGE Grant guide</Link> for all 8 business areas.
                       </>
                     ) : (
                       item.a

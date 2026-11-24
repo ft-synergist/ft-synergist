@@ -31,7 +31,7 @@ export async function POST(request: Request) {
       1. Financial & Tax Impacts: Address the 15% Global Minimum Tax (GMT) Decree 236/2025/ND-CP and shifting models from blanket rate discounts to cost-based subsidies/Qualified Refundable Tax Credits (QRTC)[cite: 2].
       2. Data Sovereignty & Cyber Laws: Detail compliance requirements for the Law on Personal Data Protection (PDPL) Law No. 91/2025/QH15 and Decree 356/2025/ND-CP, focusing heavily on the strict 2-day user request acknowledgment SLA and mandatory localized DPO frameworks[cite: 2].
       3. Labor Overheads: Evaluate exposure to the mandatory SHUI 34% contribution structures and basic salary inflation under Decree 161/2026/ND-CP[cite: 2].
-      4. Strategic Moat Recommendation: Detail how they can break out of the "Legacy Export Trap" using localized regional processing clusters or AI-driven Franchise Management Systems (FMS), backed by Enterprise Singapore's 70% co-funded MRA grant framework (S$100,000 max target market cap)[cite: 2].
+      4. Strategic Moat Recommendation: Detail how they can break out of the "Legacy Export Trap" using localized regional processing clusters or AI-driven Franchise Management Systems (FMS), with reference to Enterprise Singapore's EDGE Grant Internationalisation activities (up to 70% support for SMEs and up to 50% for non-SMEs; total grant support cap of S$100,000 per company per year, shared across all activities; MRA ceased on 29 September 2026)[cite: 2].
 
       Keep the tone direct, authoritative, and actionable. Do not use generic filler prose.
     `;

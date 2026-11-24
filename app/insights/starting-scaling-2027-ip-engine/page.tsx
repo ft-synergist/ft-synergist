@@ -300,7 +300,7 @@ export default function StartingScaling2027IPEnginePage() {
             name: "What does an IP consultant in Singapore do beyond basic trademark or patent filing?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "While patent attorneys handle statutory registration, a strategic IP consultant in Singapore—such as FT Synergist, listed on the IPOS GoBusiness IP Grow Directory for IP Strategy and IP Brokerage & Licensing—audits, values, unbundles, and commercialises your intangible assets (patents, trademarks, proprietary formulations, design systems, and franchise SOPs) into high-margin licensing, royalty, and CPG revenue streams.",
+              text: "While patent agents and trade mark agents handle statutory registration, an IP strategy consultant in Singapore—such as FT Synergist, listed on the IPOS GoBusiness IP Grow Directory for IP Strategy Consulting and IP Brokerage and Licensing—aligns registrable and non-registrable IP assets with business strategy and structures licensing, franchising, and commercialisation pathways (referring statutory filing, IP audits, and independent IA/IP valuations to specialist agents and valuers).",
             },
           },
           {
@@ -308,7 +308,7 @@ export default function StartingScaling2027IPEnginePage() {
             name: "How do Singapore SMEs fund IP consulting and intangible asset commercialisation in 2026–2027?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Singapore enterprises can combine two powerful government mechanisms: (1) Enterprise Singapore's unified EDGE Grant (effective 30 September 2026, replacing EDG, MRA, and PSG), which co-funds up to 50%–70% of qualifying IP strategy, brand architecture, and overseas market readiness consultancy; and (2) the IRAS Enterprise Innovation Scheme (EIS), which provides a 400% tax deduction on up to S$400,000 of qualifying IP registration costs (patents, trademarks, and registered designs) per Year of Assessment.",
+              text: "Singapore enterprises can combine two powerful government mechanisms: (1) Enterprise Singapore's unified EDGE Grant (effective 30 September 2026, replacing EDG, MRA, and PSG), under which Business Strategic Planning (\"better manage your intellectual property assets\") receives up to 50% support for SMEs, and Internationalisation activities such as International Branding and Market Entry Setup (including overseas IP protection) receive up to 70% support for SMEs; and (2) the IRAS Enterprise Innovation Scheme (EIS), which provides a 400% tax deduction on up to S$400,000 of qualifying IP registration costs (patents, trademarks, and registered designs) per Year of Assessment.",
             },
           },
           {
@@ -976,7 +976,7 @@ export default function StartingScaling2027IPEnginePage() {
                 IP Strategy, Valuation &amp; Licensing Advisory
               </h3>
               <p className="text-xs text-neutral-400 leading-relaxed m-0">
-                FT Synergist is listed on the official <strong>IPOS GoBusiness IP Grow Directory</strong> for both <em>IP Strategy</em> and <em>IP Brokerage &amp; Licensing</em>—bridging the gap between statutory trademark/patent filings and commercial royalty monetization.
+                FT Synergist is listed on the official <strong>IPOS GoBusiness IP Grow Directory</strong> for both <em>IP Strategy Consulting</em> and <em>IP Brokerage and Licensing</em>—bridging the gap between statutory trademark/patent filings and commercial royalty monetization.
               </p>
             </div>
           </div>
@@ -1003,7 +1003,7 @@ export default function StartingScaling2027IPEnginePage() {
                 <Link href="/ip-consultant" className="text-[#8F801B] underline hover:text-white">
                   IP consultant in Singapore
                 </Link>{" "}
-                —such as FT Synergist, listed on the IPOS GoBusiness IP Grow Directory for <strong>IP Strategy</strong> and <strong>IP Brokerage &amp; Licensing</strong>—audits, values, unbundles, and commercialises your intangible assets (patents, trademarks, proprietary formulations, design systems, and franchise SOPs) into high-margin licensing, royalty, and CPG revenue streams.
+                —such as FT Synergist, listed on the IPOS GoBusiness IP Grow Directory for <strong>IP Strategy Consulting</strong> and <strong>IP Brokerage and Licensing</strong>—aligns registrable and non-registrable IP assets with business strategy and structures licensing, franchising, and commercialisation pathways (referring statutory filing, IP audits, and independent IA/IP valuations to specialist agents and valuers).
               </p>
             </div>
 

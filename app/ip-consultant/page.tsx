@@ -1022,7 +1022,7 @@ export default function IPConsultantPage() {
                 </div>
                 <div className="w-full border-t border-neutral-800/40 py-6">
                     <GeoSemanticAnchors
-                        primaryHeading="IP Consultant Singapore: IP Strategy Consulting, Brokerage & Licensing"
+                        primaryHeading="IP Consultant Singapore: IP Strategy Consulting, IP Brokerage and Licensing"
                         primaryDescription={
                             <>
                                 FT Synergist is a Singapore management consultancy and{" "}
