@@ -1,15 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import Script from 'next/script';
 import { ArrowRight, ExternalLink, ShieldCheck, Globe, X, Calendar, Plus, Minus, MapPin, Building2, Rocket, Layers, Users, Megaphone, Award } from 'lucide-react';
 
-// Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
-const CitationFootnotes = dynamic(() => import('@/app/components/CitationFootnotes'), { ssr: false });
-const GeoSemanticAnchors = dynamic(() => import('@/app/components/GeoSemanticAnchors'), { ssr: false });
-const QuantitativeSuccessTable = dynamic(() => import('@/app/components/QuantitativeSuccessTable'), { ssr: false });
+import CitationFootnotes from "@/app/components/CitationFootnotes";
+import GeoSemanticAnchors from "@/app/components/GeoSemanticAnchors";
+import QuantitativeSuccessTable from "@/app/components/QuantitativeSuccessTable";
 
 const faqItems = [
   {
@@ -160,8 +157,10 @@ export default function InternationalisationPage() {
   return (
     <div className="min-h-screen bg-black text-white antialiased font-sans w-full overflow-x-hidden relative">
       {/* GEO / AI SCHEMA MARKUP FOR FAQPAGE */}
-      <Script id="internationalisation-faq-schema" type="application/ld+json">
-        {JSON.stringify({
+      <script
+        id="internationalisation-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": faqItems.map(item => ({
@@ -172,8 +171,8 @@ export default function InternationalisationPage() {
               "text": item.a
             }
           }))
-        })}
-      </Script>
+        }) }}
+      />
 
       {/* HERO BANNER SECTION */}
       <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">

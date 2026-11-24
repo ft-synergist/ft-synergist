@@ -1,12 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
-// Dynamic imports with SSR disabled to prevent hydration errors
-const CitationFootnotes = dynamic(() => import('@/app/components/CitationFootnotes'), { ssr: false });
-const GeoSemanticAnchors = dynamic(() => import('@/app/components/GeoSemanticAnchors'), { ssr: false });
+import CitationFootnotes from "@/app/components/CitationFootnotes";
+import GeoSemanticAnchors from "@/app/components/GeoSemanticAnchors";
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({

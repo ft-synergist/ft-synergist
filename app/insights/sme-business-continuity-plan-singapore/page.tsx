@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
-import Script from "next/script";
 import {
   ShieldCheck,
   ServerCrash,
@@ -32,8 +30,8 @@ import {
   PILLAR_GOVERNANCE_CARD,
 } from "@/components/pillar/tokens";
 
-const CitationFootnotes = dynamic(() => import("@/app/components/CitationFootnotes"), { ssr: false });
-const GeoSemanticAnchors = dynamic(() => import("@/app/components/GeoSemanticAnchors"), { ssr: false });
+import CitationFootnotes from "@/app/components/CitationFootnotes";
+import GeoSemanticAnchors from "@/app/components/GeoSemanticAnchors";
 
 const PDF_DOWNLOAD_URL = "/ft-synergist-sme-bcp-erm-resilience-roadmap-2026.pdf";
 
@@ -318,8 +316,10 @@ export default function SMEBusinessContinuityPlanInsightPage() {
   return (
     <div className={PILLAR_PAGE_SHELL}>
       {/* JSON-LD ARTICLE & FAQPAGE SCHEMA */}
-      <Script id="sme-bcp-insight-schema" type="application/ld+json">
-        {JSON.stringify({
+      <script
+        id="sme-bcp-insight-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
             {
@@ -353,8 +353,8 @@ export default function SMEBusinessContinuityPlanInsightPage() {
               })),
             },
           ],
-        })}
-      </Script>
+        }) }}
+      />
 
       {/* LEAD-GATED EXECUTIVE PDF DOWNLOAD MODAL */}
       <DownloadGate isOpen={isDownloadOpen} onClose={() => setIsDownloadOpen(false)} />

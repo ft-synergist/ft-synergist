@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 import {
     ArrowRight,
     ExternalLink,
@@ -26,8 +24,8 @@ import {
 } from "lucide-react";
 import type { CitationItem } from "@/app/components/CitationFootnotes";
 
-const CitationFootnotes = dynamic(() => import("@/app/components/CitationFootnotes"), { ssr: false });
-const GeoSemanticAnchors = dynamic(() => import("@/app/components/GeoSemanticAnchors"), { ssr: false });
+import CitationFootnotes from "@/app/components/CitationFootnotes";
+import GeoSemanticAnchors from "@/app/components/GeoSemanticAnchors";
 
 const calendarUrls: Record<string, string> = {
     "business-strategy": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ10AGX_rEknl0J6WvWhScBFx2JXg6UZ0IKZIgHP7-sHFa0gy2WM_1KUR5eVStUACnbWx356zhbB?gv=true",
@@ -218,17 +216,17 @@ export default function BusinessStrategicPlanningPage() {
 
     return (
         <div className="min-h-screen bg-black text-white selection:bg-[#8F801B] selection:text-white font-sans pb-24">
-            <Script
+            <script
                 id="business-strategic-planning-faq-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
-            <Script
+            <script
                 id="business-strategic-planning-service-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />
-            <Script
+            <script
                 id="business-strategic-planning-breadcrumb-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

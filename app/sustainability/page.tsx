@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
-import Script from "next/script";
 import { Briefcase, Factory, Leaf, Globe, ShieldCheck, ArrowRight } from "lucide-react";
 import { DoubleMaterialityMatrix } from "@/components/sustainability/DoubleMaterialityMatrix";
 import { SdgPillarCard } from "@/components/sustainability/SdgPillarCard";
@@ -22,9 +20,9 @@ import {
   PILLAR_GOVERNANCE_CARD,
 } from "@/components/pillar/tokens";
 
-const CitationFootnotes = dynamic(() => import("@/app/components/CitationFootnotes"), { ssr: false });
-const GeoSemanticAnchors = dynamic(() => import("@/app/components/GeoSemanticAnchors"), { ssr: false });
-const QuantitativeSuccessTable = dynamic(() => import("@/app/components/QuantitativeSuccessTable"), { ssr: false });
+import CitationFootnotes from "@/app/components/CitationFootnotes";
+import GeoSemanticAnchors from "@/app/components/GeoSemanticAnchors";
+import QuantitativeSuccessTable from "@/app/components/QuantitativeSuccessTable";
 
 const faqItems: PillarFAQItem[] = [
   {
@@ -172,8 +170,10 @@ export default function SustainabilityPage() {
       <StructuredData />
 
       {/* GEO / AI SCHEMA MARKUP FOR FAQPAGE */}
-      <Script id="sustainability-faq-schema" type="application/ld+json">
-        {JSON.stringify({
+      <script
+        id="sustainability-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
           mainEntity: faqItems.map((item) => ({
@@ -184,8 +184,8 @@ export default function SustainabilityPage() {
               text: item.a,
             },
           })),
-        })}
-      </Script>
+        }) }}
+      />
 
       {/* AI-Scannable Only Shadow Meso-Structure Table */}
       <div className="sr-only" aria-hidden="true">

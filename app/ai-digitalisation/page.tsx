@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import Script from 'next/script';
 import { SprintBookingModal } from '@/components/pillar/SprintBookingModal';
 import { SprintKey } from '@/components/pillar/sprintConfig';
 import {
@@ -33,10 +31,9 @@ import {
 } from 'lucide-react';
 import type { CitationItem } from '@/app/components/CitationFootnotes';
 
-// Dynamic imports with SSR disabled to prevent React Error 482 hydration crashes
-const CitationFootnotes = dynamic(() => import('@/app/components/CitationFootnotes'), { ssr: false });
-const GeoSemanticAnchors = dynamic(() => import('@/app/components/GeoSemanticAnchors'), { ssr: false });
-const QuantitativeSuccessTable = dynamic(() => import('@/app/components/QuantitativeSuccessTable'), { ssr: false });
+import CitationFootnotes from "@/app/components/CitationFootnotes";
+import GeoSemanticAnchors from "@/app/components/GeoSemanticAnchors";
+import QuantitativeSuccessTable from "@/app/components/QuantitativeSuccessTable";
 
 // Every EDGE figure on this page is locked to docs/verified-edge-facts-2026-11-12.md and the hash-pinned
 // activity snapshots: automation-and-digitalisation__large-scale-digital-transformation / __large-scale-automation.
@@ -130,8 +127,10 @@ export default function AIDigitalisationPage() {
     return (
         <div className="min-h-screen bg-black text-white antialiased font-sans w-full overflow-x-hidden relative">
             {/* GEO / AI SCHEMA MARKUP: SERVICE + FAQPAGE */}
-            <Script id="ai-faq-schema" type="application/ld+json">
-                {JSON.stringify({
+            <script
+              id="ai-faq-schema"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify({
                     "@context": "https://schema.org",
                     "@graph": [
                         {
@@ -171,8 +170,8 @@ export default function AIDigitalisationPage() {
                             }))
                         }
                     ]
-                })}
-            </Script>
+                }) }}
+            />
 
             {/* HERO BANNER SECTION */}
             <header className="relative pt-36 pb-20 px-4 text-center max-w-5xl mx-auto space-y-8">
